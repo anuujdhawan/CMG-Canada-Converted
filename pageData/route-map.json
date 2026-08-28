@@ -1,0 +1,65 @@
+[
+  {
+    "sourceFile": "assessment.md",
+    "outputFile": "assessment__free-canada-immigration-assessment.md",
+    "legacyPath": "/assessment",
+    "previousPath": "/free-canada-immigration-assessment",
+    "path": "/assessment/free-canada-immigration-assessment",
+    "url": "https://commonwealthmigration.ca/assessment/free-canada-immigration-assessment",
+    "keyword": "free Canada immigration assessment"
+  },
+  {
+    "sourceFile": "blog.md",
+    "outputFile": "blog__canada-immigration-guides.md",
+    "legacyPath": "/blog",
+    "previousPath": "/canada-immigration-guides",
+    "path": "/blog",
+    "url": "https://commonwealthmigration.ca/blog",
+    "keyword": "Blog"
+  },
+  {
+    "sourceFile": "for-individuals.md",
+    "outputFile": "immigration-services__canada-immigration-services-for-individuals.md",
+    "legacyPath": "/for-individuals",
+    "previousPath": "/canada-immigration-services-for-individuals",
+    "path": "/immigration-services/canada-immigration-services-for-individuals",
+    "url": "https://commonwealthmigration.ca/immigration-services/canada-immigration-services-for-individuals",
+    "keyword": "Canada immigration services for individuals"
+  },
+  {
+    "sourceFile": "index.md",
+    "outputFile": "index.md",
+    "legacyPath": "/",
+    "previousPath": "/",
+    "path": "/",
+    "url": "https://commonwealthmigration.ca",
+    "keyword": "licensed RCIC immigration consultant Canada"
+  },
+  {
+    "sourceFile": "pay.md",
+    "outputFile": "contact__pay-immigration-consultation-canada.md",
+    "legacyPath": "/pay",
+    "previousPath": "/pay-immigration-consultation-canada",
+    "path": "/contact/pay-immigration-consultation-canada",
+    "url": "https://commonwealthmigration.ca/contact/pay-immigration-consultation-canada",
+    "keyword": "pay immigration consultation Canada"
+  },
+  {
+    "sourceFile": "tools.md",
+    "outputFile": "tools__canada-immigration-calculators.md",
+    "legacyPath": "/tools",
+    "previousPath": "/canada-immigration-calculators",
+    "path": "/tools/canada-immigration-calculators",
+    "url": "https://commonwealthmigration.ca/tools/canada-immigration-calculators",
+    "keyword": "Canada immigration calculators"
+  },
+  {
+    "sourceFile": "tools__crs-calculator.md",
+    "outputFile": "tools__crs-calculator-canada.md",
+    "legacyPath": "/tools/crs-calculator",
+    "previousPath": "/crs-calculator-canada",
+    "path": "/tools/crs-calculator-canada",
+    "url": "https://commonwealthmigration.ca/tools/crs-calculator-canada",
+    "keyword": "CRS calculator Canada"
+  }
+]
