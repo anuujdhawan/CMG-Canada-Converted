@@ -34,30 +34,31 @@ import TemplateMotion from "./TemplateMotion";
 const href = (path) => currentPagePath(path);
 
 const PATHWAYS = [
-  ["Permanent residence", "Express Entry & PR", "Build a stronger federal profile with CRS strategy, program fit and a clear plan.", "/immigration/express-entry", CompassIcon],
-  ["PNP pathways", "Provincial nominees", "Compare provinces and nomination streams before you commit to a route.", "/immigration/pnp", MapPin],
-  ["Work in Canada", "Work permits", "Explore employer-specific, open work permit and LMIA-supported options.", "/immigration/work-permit", BriefcaseBusiness],
-  ["Study to settle", "Study permits", "Plan your study permit, school choice and post-graduation pathway together.", "/immigration/study-permit", GraduationCap],
-  ["Bring family closer", "Family sponsorship", "Understand spousal, partner, parent and dependent-child sponsorship routes.", "/immigration/family-sponsorship", HeartHandshake],
-  ["A better next step", "Refusals & appeals", "Turn refusal reasons, GCMS notes and procedural fairness letters into a plan.", "/appeals/canada-visa-refusal-help", ShieldCheck]];
+  ["Permanent residence", "Express Entry & PR", "Build a stronger federal profile with CRS strategy, program fit and a clear plan.", "/immigrate/express-entry", CompassIcon],
+  ["PNP pathways", "Provincial nominees", "Compare provinces and nomination streams before you commit to a route.", "/immigrate/provincial-nominee-program-all-provinces-consolidated", MapPin],
+  ["Work in Canada", "Work permits", "Explore employer-specific, open work permit and LMIA-supported options.", "/work-and-study/canada-work-permit-overview", BriefcaseBusiness],
+  ["Study to settle", "Study permits", "Plan your study permit, school choice and post-graduation pathway together.", "/work-and-study/canada-study-permit", GraduationCap],
+  ["Bring family closer", "Family sponsorship", "Understand spousal, partner, parent and dependent-child sponsorship routes.", "/sponsor/family-sponsorship-overview-all-categories", HeartHandshake],
+  ["A better next step", "Refusals & appeals", "Turn refusal reasons, GCMS notes and procedural fairness letters into a plan.", "/inadmissibility-and-appeals/refusal-and-pfl-response", ShieldCheck]];
 
 const SERVICES = [
-  ["FSW, CEC and FST, plus CRS strategy and category-based draws.", "Express Entry & PR", "/immigration/express-entry", BadgeCheck],
-  ["PGWP, employer-specific and open permits, spousal permits and restoration.", "Work permits", "/work-study/canada-work-permit", BriefcaseBusiness],
-  ["DLI planning, PAL where required, study plans and post-graduation pathways.", "Study permits", "/work-study/canada-study-permit", GraduationCap],
-  ["Spousal, partner, parent and dependent-child sponsorship routes.", "Family sponsorship", "/sponsor-status/family-sponsorship-canada", HeartHandshake],
-  ["TRVs, eTA, business visitors and Super Visa preparation.", "Visitor, eTA & Super Visa", "/work-study/canada-visitor-visa", MapPin],
-  ["Start-up Visa, self-employed pathways and provincial entrepreneur streams.", "Business immigration", "/immigration/canada-business-immigration", BadgeDollarSign],
-  ["Expired permits, overstays and regaining status where IRCC allows.", "Restoration & status", "/sponsor-status/pr-card-renewal-canada", ShieldCheck],
-  ["GCMS, procedural fairness responses, reapplications, appeals and review referrals.", "Refusals & PFL", "/appeals/canada-visa-refusal-help", BookOpenCheck],
-  ["PR card renewals, PRTD, residency obligations and citizenship.", "PR card & citizenship", "/sponsor-status/canadian-citizenship-application", BadgeCheck]];
+  ["FSW, CEC and FST, plus CRS strategy and category-based draws.", "Express Entry & PR", "/immigrate/express-entry", BadgeCheck],
+  ["PGWP, employer-specific and open permits, spousal permits and restoration.", "Work permits", "/work-and-study/canada-work-permit-overview", BriefcaseBusiness],
+  ["DLI planning, PAL where required, study plans and post-graduation pathways.", "Study permits", "/work-and-study/canada-study-permit", GraduationCap],
+  ["Spousal, partner, parent and dependent-child sponsorship routes.", "Family sponsorship", "/sponsor/family-sponsorship-overview-all-categories", HeartHandshake],
+  ["TRVs, eTA, business visitors and Super Visa preparation.", "Visitor, eTA & Super Visa", "/visit/visitor-visa-trv-and-super-visa-combined", MapPin],
+  ["Start-up Visa, self-employed pathways and provincial entrepreneur streams.", "Business immigration", "/immigrate/business-immigration-and-start-up-visa", BadgeDollarSign],
+  ["Expired permits, overstays and regaining status where IRCC allows.", "Restoration & status", "/citizenship/pr-card-renewal-and-citizenship-combined-overview", ShieldCheck],
+  ["GCMS, procedural fairness responses, reapplications, appeals and review referrals.", "Refusals & PFL", "/inadmissibility-and-appeals/refusal-and-pfl-response", BookOpenCheck],
+  ["PR card renewals, PRTD, residency obligations and citizenship.", "PR card & citizenship", "/citizenship/pr-card-renewal-and-citizenship-combined-overview", BadgeCheck]];
 
 const GUIDE_ITEMS = [
-  ["Immigration hub", "Every PR, temporary and citizenship route indexed consistently across the site.", "/immigration/canadian-immigration-pathways"],
-  ["Provinces & territories", "Compare streams from British Columbia to the Atlantic before choosing a province.", "/immigration/provincial-nominee-program-canada"],
-  ["Express Entry", "Understand CRS, the three federal programs and category-based draws.", "/immigration/express-entry-canada"],
+  ["Immigration hub", "Every PR, temporary and citizenship route indexed consistently across the site.", "/immigrate/express-entry"],
+  ["Provinces & territories", "Compare streams from British Columbia to the Atlantic before choosing a province.", "/immigrate/provincial-nominee-program-all-provinces-consolidated"],
+  ["Express Entry", "Understand CRS, the three federal programs and category-based draws.", "/immigrate/express-entry"],
   ["Calculators", "Use CRS, FSW 67 and provincial tools before paying filing fees.", "/tools/canada-immigration-calculators"],
-  ["Employers · HGT", "Explore LMIA, GTS, recruitment and compliance through one employer journey.", "/employers/employer-immigration-services-canada"]];
+  ["Employers · HGT", "Explore LMIA, GTS, recruitment and compliance through one employer journey.", "/work-and-study/lmia-and-employer-services-overview"],
+];
 
 const FAQS = [
   ["What does a licensed RCIC help with?", "A licensed Regulated Canadian Immigration Consultant can assess eligibility, develop strategy, prepare or review documentation, represent a client where authorized, and help respond when a file becomes complex."],
@@ -111,7 +112,7 @@ export default function ReferenceHomepage({ page, heroData }) {
           <div className="hero-copy relative z-[2] text-[var(--template-on-primary)] reveal in">
             <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-[''] [text-shadow:0_1px_8px_color-mix(in_srgb,var(--cmg-template-deep-surface)_28%,transparent)]">Licensed Canadian immigration guidance</p>
             <h1 id="hero-title" className="max-w-[790px] max-[1120px]:!text-[clamp(38px,4.6vw,52px)] max-[620px]:!text-[clamp(34px,10.5vw,44px)] max-[1023.98px]:text-center max-[1023.98px]:mx-auto text-[clamp(42px,2.2rem+3.4vw,66px)] font-semibold leading-[1.04] tracking-[-.03em] !text-[var(--template-on-primary)] [text-shadow:0_2px_18px_color-mix(in_srgb,var(--cmg-template-deep-surface)_42%,transparent),0_1px_2px_color-mix(in_srgb,var(--cmg-template-deep-surface)_55%,transparent)] text-[var(--ink)]">{heroTitle}</h1>
-            <p className="lead max-w-[680px] max-[1023.98px]:text-center max-[1023.98px]:mx-auto !mt-6 !text-[var(--cmg-dark-muted)] [text-shadow:0_1px_10px_color-mix(in_srgb,var(--cmg-template-deep-surface)_32%,transparent)] text-[var(--muted)] text-[17px] leading-[1.8] max-[620px]:text-[15px]">{heroLead}</p>
+            <p className="lead max-w-[680px] max-[1023.98px]:text-center max-[1023.98px]:mx-auto !mt-6 !text-[color-mix(in_srgb,var(--template-on-primary)_82%,transparent)] [text-shadow:0_1px_10px_color-mix(in_srgb,var(--cmg-template-deep-surface)_48%,transparent)] text-[17px] leading-[1.8] max-[620px]:text-[15px]">{heroLead}</p>
             <div className="hero-actions flex flex-wrap gap-3 mt-[30px] max-[768px]:!flex max-[768px]:!flex-col max-[768px]:!items-center max-[768px]:!gap-3 max-[768px]:!mt-6">
               <TemplateLink path={site.ctas.primary.href} className="btn btn-primary max-[768px]:!w-full max-[768px]:!min-h-[52px] max-[768px]:!px-[22px] max-[768px]:!py-[14px] max-[768px]:!rounded-[14px] max-[768px]:!text-[14px] max-[640px]:!p-[15px]">Book a Consultation <ArrowRight width={18} height={18} aria-hidden="true" /></TemplateLink>
             <TemplateLink path="/tools/crs-calculator" className="btn btn-secondary max-[768px]:!w-auto max-[768px]:!min-h-10 max-[768px]:!px-[18px] max-[768px]:!py-[9px] max-[768px]:!rounded-full max-[768px]:!text-[12.5px] max-[768px]:!bg-[color-mix(in_srgb,var(--template-on-primary)_8%,transparent)] max-[768px]:!border-[color-mix(in_srgb,var(--template-on-primary)_22%,transparent)] max-[768px]:!shadow-none max-[768px]:[&:hover]:!bg-[color-mix(in_srgb,var(--template-on-primary)_14%,transparent)] max-[768px]:[&:hover]:!border-[color-mix(in_srgb,var(--template-on-primary)_34%,transparent)] max-[768px]:[&:hover]:!transform-none max-[768px]:[&:focus-visible]:!bg-[color-mix(in_srgb,var(--template-on-primary)_14%,transparent)] max-[768px]:[&:focus-visible]:!border-[color-mix(in_srgb,var(--template-on-primary)_34%,transparent)] max-[768px]:[&:focus-visible]:!transform-none">Check your CRS <Calculator className="max-[768px]:!h-[14px] max-[768px]:!w-[14px]" width={18} height={18} aria-hidden="true" /></TemplateLink>

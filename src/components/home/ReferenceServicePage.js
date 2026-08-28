@@ -11,6 +11,7 @@ import HeroProofCard from "./HeroProofCard";
 import ServiceImageGallery from "./ServiceImageGallery";
 import ServiceContentImageFrame, { getServiceContentImages } from "./ServiceContentImageFrame";
 import TemplateMotion from "./TemplateMotion";
+import LiveSuccessVideos from "./LiveSuccessVideos";
 
 const href = (path) => currentPagePath(path);
 
@@ -90,7 +91,7 @@ function ServiceFaqSection({ page }) {
 }
 
 export default function ReferenceServicePage({ page, children, interactivePosition = "bottom", interactiveHeading }) {
-  const blocks = parseBlocks(page.content || "");
+  const blocks = page.contentBlocks || parseBlocks(page.content || "");
   const isToolPage = page.path.startsWith("/tools/") || page.path === "/assessment/free-canada-immigration-assessment";
   const lead = getLead(page, blocks);
   const title = rebrand(page.h1);
@@ -126,7 +127,7 @@ export default function ReferenceServicePage({ page, children, interactivePositi
           <div className="hero-copy relative z-[2] reveal in">
             <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-[''] [text-shadow:0_1px_8px_color-mix(in_srgb,var(--cmg-template-deep-surface)_28%,transparent)]">Licensed Canadian immigration guidance</p>
             <h1 id="service-hero-title" className="max-w-[790px] text-[clamp(42px,2.2rem+3.4vw,66px)] !font-semibold !leading-[1.04] !tracking-[-.03em] max-[1120px]:!text-[clamp(38px,4.6vw,52px)] max-[620px]:!text-[clamp(34px,10.5vw,44px)] max-[1023.98px]:text-center max-[1023.98px]:mx-auto !text-[var(--template-on-primary)] [text-shadow:0_2px_18px_color-mix(in_srgb,var(--cmg-template-deep-surface)_42%,transparent),0_1px_2px_color-mix(in_srgb,var(--cmg-template-deep-surface)_55%,transparent)]">{title}</h1>
-            <p className="lead max-w-[680px] max-[1023.98px]:text-center max-[1023.98px]:mx-auto !mt-6 !text-[var(--cmg-dark-muted)] [text-shadow:0_1px_10px_color-mix(in_srgb,var(--cmg-template-deep-surface)_32%,transparent)] text-[var(--muted)] text-[17px] leading-[1.8] max-[620px]:text-[15px]">{lead}</p>
+            <p className="lead max-w-[680px] max-[1023.98px]:text-center max-[1023.98px]:mx-auto !mt-6 !text-[color-mix(in_srgb,var(--template-on-primary)_82%,transparent)] [text-shadow:0_1px_10px_color-mix(in_srgb,var(--cmg-template-deep-surface)_48%,transparent)] text-[17px] leading-[1.8] max-[620px]:text-[15px]">{lead}</p>
             <div className="hero-actions flex flex-wrap gap-3 mt-[30px] max-[768px]:!flex max-[768px]:!flex-col max-[768px]:!items-center max-[768px]:!gap-3 max-[768px]:!mt-6">
               <TemplateLink path={site.ctas.primary.href} className="btn btn-primary max-[768px]:!w-full max-[768px]:!min-h-[52px] max-[768px]:!px-[22px] max-[768px]:!py-[14px] max-[768px]:!rounded-[14px] max-[768px]:!text-[14px]">Book a Consultation <ArrowRight width={18} height={18} aria-hidden="true" /></TemplateLink>
               <TemplateLink path="/tools/crs-calculator" className="btn btn-secondary max-[768px]:!w-auto max-[768px]:!min-h-10 max-[768px]:!px-[18px] max-[768px]:!py-[9px] max-[768px]:!rounded-full max-[768px]:!text-[12.5px]">Check your CRS <Calculator width={18} height={18} aria-hidden="true" /></TemplateLink>
@@ -180,6 +181,8 @@ export default function ReferenceServicePage({ page, children, interactivePositi
       {interactivePosition === "bottom" && interactiveSection}
 
       {isToolPage && <ServiceFaqSection page={page} />}
+
+      <LiveSuccessVideos />
 
       <section className="cta-section py-[72px]"><div className="cta-shell flex items-center justify-between max-[880px]:items-start max-[880px]:flex-col !w-[var(--container)] !gap-10 mx-auto !p-0 !rounded-none !bg-transparent"><div><h2 className="!text-[clamp(30px,1.8rem+2.2vw,46px)] !leading-none !text-[var(--template-on-primary)]">Ready to make the next step clearer?</h2><p className="!mt-3 !max-w-[650px] !text-[16px] !text-[color-mix(in_srgb,var(--template-on-primary)_80%,transparent)]">Bring your questions, history and documents to a focused review with a licensed Canadian immigration team.</p></div><TemplateLink path={site.ctas.primary.href} className="btn !flex-none !px-6 !py-[17px] !bg-[var(--template-on-primary)] !text-[var(--cmg-dark-secondary)]">Book a Consultation <ArrowUpRight width={19} height={19} aria-hidden="true" /></TemplateLink></div></section>
 

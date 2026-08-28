@@ -18,15 +18,6 @@
     "keyword": "Blog"
   },
   {
-    "sourceFile": "for-individuals.md",
-    "outputFile": "immigration-services__canada-immigration-services-for-individuals.md",
-    "legacyPath": "/for-individuals",
-    "previousPath": "/canada-immigration-services-for-individuals",
-    "path": "/immigration-services/canada-immigration-services-for-individuals",
-    "url": "https://commonwealthmigration.ca/immigration-services/canada-immigration-services-for-individuals",
-    "keyword": "Canada immigration services for individuals"
-  },
-  {
     "sourceFile": "index.md",
     "outputFile": "index.md",
     "legacyPath": "/",

@@ -1,0 +1,708 @@
+[
+  {
+    "label": "Immigrate",
+    "groups": [
+      {
+        "label": "Express Entry",
+        "pages": [
+          {
+            "label": "Express Entry",
+            "href": "/immigrate/express-entry",
+            "url": "https://commonwealthmigration.ca/immigrate/express-entry",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Federal Skilled Worker",
+            "href": "/immigrate/federal-skilled-worker",
+            "url": "https://commonwealthmigration.ca/immigrate/federal-skilled-worker",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Canadian Experience Class",
+            "href": "/immigrate/canadian-experience-class",
+            "url": "https://commonwealthmigration.ca/immigrate/canadian-experience-class",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Federal Skilled Trades",
+            "href": "/immigrate/federal-skilled-trades",
+            "url": "https://commonwealthmigration.ca/immigrate/federal-skilled-trades",
+            "status": "Content Ready"
+          },
+          {
+            "label": "PNP-Linked Express Entry",
+            "href": "/immigrate/pnp-linked-express-entry",
+            "url": "https://commonwealthmigration.ca/immigrate/pnp-linked-express-entry",
+            "status": "Content Ready"
+          }
+        ]
+      },
+      {
+        "label": "Provincial Nominee Program",
+        "pages": [
+          {
+            "label": "Provincial Nominee Program (all provinces, consolidated)",
+            "href": "/immigrate/provincial-nominee-program-all-provinces-consolidated",
+            "url": "https://commonwealthmigration.ca/immigrate/provincial-nominee-program-all-provinces-consolidated",
+            "status": "Content Ready"
+          },
+          {
+            "label": "British Columbia PNP",
+            "href": "/immigrate/british-columbia-pnp",
+            "url": "https://commonwealthmigration.ca/immigrate/british-columbia-pnp",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Alberta PNP (AAIP)",
+            "href": "/immigrate/alberta-pnp-aaip",
+            "url": "https://commonwealthmigration.ca/immigrate/alberta-pnp-aaip",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Saskatchewan PNP (SINP)",
+            "href": "/immigrate/saskatchewan-pnp-sinp",
+            "url": "https://commonwealthmigration.ca/immigrate/saskatchewan-pnp-sinp",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Manitoba PNP (MPNP)",
+            "href": "/immigrate/manitoba-pnp-mpnp",
+            "url": "https://commonwealthmigration.ca/immigrate/manitoba-pnp-mpnp",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Ontario PNP (OINP)",
+            "href": "/immigrate/ontario-pnp-oinp",
+            "url": "https://commonwealthmigration.ca/immigrate/ontario-pnp-oinp",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Nova Scotia PNP (NSNP)",
+            "href": "/immigrate/nova-scotia-pnp-nsnp",
+            "url": "https://commonwealthmigration.ca/immigrate/nova-scotia-pnp-nsnp",
+            "status": "Content Ready"
+          },
+          {
+            "label": "New Brunswick PNP",
+            "href": "/immigrate/new-brunswick-pnp",
+            "url": "https://commonwealthmigration.ca/immigrate/new-brunswick-pnp",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Prince Edward Island PNP",
+            "href": "/immigrate/prince-edward-island-pnp",
+            "url": "https://commonwealthmigration.ca/immigrate/prince-edward-island-pnp",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Newfoundland & Labrador PNP",
+            "href": "/immigrate/newfoundland-and-labrador-pnp",
+            "url": "https://commonwealthmigration.ca/immigrate/newfoundland-and-labrador-pnp",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Yukon / NWT / Nunavut Nominee Programs",
+            "href": "/immigrate/yukon-nwt-nunavut-nominee-programs",
+            "url": "https://commonwealthmigration.ca/immigrate/yukon-nwt-nunavut-nominee-programs",
+            "status": "Content Ready"
+          }
+        ]
+      },
+      {
+        "label": "Other PR Pathways",
+        "pages": [
+          {
+            "label": "Atlantic Immigration Program",
+            "href": "/immigrate/atlantic-immigration-program",
+            "url": "https://commonwealthmigration.ca/immigrate/atlantic-immigration-program",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Agri-Food Immigration Pilot",
+            "href": "/immigrate/agri-food-immigration-pilot",
+            "url": "https://commonwealthmigration.ca/immigrate/agri-food-immigration-pilot",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Rural and Northern Immigration Pilot",
+            "href": "/immigrate/rural-and-northern-immigration-pilot",
+            "url": "https://commonwealthmigration.ca/immigrate/rural-and-northern-immigration-pilot",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Municipal Nominee Program",
+            "href": "/immigrate/municipal-nominee-program",
+            "url": "https://commonwealthmigration.ca/immigrate/municipal-nominee-program",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Business Immigration & Start-Up Visa",
+            "href": "/immigrate/business-immigration-and-start-up-visa",
+            "url": "https://commonwealthmigration.ca/immigrate/business-immigration-and-start-up-visa",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Temporary Resident to PR Pathway",
+            "href": "/immigrate/temporary-resident-to-pr-pathway",
+            "url": "https://commonwealthmigration.ca/immigrate/temporary-resident-to-pr-pathway",
+            "status": "Content Ready"
+          }
+        ]
+      },
+      {
+        "label": "Refugees & Protection",
+        "pages": [
+          {
+            "label": "In-Canada Refugee Claim",
+            "href": "/immigrate/in-canada-refugee-claim",
+            "url": "https://commonwealthmigration.ca/immigrate/in-canada-refugee-claim",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Pre-Removal Risk Assessment (PRRA)",
+            "href": "/immigrate/pre-removal-risk-assessment-prra",
+            "url": "https://commonwealthmigration.ca/immigrate/pre-removal-risk-assessment-prra",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Protected Persons — Apply for PR",
+            "href": "/immigrate/protected-persons-apply-for-pr",
+            "url": "https://commonwealthmigration.ca/immigrate/protected-persons-apply-for-pr",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Refugee Travel Document",
+            "href": "/immigrate/refugee-travel-document",
+            "url": "https://commonwealthmigration.ca/immigrate/refugee-travel-document",
+            "status": "Content Ready"
+          },
+          {
+            "label": "One-Year Window Reunification",
+            "href": "/immigrate/one-year-window-reunification",
+            "url": "https://commonwealthmigration.ca/immigrate/one-year-window-reunification",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Humanitarian & Compassionate",
+            "href": "/immigrate/humanitarian-and-compassionate",
+            "url": "https://commonwealthmigration.ca/immigrate/humanitarian-and-compassionate",
+            "status": "Content Ready"
+          }
+        ]
+      },
+      {
+        "label": "Caregivers",
+        "pages": [
+          {
+            "label": "Home Child Care Provider Pilot",
+            "href": "/immigrate/home-child-care-provider-pilot",
+            "url": "https://commonwealthmigration.ca/immigrate/home-child-care-provider-pilot",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Home Support Worker Pilot",
+            "href": "/immigrate/home-support-worker-pilot",
+            "url": "https://commonwealthmigration.ca/immigrate/home-support-worker-pilot",
+            "status": "Content Ready"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Visit",
+    "groups": [
+      {
+        "label": "Visitor & Temporary",
+        "pages": [
+          {
+            "label": "Visitor Visa (TRV) & Super Visa (combined)",
+            "href": "/visit/visitor-visa-trv-and-super-visa-combined",
+            "url": "https://commonwealthmigration.ca/visit/visitor-visa-trv-and-super-visa-combined",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Visitor Visa (TRV) — standalone page",
+            "href": "/visit/visitor-visa-trv-standalone-page",
+            "url": "https://commonwealthmigration.ca/visit/visitor-visa-trv-standalone-page",
+            "status": "Content Ready"
+          },
+          {
+            "label": "eTA (Electronic Travel Authorization)",
+            "href": "/visit/eta-electronic-travel-authorization",
+            "url": "https://commonwealthmigration.ca/visit/eta-electronic-travel-authorization",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Super Visa — standalone page",
+            "href": "/visit/super-visa-standalone-page",
+            "url": "https://commonwealthmigration.ca/visit/super-visa-standalone-page",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Business Visa",
+            "href": "/visit/business-visa",
+            "url": "https://commonwealthmigration.ca/visit/business-visa",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Transit Visa",
+            "href": "/visit/transit-visa",
+            "url": "https://commonwealthmigration.ca/visit/transit-visa",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Visitor Record",
+            "href": "/visit/visitor-record",
+            "url": "https://commonwealthmigration.ca/visit/visitor-record",
+            "status": "Content Ready"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Work & Study",
+    "groups": [
+      {
+        "label": "Work & Study",
+        "pages": [
+          {
+            "label": "Canada Work Permit (overview)",
+            "href": "/work-and-study/canada-work-permit-overview",
+            "url": "https://commonwealthmigration.ca/work-and-study/canada-work-permit-overview",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Canada Study Permit",
+            "href": "/work-and-study/canada-study-permit",
+            "url": "https://commonwealthmigration.ca/work-and-study/canada-study-permit",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Post-Graduation Work Permit (PGWP)",
+            "href": "/work-and-study/post-graduation-work-permit-pgwp",
+            "url": "https://commonwealthmigration.ca/work-and-study/post-graduation-work-permit-pgwp",
+            "status": "Content Ready"
+          },
+          {
+            "label": "International Experience Canada (IEC)",
+            "href": "/work-and-study/international-experience-canada-iec",
+            "url": "https://commonwealthmigration.ca/work-and-study/international-experience-canada-iec",
+            "status": "Content Ready"
+          }
+        ]
+      },
+      {
+        "label": "For Employers",
+        "pages": [
+          {
+            "label": "LMIA & Employer Services (overview)",
+            "href": "/work-and-study/lmia-and-employer-services-overview",
+            "url": "https://commonwealthmigration.ca/work-and-study/lmia-and-employer-services-overview",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Global Talent Stream",
+            "href": "/work-and-study/global-talent-stream",
+            "url": "https://commonwealthmigration.ca/work-and-study/global-talent-stream",
+            "status": "Content Ready"
+          },
+          {
+            "label": "TFWP Employer Compliance",
+            "href": "/work-and-study/tfwp-employer-compliance",
+            "url": "https://commonwealthmigration.ca/work-and-study/tfwp-employer-compliance",
+            "status": "Content Ready"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Sponsor",
+    "groups": [
+      {
+        "label": "Spousal & Partner Sponsorship",
+        "pages": [
+          {
+            "label": "Spousal & Partner Sponsorship (overview)",
+            "href": "/sponsor/spousal-and-partner-sponsorship-overview",
+            "url": "https://commonwealthmigration.ca/sponsor/spousal-and-partner-sponsorship-overview",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Spousal / Common-Law Sponsorship",
+            "href": "/sponsor/spousal-common-law-sponsorship",
+            "url": "https://commonwealthmigration.ca/sponsor/spousal-common-law-sponsorship",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Conjugal Partner Sponsorship",
+            "href": "/sponsor/conjugal-partner-sponsorship",
+            "url": "https://commonwealthmigration.ca/sponsor/conjugal-partner-sponsorship",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Outland Sponsorship",
+            "href": "/sponsor/outland-sponsorship",
+            "url": "https://commonwealthmigration.ca/sponsor/outland-sponsorship",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Inland Sponsorship",
+            "href": "/sponsor/inland-sponsorship",
+            "url": "https://commonwealthmigration.ca/sponsor/inland-sponsorship",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Spousal Open Work Permit",
+            "href": "/sponsor/spousal-open-work-permit",
+            "url": "https://commonwealthmigration.ca/sponsor/spousal-open-work-permit",
+            "status": "Content Ready"
+          }
+        ]
+      },
+      {
+        "label": "Family Members",
+        "pages": [
+          {
+            "label": "Family Sponsorship (overview, all categories)",
+            "href": "/sponsor/family-sponsorship-overview-all-categories",
+            "url": "https://commonwealthmigration.ca/sponsor/family-sponsorship-overview-all-categories",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Dependent Child Sponsorship",
+            "href": "/sponsor/dependent-child-sponsorship",
+            "url": "https://commonwealthmigration.ca/sponsor/dependent-child-sponsorship",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Adopted Child Sponsorship",
+            "href": "/sponsor/adopted-child-sponsorship",
+            "url": "https://commonwealthmigration.ca/sponsor/adopted-child-sponsorship",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Parents & Grandparents Program (PGP)",
+            "href": "/sponsor/parents-and-grandparents-program-pgp",
+            "url": "https://commonwealthmigration.ca/sponsor/parents-and-grandparents-program-pgp",
+            "status": "Content Ready"
+          },
+          {
+            "label": "PGP Invitation to Apply",
+            "href": "/sponsor/pgp-invitation-to-apply-canada",
+            "url": "https://commonwealthmigration.ca/sponsor/pgp-invitation-to-apply-canada",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Super Visa for Parents",
+            "href": "/sponsor/super-visa-for-parents",
+            "url": "https://commonwealthmigration.ca/sponsor/super-visa-for-parents",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Orphaned Relatives",
+            "href": "/sponsor/orphaned-relatives",
+            "url": "https://commonwealthmigration.ca/sponsor/orphaned-relatives",
+            "status": "Content Ready"
+          }
+        ]
+      },
+      {
+        "label": "Sponsorship Requirements",
+        "pages": [
+          {
+            "label": "Minimum Necessary Income",
+            "href": "/sponsor/minimum-necessary-income",
+            "url": "https://commonwealthmigration.ca/sponsor/minimum-necessary-income",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Sponsorship Eligibility",
+            "href": "/sponsor/sponsorship-eligibility",
+            "url": "https://commonwealthmigration.ca/sponsor/sponsorship-eligibility",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Sponsorship Processing Times",
+            "href": "/sponsor/sponsorship-processing-times",
+            "url": "https://commonwealthmigration.ca/sponsor/sponsorship-processing-times",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Sponsorship Appeal",
+            "href": "/sponsor/sponsorship-appeal",
+            "url": "https://commonwealthmigration.ca/sponsor/sponsorship-appeal",
+            "status": "Content Ready"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Citizenship",
+    "groups": [
+      {
+        "label": "Canadian Citizenship",
+        "pages": [
+          {
+            "label": "Adult Grant of Citizenship",
+            "href": "/citizenship/adult-grant-of-citizenship",
+            "url": "https://commonwealthmigration.ca/citizenship/adult-grant-of-citizenship",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Minor Grant of Citizenship",
+            "href": "/citizenship/minor-grant-of-citizenship",
+            "url": "https://commonwealthmigration.ca/citizenship/minor-grant-of-citizenship",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Citizenship Certificate",
+            "href": "/citizenship/citizenship-certificate",
+            "url": "https://commonwealthmigration.ca/citizenship/citizenship-certificate",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Citizenship Resumption",
+            "href": "/citizenship/citizenship-resumption",
+            "url": "https://commonwealthmigration.ca/citizenship/citizenship-resumption",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Citizenship Renunciation",
+            "href": "/citizenship/citizenship-renunciation",
+            "url": "https://commonwealthmigration.ca/citizenship/citizenship-renunciation",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Citizenship Revocation Appeal",
+            "href": "/citizenship/citizenship-revocation-appeal",
+            "url": "https://commonwealthmigration.ca/citizenship/citizenship-revocation-appeal",
+            "status": "Content Ready"
+          }
+        ]
+      },
+      {
+        "label": "PR & Travel Documents",
+        "pages": [
+          {
+            "label": "PR Card Renewal & Citizenship (combined overview)",
+            "href": "/citizenship/pr-card-renewal-and-citizenship-combined-overview",
+            "url": "https://commonwealthmigration.ca/citizenship/pr-card-renewal-and-citizenship-combined-overview",
+            "status": "Content Ready"
+          },
+          {
+            "label": "PR Card Renewal — standalone page",
+            "href": "/citizenship/pr-card-renewal-standalone-page",
+            "url": "https://commonwealthmigration.ca/citizenship/pr-card-renewal-standalone-page",
+            "status": "Content Ready"
+          },
+          {
+            "label": "PR Card Replacement",
+            "href": "/citizenship/pr-card-replacement",
+            "url": "https://commonwealthmigration.ca/citizenship/pr-card-replacement",
+            "status": "Content Ready"
+          },
+          {
+            "label": "PR Travel Document (PRTD)",
+            "href": "/citizenship/pr-travel-document-prtd",
+            "url": "https://commonwealthmigration.ca/citizenship/pr-travel-document-prtd",
+            "status": "Content Ready"
+          }
+        ]
+      },
+      {
+        "label": "Adoption",
+        "pages": [
+          {
+            "label": "Citizenship through Adoption",
+            "href": "/citizenship/citizenship-through-adoption",
+            "url": "https://commonwealthmigration.ca/citizenship/citizenship-through-adoption",
+            "status": "Content Ready"
+          },
+          {
+            "label": "PR through Adoption",
+            "href": "/citizenship/pr-through-adoption",
+            "url": "https://commonwealthmigration.ca/citizenship/pr-through-adoption",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Proof of Adoption Record",
+            "href": "/citizenship/proof-of-adoption-record",
+            "url": "https://commonwealthmigration.ca/citizenship/proof-of-adoption-record",
+            "status": "Content Ready"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Inadmissibility & Appeals",
+    "groups": [
+      {
+        "label": "Criminal Inadmissibility",
+        "pages": [
+          {
+            "label": "Criminal Inadmissibility (overview)",
+            "href": "/inadmissibility-and-appeals/criminal-inadmissibility-overview",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/criminal-inadmissibility-overview",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Criminal Rehabilitation",
+            "href": "/inadmissibility-and-appeals/criminal-rehabilitation",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/criminal-rehabilitation",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Temporary Resident Permit (TRP)",
+            "href": "/inadmissibility-and-appeals/temporary-resident-permit-trp",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/temporary-resident-permit-trp",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Record Suspension / Pardon",
+            "href": "/inadmissibility-and-appeals/record-suspension-pardon",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/record-suspension-pardon",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Deemed Rehabilitation",
+            "href": "/inadmissibility-and-appeals/deemed-rehabilitation",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/deemed-rehabilitation",
+            "status": "Content Ready"
+          }
+        ]
+      },
+      {
+        "label": "Other Inadmissibility",
+        "pages": [
+          {
+            "label": "Medical Inadmissibility",
+            "href": "/inadmissibility-and-appeals/medical-inadmissibility",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/medical-inadmissibility",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Financial Inadmissibility",
+            "href": "/inadmissibility-and-appeals/financial-inadmissibility",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/financial-inadmissibility",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Misrepresentation",
+            "href": "/inadmissibility-and-appeals/misrepresentation",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/misrepresentation",
+            "status": "Content Ready"
+          }
+        ]
+      },
+      {
+        "label": "Enforcement",
+        "pages": [
+          {
+            "label": "Admissibility Hearing",
+            "href": "/inadmissibility-and-appeals/admissibility-hearing",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/admissibility-hearing",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Detention Review",
+            "href": "/inadmissibility-and-appeals/detention-review",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/detention-review",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Removal Order",
+            "href": "/inadmissibility-and-appeals/removal-order",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/removal-order",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Stay of Removal",
+            "href": "/inadmissibility-and-appeals/stay-of-removal",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/stay-of-removal",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Deferral Request",
+            "href": "/inadmissibility-and-appeals/deferral-request",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/deferral-request",
+            "status": "Content Ready"
+          },
+          {
+            "label": "ARC — Authorization to Return to Canada",
+            "href": "/inadmissibility-and-appeals/arc-authorization-to-return-to-canada",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/arc-authorization-to-return-to-canada",
+            "status": "Content Ready"
+          }
+        ]
+      },
+      {
+        "label": "Appeals & Legal",
+        "pages": [
+          {
+            "label": "Sponsorship Appeal (IAD)",
+            "href": "/inadmissibility-and-appeals/sponsorship-appeal-iad",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/sponsorship-appeal-iad",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Removal Order Appeal",
+            "href": "/inadmissibility-and-appeals/removal-order-appeal",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/removal-order-appeal",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Residency Obligation Appeal",
+            "href": "/inadmissibility-and-appeals/residency-obligation-appeal",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/residency-obligation-appeal",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Judicial Review — Federal Court",
+            "href": "/inadmissibility-and-appeals/judicial-review-federal-court",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/judicial-review-federal-court",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Stay Motion",
+            "href": "/inadmissibility-and-appeals/stay-motion",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/stay-motion",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Mandamus Application",
+            "href": "/inadmissibility-and-appeals/mandamus-application",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/mandamus-application",
+            "status": "Content Ready"
+          },
+          {
+            "label": "Refusal & PFL Response",
+            "href": "/inadmissibility-and-appeals/refusal-and-pfl-response",
+            "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/refusal-and-pfl-response",
+            "status": "Content Ready"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "About",
+    "groups": [
+      {
+        "label": "About",
+        "pages": [
+          {
+            "label": "About Commonwealth Migration",
+            "href": "/about/about-commonwealth-migration",
+            "url": "https://commonwealthmigration.ca/about/about-commonwealth-migration",
+            "status": "Content Ready"
+          }
+        ]
+      }
+    ]
+  }
+]

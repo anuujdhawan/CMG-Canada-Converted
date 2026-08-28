@@ -13,6 +13,7 @@
 import fs from "fs";
 import path from "path";
 import { parsePageDataFile } from "./scraped";
+import { getCmgPage, getCmgPages, getLegalPage } from "./cmgPages";
 
 const PAGE_DATA_DIR = path.join(process.cwd(), "pageData");
 const ROUTE_MAP_FILE = path.join(PAGE_DATA_DIR, "route-map.json");
@@ -73,6 +74,8 @@ export function pathForLegacyPath(pathname) {
 /** Load + parse a single page by its URL path. Returns null if unknown. */
 export function getPage(pathname) {
   const requestedPath = String(pathname || "/").replace(/\/$/, "") || "/";
+  const sourcePage = getCmgPage(requestedPath) || getLegalPage(requestedPath);
+  if (sourcePage) return sourcePage;
   const directFile = pathToFilename(requestedPath);
   const file = FILE_BY_PATH.get(requestedPath) || (fs.existsSync(path.join(PAGE_DATA_DIR, directFile))
     ? directFile
@@ -89,10 +92,12 @@ export function getPage(pathname) {
 
 /** Load + parse every page. */
 export function getAllPages() {
-  return listPageFiles().map((file) => ({
+  const legacyPages = listPageFiles().map((file) => ({
     path: filenameToPath(file),
     ...parsePageDataFile(fs.readFileSync(path.join(PAGE_DATA_DIR, file), "utf8"), file),
   }));
+  const knownPaths = new Set(legacyPages.map((page) => page.path));
+  return [...legacyPages, ...getCmgPages().filter((page) => !knownPaths.has(page.path))];
 }
 
 /** Human label for a URL segment (used in breadcrumbs / index grids). */

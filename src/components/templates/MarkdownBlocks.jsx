@@ -229,9 +229,28 @@ function refusalCardHref(title) {
 
 function renderTable(rows) {
   const hasSeparator = rows.length > 1 && rows[1].every((c) => /^:?-{2,}:?$/.test(c));
-  const header = hasSeparator ? rows[0] : null;
-  const body = hasSeparator ? rows.slice(2) : rows;
+  const isStatStrip = rows.length === 1 && rows[0].length >= 3;
+  const header = hasSeparator ? rows[0] : rows.length > 1 ? rows[0] : null;
+  const body = hasSeparator ? rows.slice(2) : rows.length > 1 ? rows.slice(1) : rows;
   const colCount = Math.max(...rows.map((r) => r.length));
+
+  if (isStatStrip) {
+    return (
+      <div className="my-8 grid grid-cols-4 gap-3 max-[760px]:grid-cols-2 max-[480px]:grid-cols-1" aria-label="At a glance">
+        {rows[0].map((cell, index) => {
+          const words = cell.split(/\s+/);
+          const valueWords = words.length > 1 && /^[A-Za-z]+$/.test(words[0]) && /^\d/.test(words[1]) ? 2 : 1;
+          const value = words.slice(0, valueWords).join(" ");
+          return (
+            <div key={`${cell}-${index}`} className="group rounded-[18px] border border-[var(--border)] bg-[var(--surface)] px-4 py-5 shadow-[var(--shadow-soft)] transition-[transform,border-color,box-shadow] duration-200 hover:-translate-y-1 hover:border-[var(--primary)]">
+              <strong className="block text-[clamp(21px,2.2vw,30px)] font-semibold leading-none tracking-[-.03em] text-[var(--primary)]">{value}</strong>
+              <span className="mt-2 block text-[12px] font-bold leading-[1.45] text-[var(--muted)]">{words.slice(valueWords).join(" ")}</span>
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
   const isStackedTabs = !header && colCount === 1 && body.length >= 4;
 
   if (isStackedTabs) {
@@ -338,6 +357,22 @@ export function Block({ block, dark = false, lead = false }) {
         <p className={dark ? "!mt-4 !text-[15.5px] !leading-relaxed !text-white/85" : "!mt-4 !text-[15px] !leading-[1.8] !text-[var(--muted)]"}>
           {renderInline(block.text)}
         </p>
+      );
+    case "faq":
+      return (
+        <details className="group my-3 overflow-hidden rounded-[16px] border border-[var(--border)] bg-[var(--surface)] px-5 transition-[border-color,box-shadow] duration-200 open:border-[var(--primary)] open:shadow-[var(--shadow-soft)]">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-[14px] font-extrabold leading-[1.4] text-[var(--ink)] marker:hidden">
+            {renderInline(block.question)}
+            <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[color-mix(in_srgb,var(--primary)_10%,transparent)] text-[var(--primary)] transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span>
+          </summary>
+          <p className="!m-0 !pb-5 !pr-10 !text-[14px] !leading-[1.75] !text-[var(--muted)]">{renderInline(block.answer)}</p>
+        </details>
+      );
+    case "legalText":
+      return (
+        <div className="my-6 whitespace-pre-line rounded-[18px] border border-[var(--border)] bg-[var(--surface)] px-5 py-6 text-[14px] leading-[1.85] text-[var(--muted)] shadow-[var(--shadow-soft)]">
+          {block.text}
+        </div>
       );
     case "list":
       if (block.ordered) {
