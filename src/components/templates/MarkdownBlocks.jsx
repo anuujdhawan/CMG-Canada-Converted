@@ -227,6 +227,10 @@ function refusalCardHref(title) {
   return destination ? pathForLegacyPath(destination) : null;
 }
 
+const PREMIUM_TOP_LINE = "before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:z-[2] before:h-[3px] before:origin-left before:scale-x-[.28] before:bg-[linear-gradient(90deg,var(--template-primary),var(--cmg-template-primary-highlight))] before:transition-transform before:duration-[450ms] before:ease-[cubic-bezier(.2,.8,.2,1)] before:content-[''] hover:before:scale-x-100";
+const PREMIUM_DATA_SURFACE = "relative overflow-hidden rounded-[18px] border border-[color-mix(in_srgb,var(--template-primary)_34%,var(--cmg-template-deep-surface))] bg-[var(--cmg-template-deep-surface)] text-[var(--template-on-primary)] shadow-[0_18px_46px_color-mix(in_srgb,var(--cmg-template-deep-surface)_28%,transparent)]";
+const PREMIUM_DATA_MUTED = "text-[color-mix(in_srgb,var(--template-on-primary)_74%,transparent)]";
+
 function renderTable(rows) {
   const hasSeparator = rows.length > 1 && rows[1].every((c) => /^:?-{2,}:?$/.test(c));
   const isStatStrip = rows.length === 1 && rows[0].length >= 3;
@@ -242,9 +246,9 @@ function renderTable(rows) {
           const valueWords = words.length > 1 && /^[A-Za-z]+$/.test(words[0]) && /^\d/.test(words[1]) ? 2 : 1;
           const value = words.slice(0, valueWords).join(" ");
           return (
-            <div key={`${cell}-${index}`} className="group rounded-[18px] border border-[var(--border)] bg-[var(--surface)] px-4 py-5 shadow-[var(--shadow-soft)] transition-[transform,border-color,box-shadow] duration-200 hover:-translate-y-1 hover:border-[var(--primary)]">
-              <strong className="block text-[clamp(21px,2.2vw,30px)] font-semibold leading-none tracking-[-.03em] text-[var(--primary)]">{value}</strong>
-              <span className="mt-2 block text-[12px] font-bold leading-[1.45] text-[var(--muted)]">{words.slice(valueWords).join(" ")}</span>
+            <div key={`${cell}-${index}`} className={cn("group px-4 py-5 transition-[transform,border-color,box-shadow] duration-200 hover:-translate-y-1 hover:border-[var(--template-primary)]", PREMIUM_DATA_SURFACE, PREMIUM_TOP_LINE)}>
+              <strong className="block text-[clamp(21px,2.2vw,30px)] font-semibold leading-none tracking-[-.03em] text-[var(--template-primary)]">{value}</strong>
+              <span className={cn("mt-2 block text-[12px] font-bold leading-[1.45]", PREMIUM_DATA_MUTED)}>{words.slice(valueWords).join(" ")}</span>
             </div>
           );
         })}
@@ -267,7 +271,7 @@ function renderTable(rows) {
     }
 
     return (
-      <div className="content-table-cards my-8 border border-[var(--border)] rounded-[16px] bg-[var(--surface)]" role="list" aria-label={`${label} and ${descriptionLabel}`}>
+      <div className={cn("content-table-cards my-8 rounded-[16px]", PREMIUM_DATA_SURFACE, PREMIUM_TOP_LINE)} role="list" aria-label={`${label} and ${descriptionLabel}`}>
         <div className="content-table-cards__intro">
           <div>
             <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] uppercase !text-[var(--primary)]">Case patterns at a glance</p>
@@ -302,13 +306,13 @@ function renderTable(rows) {
   }
 
   return (
-    <div className="my-7 overflow-x-auto rounded-2xl border border-line border-[var(--border)] bg-[var(--surface)] shadow-card">
+    <div className={cn("my-7 overflow-x-auto", PREMIUM_DATA_SURFACE, PREMIUM_TOP_LINE)}>
       <table className="w-full min-w-[480px] border-collapse text-left text-[14.5px]">
         {header && (
           <thead>
-            <tr className="bg-surface">
+            <tr className="border-b border-[color-mix(in_srgb,var(--template-primary)_65%,transparent)] bg-[linear-gradient(135deg,var(--cmg-template-deep-surface),color-mix(in_srgb,var(--template-primary)_17%,var(--cmg-template-deep-surface)))]">
               {header.map((cell, j) => (
-                <th key={j} className="px-4 py-3 text-[13px] font-bold uppercase tracking-wide text-primary">
+                <th key={j} className="px-4 py-4 text-[12px] font-extrabold uppercase tracking-[.12em] text-[var(--template-on-primary)] [&_strong]:!text-[var(--template-on-primary)]">
                   {renderInline(cell)}
                 </th>
               ))}
@@ -320,12 +324,12 @@ function renderTable(rows) {
             <tr
               key={i}
               className={cn(
-                "border-t border-line transition-colors hover:bg-surface/60",
-                i % 2 === 1 && "bg-surface/40"
+                "relative border-t border-[color-mix(in_srgb,var(--template-on-primary)_16%,transparent)] transition-[background-color,border-color] duration-[240ms] before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:z-[1] before:h-px before:origin-left before:scale-x-0 before:bg-[var(--template-primary)] before:transition-transform before:duration-300 before:content-[''] hover:border-t-[var(--template-primary)] hover:bg-[color-mix(in_srgb,var(--template-primary)_13%,var(--cmg-template-deep-surface))] hover:before:scale-x-100",
+                i % 2 === 1 && "bg-[color-mix(in_srgb,var(--template-on-primary)_4%,var(--cmg-template-deep-surface))]"
               )}
             >
               {Array.from({ length: colCount }).map((_, j) => (
-                <td key={j} className="px-4 py-3 align-top text-muted">
+                <td key={j} className={cn("px-4 py-3 align-top [&_strong]:!text-[var(--template-on-primary)]", PREMIUM_DATA_MUTED)}>
                   {renderInline(row[j] || "")}
                 </td>
               ))}
