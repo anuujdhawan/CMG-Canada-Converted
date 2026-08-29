@@ -360,7 +360,7 @@ function renderTable(rows) {
         <table className="w-full min-w-[480px] border-collapse text-center text-[14.5px]">
           <caption className="sr-only">{presentation.label}</caption>
         {header && (
-          <thead className="sticky top-0 z-[4] bg-[linear-gradient(135deg,var(--template-primary),var(--template-accent))] shadow-[0_10px_22px_color-mix(in_srgb,var(--cmg-template-deep-surface)_42%,transparent)] [isolation:isolate]">
+          <thead className="bg-[linear-gradient(135deg,var(--template-primary),var(--template-accent))] shadow-[0_10px_22px_color-mix(in_srgb,var(--cmg-template-deep-surface)_42%,transparent)] [isolation:isolate]">
             <tr className="border-b border-[color-mix(in_srgb,var(--template-on-primary)_34%,transparent)] bg-[linear-gradient(135deg,var(--template-primary),var(--template-accent))]">
               {header.map((cell, j) => (
                 <th key={j} className="px-4 py-4 text-center text-[12px] font-extrabold uppercase tracking-[.12em] text-[var(--template-on-primary)] [&_strong]:!text-[var(--template-on-primary)]">
