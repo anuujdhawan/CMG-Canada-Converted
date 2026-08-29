@@ -5,7 +5,7 @@ import { currentPagePath } from "@/config/pageRoutes";
 import { site } from "@/config/site";
 import { HERO_SLIDES } from "@/lib/heroSlides";
 import { getPageFaqs } from "@/lib/faqs";
-import { Block, parseBlocks, rebrand } from "@/components/templates/MarkdownBlocks";
+import { Block, parseBlocks, RelatedPagesList, rebrand } from "@/components/templates/MarkdownBlocks";
 import HeroCarousel from "./HeroCarousel";
 import HeroProofCard from "./HeroProofCard";
 import ServiceImageGallery from "./ServiceImageGallery";
@@ -58,7 +58,18 @@ function groupContentBlocks(blocks) {
 }
 
 function renderContentBlocks(blocks, prefix) {
-  return blocks.map((block, index) => <Block key={`${prefix}-${block.type}-${index}`} block={block} />);
+  let relatedPagesHeading = false;
+  return blocks.map((block, index) => {
+    if (block.type === "heading") {
+      relatedPagesHeading = /^related pages$/i.test(block.text);
+    } else if (relatedPagesHeading && block.type === "list") {
+      relatedPagesHeading = false;
+      return <RelatedPagesList key={`${prefix}-${block.type}-${index}`} items={block.items} ordered={block.ordered} />;
+    } else {
+      relatedPagesHeading = false;
+    }
+    return <Block key={`${prefix}-${block.type}-${index}`} block={block} />;
+  });
 }
 
 function isFaqSection(section) {

@@ -399,6 +399,38 @@ function renderTable(rows) {
   );
 }
 
+function parseRelatedPageItem(item) {
+  const match = String(item || "").match(/^(.*?)\s+→\s+(\/\S+)$/);
+  if (!match) return null;
+  return { label: match[1].trim(), href: localizeUrl(match[2].trim()) };
+}
+
+export function RelatedPagesList({ items = [], ordered = true }) {
+  const List = ordered ? "ol" : "ul";
+  return (
+    <List className="related-pages-list mt-5 list-none overflow-hidden rounded-[18px] border border-[var(--border)] bg-[var(--surface)] p-2 shadow-[var(--shadow-soft)]">
+      {items.map((item, index) => {
+        const relatedPage = parseRelatedPageItem(item);
+        return (
+          <li key={`${item}-${index}`} className="group relative flex min-w-0 items-center gap-3 overflow-hidden rounded-[14px] border border-transparent px-3 py-3.5 transition-[background,border-color,transform] duration-200 ease-[ease] before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-[2px] before:origin-left before:scale-x-[.18] before:bg-[linear-gradient(90deg,var(--primary),var(--accent))] before:transition-transform before:duration-[350ms] before:ease-[cubic-bezier(.2,.8,.2,1)] before:content-[''] hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--primary)_22%,var(--border))] hover:bg-[color-mix(in_srgb,var(--primary)_6%,var(--surface))] hover:before:scale-x-100">
+            <span aria-hidden="true" className="grid size-8 flex-none place-items-center rounded-full bg-[color-mix(in_srgb,var(--primary)_11%,transparent)] text-[var(--primary)] text-[11px] font-extrabold leading-none">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            {relatedPage ? (
+              <Link href={relatedPage.href} className="flex min-h-11 min-w-0 flex-1 items-center justify-between gap-3 text-[14px] font-bold leading-[1.45] text-[var(--ink)] transition-colors duration-200 group-hover:text-[var(--primary)]">
+                <span className="min-w-0">{renderInline(relatedPage.label)}</span>
+                <ArrowRight className="size-4 flex-none text-[var(--muted)] transition-[color,transform] duration-200 group-hover:translate-x-0.5 group-hover:text-[var(--primary)]" aria-hidden="true" />
+              </Link>
+            ) : (
+              <span className="min-w-0 flex-1 text-[14px] leading-[1.45] text-[var(--muted)]">{renderInline(item)}</span>
+            )}
+          </li>
+        );
+      })}
+    </List>
+  );
+}
+
 export function Block({ block, dark = false, lead = false }) {
   switch (block.type) {
     case "heading":
