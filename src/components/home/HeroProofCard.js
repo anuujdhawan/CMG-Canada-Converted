@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Check, MapPin, ShieldCheck } from "lucide-react";
+import HeroCardShell from "./HeroCardShell";
 
 const CICC_REGISTER_URL = "https://register.college-ic.ca/Public-Register-EN/Licensee/Profile.aspx?ID=18715";
 
@@ -14,7 +15,7 @@ const HANDLED_FILES = [
 
 export default function HeroProofCard({ ariaLabel = "Track record and files we handle" }) {
   return (
-    <article className="visual-card hero-proof-card -translate-y-[50%] hover:!translate-y-[calc(-50%-2px)] absolute isolate overflow-hidden rounded-[24px] border border-[rgba(255,255,255,.22)] bg-[linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.03)_38%,rgba(164,31,73,.12)_100%),rgba(18,16,28,.24)] text-[var(--template-on-primary)] shadow-[0_18px_44px_rgba(5,4,12,.28),inset_0_1px_0_rgba(255,255,255,.2),inset_0_0_0_1px_rgba(255,255,255,.04)] backdrop-blur-[50px] backdrop-saturate-[1.55] backdrop-contrast-[1.05] [-webkit-backdrop-filter:blur(50px)_saturate(1.55)_contrast(1.05)] [transition:transform_420ms_cubic-bezier(.16,1,.3,1),box-shadow_420ms_ease,border-color_420ms_ease] top-1/2 right-0 bottom-auto left-auto w-[86%] max-w-[440px] !p-[22px_24px_20px] max-[880px]:!static max-[880px]:!top-auto max-[880px]:!right-auto max-[880px]:!bottom-auto max-[880px]:!left-auto max-[880px]:!w-full max-[880px]:!translate-y-0 max-[880px]:!mx-auto max-[880px]:!border-transparent max-[880px]:!shadow-[0_18px_44px_rgba(5,4,12,.28)] max-[880px]:before:!hidden max-[880px]:!p-[20px_20px_19px] max-[480px]:!p-[17px_17px_16px]" aria-label={ariaLabel}>
+    <HeroCardShell ariaLabel={ariaLabel} className="hero-proof-card -translate-y-[50%]">
       <div className="mini-badges flex flex-wrap items-center gap-2">
         <Link href={CICC_REGISTER_URL} target="_blank" rel="noopener noreferrer" className="mini-badge inline-flex items-center gap-[7px] rounded-full border border-[color-mix(in_srgb,var(--template-on-primary)_13%,transparent)] bg-[color-mix(in_srgb,var(--template-on-primary)_9%,transparent)] p-[7px_11px_7px_9px] text-[color-mix(in_srgb,var(--template-on-primary)_92%,transparent)] text-[11px] font-extrabold leading-[1.65] tracking-[.07em] uppercase backdrop-blur-[10px] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_7%,transparent)]">
           <ShieldCheck className="flex-none text-[var(--cmg-template-primary-bright)] drop-shadow-[0_1px_8px_color-mix(in_srgb,var(--template-primary)_42%,transparent)]" width={15} height={15} aria-hidden="true" /> CICC-regulated
@@ -36,6 +37,6 @@ export default function HeroProofCard({ ariaLabel = "Track record and files we h
         <span>Commonwealth Migration Group Inc</span>
         <strong className="font-bold text-[color-mix(in_srgb,var(--template-on-primary)_86%,transparent)] text-right">CICC-Regulated Practice</strong>
       </div>
-    </article>
+    </HeroCardShell>
   );
 }

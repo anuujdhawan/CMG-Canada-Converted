@@ -6,7 +6,7 @@ import { HERO_SLIDES } from "@/lib/heroSlides";
 import { getBlogGroups } from "@/lib/blog";
 import BlogCategoryTabs from "./BlogCategoryTabs";
 import HeroCarousel from "@/components/home/HeroCarousel";
-import HeroProofCard from "@/components/home/HeroProofCard";
+import HeroProofCardCarousel from "@/components/home/HeroProofCardCarousel";
 import TemplateMotion from "@/components/home/TemplateMotion";
 
 function TemplateLink({ children, path, className = "", ...props }) {
@@ -54,8 +54,8 @@ export default function BlogIndexPage({ page }) {
             </div>
           </div>
 
-          <div className="hero-visual relative min-h-[530px] max-[880px]:static max-[880px]:min-h-0 max-[880px]:mt-[26px] reveal in">
-            <HeroProofCard ariaLabel="Track record and files we handle" />
+          <div className="hero-visual self-start relative min-h-[530px] max-[880px]:static max-[880px]:min-h-0 max-[880px]:mt-[26px] reveal in">
+            <HeroProofCardCarousel />
           </div>
         </div>
       </section>

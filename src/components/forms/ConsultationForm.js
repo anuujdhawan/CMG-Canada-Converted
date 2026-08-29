@@ -62,24 +62,24 @@ export default function ConsultationForm({ variant = "standard" }) {
   }
 
   return (
-      <FormShell as="form" onSubmit={onSubmit} noValidate className="consultation-form-shell !rounded-[20px] !p-0 before:absolute before:top-0 before:right-0 before:left-0 before:h-1 before:bg-[var(--brand-gold)] before:content-[''] border border-[var(--brand-border)] bg-[var(--cmg-light-surface,#fff)] shadow-[0_14px_38px_color-mix(in_srgb,var(--brand-navy)_8%,transparent),0_2px_8px_color-mix(in_srgb,var(--brand-navy)_4%,transparent)]" bodyClassName="!gap-4 !p-[1.15rem_clamp(0.75rem,1.5vw,1.2rem)_1.25rem]">
-      <div className="consultation-form-intro flex items-start gap-[0.8rem] mb-[1.15rem] border-b !border-b-[var(--modal-border)] pb-[1.05rem]">
-        <span className="consultation-form-intro-mark inline-flex h-[2.9rem] w-[2.9rem] shrink-0 items-center justify-center rounded-[15px] border border-[color-mix(in_srgb,var(--brand-primary)_24%,transparent)] bg-[var(--brand-navy)] text-[var(--cmg-light-surface,#fff)] shadow-[0_8px_18px_color-mix(in_srgb,var(--brand-navy)_12%,transparent)]" aria-hidden="true">
+      <FormShell as="form" onSubmit={onSubmit} noValidate className="consultation-form-shell !rounded-[20px] !p-0 before:absolute before:top-0 before:right-0 before:left-0 before:h-1 before:bg-[var(--brand-gold)] before:content-[''] border border-[var(--template-border)] bg-[var(--template-surface)] shadow-[0_14px_38px_color-mix(in_srgb,var(--template-ink)_8%,transparent),0_2px_8px_color-mix(in_srgb,var(--template-ink)_4%,transparent)]" bodyClassName="!gap-4 !p-[1.15rem_clamp(0.75rem,1.5vw,1.2rem)_1.25rem]">
+      <div className="consultation-form-intro flex items-start gap-[0.8rem] mb-[1.15rem] border-b !border-b-[var(--modal-border,var(--template-border))] pb-[1.05rem]">
+        <span className="consultation-form-intro-mark inline-flex h-[2.9rem] w-[2.9rem] shrink-0 items-center justify-center rounded-[15px] border border-[color-mix(in_srgb,var(--template-primary)_24%,transparent)] bg-[var(--template-secondary)] text-[var(--template-on-primary)] shadow-[0_8px_18px_color-mix(in_srgb,var(--template-ink)_12%,transparent)]" aria-hidden="true">
           <CalendarCheck className="h-6 w-6" />
         </span>
         <div>
-          <p className="consultation-form-kicker m-0 !text-[var(--modal-primary)] text-[0.6875rem] font-extrabold leading-[1.2] tracking-[0.16em] uppercase">Personalised guidance</p>
-          <h3 className="consultation-form-title m-0 mt-[0.35rem] !text-[var(--modal-ink)] text-[clamp(1.6rem,3vw,2.2rem)] font-semibold leading-[1.03] tracking-[-0.035em]">
+          <p className="consultation-form-kicker m-0 !text-[var(--modal-primary,var(--template-primary))] text-[0.6875rem] font-extrabold leading-[1.2] tracking-[0.16em] uppercase">Personalised guidance</p>
+          <h3 className="consultation-form-title m-0 mt-[0.35rem] !text-[var(--modal-ink,var(--template-ink))] text-[clamp(1.6rem,3vw,2.2rem)] font-semibold leading-[1.03] tracking-[-0.035em]">
             {urgent ? "Tell us what needs attention." : "Tell us what you need help with."}
           </h3>
-          <p className="consultation-form-description m-0 mt-[0.55rem] max-w-[46rem] !text-[var(--modal-muted)] text-[0.86rem] font-medium leading-[1.65]">
+          <p className="consultation-form-description m-0 mt-[0.55rem] max-w-[46rem] !text-[var(--modal-muted,var(--template-muted))] text-[0.86rem] font-medium leading-[1.65]">
             Share a few details and our regulated team will follow up with the right next step.
           </p>
         </div>
       </div>
 
-      <div className="consultation-form-section-label m-0 mb-[0.8rem] flex items-center gap-[0.55rem] border-t !border-t-[var(--modal-border)] pt-[1rem] !text-[var(--modal-primary)] font-extrabold tracking-[0.14em]">
-        <span className="inline-flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full bg-[var(--brand-accent-soft)] text-[var(--brand-primary)] text-[0.6875rem]">01</span>
+      <div className="consultation-form-section-label m-0 mb-[0.8rem] flex items-center gap-[0.55rem] border-t !border-t-[var(--modal-border,var(--template-border))] pt-[1rem] !text-[var(--modal-primary,var(--template-primary))] font-extrabold tracking-[0.14em]">
+        <span className="inline-flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full bg-[color-mix(in_srgb,var(--template-primary)_10%,var(--template-surface-alt))] text-[var(--template-primary)] text-[0.6875rem]">01</span>
         Your details
       </div>
 
@@ -136,13 +136,13 @@ export default function ConsultationForm({ variant = "standard" }) {
             <TextArea id="consult-message" rows={4} value={form.message} onChange={set("message")} error={errors.message} className="min-h-[6.5rem] rounded-[12px] px-4 py-[0.85rem] resize-y" />
           </Field>
         </div>
-        <div className="consultation-form-consent sm:col-span-2 rounded-[14px] border bg-[var(--brand-accent-soft)] p-[0.9rem_1rem]">
+        <div className="consultation-form-consent sm:col-span-2 rounded-[14px] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-primary)_6%,var(--template-surface-alt))] p-[0.9rem_1rem]">
           <CheckboxField
             htmlFor="consult-consent"
             checked={form.consent}
             onChange={(e) => setForm((f) => ({ ...f, consent: e.target.checked }))}
             error={errors.consent}
-            className="text-[var(--brand-navy)] text-[0.78rem]"
+            className="text-[var(--template-ink)] text-[0.78rem]"
             label="I agree to be contacted about my consultation by email or phone."
           />
         </div>
@@ -152,8 +152,8 @@ export default function ConsultationForm({ variant = "standard" }) {
 
       <div className="consultation-form-submit-row flex items-center justify-between max-[640px]:items-stretch max-[640px]:flex-col gap-4 mt-[1.15rem] border-t pt-[1.05rem]">
         <div>
-          <p className="consultation-form-submit-title m-0 !text-[var(--modal-ink)] text-[0.7rem] font-extrabold tracking-[0.13em] uppercase">Ready when you are</p>
-          <p className="consultation-form-submit-note m-0 mt-1 max-w-[27rem] !text-[var(--modal-muted)] text-[0.7rem] font-medium leading-[1.55]">No payment is taken. We confirm availability before anything is booked.</p>
+          <p className="consultation-form-submit-title m-0 !text-[var(--modal-ink,var(--template-ink))] text-[0.7rem] font-extrabold tracking-[0.13em] uppercase">Ready when you are</p>
+          <p className="consultation-form-submit-note m-0 mt-1 max-w-[27rem] !text-[var(--modal-muted,var(--template-muted))] text-[0.7rem] font-medium leading-[1.55]">No payment is taken. We confirm availability before anything is booked.</p>
         </div>
         <FormSubmitButton
           loading={status === "loading"}

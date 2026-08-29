@@ -46,10 +46,10 @@ export default function PaymentForm() {
   }
 
   return (
-    <FormShell as="form" onSubmit={onSubmit} noValidate className="mx-auto max-w-md !border-[var(--border)] !rounded-[var(--radius)] !bg-[var(--surface)] !text-[var(--ink)] !shadow-[var(--shadow-soft)] [&_.tool-field__label]:!text-[var(--ink)] [&_.tool-input]:!border-[var(--border)] [&_.tool-input]:!rounded-[12px] [&_.tool-input]:!bg-[var(--secondary)] [&_.tool-input]:!text-[var(--ink)] [&_.tool-input:focus]:!border-[var(--primary)] [&_.tool-input:focus]:!shadow-[0_0_0_3px_color-mix(in_srgb,var(--primary)_16%,transparent)]">
+    <FormShell as="form" onSubmit={onSubmit} noValidate className="mx-auto max-w-md !rounded-[var(--radius)] !border-[var(--template-border)] !bg-[var(--template-surface)] !text-[var(--template-ink)] !shadow-[var(--shadow-soft)] [&_.tool-field__label]:!text-[var(--template-ink)] [&_.tool-input]:!border-[var(--template-border)] [&_.tool-input]:!rounded-[12px] [&_.tool-input]:!bg-[var(--template-surface-alt)] [&_.tool-input]:!text-[var(--template-ink)] [&_.tool-input:focus]:!border-[var(--template-primary)] [&_.tool-input:focus]:!shadow-[0_0_0_0.2rem_color-mix(in_srgb,var(--template-primary)_16%,transparent)]">
       <Field label="Amount (CAD)" htmlFor="pay-amount" required>
         <div className="relative">
-          <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm font-semibold text-muted">
+          <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm font-semibold text-[var(--template-muted)]">
             $
           </span>
           <TextInput
@@ -80,11 +80,11 @@ export default function PaymentForm() {
 
       <FormErrorBanner message={error} />
 
-      <FormSubmitButton loading={loading} icon={CreditCard} className="!rounded-[12px] !bg-[var(--primary)] hover:!bg-[var(--accent)]">
+      <FormSubmitButton loading={loading} icon={CreditCard} className="!rounded-[12px] !bg-[var(--template-primary)] hover:!bg-[var(--template-accent)]">
         Continue to Secure Checkout
       </FormSubmitButton>
 
-      <p className="flex items-center gap-2 text-xs text-muted">
+      <p className="flex items-center gap-2 text-xs text-[var(--template-muted)]">
         <ShieldCheck className="h-4 w-4 shrink-0" aria-hidden />
         We never see or store your card details.
       </p>

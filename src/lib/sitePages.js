@@ -114,6 +114,8 @@ const SEGMENT_LABELS = {
   "document-checklist": "Document Checklists",
   pnp: "Provincial Nominees (PNP)",
   "about-us": "About Us",
+  "canada-immigration-consulting-process": "Our Process",
+  "immigration-office-brampton-ontario": "Our Office",
   "how-it-works": "How It Works",
   "contact-us": "Contact Us",
   "immigration-draws": "Immigration Draws",

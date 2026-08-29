@@ -15,7 +15,7 @@ export default function WhatsAppBubble() {
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
       title="Chat on WhatsApp"
-      className="cmg-floating-bubble cmg-floating-bubble--whatsapp cmg-whatsapp-bubble fixed right-5 bottom-20 left-auto !z-[1000] inline-flex items-center justify-center w-12 h-12 border-0 rounded-full bg-transparent shadow-[0_16px_40px_color-mix(in_srgb,var(--brand-navy)_16%,transparent),0_2px_8px_color-mix(in_srgb,var(--brand-navy)_7%,transparent)] transition-[transform,box-shadow] duration-[180ms] ease-in-out hover:-translate-y-0.5 hover:shadow-[0_20px_48px_color-mix(in_srgb,var(--brand-navy)_22%,transparent),0_4px_12px_color-mix(in_srgb,var(--brand-navy)_10%,transparent)]"
+      className="cmg-floating-bubble cmg-floating-bubble--whatsapp cmg-whatsapp-bubble fixed right-5 bottom-20 left-auto !z-[1000] inline-flex items-center justify-center w-12 h-12 border-0 rounded-full bg-transparent shadow-[0_16px_40px_color-mix(in_srgb,var(--brand-primary)_22%,transparent),0_2px_8px_color-mix(in_srgb,var(--brand-navy)_7%,transparent)] transition-[transform,box-shadow] duration-[220ms] ease-[cubic-bezier(.16,1,.3,1)] hover:-translate-y-0.5 hover:scale-[1.04] hover:shadow-[0_20px_48px_color-mix(in_srgb,var(--brand-primary)_34%,transparent),0_4px_12px_color-mix(in_srgb,var(--brand-navy)_10%,transparent)]"
     >
       <span className="cmg-whatsapp-bubble-icon inline-flex w-full h-full" aria-hidden="true">
         <Image

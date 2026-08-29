@@ -67,7 +67,7 @@ export default function DocumentChecklist() {
 
         <div className="mt-7 space-y-7">
           {checklist.groups.map((group) => (
-            <fieldset key={group.title} className="tool-group border border-[var(--cmg-dark-border)] bg-[var(--cmg-dark-surface)] rounded-[0.95rem] p-4">
+            <fieldset key={group.title} className="tool-group border border-[var(--template-border)] bg-[var(--template-surface)] rounded-[0.95rem] p-4">
               <legend className="tool-field__label px-1.5">{group.title}</legend>
               <ul className="mt-2 space-y-2">
                 {group.items.map((item) => {
@@ -93,7 +93,7 @@ export default function DocumentChecklist() {
             <p className="tool-result__copy mt-1 text-sm !text-[var(--template-on-primary)]">A licensed RCIC will still review every document for consistency before submission.</p>
           </ToolResultCard>
         ) : pct >= 60 ? (
-          <div className="tool-notice mt-6 rounded-[0.85rem] border border-[var(--cmg-dark-border)] bg-[color-mix(in_srgb,var(--cmg-dark-primary)_5%,transparent)] px-4 py-[0.9rem] text-center">
+          <div className="tool-notice mt-6 rounded-[0.85rem] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-primary)_5%,transparent)] px-4 py-[0.9rem] text-center">
             <p className="text-sm font-bold">Nice momentum — {pct}% there.</p>
             <p className="tool-field__hint m-0 mt-1 text-[var(--template-muted)]">Keep marking items as you collect them; download or print this page anytime.</p>
           </div>

@@ -60,8 +60,8 @@ export default function NocFinder() {
                   <p className="tool-field__hint !leading-[1.4]">{teerLevels[occ.teer]?.note}</p>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
-                  <span className="tool-code font-mono border border-[var(--cmg-dark-border)] bg-[var(--cmg-dark-surface-alt)] text-[var(--cmg-dark-primary)]">{occ.code}</span>
-                  <span className="tool-badge border border-[color-mix(in_srgb,var(--cmg-dark-primary)_18%,transparent)] bg-[color-mix(in_srgb,var(--cmg-dark-primary)_10%,var(--cmg-dark-surface-alt))] text-[var(--cmg-dark-primary)]">{teerLevels[occ.teer]?.label}</span>
+                  <span className="tool-code font-mono border border-[var(--template-border)] bg-[var(--template-surface-alt)] text-[var(--template-primary)]">{occ.code}</span>
+                  <span className="tool-badge border border-[color-mix(in_srgb,var(--template-primary)_18%,transparent)] bg-[color-mix(in_srgb,var(--template-primary)_10%,var(--template-surface-alt))] text-[var(--template-primary)]">{teerLevels[occ.teer]?.label}</span>
                 </div>
               </li>
             ))}

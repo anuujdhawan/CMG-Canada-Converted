@@ -1,6 +1,7 @@
 import sourcePages from "@/data/cmg-pages.json";
 import sourceMenu from "@/data/cmg-menu.json";
 import legalPages from "@/data/cmg-legal.json";
+import aboutPages from "@/data/about-pages";
 
 const normalizePath = (value) => {
   const pathname = String(value || "/").split("?")[0].split("#")[0];
@@ -46,16 +47,19 @@ function sourcePageToPage(page) {
     seo: {
       title: page.title,
       description: page.description,
+      keywords: page.keywords || [],
       canonical: page.url,
       robots: "index, follow",
     },
-    meta: { lastModified: "2026-08-01", priority: 0.7, status: "Content Ready" },
+    meta: { lastModified: page.lastModified || "2026-08-29", priority: page.priority || 0.7, status: page.status || "Content Ready" },
     headingOutline: page.contentBlocks.filter((block) => block.type === "heading").map((block) => ({ level: block.level, text: block.text })),
-    jsonLd: [],
+    jsonLd: page.jsonLd || [],
   };
 }
 
-const pagesByPath = new Map(sourcePages.map((page) => [normalizePath(page.path), sourcePageToPage(page)]));
+// The dedicated About page set is appended so its intent-specific versions
+// take precedence over the original source inventory for matching paths.
+const pagesByPath = new Map([...sourcePages, ...aboutPages].map((page) => [normalizePath(page.path), sourcePageToPage(page)]));
 const legalByPath = new Map(legalPages.map((page) => [normalizePath(page.path), page]));
 
 export function getCmgPage(pathname) {

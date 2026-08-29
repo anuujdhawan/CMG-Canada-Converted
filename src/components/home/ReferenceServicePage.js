@@ -7,7 +7,7 @@ import { HERO_SLIDES } from "@/lib/heroSlides";
 import { getPageFaqs } from "@/lib/faqs";
 import { Block, parseBlocks, RelatedPagesList, rebrand } from "@/components/templates/MarkdownBlocks";
 import HeroCarousel from "./HeroCarousel";
-import HeroProofCard from "./HeroProofCard";
+import HeroProofCardCarousel from "./HeroProofCardCarousel";
 import ServiceImageGallery from "./ServiceImageGallery";
 import ServiceContentImageFrame, { getServiceContentImages } from "./ServiceContentImageFrame";
 import TemplateMotion from "./TemplateMotion";
@@ -91,8 +91,8 @@ function ServiceFaqSection({ page }) {
         <div className="faq-list border-t border-[var(--border)]">
           {faqs.map((faq, index) => (
             <details className="faq-item group border-b border-[var(--border)] reveal" key={faq.question} open={index === 0}>
-              <summary className="flex items-center justify-between gap-5 py-[22px] cursor-pointer list-none text-[var(--ink)] text-[14px] font-extrabold leading-[1.3]">{faq.question}<span className="inline w-auto h-auto flex-none border-0 rounded-none text-[var(--primary)] transition-transform duration-[300ms] ease-[ease]"><Plus width={20} height={20} aria-hidden="true" /></span></summary>
-              <div className="grid grid-rows-[0fr] p-0 transition-[grid-template-rows] duration-[350ms] ease-[ease] group-open:grid-rows-[1fr]"><p className="min-h-0 overflow-hidden !m-0 !pr-[50px] !mb-[22px] !pb-[22px] !text-[var(--muted)] !text-[13px] !leading-[1.75]">{faq.answer}</p></div>
+              <summary className="faq-item__summary flex items-center justify-between gap-5 py-[22px] cursor-pointer list-none text-[var(--ink)] text-[14px] font-extrabold leading-[1.3]">{faq.question}<span className="faq-item__toggle inline w-auto h-auto flex-none border-0 rounded-none text-[var(--primary)] transition-transform duration-[300ms] ease-[ease]"><Plus width={20} height={20} aria-hidden="true" /></span></summary>
+              <div className="faq-item__answer grid grid-rows-[0fr] p-0 transition-[grid-template-rows] duration-[350ms] ease-[ease] group-open:grid-rows-[1fr]"><p className="min-h-0 overflow-hidden !m-0 !pr-[50px] !mb-[22px] !pb-[22px] !text-[var(--muted)] !text-[13px] !leading-[1.75]">{faq.answer}</p></div>
             </details>
           ))}
         </div>
@@ -144,8 +144,8 @@ export default function ReferenceServicePage({ page, children, interactivePositi
               <TemplateLink path="/tools/crs-calculator" className="btn btn-secondary max-[768px]:!w-auto max-[768px]:!min-h-10 max-[768px]:!px-[18px] max-[768px]:!py-[9px] max-[768px]:!rounded-full max-[768px]:!text-[12.5px]">Check your CRS <Calculator width={18} height={18} aria-hidden="true" /></TemplateLink>
             </div>
           </div>
-          <div className="hero-visual relative w-full min-h-[530px] max-[880px]:static max-[880px]:min-h-0 max-[880px]:transform-none max-[880px]:mt-[26px] reveal in">
-            <HeroProofCard ariaLabel="Track record and files we handle" />
+          <div className="hero-visual self-start relative w-full min-h-[530px] max-[880px]:static max-[880px]:min-h-0 max-[880px]:transform-none max-[880px]:mt-[26px] reveal in">
+            <HeroProofCardCarousel />
           </div>
         </div>
       </section>
@@ -159,9 +159,11 @@ export default function ReferenceServicePage({ page, children, interactivePositi
         </div>
       </section>
 
-      {interactivePosition === "top" && interactiveSection}
-
       <ServiceImageGallery page={page} />
+
+      {/* Keep the page's primary interaction close to the visual route guide.
+          Supporting explanation and related content follow below it. */}
+      {interactiveSection}
 
       <section className="section relative z-[1] bg-[var(--surface-alt)] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16 alt">
         <div className="section-inner mx-auto w-[var(--container)] service-route-layout grid grid-cols-[.82fr_1.18fr] items-center gap-[46px] max-[880px]:grid-cols-1 max-[880px]:gap-[35px]">
@@ -188,8 +190,6 @@ export default function ReferenceServicePage({ page, children, interactivePositi
           </article>
         </div>
       </section>
-
-      {interactivePosition === "bottom" && interactiveSection}
 
       {isToolPage && <ServiceFaqSection page={page} />}
 

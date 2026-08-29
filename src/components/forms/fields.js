@@ -1,7 +1,8 @@
 import { cn } from "@/lib/utils";
 
-// Single-source field primitives — colors resolve via .env-driven vars (no hex)
-const inputBase = "tool-input h-[3.15rem] w-full rounded-[0.75rem] px-[0.75rem] text-[0.86rem] font-semibold outline-none transition-all duration-[180ms] ease-[ease]";
+// Single-source field primitives. The active template variables switch with
+// html[data-theme], keeping every form readable in both themes.
+const inputBase = "tool-input h-[3.15rem] w-full rounded-[0.75rem] border border-[var(--template-border)] bg-[var(--template-surface-alt)] px-[0.75rem] text-[0.86rem] font-semibold text-[var(--template-ink)] outline-none transition-all duration-[180ms] ease-[ease] placeholder:text-[var(--template-muted)] hover:border-[color-mix(in_srgb,var(--template-primary)_30%,var(--template-border))] focus:border-[var(--template-primary)] focus:bg-[var(--template-surface)] focus:shadow-[0_0_0_3px_color-mix(in_srgb,var(--template-primary)_12%,transparent)]";
 const stateCls = (error) => (error ? "border-error focus:border-error focus:ring-error/25" : "");
 
 export function Field({ label, htmlFor, required, error, hint, children }) {
@@ -9,7 +10,7 @@ export function Field({ label, htmlFor, required, error, hint, children }) {
     <div className="tool-field grid gap-[0.35rem]">
       <label htmlFor={htmlFor} className="tool-field__label text-[var(--template-ink)] text-[0.78rem] font-extrabold tracking-[-0.01em]">
         {label}
-        {required && <span className="ml-1 text-[var(--cmg-dark-primary)]" aria-hidden>*</span>}
+        {required && <span className="ml-1 text-[var(--template-primary)]" aria-hidden>*</span>}
       </label>
       {children}
       {hint && !error && <p className="tool-field__hint m-0 text-[var(--template-muted)] text-[0.68rem] leading-[1.4]">{hint}</p>}
@@ -25,13 +26,13 @@ export function SelectInput({ className, error, children, ...props }) {
   return <select className={cn(inputBase, stateCls(error), className)} {...props}>{children}</select>;
 }
 export function TextArea({ className, error, ...props }) {
-  return <textarea className={cn("tool-input min-h-[7rem] h-[3.15rem] rounded-[0.75rem] px-[0.75rem] py-3 text-[0.86rem]", stateCls(error), className)} {...props} />;
+  return <textarea className={cn(inputBase, "min-h-[7rem] h-[3.15rem] rounded-[0.75rem] px-[0.75rem] py-3 text-[0.86rem]", stateCls(error), className)} {...props} />;
 }
 export function CheckboxField({ label, htmlFor, checked, onChange, error, className }) {
   return (
     <div>
-          <label htmlFor={htmlFor} className={cn("flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-[var(--cmg-dark-ink)]", className)}>
-        <input id={htmlFor} type="checkbox" checked={checked} onChange={onChange} className="tool-checkbox mt-[0.15rem] h-[1.05rem] w-[1.05rem]" />
+          <label htmlFor={htmlFor} className={cn("flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-[var(--template-ink)]", className)}>
+        <input id={htmlFor} type="checkbox" checked={checked} onChange={onChange} className="tool-checkbox mt-[0.15rem] h-[1.05rem] w-[1.05rem] accent-[var(--template-primary)]" />
         <span>{label}</span>
       </label>
       {error && <p role="alert" className="mt-1.5 text-xs font-medium text-[var(--brand-error)]">{error}</p>}

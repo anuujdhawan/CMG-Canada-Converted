@@ -13,7 +13,7 @@ const tones = {
 export default function FormSuccessCard({ title, tone = "success", className, children }) {
   const { icon: Icon, chip, color } = tones[tone] || tones.success;
   return (
-    <div className={cn("tool-card relative flex flex-col overflow-hidden rounded-[1.5rem] p-8 text-center sm:p-12", className)}>
+    <div className={cn("tool-card relative flex flex-col overflow-hidden rounded-[1.5rem] border border-[var(--template-border)] bg-[var(--template-surface)] text-[var(--template-ink)] p-8 text-center shadow-[0_18px_44px_color-mix(in_srgb,var(--cmg-template-deep-surface)_12%,transparent)] sm:p-12", className)}>
       <span className={cn("mx-auto flex h-14 w-14 items-center justify-center rounded-full", chip)}>
         <Icon className={cn("h-7 w-7", color)} aria-hidden />
       </span>

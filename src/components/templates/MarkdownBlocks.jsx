@@ -347,20 +347,24 @@ function renderTable(rows) {
   const presentation = getTablePresentation(header || []);
   return (
       <div className={cn("my-7 max-h-[640px] overflow-auto max-[620px]:max-h-[560px] [isolation:isolate]", PREMIUM_DATA_SURFACE, PREMIUM_TOP_LINE)}>
-        <div className="flex items-center justify-between gap-4 border-b border-[var(--template-border)] bg-[linear-gradient(90deg,color-mix(in_srgb,var(--template-primary)_10%,var(--template-surface-alt)),var(--template-surface-alt))] px-4 py-3 max-[620px]:items-start max-[620px]:flex-col max-[620px]:gap-1">
-          <div className="flex items-center gap-2">
-            <Table2 className="h-4 w-4 text-[var(--template-primary)]" aria-hidden="true" />
-            <div>
-              <p className="m-0 text-[11px] font-extrabold uppercase tracking-[.15em] text-[var(--template-ink)]">{presentation.label}</p>
-              <p className={cn("m-0 mt-1 text-[11px] font-semibold", PREMIUM_DATA_MUTED)}>{presentation.detail}</p>
-            </div>
-          </div>
-          <span className="rounded-full border border-[color-mix(in_srgb,var(--template-primary)_35%,transparent)] bg-[color-mix(in_srgb,var(--template-primary)_10%,transparent)] px-3 py-1 text-[10px] font-extrabold uppercase tracking-[.1em] text-[var(--template-primary)]">Official data</span>
-        </div>
         <table className="w-full min-w-[480px] border-collapse text-center text-[14.5px]">
           <caption className="sr-only">{presentation.label}</caption>
         {header && (
-          <thead className="bg-[linear-gradient(135deg,var(--template-primary),var(--template-accent))] shadow-[0_10px_22px_color-mix(in_srgb,var(--template-ink)_18%,transparent)] [isolation:isolate]">
+          <thead className="!sticky !top-0 !z-20 bg-[linear-gradient(135deg,var(--template-primary),var(--template-accent))] shadow-[0_10px_22px_color-mix(in_srgb,var(--template-ink)_18%,transparent)] [isolation:isolate]">
+            <tr className="border-b border-[var(--template-border)] bg-[linear-gradient(90deg,color-mix(in_srgb,var(--template-primary)_10%,var(--template-surface-alt)),var(--template-surface-alt))]">
+              <th colSpan={colCount} className="p-0 text-left font-normal">
+                <div className="flex items-center justify-between gap-4 px-4 py-3 max-[620px]:items-start max-[620px]:flex-col max-[620px]:gap-1">
+                  <div className="flex items-center gap-2">
+                    <Table2 className="h-4 w-4 text-[var(--template-primary)]" aria-hidden="true" />
+                    <div>
+                      <p className="m-0 text-[11px] font-extrabold uppercase tracking-[.15em] text-[var(--template-ink)]">{presentation.label}</p>
+                      <p className={cn("m-0 mt-1 text-[11px] font-semibold", PREMIUM_DATA_MUTED)}>{presentation.detail}</p>
+                    </div>
+                  </div>
+                  <span className="rounded-full border border-[color-mix(in_srgb,var(--template-primary)_35%,transparent)] bg-[color-mix(in_srgb,var(--template-primary)_10%,transparent)] px-3 py-1 text-[10px] font-extrabold uppercase tracking-[.1em] text-[var(--template-primary)]">Official data</span>
+                </div>
+              </th>
+            </tr>
             <tr className="border-b border-[color-mix(in_srgb,var(--template-on-primary)_34%,transparent)] bg-[linear-gradient(135deg,var(--template-primary),var(--template-accent))]">
               {header.map((cell, j) => (
                 <th key={j} className="px-4 py-4 text-center text-[12px] font-extrabold uppercase tracking-[.12em] text-[var(--template-on-primary)] [&_strong]:!text-[var(--template-on-primary)]">

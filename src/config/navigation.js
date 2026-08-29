@@ -16,6 +16,7 @@ const menuDescription = {
   Sponsor: "Family reunification, sponsorship categories and requirements.",
   Citizenship: "Citizenship grants, certificates, PR cards and travel documents.",
   "Inadmissibility & Appeals": "Admissibility, enforcement, refusals and legal review routes.",
+  Tools: "Free calculators, checklists and practical guides to help you plan your next step.",
   About: "Learn about Commonwealth Migration and how the team works.",
 };
 
@@ -39,13 +40,86 @@ const sourceMenuItems = getCmgMenu().map((top) => ({
         desc: "Open the source-backed guide and compare the route with related options.",
         href: top.groups[0].pages[0].href,
       }
-    : null,
+  : null,
 }));
+
+const TOOLS_MENU_ITEM = {
+  label: "Tools",
+  href: "/tools/canada-immigration-calculators",
+  description: menuDescription.Tools,
+  columns: [
+    {
+      category: "Free self-service tools",
+      items: [
+        { label: "CRS Calculator", href: "/tools/crs-calculator-canada", desc: "Estimate your Express Entry score." },
+        { label: "PNP Eligibility Check", href: "/tools/pnp-eligibility-canada", desc: "See which provincial streams may fit." },
+        { label: "NOC / Occupation Finder", href: "/tools/noc-finder-canada", desc: "Match your job to a NOC code." },
+      ],
+    },
+    {
+      category: "Plan & prepare",
+      items: [
+        { label: "Document Checklist", href: "/tools/document-checklist-canada", desc: "Know exactly what to prepare." },
+        { label: "Free Assessment", href: "/assessment/free-canada-immigration-assessment", desc: "Find your best pathway — free." },
+      ],
+    },
+    {
+      category: "Learn & prepare",
+      items: [
+        { label: "Blog", href: "/blog", desc: "Expert guides by licensed RCICs." },
+        { label: "Express Entry Guide", href: "/immigrate/express-entry", desc: "Understand the federal pathway." },
+        { label: "PNP Pathway Guide", href: "/immigrate/provincial-nominee-program-all-provinces-consolidated", desc: "Compare provincial options." },
+      ],
+    },
+  ],
+  featured: {
+    label: "Free tool",
+    title: "CRS Calculator",
+    desc: "See your Express Entry score in under two minutes.",
+    href: "/tools/crs-calculator-canada",
+  },
+};
+
+const ABOUT_MENU_ITEM = {
+  label: "About",
+  href: "/about/about-commonwealth-migration",
+  description: menuDescription.About,
+  columns: [
+    {
+      category: "Our firm",
+      items: [
+        { label: "About Us", href: "/about/about-commonwealth-migration", desc: "Learn about our CICC-regulated practice." },
+        { label: "Our Process", href: "/about/canada-immigration-consulting-process", desc: "See how we turn questions into a plan." },
+        { label: "Our Office", href: "/about/immigration-office-brampton-ontario", desc: "Brampton, Ontario — Canada-wide." },
+      ],
+    },
+    {
+      category: "Get in touch",
+      items: [
+        { label: "Book Consultation", href: site.ctas.primary.href, desc: "Choose a time that suits you." },
+        { label: "Book Urgent Consultation", href: site.ctas.urgent.href, desc: "Refusal? Don’t wait.", urgent: true },
+        { label: "Make Payment", href: site.ctas.payment.href, desc: "Secure online payment." },
+      ],
+    },
+  ],
+  featured: {
+    label: "Free first step",
+    title: "Book a Consultation",
+    desc: "Speak with a licensed consultant about your goal — at no cost.",
+    href: site.ctas.primary.href,
+  },
+};
+
+const navigationMenuItems = [
+  ...sourceMenuItems.filter((item) => item.label !== "About"),
+  TOOLS_MENU_ITEM,
+  ABOUT_MENU_ITEM,
+];
 
 // The desktop mega-menu ("header") is the single source of truth for which
 // links live under each top-level item. The mobile accordion ("main") is
 // derived from it below so the two navs can never drift out of sync again.
-const headerNavItems = [{ label: "Home", href: "/" }, ...sourceMenuItems];
+const headerNavItems = [{ label: "Home", href: "/" }, ...navigationMenuItems];
 
 // Mobile accordion items: same label/href/description as the desktop entry,
 // with `children` flattened straight out of that entry's own `columns` (or

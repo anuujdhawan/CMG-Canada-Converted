@@ -189,7 +189,7 @@ function ActionWidget({ payload, actionProvider }) {
       {(payload?.actions || []).map((action) => {
         if (action.action === "lead") {
           return (
-            <button type="button" className="cmg-chatbot-action inline-flex items-center justify-center gap-[.38rem] min-h-[2.4rem] rounded-[.8rem] border border-[rgba(255,255,255,.12)] bg-[rgba(255,255,255,.06)] px-[.6rem] py-2 text-[#f7f8fb] text-[.6875rem] font-extrabold leading-[1.2] text-center transition-all duration-[180ms] ease-in-out hover:border-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_45%,transparent)] hover:bg-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_10%,rgba(255,255,255,.06))] hover:-translate-y-px cmg-chatbot-action--primary border-transparent bg-[linear-gradient(135deg,var(--cmg-dark-primary,var(--brand-primary)),var(--cmg-dark-accent,var(--brand-primary-dark)))] text-[#ffffff] shadow-[0_6px_16px_color-mix(in_srgb,var(--brand-primary)_18%,transparent)] hover:filter-[brightness(1.07)] hover:border-transparent" key={action.label} onClick={() => actionProvider.startLeadCapture()}>
+            <button type="button" className="cmg-chatbot-action inline-flex items-center justify-center gap-[.38rem] min-h-[2.4rem] rounded-[.8rem] border border-[rgba(255,255,255,.12)] bg-[rgba(255,255,255,.06)] px-[.6rem] py-2 text-[#f7f8fb] text-[.6875rem] font-extrabold leading-[1.2] text-center transition-all duration-[180ms] ease-in-out hover:border-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_45%,transparent)] hover:bg-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_10%,rgba(255,255,255,.06))] hover:-translate-y-px cmg-chatbot-action--primary border-transparent bg-[linear-gradient(135deg,var(--cmg-dark-primary,var(--brand-primary)),var(--cmg-dark-accent,var(--brand-primary-dark)))] text-[#ffffff] shadow-[0_6px_16px_color-mix(in_srgb,var(--brand-primary)_18%,transparent)] hover:filter-[brightness(1.07)] hover:border-transparent [html[data-theme='light']_&]:!bg-[linear-gradient(135deg,var(--cmg-light-primary,var(--brand-primary)),var(--cmg-light-accent,var(--brand-primary-dark)))] [html[data-theme='light']_&]:!text-white [html[data-theme='light']_&]:hover:!bg-[linear-gradient(135deg,var(--cmg-light-primary,var(--brand-primary)),var(--cmg-light-accent,var(--brand-primary-dark)))] [html[data-theme='light']_&]:hover:!text-white" key={action.label} onClick={() => actionProvider.startLeadCapture()}>
               <MessageCircle className="h-3.5 w-3.5" aria-hidden="true" />
               {action.label}
             </button>
@@ -209,7 +209,7 @@ function ActionWidget({ payload, actionProvider }) {
           <a
             key={action.label}
             href={action.href}
-            className={`cmg-chatbot-action inline-flex items-center justify-center gap-[.38rem] min-h-[2.4rem] rounded-[.8rem] border border-[rgba(255,255,255,.12)] bg-[rgba(255,255,255,.06)] px-[.6rem] py-2 text-[#f7f8fb] text-[.6875rem] font-extrabold leading-[1.2] text-center transition-all duration-[180ms] ease-in-out hover:border-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_45%,transparent)] hover:bg-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_10%,rgba(255,255,255,.06))] hover:-translate-y-px ${action.primary ? "cmg-chatbot-action--primary border-transparent bg-[linear-gradient(135deg,var(--cmg-dark-primary,var(--brand-primary)),var(--cmg-dark-accent,var(--brand-primary-dark)))] text-[#ffffff] shadow-[0_6px_16px_color-mix(in_srgb,var(--brand-primary)_18%,transparent)] hover:filter-[brightness(1.07)] hover:border-transparent" : ""}`}
+            className={`cmg-chatbot-action inline-flex items-center justify-center gap-[.38rem] min-h-[2.4rem] rounded-[.8rem] border border-[rgba(255,255,255,.12)] bg-[rgba(255,255,255,.06)] px-[.6rem] py-2 text-[#f7f8fb] text-[.6875rem] font-extrabold leading-[1.2] text-center transition-all duration-[180ms] ease-in-out hover:border-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_45%,transparent)] hover:bg-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_10%,rgba(255,255,255,.06))] hover:-translate-y-px ${action.primary ? "cmg-chatbot-action--primary border-transparent bg-[linear-gradient(135deg,var(--cmg-dark-primary,var(--brand-primary)),var(--cmg-dark-accent,var(--brand-primary-dark)))] text-[#ffffff] shadow-[0_6px_16px_color-mix(in_srgb,var(--brand-primary)_18%,transparent)] hover:filter-[brightness(1.07)] hover:border-transparent [html[data-theme='light']_&]:!bg-[linear-gradient(135deg,var(--cmg-light-primary,var(--brand-primary)),var(--cmg-light-accent,var(--brand-primary-dark)))] [html[data-theme='light']_&]:!text-white [html[data-theme='light']_&]:hover:!bg-[linear-gradient(135deg,var(--cmg-light-primary,var(--brand-primary)),var(--cmg-light-accent,var(--brand-primary-dark)))] [html[data-theme='light']_&]:hover:!text-white" : ""}`}
             target={action.external ? "_blank" : undefined}
             rel={action.external ? "noreferrer" : undefined}
           >
@@ -282,7 +282,7 @@ function LeadCaptureView({ actionProvider }) {
         <span>I agree to be contacted about this enquiry.</span>
       </label>
       {error && <p className="cmg-chatbot-lead-error m-0 text-[#ff6b7f] text-[.6875rem] leading-[1.4]" role="alert">{error}</p>}
-      <button type="submit" className="cmg-chatbot-action inline-flex items-center justify-center gap-[.38rem] min-h-[2.4rem] rounded-[.8rem] border border-[rgba(255,255,255,.12)] bg-[rgba(255,255,255,.06)] px-[.6rem] py-2 text-[#f7f8fb] text-[.6875rem] font-extrabold leading-[1.2] text-center transition-all duration-[180ms] ease-in-out hover:border-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_45%,transparent)] hover:bg-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_10%,rgba(255,255,255,.06))] hover:-translate-y-px cmg-chatbot-action--primary border-transparent bg-[linear-gradient(135deg,var(--cmg-dark-primary,var(--brand-primary)),var(--cmg-dark-accent,var(--brand-primary-dark)))] text-[#ffffff] shadow-[0_6px_16px_color-mix(in_srgb,var(--brand-primary)_18%,transparent)] hover:filter-[brightness(1.07)] hover:border-transparent" disabled={status === "sending"}>
+      <button type="submit" className="cmg-chatbot-action inline-flex items-center justify-center gap-[.38rem] min-h-[2.4rem] rounded-[.8rem] border border-[rgba(255,255,255,.12)] bg-[rgba(255,255,255,.06)] px-[.6rem] py-2 text-[#f7f8fb] text-[.6875rem] font-extrabold leading-[1.2] text-center transition-all duration-[180ms] ease-in-out hover:border-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_45%,transparent)] hover:bg-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_10%,rgba(255,255,255,.06))] hover:-translate-y-px cmg-chatbot-action--primary border-transparent bg-[linear-gradient(135deg,var(--cmg-dark-primary,var(--brand-primary)),var(--cmg-dark-accent,var(--brand-primary-dark)))] text-[#ffffff] shadow-[0_6px_16px_color-mix(in_srgb,var(--brand-primary)_18%,transparent)] hover:filter-[brightness(1.07)] hover:border-transparent [html[data-theme='light']_&]:!bg-[linear-gradient(135deg,var(--cmg-light-primary,var(--brand-primary)),var(--cmg-light-accent,var(--brand-primary-dark)))] [html[data-theme='light']_&]:!text-white [html[data-theme='light']_&]:hover:!bg-[linear-gradient(135deg,var(--cmg-light-primary,var(--brand-primary)),var(--cmg-light-accent,var(--brand-primary-dark)))] [html[data-theme='light']_&]:hover:!text-white" disabled={status === "sending"}>
         {status === "sending" ? "Sending…" : "Send my details"}
       </button>
     </form>
@@ -313,6 +313,30 @@ const config = {
     { widgetName: "leadCaptureWidget", widgetFunc: LeadCaptureWidget, props: {}, mapStateToProps: [] },
   ],
 };
+
+const chatbotKitClass = [
+  "min-h-0 min-w-0 flex-1 overflow-hidden bg-[var(--cmg-dark-surface-alt,#0b121d)]",
+  "[&_.react-chatbot-kit-chat-container]:!flex [&_.react-chatbot-kit-chat-container]:!h-full [&_.react-chatbot-kit-chat-container]:!min-h-0 [&_.react-chatbot-kit-chat-container]:!w-full [&_.react-chatbot-kit-chat-container]:!bg-transparent",
+  "[&_.react-chatbot-kit-chat-inner-container]:!flex [&_.react-chatbot-kit-chat-inner-container]:!h-full [&_.react-chatbot-kit-chat-inner-container]:!min-h-0 [&_.react-chatbot-kit-chat-inner-container]:!flex-col [&_.react-chatbot-kit-chat-inner-container]:!rounded-none [&_.react-chatbot-kit-chat-inner-container]:!bg-transparent",
+  "[&_.react-chatbot-kit-chat-header]:!shrink-0 [&_.react-chatbot-kit-chat-header]:!border-0 [&_.react-chatbot-kit-chat-header]:!bg-transparent [&_.react-chatbot-kit-chat-header]:!p-0",
+  "[&_.react-chatbot-kit-chat-message-container]:!h-auto [&_.react-chatbot-kit-chat-message-container]:!min-h-0 [&_.react-chatbot-kit-chat-message-container]:!flex-1 [&_.react-chatbot-kit-chat-message-container]:!overflow-x-hidden [&_.react-chatbot-kit-chat-message-container]:!overflow-y-auto [&_.react-chatbot-kit-chat-message-container]:!p-[1rem_1rem_3rem]",
+  "[&_.react-chatbot-kit-chat-input-container]:!absolute [&_.react-chatbot-kit-chat-input-container]:!right-0 [&_.react-chatbot-kit-chat-input-container]:!bottom-[1.85rem] [&_.react-chatbot-kit-chat-input-container]:!left-0 [&_.react-chatbot-kit-chat-input-container]:!z-[3] [&_.react-chatbot-kit-chat-input-container]:!w-full [&_.react-chatbot-kit-chat-input-container]:!items-center [&_.react-chatbot-kit-chat-input-container]:!gap-2 [&_.react-chatbot-kit-chat-input-container]:!border-t [&_.react-chatbot-kit-chat-input-container]:!border-[rgba(255,255,255,.08)] [&_.react-chatbot-kit-chat-input-container]:!bg-[var(--cmg-dark-surface-alt,#0b121d)] [&_.react-chatbot-kit-chat-input-container]:!px-3 [&_.react-chatbot-kit-chat-input-container]:!py-2",
+  "[&_.react-chatbot-kit-chat-input-form]:!min-w-0 [&_.react-chatbot-kit-chat-input-form]:!items-center [&_.react-chatbot-kit-chat-input-form]:!gap-2",
+  "[&_.react-chatbot-kit-chat-input]:!h-[2.5rem] [&_.react-chatbot-kit-chat-input]:!min-w-0 [&_.react-chatbot-kit-chat-input]:!flex-1 [&_.react-chatbot-kit-chat-input]:!rounded-[.7rem] [&_.react-chatbot-kit-chat-input]:!border [&_.react-chatbot-kit-chat-input]:!border-[rgba(255,255,255,.1)] [&_.react-chatbot-kit-chat-input]:!bg-[rgba(255,255,255,.06)] [&_.react-chatbot-kit-chat-input]:!px-[.7rem] [&_.react-chatbot-kit-chat-input]:!py-[.55rem] [&_.react-chatbot-kit-chat-input]:!text-[var(--cmg-dark-ink,#f7f8fb)] [&_.react-chatbot-kit-chat-input]:!text-[.75rem] [&_.react-chatbot-kit-chat-input]:!outline-none [&_.react-chatbot-kit-chat-input]:placeholder:!text-[var(--cmg-dark-muted,rgba(174,184,197,.72))]",
+  "[&_.react-chatbot-kit-chat-btn-send]:!inline-flex [&_.react-chatbot-kit-chat-btn-send]:!h-[2.5rem] [&_.react-chatbot-kit-chat-btn-send]:!w-[3.25rem] [&_.react-chatbot-kit-chat-btn-send]:!shrink-0 [&_.react-chatbot-kit-chat-btn-send]:!items-center [&_.react-chatbot-kit-chat-btn-send]:!justify-center [&_.react-chatbot-kit-chat-btn-send]:!rounded-[.7rem] [&_.react-chatbot-kit-chat-btn-send]:!bg-[var(--cmg-dark-primary,var(--brand-primary))] [&_.react-chatbot-kit-chat-btn-send]:!text-white [&_.react-chatbot-kit-chat-btn-send]:hover:!bg-[var(--cmg-dark-accent,var(--brand-primary-dark))] [&_.react-chatbot-kit-chat-btn-send-icon]:!m-0 [&_.react-chatbot-kit-chat-btn-send-icon]:!h-4 [&_.react-chatbot-kit-chat-btn-send-icon]:!w-4 [&_.react-chatbot-kit-chat-btn-send-icon]:!fill-current",
+  "[&_.react-chatbot-kit-chat-bot-message-container]:!my-3 [&_.react-chatbot-kit-chat-bot-avatar-container]:!m-0 [&_.react-chatbot-kit-chat-bot-avatar-container]:!size-8 [&_.react-chatbot-kit-chat-bot-avatar-container]:!shrink-0 [&_.react-chatbot-kit-chat-bot-avatar-container]:!bg-transparent [&_.react-chatbot-kit-chat-bot-message]:!m-0 [&_.react-chatbot-kit-chat-bot-message]:!w-auto [&_.react-chatbot-kit-chat-bot-message]:!max-w-[calc(100%_-_2.75rem)] [&_.react-chatbot-kit-chat-bot-message]:!rounded-[.85rem] [&_.react-chatbot-kit-chat-bot-message]:!bg-[rgba(255,255,255,.06)] [&_.react-chatbot-kit-chat-bot-message]:!px-[.75rem] [&_.react-chatbot-kit-chat-bot-message]:!py-[.62rem] [&_.react-chatbot-kit-chat-bot-message]:!text-[var(--cmg-dark-ink,#f7f8fb)] [&_.react-chatbot-kit-chat-bot-message]:!text-[.75rem] [&_.react-chatbot-kit-chat-bot-message]:!leading-[1.5] [&_.react-chatbot-kit-chat-bot-message-arrow]:!border-r-[rgba(255,255,255,.06)]",
+  "[&_.react-chatbot-kit-user-chat-message-container]:!my-3 [&_.react-chatbot-kit-user-chat-message]:!m-0 [&_.react-chatbot-kit-user-chat-message]:!max-w-[78%] [&_.react-chatbot-kit-user-chat-message]:!rounded-[.85rem] [&_.react-chatbot-kit-user-chat-message]:!bg-[var(--cmg-dark-primary,var(--brand-primary))] [&_.react-chatbot-kit-user-chat-message]:!px-[.75rem] [&_.react-chatbot-kit-user-chat-message]:!py-[.62rem] [&_.react-chatbot-kit-user-chat-message]:!text-white [&_.react-chatbot-kit-user-chat-message]:!text-[.75rem] [&_.react-chatbot-kit-user-chat-message]:!leading-[1.5] [&_.react-chatbot-kit-user-chat-message-arrow]:!border-l-[var(--cmg-dark-primary,var(--brand-primary))]",
+  "[&_.react-chatbot-kit-chat-input-container]:!hidden",
+  "[html[data-theme='light']_&]:!bg-[var(--cmg-light-surface,#ffffff)]",
+  "[html[data-theme='light']_&_.react-chatbot-kit-chat-container]:!bg-transparent",
+  "[html[data-theme='light']_&_.react-chatbot-kit-chat-inner-container]:!bg-transparent",
+  "[html[data-theme='light']_&_.react-chatbot-kit-chat-message-container]:!bg-transparent",
+  "[html[data-theme='light']_&_.react-chatbot-kit-chat-input-container]:!border-[var(--cmg-light-border,var(--brand-border))] [html[data-theme='light']_&_.react-chatbot-kit-chat-input-container]:!bg-[var(--cmg-light-surface,#ffffff)]",
+  "[html[data-theme='light']_&_.react-chatbot-kit-chat-input]:!border-[var(--cmg-light-border,var(--brand-border))] [html[data-theme='light']_&_.react-chatbot-kit-chat-input]:!bg-[var(--cmg-light-surface-alt,#eef0f3)] [html[data-theme='light']_&_.react-chatbot-kit-chat-input]:!text-[var(--cmg-light-ink,#10151d)] [html[data-theme='light']_&_.react-chatbot-kit-chat-input]:placeholder:!text-[var(--cmg-light-muted,#5d6875)]",
+  "[html[data-theme='light']_&_.react-chatbot-kit-chat-btn-send]:!bg-[var(--cmg-light-primary,var(--brand-primary))] [html[data-theme='light']_&_.react-chatbot-kit-chat-btn-send]:hover:!bg-[var(--cmg-light-accent,var(--brand-primary-dark))]",
+  "[html[data-theme='light']_&_.react-chatbot-kit-chat-bot-message]:!bg-[var(--cmg-light-surface-alt,#eef0f3)] [html[data-theme='light']_&_.react-chatbot-kit-chat-bot-message]:!text-[var(--cmg-light-ink,#10151d)] [html[data-theme='light']_&_.react-chatbot-kit-chat-bot-message-arrow]:!border-r-[var(--cmg-light-surface-alt,#eef0f3)]",
+  "[html[data-theme='light']_&_.react-chatbot-kit-user-chat-message]:!bg-[var(--cmg-light-primary,var(--brand-primary))] [html[data-theme='light']_&_.react-chatbot-kit-user-chat-message-arrow]:!border-l-[var(--cmg-light-primary,var(--brand-primary))]",
+].join(" ");
 
 class ActionProvider {
   constructor(createChatBotMessageFn, setStateFunc) {
@@ -453,7 +477,7 @@ class ActionProvider {
           : answer.crs === "500-plus"
             ? "A strong Express Entry profile may be worth checking against recent draws, category-based options, and provincial nominations. The guide below is the best place to start."
             : "Express Entry may still be one option, but PNPs and other pathways could be important depending on your occupation, language results, education, and work history.",
-        href: currentPagePath("/immigration/express-entry"),
+        href: "/immigrate/express-entry",
         guide: "Open Express Entry guide",
       },
       work: {
@@ -461,7 +485,7 @@ class ActionProvider {
         text: answer.goal === "pgwp"
           ? "Use the work-permit guide to confirm PGWP planning, timing, and the transition from study to work. Keep your status dates visible when you request a review."
           : "The work-permit guide explains employer-specific, open, restoration, extension, and post-graduation routes. A profile review can identify which evidence matters most.",
-        href: currentPagePath("/immigration/work-permit"),
+        href: "/work-and-study/canada-work-permit-overview",
         guide: "Open work-permit guide",
       },
       study: {
@@ -469,7 +493,7 @@ class ActionProvider {
         text: answer.stage === "accepted"
           ? "With an acceptance letter, the next review usually focuses on the study plan, funds, PAL requirements where applicable, and how the program fits your longer-term plan."
           : "Start with the study-permit guide, then use a free assessment to connect program choice, documentation, finances, and post-graduation planning.",
-        href: currentPagePath("/immigration/study-permit"),
+        href: "/work-and-study/canada-study-permit",
         guide: "Open study-permit guide",
       },
       visit: {
@@ -477,7 +501,7 @@ class ActionProvider {
         text: answer.purpose === "super-visa"
           ? "Super Visa files have their own medical insurance, income, invitation, and family-relationship evidence. Review the guide before collecting documents."
           : "The visitor-visa guide covers purpose of travel, ties, funds, travel history, and the difference between visitor, eTA, business-visitor, and Super Visa routes.",
-        href: currentPagePath("/immigration/visitor-visa"),
+        href: "/visit/visitor-visa-trv-and-super-visa-combined",
         guide: "Open visitor guide",
       },
       family: {
@@ -485,7 +509,7 @@ class ActionProvider {
         text: answer.relationship === "spouse-partner"
           ? "Spousal and common-law sponsorship is evidence-led. The relationship history, shared life, admissibility, and complete document trail all matter."
           : "The family-sponsorship guide will help you compare the relationship category, eligibility requirements, and evidence before you prepare a package.",
-        href: currentPagePath("/immigration/family-sponsorship"),
+        href: "/sponsor/family-sponsorship-overview-all-categories",
         guide: "Open family-sponsorship guide",
       },
       employer: {
@@ -493,7 +517,7 @@ class ActionProvider {
         text: answer.need === "global-talent"
           ? "Global Talent Stream cases are time-sensitive and evidence-heavy. Review the employer hub and gather the role, wage, recruitment, and business-growth details."
           : "The employer hub is the right starting point for LMIA, recruitment, provincial employer, and compliance work. A consultation can turn the business need into a stream-by-stream plan.",
-        href: currentPagePath("/for-employers"),
+        href: "/work-and-study/lmia-and-employer-services-overview",
         guide: "Open employer services",
       },
       refusal: {
@@ -501,7 +525,7 @@ class ActionProvider {
         text: answer.deadline === "urgent"
           ? "Keep the letter, deadline, and full application record together and request an urgent review. The response strategy depends on the exact concerns and the time available."
           : "A refusal is not fixed by repeating the same application. Start with the refusal guide to identify the concerns, then request a focused review of the evidence and next route.",
-        href: currentPagePath("/refusals"),
+        href: "/inadmissibility-and-appeals/refusal-and-pfl-response",
         guide: "Open refusals guide",
         urgent: answer.deadline === "urgent",
       },
@@ -510,7 +534,7 @@ class ActionProvider {
         text: answer.need === "residency"
           ? "Residency-obligation questions depend on travel history, days in Canada, and the document or status you are trying to secure. A case-specific review is worthwhile before travel."
           : "The citizenship and PR-card guide is the best starting point for the eligibility, residency, and document checklist that matches your situation.",
-        href: currentPagePath("/immigration/citizenship"),
+        href: "/citizenship/pr-card-renewal-and-citizenship-combined-overview",
         guide: "Open citizenship guide",
       },
     }[service];
@@ -519,7 +543,6 @@ class ActionProvider {
       { label: results.guide, href: results.href, icon: "guide" },
       { label: "Send my details", action: "lead", primary: true },
       { label: "Start free assessment", href: currentPagePath("/tools/free-assessment"), primary: true, icon: "calendar" },
-      { label: site.ctas.primary.label, href: site.ctas.primary.href, primary: true, icon: "calendar" },
       ...(whatsappHref ? [{ label: "WhatsApp the team", href: whatsappHref, external: true, icon: "whatsapp" }] : []),
       { label: "Start over", action: "restart" },
     ];
@@ -586,17 +609,19 @@ export default function GuidedChatbot() {
   }, []);
 
   return (
-    <div className={`cmg-floating-bubble cmg-floating-bubble--chat cmg-chatbot-root fixed right-5 bottom-[8.75rem] z-[80] w-[3.75rem] ${!open ? "flex items-center justify-center w-12" : ""} ${open ? "cmg-chatbot-root--open max-[640px]:top-[var(--brand-hero-pad-top)] max-[640px]:left-[.75rem] max-[640px]:bottom-[5.4rem] max-[640px]:w-auto" : ""}`}>
+    <div className={`cmg-floating-bubble cmg-floating-bubble--chat cmg-chatbot-root fixed right-5 bottom-[8.75rem] z-[80] w-[3.75rem] ${!open ? "flex items-center justify-center w-12" : ""} ${open ? "cmg-chatbot-root--open !left-[5.75rem] !right-auto max-[640px]:top-[var(--brand-hero-pad-top)] max-[640px]:left-[.75rem] max-[640px]:!right-auto max-[640px]:bottom-[5.4rem] max-[640px]:w-[calc(100vw-1.5rem)]" : ""}`}>
       {open ? (
-        <div className="cmg-chatbot-panel relative flex flex-col max-h-[var(--cmg-chatbot-panel-height)] overflow-hidden rounded-[1.35rem] border border-[color-mix(in_srgb,var(--cmg-dark-border,var(--brand-border))_100%,transparent)] bg-[var(--cmg-dark-surface-alt,#0b121d)] shadow-[0_24px_64px_rgba(0,0,0,.28),0_8px_24px_rgba(0,0,0,.16),0_0_0_1px_rgba(255,255,255,.06)_inset] before:absolute before:inset-[0_0_auto] before:h-[3px] before:bg-[linear-gradient(90deg,var(--cmg-dark-primary,var(--brand-primary)),var(--cmg-dark-accent,var(--brand-primary-light)))] before:content-[''] before:z-[3]" role="dialog" aria-label="CMG Pathway Guide">
+        <div className="cmg-chatbot-panel relative flex h-[var(--cmg-chatbot-panel-height)] w-full flex-col overflow-hidden rounded-[1.35rem] border border-[color-mix(in_srgb,var(--cmg-dark-border,var(--brand-border))_100%,transparent)] bg-[var(--cmg-dark-surface-alt,#0b121d)] shadow-[0_24px_64px_rgba(0,0,0,.28),0_8px_24px_rgba(0,0,0,.16),0_0_0_1px_rgba(255,255,255,.06)_inset] before:absolute before:inset-[0_0_auto] before:z-[3] before:h-[3px] before:bg-[linear-gradient(90deg,var(--cmg-dark-primary,var(--brand-primary)),var(--cmg-dark-accent,var(--brand-primary-light)))] before:content-[''] [html[data-theme='light']_&]:border-[var(--cmg-light-border,var(--brand-border))] [html[data-theme='light']_&]:bg-[var(--cmg-light-surface,#ffffff)] [html[data-theme='light']_&]:shadow-[0_24px_56px_rgba(7,13,22,.14),0_8px_20px_rgba(7,13,22,.08),0_0_0_1px_rgba(7,13,22,.04)_inset]" role="dialog" aria-label="CMG Pathway Guide">
           <button type="button" className="cmg-chatbot-close absolute top-[.85rem] right-[.85rem] z-[4] inline-flex w-[2.1rem] h-[2.1rem] items-center justify-center rounded-full border border-[rgba(255,255,255,.18)] bg-[rgba(255,255,255,.08)] text-[#f7f8fb] backdrop-blur-[10px] transition-[background,border-color,transform] duration-[180ms] ease-in-out hover:bg-[rgba(255,255,255,.14)] hover:border-[rgba(255,255,255,.28)] hover:rotate-[90deg] focus-visible:bg-[rgba(255,255,255,.14)] focus-visible:border-[rgba(255,255,255,.28)] focus-visible:rotate-[90deg]" onClick={() => setOpen(false)} aria-label="Close pathway guide">
             <X className="h-5 w-5" aria-hidden="true" />
           </button>
-          <Chatbot config={config} actionProvider={ActionProvider} messageParser={MessageParser} placeholderText="Type a question…" />
+          <div className={chatbotKitClass}>
+            <Chatbot config={config} actionProvider={ActionProvider} messageParser={MessageParser} placeholderText="Type a question…" />
+          </div>
           <p className="cmg-chatbot-disclaimer absolute right-0 bottom-0 left-0 z-[2] m-0 border-t border-[rgba(255,255,255,.06)] bg-[color-mix(in_srgb,var(--cmg-dark-surface-alt,#0b121d)_96%,transparent)] px-3 pt-[.4rem] pb-[.45rem] text-[.6875rem] leading-[1.3] text-[var(--cmg-dark-muted,rgba(174,184,197,.72))] text-center">General information only — not legal advice or a guarantee of approval.</p>
         </div>
       ) : (
-        <button type="button" className="cmg-chatbot-launcher relative flex items-center justify-center w-12 h-12 min-h-12 max-[640px]:w-[2.75rem] max-[640px]:h-[2.75rem] max-[640px]:min-h-[2.75rem] rounded-full border border-[rgba(255,255,255,.72)] bg-[linear-gradient(135deg,var(--cmg-dark-primary,var(--brand-primary))_0%,var(--cmg-dark-accent,var(--brand-primary-dark))_100%)] p-0 text-[#ffffff] shadow-[0_12px_28px_color-mix(in_srgb,var(--brand-primary)_22%,transparent),0_4px_12px_rgba(0,0,0,.14),0_0_0_6px_color-mix(in_srgb,var(--brand-primary)_10%,transparent)] transition-[transform,box-shadow,filter] duration-[200ms] ease-[cubic-bezier(.16,1,.3,1)] before:absolute before:inset-[-6px] before:z-[-1] before:rounded-full before:bg-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_14%,transparent)] before:opacity-90 before:blur-[10px] before:content-[''] hover:-translate-y-0.5 hover:scale-[1.02] hover:filter-[brightness(1.04)] hover:shadow-[0_18px_36px_color-mix(in_srgb,var(--brand-primary)_28%,transparent),0_6px_16px_rgba(0,0,0,.18),0_0_0_8px_color-mix(in_srgb,var(--brand-primary)_14%,transparent)] active:translate-y-0 active:scale-[.98]" onClick={() => setOpen(true)} aria-label="Open CMG Pathway Guide" title="Chat with CMG">
+        <button type="button" className="cmg-chatbot-launcher relative flex items-center justify-center w-12 h-12 min-h-12 max-[640px]:w-[2.75rem] max-[640px]:h-[2.75rem] max-[640px]:min-h-[2.75rem] rounded-full border border-[rgba(255,255,255,.72)] bg-[linear-gradient(135deg,var(--cmg-dark-primary,var(--brand-primary))_0%,var(--cmg-dark-accent,var(--brand-primary-dark))_100%)] p-0 text-[#ffffff] shadow-[0_12px_28px_color-mix(in_srgb,var(--brand-primary)_22%,transparent),0_4px_12px_rgba(0,0,0,.14)] transition-[transform,box-shadow,filter] duration-[220ms] ease-[cubic-bezier(.16,1,.3,1)] before:absolute before:inset-[-6px] before:z-[-1] before:rounded-full before:bg-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_14%,transparent)] before:opacity-0 before:blur-[10px] before:content-[''] hover:-translate-y-0.5 hover:scale-[1.04] hover:filter-[brightness(1.04)] hover:shadow-[0_18px_36px_color-mix(in_srgb,var(--brand-primary)_34%,transparent),0_6px_16px_rgba(0,0,0,.18)] active:translate-y-0 active:scale-[.98]" onClick={() => setOpen(true)} aria-label="Open CMG Pathway Guide" title="Chat with CMG">
           <span className="cmg-chatbot-launcher-mark inline-flex shrink-0 items-center justify-center w-[2.55rem] h-[2.55rem] rounded-full border border-[rgba(255,255,255,.92)] bg-white text-[var(--cmg-dark-primary,var(--brand-primary))] shadow-[0_2px_10px_rgba(0,0,0,.12),inset_0_0_0_1px_color-mix(in_srgb,var(--brand-primary)_8%,transparent)]" aria-hidden="true"><MessageCircle className="h-[1.35rem] w-[1.35rem] stroke-[2.5]" /></span>
         </button>
       )}

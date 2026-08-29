@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo";
 import { getCmgPage, getCmgRoutePaths, getLegalPage, getLegalRoutePaths } from "@/lib/cmgPages";
-import ReferenceServicePage from "@/components/home/ReferenceServicePage";
+import ContentPage from "@/components/templates/ContentPage";
 
 export const dynamicParams = false;
 
@@ -22,6 +22,7 @@ export async function generateMetadata({ params }) {
     title: page.seo?.title || page.h1,
     description: page.seo?.description,
     path: page.path,
+    keywords: page.seo?.keywords,
   });
 }
 
@@ -30,5 +31,5 @@ export default async function SourcePageRoute({ params }) {
   const path = pathFromParams(resolvedParams);
   const page = getCmgPage(path) || getLegalPage(path);
   if (!page) notFound();
-  return <ReferenceServicePage page={page} />;
+  return <ContentPage page={page} />;
 }

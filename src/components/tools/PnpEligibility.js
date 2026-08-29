@@ -55,14 +55,14 @@ function Result({ answers, onRestart }) {
     <ToolCard>
       <ToolHeader icon={CheckCircle2} kicker="Demo overview" title="Your PNP overview" subtitle="Based on your answers — rough read on stream categories worth researching next." action={<ToolResetButton onClick={onRestart}><RefreshCw className="h-3.5 w-3.5" /> Restart</ToolResetButton>} />
       <div className="tool-card__body flex flex-col gap-5 p-[1.35rem_1.5rem_1.5rem] sm:p-[1.6rem_1.75rem_1.75rem]">
-        <div className="tool-notice rounded-[0.85rem] border border-[var(--cmg-dark-border)] bg-[color-mix(in_srgb,var(--cmg-dark-primary)_5%,transparent)] px-4 py-[0.9rem]">
+        <div className="tool-notice rounded-[0.85rem] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-primary)_5%,transparent)] px-4 py-[0.9rem]">
           <p className="tool-field__hint m-0 text-[var(--template-muted)]">
             Based on your profile, you look like a candidate for <strong>{likelyCount > 0 ? "provincial nomination streams" : "improving your core profile first"}</strong>. Below is a rough read on common stream categories.
           </p>
         </div>
         <ul className="mt-6 space-y-3">
           {findings.map((f) => (
-            <li key={f.label} className="tool-group rounded-[0.95rem] border border-[var(--cmg-dark-border)] bg-[var(--cmg-dark-surface)] flex items-start gap-3 px-4 py-3.5">
+            <li key={f.label} className="tool-group rounded-[0.95rem] border border-[var(--template-border)] bg-[var(--template-surface)] flex items-start gap-3 px-4 py-3.5">
               <span className={`tool-level-dot tool-level-dot--${f.level} mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full`} />
               <div><p className="text-sm font-bold">{f.label}</p><p className="tool-field__hint mt-1">{f.note}</p></div>
             </li>

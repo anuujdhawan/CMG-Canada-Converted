@@ -99,8 +99,8 @@ const initialState = {
   spouseExperience: "none", provincialNomination: false, jobOffer: "none", canadianEducation: "none", french: "none", sibling: false,
 };
 
-const CRS_INPUT_CLASS = "!h-[3.25rem] !min-h-[3.25rem] !rounded-[0.95rem] !px-4 !bg-[color-mix(in_srgb,var(--cmg-dark-surface-alt)_95%,var(--cmg-dark-primary)_5%)] !text-[var(--cmg-dark-ink)] !font-bold !text-[0.82rem] !leading-[1.2] !shadow-[inset_0_1px_0_color-mix(in_srgb,var(--cmg-dark-on-primary)_5%,transparent),0_4px_12px_color-mix(in_srgb,var(--cmg-dark-bg)_14%,transparent)] hover:!border-[color-mix(in_srgb,var(--cmg-dark-primary)_45%,var(--cmg-dark-border))] hover:!bg-[var(--cmg-dark-surface)] focus:!border-[var(--cmg-dark-primary)] focus:!shadow-[0_0_0_4px_color-mix(in_srgb,var(--cmg-dark-primary)_15%,transparent),inset_0_1px_0_color-mix(in_srgb,var(--cmg-dark-on-primary)_5%,transparent)]";
-const CRS_LABEL_CLASS = "flex min-h-[1.05rem] items-center !text-[var(--cmg-dark-ink)] !font-extrabold !text-[0.76rem] !leading-[1.25] tracking-[0.01em]";
+const CRS_INPUT_CLASS = "!h-[3.25rem] !min-h-[3.25rem] !rounded-[0.95rem] !px-4 !bg-[color-mix(in_srgb,var(--template-surface-alt)_95%,var(--template-primary)_5%)] !text-[var(--template-ink)] !font-bold !text-[0.82rem] !leading-[1.2] !shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_5%,transparent),0_4px_12px_color-mix(in_srgb,var(--template-bg)_14%,transparent)] hover:!border-[color-mix(in_srgb,var(--template-primary)_45%,var(--template-border))] hover:!bg-[var(--template-surface)] focus:!border-[var(--template-primary)] focus:!shadow-[0_0_0_4px_color-mix(in_srgb,var(--template-primary)_15%,transparent),inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_5%,transparent)]";
+const CRS_LABEL_CLASS = "flex min-h-[1.05rem] items-center !text-[var(--template-ink)] !font-extrabold !text-[0.76rem] !leading-[1.25] tracking-[0.01em]";
 const CRS_CHECK_LABEL_CLASS = "!font-extrabold !text-[0.78rem] !leading-[1.3]";
 const CRS_CHECK_HINT_CLASS = "!font-semibold !text-[0.68rem] !leading-[1.35]";
 
@@ -144,18 +144,18 @@ export default function CrsCalculator() {
 
       <div className="tool-card__body flex flex-col gap-[1.1rem] p-[1.35rem_1.5rem_1.5rem] sm:p-[1.6rem_1.75rem_1.75rem]">
         {/* Intro band */}
-        <div className="tool-notice mb-6 rounded-[0.85rem] border border-[var(--cmg-dark-border)] bg-[color-mix(in_srgb,var(--cmg-dark-primary)_5%,transparent)] px-4 py-[0.9rem] flex items-center gap-2 text-xs font-semibold">
+        <div className="tool-notice mb-6 rounded-[0.85rem] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-primary)_5%,transparent)] px-4 py-[0.9rem] flex items-center gap-2 text-xs font-semibold">
           <Sparkles className="text-[var(--template-primary)] h-3.5 w-3.5" />
           <span>Tip: add spouse, language or Canadian education to see live score movement.</span>
         </div>
 
         <div className="crs-calculator__form-grid grid items-start gap-x-8 gap-y-6 sm:grid-cols-2">
           <div className="crs-calculator__column flex min-w-0 flex-col gap-[0.85rem]">
-            <div className="crs-calculator__column-heading flex min-h-[3.4rem] max-[639px]:min-h-12 items-center gap-3 mb-[0.15rem] border-b border-[color-mix(in_srgb,var(--cmg-dark-primary)_24%,var(--cmg-dark-border))] pb-3">
-              <span className="crs-calculator__column-index inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-[0.75rem] border border-[color-mix(in_srgb,var(--cmg-dark-primary)_42%,transparent)] bg-[color-mix(in_srgb,var(--cmg-dark-primary)_11%,var(--cmg-dark-surface-alt))] text-[var(--cmg-dark-primary)] text-[0.7rem] font-extrabold leading-none">01</span>
+            <div className="crs-calculator__column-heading flex min-h-[3.4rem] max-[639px]:min-h-12 items-center gap-3 mb-[0.15rem] border-b border-[color-mix(in_srgb,var(--template-primary)_24%,var(--template-border))] pb-3">
+              <span className="crs-calculator__column-index inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-[0.75rem] border border-[color-mix(in_srgb,var(--template-primary)_42%,transparent)] bg-[color-mix(in_srgb,var(--template-primary)_11%,var(--template-surface-alt))] text-[var(--template-primary)] text-[0.7rem] font-extrabold leading-none">01</span>
               <span className="grid min-w-0 gap-[0.18rem]">
-                <strong className="!text-[var(--cmg-dark-ink)] text-[0.85rem] font-extrabold leading-[1.2] tracking-[0.04em] uppercase">Core profile</strong>
-                <small className="!text-[var(--cmg-dark-muted)] text-[0.72rem] font-semibold leading-[1.35]">Your main CRS factors</small>
+                <strong className="!text-[var(--template-ink)] text-[0.85rem] font-extrabold leading-[1.2] tracking-[0.04em] uppercase">Core profile</strong>
+                <small className="!text-[var(--template-muted)] text-[0.72rem] font-semibold leading-[1.35]">Your main CRS factors</small>
               </span>
             </div>
             <ToolField labelClassName={CRS_LABEL_CLASS} label="Age" htmlFor="crs-age">
@@ -189,16 +189,16 @@ export default function CrsCalculator() {
           </div>
 
           <div className="crs-calculator__column flex min-w-0 flex-col gap-[0.85rem]">
-            <div className="crs-calculator__column-heading flex min-h-[3.4rem] max-[639px]:min-h-12 items-center gap-3 mb-[0.15rem] border-b border-[color-mix(in_srgb,var(--cmg-dark-primary)_24%,var(--cmg-dark-border))] pb-3">
-              <span className="crs-calculator__column-index inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-[0.75rem] border border-[color-mix(in_srgb,var(--cmg-dark-primary)_42%,transparent)] bg-[color-mix(in_srgb,var(--cmg-dark-primary)_11%,var(--cmg-dark-surface-alt))] text-[var(--cmg-dark-primary)] text-[0.7rem] font-extrabold leading-none">02</span>
+            <div className="crs-calculator__column-heading flex min-h-[3.4rem] max-[639px]:min-h-12 items-center gap-3 mb-[0.15rem] border-b border-[color-mix(in_srgb,var(--template-primary)_24%,var(--template-border))] pb-3">
+              <span className="crs-calculator__column-index inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-[0.75rem] border border-[color-mix(in_srgb,var(--template-primary)_42%,transparent)] bg-[color-mix(in_srgb,var(--template-primary)_11%,var(--template-surface-alt))] text-[var(--template-primary)] text-[0.7rem] font-extrabold leading-none">02</span>
               <span className="grid min-w-0 gap-[0.18rem]">
-                <strong className="!text-[var(--cmg-dark-ink)] text-[0.85rem] font-extrabold leading-[1.2] tracking-[0.04em] uppercase">Additional factors</strong>
-                <small className="!text-[var(--cmg-dark-muted)] text-[0.72rem] font-semibold leading-[1.35]">Bonus points and family factors</small>
+                <strong className="!text-[var(--template-ink)] text-[0.85rem] font-extrabold leading-[1.2] tracking-[0.04em] uppercase">Additional factors</strong>
+                <small className="!text-[var(--template-muted)] text-[0.72rem] font-semibold leading-[1.35]">Bonus points and family factors</small>
               </span>
             </div>
-            <ToolCheckboxCard labelClassName={CRS_CHECK_LABEL_CLASS} hintClassName={CRS_CHECK_HINT_CLASS} className="crs-calculator__toggle h-[3.25rem] min-h-[3.25rem] box-border items-center rounded-[.95rem] px-4 py-[.55rem] bg-[color-mix(in_srgb,var(--cmg-dark-surface-alt)_95%,var(--cmg-dark-primary)_5%)] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--cmg-dark-on-primary)_5%,transparent),0_4px_12px_color-mix(in_srgb,var(--cmg-dark-bg)_14%,transparent)] crs-calculator__toggle--spouse mt-[calc(1.05rem+0.38rem)] max-[639px]:mt-0 max-[639px]:h-auto max-[639px]:min-h-[3.25rem] max-[639px]:py-[0.7rem]" label="Applying with a spouse / partner" hint="Toggle to include spouse factors" checked={form.hasSpouse} onChange={setBool("hasSpouse")} />
+            <ToolCheckboxCard labelClassName={CRS_CHECK_LABEL_CLASS} hintClassName={CRS_CHECK_HINT_CLASS} className="crs-calculator__toggle h-[3.25rem] min-h-[3.25rem] box-border items-center rounded-[.95rem] px-4 py-[.55rem] bg-[color-mix(in_srgb,var(--template-surface-alt)_95%,var(--template-primary)_5%)] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_5%,transparent),0_4px_12px_color-mix(in_srgb,var(--template-bg)_14%,transparent)] crs-calculator__toggle--spouse mt-[calc(1.05rem+0.38rem)] max-[639px]:mt-0 max-[639px]:h-auto max-[639px]:min-h-[3.25rem] max-[639px]:py-[0.7rem]" label="Applying with a spouse / partner" hint="Toggle to include spouse factors" checked={form.hasSpouse} onChange={setBool("hasSpouse")} />
             {form.hasSpouse && (
-              <div className="tool-group rounded-[0.95rem] border border-[var(--cmg-dark-border)] bg-[var(--cmg-dark-surface)] grid gap-4 p-3">
+              <div className="tool-group rounded-[0.95rem] border border-[var(--template-border)] bg-[var(--template-surface)] grid gap-4 p-3">
                 <ToolField labelClassName={CRS_LABEL_CLASS} label="Spouse education">
                   <ToolSelect className={CRS_INPUT_CLASS} value={form.spouseEducation} onChange={set("spouseEducation")}>
                     {SPOUSE_EDUCATION.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
@@ -237,7 +237,7 @@ export default function CrsCalculator() {
                 {FRENCH.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
               </ToolSelect>
             </ToolField>
-            <ToolCheckboxCard labelClassName={CRS_CHECK_LABEL_CLASS} hintClassName={CRS_CHECK_HINT_CLASS} className="crs-calculator__toggle h-[3.25rem] min-h-[3.25rem] box-border items-center rounded-[.95rem] px-4 py-[.55rem] bg-[color-mix(in_srgb,var(--cmg-dark-surface-alt)_95%,var(--cmg-dark-primary)_5%)] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--cmg-dark-on-primary)_5%,transparent),0_4px_12px_color-mix(in_srgb,var(--cmg-dark-bg)_14%,transparent)] crs-calculator__toggle--sibling mt-[calc(1.05rem+0.38rem)] max-[639px]:mt-0 max-[639px]:h-auto max-[639px]:min-h-[3.25rem] max-[639px]:py-[0.7rem]" label="Sibling living in Canada (citizen/PR)" checked={form.sibling} onChange={setBool("sibling")} />
+            <ToolCheckboxCard labelClassName={CRS_CHECK_LABEL_CLASS} hintClassName={CRS_CHECK_HINT_CLASS} className="crs-calculator__toggle h-[3.25rem] min-h-[3.25rem] box-border items-center rounded-[.95rem] px-4 py-[.55rem] bg-[color-mix(in_srgb,var(--template-surface-alt)_95%,var(--template-primary)_5%)] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_5%,transparent),0_4px_12px_color-mix(in_srgb,var(--template-bg)_14%,transparent)] crs-calculator__toggle--sibling mt-[calc(1.05rem+0.38rem)] max-[639px]:mt-0 max-[639px]:h-auto max-[639px]:min-h-[3.25rem] max-[639px]:py-[0.7rem]" label="Sibling living in Canada (citizen/PR)" checked={form.sibling} onChange={setBool("sibling")} />
           </div>
         </div>
 

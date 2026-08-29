@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
 
 /**
  * Single-source tool UI kit — every calculator/tool page MUST import from here.
- * All colors resolve through .env-driven CSS variables:
- *   --cmg-dark-* / --cmg-light-*  (template palette)
- *   --brand-*                      (canonical brand palette)
+ * All colors resolve through .env-driven active-theme CSS variables:
+ *   --template-*  (the active dark/light template palette)
+ *   --brand-*     (canonical brand palette)
  * Component visuals switch automatically via html[data-theme="dark"|"light"].
  * No hardcoded hex values — beautified to complement the current site theme.
  */
@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 // Card that wraps every tool. Theme-aware via .tool-card CSS.
 export function ToolCard({ className, children, ...props }) {
   return (
-    <div className={cn("tool-card relative flex flex-col overflow-hidden rounded-[1.5rem] border border-[var(--template-border)] bg-[var(--template-surface)] text-[var(--template-ink)] shadow-[0_22px_56px_color-mix(in_srgb,var(--cmg-template-deep-surface)_18%,transparent),0_8px_22px_color-mix(in_srgb,var(--cmg-template-deep-surface)_10%,transparent)] before:absolute before:inset-x-0 before:top-0 before:z-[2] before:h-[3px] before:bg-[linear-gradient(90deg,var(--cmg-dark-primary),var(--cmg-dark-accent))] before:content-['']", className)} {...props}>
+    <div className={cn("tool-card relative flex flex-col overflow-hidden rounded-[1.5rem] border border-[var(--template-border)] bg-[var(--template-surface)] text-[var(--template-ink)] shadow-[0_22px_56px_color-mix(in_srgb,var(--cmg-template-deep-surface)_18%,transparent),0_8px_22px_color-mix(in_srgb,var(--cmg-template-deep-surface)_10%,transparent)] before:absolute before:inset-x-0 before:top-0 before:z-[2] before:h-[3px] before:bg-[linear-gradient(90deg,var(--template-primary),var(--template-accent))] before:content-['']", className)} {...props}>
       {children}
     </div>
   );
@@ -22,9 +22,9 @@ export function ToolCard({ className, children, ...props }) {
 
 export function ToolHeader({ icon: Icon, title, subtitle, kicker, action, className }) {
   return (
-    <div className={cn("tool-header flex items-start justify-between gap-4 border-b border-[var(--template-border)] bg-[linear-gradient(145deg,var(--cmg-dark-surface),color-mix(in_srgb,var(--cmg-dark-primary)_6%,var(--cmg-dark-surface)))] px-6 pb-[1.2rem] pt-[1.35rem]", className)}>
+    <div className={cn("tool-header flex items-start justify-between gap-4 border-b border-[var(--template-border)] bg-[linear-gradient(145deg,var(--template-surface),color-mix(in_srgb,var(--template-primary)_6%,var(--template-surface)))] px-6 pb-[1.2rem] pt-[1.35rem]", className)}>
       <div className="tool-header__left flex min-w-0 items-start gap-[0.9rem]">
-        <span className="tool-header__icon inline-flex h-[2.7rem] w-[2.7rem] shrink-0 items-center justify-center rounded-[0.85rem] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--cmg-dark-primary)_10%,var(--cmg-dark-surface-alt))] text-[var(--template-primary)] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--cmg-dark-on-primary)_6%,transparent)]" aria-hidden>
+        <span className="tool-header__icon inline-flex h-[2.7rem] w-[2.7rem] shrink-0 items-center justify-center rounded-[0.85rem] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-primary)_10%,var(--template-surface-alt))] text-[var(--template-primary)] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_6%,transparent)]" aria-hidden>
           {Icon ? <Icon className="h-[1.2rem] w-[1.2rem]" /> : null}
         </span>
         <div className="tool-header__text">
@@ -40,7 +40,7 @@ export function ToolHeader({ icon: Icon, title, subtitle, kicker, action, classN
 
 export function ToolResetButton({ children = "Reset", ...props }) {
   return (
-    <button type="button" className="tool-reset-btn inline-flex items-center gap-[0.4rem] whitespace-nowrap rounded-full border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--cmg-dark-on-primary)_6%,transparent)] px-[0.85rem] py-[0.5rem] text-[var(--template-muted)] text-[0.72rem] font-extrabold tracking-[0.02em] transition-all duration-[180ms] ease-[ease] hover:-translate-y-px hover:border-[var(--cmg-dark-primary)] hover:bg-[color-mix(in_srgb,var(--cmg-dark-primary)_10%,transparent)] hover:text-[var(--cmg-dark-ink)]" {...props}>
+    <button type="button" className="tool-reset-btn inline-flex items-center gap-[0.4rem] whitespace-nowrap rounded-full border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-ink)_6%,transparent)] px-[0.85rem] py-[0.5rem] text-[var(--template-muted)] text-[0.72rem] font-extrabold tracking-[0.02em] transition-all duration-[180ms] ease-[ease] hover:-translate-y-px hover:border-[var(--template-primary)] hover:bg-[color-mix(in_srgb,var(--template-primary)_10%,transparent)] hover:text-[var(--template-ink)]" {...props}>
       {children}
     </button>
   );
@@ -62,23 +62,23 @@ export function ToolField({ label, htmlFor, hint, children, className, labelClas
 
 export function ToolSelect({ className, children, ...props }) {
   return (
-    <select className={cn("tool-input h-[3.15rem] w-full rounded-[0.75rem] border border-[var(--cmg-dark-border)] bg-[var(--cmg-dark-surface-alt)] px-[0.75rem] text-[0.86rem] font-semibold text-[var(--cmg-dark-ink)] outline-none transition-all duration-[180ms] ease-[ease] hover:border-[color-mix(in_srgb,var(--cmg-dark-primary)_32%,var(--cmg-dark-border))] hover:bg-[var(--cmg-dark-surface)] focus:border-[var(--cmg-dark-primary)] focus:bg-[var(--cmg-dark-surface)] focus:shadow-[0_0_0_3px_color-mix(in_srgb,var(--cmg-dark-primary)_14%,transparent)]", className)} {...props}>
+    <select className={cn("tool-input h-[3.15rem] w-full rounded-[0.75rem] border border-[var(--template-border)] bg-[var(--template-surface-alt)] px-[0.75rem] text-[0.86rem] font-semibold text-[var(--template-ink)] outline-none transition-all duration-[180ms] ease-[ease] hover:border-[color-mix(in_srgb,var(--template-primary)_32%,var(--template-border))] hover:bg-[var(--template-surface)] focus:border-[var(--template-primary)] focus:bg-[var(--template-surface)] focus:shadow-[0_0_0_3px_color-mix(in_srgb,var(--template-primary)_14%,transparent)]", className)} {...props}>
       {children}
     </select>
   );
 }
 
 export function ToolInput({ className, ...props }) {
-  return <input className={cn("tool-input h-[3.15rem] w-full rounded-[0.75rem] border border-[var(--cmg-dark-border)] bg-[var(--cmg-dark-surface-alt)] px-[0.75rem] text-[0.86rem] font-semibold text-[var(--cmg-dark-ink)] outline-none transition-all duration-[180ms] ease-[ease] placeholder:text-[var(--cmg-dark-muted)] placeholder:opacity-90 hover:border-[color-mix(in_srgb,var(--cmg-dark-primary)_32%,var(--cmg-dark-border))] hover:bg-[var(--cmg-dark-surface)] focus:border-[var(--cmg-dark-primary)] focus:bg-[var(--cmg-dark-surface)] focus:shadow-[0_0_0_3px_color-mix(in_srgb,var(--cmg-dark-primary)_14%,transparent)]", className)} {...props} />;
+  return <input className={cn("tool-input h-[3.15rem] w-full rounded-[0.75rem] border border-[var(--template-border)] bg-[var(--template-surface-alt)] px-[0.75rem] text-[0.86rem] font-semibold text-[var(--template-ink)] outline-none transition-all duration-[180ms] ease-[ease] placeholder:text-[var(--template-muted)] placeholder:opacity-90 hover:border-[color-mix(in_srgb,var(--template-primary)_32%,var(--template-border))] hover:bg-[var(--template-surface)] focus:border-[var(--template-primary)] focus:bg-[var(--template-surface)] focus:shadow-[0_0_0_3px_color-mix(in_srgb,var(--template-primary)_14%,transparent)]", className)} {...props} />;
 }
 
 export function ToolSearchInput({ className, ...props }) {
-  return <input className={cn("tool-input h-[3.15rem] w-full rounded-[0.75rem] border border-[var(--cmg-dark-border)] bg-[var(--cmg-dark-surface-alt)] pl-[0.75rem] pr-[0.75rem] text-[0.86rem] font-semibold text-[var(--cmg-dark-ink)] outline-none transition-all duration-[180ms] ease-[ease] placeholder:text-[var(--cmg-dark-muted)] placeholder:opacity-90 hover:border-[color-mix(in_srgb,var(--cmg-dark-primary)_32%,var(--cmg-dark-border))] hover:bg-[var(--cmg-dark-surface)] focus:border-[var(--cmg-dark-primary)] focus:bg-[var(--cmg-dark-surface)] focus:shadow-[0_0_0_3px_color-mix(in_srgb,var(--cmg-dark-primary)_14%,transparent)]", className)} {...props} />;
+  return <input className={cn("tool-input h-[3.15rem] w-full rounded-[0.75rem] border border-[var(--template-border)] bg-[var(--template-surface-alt)] pl-[0.75rem] pr-[0.75rem] text-[0.86rem] font-semibold text-[var(--template-ink)] outline-none transition-all duration-[180ms] ease-[ease] placeholder:text-[var(--template-muted)] placeholder:opacity-90 hover:border-[color-mix(in_srgb,var(--template-primary)_32%,var(--template-border))] hover:bg-[var(--template-surface)] focus:border-[var(--template-primary)] focus:bg-[var(--template-surface)] focus:shadow-[0_0_0_3px_color-mix(in_srgb,var(--template-primary)_14%,transparent)]", className)} {...props} />;
 }
 
 export function ToolCheckboxCard({ label, checked, onChange, hint, className, labelClassName, hintClassName }) {
   return (
-    <label className={cn("tool-checkbox-card flex min-h-[3.15rem] cursor-pointer items-start gap-[0.85rem] rounded-[0.95rem] border border-[var(--cmg-dark-border)] bg-[var(--cmg-dark-surface-alt)] px-[0.9rem] py-[0.85rem] transition-all duration-[180ms] ease-[ease] hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--cmg-dark-primary)_26%,var(--cmg-dark-border))]", checked && "is-checked border-[color-mix(in_srgb,var(--cmg-dark-primary)_30%,transparent)] bg-[color-mix(in_srgb,var(--cmg-dark-primary)_8%,var(--cmg-dark-surface-alt))]", className)}>
+    <label className={cn("tool-checkbox-card flex min-h-[3.15rem] cursor-pointer items-start gap-[0.85rem] rounded-[0.95rem] border border-[var(--template-border)] bg-[var(--template-surface-alt)] px-[0.9rem] py-[0.85rem] transition-all duration-[180ms] ease-[ease] hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--template-primary)_26%,var(--template-border))]", checked && "is-checked border-[color-mix(in_srgb,var(--template-primary)_30%,transparent)] bg-[color-mix(in_srgb,var(--template-primary)_8%,var(--template-surface-alt))]", className)}>
       <span className="tool-checkbox-card__text grid min-w-0 flex-1 gap-[0.2rem]">
         <span className={cn("tool-checkbox-card__label text-[var(--template-ink)] text-[0.84rem] font-bold leading-[1.35]", labelClassName)}>{label}</span>
         {hint && <span className={cn("tool-checkbox-card__hint text-[var(--template-muted)] text-[0.68rem] leading-[1.4]", hintClassName)}>{hint}</span>}
@@ -107,14 +107,14 @@ export function ToolProgress({ value, max, labelLeft, labelRight }) {
 
 export function ToolPill({ children, active, className, ...props }) {
   return (
-    <button type="button" className={cn("tool-pill inline-flex items-center justify-center rounded-full border border-[var(--cmg-dark-border)] bg-[var(--cmg-dark-surface-alt)] px-[0.85rem] py-[0.45rem] text-[var(--cmg-dark-muted)] text-[0.72rem] font-extrabold tracking-[0.02em] transition-all duration-[180ms] ease-[ease] hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--cmg-dark-primary)_30%,var(--cmg-dark-border))] hover:text-[var(--cmg-dark-ink)]", active && "is-active border-[var(--cmg-dark-primary)] bg-[var(--cmg-dark-primary)] text-[var(--cmg-dark-on-primary)] shadow-[0_6px_16px_color-mix(in_srgb,var(--cmg-dark-primary)_20%,transparent)]", className)} aria-pressed={active} {...props}>
+    <button type="button" className={cn("tool-pill inline-flex items-center justify-center rounded-full border border-[var(--template-border)] bg-[var(--template-surface-alt)] px-[0.85rem] py-[0.45rem] text-[var(--template-muted)] text-[0.72rem] font-extrabold tracking-[0.02em] transition-all duration-[180ms] ease-[ease] hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--template-primary)_30%,var(--template-border))] hover:text-[var(--template-ink)]", active && "is-active border-[var(--template-primary)] bg-[var(--template-primary)] text-[var(--template-on-primary)] shadow-[0_6px_16px_color-mix(in_srgb,var(--template-primary)_20%,transparent)]", className)} aria-pressed={active} {...props}>
       {children}
     </button>
   );
 }
 
 export function ToolResultCard({ children, variant = "primary", className }) {
-  return <div className={cn("tool-result relative min-h-[286px] overflow-hidden rounded-[1.25rem] border border-[color-mix(in_srgb,var(--cmg-dark-primary)_20%,var(--cmg-dark-border))] bg-[linear-gradient(135deg,var(--cmg-dark-primary)_0%,var(--cmg-dark-accent)_100%)] p-[1.5rem_1.75rem] text-[var(--cmg-dark-on-primary)] shadow-[0_18px_40px_color-mix(in_srgb,var(--cmg-dark-primary)_18%,transparent)] max-[620px]:p-5", `tool-result--${variant}`, className)}>{children}</div>;
+  return <div className={cn("tool-result relative min-h-[286px] overflow-hidden rounded-[1.25rem] border border-[color-mix(in_srgb,var(--template-primary)_20%,var(--template-border))] bg-[linear-gradient(135deg,var(--template-primary)_0%,var(--template-accent)_100%)] p-[1.5rem_1.75rem] text-[var(--template-on-primary)] shadow-[0_18px_40px_color-mix(in_srgb,var(--template-primary)_18%,transparent)] max-[620px]:p-5", `tool-result--${variant}`, className)}>{children}</div>;
 }
 
 export function ToolDivider({ className }) {
@@ -123,7 +123,7 @@ export function ToolDivider({ className }) {
 
 export function ToolOptionButton({ children, className, ...props }) {
   return (
-    <button type="button" className={cn("tool-option-btn flex w-full items-center justify-between gap-4 rounded-[1rem] border border-[var(--cmg-dark-border)] bg-[var(--cmg-dark-surface-alt)] px-[1.1rem] py-4 text-left text-[var(--cmg-dark-ink)] text-[0.88rem] font-bold leading-[1.3] transition-all duration-[180ms] ease-[ease] hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--cmg-dark-primary)_36%,var(--cmg-dark-border))] hover:bg-[var(--cmg-dark-surface)] hover:shadow-[0_8px_20px_color-mix(in_srgb,var(--cmg-template-deep-surface)_14%,transparent)]", className)} {...props}>
+    <button type="button" className={cn("tool-option-btn flex w-full items-center justify-between gap-4 rounded-[1rem] border border-[var(--template-border)] bg-[var(--template-surface-alt)] px-[1.1rem] py-4 text-left text-[var(--template-ink)] text-[0.88rem] font-bold leading-[1.3] transition-all duration-[180ms] ease-[ease] hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--template-primary)_36%,var(--template-border))] hover:bg-[var(--template-surface)] hover:shadow-[0_8px_20px_color-mix(in_srgb,var(--cmg-template-deep-surface)_14%,transparent)]", className)} {...props}>
       {children}
     </button>
   );
@@ -131,13 +131,13 @@ export function ToolOptionButton({ children, className, ...props }) {
 
 export function ToolStat({ label, value }) {
   return (
-    <div className="tool-stat flex items-center justify-between gap-4 rounded-[0.85rem] border border-[color-mix(in_srgb,var(--cmg-dark-on-primary)_12%,transparent)] bg-[color-mix(in_srgb,var(--cmg-dark-on-primary)_8%,transparent)] px-[0.9rem] py-[0.65rem]">
-      <span className="tool-stat__label text-[0.78rem] font-semibold text-[color-mix(in_srgb,var(--cmg-dark-on-primary)_86%,transparent)]">{label}</span>
-      <span className="tool-stat__value font-extrabold text-[var(--cmg-dark-on-primary)]">{value}</span>
+    <div className="tool-stat flex items-center justify-between gap-4 rounded-[0.85rem] border border-[color-mix(in_srgb,var(--template-on-primary)_12%,transparent)] bg-[color-mix(in_srgb,var(--template-on-primary)_8%,transparent)] px-[0.9rem] py-[0.65rem]">
+      <span className="tool-stat__label text-[0.78rem] font-semibold text-[color-mix(in_srgb,var(--template-on-primary)_86%,transparent)]">{label}</span>
+      <span className="tool-stat__value font-extrabold text-[var(--template-on-primary)]">{value}</span>
     </div>
   );
 }
 
 export function ToolEmptyState({ children, className }) {
-  return <div className={cn("tool-empty rounded-[1rem] border border-dashed border-[var(--cmg-dark-border)] bg-[var(--cmg-dark-surface-alt)] p-[1.15rem] text-center text-[0.82rem] text-[var(--cmg-dark-muted)]", className)}>{children}</div>;
+  return <div className={cn("tool-empty rounded-[1rem] border border-dashed border-[var(--template-border)] bg-[var(--template-surface-alt)] p-[1.15rem] text-center text-[0.82rem] text-[var(--template-muted)]", className)}>{children}</div>;
 }

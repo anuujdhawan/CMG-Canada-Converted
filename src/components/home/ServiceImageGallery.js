@@ -4,7 +4,68 @@ const image = (file, label, alt) => ({
   src: `/images/pages/${file}.webp`,
   label,
   alt,
+  story: GALLERY_STORIES[label] || alt,
 });
+
+const GALLERY_STORIES = {
+  Together: "A strong pathway keeps the people you love moving toward the same future.",
+  Family: "The right plan creates more room for the moments that matter most.",
+  "A shared plan": "Clear advice turns a shared goal into a practical next step.",
+  Evidence: "Every detail helps tell a complete, credible story to the decision-maker.",
+  "A new home": "Picture the life your pathway is helping you build.",
+  "Choose your city": "The right city can shape how your new chapter feels day to day.",
+  "Canada-wide": "Your future can take shape in the community that fits you best.",
+  Belonging: "A new beginning feels different when it starts to feel like home.",
+  Belong: "Build a future that feels rooted, connected and truly yours.",
+  "Your next chapter": "One thoughtful step today can change where tomorrow begins.",
+  Opportunity: "The right route can connect your experience with meaningful opportunity.",
+  Expertise: "Bring your skills forward with a plan shaped around your real profile.",
+  "One team": "Good outcomes are built when every contributor is working from the same plan.",
+  "The file": "A focused review brings the important facts into a clearer sequence.",
+  Preparation: "Strong preparation turns uncertainty into a clear next move.",
+  Momentum: "Once the route is clear, the next decisions become easier to make.",
+  "Move forward": "A practical plan helps you keep moving when the process feels complex.",
+  Learn: "The right learning path starts with a clear picture of what comes next.",
+  "Choose well": "A considered choice can support both your goals now and your options later.",
+  Graduate: "Education becomes a launch point for the future you are working toward.",
+  "Find your place": "A route that fits your profile can open the right doors.",
+  "Prepare well": "Good preparation turns uncertainty into a clear next move.",
+  "Clear guidance": "Expert guidance keeps the important details moving together.",
+  "Build skills": "Each new skill adds confidence to the next stage of your journey.",
+  Prepare: "A calm, organized review makes the next step easier to see.",
+  "Make it home": "Small decisions along the way can lead to a life that feels truly yours.",
+  "The next step": "Turn a broad ambition into one clear, achievable move.",
+  People: "Your people and your purpose are part of the pathway—not an afterthought.",
+  "A stronger team": "The right people in the right roles create momentum that lasts.",
+  "A defensible plan": "A strong case connects your goals, evidence and timing into one story.",
+  Strategy: "The best route is the one that makes sense for the full picture.",
+  Leadership: "Move with confidence when the plan reflects the decisions ahead.",
+  Decisions: "Clear context helps important choices feel less overwhelming.",
+  Clarity: "When the details align, the way forward becomes easier to act on.",
+  Partnership: "The right support turns a complex process into a shared plan.",
+  "Where growth leads": "Build toward a place where your next opportunity can take root.",
+  "Ready to travel": "Make the practical details feel settled before the journey begins.",
+  Arrival: "A smoother arrival starts with thoughtful preparation before takeoff.",
+  Explore: "Leave room for discovery while keeping the important details in view.",
+  "Stay awhile": "Sometimes the first visit is the beginning of a longer story.",
+  Welcome: "Arrive with a plan—and make the first moments count.",
+  Discover: "Find the places and possibilities that make Canada feel personal.",
+  "The destination": "A meaningful destination begins with a route designed for you.",
+  "Travel with confidence": "Know what is ready before you set out.",
+  "Read the concern": "Start by understanding exactly what the decision-maker needs to see.",
+  "Shape the response": "A focused response gives the important facts their clearest voice.",
+  "Protect the deadline": "Good timing protects the options still available to you.",
+  "Own the next step": "Clarity returns when the next action is visible and within reach.",
+  "Build the evidence": "Relevant evidence makes the story behind the file easier to understand.",
+  "A way forward": "Even a difficult decision can have a considered next chapter.",
+  "Keep perspective": "A wider view helps you respond thoughtfully under pressure.",
+  "Begin again": "The next attempt can be stronger when the lessons are carried forward.",
+  "The workforce": "A well-matched workforce helps both people and businesses move ahead.",
+  "Specialized talent": "Bring the right expertise to the work that needs it most.",
+  Compliance: "Confidence comes from knowing the plan is built to stand up to scrutiny.",
+  "Employer planning": "A clear employer plan protects both the business and the people it needs.",
+  "Grow in Canada": "Build a team and a future with room to grow.",
+};
 
 const GRID_POSITIONS = [
   "",
@@ -133,6 +194,9 @@ export default function ServiceImageGallery({ page }) {
             <figure
               className={`service-image-gallery__item group relative min-h-[190px] m-0 overflow-hidden border border-[var(--border)] rounded-[22px] bg-[var(--surface)] shadow-[var(--shadow-soft)] isolate after:absolute after:inset-0 after:z-[1] after:bg-[linear-gradient(180deg,transparent_40%,color-mix(in_srgb,var(--cmg-template-deep-surface)_82%,transparent))] after:content-[''] after:pointer-events-none max-[880px]:col-auto max-[880px]:row-auto max-[880px]:min-h-[215px] max-[620px]:min-h-[230px] max-[620px]:rounded-[18px] ${GRID_POSITIONS[index]} ${index === 0 ? "service-image-gallery__item--featured col-start-1 row-start-1 row-span-2 min-h-[380px] max-[880px]:col-start-1 max-[880px]:row-span-2 max-[880px]:min-h-[445px] max-[620px]:col-auto max-[620px]:row-auto max-[620px]:min-h-[330px]" : ""} reveal`}
               key={item.src}
+              tabIndex={0}
+              role="group"
+              aria-label={`${item.label}: ${item.story}`}
               style={{ "--delay": `${index * 45}ms` }}
             >
               <Image
@@ -140,9 +204,15 @@ export default function ServiceImageGallery({ page }) {
                 alt={item.alt}
                 fill
                 sizes="(max-width: 620px) 100vw, (max-width: 880px) 50vw, 32vw"
-                className="object-cover transition-[transform,filter] duration-[800ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.07] group-hover:saturate-[1.08]"
+                className="service-image-gallery__image object-cover"
               />
-              <figcaption className="absolute z-[2] right-[17px] bottom-[15px] left-[17px] flex items-center gap-[10px] text-[var(--template-on-primary)]"><span className="text-[var(--primary)] text-[11px] font-extrabold leading-none tracking-[.12em]">0{index + 1}</span><strong className="font-bold text-[14px] leading-[1.2] tracking-[.01em]">{item.label}</strong></figcaption>
+              <figcaption className="service-image-gallery__caption absolute z-[2] right-[17px] bottom-[15px] left-[17px] text-[var(--template-on-primary)]">
+                <div className="flex items-center gap-[10px]">
+                  <span className="service-image-gallery__number text-[var(--primary)] text-[11px] font-extrabold leading-none tracking-[.12em]">0{index + 1}</span>
+                  <strong className="service-image-gallery__title font-bold text-[14px] leading-[1.2] tracking-[.01em]">{item.label}</strong>
+                </div>
+                <p className="service-image-gallery__story">{item.story}</p>
+              </figcaption>
             </figure>
           ))}
         </div>
