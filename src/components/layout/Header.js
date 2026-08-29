@@ -230,7 +230,7 @@ export default function Header() {
               <BrandLogo />
 
               {/* Desktop Nav */}
-              <nav className="site-header__desktop-nav hidden lg:flex items-center gap-4" aria-label="Main">
+              <nav className="site-header__desktop-nav hidden min-[1120px]:flex items-center gap-4" aria-label="Main">
                 {navigation.header.map((item) => {
                   const open = openMenu === item.label;
                   const active = isActiveNavItem(pathname, item);
@@ -278,7 +278,7 @@ export default function Header() {
               </nav>
 
               {/* Right: CTA — always visible, never crowded out */}
-              <div className="hidden lg:flex items-center">
+              <div className="hidden min-[1120px]:flex items-center">
                 <Link
                   href={site.ctas.primary.href}
                   className="site-header__cta rounded-md bg-primary text-white font-bold px-4 py-2.5 text-[13px] hover:bg-navy transition-colors shadow-md whitespace-nowrap"
@@ -290,7 +290,7 @@ export default function Header() {
               {/* Mobile hamburger */}
               <button
                 onClick={() => setMobileOpen(true)}
-                className="site-header__menu-button lg:hidden p-2.5 rounded-md text-primary hover:bg-primary/10 transition-colors"
+                className="site-header__menu-button min-[1120px]:hidden p-2.5 rounded-md text-primary hover:bg-primary/10 transition-colors"
                 aria-label="Open menu"
               >
                 <Menu className="h-6 w-6" />

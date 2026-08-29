@@ -671,7 +671,7 @@ html[data-theme="light"] .cmg-template-home .hero::before { background: linear-g
 html[data-theme="light"] .cmg-template-home .hero-background-carousel .cmg-hero-carousel__wash { background: linear-gradient(90deg, color-mix(in srgb, var(--cmg-light-secondary) 60%, transparent) 0%, color-mix(in srgb, var(--cmg-light-secondary) 38%, transparent) 42%, color-mix(in srgb, var(--cmg-light-secondary) 14%, transparent) 68%, color-mix(in srgb, var(--cmg-light-secondary) 3%, transparent) 100%), linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 9%, transparent) 0%, transparent 62%, color-mix(in srgb, var(--cmg-light-bg) 18%, transparent) 100%); }
 html[data-theme="light"] .cmg-template-home .hero-copy,
 html[data-theme="light"] .cmg-template-home .hero-copy h1 { color: var(--cmg-light-ink); text-shadow: none; }
-html[data-theme="light"] .cmg-template-home .hero-copy .lead { color: var(--cmg-light-muted); text-shadow: none; }
+html[data-theme="light"] .cmg-template-home .hero-copy .lead { color: var(--cmg-light-muted) !important; text-shadow: none; }
 html[data-theme="light"] .cmg-template-home .hero-copy .eyebrow { color: var(--primary); text-shadow: none; }
 html[data-theme="light"] .cmg-template-home .hero-copy .btn-secondary {
   background: var(--cmg-light-secondary) !important;
@@ -1268,6 +1268,10 @@ body:has(.cmg-template-home) .site-header {
 .hero {
   margin-top: 0 !important;
 }
+.cmg-template-home section[id],
+.cmg-template-home [id] {
+  scroll-margin-top: 10.5rem;
+}
 #main-content > .cmg-template-home:first-child .hero,
 #main-content > div:first-child .hero,
 #main-content > section.hero:first-child {
@@ -1347,7 +1351,7 @@ body:has(.cmg-template-home) .cmg-mobile-menu > div:last-child {
 body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav {
   gap: 1.5rem;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1119px) {
   body:has(.cmg-template-home) .site-header__utility-strip,
   body:has(.cmg-template-home) .site-header > div:first-child {
     min-height: 36px;
@@ -1365,6 +1369,12 @@ body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav {
     position: fixed;
     inset: 0 0 0 auto;
     z-index: 1;
+  }
+}
+@media (max-width: 620px) {
+  .cmg-template-home section[id],
+  .cmg-template-home [id] {
+    scroll-margin-top: 9.5rem;
   }
 }
 .crs-calculator .tool-field {
@@ -1493,7 +1503,7 @@ input[type="submit"] {
     min-width: 44px;
   }
 }
-@media (max-width: 1023.98px) {
+@media (max-width: 1119.98px) {
   .cmg-whatsapp-bubble {
     right: 0.75rem !important;
     bottom: 7.4rem !important;

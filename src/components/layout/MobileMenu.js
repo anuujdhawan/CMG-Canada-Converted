@@ -54,7 +54,7 @@ export default function MobileMenu({ onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-260 lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <div className="fixed inset-0 z-260 min-[1120px]:hidden" role="dialog" aria-modal="true" aria-label="Mobile menu">
       {/* Backdrop */}
       <button
         type="button"
