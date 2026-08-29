@@ -229,10 +229,10 @@ function refusalCardHref(title) {
 }
 
 const PREMIUM_TOP_LINE = "before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:z-[2] before:h-[3px] before:origin-left before:scale-x-[.28] before:bg-[linear-gradient(90deg,var(--template-primary),var(--cmg-template-primary-highlight))] before:transition-transform before:duration-[450ms] before:ease-[cubic-bezier(.2,.8,.2,1)] before:content-[''] hover:before:scale-x-100";
-const PREMIUM_DATA_SURFACE = "relative rounded-[18px] border border-[color-mix(in_srgb,var(--template-primary)_58%,var(--cmg-template-deep-surface))] bg-[var(--cmg-template-deep-surface)] text-[var(--template-on-primary)] shadow-[0_24px_60px_color-mix(in_srgb,var(--cmg-template-deep-surface)_34%,transparent),0_4px_18px_color-mix(in_srgb,var(--template-primary)_12%,transparent)]";
-const PREMIUM_DATA_MUTED = "text-[color-mix(in_srgb,var(--template-on-primary)_74%,transparent)]";
-const PREMIUM_DATA_TEXT = "text-[var(--template-on-primary)]";
-const PREMIUM_BADGE = "inline-flex max-w-full items-center justify-center rounded-full border px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.1em] leading-none text-[var(--template-on-primary)] shadow-[0_6px_16px_color-mix(in_srgb,var(--template-primary)_18%,transparent)]";
+const PREMIUM_DATA_SURFACE = "relative rounded-[18px] border border-[color-mix(in_srgb,var(--template-primary)_42%,var(--template-border))] bg-[var(--template-surface-alt)] text-[var(--template-ink)] shadow-[0_24px_60px_color-mix(in_srgb,var(--template-ink)_14%,transparent),0_4px_18px_color-mix(in_srgb,var(--template-primary)_12%,transparent)]";
+const PREMIUM_DATA_MUTED = "text-[color-mix(in_srgb,var(--template-muted)_88%,var(--template-ink))]";
+const PREMIUM_DATA_TEXT = "text-[var(--template-ink)]";
+const PREMIUM_BADGE = "inline-flex max-w-full items-center justify-center rounded-full border px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-[.1em] leading-none text-[var(--template-ink)] shadow-[0_6px_16px_color-mix(in_srgb,var(--template-primary)_18%,transparent)]";
 
 function getTablePresentation(header = []) {
   const joined = header.join(" ").toLowerCase();
@@ -257,10 +257,10 @@ function renderTableCell(cell) {
   const variant = getTableBadgeVariant(cell);
   if (!variant) return renderInline(cell || "");
   const badgeClass = variant === "status"
-    ? "border-[color-mix(in_srgb,var(--template-on-primary)_25%,transparent)] bg-[var(--template-primary)]"
+    ? "border-[color-mix(in_srgb,var(--template-on-primary)_25%,transparent)] bg-[var(--template-primary)] text-[var(--template-on-primary)]"
     : variant === "muted"
-      ? "border-[color-mix(in_srgb,var(--template-on-primary)_22%,transparent)] bg-[color-mix(in_srgb,var(--template-on-primary)_11%,var(--cmg-template-deep-surface))]"
-      : "border-[color-mix(in_srgb,var(--template-primary)_55%,transparent)] bg-[color-mix(in_srgb,var(--template-primary)_20%,var(--cmg-template-deep-surface))]";
+      ? "border-[color-mix(in_srgb,var(--template-ink)_18%,var(--template-border))] bg-[color-mix(in_srgb,var(--template-surface)_72%,var(--template-surface-alt))]"
+      : "border-[color-mix(in_srgb,var(--template-primary)_55%,transparent)] bg-[color-mix(in_srgb,var(--template-primary)_20%,var(--template-surface-alt))]";
   return <span className={cn(PREMIUM_BADGE, badgeClass)}>{renderInline(cell || "")}</span>;
 }
 
@@ -347,11 +347,11 @@ function renderTable(rows) {
   const presentation = getTablePresentation(header || []);
   return (
       <div className={cn("my-7 max-h-[640px] overflow-auto max-[620px]:max-h-[560px] [isolation:isolate]", PREMIUM_DATA_SURFACE, PREMIUM_TOP_LINE)}>
-        <div className="flex items-center justify-between gap-4 border-b border-[color-mix(in_srgb,var(--template-on-primary)_16%,transparent)] bg-[linear-gradient(90deg,color-mix(in_srgb,var(--template-primary)_17%,var(--cmg-template-deep-surface)),var(--cmg-template-deep-surface))] px-4 py-3 max-[620px]:items-start max-[620px]:flex-col max-[620px]:gap-1">
+        <div className="flex items-center justify-between gap-4 border-b border-[var(--template-border)] bg-[linear-gradient(90deg,color-mix(in_srgb,var(--template-primary)_10%,var(--template-surface-alt)),var(--template-surface-alt))] px-4 py-3 max-[620px]:items-start max-[620px]:flex-col max-[620px]:gap-1">
           <div className="flex items-center gap-2">
             <Table2 className="h-4 w-4 text-[var(--template-primary)]" aria-hidden="true" />
             <div>
-              <p className="m-0 text-[11px] font-extrabold uppercase tracking-[.15em] text-[var(--template-on-primary)]">{presentation.label}</p>
+              <p className="m-0 text-[11px] font-extrabold uppercase tracking-[.15em] text-[var(--template-ink)]">{presentation.label}</p>
               <p className={cn("m-0 mt-1 text-[11px] font-semibold", PREMIUM_DATA_MUTED)}>{presentation.detail}</p>
             </div>
           </div>
@@ -360,7 +360,7 @@ function renderTable(rows) {
         <table className="w-full min-w-[480px] border-collapse text-center text-[14.5px]">
           <caption className="sr-only">{presentation.label}</caption>
         {header && (
-          <thead className="bg-[linear-gradient(135deg,var(--template-primary),var(--template-accent))] shadow-[0_10px_22px_color-mix(in_srgb,var(--cmg-template-deep-surface)_42%,transparent)] [isolation:isolate]">
+          <thead className="bg-[linear-gradient(135deg,var(--template-primary),var(--template-accent))] shadow-[0_10px_22px_color-mix(in_srgb,var(--template-ink)_18%,transparent)] [isolation:isolate]">
             <tr className="border-b border-[color-mix(in_srgb,var(--template-on-primary)_34%,transparent)] bg-[linear-gradient(135deg,var(--template-primary),var(--template-accent))]">
               {header.map((cell, j) => (
                 <th key={j} className="px-4 py-4 text-center text-[12px] font-extrabold uppercase tracking-[.12em] text-[var(--template-on-primary)] [&_strong]:!text-[var(--template-on-primary)]">
@@ -375,12 +375,12 @@ function renderTable(rows) {
             <tr
               key={i}
               className={cn(
-                "group border-t border-[color-mix(in_srgb,var(--template-on-primary)_16%,transparent)] transition-[background-color,border-color,box-shadow] duration-[280ms] hover:border-t-[var(--template-primary)] hover:bg-[linear-gradient(90deg,color-mix(in_srgb,var(--template-primary)_36%,var(--cmg-template-deep-surface)),color-mix(in_srgb,var(--template-accent)_24%,var(--cmg-template-deep-surface)))] hover:shadow-[inset_4px_0_0_var(--template-primary)]",
-                i % 2 === 1 && "bg-[linear-gradient(90deg,color-mix(in_srgb,var(--template-accent)_15%,var(--cmg-template-deep-surface)),color-mix(in_srgb,var(--template-primary)_5%,var(--cmg-template-deep-surface)))]"
+                "group border-t border-[color-mix(in_srgb,var(--template-border)_78%,transparent)] transition-[background-color,border-color,box-shadow] duration-[280ms] hover:border-t-[var(--template-primary)] hover:bg-[linear-gradient(90deg,color-mix(in_srgb,var(--template-primary)_14%,var(--template-surface-alt)),color-mix(in_srgb,var(--template-accent)_10%,var(--template-surface-alt)))] hover:shadow-[inset_4px_0_0_var(--template-primary)]",
+                i % 2 === 1 && "bg-[linear-gradient(90deg,color-mix(in_srgb,var(--template-accent)_8%,var(--template-surface-alt)),color-mix(in_srgb,var(--template-primary)_3%,var(--template-surface-alt)))]"
               )}
             >
               {Array.from({ length: colCount }).map((_, j) => (
-                <td key={j} className={cn("px-4 py-3 text-center align-top [&_strong]:!text-[var(--template-on-primary)] [&_a]:!text-[var(--cmg-template-primary-highlight)]", PREMIUM_DATA_TEXT, j === 0 && "border-l-2 border-transparent font-semibold transition-[border-color] duration-[280ms] group-hover:border-l-[var(--template-primary)]")}>
+                <td key={j} className={cn("px-4 py-3 text-center align-top [&_strong]:!text-[var(--template-ink)] [&_a]:!text-[var(--template-primary)]", PREMIUM_DATA_TEXT, j === 0 && "border-l-2 border-transparent font-semibold transition-[border-color] duration-[280ms] group-hover:border-l-[var(--template-primary)]")}>
                   {renderTableCell(row[j] || "")}
                 </td>
               ))}
@@ -388,11 +388,11 @@ function renderTable(rows) {
           ))}
         </tbody>
       </table>
-      <div className="flex items-center justify-between gap-4 border-t border-[color-mix(in_srgb,var(--template-on-primary)_13%,transparent)] px-4 py-3 max-[620px]:items-start max-[620px]:flex-col max-[620px]:gap-1">
+      <div className="flex items-center justify-between gap-4 border-t border-[color-mix(in_srgb,var(--template-border)_78%,transparent)] px-4 py-3 max-[620px]:items-start max-[620px]:flex-col max-[620px]:gap-1">
         <span className={cn("text-[11px] font-semibold", PREMIUM_DATA_MUTED)}>Presented in the supplied source sequence</span>
         <span className="text-[11px] font-extrabold uppercase tracking-[.1em] text-[var(--template-primary)]">Reviewed 2026</span>
       </div>
-      <div className="hidden items-center justify-center gap-2 border-t border-[color-mix(in_srgb,var(--template-primary)_22%,transparent)] bg-[color-mix(in_srgb,var(--template-primary)_7%,var(--cmg-template-deep-surface))] px-4 py-2.5 text-[11px] font-bold text-[var(--template-primary)] max-[620px]:flex">
+      <div className="hidden items-center justify-center gap-2 border-t border-[color-mix(in_srgb,var(--template-primary)_22%,var(--template-border))] bg-[color-mix(in_srgb,var(--template-primary)_7%,var(--template-surface-alt))] px-4 py-2.5 text-[11px] font-bold text-[var(--template-primary)] max-[620px]:flex">
         Swipe horizontally to explore all columns <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
       </div>
     </div>
