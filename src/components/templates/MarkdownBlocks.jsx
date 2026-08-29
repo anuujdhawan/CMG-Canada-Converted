@@ -228,8 +228,9 @@ function refusalCardHref(title) {
 }
 
 const PREMIUM_TOP_LINE = "before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:z-[2] before:h-[3px] before:origin-left before:scale-x-[.28] before:bg-[linear-gradient(90deg,var(--template-primary),var(--cmg-template-primary-highlight))] before:transition-transform before:duration-[450ms] before:ease-[cubic-bezier(.2,.8,.2,1)] before:content-[''] hover:before:scale-x-100";
-const PREMIUM_DATA_SURFACE = "relative overflow-hidden rounded-[18px] border border-[color-mix(in_srgb,var(--template-primary)_34%,var(--cmg-template-deep-surface))] bg-[var(--cmg-template-deep-surface)] text-[var(--template-on-primary)] shadow-[0_18px_46px_color-mix(in_srgb,var(--cmg-template-deep-surface)_28%,transparent)]";
+const PREMIUM_DATA_SURFACE = "relative overflow-hidden rounded-[18px] border border-[color-mix(in_srgb,var(--template-primary)_58%,var(--cmg-template-deep-surface))] bg-[var(--cmg-template-deep-surface)] text-[var(--template-on-primary)] shadow-[0_24px_60px_color-mix(in_srgb,var(--cmg-template-deep-surface)_34%,transparent),0_4px_18px_color-mix(in_srgb,var(--template-primary)_12%,transparent)]";
 const PREMIUM_DATA_MUTED = "text-[color-mix(in_srgb,var(--template-on-primary)_74%,transparent)]";
+const PREMIUM_DATA_TEXT = "text-[var(--template-on-primary)]";
 
 function renderTable(rows) {
   const hasSeparator = rows.length > 1 && rows[1].every((c) => /^:?-{2,}:?$/.test(c));
@@ -310,7 +311,7 @@ function renderTable(rows) {
       <table className="w-full min-w-[480px] border-collapse text-center text-[14.5px]">
         {header && (
           <thead>
-            <tr className="border-b border-[color-mix(in_srgb,var(--template-primary)_65%,transparent)] bg-[linear-gradient(135deg,var(--cmg-template-deep-surface),color-mix(in_srgb,var(--template-primary)_17%,var(--cmg-template-deep-surface)))]">
+            <tr className="border-b border-[color-mix(in_srgb,var(--template-on-primary)_34%,transparent)] bg-[linear-gradient(135deg,var(--template-primary),var(--template-accent))]">
               {header.map((cell, j) => (
                 <th key={j} className="px-4 py-4 text-center text-[12px] font-extrabold uppercase tracking-[.12em] text-[var(--template-on-primary)] [&_strong]:!text-[var(--template-on-primary)]">
                   {renderInline(cell)}
@@ -324,12 +325,12 @@ function renderTable(rows) {
             <tr
               key={i}
               className={cn(
-                "border-t border-[color-mix(in_srgb,var(--template-on-primary)_16%,transparent)] transition-[background-color,border-color] duration-[240ms] hover:border-t-[var(--template-primary)] hover:bg-[color-mix(in_srgb,var(--template-primary)_13%,var(--cmg-template-deep-surface))]",
-                i % 2 === 1 && "bg-[color-mix(in_srgb,var(--template-on-primary)_4%,var(--cmg-template-deep-surface))]"
+                "group border-t border-[color-mix(in_srgb,var(--template-on-primary)_16%,transparent)] transition-[background-color,border-color,box-shadow] duration-[280ms] hover:border-t-[var(--template-primary)] hover:bg-[linear-gradient(90deg,color-mix(in_srgb,var(--template-primary)_36%,var(--cmg-template-deep-surface)),color-mix(in_srgb,var(--template-accent)_24%,var(--cmg-template-deep-surface)))] hover:shadow-[inset_4px_0_0_var(--template-primary)]",
+                i % 2 === 1 && "bg-[linear-gradient(90deg,color-mix(in_srgb,var(--template-accent)_15%,var(--cmg-template-deep-surface)),color-mix(in_srgb,var(--template-primary)_5%,var(--cmg-template-deep-surface)))]"
               )}
             >
               {Array.from({ length: colCount }).map((_, j) => (
-                <td key={j} className={cn("px-4 py-3 text-center align-top [&_strong]:!text-[var(--template-on-primary)]", PREMIUM_DATA_MUTED)}>
+                <td key={j} className={cn("px-4 py-3 text-center align-top [&_strong]:!text-[var(--template-on-primary)] [&_a]:!text-[var(--cmg-template-primary-highlight)]", PREMIUM_DATA_TEXT, j === 0 && "border-l-2 border-transparent transition-[border-color] duration-[280ms] group-hover:border-l-[var(--template-primary)]")}>
                   {renderInline(row[j] || "")}
                 </td>
               ))}
