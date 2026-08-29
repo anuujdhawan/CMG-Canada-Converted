@@ -307,12 +307,12 @@ function renderTable(rows) {
 
   return (
     <div className={cn("my-7 overflow-x-auto", PREMIUM_DATA_SURFACE, PREMIUM_TOP_LINE)}>
-      <table className="w-full min-w-[480px] border-collapse text-left text-[14.5px]">
+      <table className="w-full min-w-[480px] border-collapse text-center text-[14.5px]">
         {header && (
           <thead>
             <tr className="border-b border-[color-mix(in_srgb,var(--template-primary)_65%,transparent)] bg-[linear-gradient(135deg,var(--cmg-template-deep-surface),color-mix(in_srgb,var(--template-primary)_17%,var(--cmg-template-deep-surface)))]">
               {header.map((cell, j) => (
-                <th key={j} className="px-4 py-4 text-[12px] font-extrabold uppercase tracking-[.12em] text-[var(--template-on-primary)] [&_strong]:!text-[var(--template-on-primary)]">
+                <th key={j} className="px-4 py-4 text-center text-[12px] font-extrabold uppercase tracking-[.12em] text-[var(--template-on-primary)] [&_strong]:!text-[var(--template-on-primary)]">
                   {renderInline(cell)}
                 </th>
               ))}
@@ -324,12 +324,12 @@ function renderTable(rows) {
             <tr
               key={i}
               className={cn(
-                "relative border-t border-[color-mix(in_srgb,var(--template-on-primary)_16%,transparent)] transition-[background-color,border-color] duration-[240ms] before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:z-[1] before:h-px before:origin-left before:scale-x-0 before:bg-[var(--template-primary)] before:transition-transform before:duration-300 before:content-[''] hover:border-t-[var(--template-primary)] hover:bg-[color-mix(in_srgb,var(--template-primary)_13%,var(--cmg-template-deep-surface))] hover:before:scale-x-100",
+                "border-t border-[color-mix(in_srgb,var(--template-on-primary)_16%,transparent)] transition-[background-color,border-color] duration-[240ms] hover:border-t-[var(--template-primary)] hover:bg-[color-mix(in_srgb,var(--template-primary)_13%,var(--cmg-template-deep-surface))]",
                 i % 2 === 1 && "bg-[color-mix(in_srgb,var(--template-on-primary)_4%,var(--cmg-template-deep-surface))]"
               )}
             >
               {Array.from({ length: colCount }).map((_, j) => (
-                <td key={j} className={cn("px-4 py-3 align-top [&_strong]:!text-[var(--template-on-primary)]", PREMIUM_DATA_MUTED)}>
+                <td key={j} className={cn("px-4 py-3 text-center align-top [&_strong]:!text-[var(--template-on-primary)]", PREMIUM_DATA_MUTED)}>
                   {renderInline(row[j] || "")}
                 </td>
               ))}
