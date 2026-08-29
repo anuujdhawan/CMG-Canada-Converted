@@ -346,7 +346,7 @@ function renderTable(rows) {
 
   const presentation = getTablePresentation(header || []);
   return (
-      <div className={cn("my-7 max-h-[640px] overflow-auto max-[620px]:max-h-[560px]", PREMIUM_DATA_SURFACE, PREMIUM_TOP_LINE)}>
+      <div className={cn("my-7 max-h-[640px] overflow-auto max-[620px]:max-h-[560px] [isolation:isolate]", PREMIUM_DATA_SURFACE, PREMIUM_TOP_LINE)}>
         <div className="flex items-center justify-between gap-4 border-b border-[color-mix(in_srgb,var(--template-on-primary)_16%,transparent)] bg-[linear-gradient(90deg,color-mix(in_srgb,var(--template-primary)_17%,var(--cmg-template-deep-surface)),var(--cmg-template-deep-surface))] px-4 py-3 max-[620px]:items-start max-[620px]:flex-col max-[620px]:gap-1">
           <div className="flex items-center gap-2">
             <Table2 className="h-4 w-4 text-[var(--template-primary)]" aria-hidden="true" />
@@ -360,10 +360,10 @@ function renderTable(rows) {
         <table className="w-full min-w-[480px] border-collapse text-center text-[14.5px]">
           <caption className="sr-only">{presentation.label}</caption>
         {header && (
-          <thead>
+          <thead className="sticky top-0 z-[4] bg-[linear-gradient(135deg,var(--template-primary),var(--template-accent))] shadow-[0_10px_22px_color-mix(in_srgb,var(--cmg-template-deep-surface)_42%,transparent)] [isolation:isolate]">
             <tr className="border-b border-[color-mix(in_srgb,var(--template-on-primary)_34%,transparent)] bg-[linear-gradient(135deg,var(--template-primary),var(--template-accent))]">
               {header.map((cell, j) => (
-                <th key={j} className="sticky top-0 z-[3] px-4 py-4 text-center text-[12px] font-extrabold uppercase tracking-[.12em] text-[var(--template-on-primary)] [&_strong]:!text-[var(--template-on-primary)]">
+                <th key={j} className="px-4 py-4 text-center text-[12px] font-extrabold uppercase tracking-[.12em] text-[var(--template-on-primary)] [&_strong]:!text-[var(--template-on-primary)]">
                   {renderInline(cell)}
                 </th>
               ))}

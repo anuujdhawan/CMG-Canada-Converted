@@ -1504,15 +1504,19 @@ input[type="submit"] {
   }
 }
 @media (max-width: 1119.98px) {
-  .cmg-whatsapp-bubble {
+  .cmg-floating-bubble:not(.cmg-chatbot-root--open) {
     right: 0.75rem !important;
-    bottom: 7.4rem !important;
     left: auto !important;
     width: 2.75rem !important;
     height: 2.75rem !important;
   }
-  .cmg-chatbot-root:not(.cmg-chatbot-root--open) {
-    right: 0.75rem !important;
-    bottom: 10.8rem !important;
+  .cmg-floating-bubble--call:not(.cmg-chatbot-root--open) {
+    bottom: 4rem !important;
+  }
+  .cmg-floating-bubble--whatsapp:not(.cmg-chatbot-root--open) {
+    bottom: 7.375rem !important;
+  }
+  .cmg-floating-bubble--chat:not(.cmg-chatbot-root--open) {
+    bottom: 10.75rem !important;
   }
 }
