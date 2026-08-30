@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import BlogCard from "./BlogCard";
+import { getImageObjectPosition } from "@/lib/imagePresentation";
 
 export default function BlogCategoryTabs({ groups }) {
   const [activeSlug, setActiveSlug] = useState(groups[0]?.slug || "");
@@ -110,6 +111,7 @@ export default function BlogCategoryTabs({ groups }) {
               sizes="(max-width: 1023px) 100vw, 72vw"
               priority={false}
               className="object-cover [transition:transform_.8s_cubic-bezier(.16,1,.3,1),filter_.5s_ease] group-hover:scale-[1.04] group-hover:saturate-[1.08] group-focus-visible:scale-[1.04] group-focus-visible:saturate-[1.08]"
+              style={{ objectPosition: getImageObjectPosition(activeGroup.posts[0].image.src) }}
             />
             <span className="reference-blog-group__banner-overlay absolute inset-0 pointer-events-none bg-[linear-gradient(180deg,transparent_35%,color-mix(in_srgb,var(--cmg-template-deep-surface)_62%,transparent))]" aria-hidden="true" />
             <span className="reference-blog-group__banner-label absolute left-[18px] right-[18px] bottom-[18px] z-[1] inline-flex items-center justify-between gap-3 px-[14px] py-3 pl-4 border border-[color-mix(in_srgb,var(--template-on-primary)_18%,transparent)] rounded-full bg-[color-mix(in_srgb,var(--cmg-template-deep-surface)_72%,transparent)] text-[var(--template-on-primary)] font-bold text-[13px] leading-[1.2] backdrop-blur-[10px]">

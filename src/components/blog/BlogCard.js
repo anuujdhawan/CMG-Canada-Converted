@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { getImageObjectPosition } from "@/lib/imagePresentation";
 
 function formatDate(value) {
   if (!value) return "Guide";
@@ -19,6 +20,7 @@ export default function BlogCard({ post, index = 0 }) {
           fill
           sizes="(max-width: 620px) 100vw, (max-width: 1100px) 50vw, 33vw"
           className="object-cover [transition:transform_.8s_cubic-bezier(.16,1,.3,1),filter_.5s_ease] group-hover:scale-[1.065] group-hover:saturate-[1.08] group-focus-visible:scale-[1.065] group-focus-visible:saturate-[1.08]"
+          style={{ objectPosition: getImageObjectPosition(post.image.src) }}
         />
         <span className="reference-blog-card__media-index absolute z-[1] right-[15px] bottom-[13px] inline-flex items-center justify-center w-[34px] h-[34px] border border-[color-mix(in_srgb,var(--template-on-primary)_28%,transparent)] rounded-[50%] bg-[color-mix(in_srgb,var(--cmg-template-deep-surface)_60%,transparent)] text-[var(--template-on-primary)] font-extrabold text-[11px] leading-none tracking-[.12em] backdrop-blur-[10px]">{String(index + 1).padStart(2, "0")}</span>
       </figure>

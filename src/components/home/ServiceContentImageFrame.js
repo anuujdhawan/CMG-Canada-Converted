@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getImageObjectPosition } from "@/lib/imagePresentation";
 
 const contentImage = (file, label, alt, caption) => ({
   file,
@@ -122,7 +123,7 @@ export default function ServiceContentImageFrame({ image, side = "left", childre
   return (
     <section className={`service-content-media-band service-content-media-band--${side} grid grid-cols-[1.05fr_.95fr] items-center gap-[42px] my-[62px] mx-[-60px] py-[34px] max-[880px]:grid-cols-1 max-[880px]:gap-7 max-[880px]:my-12 max-[880px]:mx-0 max-[880px]:py-0 max-[620px]:gap-5 max-[620px]:my-10 reveal`}>
       <figure className="service-content-media-frame group relative min-h-[470px] max-[1100px]:min-h-[390px] max-[880px]:min-h-[310px] max-[880px]:rounded-[20px] m-0 overflow-hidden border border-[var(--border)] rounded-[25px] bg-[var(--surface)] shadow-[var(--shadow-soft)] isolate">
-        <Image src={image.src} alt={image.alt} fill sizes="(max-width: 880px) 100vw, 42vw" className="object-cover transition-[transform,filter] duration-[850ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.06] group-hover:saturate-[1.08]" />
+        <Image src={image.src} alt={image.alt} fill sizes="(max-width: 880px) 100vw, 42vw" className="object-cover transition-[transform,filter] duration-[850ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.06] group-hover:saturate-[1.08]" style={{ objectPosition: image.objectPosition || getImageObjectPosition(image.src) }} />
         <div className="service-content-media-frame__wash absolute inset-0 z-[1] pointer-events-none bg-[linear-gradient(180deg,transparent_30%,color-mix(in_srgb,var(--cmg-template-deep-surface)_88%,transparent))]" aria-hidden="true" />
         <figcaption className="absolute z-[2] right-[22px] bottom-5 left-[22px] grid gap-[9px] text-[var(--template-on-primary)]">
           <span className="text-[var(--primary)] text-[13px] font-extrabold leading-[1.2] tracking-[.13em] uppercase">{image.label}</span>

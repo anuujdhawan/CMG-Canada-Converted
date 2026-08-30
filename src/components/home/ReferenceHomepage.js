@@ -30,6 +30,7 @@ import HeroCarousel from "./HeroCarousel";
 import HeroProofCardCarousel from "./HeroProofCardCarousel";
 import LiveSuccessVideos from "./LiveSuccessVideos";
 import TemplateMotion from "./TemplateMotion";
+import { getImageObjectPosition } from "@/lib/imagePresentation";
 
 const href = (path) => currentPagePath(path);
 
@@ -175,7 +176,7 @@ export default function ReferenceHomepage({ page, heroData }) {
 
       <section className="section relative z-[1] bg-[var(--surface-alt)] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16 alt">
         <div className="section-inner mx-auto w-[var(--container)] guide-layout grid grid-cols-[.82fr_1.18fr] max-[880px]:grid-cols-1 items-stretch gap-[46px]">
-          <div className="guide-image group relative min-h-[610px] max-[880px]:!min-h-[400px] max-[620px]:!min-h-[350px] overflow-hidden border-0 rounded-[var(--radius)] shadow-[var(--shadow-soft)] after:absolute after:z-[2] after:right-6 after:bottom-6 after:left-6 after:p-[18px_20px] after:rounded-2xl after:bg-[color-mix(in_srgb,var(--cmg-template-deep-surface)_67%,transparent)] after:content-['Welcome_to_Canada'] after:backdrop-blur-[12px] after:text-[var(--template-on-primary)] after:text-[20px] after:leading-[1.2] after:pointer-events-none reveal"><Image className="object-cover transition-transform duration-[800ms] ease-in-out group-hover:scale-[1.04]" src="/images/pages/toronto-skyline.webp" alt="Toronto skyline from a Canadian autumn park" fill sizes="(max-width: 880px) 100vw, 40vw" /></div>
+        <div className="guide-image group relative min-h-[610px] max-[880px]:!min-h-[400px] max-[620px]:!min-h-[350px] overflow-hidden border-0 rounded-[var(--radius)] shadow-[var(--shadow-soft)] after:absolute after:z-[2] after:right-6 after:bottom-6 after:left-6 after:p-[18px_20px] after:rounded-2xl after:bg-[color-mix(in_srgb,var(--cmg-template-deep-surface)_67%,transparent)] after:content-['Welcome_to_Canada'] after:backdrop-blur-[12px] after:text-[var(--template-on-primary)] after:text-[20px] after:leading-[1.2] after:pointer-events-none reveal"><Image className="object-cover transition-transform duration-[800ms] ease-in-out group-hover:scale-[1.04]" src="/images/pages/toronto-skyline.webp" alt="Toronto skyline from a Canadian autumn park" fill sizes="(max-width: 880px) 100vw, 40vw" style={{ objectPosition: getImageObjectPosition("/images/pages/toronto-skyline.webp") }} /></div>
           <div className="guide-copy">
             <SectionHeading eyebrow="Plan your pathway" title="Read the guides, then decide" lead="The service grid is designed for quick entry. These deeper hubs show how programs fit together—so you already know the right questions when you book." />
             <ol className="guide-list block m-0 p-0 list-none border-t border-[var(--border)]">

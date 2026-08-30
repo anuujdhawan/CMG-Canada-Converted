@@ -43,7 +43,7 @@ function DropdownPanel({ children, className, id }) {
       exit={{ opacity: 0, y: -6, scale: 0.97 }}
       transition={{ duration: 0.18, ease: EASE_OUT }}
       className={cn(
-        "absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white rounded-2xl p-5",
+        "site-header__dropdown-panel absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white rounded-2xl p-5",
         "border border-line shadow-[0_20px_60px_color-mix(in_srgb,var(--brand-navy)_12%,transparent),0_4px_16px_color-mix(in_srgb,var(--brand-navy)_5%,transparent)]",
         "max-h-[calc(100vh-120px)] overflow-y-auto",
         className
@@ -59,18 +59,21 @@ function DropdownPanel({ children, className, id }) {
 function MegaDropdown({ item, open, onClose }) {
   const columns = item.columns || [];
   const featured = item.featured;
-  const gridCols = `${columns.map(() => "minmax(250px, 1fr)").join(" ")}${featured ? " minmax(0, 290px)" : ""}`;
+  // Five-column menus need the full panel width for their links. Keep the
+  // featured card for the smaller menus so every track remains readable.
+  const showFeatured = featured && columns.length < 5;
+  const gridCols = `${columns.map(() => "minmax(0, 1fr)").join(" ")}${showFeatured ? " minmax(200px, 0.9fr)" : ""}`;
 
   return (
     <AnimatePresence>
       {open && (        <DropdownPanel
-          id={`${slugify(item.label)}-dropdown-panel`} className="w-max max-w-[92vw]">
-          <div className="grid items-start gap-x-6 gap-y-1 pt-3" style={{ gridTemplateColumns: gridCols }}>
+          id={`${slugify(item.label)}-dropdown-panel`}>
+          <div className="grid min-w-0 items-start gap-x-6 gap-y-1 pt-3" style={{ gridTemplateColumns: gridCols }}>
             {columns.map((col) => {
               const viewAll = col.items[0]?.href;
               return (
                 <div key={col.category} className="flex flex-col">
-                  <p className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-primary mb-3 pl-3.5">
+                  <p className="dropdown-category-title flex items-center gap-2 whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.08em] text-primary mb-3 pl-3.5">
                     <span aria-hidden className="h-1 w-3 rounded-full bg-accent" />
                     {col.category}
                   </p>
@@ -93,8 +96,8 @@ function MegaDropdown({ item, open, onClose }) {
               );
             })}
 
-            {featured && (
-              <div className="flex flex-col bg-navy rounded-xl p-6">
+            {showFeatured && (
+              <div className="flex min-w-0 flex-col bg-navy rounded-xl p-6">
                 <p className="text-[11px] font-bold uppercase tracking-widest text-white/60 mb-2">{featured.label}</p>
                 <p className="font-bold text-white text-lg mb-2 leading-snug">{featured.title}</p>
                 <p className="text-sm text-white/70 leading-relaxed mb-4 flex-1">{featured.desc}</p>
@@ -119,15 +122,15 @@ function DropdownLink({ link, onClose }) {
     <span className="group relative flex items-start gap-3 px-3.5 py-3 transition-all duration-150">
       {link.urgent && <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden />}
       <span className="flex min-w-0 flex-1 flex-col">
-        <span className="flex items-center gap-1.5 text-[15px] font-semibold text-ink leading-tight transition-colors">
-          <span className="truncate">{link.label}</span>
+        <span className="flex items-start gap-1.5 text-[14px] font-semibold text-ink leading-tight transition-colors">
+          <span className="dropdown-item-title min-w-0 flex-1">{link.label}</span>
           {link.urgent && (
             <span className="shrink-0 rounded-full bg-primary px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white border border-primary shadow-sm">
               Urgent
             </span>
           )}
         </span>
-        <span className="text-[13px] text-muted mt-1 leading-snug transition-colors">
+        <span className="dropdown-item-description text-[13px] text-muted mt-1 leading-snug transition-colors">
           {link.desc || link.description}
         </span>
       </span>

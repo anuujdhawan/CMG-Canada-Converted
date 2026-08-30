@@ -485,6 +485,28 @@ html[data-theme="dark"] .site-footer__disclaimer strong {
 .site-header__nav-shell .site-header__menu-button:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+.site-header__dropdown-panel {
+  width: min(87.5rem, calc(100vw - 2rem));
+  max-width: none;
+}
+body:has(.cmg-template-home) .site-header__dropdown-panel {
+  width: min(1220px, calc(100vw - 2rem));
+}
+.dropdown-item-title {
+  display: block;
+  height: 2.35rem;
+  overflow: hidden;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+.dropdown-item-description {
+  display: -webkit-box;
+  height: 2.25rem;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+}
 .cmg-mobile-menu nav a,
 .cmg-mobile-menu nav button {
   color: #f7f8fb !important;

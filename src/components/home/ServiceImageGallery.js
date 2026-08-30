@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getImageObjectPosition } from "@/lib/imagePresentation";
 
 const image = (file, label, alt) => ({
   src: `/images/pages/${file}.webp`,
@@ -205,6 +206,7 @@ export default function ServiceImageGallery({ page }) {
                 fill
                 sizes="(max-width: 620px) 100vw, (max-width: 880px) 50vw, 32vw"
                 className="service-image-gallery__image object-cover"
+                style={{ objectPosition: getImageObjectPosition(item.src) }}
               />
               <figcaption className="service-image-gallery__caption absolute z-[2] right-[17px] bottom-[15px] left-[17px] text-[var(--template-on-primary)]">
                 <div className="flex items-center gap-[10px]">
