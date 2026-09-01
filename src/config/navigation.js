@@ -9,32 +9,19 @@ import { getCmgMenu } from "@/lib/cmgPages";
  * the desktop and mobile menus stay in sync with the source content inventory.
  */
 
-const menuDescription = {
-  Immigrate: "Permanent-residence pathways, provincial programs and protection routes.",
-  Visit: "Visitor visas, eTA and temporary travel routes for Canada.",
-  "Work & Study": "Work permits, study permits and employer pathways in Canada.",
-  Sponsor: "Family reunification, sponsorship categories and requirements.",
-  Citizenship: "Citizenship grants, certificates, PR cards and travel documents.",
-  "Inadmissibility & Appeals": "Admissibility, enforcement, refusals and legal review routes.",
-  Tools: "Free calculators, checklists and practical guides to help you plan your next step.",
-  About: "Learn about Commonwealth Migration and how the team works.",
-};
-
 const sourceMenuItems = getCmgMenu().map((top) => ({
   label: top.label,
   shortLabel: top.label === "Inadmissibility & Appeals" ? "Appeals" : top.label,
   href: top.groups[0]?.pages[0]?.href || "/",
-  description: menuDescription[top.label] || "Explore the Commonwealth Migration Canada guide.",
   columns: top.groups.map((group) => ({
     category: group.label,
     items: group.pages.map((page) => ({
       label: page.label,
       href: page.href,
-      desc: "Official pathway guide with requirements, process and FAQs.",
     })),
   })),
   featured: top.groups[0]?.pages[0]
-    ? {
+      ? {
         label: "Explore this menu",
         title: top.groups[0].pages[0].label,
         desc: "Open the source-backed guide and compare the route with related options.",
@@ -46,29 +33,28 @@ const sourceMenuItems = getCmgMenu().map((top) => ({
 const TOOLS_MENU_ITEM = {
   label: "Tools",
   href: "/tools/canada-immigration-calculators",
-  description: menuDescription.Tools,
   columns: [
     {
       category: "Free self-service tools",
       items: [
-        { label: "CRS Calculator", href: "/tools/crs-calculator-canada", desc: "Estimate your Express Entry score." },
-        { label: "PNP Eligibility Check", href: "/tools/pnp-eligibility-canada", desc: "See which provincial streams may fit." },
-        { label: "NOC / Occupation Finder", href: "/tools/noc-finder-canada", desc: "Match your job to a NOC code." },
+        { label: "CRS Calculator", href: "/tools/crs-calculator-canada" },
+        { label: "PNP Eligibility Check", href: "/tools/pnp-eligibility-canada" },
+        { label: "NOC / Occupation Finder", href: "/tools/noc-finder-canada" },
       ],
     },
     {
       category: "Plan & prepare",
       items: [
-        { label: "Document Checklist", href: "/tools/document-checklist-canada", desc: "Know exactly what to prepare." },
-        { label: "Free Assessment", href: "/assessment/free-canada-immigration-assessment", desc: "Find your best pathway — free." },
+        { label: "Document Checklist", href: "/tools/document-checklist-canada" },
+        { label: "Free Assessment", href: "/assessment/free-canada-immigration-assessment" },
       ],
     },
     {
       category: "Learn & prepare",
       items: [
-        { label: "Blog", href: "/blog", desc: "Expert guides by licensed RCICs." },
-        { label: "Express Entry Guide", href: "/immigrate/express-entry", desc: "Understand the federal pathway." },
-        { label: "PNP Pathway Guide", href: "/immigrate/provincial-nominee-program-all-provinces-consolidated", desc: "Compare provincial options." },
+        { label: "Blog", href: "/blog" },
+        { label: "Express Entry Guide", href: "/immigrate/express-entry" },
+        { label: "PNP Pathway Guide", href: "/immigrate/provincial-nominee-program-all-provinces-consolidated" },
       ],
     },
   ],
@@ -83,22 +69,21 @@ const TOOLS_MENU_ITEM = {
 const ABOUT_MENU_ITEM = {
   label: "About",
   href: "/about/about-commonwealth-migration",
-  description: menuDescription.About,
   columns: [
     {
       category: "Our firm",
       items: [
-        { label: "About Us", href: "/about/about-commonwealth-migration", desc: "Learn about our CICC-regulated practice." },
-        { label: "Our Process", href: "/about/canada-immigration-consulting-process", desc: "See how we turn questions into a plan." },
-        { label: "Our Office", href: "/about/immigration-office-brampton-ontario", desc: "Brampton, Ontario — Canada-wide." },
+        { label: "About Us", href: "/about/about-commonwealth-migration" },
+        { label: "Our Process", href: "/about/canada-immigration-consulting-process" },
+        { label: "Our Office", href: "/about/immigration-office-brampton-ontario" },
       ],
     },
     {
       category: "Get in touch",
       items: [
-        { label: "Book Consultation", href: site.ctas.primary.href, desc: "Choose a time that suits you." },
-        { label: "Book Urgent Consultation", href: site.ctas.urgent.href, desc: "Refusal? Don’t wait.", urgent: true },
-        { label: "Make Payment", href: site.ctas.payment.href, desc: "Secure online payment." },
+        { label: "Book Consultation", href: site.ctas.primary.href },
+        { label: "Book Urgent Consultation", href: site.ctas.urgent.href, urgent: true },
+        { label: "Make Payment", href: site.ctas.payment.href },
       ],
     },
   ],
@@ -121,7 +106,7 @@ const navigationMenuItems = [
 // derived from it below so the two navs can never drift out of sync again.
 const headerNavItems = [{ label: "Home", href: "/" }, ...navigationMenuItems];
 
-// Mobile accordion items: same label/href/description as the desktop entry,
+// Mobile accordion items: same label/href as the desktop entry,
 // with `children` flattened straight out of that entry's own `columns` (or
 // omitted for the plain "Home" link) — whatever appears in the desktop
 // dropdown is exactly what appears in the mobile dropdown.
@@ -130,7 +115,6 @@ const mainNavItems = headerNavItems
   .map((item) => ({
     label: item.label,
     href: item.href,
-    description: item.description,
     urgent: !!item.standalone,
     children: item.columns.flatMap((column) => column.items),
   }));

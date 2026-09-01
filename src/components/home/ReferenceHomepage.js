@@ -17,7 +17,6 @@ import {
   ListChecks,
   Map,
   MapPin,
-  Plus,
   Search,
   ShieldCheck,
   Timer,
@@ -28,8 +27,10 @@ import { currentPagePath } from "@/config/pageRoutes";
 import { HERO_SLIDES } from "@/lib/heroSlides";
 import HeroCarousel from "./HeroCarousel";
 import HeroProofCardCarousel from "./HeroProofCardCarousel";
+import ConsultantProfileSection from "./ConsultantProfileSection";
 import LiveSuccessVideos from "./LiveSuccessVideos";
 import TemplateMotion from "./TemplateMotion";
+import FaqSection from "@/components/sections/FaqSection";
 import { getImageObjectPosition } from "@/lib/imagePresentation";
 
 const href = (path) => currentPagePath(path);
@@ -61,10 +62,11 @@ const GUIDE_ITEMS = [
   ["Employers · HGT", "Explore LMIA, GTS, recruitment and compliance through one employer journey.", "/work-and-study/lmia-and-employer-services-overview"],
 ];
 
-const FAQS = [
-  ["What does a licensed RCIC help with?", "A licensed Regulated Canadian Immigration Consultant can assess eligibility, develop strategy, prepare or review documentation, represent a client where authorized, and help respond when a file becomes complex."],
-  ["Which pathway should I review first?", "Begin with your goal: permanent residence, a provincial nomination, work, study, family sponsorship, temporary entry or a refusal response. The pathway cards above give you the right starting point."],
-  ["What is the best next step for my situation?", "Use the free tools to understand the broad route, then book a tailored review when your history, documents, employer situation or deadline requires a strategy built around your specific file."]];
+const HOMEPAGE_FAQS = [
+  { question: "What does a licensed RCIC help with?", answer: "A licensed Regulated Canadian Immigration Consultant can assess eligibility, develop strategy, prepare or review documentation, represent a client where authorized, and help respond when a file becomes complex." },
+  { question: "Which pathway should I review first?", answer: "Begin with your goal: permanent residence, a provincial nomination, work, study, family sponsorship, temporary entry or a refusal response. The pathway cards above give you the right starting point." },
+  { question: "What is the best next step for my situation?", answer: "Use the free tools to understand the broad route, then book a tailored review when your history, documents, employer situation or deadline requires a strategy built around your specific file." },
+];
 
 function CompassIcon(props) {
   return <Map {...props} />;
@@ -197,6 +199,8 @@ export default function ReferenceHomepage({ page, heroData }) {
         <div className="section-inner mx-auto w-[var(--container)] refusal-layout grid !grid-cols-[.54fr_1fr] max-[880px]:grid-cols-1 items-center gap-[55px]"><div className="refusal-copy reveal"><p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">When the file gets complicated</p><h2 className="max-w-[690px] !text-[clamp(32px,1.8rem+2.4vw,50px)] !leading-[1.02]">Refusals and procedural fairness are not the end of the line</h2><p className="!mt-5 !max-w-[570px] !text-[15px] !leading-[1.8]">Officers decide on the file they see. We isolate the stated concerns and build evidence-backed replies, reapplications or appeal paths.</p><div className="quote mt-7 border-l-0 border-t p-[20px_0_0] text-[24px] font-semibold italic leading-[1.25]">“A refusal is often a presentation problem. We fix the presentation.”</div></div><div className="refusal-grid grid grid-cols-2 max-[620px]:grid-cols-1 gap-[15px]">{[["Visitor visa refused", "Ties, funds or purpose—we strengthen the evidence and narrative.", MapPin], ["Study permit refused", "Study plan, finances or program fit—we identify and repair the gaps.", BookOpenCheck], ["Sponsorship refused", "Genuineness or eligibility—we organize the proof around the concern.", HeartHandshake], ["Procedural fairness", "Short deadlines require a focused, evidence-backed reply and clear ownership.", Timer]].map(([title, description, Icon], index) => <article className="refusal-card min-h-0 p-6 rounded-[18px] reveal bg-[color-mix(in_srgb,var(--template-on-primary)_7%,transparent)] border-[color-mix(in_srgb,var(--template-on-primary)_14%,transparent)]" key={title} style={{ "--delay": `${index * 60}ms` }}><IconBox icon={Icon} /><h3 className="!m-[9px_0_8px] !text-[19px] text-[var(--ink)] !font-extrabold !leading-[1.25] tracking-normal">{title}</h3><p className="!m-0 !text-[14px] !leading-[1.65]">{description}</p></article>)}</div></div>
       </section>
 
+      <ConsultantProfileSection />
+
       <LiveSuccessVideos />
 
       <section className="section relative z-[1] bg-[var(--secondary)] py-[104px] max-[880px]:py-[76px] max-[620px]:py-16 dark" id="employers"><div className="section-inner mx-auto w-[var(--container)] employer-layout grid grid-cols-[.82fr_1.18fr] max-[880px]:grid-cols-1 items-start gap-[54px]"><div className="employer-copy reveal"><p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">For Canadian employers</p><h2 className="max-w-[690px] !text-[clamp(32px,1.8rem+2.4vw,50px)] !leading-[1.02]">Canada’s employer immigration specialists</h2><p className="!mt-5 !max-w-[570px] !text-[15px] !leading-[1.8]">LMIA, Global Talent Stream, ESDC compliance and employer-side provincial representation—structured around defensible files and audit readiness.</p><div className="employer-stat block mt-[30px] border-l-4 border-[var(--primary)] p-6 bg-[color-mix(in_srgb,var(--template-on-primary)_6%,transparent)] text-[var(--muted)] text-[12px]"><strong className="block text-[var(--primary)] text-[34px] font-semibold leading-none max-[620px]:!text-[42px] max-[620px]:!leading-none" data-count="500">500<span>+</span></strong><span className="text-[color-mix(in_srgb,var(--template-on-primary)_65%,transparent)] text-[13px]">LMIAs filed across streams</span></div></div><div className="employer-grid grid grid-cols-2 max-[620px]:grid-cols-1 gap-[15px]">{[["High- & low-wage LMIA", "Full LMIA strategy and documentation support across wage levels.", BadgeDollarSign], ["Global Talent Stream", "Expedited employer pathways for eligible tech and in-demand roles.", Zap], ["Agricultural LMIA", "Seasonal and year-round agricultural stream preparation.", Wheat], ["ESDC compliance", "Audit readiness, employer obligations and TFWP integrity.", ShieldCheck]].map(([title, description, Icon], index) => <article className="employer-card min-h-0 p-6 rounded-[18px] reveal bg-[color-mix(in_srgb,var(--template-on-primary)_7%,transparent)] border-[color-mix(in_srgb,var(--template-on-primary)_14%,transparent)]" key={title} style={{ "--delay": `${index * 60}ms` }}><IconBox icon={Icon} /><h3 className="!m-[9px_0_8px] !text-[19px] text-[var(--ink)] !font-extrabold !leading-[1.25] tracking-normal">{title}</h3><p className="!m-0 !text-[14px] !leading-[1.65]">{description}</p></article>)}</div></div></section>
@@ -207,7 +211,7 @@ export default function ReferenceHomepage({ page, heroData }) {
 
       <section className="cta-section bg-[linear-gradient(125deg,var(--primary),color-mix(in_srgb,var(--primary)_38%,var(--cmg-dark-secondary)))] text-[var(--template-on-primary)] py-[72px] max-[620px]:!py-[12px_0_75px]" id="consultation"><div className="cta-shell flex items-center justify-between w-[var(--container)] gap-10 mx-auto p-0 rounded-none bg-transparent max-[620px]:!p-[31px_25px]"><div className="reveal"><h2 className="!text-[clamp(30px,1.8rem+2.2vw,46px)] !leading-none !text-[var(--template-on-primary)]">Not sure which pathway fits your profile?</h2><p className="!mt-[12px] max-w-[650px] !text-[16px] !text-[color-mix(in_srgb,var(--template-on-primary)_80%,transparent)]">Our licensed consultants will review your profile and map the clearest route to your goal—without pressure.</p></div><TemplateLink path={site.ctas.primary.href} className="btn reveal !flex-none !px-6 !py-[17px] max-[620px]:!w-full bg-[var(--template-on-primary)] text-[var(--cmg-dark-secondary)] hover:bg-[var(--cmg-dark-secondary)] hover:text-[var(--template-on-primary)]">Book a Free Consultation <ArrowUpRight width="19" height="19" aria-hidden="true" /></TemplateLink></div></section>
 
-      <section className="section relative z-[1] py-[104px] max-[880px]:py-[76px] max-[620px]:py-16"><div className="section-inner mx-auto w-[var(--container)] faq-shell grid grid-cols-[.68fr_1.32fr] max-[880px]:grid-cols-1 items-start gap-[60px] max-[880px]:gap-[35px]"><div className="faq-intro reveal"><p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">Clear answers, before you decide</p><h2 className="text-[40px] leading-none">Frequently asked questions</h2><p className="m-0 mt-[15px] max-w-[380px] text-[var(--muted)] text-[14px]">Open a question to understand the context behind the pathway and what to check next.</p></div><div className="faq-list border-t border-[var(--border)]">{FAQS.map(([question, answer], index) => <details className="faq-item group border-b border-[var(--border)] reveal" key={question} open={index === 0}><summary className="faq-item__summary flex items-center justify-between gap-5 py-[22px] cursor-pointer list-none text-[var(--ink)] text-[14px] font-extrabold leading-[1.3]">{question}<span className="faq-item__toggle inline w-auto h-auto flex-none border-0 rounded-none text-[var(--primary)] transition-transform duration-[300ms] ease-[ease] group-open:rotate-45"><Plus width={20} height={20} aria-hidden="true" /></span></summary><div className="faq-item__answer grid grid-rows-[0fr] p-0 transition-[grid-template-rows] duration-[350ms] ease-[ease] group-open:grid-rows-[1fr]"><p className="min-h-0 overflow-hidden m-0 pr-[50px] max-[620px]:pr-0 mb-[22px] text-[var(--muted)] text-[13px] leading-[1.75]">{answer}</p></div></details>)}</div></div></section>
+      <FaqSection faqs={HOMEPAGE_FAQS} />
 
     </div>
   );

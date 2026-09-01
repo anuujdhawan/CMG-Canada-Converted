@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Calculator, FileCheck2, Plus, ShieldCheck, Target } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Calculator, FileCheck2, ShieldCheck, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { currentPagePath } from "@/config/pageRoutes";
 import { site } from "@/config/site";
@@ -8,10 +8,12 @@ import { getPageFaqs } from "@/lib/faqs";
 import { Block, parseBlocks, RelatedPagesList, rebrand } from "@/components/templates/MarkdownBlocks";
 import HeroCarousel from "./HeroCarousel";
 import HeroProofCardCarousel from "./HeroProofCardCarousel";
+import ConsultantProfileSection from "./ConsultantProfileSection";
 import ServiceImageGallery from "./ServiceImageGallery";
 import ServiceContentImageFrame, { getServiceContentImages } from "./ServiceContentImageFrame";
 import TemplateMotion from "./TemplateMotion";
 import LiveSuccessVideos from "./LiveSuccessVideos";
+import FaqSection from "@/components/sections/FaqSection";
 
 const href = (path) => currentPagePath(path);
 
@@ -78,32 +80,13 @@ function isFaqSection(section) {
 
 function ServiceFaqSection({ page }) {
   const faqs = getPageFaqs(page);
-  if (faqs.length === 0) return null;
-
-  return (
-    <section className="section relative z-[1] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16 tool-faq-section" id="faq" aria-labelledby="tool-faq-title">
-      <div className="section-inner mx-auto w-[var(--container)] faq-shell grid grid-cols-[.68fr_1.32fr] max-[880px]:grid-cols-1 items-start gap-[60px] max-[880px]:gap-[35px]">
-        <div className="faq-intro reveal">
-          <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">Clear answers, before you decide</p>
-          <h2 id="tool-faq-title" className="!max-w-[760px] !text-[40px] !leading-none">Frequently asked questions</h2>
-          <p className="!m-0 !mt-[15px] !max-w-[380px] !text-[var(--muted)] !text-[14px] !leading-[1.65]">Open a question to understand what the tool can show, what it cannot decide and what to check next.</p>
-        </div>
-        <div className="faq-list border-t border-[var(--border)]">
-          {faqs.map((faq, index) => (
-            <details className="faq-item group border-b border-[var(--border)] reveal" key={faq.question} open={index === 0}>
-              <summary className="faq-item__summary flex items-center justify-between gap-5 py-[22px] cursor-pointer list-none text-[var(--ink)] text-[14px] font-extrabold leading-[1.3]">{faq.question}<span className="faq-item__toggle inline w-auto h-auto flex-none border-0 rounded-none text-[var(--primary)] transition-transform duration-[300ms] ease-[ease]"><Plus width={20} height={20} aria-hidden="true" /></span></summary>
-              <div className="faq-item__answer grid grid-rows-[0fr] p-0 transition-[grid-template-rows] duration-[350ms] ease-[ease] group-open:grid-rows-[1fr]"><p className="min-h-0 overflow-hidden !m-0 !pr-[50px] !mb-[22px] !pb-[22px] !text-[var(--muted)] !text-[13px] !leading-[1.75]">{faq.answer}</p></div>
-            </details>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  return <FaqSection faqs={faqs} description="Open a question to understand what the tool can show, what it cannot decide and what to check next." className="tool-faq-section" />;
 }
 
 export default function ReferenceServicePage({ page, children, interactivePosition = "bottom", interactiveHeading }) {
   const blocks = page.contentBlocks || parseBlocks(page.content || "");
   const isToolPage = page.path.startsWith("/tools/") || page.path === "/assessment/free-canada-immigration-assessment";
+  const isAboutOverviewPage = page.path === "/about/about-commonwealth-migration";
   const lead = getLead(page, blocks);
   const title = rebrand(page.h1);
   const { leading, sections: allSections } = groupContentBlocks(blocks);
@@ -190,6 +173,8 @@ export default function ReferenceServicePage({ page, children, interactivePositi
           </article>
         </div>
       </section>
+
+      {isAboutOverviewPage && <ConsultantProfileSection id="vishal-arora-about" />}
 
       {isToolPage && <ServiceFaqSection page={page} />}
 

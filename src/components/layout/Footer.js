@@ -136,8 +136,8 @@ export default function Footer() {
                       <MapPin size={13} aria-hidden />
                     </span>
                     <span className="grid gap-[.12rem] text-[var(--brand-navy-dark)]">
-                      <strong className="text-[.72rem] font-extrabold leading-[1.25]">{site.name} ({site.shortName})</strong>
-                      <small className="text-[var(--brand-primary-dark)] text-[.6rem] font-extrabold tracking-[.08em] leading-[1.2] uppercase">Parent Company · Canada</small>
+                      <strong className="text-[.72rem] font-extrabold leading-[1.25]">{site.name} </strong>
+                      <small className="text-[var(--brand-primary-dark)] text-[.6rem] font-extrabold tracking-[.08em] leading-[1.2] uppercase">Canada</small>
                     </span>
                   </span>
                   <span className="site-footer__office-address grid gap-[.1rem] pl-[2.2rem]">
@@ -156,8 +156,8 @@ export default function Footer() {
                       <MapPin size={13} aria-hidden />
                     </span>
                     <span className="grid gap-[.12rem] text-[var(--brand-navy-dark)]">
-                      <strong className="text-[.72rem] font-extrabold leading-[1.25]">{site.sisterConcern.name} ({site.sisterConcern.shortName})</strong>
-                      <small className="text-[var(--brand-gold)] text-[.6rem] font-extrabold tracking-[.08em] leading-[1.2] uppercase">Sister Concern · Dubai</small>
+                      <strong className="text-[.72rem] font-extrabold leading-[1.25]">{site.sisterConcern.name} </strong>
+                      <small className="text-[var(--brand-gold)] text-[.6rem] font-extrabold tracking-[.08em] leading-[1.2] uppercase">Dubai</small>
                     </span>
                   </span>
                   <span className="site-footer__office-address grid gap-[.1rem] pl-[2.2rem]">{site.sisterConcern.address}</span>

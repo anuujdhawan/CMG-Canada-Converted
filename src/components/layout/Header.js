@@ -100,7 +100,9 @@ function MegaDropdown({ item, open, onClose }) {
               <div className="flex min-w-0 flex-col bg-navy rounded-xl p-6">
                 <p className="text-[11px] font-bold uppercase tracking-widest text-white/60 mb-2">{featured.label}</p>
                 <p className="font-bold text-white text-lg mb-2 leading-snug">{featured.title}</p>
-                <p className="text-sm text-white/70 leading-relaxed mb-4 flex-1">{featured.desc}</p>
+                <p className="mb-4 flex-1 text-sm leading-relaxed text-white/70">
+                  {featured.desc || "Open the source-backed guide and compare the route with related options."}
+                </p>
                 <Link
                   href={featured.href}
                   onClick={onClose}
@@ -129,9 +131,6 @@ function DropdownLink({ link, onClose }) {
               Urgent
             </span>
           )}
-        </span>
-        <span className="dropdown-item-description text-[13px] text-muted mt-1 leading-snug transition-colors">
-          {link.desc || link.description}
         </span>
       </span>
       <ArrowRight

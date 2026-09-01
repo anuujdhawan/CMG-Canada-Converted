@@ -45,6 +45,20 @@
   --shadow-card: var(--brand-shadow-card);
   --shadow-banner: var(--brand-shadow-banner);
   --shadow-dropdown: var(--brand-shadow-dropdown);
+  --color-template-primary: var(--primary);
+  --color-template-accent: var(--accent);
+  --color-template-surface: var(--surface);
+  --color-template-surface-alt: var(--surface-alt);
+  --color-template-ink: var(--ink);
+  --color-template-muted: var(--muted);
+  --color-template-border: var(--border);
+  --color-template-on-primary: var(--template-on-primary);
+  --color-template-primary-surface-5: color-mix(in srgb, var(--primary) 5%, var(--surface));
+  --color-template-primary-surface-6: color-mix(in srgb, var(--primary) 6%, var(--surface));
+  --color-template-primary-transparent-11: color-mix(in srgb, var(--primary) 11%, transparent);
+  --color-template-primary-transparent-17: color-mix(in srgb, var(--primary) 17%, transparent);
+  --background-image-template-profile-line: linear-gradient(90deg, var(--primary), var(--accent));
+  --shadow-template-soft: var(--shadow-soft);
 }
 @layer base {
   * {
@@ -494,18 +508,8 @@ body:has(.cmg-template-home) .site-header__dropdown-panel {
 }
 .dropdown-item-title {
   display: block;
-  height: 2.35rem;
-  overflow: hidden;
   white-space: normal;
   overflow-wrap: break-word;
-}
-.dropdown-item-description {
-  display: -webkit-box;
-  height: 2.25rem;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  line-clamp: 2;
-  -webkit-line-clamp: 2;
 }
 .cmg-mobile-menu nav a,
 .cmg-mobile-menu nav button {
@@ -629,6 +633,15 @@ html[data-theme="light"] .cmg-template-home {
   --shadow-soft: 0 14px 38px color-mix(in srgb, var(--cmg-light-ink) 6%, transparent);
 }
 .cmg-template-home a { color: inherit; text-decoration: none; }
+.cmg-template-home .cta-section a.btn {
+  color: var(--cmg-dark-secondary);
+  -webkit-text-fill-color: var(--cmg-dark-secondary);
+}
+.cmg-template-home .cta-section a.btn:hover,
+.cmg-template-home .cta-section a.btn:focus-visible {
+  color: var(--template-on-primary);
+  -webkit-text-fill-color: var(--template-on-primary);
+}
 .cmg-template-home h1, .cmg-template-home h2, .cmg-template-home h3 { margin: 0; color: var(--ink); font-weight: 600; letter-spacing: -.02em; line-height: 1.05; }
 .cmg-template-home h2 { font-size: clamp(30px, 1.7rem + 2.4vw, 46px); }
 .cmg-template-home p {
@@ -758,6 +771,9 @@ html[data-theme="light"] .cmg-template-home {
 .cmg-template-home .faq-item__answer p {
   padding: 16px 0 24px;
   color: color-mix(in srgb, var(--template-on-primary) 78%, transparent) !important;
+}
+html[data-theme="light"] .cmg-template-home .faq-item__answer p {
+  color: var(--cmg-light-on-primary, #ffffff) !important;
 }
 @media (max-width: 620px) {
   .cmg-template-home .faq-item__summary { min-height: 78px; padding: 20px 18px; }
@@ -1756,17 +1772,17 @@ input[type="submit"] {
     bottom: 10.75rem !important;
   }
 }
-/* Keep the closed floating controls in one left-aligned column at every
+/* Keep the closed floating controls in one right-aligned column at every
    viewport size. The vertical offsets above remain intentionally unchanged. */
 @media (min-width: 1120px) {
   .cmg-floating-bubble:not(.cmg-chatbot-root--open) {
-    right: auto !important;
-    left: 1.25rem !important;
+    right: 1.25rem !important;
+    left: auto !important;
   }
 }
 @media (max-width: 1119.98px) {
   .cmg-floating-bubble:not(.cmg-chatbot-root--open) {
-    right: auto !important;
-    left: 0.75rem !important;
+    right: 0.75rem !important;
+    left: auto !important;
   }
 }
