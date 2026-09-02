@@ -31,7 +31,9 @@ export async function POST(request) {
     return NextResponse.json({ error: "Enter a valid amount between $1 and $50,000 CAD." }, { status: 400 });
   }
 
-  const origin = request.headers.get("origin") || site.url || "http://localhost:3000";
+  // Never build Stripe return URLs from the request's Origin header. That
+  // header is supplied by the browser and can be forged by direct callers.
+  const origin = new URL(site.url || "http://localhost:3000").origin;
 
   try {
     const session = await stripe.checkout.sessions.create({
