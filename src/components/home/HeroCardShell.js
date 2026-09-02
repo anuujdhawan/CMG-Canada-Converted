@@ -3,7 +3,7 @@ const HERO_CARD_PADDING_CLASS_NAME = "!p-[22px_24px_20px] max-[880px]:!p-[20px_2
 
 export default function HeroCardShell({ ariaLabel, children, className = "", flush = false }) {
   return (
-    <article className={`${HERO_CARD_CLASS_NAME} ${flush ? "!p-0 max-[880px]:!p-0 max-[480px]:!p-0" : HERO_CARD_PADDING_CLASS_NAME} ${className}`.trim()} aria-label={ariaLabel}>
+    <article style={{ "--template-on-primary": "var(--ink)" }} className={`${HERO_CARD_CLASS_NAME} ${flush ? "!p-0 max-[880px]:!p-0 max-[480px]:!p-0" : HERO_CARD_PADDING_CLASS_NAME} ${className}`.trim()} aria-label={ariaLabel}>
       {children}
     </article>
   );

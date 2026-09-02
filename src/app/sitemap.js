@@ -11,7 +11,7 @@ export default function sitemap() {
 
   const base = site.url.replace(/\/$/, "");
 
-  return getAllPages()
+  const pages = getAllPages()
     .map((page) => {
       const lastModified = page.meta.lastModified ? new Date(page.meta.lastModified) : new Date();
       return {
@@ -20,6 +20,15 @@ export default function sitemap() {
         changeFrequency: page.path.startsWith("/blog/") ? "monthly" : "weekly",
         priority: page.meta.priority || 0.7,
       };
-    })
+    });
+
+  pages.push({
+    url: `${base}/immigration-draws`,
+    lastModified: new Date(),
+    changeFrequency: "daily",
+    priority: 0.8,
+  });
+
+  return pages
     .sort((a, b) => b.priority - a.priority || a.url.localeCompare(b.url));
 }

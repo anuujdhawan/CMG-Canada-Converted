@@ -331,11 +331,19 @@ html[data-theme="dark"] .site-footer__office:hover {
 html[data-theme="dark"] .site-footer__office-heading {
   color: #ffffff;
 }
+html[data-theme="dark"] .site-footer__office-heading strong {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
 html[data-theme="dark"] .site-footer__office-heading small {
   color: var(--brand-primary-light);
 }
 html[data-theme="dark"] .site-footer__office--sister .site-footer__office-heading small {
   color: var(--brand-gold);
+}
+html[data-theme="dark"] .site-footer__office-address {
+  color: rgba(255,255,255,0.82) !important;
+  -webkit-text-fill-color: rgba(255,255,255,0.82) !important;
 }
 html[data-theme="dark"] .site-footer__social-link {
   border-color: rgba(255,255,255,0.14);
@@ -944,6 +952,21 @@ html[data-theme="light"] .cmg-template-home .hero-visual .visual-card {
 html[data-theme="light"] .cmg-template-home .hero-visual .visual-card h2 { color: var(--cmg-light-ink); }
 html[data-theme="light"] .cmg-template-home .hero-visual .visual-card > p { color: var(--cmg-light-muted); }
 html[data-theme="light"] .cmg-template-home .hero-visual .mini-badge { color: var(--cmg-light-accent); background: color-mix(in srgb, var(--cmg-light-primary) 8%, transparent); border-color: color-mix(in srgb, var(--cmg-light-primary) 14%, transparent); }
+/* HeroCardShell uses important text utilities for the dark glass treatment.
+   Re-assert readable ink colors in light mode after those utilities resolve. */
+html[data-theme="light"] .cmg-template-home .hero-visual .visual-card h2,
+html[data-theme="light"] .cmg-template-home .hero-visual .visual-card strong { color: var(--cmg-light-ink) !important; -webkit-text-fill-color: var(--cmg-light-ink) !important; }
+html[data-theme="light"] .cmg-template-home .hero-visual .visual-card p,
+html[data-theme="light"] .cmg-template-home .hero-visual .visual-card li,
+html[data-theme="light"] .cmg-template-home .hero-visual .visual-card .visual-card__footer,
+html[data-theme="light"] .cmg-template-home .hero-visual .visual-card .visual-card__footer > span { color: var(--cmg-light-muted) !important; -webkit-text-fill-color: var(--cmg-light-muted) !important; }
+html[data-theme="light"] .cmg-template-home .hero-visual .visual-card .visual-handles li,
+html[data-theme="light"] .cmg-template-home .hero-visual .visual-card .visual-record__row strong,
+html[data-theme="light"] .cmg-template-home .hero-visual .visual-card .hero-draw-card strong { color: var(--cmg-light-ink) !important; -webkit-text-fill-color: var(--cmg-light-ink) !important; }
+html[data-theme="light"] .cmg-template-home .hero-visual .hero-draw-card p,
+html[data-theme="light"] .cmg-template-home .hero-visual .hero-draw-card span,
+html[data-theme="light"] .cmg-template-home .hero-visual .hero-draw-card a { color: var(--cmg-light-ink) !important; -webkit-text-fill-color: var(--cmg-light-ink) !important; }
+html[data-theme="light"] .cmg-template-home .hero-visual .hero-draw-card svg { color: var(--cmg-light-primary) !important; }
 html[data-theme="light"] .cmg-template-home .hero-profile-card__body { color: var(--cmg-light-ink); }
 html[data-theme="light"] .cmg-template-home .hero-profile-card__body h2,
 html[data-theme="light"] .cmg-template-home .hero-profile-card__body p,
@@ -1778,6 +1801,17 @@ input[type="submit"] {
   .cmg-floating-bubble:not(.cmg-chatbot-root--open) {
     right: 1.25rem !important;
     left: auto !important;
+  }
+  /* Desktop keeps two compact actions in the stack: chat above WhatsApp.
+     The direct-call action remains available on touch/tablet layouts. */
+  .cmg-call-bubble {
+    display: none !important;
+  }
+  .cmg-floating-bubble--whatsapp:not(.cmg-chatbot-root--open) {
+    bottom: 1.25rem !important;
+  }
+  .cmg-floating-bubble--chat:not(.cmg-chatbot-root--open) {
+    bottom: 5rem !important;
   }
 }
 @media (max-width: 1119.98px) {
