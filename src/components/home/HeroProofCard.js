@@ -15,7 +15,7 @@ const HANDLED_FILES = [
 
 export default function HeroProofCard({ ariaLabel = "Track record and files we handle" }) {
   return (
-    <HeroCardShell ariaLabel={ariaLabel} className="hero-proof-card -translate-y-[50%]">
+    <HeroCardShell ariaLabel={ariaLabel} className="hero-proof-card -translate-y-[50%] max-[880px]:!translate-y-0">
       <div className="mini-badges flex flex-wrap items-center gap-2">
         <Link href={CICC_REGISTER_URL} target="_blank" rel="noopener noreferrer" className="mini-badge inline-flex items-center gap-[7px] rounded-full border border-[color-mix(in_srgb,var(--template-on-primary)_13%,transparent)] bg-[color-mix(in_srgb,var(--template-on-primary)_9%,transparent)] p-[7px_11px_7px_9px] text-[color-mix(in_srgb,var(--template-on-primary)_92%,transparent)] text-[11px] font-extrabold leading-[1.65] tracking-[.07em] uppercase backdrop-blur-[10px] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_7%,transparent)]">
           <ShieldCheck className="flex-none text-[var(--cmg-template-primary-bright)] drop-shadow-[0_1px_8px_color-mix(in_srgb,var(--template-primary)_42%,transparent)]" width={15} height={15} aria-hidden="true" /> CICC-regulated

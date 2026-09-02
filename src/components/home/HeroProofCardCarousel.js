@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import ExpressEntryDrawCard from "./ExpressEntryDrawCard";
 import HeroProofCard from "./HeroProofCard";
 
-const AUTOPLAY_MS = 3800;
+const AUTOPLAY_MS = 5000;
 
 export default function HeroProofCardCarousel({ ariaLabel = "Commonwealth Migration Group highlights" }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -24,10 +24,10 @@ export default function HeroProofCardCarousel({ ariaLabel = "Commonwealth Migrat
       aria-roledescription="carousel"
       aria-label={ariaLabel}
     >
-      <div className="absolute inset-0" aria-live="polite">
+      <div className="absolute inset-0 max-[880px]:static max-[880px]:grid" aria-live="polite">
         {[HeroProofCard, ExpressEntryDrawCard].map((Card, index) => (
           <div
-            className={`absolute inset-0 transition-[opacity,transform] duration-700 ease-[cubic-bezier(.2,.8,.2,1)] ${index === activeIndex ? "z-[1] translate-x-0 opacity-100" : "pointer-events-none translate-x-3 opacity-0"}`}
+            className={`absolute inset-0 max-[880px]:static max-[880px]:[grid-area:1/1] transition-transform duration-[850ms] ease-[cubic-bezier(.2,.8,.2,1)] ${index === activeIndex ? "z-[1] translate-x-0 opacity-100" : "pointer-events-none translate-x-3 opacity-0"}`}
             aria-hidden={index !== activeIndex}
             key={Card.name}
           >
