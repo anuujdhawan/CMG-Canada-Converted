@@ -2,6 +2,8 @@ import { site } from "@/config/site";
 import { currentPagePath } from "@/config/pageRoutes";
 import { getCmgMenu } from "@/lib/cmgPages";
 
+const DRAW_PAGE_LINK = { label: "Express Entry Draws", href: "/immigration-draws" };
+
 /**
  * Navigation structure — Commonwealth Migration Canada.
  *
@@ -52,6 +54,7 @@ const TOOLS_MENU_ITEM = {
     {
       category: "Learn & prepare",
       items: [
+        DRAW_PAGE_LINK,
         { label: "Blog", href: "/blog" },
         { label: "Express Entry Guide", href: "/immigrate/express-entry" },
         { label: "PNP Pathway Guide", href: "/immigrate/provincial-nominee-program-all-provinces-consolidated" },
@@ -129,7 +132,10 @@ const rawNavigation = {
   footer: [
     ...sourceMenuItems.slice(0, 4).map((item) => ({
       title: item.label,
-      links: item.columns.flatMap((column) => column.items).slice(0, 4),
+      links: [
+        ...(item.label === "Immigrate" ? [DRAW_PAGE_LINK] : []),
+        ...item.columns.flatMap((column) => column.items).slice(0, 4),
+      ],
     })),
     { title: "Contact", links: [
       { label: "Book consultation", href: site.ctas.primary.href },

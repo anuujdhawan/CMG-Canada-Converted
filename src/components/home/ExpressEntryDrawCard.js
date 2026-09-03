@@ -80,11 +80,14 @@ export default function ExpressEntryDrawCard() {
 
   return (
     <HeroCardShell ariaLabel="Latest official Express Entry draw" className="hero-draw-card -translate-y-[50%] max-[880px]:!translate-y-0">
-      <div className="flex items-center justify-between gap-3">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <span className="inline-flex items-center gap-[7px] rounded-full border border-[color-mix(in_srgb,var(--template-on-primary)_13%,transparent)] bg-[color-mix(in_srgb,var(--template-on-primary)_9%,transparent)] px-[10px] py-[7px] text-[10px] font-extrabold uppercase leading-[1.5] tracking-[.08em] text-[color-mix(in_srgb,var(--template-on-primary)_92%,transparent)] backdrop-blur-[10px]">
           <ShieldCheck className="text-[var(--cmg-template-primary-bright)]" width={15} height={15} aria-hidden="true" /> Official IRCC data
         </span>
-        <span className="text-[10px] font-bold uppercase tracking-[.1em] text-[color-mix(in_srgb,var(--template-on-primary)_54%,transparent)]">Live feed</span>
+        <span className="hero-live-feed inline-flex shrink-0 items-center gap-2 rounded-full border border-[color-mix(in_srgb,#65f28d_30%,transparent)] bg-[color-mix(in_srgb,#65f28d_9%,transparent)] px-[10px] py-[7px] text-[10px] font-bold leading-[1.5] tracking-[.08em] text-[color-mix(in_srgb,var(--template-on-primary)_76%,transparent)] backdrop-blur-[10px]" role="status" aria-label="Live feed, updated now">
+          <span className="hero-live-feed__dot" aria-hidden="true" />
+          LIVE FEED · UPDATED NOW
+        </span>
       </div>
 
       <h2 className="!mt-4 !max-w-none !text-[clamp(25px,2.2vw,31px)] !leading-[1.15] !tracking-[-0.028em] text-[var(--template-on-primary)] [text-wrap:balance] after:block after:mt-3 after:h-0.5 after:w-9 after:rounded-full after:bg-[linear-gradient(90deg,var(--primary),transparent)] after:content-[''] after:opacity-[.95]">Latest Express Entry draw</h2>

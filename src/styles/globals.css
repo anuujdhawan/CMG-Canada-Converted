@@ -878,6 +878,31 @@ html[data-theme="light"] .cmg-template-home .faq-item__answer p {
 .cmg-template-home .service-image-gallery__item--featured:focus-visible .service-image-gallery__title { font-size: 24px; }
 
 @keyframes cmg-template-ambient { to { transform: translate3d(35px, 25px, 0) scale(1.14); } }
+.hero-live-feed__dot {
+  position: relative;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  flex: none;
+  border-radius: 999px;
+  background: #65f28d;
+  box-shadow: 0 0 0 3px rgba(101, 242, 141, 0.12), 0 0 11px rgba(101, 242, 141, 0.78);
+}
+.hero-live-feed__dot::after {
+  position: absolute;
+  inset: -3px;
+  border: 1px solid rgba(101, 242, 141, 0.5);
+  border-radius: inherit;
+  content: "";
+  animation: cmg-live-feed-pulse 2.2s ease-out infinite;
+}
+@keyframes cmg-live-feed-pulse {
+  0% { opacity: 0.65; transform: scale(0.8); }
+  65%, 100% { opacity: 0; transform: scale(1.7); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-live-feed__dot::after { animation: none; opacity: 0.35; transform: none; }
+}
 @media (max-width: 1120px) {
   body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav a,
   body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav button { font-size: 11px; }
