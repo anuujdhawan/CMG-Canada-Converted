@@ -22,7 +22,14 @@ const sourceMenuItems = getCmgMenu().map((top) => ({
       href: page.href,
     })),
   })),
-  featured: top.groups[0]?.pages[0]
+  featured: top.label === "Immigrate"
+    ? {
+        label: "Official IRCC data",
+        title: "Express Entry Draws",
+        desc: "Track the latest invitation rounds, CRS cutoffs and program updates.",
+        href: DRAW_PAGE_LINK.href,
+      }
+    : top.groups[0]?.pages[0]
       ? {
         label: "Explore this menu",
         title: top.groups[0].pages[0].label,

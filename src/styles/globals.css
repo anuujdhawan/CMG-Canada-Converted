@@ -1081,9 +1081,9 @@ body:has(.cmg-template-home) .site-header__nav-shell [id$="-dropdown-panel"] a.d
   display: inline-flex !important;
   align-items: center;
   gap: 0.32rem;
-  margin-top: 0.85rem !important;
-  margin-left: 0.35rem;
-  padding: 0.38rem 0.68rem;
+  margin-top: 0.6rem !important;
+  margin-left: 0.25rem;
+  padding: 0.32rem 0.58rem;
   border-radius: 999px;
   border: 1px solid color-mix(in srgb, var(--brand-primary) 18%, transparent) !important;
   background: color-mix(in srgb, var(--brand-primary) 7%, transparent) !important;

@@ -43,7 +43,7 @@ function DropdownPanel({ children, className, id }) {
       exit={{ opacity: 0, y: -6, scale: 0.97 }}
       transition={{ duration: 0.18, ease: EASE_OUT }}
       className={cn(
-        "site-header__dropdown-panel absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white rounded-2xl p-5",
+        "site-header__dropdown-panel absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white rounded-2xl p-4",
         "border border-line shadow-[0_20px_60px_color-mix(in_srgb,var(--brand-navy)_12%,transparent),0_4px_16px_color-mix(in_srgb,var(--brand-navy)_5%,transparent)]",
         "max-h-[calc(100vh-120px)] overflow-y-auto",
         className
@@ -57,10 +57,12 @@ function DropdownPanel({ children, className, id }) {
 
 /* ─── CMG-style mega dropdown (grouped columns + featured card) ─────── */
 function MegaDropdown({ item, open, onClose }) {
-  const columns = item.columns || [];
+  const sourceColumns = item.columns || [];
+  const relocatedColumn = sourceColumns.find((column) => column.category === "Caregivers");
+  const columns = sourceColumns.filter((column) => column !== relocatedColumn);
   const featured = item.featured;
-  // Five-column menus need the full panel width for their links. Keep the
-  // featured card for the smaller menus so every track remains readable.
+  // Caregivers sits below Other PR Pathways in the Immigrate menu, leaving
+  // room for its featured Express Entry Draws card in the fifth column.
   const showFeatured = featured && columns.length < 5;
   const gridCols = `${columns.map(() => "minmax(0, 1fr)").join(" ")}${showFeatured ? " minmax(200px, 0.9fr)" : ""}`;
 
@@ -68,12 +70,12 @@ function MegaDropdown({ item, open, onClose }) {
     <AnimatePresence>
       {open && (        <DropdownPanel
           id={`${slugify(item.label)}-dropdown-panel`}>
-          <div className="grid min-w-0 items-start gap-x-6 gap-y-1 pt-3" style={{ gridTemplateColumns: gridCols }}>
+          <div className="grid min-w-0 items-start gap-x-5 gap-y-1 pt-2" style={{ gridTemplateColumns: gridCols }}>
             {columns.map((col) => {
               const viewAll = col.items[0]?.href;
               return (
                 <div key={col.category} className="flex flex-col">
-                  <p className="dropdown-category-title flex items-center gap-2 whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.08em] text-primary mb-3 pl-3.5">
+                  <p className="dropdown-category-title flex items-center gap-1.5 whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.08em] text-primary mb-2.5 pl-2.5">
                     <span aria-hidden className="h-1 w-3 rounded-full bg-accent" />
                     {col.category}
                   </p>
@@ -86,11 +88,34 @@ function MegaDropdown({ item, open, onClose }) {
                     <Link
                       href={viewAll}
                       onClick={onClose}
-                      className="dropdown-view-all group mt-2 flex items-center gap-1 pl-3.5 text-[12.5px] font-bold text-accent-dark hover:text-primary transition-colors no-underline after:hidden"
+                      className="dropdown-view-all group mt-1.5 flex items-center gap-1 pl-2.5 text-[11.5px] font-bold text-accent-dark hover:text-primary transition-colors no-underline after:hidden"
                     >
                       View all
                       <ArrowRight aria-hidden className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5" />
                     </Link>
+                  )}
+                  {relocatedColumn && col.category === "Other PR Pathways" && (
+                    <div className="mt-5 border-t border-line/60 pt-4">
+                      <p className="dropdown-category-title flex items-center gap-1.5 whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.08em] text-primary mb-2.5 pl-2.5">
+                        <span aria-hidden className="h-1 w-3 rounded-full bg-accent" />
+                        {relocatedColumn.category}
+                      </p>
+                      <div className="space-y-0.5">
+                        {relocatedColumn.items.map((link) => (
+                          <DropdownLink key={link.href + link.label} link={link} onClose={onClose} />
+                        ))}
+                      </div>
+                      {relocatedColumn.items[0]?.href && (
+                        <Link
+                          href={relocatedColumn.items[0].href}
+                          onClick={onClose}
+                          className="dropdown-view-all group mt-1.5 flex items-center gap-1 pl-2.5 text-[11.5px] font-bold text-accent-dark hover:text-primary transition-colors no-underline after:hidden"
+                        >
+                          View all
+                          <ArrowRight aria-hidden className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5" />
+                        </Link>
+                      )}
+                    </div>
                   )}
                 </div>
               );
@@ -121,13 +146,13 @@ function MegaDropdown({ item, open, onClose }) {
 
 function DropdownLink({ link, onClose }) {
   const content = (
-    <span className="group relative flex items-start gap-3 px-3.5 py-3 transition-all duration-150">
+    <span className="group relative flex items-start gap-2.5 px-2.5 py-2 transition-all duration-150">
       {link.urgent && <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden />}
       <span className="flex min-w-0 flex-1 flex-col">
-        <span className="flex items-start gap-1.5 text-[14px] font-semibold text-ink leading-tight transition-colors">
+        <span className="flex items-start gap-1.5 text-[13px] font-semibold text-ink leading-tight transition-colors">
           <span className="dropdown-item-title min-w-0 flex-1">{link.label}</span>
           {link.urgent && (
-            <span className="shrink-0 rounded-full bg-primary px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white border border-primary shadow-sm">
+            <span className="shrink-0 rounded-full bg-primary px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white border border-primary shadow-sm">
               Urgent
             </span>
           )}
@@ -135,7 +160,7 @@ function DropdownLink({ link, onClose }) {
       </span>
       <ArrowRight
         aria-hidden
-        className="mt-1 h-3.5 w-3.5 shrink-0 -translate-x-1 opacity-0 text-primary transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100"
+        className="mt-0.5 h-3 w-3 shrink-0 -translate-x-1 opacity-0 text-primary transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100"
       />
     </span>
   );
