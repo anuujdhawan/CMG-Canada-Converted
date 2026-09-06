@@ -81,7 +81,10 @@ export function toCrmLead(type, body) {
     email: clean(body.email, 160).toLowerCase(),
     phone: clean(body.phone, 80),
     Branch: valueOrUndefined(process.env.CRM_BRANCH || "Canada", 80),
-    ResidentCountry: valueOrUndefined(body.country || body.residentCountry, 120),
+    ResidentCountry: valueOrUndefined(
+      body.country || body.residentCountry || process.env.CRM_RESIDENT_COUNTRY || "Canada",
+      120,
+    ),
     DestinationCountry: valueOrUndefined(process.env.CRM_DESTINATION_COUNTRY || "Canada", 120),
     ImmigrationType: valueOrUndefined(immigrationType, 1000),
     Education: valueOrUndefined(body.education, 160),
