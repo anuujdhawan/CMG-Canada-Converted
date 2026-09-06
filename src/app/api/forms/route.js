@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { pushLeadToCrm } from "@/lib/crmLead";
 
 export const runtime = "nodejs";
 
@@ -7,12 +8,11 @@ export const runtime = "nodejs";
  * Demo form endpoint.
  *
  * - Validates required fields.
- * - If FORM_ENDPOINT_URL is configured, forwards the payload there.
- * - Otherwise acknowledges locally (demo mode) so every form on the site
- *   has working loading/success states without a backend.
+ * - Sends the lead to the CMG web-to-leads CRM endpoint when configured.
+ * - CRM delivery is best-effort and never blocks the website confirmation.
  *
- * Server-only values (FORM_ENDPOINT_URL, CRM_API_URL, CRM_API_KEY) are
- * read here — never exposed to the browser.
+ * Server-only CRM values are read by src/lib/crmLead.js — never exposed to
+ * the browser.
  */
 
 const TYPES = new Set([
@@ -24,11 +24,11 @@ const TYPES = new Set([
 ]);
 
 const REQUIRED_FIELDS = {
-  contact: ["fullName", "email", "topic", "message"],
+  contact: ["fullName", "email", "phone", "topic", "message"],
   newsletter: ["email"],
-  consultation: ["fullName", "email", "country", "mode", "preferredDate"],
-  "urgent-consultation": ["fullName", "email", "country", "mode", "preferredDate", "deadline"],
-  assessment: ["fullName", "email", "country", "currentStatus", "goal"],
+  consultation: ["fullName", "email", "phone", "country", "mode", "preferredDate"],
+  "urgent-consultation": ["fullName", "email", "phone", "country", "mode", "preferredDate", "deadline"],
+  assessment: ["fullName", "email", "phone", "country", "currentStatus", "goal"],
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -121,29 +121,6 @@ export async function POST(request) {
     return NextResponse.json({ ok: false, error: "Lead email is not configured yet." }, { status: 503 });
   }
 
-  // Forward to the configured endpoint if one exists (CRM / form service).
-  const endpoint = process.env.FORM_ENDPOINT_URL || process.env.CRM_API_URL || "";
-  if (endpoint) {
-    try {
-      const forwarded = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          ...(process.env.CRM_API_KEY
-            ? { Authorization: `Bearer ${process.env.CRM_API_KEY}` }
-            : {}),
-        },
-        body: JSON.stringify(payload),
-        signal: AbortSignal.timeout(8000),
-      });
-      if (!forwarded.ok) {
-        console.error(`Form forward failed with status ${forwarded.status}`);
-      }
-    } catch (err) {
-      console.error("Form forward error:", err.message);
-    }
-  }
-
   let deliveredByEmail = false;
   if (isConsultationLead) {
     try {
@@ -167,5 +144,14 @@ export async function POST(request) {
     }
   }
 
-  return NextResponse.json({ ok: true, demo: !endpoint && !deliveredByEmail });
+  // Push after the website's own delivery work. CRM is best-effort by design,
+  // so a CRM hiccup never blocks the visitor's success confirmation.
+  const crmLeadType = type === "newsletter" ? null : type;
+  const crmResult = crmLeadType ? await pushLeadToCrm(crmLeadType, payload) : { configured: false, ok: false };
+
+  return NextResponse.json({
+    ok: true,
+    crm: crmResult.configured ? (crmResult.ok ? "sent" : "failed") : "not-configured",
+    demo: !deliveredByEmail && !crmResult.ok,
+  });
 }

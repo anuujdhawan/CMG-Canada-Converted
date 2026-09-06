@@ -34,6 +34,7 @@ export default function ConsultationForm({ variant = "standard" }) {
     const e = {};
     if (!form.fullName.trim()) e.fullName = "Please enter your full name.";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) e.email = "Please enter a valid email address.";
+    if (!form.phone.trim()) e.phone = "Please enter your phone number.";
     if (!form.country.trim()) e.country = "Please enter your country of residence.";
     if (!urgent && !form.interest) e.interest = "Please tell us what you need help with.";
     if (!form.mode) e.mode = "Please choose a consultation mode.";
@@ -90,8 +91,8 @@ export default function ConsultationForm({ variant = "standard" }) {
         <Field label="Email" htmlFor="consult-email" required error={errors.email}>
           <TextInput id="consult-email" type="email" autoComplete="email" value={form.email} onChange={set("email")} error={errors.email} className="h-[2.9rem] min-h-[2.9rem] rounded-[12px] px-[0.8rem]" />
         </Field>
-        <Field label="Phone (optional)" htmlFor="consult-phone" hint="Include country code">
-          <TextInput id="consult-phone" type="tel" autoComplete="tel" value={form.phone} onChange={set("phone")} className="h-[2.9rem] min-h-[2.9rem] rounded-[12px] px-[0.8rem]" />
+        <Field label="Phone" htmlFor="consult-phone" required error={errors.phone} hint="Include country code">
+          <TextInput id="consult-phone" type="tel" autoComplete="tel" value={form.phone} onChange={set("phone")} error={errors.phone} className="h-[2.9rem] min-h-[2.9rem] rounded-[12px] px-[0.8rem]" />
         </Field>
         <Field label="Country of residence" htmlFor="consult-country" required error={errors.country}>
           <TextInput id="consult-country" autoComplete="country-name" value={form.country} onChange={set("country")} error={errors.country} className="h-[2.9rem] min-h-[2.9rem] rounded-[12px] px-[0.8rem]" />

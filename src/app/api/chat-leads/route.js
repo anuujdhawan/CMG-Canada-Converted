@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { pushLeadToCrm } from "@/lib/crmLead";
 
 export const runtime = "nodejs";
 
@@ -29,10 +30,11 @@ export async function POST(request) {
 
   const fullName = clean(body?.fullName, 120);
   const email = clean(body?.email, 160).toLowerCase();
+  const phone = clean(body?.phone, 80);
   const consent = body?.consent === true;
 
-  if (!fullName || !email || !consent) {
-    return NextResponse.json({ ok: false, error: "Name, email and contact consent are required." }, { status: 422 });
+  if (!fullName || !email || !phone || !consent) {
+    return NextResponse.json({ ok: false, error: "Name, phone, email and contact consent are required." }, { status: 422 });
   }
 
   if (!EMAIL_RE.test(email)) {
@@ -63,6 +65,7 @@ export async function POST(request) {
       <p style="margin-top:0;color:#6b5560;">A visitor requested contact after using the pathway guide.</p>
       <table style="border-collapse:collapse;margin:18px 0;">
         <tr><td style="padding:6px 12px 6px 0;color:#6b5560;">Name</td><td style="padding:6px 0;font-weight:600;">${escapeHtml(fullName)}</td></tr>
+        <tr><td style="padding:6px 12px 6px 0;color:#6b5560;">Phone</td><td style="padding:6px 0;font-weight:600;">${escapeHtml(phone)}</td></tr>
         <tr><td style="padding:6px 12px 6px 0;color:#6b5560;">Email</td><td style="padding:6px 0;font-weight:600;"><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td></tr>
         <tr><td style="padding:6px 12px 6px 0;color:#6b5560;">Pathway</td><td style="padding:6px 0;font-weight:600;">${escapeHtml(service)}</td></tr>
         ${answerRows}
@@ -89,5 +92,12 @@ export async function POST(request) {
     return NextResponse.json({ ok: false, error: "The lead could not be sent." }, { status: 502 });
   }
 
-  return NextResponse.json({ ok: true });
+  const crmResult = await pushLeadToCrm("chatbot", {
+    ...body,
+    fullName,
+    email,
+    phone,
+  });
+
+  return NextResponse.json({ ok: true, crm: crmResult.configured ? (crmResult.ok ? "sent" : "failed") : "not-configured" });
 }

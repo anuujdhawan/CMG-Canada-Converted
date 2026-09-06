@@ -61,8 +61,10 @@ new routes.
 ## Demo / placeholder functionality
 
 - **Forms** (contact, consultation, urgent, assessment, newsletter) validate and submit
-  to `/api/forms`, which acknowledges locally unless `FORM_ENDPOINT_URL`/`CRM_API_URL`
-  is configured — no backend required to demo.
+  to `/api/forms`; lead forms are handed off server-to-server to the CMG CRM when
+  `CRM_WEB_TO_LEADS_URL` is configured. The guided chatbot uses `/api/chat-leads` and
+  the same CRM mapping. Set `CRM_WEB_TO_LEADS_URL` and the optional
+  `CRM_WEB_TO_LEADS_API_KEY` in the production hosting environment.
 - **Tools** — CRS calculator, PNP eligibility check, NOC finder, document checklist:
   working front-end logic marked as estimates/demo data. Verify against current
   IRCC/official sources before client launch.

@@ -35,6 +35,7 @@ export default function AssessmentForm() {
     const e = {};
     if (!form.fullName.trim()) e.fullName = "Please enter your full name.";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) e.email = "Please enter a valid email address.";
+    if (!form.phone.trim()) e.phone = "Please enter your phone number.";
     if (!form.country.trim()) e.country = "Please enter your country of residence.";
     if (!form.currentStatus) e.currentStatus = "Please select your current status.";
     if (!form.goal) e.goal = "Please select your main goal.";
@@ -76,8 +77,8 @@ export default function AssessmentForm() {
           <TextInput id="assessment-email" type="email" autoComplete="email" value={form.email} onChange={set("email")} error={errors.email} />
         </Field>
 
-        <Field label="Phone (optional)" htmlFor="assessment-phone" hint="Include country code">
-          <TextInput id="assessment-phone" type="tel" autoComplete="tel" value={form.phone} onChange={set("phone")} />
+        <Field label="Phone" htmlFor="assessment-phone" required error={errors.phone} hint="Include country code">
+          <TextInput id="assessment-phone" type="tel" autoComplete="tel" value={form.phone} onChange={set("phone")} error={errors.phone} />
         </Field>
 
         <Field label="Country of residence" htmlFor="assessment-country" required error={errors.country}>

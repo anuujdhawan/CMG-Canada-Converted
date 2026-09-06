@@ -229,7 +229,7 @@ function LeadCaptureWidget({ actionProvider }) {
 }
 
 function LeadCaptureView({ actionProvider }) {
-  const [form, setForm] = useState({ fullName: "", email: "", consent: false });
+  const [form, setForm] = useState({ fullName: "", email: "", phone: "", consent: false });
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState("");
 
@@ -242,8 +242,8 @@ function LeadCaptureView({ actionProvider }) {
     event.preventDefault();
     setError("");
 
-    if (!form.fullName.trim() || !form.email.trim() || !form.consent) {
-      setError("Please add your name, email and contact consent.");
+    if (!form.fullName.trim() || !form.email.trim() || !form.phone.trim() || !form.consent) {
+      setError("Please add your name, phone, email and contact consent.");
       return;
     }
 
@@ -272,6 +272,10 @@ function LeadCaptureView({ actionProvider }) {
       <label className="grid gap-[.28rem]">
         <span className="text-[#f7f8fb] text-[.6875rem] font-extrabold tracking-[.02em]">Your name</span>
         <input className="w-full rounded-[.65rem] border border-[rgba(255,255,255,.1)] bg-[rgba(255,255,255,.06)] px-[.65rem] py-[.55rem] text-[var(--cmg-dark-ink,#f7f8fb)] text-[.71rem] outline-none transition-[border-color,background,box-shadow] duration-[180ms] ease-in-out placeholder:text-[var(--cmg-dark-muted,rgba(255,255,255,.42))] focus:border-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_42%,transparent)] focus:bg-[rgba(255,255,255,.09)] focus:shadow-[0_0_0_3px_color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_12%,transparent)]" type="text" value={form.fullName} onChange={update("fullName")} autoComplete="name" placeholder="Full name" />
+      </label>
+      <label className="grid gap-[.28rem]">
+        <span className="text-[#f7f8fb] text-[.6875rem] font-extrabold tracking-[.02em]">Phone number</span>
+        <input className="w-full rounded-[.65rem] border border-[rgba(255,255,255,.1)] bg-[rgba(255,255,255,.06)] px-[.65rem] py-[.55rem] text-[var(--cmg-dark-ink,#f7f8fb)] text-[.71rem] outline-none transition-[border-color,background,box-shadow] duration-[180ms] ease-in-out placeholder:text-[var(--cmg-dark-muted,rgba(255,255,255,.42))] focus:border-[color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_42%,transparent)] focus:bg-[rgba(255,255,255,.09)] focus:shadow-[0_0_0_3px_color-mix(in_srgb,var(--cmg-dark-primary,var(--brand-primary))_12%,transparent)]" type="tel" value={form.phone} onChange={update("phone")} autoComplete="tel" placeholder="+1 555 123 4567" />
       </label>
       <label className="grid gap-[.28rem]">
         <span className="text-[#f7f8fb] text-[.6875rem] font-extrabold tracking-[.02em]">Email address</span>
@@ -568,6 +572,7 @@ class ActionProvider {
       body: JSON.stringify({
         fullName,
         email,
+        phone,
         consent,
         service: service?.label || "Guided chat enquiry",
         answers: this.answers[this.activeService] || {},

@@ -1,7 +1,7 @@
 /**
  * Client-side form submit helper.
- * Posts to the internal API route; the route decides whether to forward
- * to the configured FORM_ENDPOINT_URL or acknowledge locally (demo mode).
+ * Posts to the internal API route; the server handles email and the CRM
+ * web-to-leads handoff without exposing credentials to the browser.
  */
 export async function submitForm(payload) {
   try {
