@@ -1,6 +1,6 @@
 # Study Permit Application - Document Checklist 2026
 
-> **Source URL:** https://commonwealthmigration.ca/resources/document-checklist/study-permit
+> **Source URL:** https://cwmigrationgroup.com/resources/document-checklist/study-permit
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Study Permit Application - Document Checklist 2026
 - **Meta description:** Complete document checklist for Canadian study permit applications. Includes SDS (Student Direct Stream) and regular stream documents, with licensed RCIC tips.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/resources/document-checklist/study-permit
+- **Canonical URL:** https://cwmigrationgroup.com/resources/document-checklist/study-permit
 - **OG title:** Study Permit Application - Document Checklist 2026
 - **OG description:** Complete document checklist for Canadian study permit applications. Includes SDS (Student Direct Stream) and regular stream documents, with licensed RCIC tips.
 - **Robots:** index, follow
@@ -112,15 +112,15 @@ Also see: All checklists · Processing times · Express Entry draws
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://commonwealthmigration.ca/resources/document-checklist/study-permit#main-content |
-| Make Payment | https://commonwealthmigration.ca/pay |
-| Book Book Consultation | https://commonwealthmigration.ca/book |
-| Learn more about Study Permit → | https://commonwealthmigration.ca/immigration/study-permit |
-| View IRCC Processing Times → | https://commonwealthmigration.ca/resources/processing-times |
-| 📅 Book Free Consultation | https://commonwealthmigration.ca/book |
-| All checklists | https://commonwealthmigration.ca/resources/document-checklist |
-| Processing times | https://commonwealthmigration.ca/resources/processing-times |
-| Express Entry draws | https://commonwealthmigration.ca/draw-results |
+| Skip to main content | https://cwmigrationgroup.com/resources/document-checklist/study-permit#main-content |
+| Make Payment | https://cwmigrationgroup.com/pay |
+| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Learn more about Study Permit → | https://cwmigrationgroup.com/immigration/study-permit |
+| View IRCC Processing Times → | https://cwmigrationgroup.com/resources/processing-times |
+| 📅 Book Free Consultation | https://cwmigrationgroup.com/book |
+| All checklists | https://cwmigrationgroup.com/resources/document-checklist |
+| Processing times | https://cwmigrationgroup.com/resources/processing-times |
+| Express Entry draws | https://cwmigrationgroup.com/draw-results |
 ---
 
 ## Image Alt Texts
@@ -132,7 +132,7 @@ Also see: All checklists · Processing times · Express Entry draws
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
@@ -140,5 +140,5 @@ Also see: All checklists · Processing times · Express Entry draws
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://commonwealthmigration.ca/resources"},{"@type":"ListItem","position":3,"name":"Document Checklists","item":"https://commonwealthmigration.ca/resources/document-checklist"},{"@type":"ListItem","position":4,"name":"Study Permit","item":"https://commonwealthmigration.ca/resources/document-checklist/study-permit"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://cwmigrationgroup.com/resources"},{"@type":"ListItem","position":3,"name":"Document Checklists","item":"https://cwmigrationgroup.com/resources/document-checklist"},{"@type":"ListItem","position":4,"name":"Study Permit","item":"https://cwmigrationgroup.com/resources/document-checklist/study-permit"}]}
 ```

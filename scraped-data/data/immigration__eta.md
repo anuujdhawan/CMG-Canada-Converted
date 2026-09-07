@@ -1,6 +1,6 @@
 # Canada eTA 2026 | Electronic Travel Authorization | Licensed RCIC
 
-> **Source URL:** https://commonwealthmigration.ca/immigration/eta
+> **Source URL:** https://cwmigrationgroup.com/immigration/eta
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Canada eTA 2026 | Electronic Travel Authorization | Licensed RCIC
 - **Meta description:** Apply for a Canadian eTA for visa-exempt country citizens travelling by air. Usually approved in minutes. Commonwealth Migration guidance available for complex or refused cases.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/immigration/eta
+- **Canonical URL:** https://cwmigrationgroup.com/immigration/eta
 - **OG title:** Canada eTA 2026 | Licensed RCIC
 - **OG description:** Electronic Travel Authorization - fast approvals and RCIC help for complex cases.
 - **Robots:** index, follow
@@ -239,28 +239,28 @@ Most eTAs are straightforward - but if yours is complicated, Our team's licensed
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://commonwealthmigration.ca/immigration/eta#main-content |
-| Make Payment | https://commonwealthmigration.ca/pay |
-| Book Book Consultation | https://commonwealthmigration.ca/book |
-| Home | https://commonwealthmigration.ca/ |
-| Immigration | https://commonwealthmigration.ca/immigration |
-| Book Free Consultation → | https://commonwealthmigration.ca/book |
-| Check My Eligibility | https://commonwealthmigration.ca/tools |
-| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| → Visitor visa (TRV) | https://commonwealthmigration.ca/immigration/visitor-visa |
-| → Super Visa | https://commonwealthmigration.ca/immigration/super-visa |
-| → Refusals | https://commonwealthmigration.ca/refusals |
-| Book consultation → | https://commonwealthmigration.ca/book |
-| Visitor Visa application → | https://commonwealthmigration.ca/immigration/visitor-visa |
-| Book an Assessment → | https://commonwealthmigration.ca/book |
-| Call contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| Use Free Tools | https://commonwealthmigration.ca/tools |
-| Visitor Visa (TRV) → | https://commonwealthmigration.ca/immigration/visitor-visa |
-| Super Visa → | https://commonwealthmigration.ca/immigration/super-visa |
-| Visitor Record → | https://commonwealthmigration.ca/immigration/visitor-record |
-| Criminal Inadmissibility → | https://commonwealthmigration.ca/appeals/criminal-inadmissibility |
-| TRP → | https://commonwealthmigration.ca/appeals/trp |
-| Family Sponsorship → | https://commonwealthmigration.ca/immigration/family-sponsorship |
+| Skip to main content | https://cwmigrationgroup.com/immigration/eta#main-content |
+| Make Payment | https://cwmigrationgroup.com/pay |
+| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Home | https://cwmigrationgroup.com/ |
+| Immigration | https://cwmigrationgroup.com/immigration |
+| Book Free Consultation → | https://cwmigrationgroup.com/book |
+| Check My Eligibility | https://cwmigrationgroup.com/tools |
+| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| → Visitor visa (TRV) | https://cwmigrationgroup.com/immigration/visitor-visa |
+| → Super Visa | https://cwmigrationgroup.com/immigration/super-visa |
+| → Refusals | https://cwmigrationgroup.com/refusals |
+| Book consultation → | https://cwmigrationgroup.com/book |
+| Visitor Visa application → | https://cwmigrationgroup.com/immigration/visitor-visa |
+| Book an Assessment → | https://cwmigrationgroup.com/book |
+| Call contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| Use Free Tools | https://cwmigrationgroup.com/tools |
+| Visitor Visa (TRV) → | https://cwmigrationgroup.com/immigration/visitor-visa |
+| Super Visa → | https://cwmigrationgroup.com/immigration/super-visa |
+| Visitor Record → | https://cwmigrationgroup.com/immigration/visitor-record |
+| Criminal Inadmissibility → | https://cwmigrationgroup.com/appeals/criminal-inadmissibility |
+| TRP → | https://cwmigrationgroup.com/appeals/trp |
+| Family Sponsorship → | https://cwmigrationgroup.com/immigration/family-sponsorship |
 
 ---
 
@@ -273,13 +273,13 @@ Most eTAs are straightforward - but if yours is complicated, Our team's licensed
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://commonwealthmigration.ca/immigration/eta#service","name":"Canada eTA Guidance","description":"Licensed RCIC guidance for Electronic Travel Authorization (eTA) applications, complex reviews, refusals, and alternative pathways including TRV.","areaServed":"Canada","serviceType":"Immigration Consulting"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who needs an eTA to fly to Canada?","acceptedAnswer":{"@type":"Answer","text":"Citizens of visa-exempt countries (e.g. United Kingdom, France, Germany, Australia, Japan, South Korea) need an eTA to fly to Canada. U.S. citizens do not need an eTA. Citizens of other countries typically need a visitor visa (TRV) instead."}},{"@type":"Question","name":"How do I apply for an eTA?","acceptedAnswer":{"@type":"Answer","text":"You apply online on the IRCC website. You need a valid passport, email, and a credit card to pay the small fee. The process usually takes minutes, and most applicants are approved quickly."}},{"@type":"Question","name":"How long is an eTA valid?","acceptedAnswer":{"@type":"Answer","text":"An eTA is valid for up to 5 years or until your passport expires, whichever comes first. You can make multiple trips to Canada during that time (each stay is typically up to 6 months)."}},{"@type":"Question","name":"What if my eTA was rejected?","acceptedAnswer":{"@type":"Answer","text":"Common reasons include passport issues, previous immigration violations, or criminal history. We can review your situation and advise whether to reapply or if you need a visitor visa or other pathway."}},{"@type":"Question","name":"I have a new passport - do I need a new eTA?","acceptedAnswer":{"@type":"Answer","text":"Yes. An eTA is linked to your passport. If you get a new passport, you must apply for a new eTA before flying to Canada."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"eTA","item":"https://commonwealthmigration.ca/immigration/eta"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://cwmigrationgroup.com/immigration/eta#service","name":"Canada eTA Guidance","description":"Licensed RCIC guidance for Electronic Travel Authorization (eTA) applications, complex reviews, refusals, and alternative pathways including TRV.","areaServed":"Canada","serviceType":"Immigration Consulting"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who needs an eTA to fly to Canada?","acceptedAnswer":{"@type":"Answer","text":"Citizens of visa-exempt countries (e.g. United Kingdom, France, Germany, Australia, Japan, South Korea) need an eTA to fly to Canada. U.S. citizens do not need an eTA. Citizens of other countries typically need a visitor visa (TRV) instead."}},{"@type":"Question","name":"How do I apply for an eTA?","acceptedAnswer":{"@type":"Answer","text":"You apply online on the IRCC website. You need a valid passport, email, and a credit card to pay the small fee. The process usually takes minutes, and most applicants are approved quickly."}},{"@type":"Question","name":"How long is an eTA valid?","acceptedAnswer":{"@type":"Answer","text":"An eTA is valid for up to 5 years or until your passport expires, whichever comes first. You can make multiple trips to Canada during that time (each stay is typically up to 6 months)."}},{"@type":"Question","name":"What if my eTA was rejected?","acceptedAnswer":{"@type":"Answer","text":"Common reasons include passport issues, previous immigration violations, or criminal history. We can review your situation and advise whether to reapply or if you need a visitor visa or other pathway."}},{"@type":"Question","name":"I have a new passport - do I need a new eTA?","acceptedAnswer":{"@type":"Answer","text":"Yes. An eTA is linked to your passport. If you get a new passport, you must apply for a new eTA before flying to Canada."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"eTA","item":"https://cwmigrationgroup.com/immigration/eta"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"eTA"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"eTA"}]}
 ```

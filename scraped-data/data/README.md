@@ -1,7 +1,7 @@
 # Commonwealth Migration Canada — Unique English SEO Content (processed)
 
 This folder contains **fresh, unique English content** for every page of
-https://commonwealthmigration.ca — **138 pages, one `.md` file per page** (137
+https://cwmigrationgroup.com — **138 pages, one `.md` file per page** (137
 sitemap pages + index), each marked with a `✅ Unique English content
 (processed)` status banner.
 

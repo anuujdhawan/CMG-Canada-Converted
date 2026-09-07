@@ -8,6 +8,8 @@ import { HERO_SLIDES } from "@/lib/heroSlides";
 import HeroCarousel from "@/components/home/HeroCarousel";
 import HeroProofCardCarousel from "@/components/home/HeroProofCardCarousel";
 import TemplateMotion from "@/components/home/TemplateMotion";
+import FaqSection from "@/components/sections/FaqSection";
+import { getPageFaqs } from "@/lib/faqs";
 import ExpressEntryDrawsTable from "./ExpressEntryDrawsTable";
 
 const OFFICIAL_PAGE = "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html";
@@ -16,7 +18,7 @@ function StatCard({ icon: Icon, label, value, detail }) {
   return <article className="rounded-[18px] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-surface)_85%,transparent)] p-5 shadow-[var(--shadow-soft)]"><div className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[.12em] text-[var(--template-muted)]"><Icon className="text-[var(--template-primary)]" width={16} height={16} aria-hidden="true" />{label}</div><p className="!m-[13px_0_2px] !text-[28px] !font-extrabold !leading-none !tracking-[-.04em] !text-[var(--template-ink)]">{value}</p><p className="!m-0 !text-[12px] !leading-[1.5] !text-[var(--template-muted)]">{detail}</p></article>;
 }
 
-export default function ExpressEntryDrawsPage() {
+export default function ExpressEntryDrawsPage({ page }) {
   const [draws, setDraws] = useState([]);
   const [fetchedAt, setFetchedAt] = useState("");
   const [status, setStatus] = useState("loading");
@@ -87,6 +89,10 @@ export default function ExpressEntryDrawsPage() {
                 <label className="flex min-w-[220px] items-center gap-2 rounded-[12px] border border-[var(--template-border)] bg-[var(--template-surface)] px-3 py-2 text-[12px] font-bold text-[var(--template-muted)]"><Filter width={15} height={15} className="flex-none text-[var(--template-primary)]" aria-hidden="true" /><span className="sr-only">Filter by round type</span><select value={filter} onChange={(event) => setFilter(event.target.value)} className="min-h-9 w-full bg-transparent text-[var(--template-ink)] outline-none"><option className="bg-[var(--template-surface)]" value="All draw types">All draw types</option>{filters.slice(1).map((item) => <option className="bg-[var(--template-surface)]" key={item} value={item}>{item}</option>)}</select></label>
               </div>
               <ExpressEntryDrawsTable draws={visibleDraws} />
+              <div className="mt-12 max-w-[820px] border-t border-[var(--template-border)] pt-8">
+                <h2 className="!m-0 !text-[clamp(26px,1.5rem+1.3vw,36px)] !leading-[1.1] !text-[var(--template-ink)]">How to use Express Entry draw results</h2>
+                <p className="!m-[12px_0_0] !text-[14px] !leading-[1.75] !text-[var(--template-muted)]">The latest CRS score and invitation count show what happened in a specific IRCC round; they do not guarantee the next cutoff or an invitation. Compare the draw type with your own Express Entry program eligibility, CRS profile, category eligibility and tie-break position, then confirm the current requirements on Canada.ca.</p>
+              </div>
             </>
           )}
         </div>
@@ -95,6 +101,8 @@ export default function ExpressEntryDrawsPage() {
       <section className="border-t border-[var(--template-border)] bg-[var(--template-surface-alt)] py-14 max-[620px]:py-11">
         <div className="mx-auto flex w-[var(--container)] max-w-[1220px] items-center justify-between gap-6 max-[720px]:items-start max-[720px]:flex-col"><div><p className="!m-0 !text-[11px] !font-extrabold !uppercase !tracking-[.14em] !text-[var(--template-primary)]">Need help reading your score?</p><p className="!m-[7px_0_0] !text-[14px] !text-[var(--template-muted)]">Use the draw history as context, then check what your own CRS profile can reach.</p></div><Link href="/tools/crs-calculator-canada" className="inline-flex min-h-11 items-center gap-2 rounded-[12px] bg-[var(--template-primary)] px-5 py-3 text-[13px] font-extrabold text-[var(--template-on-primary)] transition-transform duration-200 hover:-translate-y-0.5">Check your CRS <ArrowRight width={17} height={17} aria-hidden="true" /></Link></div>
       </section>
+
+      <FaqSection faqs={getPageFaqs(page)} />
     </div>
   );
 }

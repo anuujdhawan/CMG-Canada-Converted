@@ -15,6 +15,9 @@ const extraRoutes = {
   "/canada-immigration-calculators": "/tools/canada-immigration-calculators",
   "/crs-calculator-canada": "/tools/crs-calculator-canada",
   "/free-canada-immigration-assessment": "/assessment/free-canada-immigration-assessment",
+  "/contact": "/contact-us",
+  "/contact/contact-immigration-consultant-brampton": "/contact/book-immigration-consultation-canada",
+  "/book": "/contact/book-immigration-consultation-canada",
 };
 
 export function currentPagePath(pathname) {

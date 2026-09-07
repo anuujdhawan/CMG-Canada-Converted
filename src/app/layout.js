@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import localFont from "next/font/local";
 import { site } from "@/config/site";
 import { theme, themeCssVars, templateThemeCssVars } from "@/config/theme";
-import { buildMetadata } from "@/lib/seo";
+import { absoluteUrl, buildMetadata } from "@/lib/seo";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollProgressBar from "@/components/layout/ScrollProgressBar";
@@ -45,9 +45,23 @@ export const viewport = {
 };
 
 /** Sitewide Organization + WebSite structured data. */
+const structuredAddressLocality = site.address.city.split(",")[0].trim() || "Brampton";
+const structuredAddressCountry = "CA";
+const schemaAssetUrl = (value) => {
+  if (!value) return "";
+  return /^https?:\/\//i.test(value) ? value : absoluteUrl(value);
+};
+const organizationLogoUrl = schemaAssetUrl(site.logos.large);
+const organizationImageUrl = schemaAssetUrl(site.meta.ogImage);
+const organizationSameAs = Object.values(site.social).filter(Boolean);
+const organizationContactPoint = [
+  site.email.includes("@") ? { "@type": "ContactPoint", contactType: "customer support", email: site.email, areaServed: "CA", availableLanguage: ["English"] } : null,
+  site.phone.replace(/\D/g, "").length >= 7 ? { "@type": "ContactPoint", contactType: "customer support", telephone: site.phone, areaServed: "CA", availableLanguage: ["English"] } : null,
+].filter(Boolean);
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": `${site.url}#organization`,
   name: site.name,
   alternateName: [site.tradingName, site.shortName].filter(Boolean),
   description: site.description,
@@ -56,24 +70,39 @@ const organizationJsonLd = {
   ...(site.phone.replace(/\D/g, "").length >= 7 ? { telephone: site.phone } : {}),
   priceRange: "$$",
   currenciesAccepted: "CAD",
-  areaServed: { "@type": "Country", name: site.address.country },
+  areaServed: { "@type": "Country", name: "Canada" },
   address: {
     "@type": "PostalAddress",
     streetAddress: site.address.line1,
-    addressLocality: site.address.city,
+    addressLocality: structuredAddressLocality,
     ...(site.address.region ? { addressRegion: site.address.region } : {}),
-    postalCode: site.address.postal,
-    addressCountry: site.address.country,
+    ...(site.address.postal ? { postalCode: site.address.postal } : {}),
+    addressCountry: structuredAddressCountry,
   },
-  sameAs: Object.values(site.social).filter(Boolean),
+  ...(organizationLogoUrl ? { logo: { "@type": "ImageObject", url: organizationLogoUrl } } : {}),
+  ...(organizationImageUrl ? { image: organizationImageUrl } : {}),
+  ...(organizationSameAs.length ? { sameAs: organizationSameAs } : {}),
+  ...(organizationContactPoint.length ? { contactPoint: organizationContactPoint } : {}),
+  knowsAbout: [
+    "Express Entry",
+    "Provincial Nominee Programs",
+    "Canadian work permits",
+    "Canadian study permits",
+    "Family sponsorship",
+    "Canadian citizenship",
+    "Immigration refusals and appeals",
+  ],
 };
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${site.url}#website`,
   name: site.name,
   url: site.url,
   inLanguage: "en-CA",
+  publisher: { "@id": `${site.url}#organization` },
+  about: { "@id": `${site.url}#organization` },
 };
 
 // Apply the persisted theme before the browser paints the page. Reading

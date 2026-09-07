@@ -1,24 +1,24 @@
-# Licensed RCIC Immigration Consultants Canada
+# Immigration Consultant Brampton & Canada-wide Guidance
 
-> **Source URL:** https://commonwealthmigration.ca
+> **Source URL:** https://cwmigrationgroup.com
 > **Last modified:** 2026-08-19
 > **Sitemap priority:** 1
 > **Status:** ✅ Fresh English rewrite | SEO/GEO/AEO reviewed
 
 ## SEO Metadata
 
-- **Title tag:** licensed RCIC immigration consultant Canada 2026 | | Commonwealth
-- **Meta description:** A clearer Canadian immigration plan built around your facts. Canada-wide support from a licensed RCIC practice. See official rules before applying.
-- **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca
-- **OG title:** Licensed RCIC Immigration Consultants Canada | Commonwealth Migration Canada
-- **OG description:** A clearer Canadian immigration plan built around your facts. Canada-wide support from a licensed RCIC practice. See official rules before applying.
+- **Title tag:** Immigration Consultant Brampton | Canada Immigration
+- **Meta description:** Looking for an immigration consultant in Brampton? Compare Express Entry, PNP, work, study and family routes with Canada-wide guidance and official sources.
+- **Meta keywords:** immigration consultant Brampton, Canada immigration consultant, Express Entry consultant, PNP consultant Canada
+- **Canonical URL:** https://cwmigrationgroup.com
+- **OG title:** Immigration Consultant Brampton | Canada Immigration
+- **OG description:** Compare Express Entry, PNP, work, study and family routes with Canada-wide guidance and official sources.
 - **Robots:** index, follow
 
 ## Heading Outline
 
-- # Licensed RCIC Immigration Consultants Canada
-- ## Start with the licensed RCIC immigration consultant Canada decision
+- # Immigration Consultant Brampton & Canada-wide Guidance
+- ## Start with a Canadian immigration plan in Brampton
 - ## What a careful review should cover
 - ## Use official information as the final check
 - ## Research before you retain
@@ -30,9 +30,9 @@
 
 ## Hero Section
 
-# Licensed RCIC Immigration Consultants Canada
+# Immigration Consultant Brampton & Canada-wide Guidance
 
-Immigration decisions get easier when the program, evidence, deadline and next step are visible in one plan.
+Looking for an immigration consultant in Brampton? Immigration decisions get easier when the program, evidence, deadline and next step are visible in one plan.
 
 - eligibility and admissibility
 - documents and timing
@@ -40,11 +40,11 @@ Immigration decisions get easier when the program, evidence, deadline and next s
 
 ## Page Content
 
-## Start with the licensed RCIC immigration consultant Canada decision
+## Start with a Canadian immigration plan in Brampton
 
 
 
-Immigration decisions get easier when the program, evidence, deadline and next step are visible in one plan.
+Looking for an immigration consultant in Brampton? Start by connecting your goal, evidence, deadline and next step in one Canadian immigration plan.
 
 
 
@@ -120,7 +120,7 @@ Use the page as a starting point, then verify the current official source and di
 
 
 
-If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
+If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://cwmigrationgroup.com/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
 
 ## Links & CTAs on this page
 
@@ -131,9 +131,9 @@ If you are ready to move from general research to a file-specific plan, [book a 
 | IRCC: Provincial Nominee Program | https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html |
 | IRCC: work permit requirements | https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/permit.html |
 | IRCC: study permit guide | https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html |
-| verify an RCIC on the CICC register | https://www.cicc-ccic.ca/register/ |
-| Book a focused immigration consultation | https://commonwealthmigration.ca/contact/book-immigration-consultation-canada |
-| Contact Commonwealth Migration Canada | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| verify an RCIC on the CICC register | https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx |
+| Book a focused immigration consultation | https://cwmigrationgroup.com/contact/book-immigration-consultation-canada |
+| Contact Commonwealth Migration Canada | https://cwmigrationgroup.com/contact/book-immigration-consultation-canada |
 
 ## Image Alt Texts
 
@@ -147,8 +147,8 @@ If you are ready to move from general research to a file-specific plan, [book a 
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://commonwealthmigration.ca#webpage",
-      "url": "https://commonwealthmigration.ca",
+      "@id": "https://cwmigrationgroup.com#webpage",
+      "url": "https://cwmigrationgroup.com",
       "name": "licensed RCIC immigration consultant Canada 2026 | | Commonwealth",
       "description": "A clearer Canadian immigration plan built around your facts. Canada-wide support from a licensed RCIC practice. See official rules before applying.",
       "inLanguage": "en-CA",
@@ -156,7 +156,7 @@ If you are ready to move from general research to a file-specific plan, [book a 
       "isPartOf": {
         "@type": "WebSite",
         "name": "Commonwealth Migration Canada",
-        "url": "https://commonwealthmigration.ca"
+        "url": "https://cwmigrationgroup.com"
       },
       "about": {
         "@type": "Thing",
@@ -170,7 +170,7 @@ If you are ready to move from general research to a file-specific plan, [book a 
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://commonwealthmigration.ca"
+          "item": "https://cwmigrationgroup.com"
         }
       ]
     },

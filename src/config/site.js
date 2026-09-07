@@ -81,17 +81,17 @@ export const site = {
   tagline: env("NEXT_PUBLIC_BRAND_TAGLINE", "Your Canadian Permanent Residence, Planned by a Licensed RCIC"),
   description: env(
     "NEXT_PUBLIC_SITE_DESCRIPTION",
-    "Commonwealth Migration Canada is a CICC-regulated Canadian immigration consultancy. Licensed RCICs serving Canada-wide — Express Entry, PNP, LMIA, work & study permits, family sponsorship, and refusals."
+    "Commonwealth Migration Canada is a CICC-regulated Canadian immigration consultancy. Licensed RCICs serving Canada-wide - Express Entry, PNP, LMIA, work & study permits, family sponsorship, and refusals."
   ),
 
   // ---- Contact ----------------------------------------------------------
-  url: env("NEXT_PUBLIC_SITE_URL", "https://commonwealthmigration.ca"), // canonical/sitemap target
+  url: env("NEXT_PUBLIC_SITE_URL", "https://cwmigrationgroup.com"), // canonical/sitemap target
   email: env("NEXT_PUBLIC_SUPPORT_EMAIL", "info@commonwealthmigration.ca"),
   // When a real inbox is configured, default to a mailto: link; otherwise keep the contact page.
   emailHref: env("NEXT_PUBLIC_SUPPORT_EMAIL_HREF", "") ||
     (env("NEXT_PUBLIC_SUPPORT_EMAIL", "").includes("@")
       ? `mailto:${env("NEXT_PUBLIC_SUPPORT_EMAIL")}`
-      : "/contact/contact-immigration-consultant-brampton"),
+      : "/contact/book-immigration-consultation-canada"),
   phone: env("NEXT_PUBLIC_PHONE", "Contact via website"),
   // When a real phone number is configured, default to a tel: link; otherwise keep the contact page.
   phoneHref: (() => {
@@ -102,7 +102,7 @@ export const site = {
     // tel: links want the full international number, e.g. tel:+16476170750
     return digits.length >= 7
       ? `tel:${raw.trim().startsWith("+") ? "+" : ""}${digits}`
-      : "/contact/contact-immigration-consultant-brampton";
+      : "/contact/book-immigration-consultation-canada";
   })(),
   whatsappUrl: (() => {
     const raw = env("NEXT_PUBLIC_WHATSAPP_URL", "").trim();
@@ -179,10 +179,10 @@ export const site = {
   // ---- Default metadata (used by lib/seo.js) --------------------------
   meta: {
     titleTemplate: `%s | ${brandName}`,
-    defaultTitle: env("NEXT_PUBLIC_DEFAULT_TITLE", "Licensed RCIC Immigration Consultants | Canada & GTA"),
+    defaultTitle: env("NEXT_PUBLIC_DEFAULT_TITLE", "Immigration Consultant Brampton | Canada Immigration Guidance"),
     defaultDescription: env(
       "NEXT_PUBLIC_DEFAULT_DESCRIPTION",
-      "CICC-regulated RCICs in Brampton & GTA, Canada-wide. Express Entry, PNP, LMIA, work & study permits, family sponsorship, and refusals. Free assessment."
+      "Looking for an immigration consultant in Brampton? Compare Express Entry, PNP, work, study and family routes with Canada-wide guidance and official sources."
     ),
     keywords: env("NEXT_PUBLIC_META_KEYWORDS", "Canadian immigration, Express Entry, immigration consultants, study permit, work permit, PNP, LMIA, licensed RCIC").split(",").map((k) => k.trim()),
     ogImage: env("NEXT_PUBLIC_OG_IMAGE", "/images/favicon_LG.webp"),

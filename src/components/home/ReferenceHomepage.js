@@ -31,6 +31,7 @@ import ConsultantProfileSection from "./ConsultantProfileSection";
 import LiveSuccessVideos from "./LiveSuccessVideos";
 import TemplateMotion from "./TemplateMotion";
 import FaqSection from "@/components/sections/FaqSection";
+import { getPageFaqs } from "@/lib/faqs";
 import { getImageObjectPosition } from "@/lib/imagePresentation";
 
 const href = (path) => currentPagePath(path);
@@ -60,12 +61,6 @@ const GUIDE_ITEMS = [
   ["Express Entry", "Understand CRS, the three federal programs and category-based draws.", "/immigrate/express-entry"],
   ["Calculators", "Use CRS, FSW 67 and provincial tools before paying filing fees.", "/tools/canada-immigration-calculators"],
   ["Employers · HGT", "Explore LMIA, GTS, recruitment and compliance through one employer journey.", "/work-and-study/lmia-and-employer-services-overview"],
-];
-
-const HOMEPAGE_FAQS = [
-  { question: "What does a licensed RCIC help with?", answer: "A licensed Regulated Canadian Immigration Consultant can assess eligibility, develop strategy, prepare or review documentation, represent a client where authorized, and help respond when a file becomes complex." },
-  { question: "Which pathway should I review first?", answer: "Begin with your goal: permanent residence, a provincial nomination, work, study, family sponsorship, temporary entry or a refusal response. The pathway cards above give you the right starting point." },
-  { question: "What is the best next step for my situation?", answer: "Use the free tools to understand the broad route, then book a tailored review when your history, documents, employer situation or deadline requires a strategy built around your specific file." },
 ];
 
 function CompassIcon(props) {
@@ -211,7 +206,7 @@ export default function ReferenceHomepage({ page, heroData }) {
 
       <section className="cta-section bg-[linear-gradient(125deg,var(--primary),color-mix(in_srgb,var(--primary)_38%,var(--cmg-dark-secondary)))] text-[var(--template-on-primary)] py-[72px] max-[620px]:!py-[12px_0_75px]" id="consultation"><div className="cta-shell flex items-center justify-between w-[var(--container)] gap-10 mx-auto p-0 rounded-none bg-transparent max-[620px]:!p-[31px_25px]"><div className="reveal"><h2 className="!text-[clamp(30px,1.8rem+2.2vw,46px)] !leading-none !text-[var(--template-on-primary)]">Not sure which pathway fits your profile?</h2><p className="!mt-[12px] max-w-[650px] !text-[16px] !text-[color-mix(in_srgb,var(--template-on-primary)_80%,transparent)]">Our licensed consultants will review your profile and map the clearest route to your goal—without pressure.</p></div><TemplateLink path={site.ctas.primary.href} className="btn reveal !flex-none !px-6 !py-[17px] max-[620px]:!w-full bg-[var(--template-on-primary)] text-[var(--cmg-dark-secondary)] hover:bg-[var(--cmg-dark-secondary)] hover:text-[var(--template-on-primary)]">Book a Free Consultation <ArrowUpRight width="19" height="19" aria-hidden="true" /></TemplateLink></div></section>
 
-      <FaqSection faqs={HOMEPAGE_FAQS} />
+      <FaqSection faqs={getPageFaqs(page)} />
 
     </div>
   );

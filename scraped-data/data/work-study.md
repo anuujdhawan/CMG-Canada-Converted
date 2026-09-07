@@ -1,6 +1,6 @@
 # Work & Study in Canada | Work Permits & Study Permits | Licensed RCIC
 
-> **Source URL:** https://commonwealthmigration.ca/work-study
+> **Source URL:** https://cwmigrationgroup.com/work-study
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.7
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Work & Study in Canada | Work Permits & Study Permits | Licensed RCIC
 - **Meta description:** Work permits (LMIA, open, PGWP), study permits, visitor visas. Licensed RCIC in Brampton. Free consultation for work and study in Canada.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/work-study
+- **Canonical URL:** https://cwmigrationgroup.com/work-study
 - **OG title:** Work & Study in Canada | Licensed RCIC
 - **OG description:** Expert help with work permits, study permits, and visitor visas. Book a free consultation.
 - **Robots:** index, follow
@@ -129,23 +129,23 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://commonwealthmigration.ca/work-study#main-content |
-| Make Payment | https://commonwealthmigration.ca/pay |
-| Book Book Consultation | https://commonwealthmigration.ca/book |
-| Book Free Consultation | https://commonwealthmigration.ca/contact-us |
-| Work Permits LMIA-based, open work permits, employer-specific, and intra-company transfers. We guide you through eligibility and application strategy. LMIA work permits Open work permits Intra-company transfers BOWP & extensions Learn more → | https://commonwealthmigration.ca/immigration/work-permit |
-| Study Permits Study at a designated learning institution (DLI). We assist with initial applications, extensions, DLI transfers, and co-op work permits. DLI applications Extensions Co-op work permits SDS & non-SDS Learn more → | https://commonwealthmigration.ca/immigration/study-permit |
-| Post-Graduation Work Permit (PGWP) Gain Canadian work experience after studies - often up to 3 years - with no job offer required. Key pathway to Express Entry and PNP. Up to 3 years No job offer needed Pathway to PR Eligibility assessment Learn more → | https://commonwealthmigration.ca/immigration/pgwp |
-| Visitor Visa Tourism, family visits, or business. Single and multiple-entry visitor visas, plus Super Visas for parents and grandparents. Tourist visa Super Visa Business visitor Multiple entry Learn more → | https://commonwealthmigration.ca/immigration/visitor-visa |
-| Work Permits | https://commonwealthmigration.ca/immigration/work-permit |
-| Study Permits | https://commonwealthmigration.ca/immigration/study-permit |
-| PGWP | https://commonwealthmigration.ca/immigration/pgwp |
-| Visitor Visa | https://commonwealthmigration.ca/immigration/visitor-visa |
-| Express Entry (after work) | https://commonwealthmigration.ca/immigration/express-entry |
-| CRS Calculator | https://commonwealthmigration.ca/tools/crs-calculator |
-| Contact Us | https://commonwealthmigration.ca/contact-us |
-| Book Free Consultation → | https://commonwealthmigration.ca/book |
-| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| Skip to main content | https://cwmigrationgroup.com/work-study#main-content |
+| Make Payment | https://cwmigrationgroup.com/pay |
+| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Book Free Consultation | https://cwmigrationgroup.com/contact-us |
+| Work Permits LMIA-based, open work permits, employer-specific, and intra-company transfers. We guide you through eligibility and application strategy. LMIA work permits Open work permits Intra-company transfers BOWP & extensions Learn more → | https://cwmigrationgroup.com/immigration/work-permit |
+| Study Permits Study at a designated learning institution (DLI). We assist with initial applications, extensions, DLI transfers, and co-op work permits. DLI applications Extensions Co-op work permits SDS & non-SDS Learn more → | https://cwmigrationgroup.com/immigration/study-permit |
+| Post-Graduation Work Permit (PGWP) Gain Canadian work experience after studies - often up to 3 years - with no job offer required. Key pathway to Express Entry and PNP. Up to 3 years No job offer needed Pathway to PR Eligibility assessment Learn more → | https://cwmigrationgroup.com/immigration/pgwp |
+| Visitor Visa Tourism, family visits, or business. Single and multiple-entry visitor visas, plus Super Visas for parents and grandparents. Tourist visa Super Visa Business visitor Multiple entry Learn more → | https://cwmigrationgroup.com/immigration/visitor-visa |
+| Work Permits | https://cwmigrationgroup.com/immigration/work-permit |
+| Study Permits | https://cwmigrationgroup.com/immigration/study-permit |
+| PGWP | https://cwmigrationgroup.com/immigration/pgwp |
+| Visitor Visa | https://cwmigrationgroup.com/immigration/visitor-visa |
+| Express Entry (after work) | https://cwmigrationgroup.com/immigration/express-entry |
+| CRS Calculator | https://cwmigrationgroup.com/tools/crs-calculator |
+| Contact Us | https://cwmigrationgroup.com/contact-us |
+| Book Free Consultation → | https://cwmigrationgroup.com/book |
+| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
 
 ---
 
@@ -158,5 +158,5 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```

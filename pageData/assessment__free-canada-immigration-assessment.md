@@ -1,16 +1,16 @@
 # Free Canada Immigration Assessment
 
-> **Source URL:** https://commonwealthmigration.ca/assessment/free-canada-immigration-assessment
+> **Source URL:** https://cwmigrationgroup.com/assessment/free-canada-immigration-assessment
 > **Last modified:** 2026-08-19
 > **Sitemap priority:** 0.9
 > **Status:** ✅ Fresh English rewrite | SEO/GEO/AEO reviewed
 
 ## SEO Metadata
 
-- **Title tag:** free Canada immigration assessment 2026 | Commonwealth Migration
-- **Meta description:** Find the strongest next question before paying application fees. Canada-wide support from a licensed RCIC practice. See official rules before applying.
-- **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/assessment/free-canada-immigration-assessment
+- **Title tag:** Free Canada Immigration Assessment | Brampton RCIC
+- **Meta description:** Get a free Canada immigration assessment in Brampton. Share your goal, status and timeline to identify possible pathways, document gaps and next steps.
+- **Meta keywords:** free Canada immigration assessment, immigration consultant Brampton, Canada immigration eligibility
+- **Canonical URL:** https://cwmigrationgroup.com/assessment/free-canada-immigration-assessment
 - **OG title:** Free Canada Immigration Assessment | Commonwealth Migration Canada
 - **OG description:** Find the strongest next question before paying application fees. Canada-wide support from a licensed RCIC practice. See official rules before applying.
 - **Robots:** index, follow
@@ -120,7 +120,7 @@ Use the page as a starting point, then verify the current official source and di
 
 
 
-If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
+If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://cwmigrationgroup.com/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
 
 ## Links & CTAs on this page
 
@@ -131,9 +131,9 @@ If you are ready to move from general research to a file-specific plan, [book a 
 | IRCC: Provincial Nominee Program | https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html |
 | IRCC: work permit requirements | https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/permit.html |
 | IRCC: study permit guide | https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html |
-| verify an RCIC on the CICC register | https://www.cicc-ccic.ca/register/ |
-| Book a focused immigration consultation | https://commonwealthmigration.ca/contact/book-immigration-consultation-canada |
-| Contact Commonwealth Migration Canada | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| verify an RCIC on the CICC register | https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx |
+| Book a focused immigration consultation | https://cwmigrationgroup.com/contact/book-immigration-consultation-canada |
+| Contact Commonwealth Migration Canada | https://cwmigrationgroup.com/contact/book-immigration-consultation-canada |
 
 ## Image Alt Texts
 
@@ -147,8 +147,8 @@ If you are ready to move from general research to a file-specific plan, [book a 
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://commonwealthmigration.ca/assessment/free-canada-immigration-assessment#webpage",
-      "url": "https://commonwealthmigration.ca/assessment/free-canada-immigration-assessment",
+      "@id": "https://cwmigrationgroup.com/assessment/free-canada-immigration-assessment#webpage",
+      "url": "https://cwmigrationgroup.com/assessment/free-canada-immigration-assessment",
       "name": "free Canada immigration assessment 2026 | Commonwealth Migration",
       "description": "Find the strongest next question before paying application fees. Canada-wide support from a licensed RCIC practice. See official rules before applying.",
       "inLanguage": "en-CA",
@@ -156,7 +156,7 @@ If you are ready to move from general research to a file-specific plan, [book a 
       "isPartOf": {
         "@type": "WebSite",
         "name": "Commonwealth Migration Canada",
-        "url": "https://commonwealthmigration.ca"
+        "url": "https://cwmigrationgroup.com"
       },
       "about": {
         "@type": "Thing",
@@ -170,13 +170,13 @@ If you are ready to move from general research to a file-specific plan, [book a 
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://commonwealthmigration.ca"
+          "item": "https://cwmigrationgroup.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "free Canada immigration assessment",
-          "item": "https://commonwealthmigration.ca/assessment/free-canada-immigration-assessment"
+          "item": "https://cwmigrationgroup.com/assessment/free-canada-immigration-assessment"
         }
       ]
     },

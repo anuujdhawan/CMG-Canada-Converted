@@ -1,6 +1,6 @@
 # Municipal Nominee Program (MNP) Canada 2026 | Status, Alternatives | Licensed RCIC
 
-> **Source URL:** https://commonwealthmigration.ca/immigration/municipal-nominee
+> **Source URL:** https://cwmigrationgroup.com/immigration/municipal-nominee
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.7
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Municipal Nominee Program (MNP) Canada 2026 | Status, Alternatives | Licensed RCIC
 - **Meta description:** Canada's Municipal Nominee Program (MNP): current status, proposed structure, anticipated municipal participants, and available alternatives including Atlantic Immigration Program, RCIP, and PNP urban streams. Licensed RCIC guidance.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/immigration/municipal-nominee
+- **Canonical URL:** https://cwmigrationgroup.com/immigration/municipal-nominee
 - **OG title:** Municipal Nominee Program (MNP) Canada 2026 | Licensed RCIC
 - **OG description:** MNP status and best current alternatives for city-based immigration: AIP, RCIP, and PNP streams. Commonwealth Migration guides your urban PR pathway.
 - **Robots:** index, follow
@@ -169,28 +169,28 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://commonwealthmigration.ca/immigration/municipal-nominee#main-content |
-| Make Payment | https://commonwealthmigration.ca/pay |
-| Book Book Consultation | https://commonwealthmigration.ca/book |
-| Home | https://commonwealthmigration.ca/ |
-| Immigration | https://commonwealthmigration.ca/immigration |
-| Book Free Consultation → | https://commonwealthmigration.ca/book |
-| Explore Alternatives | https://commonwealthmigration.ca/immigration/municipal-nominee#alternatives |
-| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| → Atlantic Immigration (AIP) | https://commonwealthmigration.ca/immigration/pnp |
-| → Rural Community Pilot (RCIP) | https://commonwealthmigration.ca/immigration/rural-northern |
-| → Provincial Nominee (PNP) | https://commonwealthmigration.ca/immigration/pnp |
-| → Express Entry | https://commonwealthmigration.ca/immigration/express-entry |
-| Book consultation → | https://commonwealthmigration.ca/book |
-| Learn more | https://commonwealthmigration.ca/immigration/pnp |
-| Learn more | https://commonwealthmigration.ca/immigration/rural-northern |
-| Learn more | https://commonwealthmigration.ca/immigration/express-entry |
-| Book Free Consultation | https://commonwealthmigration.ca/contact |
-| Atlantic Immigration Program | https://commonwealthmigration.ca/immigration/pnp |
-| Rural Community Immigration Pilot | https://commonwealthmigration.ca/immigration/rural-northern |
-| Provincial Nominee Program | https://commonwealthmigration.ca/immigration/pnp |
-| Express Entry | https://commonwealthmigration.ca/immigration/express-entry |
-| TR to PR Pathways | https://commonwealthmigration.ca/immigration/tr-to-pr |
+| Skip to main content | https://cwmigrationgroup.com/immigration/municipal-nominee#main-content |
+| Make Payment | https://cwmigrationgroup.com/pay |
+| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Home | https://cwmigrationgroup.com/ |
+| Immigration | https://cwmigrationgroup.com/immigration |
+| Book Free Consultation → | https://cwmigrationgroup.com/book |
+| Explore Alternatives | https://cwmigrationgroup.com/immigration/municipal-nominee#alternatives |
+| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| → Atlantic Immigration (AIP) | https://cwmigrationgroup.com/immigration/pnp |
+| → Rural Community Pilot (RCIP) | https://cwmigrationgroup.com/immigration/rural-northern |
+| → Provincial Nominee (PNP) | https://cwmigrationgroup.com/immigration/pnp |
+| → Express Entry | https://cwmigrationgroup.com/immigration/express-entry |
+| Book consultation → | https://cwmigrationgroup.com/book |
+| Learn more | https://cwmigrationgroup.com/immigration/pnp |
+| Learn more | https://cwmigrationgroup.com/immigration/rural-northern |
+| Learn more | https://cwmigrationgroup.com/immigration/express-entry |
+| Book Free Consultation | https://cwmigrationgroup.com/contact |
+| Atlantic Immigration Program | https://cwmigrationgroup.com/immigration/pnp |
+| Rural Community Immigration Pilot | https://cwmigrationgroup.com/immigration/rural-northern |
+| Provincial Nominee Program | https://cwmigrationgroup.com/immigration/pnp |
+| Express Entry | https://cwmigrationgroup.com/immigration/express-entry |
+| TR to PR Pathways | https://cwmigrationgroup.com/immigration/tr-to-pr |
 
 ---
 
@@ -203,15 +203,15 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://commonwealthmigration.ca/immigration/municipal-nominee#service","name":"Municipal Nominee Program (MNP) and Urban PR Pathway Consulting","description":"Licensed RCIC guidance on Canada's Municipal Nominee Program status and the best current alternatives for city-based permanent residence.","areaServed":"Canada","serviceType":"Immigration Consulting","provider":{"@type":"Organization","name":"Commonwealth Migration Canada","url":"https://commonwealthmigration.ca"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Municipal Nominee Program","item":"https://commonwealthmigration.ca/immigration/municipal-nominee"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://cwmigrationgroup.com/immigration/municipal-nominee#service","name":"Municipal Nominee Program (MNP) and Urban PR Pathway Consulting","description":"Licensed RCIC guidance on Canada's Municipal Nominee Program status and the best current alternatives for city-based permanent residence.","areaServed":"Canada","serviceType":"Immigration Consulting","provider":{"@type":"Organization","name":"Commonwealth Migration Canada","url":"https://cwmigrationgroup.com"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Municipal Nominee Program","item":"https://cwmigrationgroup.com/immigration/municipal-nominee"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Municipal Nominee Program"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Municipal Nominee Program"}]}
 ```
 
 ```json

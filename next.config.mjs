@@ -33,6 +33,8 @@ const nextConfig = {
       { source: "/tools/document-checklist", destination: "/tools/document-checklist-canada", permanent: true },
       // Interactive tool routes whose old URLs were not represented by a source Markdown file.
       { source: "/tools/free-assessment", destination: "/assessment/free-canada-immigration-assessment", permanent: true },
+      { source: "/contact/contact-immigration-consultant-brampton", destination: "/contact/book-immigration-consultation-canada", permanent: true },
+      { source: "/book", destination: "/contact/book-immigration-consultation-canada", permanent: true },
 
       // Template /programs → new /immigration structure
       { source: "/programs", destination: "/immigration", permanent: true },

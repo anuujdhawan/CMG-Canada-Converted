@@ -1,6 +1,6 @@
 # Make Payment | Licensed RCIC
 
-> **Source URL:** https://commonwealthmigration.ca/pay
+> **Source URL:** https://cwmigrationgroup.com/pay
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.6
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Make Payment | Licensed RCIC
 - **Meta description:** Secure payment for your invoice. Pay with Stripe.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/pay
+- **Canonical URL:** https://cwmigrationgroup.com/pay
 - **OG title:** Licensed RCIC Immigration Consultants | Canada & GTA
 - **OG description:** CICC-regulated RCICs: Express Entry, every PNP stream, employer LMIA (HGT), work permits, study permits, sponsorship, refusals & PFL. Brampton office. Free consult + tools.
 - **Robots:** index, follow
@@ -45,10 +45,10 @@ Your payment is applied directly to your file, and our case team confirms receip
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://commonwealthmigration.ca/pay#main-content |
-| Make Payment | https://commonwealthmigration.ca/pay |
-| Book Book Consultation | https://commonwealthmigration.ca/book |
-| Contact Us | https://commonwealthmigration.ca/contact-us |
+| Skip to main content | https://cwmigrationgroup.com/pay#main-content |
+| Make Payment | https://cwmigrationgroup.com/pay |
+| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Contact Us | https://cwmigrationgroup.com/contact-us |
 
 ---
 
@@ -61,5 +61,5 @@ Your payment is applied directly to your file, and our case team confirms receip
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```

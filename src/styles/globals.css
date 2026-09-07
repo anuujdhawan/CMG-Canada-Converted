@@ -227,6 +227,7 @@ html[data-theme="light"] .cmg-chatbot-lead-form {
 html[data-theme="light"] .cmg-chatbot-lead-form label:not(.cmg-chatbot-lead-consent) span { color: var(--cmg-light-ink, #10151d); }
 html[data-theme="light"] .cmg-chatbot-lead-intro { color: var(--cmg-light-muted, #5d6875); }
 html[data-theme="light"] .cmg-chatbot-lead-form input[type="text"],
+html[data-theme="light"] .cmg-chatbot-lead-form input[type="tel"],
 html[data-theme="light"] .cmg-chatbot-lead-form input[type="email"] {
   border-color: var(--cmg-light-border, var(--brand-border));
   background: #ffffff;
@@ -921,10 +922,20 @@ html[data-theme="light"] .cmg-template-home .faq-item__answer p {
 }
 html[data-theme="light"] .cmg-template-home .hero::before { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 4%, transparent), color-mix(in srgb, var(--cmg-light-bg) 58%, transparent) 145%); }
 html[data-theme="light"] .cmg-template-home .hero-background-carousel .cmg-hero-carousel__wash { background: linear-gradient(90deg, color-mix(in srgb, var(--cmg-light-secondary) 60%, transparent) 0%, color-mix(in srgb, var(--cmg-light-secondary) 38%, transparent) 42%, color-mix(in srgb, var(--cmg-light-secondary) 14%, transparent) 68%, color-mix(in srgb, var(--cmg-light-secondary) 3%, transparent) 100%), linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 9%, transparent) 0%, transparent 62%, color-mix(in srgb, var(--cmg-light-bg) 18%, transparent) 100%); }
-html[data-theme="light"] .cmg-template-home .hero-copy,
-html[data-theme="light"] .cmg-template-home .hero-copy h1 { color: var(--cmg-light-ink); text-shadow: none; }
+html[data-theme="light"] .cmg-template-home .hero-copy h1 {
+  color: var(--cmg-light-ink) !important;
+  -webkit-text-fill-color: var(--cmg-light-ink) !important;
+  text-shadow: none !important;
+}
+html[data-theme="light"] .cmg-template-home .hero-copy { color: var(--cmg-light-ink); text-shadow: none; }
 html[data-theme="light"] .cmg-template-home .hero-copy .lead { color: var(--cmg-light-muted) !important; text-shadow: none; }
 html[data-theme="light"] .cmg-template-home .hero-copy .eyebrow { color: var(--primary); text-shadow: none; }
+html[data-theme="light"] .cmg-template-home .pathways-section-head h2 {
+  color: var(--cmg-light-ink) !important;
+  -webkit-text-fill-color: var(--cmg-light-ink) !important;
+  text-shadow: none !important;
+}
+html[data-theme="light"] .cmg-template-home .pathways-section-head > p { color: var(--cmg-light-muted) !important; }
 html[data-theme="light"] .cmg-template-home .hero-copy .btn-secondary {
   background: var(--cmg-light-secondary) !important;
   border-color: var(--cmg-light-border) !important;
@@ -1785,6 +1796,7 @@ html[data-theme="light"] .cmg-template-home .visual-card__footer strong {
   .tool-input,
 .cmg-chatbot-search input,
 .cmg-chatbot-lead-form input[type="text"],
+.cmg-chatbot-lead-form input[type="tel"],
 .cmg-chatbot-lead-form input[type="email"],
 .consultation-form-fields input:not([type="checkbox"]),
 .consultation-form-fields select,
@@ -1843,5 +1855,69 @@ input[type="submit"] {
   .cmg-floating-bubble:not(.cmg-chatbot-root--open) {
     right: 0.75rem !important;
     left: auto !important;
+  }
+}
+
+/* Light-mode contrast guards for the shared service surfaces.  The open FAQ
+   card intentionally keeps its red/black treatment, so its answer must stay
+   on the on-primary color instead of inheriting the page's muted ink. */
+html[data-theme="light"] .cmg-template-home .faq-list .faq-item[open] .faq-item__answer p {
+  color: var(--cmg-light-on-primary, #ffffff) !important;
+  -webkit-text-fill-color: var(--cmg-light-on-primary, #ffffff) !important;
+}
+
+/* Service pages use a pale CTA surface in light mode.  The component markup
+   carries dark-theme on-primary utilities for the alternate theme, so these
+   declarations deliberately reassert readable light-theme values. */
+html[data-theme="light"] .cmg-template-service .cta-section {
+  background: var(--cmg-light-bg, #f6f7f9) !important;
+  border-top: 1px solid var(--cmg-light-border, rgba(7, 13, 22, 0.14));
+  border-bottom: 1px solid var(--cmg-light-border, rgba(7, 13, 22, 0.14));
+  color: var(--cmg-light-ink, #10151d) !important;
+}
+
+html[data-theme="light"] .cmg-template-service .cta-section h2 {
+  color: var(--cmg-light-ink, #10151d) !important;
+  -webkit-text-fill-color: var(--cmg-light-ink, #10151d) !important;
+}
+
+html[data-theme="light"] .cmg-template-service .cta-section p {
+  color: var(--cmg-light-muted, #5d6875) !important;
+  -webkit-text-fill-color: var(--cmg-light-muted, #5d6875) !important;
+}
+
+html[data-theme="light"] .cmg-template-service .cta-section a.btn {
+  background: var(--cmg-light-surface, #ffffff) !important;
+  border-color: var(--cmg-light-border, rgba(7, 13, 22, 0.14)) !important;
+  color: var(--cmg-light-ink, #10151d) !important;
+  -webkit-text-fill-color: var(--cmg-light-ink, #10151d) !important;
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--cmg-light-ink, #10151d) 8%, transparent), 0 2px 8px color-mix(in srgb, var(--cmg-light-ink, #10151d) 6%, transparent);
+}
+
+html[data-theme="light"] .cmg-template-service .cta-section a.btn:hover,
+html[data-theme="light"] .cmg-template-service .cta-section a.btn:focus-visible {
+  background: var(--cmg-light-ink, #10151d) !important;
+  border-color: var(--cmg-light-ink, #10151d) !important;
+  color: var(--cmg-light-on-primary, #ffffff) !important;
+  -webkit-text-fill-color: var(--cmg-light-on-primary, #ffffff) !important;
+}
+
+/* Important Tailwind text utilities live in the utilities layer.  Keep these
+   final theme guards in that same layer so their light-mode values win the
+   cascade when the component intentionally uses a dark-theme utility class. */
+@layer utilities {
+  html[data-theme="light"] .cmg-template-home .faq-list .faq-item[open] .faq-item__answer p {
+    color: var(--cmg-light-on-primary, #ffffff) !important;
+    -webkit-text-fill-color: var(--cmg-light-on-primary, #ffffff) !important;
+  }
+
+  html[data-theme="light"] .cmg-template-service .cta-section h2 {
+    color: var(--cmg-light-ink, #10151d) !important;
+    -webkit-text-fill-color: var(--cmg-light-ink, #10151d) !important;
+  }
+
+  html[data-theme="light"] .cmg-template-service .cta-section p {
+    color: var(--cmg-light-muted, #5d6875) !important;
+    -webkit-text-fill-color: var(--cmg-light-muted, #5d6875) !important;
   }
 }

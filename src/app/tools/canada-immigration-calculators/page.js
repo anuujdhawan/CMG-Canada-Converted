@@ -1,16 +1,18 @@
 import { getPage } from "@/lib/sitePages";
-import ContentPage, { rebrand } from "@/components/templates/ContentPage";
+import ContentPage from "@/components/templates/ContentPage";
 import InteractiveToolsGrid from "@/components/sections/InteractiveToolsGrid";
 import PageIndexGrid from "@/components/sections/PageIndexGrid";
+import { buildMetadata } from "@/lib/seo";
 
 const pagePath = "/tools/canada-immigration-calculators";
 const toolsPage = getPage(pagePath);
 
-export const metadata = {
-  title: { absolute: rebrand(toolsPage?.seo.title || "Free Canadian Immigration Calculators") },
-  description: rebrand(toolsPage?.seo.description || "Free Canadian immigration calculators and eligibility tools."),
-  alternates: { canonical: pagePath },
-};
+export const metadata = buildMetadata({
+  title: "Canada Immigration Calculators | CRS & PNP",
+  description: "Use free Canada immigration calculators for CRS, PNP, CLB and FSW planning. Compare your estimate with current IRCC criteria before you apply.",
+  path: pagePath,
+  keywords: ["Canada immigration calculators", "CRS calculator", "PNP eligibility checker"],
+});
 
 export default function ToolsPage() {
   if (!toolsPage) return null;

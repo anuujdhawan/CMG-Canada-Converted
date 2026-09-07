@@ -1,6 +1,6 @@
 # LMIA Employer Services Canada 2026 | Full Application Management | Licensed RCIC
 
-> **Source URL:** https://commonwealthmigration.ca/for-employers/lmia
+> **Source URL:** https://cwmigrationgroup.com/for-employers/lmia
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** LMIA Employer Services Canada 2026 | Full Application Management | Licensed RCIC
 - **Meta description:** LMIA services for Canadian employers: high-wage, low-wage, agricultural, caregiver and GTS. Job Bank, ESDC, compliance. 500+ LMIAs filed. Licensed RCIC-led.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/for-employers/lmia
+- **Canonical URL:** https://cwmigrationgroup.com/for-employers/lmia
 - **OG title:** LMIA Employer Services 2026 | All Streams | Licensed RCIC
 - **OG description:** Full LMIA application management: advertising, ESDC submission, compliance, work permit support. All streams. Free employer consultation.
 - **Robots:** index, follow
@@ -353,24 +353,24 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://commonwealthmigration.ca/for-employers/lmia#main-content |
-| Make Payment | https://commonwealthmigration.ca/pay |
-| Book Book Consultation | https://commonwealthmigration.ca/book |
-| Home | https://commonwealthmigration.ca/ |
-| For Employers | https://commonwealthmigration.ca/for-employers |
-| Book Employer Consultation → | https://commonwealthmigration.ca/book |
-| LMIA Refusal Help | https://commonwealthmigration.ca/for-employers/lmia-refusal |
-| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| Get refusal help → → | https://commonwealthmigration.ca/for-employers/lmia-refusal |
-| Free employer consultation | https://commonwealthmigration.ca/book |
-| Learn more about GTS | https://commonwealthmigration.ca/for-employers/global-talent-stream |
-| PNP Employer Support | https://commonwealthmigration.ca/for-employers/pnp-employer-support |
-| Get LMIA Refusal Help | https://commonwealthmigration.ca/for-employers/lmia-refusal |
-| Book Free Consultation | https://commonwealthmigration.ca/contact |
-| All Employer Services | https://commonwealthmigration.ca/for-employers |
-| Global Talent Stream | https://commonwealthmigration.ca/for-employers/global-talent-stream |
-| Employer Compliance | https://commonwealthmigration.ca/for-employers/employer-compliance |
-| Book Free Consultation → | https://commonwealthmigration.ca/book |
+| Skip to main content | https://cwmigrationgroup.com/for-employers/lmia#main-content |
+| Make Payment | https://cwmigrationgroup.com/pay |
+| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Home | https://cwmigrationgroup.com/ |
+| For Employers | https://cwmigrationgroup.com/for-employers |
+| Book Employer Consultation → | https://cwmigrationgroup.com/book |
+| LMIA Refusal Help | https://cwmigrationgroup.com/for-employers/lmia-refusal |
+| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| Get refusal help → → | https://cwmigrationgroup.com/for-employers/lmia-refusal |
+| Free employer consultation | https://cwmigrationgroup.com/book |
+| Learn more about GTS | https://cwmigrationgroup.com/for-employers/global-talent-stream |
+| PNP Employer Support | https://cwmigrationgroup.com/for-employers/pnp-employer-support |
+| Get LMIA Refusal Help | https://cwmigrationgroup.com/for-employers/lmia-refusal |
+| Book Free Consultation | https://cwmigrationgroup.com/contact |
+| All Employer Services | https://cwmigrationgroup.com/for-employers |
+| Global Talent Stream | https://cwmigrationgroup.com/for-employers/global-talent-stream |
+| Employer Compliance | https://cwmigrationgroup.com/for-employers/employer-compliance |
+| Book Free Consultation → | https://cwmigrationgroup.com/book |
 
 ---
 
@@ -383,15 +383,15 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://commonwealthmigration.ca/for-employers/lmia#service","name":"LMIA Application Management for Canadian Employers","description":"Full LMIA application management for Canadian employers: high-wage, low-wage, agricultural, caregiver, Global Talent Stream. Job Bank advertising, ESDC submission, compliance, and work permit support.","areaServed":"Canada","serviceType":"Immigration Consulting"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"For Employers","item":"https://commonwealthmigration.ca/for-employers"},{"@type":"ListItem","position":3,"name":"LMIA Employer Services","item":"https://commonwealthmigration.ca/for-employers/lmia"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://cwmigrationgroup.com/for-employers/lmia#service","name":"LMIA Application Management for Canadian Employers","description":"Full LMIA application management for Canadian employers: high-wage, low-wage, agricultural, caregiver, Global Talent Stream. Job Bank advertising, ESDC submission, compliance, and work permit support.","areaServed":"Canada","serviceType":"Immigration Consulting"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"For Employers","item":"https://cwmigrationgroup.com/for-employers"},{"@type":"ListItem","position":3,"name":"LMIA Employer Services","item":"https://cwmigrationgroup.com/for-employers/lmia"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"For Employers","item":"https://commonwealthmigration.ca/for-employers"},{"@type":"ListItem","position":3,"name":"LMIA Services"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"For Employers","item":"https://cwmigrationgroup.com/for-employers"},{"@type":"ListItem","position":3,"name":"LMIA Services"}]}
 ```
 
 ```json

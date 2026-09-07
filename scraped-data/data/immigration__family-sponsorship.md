@@ -1,6 +1,6 @@
 # Family Sponsorship Canada 2026 | Spouse, Children & Parents | Licensed RCIC
 
-> **Source URL:** https://commonwealthmigration.ca/immigration/family-sponsorship
+> **Source URL:** https://cwmigrationgroup.com/immigration/family-sponsorship
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Family Sponsorship Canada 2026 | Spouse, Children & Parents | Licensed RCIC
 - **Meta description:** Sponsor your spouse, children, or parents for Canadian PR. Inland vs outland strategy, SOWP, PGP Super Visa, IAD appeals. Licensed RCIC. Free assessment.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/immigration/family-sponsorship
+- **Canonical URL:** https://cwmigrationgroup.com/immigration/family-sponsorship
 - **OG title:** Family Sponsorship Canada 2026 | Licensed RCIC
 - **OG description:** Spouse, children, parents - inland vs outland, Super Visa, IAD. Licensed RCIC.
 - **Robots:** index, follow
@@ -301,47 +301,47 @@ Toronto · Brampton · Mississauga · Markham · Vaughan · Ottawa · Vancouver 
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://commonwealthmigration.ca/immigration/family-sponsorship#main-content |
-| Make Payment | https://commonwealthmigration.ca/pay |
-| Book Book Consultation | https://commonwealthmigration.ca/book |
-| Home | https://commonwealthmigration.ca/ |
-| Immigration | https://commonwealthmigration.ca/immigration |
-| Book Free Consultation → | https://commonwealthmigration.ca/book |
-| Check My Eligibility | https://commonwealthmigration.ca/tools |
-| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| → Spousal sponsorship hub | https://commonwealthmigration.ca/immigration/spousal-sponsorship |
-| → Super Visa (parents) | https://commonwealthmigration.ca/immigration/super-visa |
-| → PGP information | https://commonwealthmigration.ca/immigration/pgp |
-| → Spousal open work permit | https://commonwealthmigration.ca/immigration/spousal-work-permit |
-| → Refusals & appeals | https://commonwealthmigration.ca/refusals |
-| Book consultation → | https://commonwealthmigration.ca/book |
-| MOST COMMON My spouse or partner Sponsoring a legally married spouse, common-law partner (12+ months cohabitation), or conjugal partner. Choose inland or outland based on timeline and travel needs. ✓ Outland ~15 months · Inland ~21 months (Mar 2026) ✓ SOWP available after AOR (inland) ✓ Remote interviews from Jan 16, 2026 Spousal sponsorship details → | https://commonwealthmigration.ca/immigration/family-sponsorship#spousal |
-| FAMILY My children Sponsoring dependent children under 22, unmarried - or over 22 if financially dependent due to a physical or mental condition. ✓ Often included in the same application ✓ Age lock-in rules - timing matters ✓ Undeclared family member risks Children sponsorship → | https://commonwealthmigration.ca/immigration/family-sponsorship#family-members |
-| PARENTS My parents or grandparents PGP is closed to new applications in 2026. The Super Visa is the best option for extended family visits while waiting for PGP to reopen. ✓ PGP not accepting new apps in 2026 ✓ Super Visa: up to 5 years per visit ✓ Past PGP invitees still processing Parents & Super Visa → | https://commonwealthmigration.ca/immigration/family-sponsorship#parents |
-| Spousal / Common-Law Sponsorship Sponsor your legally married spouse or common-law partner (12+ months cohabitation) for Canadian PR. We manages the complete application - forms, relationship evidence, and IRCC follow-up. Outland ~15 mo · Inland ~21 mo | https://commonwealthmigration.ca/immigration/spousal-sponsorship |
-| Conjugal Partner Sponsorship For couples in a committed 1+ year relationship who cannot cohabit or marry due to exceptional circumstances - immigration barriers, legal restrictions, or other genuine obstacles. Exceptional circumstances | https://commonwealthmigration.ca/immigration/spousal-sponsorship |
-| Outland Sponsorship Your partner applies from outside Canada (or while visiting). Faster - ~15 months March 2026. Preserves full appeal rights. Travel flexibility. Recommended strategy for most couples. Recommended · ~15 months | https://commonwealthmigration.ca/immigration/spousal-sponsorship |
-| Inland Sponsorship Your partner is already in Canada and applies from inside. ~21 months. SOWP available after AOR. Travel outside Canada risks application abandonment - plan carefully. In Canada · ~21 months | https://commonwealthmigration.ca/immigration/spousal-sponsorship |
-| Spousal Open Work Permit (SOWP) Inland applicants can apply for an open work permit after Acknowledgement of Receipt (AOR). Outland applicants may also qualify in certain cases. We applies for SOWP at the right time. After AOR | https://commonwealthmigration.ca/immigration/spousal-work-permit |
-| Compare Inland vs Outland → | https://commonwealthmigration.ca/immigration/spousal-sponsorship#inland-outland |
-| Call contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| Dependent children Children under 22, unmarried, and not in a common-law relationship. Or 22+ if financially dependent due to a physical or mental condition. Age lock-in at time of application - timing matters. Under 22 · Age lock-in | https://commonwealthmigration.ca/immigration/family-sponsorship |
-| Adopted children Adoption overseas requires satisfying both Canadian and the child's country requirements. Commonwealth Migration advises on the intersection of adoption law and immigration requirements. Dual-country requirements | https://commonwealthmigration.ca/immigration/family-sponsorship |
-| Undeclared family members Failing to declare a family member at the time of your own immigration can permanently bar that person from being sponsored later. We review your immigration history before filing. Critical - review history | https://commonwealthmigration.ca/immigration/family-sponsorship |
-| Orphaned relatives Orphaned siblings, nieces, nephews, or grandchildren under 18 who are unmarried may qualify in limited exceptional circumstances. Requires careful legal assessment. Exceptional only | https://commonwealthmigration.ca/contact-us |
-| Parents & Grandparents Program (PGP) PGP is not accepting new applications in 2026. Past invitees whose applications are already in process continue to be handled. We monitor PGP intake announcements for future years. Closed 2026 - monitor for reopening PGP closed · Super Visa is the 2026 solution | https://commonwealthmigration.ca/immigration/pgp |
-| Super Visa for Parents & Grandparents Parents and grandparents of Canadian citizens and PRs can visit for up to 5 years per entry, valid for 10 years. Requires $100K+ health insurance and proof of sponsor income (LICO). Up to 5 years per stay | https://commonwealthmigration.ca/immigration/super-visa |
-| Humanitarian & compassionate (H&C) When you don't qualify under standard family class rules, an H&C application asks IRCC to grant permanent residence for compelling reasons - hardship, ties to Canada, or best interests of a child. Separate from sponsorship; evidence-heavy and discretionary. Exceptional cases · Not a sponsorship stream | https://commonwealthmigration.ca/refusals |
-| contact us | https://commonwealthmigration.ca/contact-us |
-| Book Refusal Review → | https://commonwealthmigration.ca/book |
-| Spousal Sponsorship → | https://commonwealthmigration.ca/immigration/spousal-sponsorship |
-| Super Visa → | https://commonwealthmigration.ca/immigration/super-visa |
-| PGP Info → | https://commonwealthmigration.ca/immigration/pgp |
-| Express Entry → | https://commonwealthmigration.ca/immigration/express-entry |
-| Visitor Visa → | https://commonwealthmigration.ca/immigration/visitor-visa |
-| Spousal Work Permit → | https://commonwealthmigration.ca/immigration/spousal-work-permit |
-| Sponsorship Refusals → | https://commonwealthmigration.ca/refusals |
-| Inadmissibility → | https://commonwealthmigration.ca/appeals/criminal-inadmissibility |
+| Skip to main content | https://cwmigrationgroup.com/immigration/family-sponsorship#main-content |
+| Make Payment | https://cwmigrationgroup.com/pay |
+| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Home | https://cwmigrationgroup.com/ |
+| Immigration | https://cwmigrationgroup.com/immigration |
+| Book Free Consultation → | https://cwmigrationgroup.com/book |
+| Check My Eligibility | https://cwmigrationgroup.com/tools |
+| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| → Spousal sponsorship hub | https://cwmigrationgroup.com/immigration/spousal-sponsorship |
+| → Super Visa (parents) | https://cwmigrationgroup.com/immigration/super-visa |
+| → PGP information | https://cwmigrationgroup.com/immigration/pgp |
+| → Spousal open work permit | https://cwmigrationgroup.com/immigration/spousal-work-permit |
+| → Refusals & appeals | https://cwmigrationgroup.com/refusals |
+| Book consultation → | https://cwmigrationgroup.com/book |
+| MOST COMMON My spouse or partner Sponsoring a legally married spouse, common-law partner (12+ months cohabitation), or conjugal partner. Choose inland or outland based on timeline and travel needs. ✓ Outland ~15 months · Inland ~21 months (Mar 2026) ✓ SOWP available after AOR (inland) ✓ Remote interviews from Jan 16, 2026 Spousal sponsorship details → | https://cwmigrationgroup.com/immigration/family-sponsorship#spousal |
+| FAMILY My children Sponsoring dependent children under 22, unmarried - or over 22 if financially dependent due to a physical or mental condition. ✓ Often included in the same application ✓ Age lock-in rules - timing matters ✓ Undeclared family member risks Children sponsorship → | https://cwmigrationgroup.com/immigration/family-sponsorship#family-members |
+| PARENTS My parents or grandparents PGP is closed to new applications in 2026. The Super Visa is the best option for extended family visits while waiting for PGP to reopen. ✓ PGP not accepting new apps in 2026 ✓ Super Visa: up to 5 years per visit ✓ Past PGP invitees still processing Parents & Super Visa → | https://cwmigrationgroup.com/immigration/family-sponsorship#parents |
+| Spousal / Common-Law Sponsorship Sponsor your legally married spouse or common-law partner (12+ months cohabitation) for Canadian PR. We manages the complete application - forms, relationship evidence, and IRCC follow-up. Outland ~15 mo · Inland ~21 mo | https://cwmigrationgroup.com/immigration/spousal-sponsorship |
+| Conjugal Partner Sponsorship For couples in a committed 1+ year relationship who cannot cohabit or marry due to exceptional circumstances - immigration barriers, legal restrictions, or other genuine obstacles. Exceptional circumstances | https://cwmigrationgroup.com/immigration/spousal-sponsorship |
+| Outland Sponsorship Your partner applies from outside Canada (or while visiting). Faster - ~15 months March 2026. Preserves full appeal rights. Travel flexibility. Recommended strategy for most couples. Recommended · ~15 months | https://cwmigrationgroup.com/immigration/spousal-sponsorship |
+| Inland Sponsorship Your partner is already in Canada and applies from inside. ~21 months. SOWP available after AOR. Travel outside Canada risks application abandonment - plan carefully. In Canada · ~21 months | https://cwmigrationgroup.com/immigration/spousal-sponsorship |
+| Spousal Open Work Permit (SOWP) Inland applicants can apply for an open work permit after Acknowledgement of Receipt (AOR). Outland applicants may also qualify in certain cases. We applies for SOWP at the right time. After AOR | https://cwmigrationgroup.com/immigration/spousal-work-permit |
+| Compare Inland vs Outland → | https://cwmigrationgroup.com/immigration/spousal-sponsorship#inland-outland |
+| Call contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| Dependent children Children under 22, unmarried, and not in a common-law relationship. Or 22+ if financially dependent due to a physical or mental condition. Age lock-in at time of application - timing matters. Under 22 · Age lock-in | https://cwmigrationgroup.com/immigration/family-sponsorship |
+| Adopted children Adoption overseas requires satisfying both Canadian and the child's country requirements. Commonwealth Migration advises on the intersection of adoption law and immigration requirements. Dual-country requirements | https://cwmigrationgroup.com/immigration/family-sponsorship |
+| Undeclared family members Failing to declare a family member at the time of your own immigration can permanently bar that person from being sponsored later. We review your immigration history before filing. Critical - review history | https://cwmigrationgroup.com/immigration/family-sponsorship |
+| Orphaned relatives Orphaned siblings, nieces, nephews, or grandchildren under 18 who are unmarried may qualify in limited exceptional circumstances. Requires careful legal assessment. Exceptional only | https://cwmigrationgroup.com/contact-us |
+| Parents & Grandparents Program (PGP) PGP is not accepting new applications in 2026. Past invitees whose applications are already in process continue to be handled. We monitor PGP intake announcements for future years. Closed 2026 - monitor for reopening PGP closed · Super Visa is the 2026 solution | https://cwmigrationgroup.com/immigration/pgp |
+| Super Visa for Parents & Grandparents Parents and grandparents of Canadian citizens and PRs can visit for up to 5 years per entry, valid for 10 years. Requires $100K+ health insurance and proof of sponsor income (LICO). Up to 5 years per stay | https://cwmigrationgroup.com/immigration/super-visa |
+| Humanitarian & compassionate (H&C) When you don't qualify under standard family class rules, an H&C application asks IRCC to grant permanent residence for compelling reasons - hardship, ties to Canada, or best interests of a child. Separate from sponsorship; evidence-heavy and discretionary. Exceptional cases · Not a sponsorship stream | https://cwmigrationgroup.com/refusals |
+| contact us | https://cwmigrationgroup.com/contact-us |
+| Book Refusal Review → | https://cwmigrationgroup.com/book |
+| Spousal Sponsorship → | https://cwmigrationgroup.com/immigration/spousal-sponsorship |
+| Super Visa → | https://cwmigrationgroup.com/immigration/super-visa |
+| PGP Info → | https://cwmigrationgroup.com/immigration/pgp |
+| Express Entry → | https://cwmigrationgroup.com/immigration/express-entry |
+| Visitor Visa → | https://cwmigrationgroup.com/immigration/visitor-visa |
+| Spousal Work Permit → | https://cwmigrationgroup.com/immigration/spousal-work-permit |
+| Sponsorship Refusals → | https://cwmigrationgroup.com/refusals |
+| Inadmissibility → | https://cwmigrationgroup.com/appeals/criminal-inadmissibility |
 
 ---
 
@@ -354,5 +354,5 @@ Toronto · Brampton · Mississauga · Markham · Vaughan · Ottawa · Vancouver 
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```

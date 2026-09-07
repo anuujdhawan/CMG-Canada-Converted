@@ -1,6 +1,5 @@
 import { buildMetadata } from "@/lib/seo";
 import { getPage } from "@/lib/sitePages";
-import { rebrand } from "@/components/templates/ContentPage";
 import ToolShell from "@/components/templates/ToolShell";
 import DocumentChecklist from "@/components/tools/DocumentChecklist";
 
@@ -8,9 +7,10 @@ const pagePath = "/tools/document-checklist-canada";
 const page = getPage(pagePath);
 
 export const metadata = buildMetadata({
-  title: rebrand(page?.seo.title || page?.h1 || "Document Checklist"),
-  description: rebrand(page?.seo.description || "A step-by-step checklist of documents needed for common Canadian immigration application types."),
+  title: "Canada Immigration Document Checklist | Express Entry",
+  description: "Use a Canada immigration document checklist for Express Entry, study permits, work permits and sponsorship. Organize your file, then verify the IRCC guide.",
   path: pagePath,
+  keywords: ["Canada immigration document checklist", "Express Entry document checklist", "immigration documents Canada"],
 });
 
 export default function DocumentChecklistPage() {

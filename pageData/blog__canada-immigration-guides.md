@@ -1,18 +1,18 @@
 # Blog: clearer information for your next step
 
-> **Source URL:** https://commonwealthmigration.ca/blog
+> **Source URL:** https://cwmigrationgroup.com/blog
 > **Last modified:** 2026-08-19
 > **Sitemap priority:** 0.9
 > **Status:** ✅ Fresh English rewrite | SEO/GEO/AEO reviewed
 
 ## SEO Metadata
 
-- **Title tag:** A practical guide to Blog | Commonwealth Migration
-- **Meta description:** Read a practical blog guide, then verify the current official Canada immigration requirements before acting. See official rules before applying.
-- **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/blog
+- **Title tag:** Canada Immigration Blog | Express Entry & Work
+- **Meta description:** Read practical Canada immigration guides on Express Entry, PNP, work and study permits, family sponsorship, visitor visas and refusals. Verify current rules.
+- **Meta keywords:** Canada immigration blog, Express Entry guides, Canadian immigration advice
+- **Canonical URL:** https://cwmigrationgroup.com/blog
 - **OG title:** Blog | Commonwealth Migration
-- **OG description:** Read a practical blog guide, then verify the current official Canada immigration requirements before acting. See official rules before applying.
+- **OG description:** Read Canadian immigration guides on Express Entry, work permits, study permits, family sponsorship and refusals, then verify the current official requirements before acting.
 - **Robots:** index, follow
 
 ## Heading Outline
@@ -32,7 +32,7 @@
 
 # Blog: clearer information for your next step
 
-This page gives you a clearer way to think about blog: start with the decision, gather the evidence and check the current official source.
+Read Canadian immigration guides on Express Entry, work permits, study permits, family sponsorship and refusals. Use each article as a starting point, then check the current official source for your situation.
 
 - eligibility and admissibility
 - documents and timing
@@ -92,7 +92,7 @@ Use the official source, regulator or decision-maker link before paying fees or 
 
 
 
-For the current rule, review the [official IRCC immigration hub](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html) and compare it with the [verify an RCIC on the CICC register](https://www.cicc-ccic.ca/register/). When the issue is personal, urgent or legally complex, ask an authorized representative or lawyer to review the complete record.
+For the current rule, review the [official IRCC immigration hub](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html) and compare it with the [verify an RCIC on the CICC register](https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx). When the issue is personal, urgent or legally complex, ask an authorized representative or lawyer to review the complete record.
 
 
 
@@ -120,16 +120,16 @@ Use this guide for preparation, then confirm current requirements with the offic
 
 
 
-If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
+If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://cwmigrationgroup.com/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
 
 ## Links & CTAs on this page
 
 | Anchor text | URL |
 | --- | --- |
 | official IRCC immigration hub | https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html |
-| verify an RCIC on the CICC register | https://www.cicc-ccic.ca/register/ |
-| Book a focused immigration consultation | https://commonwealthmigration.ca/contact/book-immigration-consultation-canada |
-| Contact Commonwealth Migration Canada | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| verify an RCIC on the CICC register | https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx |
+| Book a focused immigration consultation | https://cwmigrationgroup.com/contact/book-immigration-consultation-canada |
+| Contact Commonwealth Migration Canada | https://cwmigrationgroup.com/contact/book-immigration-consultation-canada |
 
 ## Image Alt Texts
 
@@ -143,8 +143,8 @@ If you are ready to move from general research to a file-specific plan, [book a 
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://commonwealthmigration.ca/blog#webpage",
-      "url": "https://commonwealthmigration.ca/blog",
+      "@id": "https://cwmigrationgroup.com/blog#webpage",
+      "url": "https://cwmigrationgroup.com/blog",
       "name": "A practical guide to Blog | Commonwealth Migration",
       "description": "Read a practical blog guide, then verify the current official Canada immigration requirements before acting. See official rules before applying.",
       "inLanguage": "en-CA",
@@ -152,7 +152,7 @@ If you are ready to move from general research to a file-specific plan, [book a 
       "isPartOf": {
         "@type": "WebSite",
         "name": "Commonwealth Migration Canada",
-        "url": "https://commonwealthmigration.ca"
+        "url": "https://cwmigrationgroup.com"
       },
       "about": {
         "@type": "Thing",
@@ -166,13 +166,13 @@ If you are ready to move from general research to a file-specific plan, [book a 
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://commonwealthmigration.ca"
+          "item": "https://cwmigrationgroup.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Blog",
-          "item": "https://commonwealthmigration.ca/blog"
+          "item": "https://cwmigrationgroup.com/blog"
         }
       ]
     },

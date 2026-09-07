@@ -1,6 +1,6 @@
 # Newfoundland PNP (NLPNP) 2026 | Priority Skills NL & Streams | Licensed RCIC
 
-> **Source URL:** https://commonwealthmigration.ca/immigration/pnp/newfoundland
+> **Source URL:** https://cwmigrationgroup.com/immigration/pnp/newfoundland
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.7
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Newfoundland PNP (NLPNP) 2026 | Priority Skills NL & Streams | Licensed RCIC
 - **Meta description:** Newfoundland NLPNP 2026 - Priority Skills NL (no EE required), International Graduate, Skilled Worker and AIP. Healthcare, trades, engineering. Licensed RCIC.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/immigration/pnp/newfoundland
+- **Canonical URL:** https://cwmigrationgroup.com/immigration/pnp/newfoundland
 - **OG title:** NLPNP 2026 | Priority Skills NL - No Express Entry Required | Licensed RCIC
 - **OG description:** Priority Skills NL bypasses the federal Express Entry pool. Healthcare workers, engineers, and trades can apply directly. Commonwealth Migration identifies the right stream for your profile.
 - **Robots:** index, follow
@@ -337,30 +337,30 @@ Serving NL immigration clients in St. John's · Corner Brook · Gander · Labrad
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://commonwealthmigration.ca/immigration/pnp/newfoundland#main-content |
-| Make Payment | https://commonwealthmigration.ca/pay |
-| Book Book Consultation | https://commonwealthmigration.ca/book |
-| Home | https://commonwealthmigration.ca/ |
-| Immigration | https://commonwealthmigration.ca/immigration |
-| PNP | https://commonwealthmigration.ca/immigration/pnp |
-| Book NLPNP Assessment → | https://commonwealthmigration.ca/free-assessment |
-| Check My Eligibility | https://commonwealthmigration.ca/tools |
-| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| → Nova Scotia NSNP | https://commonwealthmigration.ca/immigration/pnp/nova-scotia |
-| → New Brunswick | https://commonwealthmigration.ca/immigration/pnp/new-brunswick |
-| → PEI PNP | https://commonwealthmigration.ca/immigration/pnp/pei |
-| Free assessment → | https://commonwealthmigration.ca/free-assessment |
-| Confirm My Priority Skills NL Eligibility → | https://commonwealthmigration.ca/free-assessment |
-| Book AIP Employer + Worker consult → | https://commonwealthmigration.ca/book |
-| Book Free Consultation | https://commonwealthmigration.ca/contact |
-| Book Free NLPNP Assessment → | https://commonwealthmigration.ca/free-assessment |
-| View All PNP Programs | https://commonwealthmigration.ca/immigration/pnp |
-| PNP Hub → All provincial programs | https://commonwealthmigration.ca/immigration/pnp |
-| Nova Scotia NSNP → Atlantic Canada | https://commonwealthmigration.ca/immigration/pnp/nova-scotia |
-| New Brunswick → Atlantic Canada | https://commonwealthmigration.ca/immigration/pnp/new-brunswick |
-| PEI PNP → Prince Edward Island | https://commonwealthmigration.ca/immigration/pnp/pei |
-| Express Entry → Federal skilled worker | https://commonwealthmigration.ca/immigration/express-entry |
-| Work Permit → Bridge to PR | https://commonwealthmigration.ca/immigration/work-permit |
+| Skip to main content | https://cwmigrationgroup.com/immigration/pnp/newfoundland#main-content |
+| Make Payment | https://cwmigrationgroup.com/pay |
+| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Home | https://cwmigrationgroup.com/ |
+| Immigration | https://cwmigrationgroup.com/immigration |
+| PNP | https://cwmigrationgroup.com/immigration/pnp |
+| Book NLPNP Assessment → | https://cwmigrationgroup.com/free-assessment |
+| Check My Eligibility | https://cwmigrationgroup.com/tools |
+| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| → Nova Scotia NSNP | https://cwmigrationgroup.com/immigration/pnp/nova-scotia |
+| → New Brunswick | https://cwmigrationgroup.com/immigration/pnp/new-brunswick |
+| → PEI PNP | https://cwmigrationgroup.com/immigration/pnp/pei |
+| Free assessment → | https://cwmigrationgroup.com/free-assessment |
+| Confirm My Priority Skills NL Eligibility → | https://cwmigrationgroup.com/free-assessment |
+| Book AIP Employer + Worker consult → | https://cwmigrationgroup.com/book |
+| Book Free Consultation | https://cwmigrationgroup.com/contact |
+| Book Free NLPNP Assessment → | https://cwmigrationgroup.com/free-assessment |
+| View All PNP Programs | https://cwmigrationgroup.com/immigration/pnp |
+| PNP Hub → All provincial programs | https://cwmigrationgroup.com/immigration/pnp |
+| Nova Scotia NSNP → Atlantic Canada | https://cwmigrationgroup.com/immigration/pnp/nova-scotia |
+| New Brunswick → Atlantic Canada | https://cwmigrationgroup.com/immigration/pnp/new-brunswick |
+| PEI PNP → Prince Edward Island | https://cwmigrationgroup.com/immigration/pnp/pei |
+| Express Entry → Federal skilled worker | https://cwmigrationgroup.com/immigration/express-entry |
+| Work Permit → Bridge to PR | https://cwmigrationgroup.com/immigration/work-permit |
 
 ---
 
@@ -373,13 +373,13 @@ Serving NL immigration clients in St. John's · Corner Brook · Gander · Labrad
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://commonwealthmigration.ca/immigration/pnp/newfoundland#webpage","url":"https://commonwealthmigration.ca/immigration/pnp/newfoundland","name":"Newfoundland NLPNP 2026","description":"Newfoundland NLPNP 2026 - Priority Skills NL (no EE required), International Graduate, Skilled Worker and AIP. Healthcare, trades, engineering. Licensed RCIC."},{"@type":"Service","name":"Commonwealth Migration Newfoundland NLPNP & AIP Support","serviceType":"Immigration Consulting","provider":{"@type":"LocalBusiness","name":"Licensed Regulated Canadian Immigration Consultants","address":"Canada-wide service by appointment, Brampton, Ontario"},"areaServed":{"@type":"AdministrativeArea","name":"Newfoundland and Labrador"},"description":"Licensed RCIC guidance for NLPNP - Priority Skills NL (no EE required), Express Entry Skilled Worker, International Graduate, Skilled Worker (employer job offer), and Atlantic Immigration Program employer designation. Healthcare, oil and gas, engineering, and trades specialization."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"PNP","item":"https://commonwealthmigration.ca/immigration/pnp"},{"@type":"ListItem","position":4,"name":"Newfoundland and Labrador","item":"https://commonwealthmigration.ca/immigration/pnp/newfoundland"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cwmigrationgroup.com/immigration/pnp/newfoundland#webpage","url":"https://cwmigrationgroup.com/immigration/pnp/newfoundland","name":"Newfoundland NLPNP 2026","description":"Newfoundland NLPNP 2026 - Priority Skills NL (no EE required), International Graduate, Skilled Worker and AIP. Healthcare, trades, engineering. Licensed RCIC."},{"@type":"Service","name":"Commonwealth Migration Newfoundland NLPNP & AIP Support","serviceType":"Immigration Consulting","provider":{"@type":"LocalBusiness","name":"Licensed Regulated Canadian Immigration Consultants","address":"Canada-wide service by appointment, Brampton, Ontario"},"areaServed":{"@type":"AdministrativeArea","name":"Newfoundland and Labrador"},"description":"Licensed RCIC guidance for NLPNP - Priority Skills NL (no EE required), Express Entry Skilled Worker, International Graduate, Skilled Worker (employer job offer), and Atlantic Immigration Program employer designation. Healthcare, oil and gas, engineering, and trades specialization."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"PNP","item":"https://cwmigrationgroup.com/immigration/pnp"},{"@type":"ListItem","position":4,"name":"Newfoundland and Labrador","item":"https://cwmigrationgroup.com/immigration/pnp/newfoundland"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"PNP","item":"https://commonwealthmigration.ca/immigration/pnp"},{"@type":"ListItem","position":4,"name":"Newfoundland"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"PNP","item":"https://cwmigrationgroup.com/immigration/pnp"},{"@type":"ListItem","position":4,"name":"Newfoundland"}]}
 ```

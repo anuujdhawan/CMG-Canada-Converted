@@ -1,38 +1,29 @@
-import { site } from "@/config/site";
 import { getPage } from "@/lib/sitePages";
+import { buildMetadata } from "@/lib/seo";
+import { pageStructuredData } from "@/components/templates/ContentPage";
 import BlogIndexPage from "@/components/blog/BlogIndexPage";
 
 export const dynamicParams = false;
 
 export function generateMetadata() {
-  const page = getPage("/blog");
-  const title = page?.seo?.title || "Canada Immigration Blog";
-  const description = page?.seo?.description || "Clear, practical Canadian immigration guides from Commonwealth Migration Canada.";
-  const canonical = `${site.url.replace(/\/$/, "")}/blog`;
-
-  return {
-    title: { absolute: title },
+  const title = "Canada Immigration Blog | Express Entry & Work";
+  const description = "Read practical Canada immigration guides on Express Entry, PNP, work and study permits, family sponsorship, visitor visas and refusals. Verify current rules.";
+  return buildMetadata({
+    title,
     description,
-    alternates: { canonical },
-    openGraph: {
-      type: "website",
-      locale: site.meta.locale,
-      siteName: site.name,
-      title,
-      description,
-      url: canonical,
-      images: [{ url: site.meta.ogImage, width: 1200, height: 630, alt: site.name }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [site.meta.ogImage],
-    },
-  };
+    path: "/blog",
+    keywords: ["Canada immigration blog", "Express Entry guides", "Canadian immigration advice"],
+  });
 }
 
 export default function BlogPage() {
-  return <BlogIndexPage page={getPage("/blog")} />;
+  const page = getPage("/blog");
+  return (
+    <>
+      <BlogIndexPage page={page} />
+      {pageStructuredData(page).map((obj, index) => (
+        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(obj) }} />
+      ))}
+    </>
+  );
 }
-

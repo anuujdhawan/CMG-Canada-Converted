@@ -1,15 +1,17 @@
 import { getPage } from "@/lib/sitePages";
-import ContentPage, { rebrand } from "@/components/templates/ContentPage";
+import ContentPage from "@/components/templates/ContentPage";
 import CrsCalculator from "@/components/tools/CrsCalculator";
+import { buildMetadata } from "@/lib/seo";
 
 const pagePath = "/tools/crs-calculator-canada";
 const crsPage = getPage(pagePath);
 
-export const metadata = {
-  title: { absolute: rebrand(crsPage?.seo.title || crsPage?.h1 || "Free CRS Score Calculator 2026 | Express Entry") },
-  description: rebrand(crsPage?.seo.description || "Free Express Entry CRS calculator. Estimate your Comprehensive Ranking System score."),
-  alternates: { canonical: pagePath },
-};
+export const metadata = buildMetadata({
+  title: "CRS Calculator Canada | Express Entry Score",
+  description: "Use a free CRS calculator Canada to estimate your Express Entry score, review key factors and compare the result with current IRCC criteria.",
+  path: pagePath,
+  keywords: ["CRS calculator Canada", "Express Entry score calculator", "Canada CRS score"],
+});
 
 export default function CrsCalculatorPage() {
   if (!crsPage) return null;

@@ -559,12 +559,12 @@ class ActionProvider {
   startLeadCapture() {
     this.addUserMessage("Send my details");
     this.addMessages(botMessage(
-      "Please add your name and email. I’ll send your selected pathway and answers to the CMG team so they can follow up.",
+      "Please add your name, phone and email. I’ll send your selected pathway and answers to the CMG team so they can follow up.",
       "leadCaptureWidget"
     ));
   }
 
-  async submitLead({ fullName, email, consent }) {
+  async submitLead({ fullName, email, phone, consent }) {
     const service = services.find((item) => item.id === this.activeService);
     const response = await fetch("/api/chat-leads", {
       method: "POST",
@@ -614,7 +614,7 @@ export default function GuidedChatbot() {
   }, []);
 
   return (
-    <div className={`cmg-floating-bubble cmg-floating-bubble--chat cmg-chatbot-root fixed right-5 bottom-[8.75rem] z-[80] w-[3.75rem] ${!open ? "flex items-center justify-center w-12" : ""} ${open ? "cmg-chatbot-root--open !left-[5.75rem] !right-auto max-[640px]:top-[var(--brand-hero-pad-top)] max-[640px]:left-[.75rem] max-[640px]:!right-auto max-[640px]:bottom-[5.4rem] max-[640px]:w-[calc(100vw-1.5rem)]" : ""}`}>
+    <div className={`cmg-floating-bubble cmg-floating-bubble--chat cmg-chatbot-root fixed right-5 bottom-[8.75rem] z-[80] w-[3.75rem] ${!open ? "flex items-center justify-center w-12" : ""} ${open ? "cmg-chatbot-root--open max-[640px]:top-[var(--brand-hero-pad-top)] max-[640px]:left-[.75rem] max-[640px]:!right-auto max-[640px]:bottom-[5.4rem] max-[640px]:w-[calc(100vw-1.5rem)]" : ""}`}>
       {open ? (
         <div className="cmg-chatbot-panel relative flex h-[var(--cmg-chatbot-panel-height)] w-full flex-col overflow-hidden rounded-[1.35rem] border border-[color-mix(in_srgb,var(--cmg-dark-border,var(--brand-border))_100%,transparent)] bg-[var(--cmg-dark-surface-alt,#0b121d)] shadow-[0_24px_64px_rgba(0,0,0,.28),0_8px_24px_rgba(0,0,0,.16),0_0_0_1px_rgba(255,255,255,.06)_inset] before:absolute before:inset-[0_0_auto] before:z-[3] before:h-[3px] before:bg-[linear-gradient(90deg,var(--cmg-dark-primary,var(--brand-primary)),var(--cmg-dark-accent,var(--brand-primary-light)))] before:content-[''] [html[data-theme='light']_&]:border-[var(--cmg-light-border,var(--brand-border))] [html[data-theme='light']_&]:bg-[var(--cmg-light-surface,#ffffff)] [html[data-theme='light']_&]:shadow-[0_24px_56px_rgba(7,13,22,.14),0_8px_20px_rgba(7,13,22,.08),0_0_0_1px_rgba(7,13,22,.04)_inset]" role="dialog" aria-label="CMG Pathway Guide">
           <button type="button" className="cmg-chatbot-close absolute top-[.85rem] right-[.85rem] z-[4] inline-flex w-[2.1rem] h-[2.1rem] items-center justify-center rounded-full border border-[rgba(255,255,255,.18)] bg-[rgba(255,255,255,.08)] text-[#f7f8fb] backdrop-blur-[10px] transition-[background,border-color,transform] duration-[180ms] ease-in-out hover:bg-[rgba(255,255,255,.14)] hover:border-[rgba(255,255,255,.28)] hover:rotate-[90deg] focus-visible:bg-[rgba(255,255,255,.14)] focus-visible:border-[rgba(255,255,255,.28)] focus-visible:rotate-[90deg]" onClick={() => setOpen(false)} aria-label="Close pathway guide">

@@ -31,6 +31,15 @@ const LEGACY_PATH_TO_FILE = new Map(
   ROUTE_MAP.flatMap((route) => routeAliases(route).map((source) => [source, route.outputFile]))
 );
 
+// Keep author-written links on canonical destinations when a legacy CTA or
+// short alias is encountered. These routes are intentionally not added to
+// the sitemap; they are redirect/source aliases only.
+const STATIC_ROUTE_ALIASES = {
+  "/contact": "/contact-us",
+  "/contact/contact-immigration-consultant-brampton": "/contact/book-immigration-consultation-canada",
+  "/book": "/contact/book-immigration-consultation-canada",
+};
+
 /** Files that are documentation, not pages. */
 const SKIP_FILES = new Set(["README.md", "AUTHORITY_LINKS.md"]);
 
@@ -67,6 +76,7 @@ export function pathForLegacyPath(pathname) {
     .split("?")[0]
     .replace(/^\/+|\/+$/g, "");
   const normalized = clean ? `/${clean}` : "/";
+  if (STATIC_ROUTE_ALIASES[normalized]) return STATIC_ROUTE_ALIASES[normalized];
   const file = LEGACY_PATH_TO_FILE.get(normalized);
   return file && ROUTE_BY_FILE.has(file) ? ROUTE_BY_FILE.get(file).path : normalized;
 }

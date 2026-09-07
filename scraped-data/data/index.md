@@ -1,6 +1,6 @@
 # Licensed RCIC Immigration Consultants | Canada & GTA
 
-> **Source URL:** https://commonwealthmigration.ca/
+> **Source URL:** https://cwmigrationgroup.com/
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 1
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Licensed RCIC Immigration Consultants | Canada & GTA
 - **Meta description:** CICC-regulated RCICs in Brampton & GTA, Canada-wide. Express Entry, PNP, LMIA, work & study permits, family sponsorship, and refusals. Free assessment.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca
+- **Canonical URL:** https://cwmigrationgroup.com
 - **OG title:** Licensed RCIC Immigration Consultants | Canada & GTA
 - **OG description:** CICC-regulated RCICs: Express Entry, every PNP stream, employer LMIA (HGT), work permits, study permits, sponsorship, refusals & PFL. Brampton office. Free consult + tools.
 - **Robots:** index, follow
@@ -248,61 +248,61 @@ Meet our consultants
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://commonwealthmigration.ca/#main-content |
-| Make Payment | https://commonwealthmigration.ca/pay |
-| Book Book Consultation | https://commonwealthmigration.ca/book |
-| Book Free Consultation → | https://commonwealthmigration.ca/book |
-| Get Your Free CRS Estimate | https://commonwealthmigration.ca/tools |
-| Continue to services | https://commonwealthmigration.ca/#services |
-| Book with Case strategy team → | https://commonwealthmigration.ca/book#consultation |
-| Express Entry & PR | https://commonwealthmigration.ca/immigration/express-entry |
-| View guide → | https://commonwealthmigration.ca/immigration/express-entry |
-| Work permits | https://commonwealthmigration.ca/immigration/work-permit |
-| View guide → | https://commonwealthmigration.ca/immigration/work-permit |
-| Study permits | https://commonwealthmigration.ca/immigration/study-permit |
-| View guide → | https://commonwealthmigration.ca/immigration/study-permit |
-| Family sponsorship | https://commonwealthmigration.ca/immigration/family-sponsorship |
-| View guide → | https://commonwealthmigration.ca/immigration/family-sponsorship |
-| Visitor, eTA & Super Visa | https://commonwealthmigration.ca/immigration/visitor-visa |
-| View guide → | https://commonwealthmigration.ca/immigration/visitor-visa |
-| Business immigration | https://commonwealthmigration.ca/immigration/startup-visa |
-| View guide → | https://commonwealthmigration.ca/immigration/startup-visa |
-| Restoration & status Urgent | https://commonwealthmigration.ca/refusals |
-| View guide → | https://commonwealthmigration.ca/refusals |
-| Refusals & PFL Core focus | https://commonwealthmigration.ca/refusals |
-| PR card & citizenship | https://commonwealthmigration.ca/immigration/citizenship |
-| View guide → | https://commonwealthmigration.ca/immigration/citizenship |
-| Immigration index | https://commonwealthmigration.ca/immigration |
-| Employer hub | https://commonwealthmigration.ca/for-employers |
-| Immigration hub Every PR, temporary, and citizenship route indexed the same way as the rest of the site. Open page → | https://commonwealthmigration.ca/immigration |
-| Provinces & territories One PNP hub (BC to Atlantic) - so you compare streams before choosing a province page. Open page → | https://commonwealthmigration.ca/immigration/pnp |
-| Express Entry CRS, the three programs, and draws - in more depth than a single services card. Open page → | https://commonwealthmigration.ca/immigration/express-entry |
-| Calculators CRS, FSW 67, and provincial calculators - free, consistent with our program copy. Open page → | https://commonwealthmigration.ca/tools |
-| Employers · HGT LMIA, GTS, recruitment, compliance - the employer journey mirrors the HGT tab above. Open page → | https://commonwealthmigration.ca/for-employers |
-| Start free assessment | https://commonwealthmigration.ca/tools |
-| Book a Consultation | https://commonwealthmigration.ca/book |
-| Express Entry CRS | https://commonwealthmigration.ca/tools?tab=ee |
-| Work permits | https://commonwealthmigration.ca/tools |
-| Study in Canada | https://commonwealthmigration.ca/tools |
-| Sponsor family | https://commonwealthmigration.ca/tools |
-| Visitor / Super Visa | https://commonwealthmigration.ca/tools |
-| Open full assessment | https://commonwealthmigration.ca/tools |
-| Visitor visa refused Ties, funds, or purpose - we strengthen your narrative. Learn more → | https://commonwealthmigration.ca/refusals |
-| Study permit refused Study plan or finances - we fix the gaps. Learn more → | https://commonwealthmigration.ca/refusals |
-| Sponsorship refused Genuineness or eligibility - we build proof. Learn more → | https://commonwealthmigration.ca/refusals |
-| PFL (Procedural fairness) Urgent 15-30 days to respond. We draft the reply - fast. Learn more → | https://commonwealthmigration.ca/refusals |
-| Get Urgent Case Review | https://commonwealthmigration.ca/contact-us |
-| Book a consultation | https://commonwealthmigration.ca/book |
-| Read All Reviews on Google | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| High- & low-wage LMIA Full LMIA support for all wage levels. Learn more → | https://commonwealthmigration.ca/for-employers/lmia |
-| Global Talent Stream Expedited tech and in-demand roles. Learn more → | https://commonwealthmigration.ca/for-employers/global-talent-stream |
-| Agricultural LMIA Seasonal and year-round ag stream. Learn more → | https://commonwealthmigration.ca/for-employers |
-| ESDC compliance Audits, compliance, and TFWP integrity. Learn more → | https://commonwealthmigration.ca/for-employers/employer-compliance |
-| Employer services → | https://commonwealthmigration.ca/for-employers |
-| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| Free tools & assessment | https://commonwealthmigration.ca/tools |
-| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| Meet our consultants | https://commonwealthmigration.ca/team |
+| Skip to main content | https://cwmigrationgroup.com/#main-content |
+| Make Payment | https://cwmigrationgroup.com/pay |
+| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Book Free Consultation → | https://cwmigrationgroup.com/book |
+| Get Your Free CRS Estimate | https://cwmigrationgroup.com/tools |
+| Continue to services | https://cwmigrationgroup.com/#services |
+| Book with Case strategy team → | https://cwmigrationgroup.com/book#consultation |
+| Express Entry & PR | https://cwmigrationgroup.com/immigration/express-entry |
+| View guide → | https://cwmigrationgroup.com/immigration/express-entry |
+| Work permits | https://cwmigrationgroup.com/immigration/work-permit |
+| View guide → | https://cwmigrationgroup.com/immigration/work-permit |
+| Study permits | https://cwmigrationgroup.com/immigration/study-permit |
+| View guide → | https://cwmigrationgroup.com/immigration/study-permit |
+| Family sponsorship | https://cwmigrationgroup.com/immigration/family-sponsorship |
+| View guide → | https://cwmigrationgroup.com/immigration/family-sponsorship |
+| Visitor, eTA & Super Visa | https://cwmigrationgroup.com/immigration/visitor-visa |
+| View guide → | https://cwmigrationgroup.com/immigration/visitor-visa |
+| Business immigration | https://cwmigrationgroup.com/immigration/startup-visa |
+| View guide → | https://cwmigrationgroup.com/immigration/startup-visa |
+| Restoration & status Urgent | https://cwmigrationgroup.com/refusals |
+| View guide → | https://cwmigrationgroup.com/refusals |
+| Refusals & PFL Core focus | https://cwmigrationgroup.com/refusals |
+| PR card & citizenship | https://cwmigrationgroup.com/immigration/citizenship |
+| View guide → | https://cwmigrationgroup.com/immigration/citizenship |
+| Immigration index | https://cwmigrationgroup.com/immigration |
+| Employer hub | https://cwmigrationgroup.com/for-employers |
+| Immigration hub Every PR, temporary, and citizenship route indexed the same way as the rest of the site. Open page → | https://cwmigrationgroup.com/immigration |
+| Provinces & territories One PNP hub (BC to Atlantic) - so you compare streams before choosing a province page. Open page → | https://cwmigrationgroup.com/immigration/pnp |
+| Express Entry CRS, the three programs, and draws - in more depth than a single services card. Open page → | https://cwmigrationgroup.com/immigration/express-entry |
+| Calculators CRS, FSW 67, and provincial calculators - free, consistent with our program copy. Open page → | https://cwmigrationgroup.com/tools |
+| Employers · HGT LMIA, GTS, recruitment, compliance - the employer journey mirrors the HGT tab above. Open page → | https://cwmigrationgroup.com/for-employers |
+| Start free assessment | https://cwmigrationgroup.com/tools |
+| Book a Consultation | https://cwmigrationgroup.com/book |
+| Express Entry CRS | https://cwmigrationgroup.com/tools?tab=ee |
+| Work permits | https://cwmigrationgroup.com/tools |
+| Study in Canada | https://cwmigrationgroup.com/tools |
+| Sponsor family | https://cwmigrationgroup.com/tools |
+| Visitor / Super Visa | https://cwmigrationgroup.com/tools |
+| Open full assessment | https://cwmigrationgroup.com/tools |
+| Visitor visa refused Ties, funds, or purpose - we strengthen your narrative. Learn more → | https://cwmigrationgroup.com/refusals |
+| Study permit refused Study plan or finances - we fix the gaps. Learn more → | https://cwmigrationgroup.com/refusals |
+| Sponsorship refused Genuineness or eligibility - we build proof. Learn more → | https://cwmigrationgroup.com/refusals |
+| PFL (Procedural fairness) Urgent 15-30 days to respond. We draft the reply - fast. Learn more → | https://cwmigrationgroup.com/refusals |
+| Get Urgent Case Review | https://cwmigrationgroup.com/contact-us |
+| Book a consultation | https://cwmigrationgroup.com/book |
+| Read All Reviews on Google | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| High- & low-wage LMIA Full LMIA support for all wage levels. Learn more → | https://cwmigrationgroup.com/for-employers/lmia |
+| Global Talent Stream Expedited tech and in-demand roles. Learn more → | https://cwmigrationgroup.com/for-employers/global-talent-stream |
+| Agricultural LMIA Seasonal and year-round ag stream. Learn more → | https://cwmigrationgroup.com/for-employers |
+| ESDC compliance Audits, compliance, and TFWP integrity. Learn more → | https://cwmigrationgroup.com/for-employers/employer-compliance |
+| Employer services → | https://cwmigrationgroup.com/for-employers |
+| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| Free tools & assessment | https://cwmigrationgroup.com/tools |
+| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| Meet our consultants | https://cwmigrationgroup.com/team |
 
 ---
 
@@ -316,5 +316,5 @@ Meet our consultants
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```

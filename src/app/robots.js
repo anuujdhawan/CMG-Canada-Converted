@@ -13,7 +13,6 @@ export default function robots() {
     return {
       rules,
       sitemap: `${site.url.replace(/\/$/, "")}/sitemap.xml`,
-      host: site.url.replace(/\/$/, ""),
     };
   }
 

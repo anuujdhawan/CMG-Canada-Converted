@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { currentPagePath } from "@/config/pageRoutes";
 import { site } from "@/config/site";
 import { HERO_SLIDES } from "@/lib/heroSlides";
-import { getPageFaqs } from "@/lib/faqs";
+import { getInlineFaqs, getPageFaqs } from "@/lib/faqs";
 import { Block, parseBlocks, RelatedPagesList, rebrand } from "@/components/templates/MarkdownBlocks";
 import HeroCarousel from "./HeroCarousel";
 import HeroProofCardCarousel from "./HeroProofCardCarousel";
@@ -78,9 +78,8 @@ function isFaqSection(section) {
   return section.some((block) => block.type === "heading" && block.level === 2 && /faq|questions people ask|frequently asked/i.test(block.text));
 }
 
-function ServiceFaqSection({ page }) {
-  const faqs = getPageFaqs(page);
-  return <FaqSection faqs={faqs} description="Open a question to understand what the tool can show, what it cannot decide and what to check next." className="tool-faq-section" />;
+function ServiceFaqSection({ faqs, isToolPage }) {
+  return <FaqSection faqs={faqs} description={isToolPage ? "Open a question to understand what the tool can show, what it cannot decide and what to check next." : "Get a concise answer about this pathway and what to verify before you take the next step."} className={isToolPage ? "tool-faq-section" : "service-faq-section"} />;
 }
 
 export default function ReferenceServicePage({ page, children, interactivePosition = "bottom", interactiveHeading }) {
@@ -91,6 +90,9 @@ export default function ReferenceServicePage({ page, children, interactivePositi
   const title = rebrand(page.h1);
   const { leading, sections: allSections } = groupContentBlocks(blocks);
   const sections = isToolPage ? allSections.filter((section) => !isFaqSection(section)) : allSections;
+  const pageFaqs = getPageFaqs(page);
+  const inlineFaqKeys = new Set((isToolPage ? [] : getInlineFaqs(page)).map((faq) => faq.question.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim()));
+  const supplementalFaqs = pageFaqs.filter((faq) => !inlineFaqKeys.has(faq.question.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim()));
   const headings = sections.flat().filter((block) => block.type === "heading" && block.level >= 2).slice(0, 5);
   const contentImages = getServiceContentImages(page);
   const firstImageSection = sections.length > 1 ? 1 : 0;
@@ -176,7 +178,7 @@ export default function ReferenceServicePage({ page, children, interactivePositi
 
       {isAboutOverviewPage && <ConsultantProfileSection id="vishal-arora-about" />}
 
-      {isToolPage && <ServiceFaqSection page={page} />}
+      {pageFaqs.length > 0 && <ServiceFaqSection faqs={supplementalFaqs} isToolPage={isToolPage} />}
 
       <LiveSuccessVideos />
 

@@ -1,6 +1,6 @@
 # Spousal Sponsorship Canada 2026: Step-by-Step Guide
 
-> **Source URL:** https://commonwealthmigration.ca/blog/spousal-sponsorship-canada-guide-2026
+> **Source URL:** https://cwmigrationgroup.com/blog/spousal-sponsorship-canada-guide-2026
 > **Last modified:** 2026-02-05T00:00:00.000Z
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Spousal Sponsorship Canada 2026: Step-by-Step Guide
 - **Meta description:** Spousal and partner sponsorship for Canadian PR in 2026: inland vs outland, required documents, relationship evidence, open work permit, and processing times.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/blog/spousal-sponsorship-canada-guide-2026
+- **Canonical URL:** https://cwmigrationgroup.com/blog/spousal-sponsorship-canada-guide-2026
 - **OG title:** Spousal Sponsorship Canada 2026: Step-by-Step Guide
 - **OG description:** Spousal and partner sponsorship for Canadian PR in 2026: inland vs outland, required documents, relationship evidence, open work permit, and processing times.
 - **Robots:** index, follow
@@ -151,18 +151,18 @@ This article is for general information only and does not constitute legal or im
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://commonwealthmigration.ca/blog/spousal-sponsorship-canada-guide-2026#main-content |
-| Make Payment | https://commonwealthmigration.ca/pay |
-| Book Book Consultation | https://commonwealthmigration.ca/book |
-| Express Entry Express Entry Canada: Complete Beginner's Guide 2025-2026 Read → | https://commonwealthmigration.ca/blog/express-entry-beginners-guide-2026 |
-| Express Entry CRS Score Explained: How Points Are Calculated & How to Boost Yours in 2026 Read → | https://commonwealthmigration.ca/blog/express-entry-crs-score-explained |
-| Express Entry Express Entry Category-Based Selection 2026: How It Works & Who Benefits Read → | https://commonwealthmigration.ca/blog/express-entry-category-based-selection-2026 |
-| 📅 Book Free Consultation | https://commonwealthmigration.ca/book |
-| → Express Entry overview | https://commonwealthmigration.ca/immigration/express-entry |
-| → Latest draw results | https://commonwealthmigration.ca/draw-results |
-| → Processing times | https://commonwealthmigration.ca/resources/processing-times |
-| → Document checklists | https://commonwealthmigration.ca/resources/document-checklist |
-| → Free CRS calculator | https://commonwealthmigration.ca/tools/crs-calculator |
+| Skip to main content | https://cwmigrationgroup.com/blog/spousal-sponsorship-canada-guide-2026#main-content |
+| Make Payment | https://cwmigrationgroup.com/pay |
+| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Express Entry Express Entry Canada: Complete Beginner's Guide 2025-2026 Read → | https://cwmigrationgroup.com/blog/express-entry-beginners-guide-2026 |
+| Express Entry CRS Score Explained: How Points Are Calculated & How to Boost Yours in 2026 Read → | https://cwmigrationgroup.com/blog/express-entry-crs-score-explained |
+| Express Entry Express Entry Category-Based Selection 2026: How It Works & Who Benefits Read → | https://cwmigrationgroup.com/blog/express-entry-category-based-selection-2026 |
+| 📅 Book Free Consultation | https://cwmigrationgroup.com/book |
+| → Express Entry overview | https://cwmigrationgroup.com/immigration/express-entry |
+| → Latest draw results | https://cwmigrationgroup.com/draw-results |
+| → Processing times | https://cwmigrationgroup.com/resources/processing-times |
+| → Document checklists | https://cwmigrationgroup.com/resources/document-checklist |
+| → Free CRS calculator | https://cwmigrationgroup.com/tools/crs-calculator |
 
 ---
 
@@ -175,13 +175,13 @@ This article is for general information only and does not constitute legal or im
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"Article","headline":"Spousal Sponsorship Canada 2025-2026: Complete Step-by-Step Guide","description":"Spousal and partner sponsorship for Canadian PR in 2026: inland vs outland, required documents, relationship evidence, open work permit, and processing times.","datePublished":"2026-02-05","author":{"@type":"Person","name":"Lead RCIC"},"publisher":{"@type":"Organization","name":"Commonwealth Migration Canada","url":"https://commonwealthmigration.ca"},"url":"https://commonwealthmigration.ca/blog/spousal-sponsorship-canada-guide-2026"}
+{"@context":"https://schema.org","@type":"Article","headline":"Spousal Sponsorship Canada 2025-2026: Complete Step-by-Step Guide","description":"Spousal and partner sponsorship for Canadian PR in 2026: inland vs outland, required documents, relationship evidence, open work permit, and processing times.","datePublished":"2026-02-05","author":{"@type":"Person","name":"Lead RCIC"},"publisher":{"@type":"Organization","name":"Commonwealth Migration Canada","url":"https://cwmigrationgroup.com"},"url":"https://cwmigrationgroup.com/blog/spousal-sponsorship-canada-guide-2026"}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://commonwealthmigration.ca/blog"},{"@type":"ListItem","position":3,"name":"Spousal Sponsorship Canada 2025-2026: Complete Step-by-Step Guide","item":"https://commonwealthmigration.ca/blog/spousal-sponsorship-canada-guide-2026"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://cwmigrationgroup.com/blog"},{"@type":"ListItem","position":3,"name":"Spousal Sponsorship Canada 2025-2026: Complete Step-by-Step Guide","item":"https://cwmigrationgroup.com/blog/spousal-sponsorship-canada-guide-2026"}]}
 ```

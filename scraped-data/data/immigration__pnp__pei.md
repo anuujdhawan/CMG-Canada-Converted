@@ -1,6 +1,6 @@
 # PEI PNP 2026 | Prince Edward Island Nominee Program & AIP | Licensed RCIC
 
-> **Source URL:** https://commonwealthmigration.ca/immigration/pnp/pei
+> **Source URL:** https://cwmigrationgroup.com/immigration/pnp/pei
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.7
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** PEI PNP 2026 | Prince Edward Island Nominee Program & AIP | Licensed RCIC
 - **Meta description:** PEI PNP 2026 - Express Entry PEI, Skilled Worker, International Graduate and AIP. Smallest allocation - AIP is often the better employer path. Licensed RCIC.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/immigration/pnp/pei
+- **Canonical URL:** https://cwmigrationgroup.com/immigration/pnp/pei
 - **OG title:** PEI PNP 2026 - Complete Guide | Prince Edward Island Nominee Program | Licensed RCIC
 - **OG description:** Canada's smallest PNP allocation. EOI pool, +600 CRS nomination, AIP option. All 5 streams explained by licensed RCIC consultants.
 - **Robots:** index, follow
@@ -366,30 +366,30 @@ Serving PEI immigration clients in Charlottetown · Summerside · Montague · Al
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://commonwealthmigration.ca/immigration/pnp/pei#main-content |
-| Make Payment | https://commonwealthmigration.ca/pay |
-| Book Book Consultation | https://commonwealthmigration.ca/book |
-| Home | https://commonwealthmigration.ca/ |
-| Immigration | https://commonwealthmigration.ca/immigration |
-| PNP | https://commonwealthmigration.ca/immigration/pnp |
-| Book PEI Assessment → | https://commonwealthmigration.ca/free-assessment |
-| Check My Eligibility | https://commonwealthmigration.ca/tools |
-| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| → New Brunswick | https://commonwealthmigration.ca/immigration/pnp/new-brunswick |
-| → Nova Scotia | https://commonwealthmigration.ca/immigration/pnp/nova-scotia |
-| → PNP Hub | https://commonwealthmigration.ca/immigration/pnp |
-| Free assessment → | https://commonwealthmigration.ca/free-assessment |
-| Get My PEI Eligibility Confirmed → | https://commonwealthmigration.ca/free-assessment |
-| Book Free PEI Assessment → | https://commonwealthmigration.ca/free-assessment |
-| Book AIP Employer + Worker consult → | https://commonwealthmigration.ca/book |
-| Book Free Consultation | https://commonwealthmigration.ca/contact |
-| View All PNP Programs | https://commonwealthmigration.ca/immigration/pnp |
-| PNP Hub → All provincial nominee programs | https://commonwealthmigration.ca/immigration/pnp |
-| New Brunswick PNP → NBPNP + AIP pathway | https://commonwealthmigration.ca/immigration/pnp/new-brunswick |
-| Nova Scotia PNP → NSNP four-stream structure | https://commonwealthmigration.ca/immigration/pnp/nova-scotia |
-| Express Entry → Federal skilled worker pathways | https://commonwealthmigration.ca/immigration/express-entry |
-| Work Permit → Work in Canada while you apply | https://commonwealthmigration.ca/immigration/work-permit |
-| Family Sponsorship → Sponsor a spouse or family member | https://commonwealthmigration.ca/immigration/sponsorship/spousal |
+| Skip to main content | https://cwmigrationgroup.com/immigration/pnp/pei#main-content |
+| Make Payment | https://cwmigrationgroup.com/pay |
+| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Home | https://cwmigrationgroup.com/ |
+| Immigration | https://cwmigrationgroup.com/immigration |
+| PNP | https://cwmigrationgroup.com/immigration/pnp |
+| Book PEI Assessment → | https://cwmigrationgroup.com/free-assessment |
+| Check My Eligibility | https://cwmigrationgroup.com/tools |
+| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| → New Brunswick | https://cwmigrationgroup.com/immigration/pnp/new-brunswick |
+| → Nova Scotia | https://cwmigrationgroup.com/immigration/pnp/nova-scotia |
+| → PNP Hub | https://cwmigrationgroup.com/immigration/pnp |
+| Free assessment → | https://cwmigrationgroup.com/free-assessment |
+| Get My PEI Eligibility Confirmed → | https://cwmigrationgroup.com/free-assessment |
+| Book Free PEI Assessment → | https://cwmigrationgroup.com/free-assessment |
+| Book AIP Employer + Worker consult → | https://cwmigrationgroup.com/book |
+| Book Free Consultation | https://cwmigrationgroup.com/contact |
+| View All PNP Programs | https://cwmigrationgroup.com/immigration/pnp |
+| PNP Hub → All provincial nominee programs | https://cwmigrationgroup.com/immigration/pnp |
+| New Brunswick PNP → NBPNP + AIP pathway | https://cwmigrationgroup.com/immigration/pnp/new-brunswick |
+| Nova Scotia PNP → NSNP four-stream structure | https://cwmigrationgroup.com/immigration/pnp/nova-scotia |
+| Express Entry → Federal skilled worker pathways | https://cwmigrationgroup.com/immigration/express-entry |
+| Work Permit → Work in Canada while you apply | https://cwmigrationgroup.com/immigration/work-permit |
+| Family Sponsorship → Sponsor a spouse or family member | https://cwmigrationgroup.com/immigration/sponsorship/spousal |
 
 ---
 
@@ -402,13 +402,13 @@ Serving PEI immigration clients in Charlottetown · Summerside · Montague · Al
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Provincial Nominee Program","item":"https://commonwealthmigration.ca/immigration/pnp"},{"@type":"ListItem","position":4,"name":"Prince Edward Island","item":"https://commonwealthmigration.ca/immigration/pnp/pei"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the PEI Provincial Nominee Program?","acceptedAnswer":{"@type":"Answer","text":"The Prince Edward Island Provincial Nominee Program (PEIPNP) allows PEI to nominate skilled workers, graduates, and entrepreneurs for Canadian permanent residence. PEI receives one of the smallest PNP allocations nationally - invitations are highly targeted by sector and candidate profile strength."}},{"@type":"Question","name":"How does the +600 CRS nomination work?","acceptedAnswer":{"@type":"Answer","text":"Upon provincial nomination through the Express Entry PEI stream, IRCC adds 600 CRS points to your federal profile — in recent draws, well above every published cutoff (IRCC sets the cutoff each round). After receiving a federal ITA you have 60 days to file a complete PR application with IRCC."}},{"@type":"Question","name":"When is AIP better than PEIPNP?","acceptedAnswer":{"@type":"Answer","text":"AIP is often better when your employer is ready for designation and you cannot wait for PEI's limited invitation rounds. AIP operates outside PEI's nomination quota entirely. Commonwealth Migration model both pathways at assessment."}},{"@type":"Question","name":"What is the ITA response window?","acceptedAnswer":{"@type":"Answer","text":"PEI typically gives 30 days to respond to an ITA with a complete application. This window is not routinely extended - prepare all documents before submitting your EOI."}}]},{"@type":"Service","name":"Prince Edward Island PNP and AIP Immigration Services","serviceType":"Immigration Consulting","provider":{"@type":"LocalBusiness","name":"Licensed Regulated Canadian Immigration Consultants","address":"Canada-wide service by appointment, Brampton, Ontario"},"areaServed":"Prince Edward Island, Canada","description":"Licensed RCIC guidance for PEIPNP - Express Entry PEI, Labour Impact Skilled Worker, Critical Worker, International Graduate, Business Impact, and Atlantic Immigration Program (AIP) employer designation. Serving Charlottetown, Summerside, and across PEI."}]}
+{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Provincial Nominee Program","item":"https://cwmigrationgroup.com/immigration/pnp"},{"@type":"ListItem","position":4,"name":"Prince Edward Island","item":"https://cwmigrationgroup.com/immigration/pnp/pei"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the PEI Provincial Nominee Program?","acceptedAnswer":{"@type":"Answer","text":"The Prince Edward Island Provincial Nominee Program (PEIPNP) allows PEI to nominate skilled workers, graduates, and entrepreneurs for Canadian permanent residence. PEI receives one of the smallest PNP allocations nationally - invitations are highly targeted by sector and candidate profile strength."}},{"@type":"Question","name":"How does the +600 CRS nomination work?","acceptedAnswer":{"@type":"Answer","text":"Upon provincial nomination through the Express Entry PEI stream, IRCC adds 600 CRS points to your federal profile — in recent draws, well above every published cutoff (IRCC sets the cutoff each round). After receiving a federal ITA you have 60 days to file a complete PR application with IRCC."}},{"@type":"Question","name":"When is AIP better than PEIPNP?","acceptedAnswer":{"@type":"Answer","text":"AIP is often better when your employer is ready for designation and you cannot wait for PEI's limited invitation rounds. AIP operates outside PEI's nomination quota entirely. Commonwealth Migration model both pathways at assessment."}},{"@type":"Question","name":"What is the ITA response window?","acceptedAnswer":{"@type":"Answer","text":"PEI typically gives 30 days to respond to an ITA with a complete application. This window is not routinely extended - prepare all documents before submitting your EOI."}}]},{"@type":"Service","name":"Prince Edward Island PNP and AIP Immigration Services","serviceType":"Immigration Consulting","provider":{"@type":"LocalBusiness","name":"Licensed Regulated Canadian Immigration Consultants","address":"Canada-wide service by appointment, Brampton, Ontario"},"areaServed":"Prince Edward Island, Canada","description":"Licensed RCIC guidance for PEIPNP - Express Entry PEI, Labour Impact Skilled Worker, Critical Worker, International Graduate, Business Impact, and Atlantic Immigration Program (AIP) employer designation. Serving Charlottetown, Summerside, and across PEI."}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"PNP","item":"https://commonwealthmigration.ca/immigration/pnp"},{"@type":"ListItem","position":4,"name":"Prince Edward Island"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"PNP","item":"https://cwmigrationgroup.com/immigration/pnp"},{"@type":"ListItem","position":4,"name":"Prince Edward Island"}]}
 ```

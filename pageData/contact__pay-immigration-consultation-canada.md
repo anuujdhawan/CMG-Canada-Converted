@@ -1,6 +1,6 @@
 # Secure Payment for Immigration Services
 
-> **Source URL:** https://commonwealthmigration.ca/contact/pay-immigration-consultation-canada
+> **Source URL:** https://cwmigrationgroup.com/contact/pay-immigration-consultation-canada
 > **Last modified:** 2026-08-19
 > **Sitemap priority:** 0.6
 > **Status:** ✅ Fresh English rewrite | SEO/GEO/AEO reviewed
@@ -10,10 +10,10 @@
 - **Title tag:** pay immigration consultation Canada 2026 | Commonwealth Migration
 - **Meta description:** Pay only after the service scope is clear. Canada-wide support from a licensed RCIC practice. See official rules before applying. Canada-wide RCIC guidance.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/contact/pay-immigration-consultation-canada
+- **Canonical URL:** https://cwmigrationgroup.com/contact/pay-immigration-consultation-canada
 - **OG title:** Secure Payment for Immigration Services | Commonwealth Migration Canada
 - **OG description:** Pay only after the service scope is clear. Canada-wide support from a licensed RCIC practice. See official rules before applying. Canada-wide RCIC guidance.
-- **Robots:** index, follow
+- **Robots:** noindex, follow
 
 ## Heading Outline
 
@@ -120,7 +120,7 @@ Use the page as a starting point, then verify the current official source and di
 
 
 
-If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
+If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://cwmigrationgroup.com/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
 
 ## Links & CTAs on this page
 
@@ -131,9 +131,9 @@ If you are ready to move from general research to a file-specific plan, [book a 
 | IRCC: Provincial Nominee Program | https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html |
 | IRCC: work permit requirements | https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/permit.html |
 | IRCC: study permit guide | https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html |
-| verify an RCIC on the CICC register | https://www.cicc-ccic.ca/register/ |
-| Book a focused immigration consultation | https://commonwealthmigration.ca/contact/book-immigration-consultation-canada |
-| Contact Commonwealth Migration Canada | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| verify an RCIC on the CICC register | https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx |
+| Book a focused immigration consultation | https://cwmigrationgroup.com/contact/book-immigration-consultation-canada |
+| Contact Commonwealth Migration Canada | https://cwmigrationgroup.com/contact/book-immigration-consultation-canada |
 
 ## Image Alt Texts
 
@@ -147,8 +147,8 @@ If you are ready to move from general research to a file-specific plan, [book a 
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://commonwealthmigration.ca/contact/pay-immigration-consultation-canada#webpage",
-      "url": "https://commonwealthmigration.ca/contact/pay-immigration-consultation-canada",
+      "@id": "https://cwmigrationgroup.com/contact/pay-immigration-consultation-canada#webpage",
+      "url": "https://cwmigrationgroup.com/contact/pay-immigration-consultation-canada",
       "name": "pay immigration consultation Canada 2026 | Commonwealth Migration",
       "description": "Pay only after the service scope is clear. Canada-wide support from a licensed RCIC practice. See official rules before applying. Canada-wide RCIC guidance.",
       "inLanguage": "en-CA",
@@ -156,7 +156,7 @@ If you are ready to move from general research to a file-specific plan, [book a 
       "isPartOf": {
         "@type": "WebSite",
         "name": "Commonwealth Migration Canada",
-        "url": "https://commonwealthmigration.ca"
+        "url": "https://cwmigrationgroup.com"
       },
       "about": {
         "@type": "Thing",
@@ -170,13 +170,13 @@ If you are ready to move from general research to a file-specific plan, [book a 
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://commonwealthmigration.ca"
+          "item": "https://cwmigrationgroup.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "pay immigration consultation Canada",
-          "item": "https://commonwealthmigration.ca/contact/pay-immigration-consultation-canada"
+          "item": "https://cwmigrationgroup.com/contact/pay-immigration-consultation-canada"
         }
       ]
     },

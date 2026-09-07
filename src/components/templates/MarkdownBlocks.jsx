@@ -12,7 +12,12 @@ import ContentHeading from "@/components/ui/ContentHeading";
    source-URL localization. Used by ContentPage and the shared hero.
    ════════════════════════════════════════════════════════════════════ */
 
-const SITE_HOSTS = ["commonwealthmigration.ca", "www.commonwealthmigration.ca"];
+const SITE_HOSTS = [
+  "cwmigrationgroup.com",
+  "www.cwmigrationgroup.com",
+  "commonwealthmigration.ca",
+  "www.commonwealthmigration.ca",
+];
 
 export function rebrand(text) {
   return text ? String(text) : text;
@@ -21,7 +26,7 @@ export function rebrand(text) {
 /** Convert a source-site URL to a local relative URL when possible. */
 export function localizeUrl(url) {
   try {
-    const u = new URL(url, site.url || "https://commonwealthmigration.ca");
+    const u = new URL(url, site.url || "https://cwmigrationgroup.com");
     if (SITE_HOSTS.includes(u.hostname)) {
       return `${pathForLegacyPath(u.pathname)}${u.search}${u.hash}`;
     }
@@ -34,7 +39,7 @@ export function localizeUrl(url) {
 
 function SmartLink({ href, children }) {
   const local = localizeUrl(href);
-  const external = local !== href || /^https?:\/\//.test(local);
+  const external = /^https?:\/\//.test(local);
   if (external) {
     return (
       <a href={href} target="_blank" rel="noopener noreferrer" className="font-medium text-primary underline underline-offset-2 hover:text-accent-dark transition-colors">
@@ -213,14 +218,14 @@ export function parseBlocks(md) {
    ════════════════════════════════════════════════════════════════════ */
 
 const REFUSAL_CARD_DESTINATIONS = [
-  [/visitor visa|trv/i, "/immigration/visitor-visa"],
-  [/study permit/i, "/immigration/study-permit"],
-  [/work permit/i, "/immigration/work-permit"],
-  [/spousal sponsorship/i, "/immigration/spousal-sponsorship"],
-  [/express entry|\bpr\b/i, "/immigration/express-entry"],
-  [/super visa/i, "/immigration/super-visa"],
-  [/pgwp/i, "/immigration/pgwp"],
-  [/lmia/i, "/immigration/lmia"],
+  [/visitor visa|trv/i, "/visit/visitor-visa-trv-and-super-visa-combined"],
+  [/study permit/i, "/work-and-study/canada-study-permit"],
+  [/work permit/i, "/work-and-study/canada-work-permit-overview"],
+  [/spousal sponsorship/i, "/sponsor/spousal-and-partner-sponsorship-overview"],
+  [/express entry|\bpr\b/i, "/immigrate/express-entry"],
+  [/super visa/i, "/visit/super-visa-standalone-page"],
+  [/pgwp/i, "/work-and-study/post-graduation-work-permit-pgwp"],
+  [/lmia/i, "/work-and-study/lmia-and-employer-services-overview"],
 ];
 
 function refusalCardHref(title) {

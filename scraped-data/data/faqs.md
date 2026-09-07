@@ -1,6 +1,6 @@
 # FAQs | Canadian Immigration Questions | Licensed RCIC
 
-> **Source URL:** https://commonwealthmigration.ca/faqs
+> **Source URL:** https://cwmigrationgroup.com/faqs
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** FAQs | Canadian Immigration Questions | Licensed RCIC
 - **Meta description:** Frequently asked questions about Canadian immigration: Express Entry, work permits, study permits, family sponsorship, PNP, refusals. Licensed RCIC in Brampton.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/faqs
+- **Canonical URL:** https://cwmigrationgroup.com/faqs
 - **OG title:** Immigration FAQs | Licensed RCIC
 - **OG description:** Common questions about Canadian immigration answered by our team.
 - **Robots:** index, follow
@@ -118,23 +118,23 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://commonwealthmigration.ca/faqs#main-content |
-| Make Payment | https://commonwealthmigration.ca/pay |
-| Book Book Consultation | https://commonwealthmigration.ca/book |
-| Home | https://commonwealthmigration.ca/ |
-| Book Free Consultation → | https://commonwealthmigration.ca/book |
-| Contact Us | https://commonwealthmigration.ca/contact-us |
-| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| → Express Entry | https://commonwealthmigration.ca/immigration/express-entry |
-| → Work Permits | https://commonwealthmigration.ca/immigration/work-permit |
-| → Study Permits | https://commonwealthmigration.ca/immigration/study-permit |
-| → CRS Calculator | https://commonwealthmigration.ca/tools/crs-calculator |
-| → Processing Times | https://commonwealthmigration.ca/resources/processing-times |
-| Express Entry | https://commonwealthmigration.ca/immigration/express-entry |
-| PNP | https://commonwealthmigration.ca/immigration/pnp |
-| Immigrate to Canada | https://commonwealthmigration.ca/immigrate |
-| Work & Study | https://commonwealthmigration.ca/work-study |
-| CRS Calculator | https://commonwealthmigration.ca/tools/crs-calculator |
+| Skip to main content | https://cwmigrationgroup.com/faqs#main-content |
+| Make Payment | https://cwmigrationgroup.com/pay |
+| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Home | https://cwmigrationgroup.com/ |
+| Book Free Consultation → | https://cwmigrationgroup.com/book |
+| Contact Us | https://cwmigrationgroup.com/contact-us |
+| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| → Express Entry | https://cwmigrationgroup.com/immigration/express-entry |
+| → Work Permits | https://cwmigrationgroup.com/immigration/work-permit |
+| → Study Permits | https://cwmigrationgroup.com/immigration/study-permit |
+| → CRS Calculator | https://cwmigrationgroup.com/tools/crs-calculator |
+| → Processing Times | https://cwmigrationgroup.com/resources/processing-times |
+| Express Entry | https://cwmigrationgroup.com/immigration/express-entry |
+| PNP | https://cwmigrationgroup.com/immigration/pnp |
+| Immigrate to Canada | https://cwmigrationgroup.com/immigrate |
+| Work & Study | https://cwmigrationgroup.com/work-study |
+| CRS Calculator | https://cwmigrationgroup.com/tools/crs-calculator |
 
 ---
 
@@ -147,7 +147,7 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
@@ -155,5 +155,5 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"FAQs"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"FAQs"}]}
 ```

@@ -1,6 +1,6 @@
 # Open Work Permit Canada 2026 | Bridging OWP & BOWP | Licensed RCIC
 
-> **Source URL:** https://commonwealthmigration.ca/immigration/open-work-permit
+> **Source URL:** https://cwmigrationgroup.com/immigration/open-work-permit
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Open Work Permit Canada 2026 | Bridging OWP & BOWP | Licensed RCIC
 - **Meta description:** Open Work Permit Canada: Bridging OWP for PR applicants, refugee claimants, vulnerable workers, CUAET. Licensed RCIC guidance. Free assessment.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/immigration/open-work-permit
+- **Canonical URL:** https://cwmigrationgroup.com/immigration/open-work-permit
 - **OG title:** Open Work Permit Canada 2026 | Licensed RCIC
 - **OG description:** Bridging OWP, refugee OWP, vulnerable worker OWP, CUAET. Commonwealth Migration licensed RCIC guidance.
 - **Robots:** index, follow
@@ -384,30 +384,30 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://commonwealthmigration.ca/immigration/open-work-permit#main-content |
-| Make Payment | https://commonwealthmigration.ca/pay |
-| Book Book Consultation | https://commonwealthmigration.ca/book |
-| Home | https://commonwealthmigration.ca/ |
-| Immigration | https://commonwealthmigration.ca/immigration |
-| Work Permit | https://commonwealthmigration.ca/immigration/work-permit |
-| Book Free Assessment → | https://commonwealthmigration.ca/free-assessment |
-| View Related Programs | https://commonwealthmigration.ca/immigration/work-permit |
-| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| → PGWP | https://commonwealthmigration.ca/immigration/pgwp |
-| → Spousal OWP | https://commonwealthmigration.ca/immigration/spousal-work-permit |
-| → Express Entry | https://commonwealthmigration.ca/immigration/express-entry |
-| → Work Permit | https://commonwealthmigration.ca/immigration/work-permit |
-| See full details | https://commonwealthmigration.ca/immigration/open-work-permit#bridging-owp |
-| PGWP → | https://commonwealthmigration.ca/immigration/pgwp |
-| Spousal OWP → | https://commonwealthmigration.ca/immigration/spousal-work-permit |
-| Call contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| Book Free Consultation | https://commonwealthmigration.ca/contact |
-| All Work Permits | https://commonwealthmigration.ca/immigration/work-permit |
-| Express Entry → | https://commonwealthmigration.ca/immigration/express-entry |
-| Work Permit → | https://commonwealthmigration.ca/immigration/work-permit |
-| Study Permit → | https://commonwealthmigration.ca/immigration/study-permit |
-| Refusals → | https://commonwealthmigration.ca/refusals |
-| Book Free Consultation → | https://commonwealthmigration.ca/book |
+| Skip to main content | https://cwmigrationgroup.com/immigration/open-work-permit#main-content |
+| Make Payment | https://cwmigrationgroup.com/pay |
+| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Home | https://cwmigrationgroup.com/ |
+| Immigration | https://cwmigrationgroup.com/immigration |
+| Work Permit | https://cwmigrationgroup.com/immigration/work-permit |
+| Book Free Assessment → | https://cwmigrationgroup.com/free-assessment |
+| View Related Programs | https://cwmigrationgroup.com/immigration/work-permit |
+| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| → PGWP | https://cwmigrationgroup.com/immigration/pgwp |
+| → Spousal OWP | https://cwmigrationgroup.com/immigration/spousal-work-permit |
+| → Express Entry | https://cwmigrationgroup.com/immigration/express-entry |
+| → Work Permit | https://cwmigrationgroup.com/immigration/work-permit |
+| See full details | https://cwmigrationgroup.com/immigration/open-work-permit#bridging-owp |
+| PGWP → | https://cwmigrationgroup.com/immigration/pgwp |
+| Spousal OWP → | https://cwmigrationgroup.com/immigration/spousal-work-permit |
+| Call contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| Book Free Consultation | https://cwmigrationgroup.com/contact |
+| All Work Permits | https://cwmigrationgroup.com/immigration/work-permit |
+| Express Entry → | https://cwmigrationgroup.com/immigration/express-entry |
+| Work Permit → | https://cwmigrationgroup.com/immigration/work-permit |
+| Study Permit → | https://cwmigrationgroup.com/immigration/study-permit |
+| Refusals → | https://cwmigrationgroup.com/refusals |
+| Book Free Consultation → | https://cwmigrationgroup.com/book |
 
 ---
 
@@ -420,15 +420,15 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://commonwealthmigration.ca/immigration/open-work-permit#service","name":"Open Work Permit Canada","description":"Licensed RCIC guidance for all open work permit streams: Bridging OWP, refugee OWP, vulnerable worker OWP, CUAET, and more.","areaServed":"Canada","serviceType":"Immigration Consulting","provider":{"@type":"Organization","name":"Licensed Regulated Canadian Immigration Consultants","url":"https://commonwealthmigration.ca"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Open Work Permit","item":"https://commonwealthmigration.ca/immigration/open-work-permit"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://cwmigrationgroup.com/immigration/open-work-permit#service","name":"Open Work Permit Canada","description":"Licensed RCIC guidance for all open work permit streams: Bridging OWP, refugee OWP, vulnerable worker OWP, CUAET, and more.","areaServed":"Canada","serviceType":"Immigration Consulting","provider":{"@type":"Organization","name":"Licensed Regulated Canadian Immigration Consultants","url":"https://cwmigrationgroup.com"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Open Work Permit","item":"https://cwmigrationgroup.com/immigration/open-work-permit"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Work Permit","item":"https://commonwealthmigration.ca/immigration/work-permit"},{"@type":"ListItem","position":4,"name":"Open Work Permit"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Work Permit","item":"https://cwmigrationgroup.com/immigration/work-permit"},{"@type":"ListItem","position":4,"name":"Open Work Permit"}]}
 ```
 
 ```json

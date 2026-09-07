@@ -1,6 +1,6 @@
 # New Brunswick PNP 2026 - Complete Guide | NBPNP Community Letter | Licensed RCIC
 
-> **Source URL:** https://commonwealthmigration.ca/immigration/pnp/new-brunswick
+> **Source URL:** https://cwmigrationgroup.com/immigration/pnp/new-brunswick
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.7
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** New Brunswick PNP 2026 - Complete Guide | NBPNP Community Letter | Licensed RCIC
 - **Meta description:** New Brunswick PNP 2026 - Express Entry NB, Skilled Worker, Critical Worker, Entrepreneur and AIP stream. Community Interest Letter specialists. Licensed RCIC.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/immigration/pnp/new-brunswick
+- **Canonical URL:** https://cwmigrationgroup.com/immigration/pnp/new-brunswick
 - **OG title:** New Brunswick PNP 2026 - Complete Guide | NBPNP + AIP | Licensed RCIC
 - **OG description:** Community Interest Letter built on documented evidence. NBPNP + AIP parallel strategy. French language advantage. Licensed RCIC consultants.
 - **Robots:** index, follow
@@ -395,31 +395,31 @@ Serving NB immigration clients in Fredericton · Moncton · Saint John · Bathur
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://commonwealthmigration.ca/immigration/pnp/new-brunswick#main-content |
-| Make Payment | https://commonwealthmigration.ca/pay |
-| Book Book Consultation | https://commonwealthmigration.ca/book |
-| Home | https://commonwealthmigration.ca/ |
-| Immigration | https://commonwealthmigration.ca/immigration |
-| PNP | https://commonwealthmigration.ca/immigration/pnp |
-| Book NBPNP Assessment → | https://commonwealthmigration.ca/free-assessment |
-| Check My Eligibility | https://commonwealthmigration.ca/tools |
-| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
-| → Nova Scotia | https://commonwealthmigration.ca/immigration/pnp/nova-scotia |
-| → PEI | https://commonwealthmigration.ca/immigration/pnp/pei |
-| → PNP Hub | https://commonwealthmigration.ca/immigration/pnp |
-| Free assessment → | https://commonwealthmigration.ca/free-assessment |
-| Get My NB Eligibility Confirmed → | https://commonwealthmigration.ca/free-assessment |
-| Book Free NB Community Letter Consultation → | https://commonwealthmigration.ca/free-assessment |
-| Book Free NB Assessment → | https://commonwealthmigration.ca/free-assessment |
-| Book AIP Employer + Worker consult → | https://commonwealthmigration.ca/book |
-| Book Free Consultation | https://commonwealthmigration.ca/contact |
-| View All PNP Programs | https://commonwealthmigration.ca/immigration/pnp |
-| PNP Hub → All provincial nominee programs | https://commonwealthmigration.ca/immigration/pnp |
-| Nova Scotia PNP → NSNP four-stream structure | https://commonwealthmigration.ca/immigration/pnp/nova-scotia |
-| PEI PNP → Prince Edward Island PEIPNP + AIP | https://commonwealthmigration.ca/immigration/pnp/pei |
-| Express Entry → Federal skilled worker pathways | https://commonwealthmigration.ca/immigration/express-entry |
-| Work Permit → Work in Canada while you apply | https://commonwealthmigration.ca/immigration/work-permit |
-| Family Sponsorship → Sponsor a spouse or family member | https://commonwealthmigration.ca/immigration/sponsorship/spousal |
+| Skip to main content | https://cwmigrationgroup.com/immigration/pnp/new-brunswick#main-content |
+| Make Payment | https://cwmigrationgroup.com/pay |
+| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Home | https://cwmigrationgroup.com/ |
+| Immigration | https://cwmigrationgroup.com/immigration |
+| PNP | https://cwmigrationgroup.com/immigration/pnp |
+| Book NBPNP Assessment → | https://cwmigrationgroup.com/free-assessment |
+| Check My Eligibility | https://cwmigrationgroup.com/tools |
+| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| → Nova Scotia | https://cwmigrationgroup.com/immigration/pnp/nova-scotia |
+| → PEI | https://cwmigrationgroup.com/immigration/pnp/pei |
+| → PNP Hub | https://cwmigrationgroup.com/immigration/pnp |
+| Free assessment → | https://cwmigrationgroup.com/free-assessment |
+| Get My NB Eligibility Confirmed → | https://cwmigrationgroup.com/free-assessment |
+| Book Free NB Community Letter Consultation → | https://cwmigrationgroup.com/free-assessment |
+| Book Free NB Assessment → | https://cwmigrationgroup.com/free-assessment |
+| Book AIP Employer + Worker consult → | https://cwmigrationgroup.com/book |
+| Book Free Consultation | https://cwmigrationgroup.com/contact |
+| View All PNP Programs | https://cwmigrationgroup.com/immigration/pnp |
+| PNP Hub → All provincial nominee programs | https://cwmigrationgroup.com/immigration/pnp |
+| Nova Scotia PNP → NSNP four-stream structure | https://cwmigrationgroup.com/immigration/pnp/nova-scotia |
+| PEI PNP → Prince Edward Island PEIPNP + AIP | https://cwmigrationgroup.com/immigration/pnp/pei |
+| Express Entry → Federal skilled worker pathways | https://cwmigrationgroup.com/immigration/express-entry |
+| Work Permit → Work in Canada while you apply | https://cwmigrationgroup.com/immigration/work-permit |
+| Family Sponsorship → Sponsor a spouse or family member | https://cwmigrationgroup.com/immigration/sponsorship/spousal |
 
 ---
 
@@ -432,13 +432,13 @@ Serving NB immigration clients in Fredericton · Moncton · Saint John · Bathur
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Provincial Nominee Program","item":"https://commonwealthmigration.ca/immigration/pnp"},{"@type":"ListItem","position":4,"name":"New Brunswick","item":"https://commonwealthmigration.ca/immigration/pnp/new-brunswick"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the New Brunswick Community Interest Letter?","acceptedAnswer":{"@type":"Answer","text":"The Community Interest Letter is a required document proving genuine intent to establish in New Brunswick. Officers reject generic essays. Commonwealth Migration builds evidence packages with employment history, family ties, housing research, exploratory visits, and school research mapped to specific attached documents."}},{"@type":"Question","name":"When is AIP better than NBPNP?","acceptedAnswer":{"@type":"Answer","text":"AIP is typically better when your employer is ready for designation and you want to bypass NB's nomination quota. AIP operates under a separate federal framework - endorsement does not consume NBPNP's allocation. Commonwealth Migration model both pathways at assessment."}},{"@type":"Question","name":"Does French language proficiency help with NBPNP?","acceptedAnswer":{"@type":"Answer","text":"Yes - bilingual candidates access Francophone-targeted draws, score higher in general EOI rankings, and may qualify for federal programs that add CRS points. NB is Canada's only officially bilingual province. Tested French at CLB 7+ opens the most doors."}},{"@type":"Question","name":"How long does NBPNP take?","acceptedAnswer":{"@type":"Answer","text":"Provincial processing from complete application to nomination: typically 3-6 months. Express Entry-linked nominees reach federal PR in approximately 6 months after nomination. Base PNP nominees add 12-18 months for IRCC processing. Total: plan for 12-24 months."}}]},{"@type":"Service","name":"New Brunswick NBPNP and AIP Immigration Services","serviceType":"Immigration Consulting","provider":{"@type":"LocalBusiness","name":"Licensed Regulated Canadian Immigration Consultants","address":"Canada-wide service by appointment, Brampton, Ontario"},"areaServed":"New Brunswick, Canada","description":"Licensed RCIC guidance for NBPNP - Express Entry NB, Skilled Worker with Employer Support, Critical Worker, Strategic Initiatives, and AIP employer designation. Community Interest Letter evidence packages. Serving Fredericton, Moncton, Saint John, and all of New Brunswick."}]}
+{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Provincial Nominee Program","item":"https://cwmigrationgroup.com/immigration/pnp"},{"@type":"ListItem","position":4,"name":"New Brunswick","item":"https://cwmigrationgroup.com/immigration/pnp/new-brunswick"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the New Brunswick Community Interest Letter?","acceptedAnswer":{"@type":"Answer","text":"The Community Interest Letter is a required document proving genuine intent to establish in New Brunswick. Officers reject generic essays. Commonwealth Migration builds evidence packages with employment history, family ties, housing research, exploratory visits, and school research mapped to specific attached documents."}},{"@type":"Question","name":"When is AIP better than NBPNP?","acceptedAnswer":{"@type":"Answer","text":"AIP is typically better when your employer is ready for designation and you want to bypass NB's nomination quota. AIP operates under a separate federal framework - endorsement does not consume NBPNP's allocation. Commonwealth Migration model both pathways at assessment."}},{"@type":"Question","name":"Does French language proficiency help with NBPNP?","acceptedAnswer":{"@type":"Answer","text":"Yes - bilingual candidates access Francophone-targeted draws, score higher in general EOI rankings, and may qualify for federal programs that add CRS points. NB is Canada's only officially bilingual province. Tested French at CLB 7+ opens the most doors."}},{"@type":"Question","name":"How long does NBPNP take?","acceptedAnswer":{"@type":"Answer","text":"Provincial processing from complete application to nomination: typically 3-6 months. Express Entry-linked nominees reach federal PR in approximately 6 months after nomination. Base PNP nominees add 12-18 months for IRCC processing. Total: plan for 12-24 months."}}]},{"@type":"Service","name":"New Brunswick NBPNP and AIP Immigration Services","serviceType":"Immigration Consulting","provider":{"@type":"LocalBusiness","name":"Licensed Regulated Canadian Immigration Consultants","address":"Canada-wide service by appointment, Brampton, Ontario"},"areaServed":"New Brunswick, Canada","description":"Licensed RCIC guidance for NBPNP - Express Entry NB, Skilled Worker with Employer Support, Critical Worker, Strategic Initiatives, and AIP employer designation. Community Interest Letter evidence packages. Serving Fredericton, Moncton, Saint John, and all of New Brunswick."}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"PNP","item":"https://commonwealthmigration.ca/immigration/pnp"},{"@type":"ListItem","position":4,"name":"New Brunswick"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"PNP","item":"https://cwmigrationgroup.com/immigration/pnp"},{"@type":"ListItem","position":4,"name":"New Brunswick"}]}
 ```

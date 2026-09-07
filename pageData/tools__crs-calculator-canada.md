@@ -1,17 +1,17 @@
 # Free CRS calculator Canada: make the next question easier to answer
 
-> **Source URL:** https://commonwealthmigration.ca/tools/crs-calculator-canada
+> **Source URL:** https://cwmigrationgroup.com/tools/crs-calculator-canada
 > **Last modified:** 2026-08-19
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Fresh English rewrite | SEO/GEO/AEO reviewed
 
 ## SEO Metadata
 
-- **Title tag:** Free CRS calculator Canada 2026 | Canada Immigration Tool
-- **Meta description:** Use a free CRS calculator Canada for Express Entry score planning, then verify the estimate against current official rules with a licensed RCIC.
-- **Meta keywords:** (none)
-- **Canonical URL:** https://commonwealthmigration.ca/tools/crs-calculator-canada
-- **OG title:** Free CRS calculator Canada | Commonwealth Migration Canada
+- **Title tag:** CRS Calculator Canada | Express Entry Score
+- **Meta description:** Use a free CRS calculator Canada to estimate your Express Entry score, review key factors and compare the result with current IRCC criteria.
+- **Meta keywords:** CRS calculator Canada, Express Entry score calculator, Canada CRS score
+- **Canonical URL:** https://cwmigrationgroup.com/tools/crs-calculator-canada
+- **OG title:** CRS Calculator Canada | Express Entry Score
 - **OG description:** Use a free CRS calculator Canada for Express Entry score planning, then verify the estimate against current official rules with a licensed RCIC.
 - **Robots:** index, follow
 
@@ -120,7 +120,7 @@ Get a review before paying fees or missing a deadline when the case involves a r
 
 
 
-If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
+If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://cwmigrationgroup.com/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
 
 ## Links & CTAs on this page
 
@@ -129,9 +129,9 @@ If you are ready to move from general research to a file-specific plan, [book a 
 | IRCC: rounds of invitations | https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html |
 | official IRCC immigration hub | https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html |
 | IRCC: check processing times | https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html |
-| verify an RCIC on the CICC register | https://www.cicc-ccic.ca/register/ |
-| Book a focused immigration consultation | https://commonwealthmigration.ca/contact/book-immigration-consultation-canada |
-| Contact Commonwealth Migration Canada | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| verify an RCIC on the CICC register | https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx |
+| Book a focused immigration consultation | https://cwmigrationgroup.com/contact/book-immigration-consultation-canada |
+| Contact Commonwealth Migration Canada | https://cwmigrationgroup.com/contact/book-immigration-consultation-canada |
 
 ## Image Alt Texts
 
@@ -145,8 +145,8 @@ If you are ready to move from general research to a file-specific plan, [book a 
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://commonwealthmigration.ca/tools/crs-calculator-canada#webpage",
-      "url": "https://commonwealthmigration.ca/tools/crs-calculator-canada",
+      "@id": "https://cwmigrationgroup.com/tools/crs-calculator-canada#webpage",
+      "url": "https://cwmigrationgroup.com/tools/crs-calculator-canada",
       "name": "Free CRS calculator Canada 2026 | Canada Immigration Tool",
       "description": "Use a free CRS calculator Canada for Express Entry score planning, then verify the estimate against current official rules with a licensed RCIC.",
       "inLanguage": "en-CA",
@@ -154,7 +154,7 @@ If you are ready to move from general research to a file-specific plan, [book a 
       "isPartOf": {
         "@type": "WebSite",
         "name": "Commonwealth Migration Canada",
-        "url": "https://commonwealthmigration.ca"
+        "url": "https://cwmigrationgroup.com"
       },
       "about": {
         "@type": "Thing",
@@ -168,13 +168,13 @@ If you are ready to move from general research to a file-specific plan, [book a 
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://commonwealthmigration.ca"
+          "item": "https://cwmigrationgroup.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "CRS calculator Canada",
-          "item": "https://commonwealthmigration.ca/tools/crs-calculator-canada"
+          "item": "https://cwmigrationgroup.com/tools/crs-calculator-canada"
         }
       ]
     },

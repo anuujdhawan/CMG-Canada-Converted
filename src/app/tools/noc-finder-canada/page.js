@@ -1,6 +1,5 @@
 import { buildMetadata } from "@/lib/seo";
 import { getPage } from "@/lib/sitePages";
-import { rebrand } from "@/components/templates/ContentPage";
 import ToolShell from "@/components/templates/ToolShell";
 import NocFinder from "@/components/tools/NocFinder";
 
@@ -8,9 +7,10 @@ const pagePath = "/tools/noc-finder-canada";
 const page = getPage(pagePath);
 
 export const metadata = buildMetadata({
-  title: rebrand(page?.seo.title || page?.h1 || "NOC / Occupation Finder"),
-  description: rebrand(page?.seo.description || "Search a demo subset of NOC 2021 occupations by keyword or code and filter by TEER category."),
+  title: "NOC Finder Canada | Occupation & TEER Code",
+  description: "Find a likely Canada NOC and TEER category by searching occupation titles or codes. Compare your real duties with the current NOC description before using it.",
   path: pagePath,
+  keywords: ["NOC finder Canada", "NOC code search", "TEER category Canada"],
 });
 
 export default function NocFinderPage() {
