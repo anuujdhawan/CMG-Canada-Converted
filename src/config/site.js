@@ -98,7 +98,7 @@ export const site = {
     if (override) return override;
     const raw = env("NEXT_PUBLIC_PHONE", "");
     const digits = raw.replace(/[^\d]/g, "");
-    // tel: links want the full international number, e.g. tel:+16476170750
+    // tel: links want the full international number, e.g. tel:+14168569394
     return digits.length >= 7
       ? `tel:${raw.trim().startsWith("+") ? "+" : ""}${digits}`
       : "/contact/book-immigration-consultation-canada";
