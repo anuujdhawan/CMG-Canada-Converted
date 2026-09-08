@@ -163,11 +163,11 @@ export default function Footer() {
                   <span className="site-footer__office-address grid gap-[.1rem] pl-[2.2rem]">{site.sisterConcern.address}</span>
                 </a>
               </div>
-              <a href={site.phoneHref} className="site-footer__contact-row flex items-start gap-[.6rem] text-[var(--brand-muted)] text-[.78rem] leading-[1.45] no-underline transition-colors duration-[180ms] ease-in-out hover:text-[var(--brand-primary-dark)]">
+              <a href="tel:14168569394" className="site-footer__contact-row flex items-start gap-[.6rem] text-[var(--brand-muted)] text-[.78rem] leading-[1.45] no-underline transition-colors duration-[180ms] ease-in-out hover:text-[var(--brand-primary-dark)]">
                 <span className="site-footer__contact-icon inline-flex size-[1.65rem] shrink-0 items-center justify-center mt-[.02rem] rounded-[.55rem] border border-[var(--brand-border)] bg-white text-[var(--brand-primary)]">
                   <Phone size={13} aria-hidden />
                 </span>
-                <span>{site.phone}</span>
+                <span>+14168569394</span>
               </a>
               <a href={site.emailHref} className="site-footer__contact-row flex items-start gap-[.6rem] text-[var(--brand-muted)] text-[.78rem] leading-[1.45] no-underline transition-colors duration-[180ms] ease-in-out hover:text-[var(--brand-primary-dark)]">
                 <span className="site-footer__contact-icon inline-flex size-[1.65rem] shrink-0 items-center justify-center mt-[.02rem] rounded-[.55rem] border border-[var(--brand-border)] bg-white text-[var(--brand-primary)]">
