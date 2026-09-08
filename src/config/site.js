@@ -47,7 +47,6 @@ const publicEnv = {
   NEXT_PUBLIC_SUCCESS_VIDEO_1: process.env.NEXT_PUBLIC_SUCCESS_VIDEO_1,
   NEXT_PUBLIC_SUCCESS_VIDEO_2: process.env.NEXT_PUBLIC_SUCCESS_VIDEO_2,
   NEXT_PUBLIC_SUCCESS_VIDEO_3: process.env.NEXT_PUBLIC_SUCCESS_VIDEO_3,
-  NEXT_PUBLIC_WHATSAPP_URL: process.env.NEXT_PUBLIC_WHATSAPP_URL,
   NEXT_PUBLIC_DEFAULT_TITLE: process.env.NEXT_PUBLIC_DEFAULT_TITLE,
   NEXT_PUBLIC_DEFAULT_DESCRIPTION: process.env.NEXT_PUBLIC_DEFAULT_DESCRIPTION,
   NEXT_PUBLIC_META_KEYWORDS: process.env.NEXT_PUBLIC_META_KEYWORDS,
@@ -85,7 +84,7 @@ export const site = {
   ),
 
   // ---- Contact ----------------------------------------------------------
-  url: env("NEXT_PUBLIC_SITE_URL", "https://cwmigrationgroup.com"), // canonical/sitemap target
+  url: env("NEXT_PUBLIC_SITE_URL", "https://commonwealthmigration.ca"), // canonical/sitemap target
   email: env("NEXT_PUBLIC_SUPPORT_EMAIL", "info@commonwealthmigration.ca"),
   // When a real inbox is configured, default to a mailto: link; otherwise keep the contact page.
   emailHref: env("NEXT_PUBLIC_SUPPORT_EMAIL_HREF", "") ||
@@ -104,18 +103,6 @@ export const site = {
       ? `tel:${raw.trim().startsWith("+") ? "+" : ""}${digits}`
       : "/contact/book-immigration-consultation-canada";
   })(),
-  whatsappUrl: (() => {
-    const raw = env("NEXT_PUBLIC_WHATSAPP_URL", "").trim();
-    if (!raw) return "";
-    // Already a full WhatsApp URL — use as-is
-    if (/^https?:\/\/(wa\.me|api\.whatsapp\.com|chat\.whatsapp\.com)/i.test(raw)) return raw;
-    if (/^https?:\/\//i.test(raw)) return raw;
-    // Bare phone number (e.g. +14165551234 or 14165551234) → build wa.me link
-    const digits = raw.replace(/[^\d]/g, "");
-    if (digits.length >= 8) return `https://wa.me/${digits}`;
-    return raw;
-  })(),
-
   address: {
     line1: env("NEXT_PUBLIC_ADDRESS_LINE1", "Canada-wide service by appointment"),
     city: env("NEXT_PUBLIC_ADDRESS_CITY", "Canada"),

@@ -1,6 +1,6 @@
 # Free Canadian Immigration Calculators - Express Entry CRS, CLB & PNP Eligibility
 
-> **Source URL:** https://cwmigrationgroup.com/tools
+> **Source URL:** https://commonwealthmigration.ca/tools
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Free Canadian Immigration Calculators - Express Entry CRS, CLB & PNP Eligibility
 - **Meta description:** Free Canadian immigration calculators - CRS score, CLB converter & PNP eligibility for OINP, AAIP, SINP, BC PNP, MPNP & more. Built by licensed RCICs.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/tools
+- **Canonical URL:** https://commonwealthmigration.ca/tools
 - **OG title:** Free Canadian Immigration Calculators - Check Your Eligibility
 - **OG description:** Free Canadian immigration calculators - CRS score, CLB converter & PNP eligibility for OINP, AAIP, SINP, BC PNP, MPNP & more. Built by licensed RCICs.
 - **Robots:** index, follow
@@ -51,9 +51,9 @@ A calculator tells you where you stand; a licensed consultant tells you what to 
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/tools#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
+| Skip to main content | https://commonwealthmigration.ca/tools#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
 
 ---
 
@@ -66,9 +66,9 @@ A calculator tells you where you stand; a licensed consultant tells you what to 
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"WebApplication","name":"Commonwealth Migration Calculators","url":"https://cwmigrationgroup.com/tools","description":"Free Canadian immigration eligibility calculators. Express Entry CRS, CLB converter, and all 10 provincial nominee programs.","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}}
+{"@context":"https://schema.org","@type":"WebApplication","name":"Commonwealth Migration Calculators","url":"https://commonwealthmigration.ca/tools","description":"Free Canadian immigration eligibility calculators. Express Entry CRS, CLB converter, and all 10 provincial nominee programs.","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}}
 ```

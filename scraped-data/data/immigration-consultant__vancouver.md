@@ -1,6 +1,6 @@
 # Immigration Consultant Vancouver, BC | Licensed RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/immigration-consultant/vancouver
+> **Source URL:** https://commonwealthmigration.ca/immigration-consultant/vancouver
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.9
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Immigration Consultant Vancouver, BC | Licensed RCIC
 - **Meta description:** CICC-regulated RCIC consultants serving Vancouver, British Columbia. Express Entry, PNP, work permits, spousal sponsorship, LMIA. Free assessment available.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/immigration-consultant/vancouver
+- **Canonical URL:** https://commonwealthmigration.ca/immigration-consultant/vancouver
 - **OG title:** Immigration Consultant in Vancouver | Licensed RCIC
 - **OG description:** CICC-regulated RCIC serving Vancouver. Express Entry, PNP, work permits, spousal sponsorship, LMIA and refusals. Free assessment.
 - **Robots:** index, follow
@@ -135,36 +135,36 @@ The BC Provincial Nominee Program (BC PNP) through the Skills Immigration Regist
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/immigration-consultant/vancouver#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| Home | https://cwmigrationgroup.com/ |
-| Immigration Consultants | https://cwmigrationgroup.com/immigration-consultant |
-| Free Assessment - vancouver → | https://cwmigrationgroup.com/book |
-| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| → Express Entry | https://cwmigrationgroup.com/immigration/express-entry |
-| → Work Permits | https://cwmigrationgroup.com/immigration/work-permit |
-| → Family Sponsorship | https://cwmigrationgroup.com/immigration/spousal-sponsorship |
-| → OINP (Ontario PNP) | https://cwmigrationgroup.com/immigration/pnp/ontario |
-| book a free assessment | https://cwmigrationgroup.com/book |
-| 🍁 Express Entry CRS-based federal PR draws. We build strong profiles and identify your fastest pathway. | https://cwmigrationgroup.com/immigration/express-entry |
-| 🏛️ OINP Ontario provincial nomination adds 600 CRS points. Best route for most Ontario residents. | https://cwmigrationgroup.com/immigration/pnp/ontario |
-| 💍 Spousal Sponsorship Inland and outland spouse/partner sponsorship - we handle every form and document. | https://cwmigrationgroup.com/immigration/spousal-sponsorship |
-| 💼 Work Permits Open, employer-specific, LMIA-backed, and LMIA-exempt permits for every situation. | https://cwmigrationgroup.com/immigration/work-permit |
-| ✈️ Visitor / Super Visa TRV and 10-year Super Visa for parents and grandparents of Canadian citizens and PRs. | https://cwmigrationgroup.com/contact-us |
-| 🏢 LMIA Labour Market Impact Assessment for employers, including job advertising strategy and ESDC submission. | https://cwmigrationgroup.com/contact-us |
-| Book Free Assessment → | https://cwmigrationgroup.com/book |
-| Discuss your profile → | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| View all immigration FAQs → | https://cwmigrationgroup.com/faqs |
-| Book Free Consultation → | https://cwmigrationgroup.com/book |
-| 📞 contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| → Express Entry CRS Calculator | https://cwmigrationgroup.com/tools/crs-calculator |
-| → Latest Draw Results | https://cwmigrationgroup.com/draw-results |
-| → OINP Streams | https://cwmigrationgroup.com/immigration/pnp/ontario |
-| → Spousal Sponsorship | https://cwmigrationgroup.com/immigration/spousal-sponsorship |
-| → Refusal Help | https://cwmigrationgroup.com/refusals |
-| → All FAQs | https://cwmigrationgroup.com/faqs |
-| Discuss your profile → | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| Skip to main content | https://commonwealthmigration.ca/immigration-consultant/vancouver#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| Home | https://commonwealthmigration.ca/ |
+| Immigration Consultants | https://commonwealthmigration.ca/immigration-consultant |
+| Free Assessment - vancouver → | https://commonwealthmigration.ca/book |
+| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| → Express Entry | https://commonwealthmigration.ca/immigration/express-entry |
+| → Work Permits | https://commonwealthmigration.ca/immigration/work-permit |
+| → Family Sponsorship | https://commonwealthmigration.ca/immigration/spousal-sponsorship |
+| → OINP (Ontario PNP) | https://commonwealthmigration.ca/immigration/pnp/ontario |
+| book a free assessment | https://commonwealthmigration.ca/book |
+| 🍁 Express Entry CRS-based federal PR draws. We build strong profiles and identify your fastest pathway. | https://commonwealthmigration.ca/immigration/express-entry |
+| 🏛️ OINP Ontario provincial nomination adds 600 CRS points. Best route for most Ontario residents. | https://commonwealthmigration.ca/immigration/pnp/ontario |
+| 💍 Spousal Sponsorship Inland and outland spouse/partner sponsorship - we handle every form and document. | https://commonwealthmigration.ca/immigration/spousal-sponsorship |
+| 💼 Work Permits Open, employer-specific, LMIA-backed, and LMIA-exempt permits for every situation. | https://commonwealthmigration.ca/immigration/work-permit |
+| ✈️ Visitor / Super Visa TRV and 10-year Super Visa for parents and grandparents of Canadian citizens and PRs. | https://commonwealthmigration.ca/contact-us |
+| 🏢 LMIA Labour Market Impact Assessment for employers, including job advertising strategy and ESDC submission. | https://commonwealthmigration.ca/contact-us |
+| Book Free Assessment → | https://commonwealthmigration.ca/book |
+| Discuss your profile → | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| View all immigration FAQs → | https://commonwealthmigration.ca/faqs |
+| Book Free Consultation → | https://commonwealthmigration.ca/book |
+| 📞 contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| → Express Entry CRS Calculator | https://commonwealthmigration.ca/tools/crs-calculator |
+| → Latest Draw Results | https://commonwealthmigration.ca/draw-results |
+| → OINP Streams | https://commonwealthmigration.ca/immigration/pnp/ontario |
+| → Spousal Sponsorship | https://commonwealthmigration.ca/immigration/spousal-sponsorship |
+| → Refusal Help | https://commonwealthmigration.ca/refusals |
+| → All FAQs | https://commonwealthmigration.ca/faqs |
+| Discuss your profile → | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
 
 ---
 
@@ -177,7 +177,7 @@ The BC Provincial Nominee Program (BC PNP) through the Skills Immigration Regist
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
@@ -185,9 +185,9 @@ The BC Provincial Nominee Program (BC PNP) through the Skills Immigration Regist
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada - Immigration Consultant Vancouver","description":"Licensed RCIC immigration consulting for Vancouver residents. Express Entry, PNP, work permits, family sponsorship, and more.","url":"https://cwmigrationgroup.com/immigration-consultant/vancouver","image":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg","priceRange":"$$","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"City","name":"Vancouver","containedInPlace":{"@type":"AdministrativeArea","name":"British Columbia"}},"serviceType":["Express Entry","BC PNP (SIMS)","Work Permits","LMIA","Spousal Sponsorship","Study Permits"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada - Immigration Consultant Vancouver","description":"Licensed RCIC immigration consulting for Vancouver residents. Express Entry, PNP, work permits, family sponsorship, and more.","url":"https://commonwealthmigration.ca/immigration-consultant/vancouver","image":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg","priceRange":"$$","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"City","name":"Vancouver","containedInPlace":{"@type":"AdministrativeArea","name":"British Columbia"}},"serviceType":["Express Entry","BC PNP (SIMS)","Work Permits","LMIA","Spousal Sponsorship","Study Permits"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration Consultants","item":"https://cwmigrationgroup.com/immigration-consultant"},{"@type":"ListItem","position":3,"name":"Vancouver"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration Consultants","item":"https://commonwealthmigration.ca/immigration-consultant"},{"@type":"ListItem","position":3,"name":"Vancouver"}]}
 ```

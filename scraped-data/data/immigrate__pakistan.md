@@ -1,6 +1,6 @@
 # Immigrate to Canada from Pakistan 2026 | Express Entry, PNP, IELTS | Licensed RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/immigrate/pakistan
+> **Source URL:** https://commonwealthmigration.ca/immigrate/pakistan
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.9
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Immigrate to Canada from Pakistan 2026 | Express Entry, PNP, IELTS | Licensed RCIC
 - **Meta description:** Canada immigration from Pakistan: Express Entry FSW and CEC, Ontario PNP, Federal Skilled Trades, WES evaluation. Licensed RCIC. Free eligibility check.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/immigrate/pakistan
+- **Canonical URL:** https://commonwealthmigration.ca/immigrate/pakistan
 - **OG title:** Immigrate to Canada from Pakistan 2026 | Licensed RCIC
 - **OG description:** Pakistani engineers, IT professionals, and accountants: Express Entry, PNP, and Federal Skilled Trades pathways to Canadian PR. Commonwealth Migration licensed RCICs.
 - **Robots:** index, follow
@@ -221,23 +221,23 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/immigrate/pakistan#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| Home | https://cwmigrationgroup.com/ |
-| Immigrate | https://cwmigrationgroup.com/immigrate |
-| Book Free Consultation → | https://cwmigrationgroup.com/book |
-| Free CRS Assessment | https://cwmigrationgroup.com/free-assessment |
-| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| → Federal Skilled Worker (FSW) | https://cwmigrationgroup.com/immigration/fsw |
-| → Ontario OINP | https://cwmigrationgroup.com/immigration/pnp |
-| → Federal Skilled Trades | https://cwmigrationgroup.com/immigration/express-entry |
-| → Family Sponsorship | https://cwmigrationgroup.com/immigration/family-sponsorship |
-| Book consultation → | https://cwmigrationgroup.com/book |
-| Learn more | https://cwmigrationgroup.com/immigration/fsw |
-| Learn more | https://cwmigrationgroup.com/immigration/pnp |
-| Learn more | https://cwmigrationgroup.com/immigration/express-entry |
-| Book Free Consultation | https://cwmigrationgroup.com/contact |
+| Skip to main content | https://commonwealthmigration.ca/immigrate/pakistan#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| Home | https://commonwealthmigration.ca/ |
+| Immigrate | https://commonwealthmigration.ca/immigrate |
+| Book Free Consultation → | https://commonwealthmigration.ca/book |
+| Free CRS Assessment | https://commonwealthmigration.ca/free-assessment |
+| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| → Federal Skilled Worker (FSW) | https://commonwealthmigration.ca/immigration/fsw |
+| → Ontario OINP | https://commonwealthmigration.ca/immigration/pnp |
+| → Federal Skilled Trades | https://commonwealthmigration.ca/immigration/express-entry |
+| → Family Sponsorship | https://commonwealthmigration.ca/immigration/family-sponsorship |
+| Book consultation → | https://commonwealthmigration.ca/book |
+| Learn more | https://commonwealthmigration.ca/immigration/fsw |
+| Learn more | https://commonwealthmigration.ca/immigration/pnp |
+| Learn more | https://commonwealthmigration.ca/immigration/express-entry |
+| Book Free Consultation | https://commonwealthmigration.ca/contact |
 
 ---
 
@@ -250,15 +250,15 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://cwmigrationgroup.com/immigrate/pakistan#service","name":"Canada Immigration Consulting for Pakistani Applicants","description":"Licensed RCIC guidance for Pakistani nationals: Express Entry FSW/CEC, Ontario OINP, Federal Skilled Trades, and family sponsorship pathways to Canadian PR.","areaServed":["Canada","Pakistan"],"serviceType":"Immigration Consulting","provider":{"@type":"Organization","name":"Commonwealth Migration Canada","url":"https://cwmigrationgroup.com"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigrate","item":"https://cwmigrationgroup.com/immigrate"},{"@type":"ListItem","position":3,"name":"Immigrate from Pakistan","item":"https://cwmigrationgroup.com/immigrate/pakistan"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://commonwealthmigration.ca/immigrate/pakistan#service","name":"Canada Immigration Consulting for Pakistani Applicants","description":"Licensed RCIC guidance for Pakistani nationals: Express Entry FSW/CEC, Ontario OINP, Federal Skilled Trades, and family sponsorship pathways to Canadian PR.","areaServed":["Canada","Pakistan"],"serviceType":"Immigration Consulting","provider":{"@type":"Organization","name":"Commonwealth Migration Canada","url":"https://commonwealthmigration.ca"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigrate","item":"https://commonwealthmigration.ca/immigrate"},{"@type":"ListItem","position":3,"name":"Immigrate from Pakistan","item":"https://commonwealthmigration.ca/immigrate/pakistan"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigrate","item":"https://cwmigrationgroup.com/immigrate"},{"@type":"ListItem","position":3,"name":"From Pakistan"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigrate","item":"https://commonwealthmigration.ca/immigrate"},{"@type":"ListItem","position":3,"name":"From Pakistan"}]}
 ```
 
 ```json

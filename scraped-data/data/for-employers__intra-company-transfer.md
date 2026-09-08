@@ -1,6 +1,6 @@
 # Intra-Company Transfer (ICT) Canada 2026 | LMIA-Exempt Permit | Licensed RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/for-employers/intra-company-transfer
+> **Source URL:** https://commonwealthmigration.ca/for-employers/intra-company-transfer
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.7
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Intra-Company Transfer (ICT) Canada 2026 | LMIA-Exempt Permit | Licensed RCIC
 - **Meta description:** Transfer executives, managers and specialized workers to Canada without an LMIA. ICT eligibility, documents, PR pathway covered. Licensed RCIC guidance.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/for-employers/intra-company-transfer
+- **Canonical URL:** https://commonwealthmigration.ca/for-employers/intra-company-transfer
 - **OG title:** Intra-Company Transfer Canada (ICT) 2026 | Executives & Specialized Knowledge | Licensed RCIC
 - **OG description:** LMIA-exempt transfer of key employees to Canada. Executives, senior managers, specialized knowledge workers. Corporate relationship and 1-year requirement explained.
 - **Robots:** index, follow
@@ -422,29 +422,29 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/for-employers/intra-company-transfer#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| Home | https://cwmigrationgroup.com/ |
-| For Employers | https://cwmigrationgroup.com/for-employers |
-| Book Free Assessment → | https://cwmigrationgroup.com/free-assessment |
-| LMIA-Exempt Overview | https://cwmigrationgroup.com/for-employers/lmia-exempt |
-| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| → LMIA-Exempt for Employers | https://cwmigrationgroup.com/for-employers/lmia-exempt |
-| → Global Talent Stream | https://cwmigrationgroup.com/for-employers/global-talent-stream |
-| → Employer Compliance | https://cwmigrationgroup.com/for-employers/employer-compliance |
-| → Express Entry (for workers) | https://cwmigrationgroup.com/immigration/express-entry |
-| → All Employer Services | https://cwmigrationgroup.com/for-employers |
-| Book ICT Consultation → | https://cwmigrationgroup.com/free-assessment |
-| Book Free Consultation → | https://cwmigrationgroup.com/free-assessment |
-| Book Free Consultation | https://cwmigrationgroup.com/contact |
-| LMIA-Exempt for Employers → | https://cwmigrationgroup.com/for-employers/lmia-exempt |
-| Global Talent Stream → | https://cwmigrationgroup.com/for-employers/global-talent-stream |
-| Employer Compliance → | https://cwmigrationgroup.com/for-employers/employer-compliance |
-| Express Entry → | https://cwmigrationgroup.com/immigration/express-entry |
-| LMIA-Exempt for Workers → | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| All Employer Services → | https://cwmigrationgroup.com/for-employers |
-| Book Free Consultation → | https://cwmigrationgroup.com/book |
+| Skip to main content | https://commonwealthmigration.ca/for-employers/intra-company-transfer#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| Home | https://commonwealthmigration.ca/ |
+| For Employers | https://commonwealthmigration.ca/for-employers |
+| Book Free Assessment → | https://commonwealthmigration.ca/free-assessment |
+| LMIA-Exempt Overview | https://commonwealthmigration.ca/for-employers/lmia-exempt |
+| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| → LMIA-Exempt for Employers | https://commonwealthmigration.ca/for-employers/lmia-exempt |
+| → Global Talent Stream | https://commonwealthmigration.ca/for-employers/global-talent-stream |
+| → Employer Compliance | https://commonwealthmigration.ca/for-employers/employer-compliance |
+| → Express Entry (for workers) | https://commonwealthmigration.ca/immigration/express-entry |
+| → All Employer Services | https://commonwealthmigration.ca/for-employers |
+| Book ICT Consultation → | https://commonwealthmigration.ca/free-assessment |
+| Book Free Consultation → | https://commonwealthmigration.ca/free-assessment |
+| Book Free Consultation | https://commonwealthmigration.ca/contact |
+| LMIA-Exempt for Employers → | https://commonwealthmigration.ca/for-employers/lmia-exempt |
+| Global Talent Stream → | https://commonwealthmigration.ca/for-employers/global-talent-stream |
+| Employer Compliance → | https://commonwealthmigration.ca/for-employers/employer-compliance |
+| Express Entry → | https://commonwealthmigration.ca/immigration/express-entry |
+| LMIA-Exempt for Workers → | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| All Employer Services → | https://commonwealthmigration.ca/for-employers |
+| Book Free Consultation → | https://commonwealthmigration.ca/book |
 
 ---
 
@@ -457,15 +457,15 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://cwmigrationgroup.com/for-employers/intra-company-transfer#service","name":"Intra-Company Transfer (ICT) Work Permit Services Canada","description":"LMIA-exempt intra-company transfer work permits for executives, senior managers, and specialized knowledge workers. Corporate relationship verification, document preparation, and compliance support.","areaServed":"Canada","serviceType":"Immigration Consulting"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"For Employers","item":"https://cwmigrationgroup.com/for-employers"},{"@type":"ListItem","position":3,"name":"Intra-Company Transfer","item":"https://cwmigrationgroup.com/for-employers/intra-company-transfer"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://commonwealthmigration.ca/for-employers/intra-company-transfer#service","name":"Intra-Company Transfer (ICT) Work Permit Services Canada","description":"LMIA-exempt intra-company transfer work permits for executives, senior managers, and specialized knowledge workers. Corporate relationship verification, document preparation, and compliance support.","areaServed":"Canada","serviceType":"Immigration Consulting"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"For Employers","item":"https://commonwealthmigration.ca/for-employers"},{"@type":"ListItem","position":3,"name":"Intra-Company Transfer","item":"https://commonwealthmigration.ca/for-employers/intra-company-transfer"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"For Employers","item":"https://cwmigrationgroup.com/for-employers"},{"@type":"ListItem","position":3,"name":"Intra-Company Transfer"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"For Employers","item":"https://commonwealthmigration.ca/for-employers"},{"@type":"ListItem","position":3,"name":"Intra-Company Transfer"}]}
 ```
 
 ```json

@@ -13,8 +13,6 @@ import ContentHeading from "@/components/ui/ContentHeading";
    ════════════════════════════════════════════════════════════════════ */
 
 const SITE_HOSTS = [
-  "cwmigrationgroup.com",
-  "www.cwmigrationgroup.com",
   "commonwealthmigration.ca",
   "www.commonwealthmigration.ca",
 ];
@@ -26,7 +24,7 @@ export function rebrand(text) {
 /** Convert a source-site URL to a local relative URL when possible. */
 export function localizeUrl(url) {
   try {
-    const u = new URL(url, site.url || "https://cwmigrationgroup.com");
+    const u = new URL(url, site.url || "https://commonwealthmigration.ca");
     if (SITE_HOSTS.includes(u.hostname)) {
       return `${pathForLegacyPath(u.pathname)}${u.search}${u.hash}`;
     }

@@ -1,6 +1,6 @@
 # Free Canada immigration calculators: make the next question easier to answer
 
-> **Source URL:** https://cwmigrationgroup.com/tools/canada-immigration-calculators
+> **Source URL:** https://commonwealthmigration.ca/tools/canada-immigration-calculators
 > **Last modified:** 2026-08-19
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Fresh English rewrite | SEO/GEO/AEO reviewed
@@ -10,7 +10,7 @@
 - **Title tag:** Canada Immigration Calculators | CRS & PNP
 - **Meta description:** Use free Canada immigration calculators for CRS, PNP, CLB and FSW planning. Compare your estimate with current IRCC criteria before you apply.
 - **Meta keywords:** Canada immigration calculators, CRS calculator, PNP eligibility checker
-- **Canonical URL:** https://cwmigrationgroup.com/tools/canada-immigration-calculators
+- **Canonical URL:** https://commonwealthmigration.ca/tools/canada-immigration-calculators
 - **OG title:** Canada Immigration Calculators | CRS & PNP
 - **OG description:** Use free Canada immigration calculators for CRS, CLB, FSW, PNP and RCIP screening, then verify the estimate against current official rules.
 - **Robots:** index, follow
@@ -120,7 +120,7 @@ Get a review before paying fees or missing a deadline when the case involves a r
 
 
 
-If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://cwmigrationgroup.com/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
+If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
 
 ## Links & CTAs on this page
 
@@ -129,8 +129,8 @@ If you are ready to move from general research to a file-specific plan, [book a 
 | official IRCC immigration hub | https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html |
 | IRCC: check processing times | https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html |
 | verify an RCIC on the CICC register | https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx |
-| Book a focused immigration consultation | https://cwmigrationgroup.com/contact/book-immigration-consultation-canada |
-| Contact Commonwealth Migration Canada | https://cwmigrationgroup.com/contact/book-immigration-consultation-canada |
+| Book a focused immigration consultation | https://commonwealthmigration.ca/contact/book-immigration-consultation-canada |
+| Contact Commonwealth Migration Canada | https://commonwealthmigration.ca/contact/book-immigration-consultation-canada |
 
 ## Image Alt Texts
 
@@ -144,8 +144,8 @@ If you are ready to move from general research to a file-specific plan, [book a 
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://cwmigrationgroup.com/tools/canada-immigration-calculators#webpage",
-      "url": "https://cwmigrationgroup.com/tools/canada-immigration-calculators",
+      "@id": "https://commonwealthmigration.ca/tools/canada-immigration-calculators#webpage",
+      "url": "https://commonwealthmigration.ca/tools/canada-immigration-calculators",
       "name": "Canada immigration calculators 2026 | Commonwealth Migration",
       "description": "Use free Canada immigration calculators for CRS, CLB, FSW, PNP and RCIP screening, then verify the estimate against current official rules.",
       "inLanguage": "en-CA",
@@ -153,7 +153,7 @@ If you are ready to move from general research to a file-specific plan, [book a 
       "isPartOf": {
         "@type": "WebSite",
         "name": "Commonwealth Migration Canada",
-        "url": "https://cwmigrationgroup.com"
+        "url": "https://commonwealthmigration.ca"
       },
       "about": {
         "@type": "Thing",
@@ -167,13 +167,13 @@ If you are ready to move from general research to a file-specific plan, [book a 
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://cwmigrationgroup.com"
+          "item": "https://commonwealthmigration.ca"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Canada immigration calculators",
-          "item": "https://cwmigrationgroup.com/tools/canada-immigration-calculators"
+          "item": "https://commonwealthmigration.ca/tools/canada-immigration-calculators"
         }
       ]
     },

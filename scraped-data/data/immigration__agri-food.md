@@ -1,6 +1,6 @@
 # Agri-Food Pilot Canada 2026 | Agricultural Worker PR Pathway | Licensed RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/immigration/agri-food
+> **Source URL:** https://commonwealthmigration.ca/immigration/agri-food
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.7
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Agri-Food Pilot Canada 2026 | Agricultural Worker PR Pathway | Licensed RCIC
 - **Meta description:** Canada Agri-Food Pilot: PR pathway for meat processing, mushroom, greenhouse and livestock workers. NOC codes, eligibility. Licensed RCIC. Free assessment.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/immigration/agri-food
+- **Canonical URL:** https://commonwealthmigration.ca/immigration/agri-food
 - **OG title:** Canada Agri-Food Pilot 2026 | Agricultural PR Pathway | Licensed RCIC
 - **OG description:** PR pathway for agri-food sector workers in Canada. Meat processing, greenhouse, and livestock. Commonwealth Migration guides your application.
 - **Robots:** index, follow
@@ -253,29 +253,29 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/immigration/agri-food#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| Home | https://cwmigrationgroup.com/ |
-| Immigration | https://cwmigrationgroup.com/immigration |
-| Book Free Consultation → | https://cwmigrationgroup.com/book |
-| Free Assessment | https://cwmigrationgroup.com/free-assessment |
-| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| → Rural Community Pilot (RCIP) | https://cwmigrationgroup.com/immigration/rural-northern |
-| → Atlantic Immigration (AIP) | https://cwmigrationgroup.com/immigration/pnp |
-| → Provincial Nominee (PNP) | https://cwmigrationgroup.com/immigration/pnp |
-| → Express Entry | https://cwmigrationgroup.com/immigration/express-entry |
-| Book assessment → | https://cwmigrationgroup.com/book |
-| Learn more | https://cwmigrationgroup.com/immigration/rural-northern |
-| Learn more | https://cwmigrationgroup.com/immigration/pnp |
-| Learn more | https://cwmigrationgroup.com/immigration/express-entry |
-| Book Free Consultation | https://cwmigrationgroup.com/contact |
-| Rural Community Immigration Pilot | https://cwmigrationgroup.com/immigration/rural-northern |
-| Atlantic Immigration Program | https://cwmigrationgroup.com/immigration/pnp |
-| Provincial Nominee (PNP) | https://cwmigrationgroup.com/immigration/pnp |
-| Express Entry | https://cwmigrationgroup.com/immigration/express-entry |
-| Work Permits & LMIA | https://cwmigrationgroup.com/immigration/lmia |
-| TR to PR Pathways | https://cwmigrationgroup.com/immigration/tr-to-pr |
+| Skip to main content | https://commonwealthmigration.ca/immigration/agri-food#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| Home | https://commonwealthmigration.ca/ |
+| Immigration | https://commonwealthmigration.ca/immigration |
+| Book Free Consultation → | https://commonwealthmigration.ca/book |
+| Free Assessment | https://commonwealthmigration.ca/free-assessment |
+| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| → Rural Community Pilot (RCIP) | https://commonwealthmigration.ca/immigration/rural-northern |
+| → Atlantic Immigration (AIP) | https://commonwealthmigration.ca/immigration/pnp |
+| → Provincial Nominee (PNP) | https://commonwealthmigration.ca/immigration/pnp |
+| → Express Entry | https://commonwealthmigration.ca/immigration/express-entry |
+| Book assessment → | https://commonwealthmigration.ca/book |
+| Learn more | https://commonwealthmigration.ca/immigration/rural-northern |
+| Learn more | https://commonwealthmigration.ca/immigration/pnp |
+| Learn more | https://commonwealthmigration.ca/immigration/express-entry |
+| Book Free Consultation | https://commonwealthmigration.ca/contact |
+| Rural Community Immigration Pilot | https://commonwealthmigration.ca/immigration/rural-northern |
+| Atlantic Immigration Program | https://commonwealthmigration.ca/immigration/pnp |
+| Provincial Nominee (PNP) | https://commonwealthmigration.ca/immigration/pnp |
+| Express Entry | https://commonwealthmigration.ca/immigration/express-entry |
+| Work Permits & LMIA | https://commonwealthmigration.ca/immigration/lmia |
+| TR to PR Pathways | https://commonwealthmigration.ca/immigration/tr-to-pr |
 
 ---
 
@@ -288,15 +288,15 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://cwmigrationgroup.com/immigration/agri-food#service","name":"Agri-Food Pilot and Agricultural Worker PR Consulting","description":"Licensed RCIC guidance for Canada's Agri-Food Pilot and alternative PR pathways for agricultural and food processing workers.","areaServed":"Canada","serviceType":"Immigration Consulting","provider":{"@type":"Organization","name":"Commonwealth Migration Canada","url":"https://cwmigrationgroup.com"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Agri-Food Pilot","item":"https://cwmigrationgroup.com/immigration/agri-food"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://commonwealthmigration.ca/immigration/agri-food#service","name":"Agri-Food Pilot and Agricultural Worker PR Consulting","description":"Licensed RCIC guidance for Canada's Agri-Food Pilot and alternative PR pathways for agricultural and food processing workers.","areaServed":"Canada","serviceType":"Immigration Consulting","provider":{"@type":"Organization","name":"Commonwealth Migration Canada","url":"https://commonwealthmigration.ca"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Agri-Food Pilot","item":"https://commonwealthmigration.ca/immigration/agri-food"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Agri-Food Pilot"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Agri-Food Pilot"}]}
 ```
 
 ```json

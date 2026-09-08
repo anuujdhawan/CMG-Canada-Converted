@@ -1,6 +1,6 @@
 # Spousal Open Work Permit Canada 2026 | TEER 0/1 & Master's Rule | Licensed RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/immigration/spousal-work-permit
+> **Source URL:** https://commonwealthmigration.ca/immigration/spousal-work-permit
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Spousal Open Work Permit Canada 2026 | TEER 0/1 & Master's Rule | Licensed RCIC
 - **Meta description:** Open work permit for a sponsored spouse in Canada. TEER 0/1 rules and student eligibility explained by a Licensed RCIC. Free eligibility check available.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/immigration/spousal-work-permit
+- **Canonical URL:** https://commonwealthmigration.ca/immigration/spousal-work-permit
 - **OG title:** Spousal Open Work Permit Canada 2026 | Licensed RCIC
 - **OG description:** Open Work Permit for Sponsored Spouse 2026 - TEER 0/1 worker or master's/PhD student rule confirmed by licensed RCIC. Application support for eligible Canadian families.
 - **Robots:** index, follow
@@ -387,32 +387,32 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/immigration/spousal-work-permit#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| Home | https://cwmigrationgroup.com/ |
-| Immigration | https://cwmigrationgroup.com/immigration |
-| Work Permit | https://cwmigrationgroup.com/immigration/work-permit |
-| Book Free Assessment → | https://cwmigrationgroup.com/book |
-| View Related Programs | https://cwmigrationgroup.com/immigration/open-work-permit |
-| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| → Open Work Permit | https://cwmigrationgroup.com/immigration/open-work-permit |
-| → PGWP | https://cwmigrationgroup.com/immigration/pgwp |
-| → Spousal Sponsorship | https://cwmigrationgroup.com/immigration/spousal-sponsorship |
-| → Express Entry | https://cwmigrationgroup.com/immigration/express-entry |
-| Call contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| Express Entry (CEC) details | https://cwmigrationgroup.com/immigration/express-entry |
-| CRS score factors | https://cwmigrationgroup.com/immigration/express-entry |
-| Spousal Sponsorship for PR | https://cwmigrationgroup.com/immigration/spousal-sponsorship |
-| Book Free Consultation | https://cwmigrationgroup.com/contact |
-| All Open Work Permits | https://cwmigrationgroup.com/immigration/open-work-permit |
-| Open Work Permit → | https://cwmigrationgroup.com/immigration/open-work-permit |
-| PGWP → | https://cwmigrationgroup.com/immigration/pgwp |
-| Express Entry → | https://cwmigrationgroup.com/immigration/express-entry |
-| Spousal Sponsorship → | https://cwmigrationgroup.com/immigration/spousal-sponsorship |
-| Work Permit → | https://cwmigrationgroup.com/immigration/work-permit |
-| Refusals → | https://cwmigrationgroup.com/refusals |
-| Book Free Consultation → | https://cwmigrationgroup.com/book |
+| Skip to main content | https://commonwealthmigration.ca/immigration/spousal-work-permit#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| Home | https://commonwealthmigration.ca/ |
+| Immigration | https://commonwealthmigration.ca/immigration |
+| Work Permit | https://commonwealthmigration.ca/immigration/work-permit |
+| Book Free Assessment → | https://commonwealthmigration.ca/book |
+| View Related Programs | https://commonwealthmigration.ca/immigration/open-work-permit |
+| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| → Open Work Permit | https://commonwealthmigration.ca/immigration/open-work-permit |
+| → PGWP | https://commonwealthmigration.ca/immigration/pgwp |
+| → Spousal Sponsorship | https://commonwealthmigration.ca/immigration/spousal-sponsorship |
+| → Express Entry | https://commonwealthmigration.ca/immigration/express-entry |
+| Call contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| Express Entry (CEC) details | https://commonwealthmigration.ca/immigration/express-entry |
+| CRS score factors | https://commonwealthmigration.ca/immigration/express-entry |
+| Spousal Sponsorship for PR | https://commonwealthmigration.ca/immigration/spousal-sponsorship |
+| Book Free Consultation | https://commonwealthmigration.ca/contact |
+| All Open Work Permits | https://commonwealthmigration.ca/immigration/open-work-permit |
+| Open Work Permit → | https://commonwealthmigration.ca/immigration/open-work-permit |
+| PGWP → | https://commonwealthmigration.ca/immigration/pgwp |
+| Express Entry → | https://commonwealthmigration.ca/immigration/express-entry |
+| Spousal Sponsorship → | https://commonwealthmigration.ca/immigration/spousal-sponsorship |
+| Work Permit → | https://commonwealthmigration.ca/immigration/work-permit |
+| Refusals → | https://commonwealthmigration.ca/refusals |
+| Book Free Consultation → | https://commonwealthmigration.ca/book |
 
 ---
 
@@ -425,15 +425,15 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://cwmigrationgroup.com/immigration/spousal-work-permit#service","name":"Spousal Open Work Permit Canada","description":"Licensed RCIC guidance for Spousal Open Work Permit eligibility under 2024-2026 rules - TEER 0/1 workers, master's/PhD students, PR applicants.","areaServed":"Canada","serviceType":"Immigration Consulting","provider":{"@type":"Organization","name":"Licensed Regulated Canadian Immigration Consultants","url":"https://cwmigrationgroup.com"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Spousal Open Work Permit","item":"https://cwmigrationgroup.com/immigration/spousal-work-permit"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://commonwealthmigration.ca/immigration/spousal-work-permit#service","name":"Spousal Open Work Permit Canada","description":"Licensed RCIC guidance for Spousal Open Work Permit eligibility under 2024-2026 rules - TEER 0/1 workers, master's/PhD students, PR applicants.","areaServed":"Canada","serviceType":"Immigration Consulting","provider":{"@type":"Organization","name":"Licensed Regulated Canadian Immigration Consultants","url":"https://commonwealthmigration.ca"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Spousal Open Work Permit","item":"https://commonwealthmigration.ca/immigration/spousal-work-permit"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Work Permit","item":"https://cwmigrationgroup.com/immigration/work-permit"},{"@type":"ListItem","position":4,"name":"Spousal Open Work Permit"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Work Permit","item":"https://commonwealthmigration.ca/immigration/work-permit"},{"@type":"ListItem","position":4,"name":"Spousal Open Work Permit"}]}
 ```
 
 ```json

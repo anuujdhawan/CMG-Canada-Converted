@@ -1,6 +1,6 @@
 # TR to PR Canada 2026 | Temporary to Permanent Resident Pathways | Licensed RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/immigration/tr-to-pr
+> **Source URL:** https://commonwealthmigration.ca/immigration/tr-to-pr
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** TR to PR Canada 2026 | Temporary to Permanent Resident Pathways | Licensed RCIC
 - **Meta description:** Temporary resident to permanent resident pathways in Canada: Express Entry CEC, PNP, Atlantic Immigration, and RCIP. Licensed RCIC guidance. Free check.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/immigration/tr-to-pr
+- **Canonical URL:** https://commonwealthmigration.ca/immigration/tr-to-pr
 - **OG title:** TR to PR Canada 2026 | Licensed RCIC
 - **OG description:** Temporary resident to permanent resident pathways in Canada: Express Entry CEC, PNP, Atlantic Immigration, and RCIP. Licensed RCIC guidance. Free check.
 - **Robots:** index, follow
@@ -385,34 +385,34 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/immigration/tr-to-pr#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| Home | https://cwmigrationgroup.com/ |
-| Immigration | https://cwmigrationgroup.com/immigration |
-| Book Free Consultation → | https://cwmigrationgroup.com/book |
-| Free Assessment | https://cwmigrationgroup.com/free-assessment |
-| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| → Express Entry (CEC) | https://cwmigrationgroup.com/immigration/cec |
-| → Provincial Nominee (PNP) | https://cwmigrationgroup.com/immigration/pnp |
-| → Atlantic Immigration (AIP) | https://cwmigrationgroup.com/immigration/pnp |
-| → PGWP (Study → PR) | https://cwmigrationgroup.com/immigration/pgwp |
-| Book assessment → | https://cwmigrationgroup.com/book |
-| CEC guide → | https://cwmigrationgroup.com/immigration/cec |
-| All PNP streams → | https://cwmigrationgroup.com/immigration/pnp |
-| AIP details → | https://cwmigrationgroup.com/immigration/pnp |
-| RCIP details → | https://cwmigrationgroup.com/immigration/rural-northern |
-| FSW details → | https://cwmigrationgroup.com/immigration/fsw |
-| Call contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| Book Free Consultation | https://cwmigrationgroup.com/contact |
-| Canadian Experience Class (CEC) | https://cwmigrationgroup.com/immigration/cec |
-| Provincial Nominee (PNP) | https://cwmigrationgroup.com/immigration/pnp |
-| Express Entry | https://cwmigrationgroup.com/immigration/express-entry |
-| Post-Graduation Work Permit | https://cwmigrationgroup.com/immigration/pgwp |
-| Atlantic Immigration Program | https://cwmigrationgroup.com/immigration/pnp |
-| Rural Community Immigration Pilot | https://cwmigrationgroup.com/immigration/rural-northern |
-| Work Permits | https://cwmigrationgroup.com/immigration/work-permit |
-| Study Permits | https://cwmigrationgroup.com/immigration/study-permit |
+| Skip to main content | https://commonwealthmigration.ca/immigration/tr-to-pr#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| Home | https://commonwealthmigration.ca/ |
+| Immigration | https://commonwealthmigration.ca/immigration |
+| Book Free Consultation → | https://commonwealthmigration.ca/book |
+| Free Assessment | https://commonwealthmigration.ca/free-assessment |
+| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| → Express Entry (CEC) | https://commonwealthmigration.ca/immigration/cec |
+| → Provincial Nominee (PNP) | https://commonwealthmigration.ca/immigration/pnp |
+| → Atlantic Immigration (AIP) | https://commonwealthmigration.ca/immigration/pnp |
+| → PGWP (Study → PR) | https://commonwealthmigration.ca/immigration/pgwp |
+| Book assessment → | https://commonwealthmigration.ca/book |
+| CEC guide → | https://commonwealthmigration.ca/immigration/cec |
+| All PNP streams → | https://commonwealthmigration.ca/immigration/pnp |
+| AIP details → | https://commonwealthmigration.ca/immigration/pnp |
+| RCIP details → | https://commonwealthmigration.ca/immigration/rural-northern |
+| FSW details → | https://commonwealthmigration.ca/immigration/fsw |
+| Call contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| Book Free Consultation | https://commonwealthmigration.ca/contact |
+| Canadian Experience Class (CEC) | https://commonwealthmigration.ca/immigration/cec |
+| Provincial Nominee (PNP) | https://commonwealthmigration.ca/immigration/pnp |
+| Express Entry | https://commonwealthmigration.ca/immigration/express-entry |
+| Post-Graduation Work Permit | https://commonwealthmigration.ca/immigration/pgwp |
+| Atlantic Immigration Program | https://commonwealthmigration.ca/immigration/pnp |
+| Rural Community Immigration Pilot | https://commonwealthmigration.ca/immigration/rural-northern |
+| Work Permits | https://commonwealthmigration.ca/immigration/work-permit |
+| Study Permits | https://commonwealthmigration.ca/immigration/study-permit |
 
 ---
 
@@ -425,15 +425,15 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://cwmigrationgroup.com/immigration/tr-to-pr#service","name":"Temporary to Permanent Resident (TR to PR) Immigration Consulting","description":"Licensed RCIC guidance for temporary residents in Canada transitioning to permanent residence through CEC, PNP, AIP, and RCIP pathways.","areaServed":"Canada","serviceType":"Immigration Consulting","provider":{"@type":"Organization","name":"Commonwealth Migration Canada","url":"https://cwmigrationgroup.com"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"TR to PR","item":"https://cwmigrationgroup.com/immigration/tr-to-pr"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://commonwealthmigration.ca/immigration/tr-to-pr#service","name":"Temporary to Permanent Resident (TR to PR) Immigration Consulting","description":"Licensed RCIC guidance for temporary residents in Canada transitioning to permanent residence through CEC, PNP, AIP, and RCIP pathways.","areaServed":"Canada","serviceType":"Immigration Consulting","provider":{"@type":"Organization","name":"Commonwealth Migration Canada","url":"https://commonwealthmigration.ca"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"TR to PR","item":"https://commonwealthmigration.ca/immigration/tr-to-pr"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"TR to PR"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"TR to PR"}]}
 ```
 
 ```json

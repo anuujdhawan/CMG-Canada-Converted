@@ -1,6 +1,6 @@
 # Canadian Immigration Special Measures 2026 | Public Policy | RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/special-measures
+> **Source URL:** https://commonwealthmigration.ca/special-measures
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.7
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Canadian Immigration Special Measures 2026 | Public Policy | RCIC
 - **Meta description:** Information on Canada's special immigration measures for Ukraine, Gaza, Iran, Sudan, Haiti. Licensed RCIC consultants. Free consultation.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/special-measures
+- **Canonical URL:** https://commonwealthmigration.ca/special-measures
 - **OG title:** Canadian Immigration Special Measures 2026 | Licensed RCIC
 - **OG description:** Special measures for Ukraine, Gaza, Iran, Sudan, Haiti. Licensed RCIC consultants. Free consultation.
 - **Robots:** index, follow
@@ -130,32 +130,32 @@ Speak with a licensed RCIC. No obligation - we guide you through your options.
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/special-measures#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| Home | https://cwmigrationgroup.com/ |
-| Get Urgent Help → | https://cwmigrationgroup.com/contact-us |
-| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| → Ukraine (CUAET) | https://cwmigrationgroup.com/special-measures/ukraine |
-| → Iran | https://cwmigrationgroup.com/special-measures/iran |
-| → Gaza & West Bank | https://cwmigrationgroup.com/special-measures/gaza |
-| → Work Permits | https://cwmigrationgroup.com/immigration/work-permit |
-| → Contact | https://cwmigrationgroup.com/contact-us |
-| Book Now → | https://cwmigrationgroup.com/contact-us |
-| Ukraine (CUAET) Canada-Ukraine Authorization for Emergency Travel - current status, extensions, work/study permits, pathway to PR. | https://cwmigrationgroup.com/special-measures/ukraine |
-| Gaza & West Bank Special measures for residents of Gaza and the West Bank - family reunification and temporary residence options. | https://cwmigrationgroup.com/special-measures/gaza |
-| Iran Public policy for Iranian nationals - temporary residence and family reunification measures. | https://cwmigrationgroup.com/special-measures/iran |
-| Sudan Measures for those affected by the situation in Sudan. Check IRCC for current programs. | https://cwmigrationgroup.com/special-measures# |
-| Haiti Measures for Haitian nationals. Check IRCC for current programs. | https://cwmigrationgroup.com/special-measures# |
-| Book Free Consultation | https://cwmigrationgroup.com/contact |
-| Book a Consultation | https://cwmigrationgroup.com/book |
-| 📞 contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| Ukraine (CUAET) | https://cwmigrationgroup.com/special-measures/ukraine |
-| Iran | https://cwmigrationgroup.com/special-measures/iran |
-| Gaza & West Bank | https://cwmigrationgroup.com/special-measures/gaza |
-| Work Permits | https://cwmigrationgroup.com/immigration/work-permit |
-| Contact | https://cwmigrationgroup.com/contact-us |
-| 📞 Call contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| Skip to main content | https://commonwealthmigration.ca/special-measures#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| Home | https://commonwealthmigration.ca/ |
+| Get Urgent Help → | https://commonwealthmigration.ca/contact-us |
+| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| → Ukraine (CUAET) | https://commonwealthmigration.ca/special-measures/ukraine |
+| → Iran | https://commonwealthmigration.ca/special-measures/iran |
+| → Gaza & West Bank | https://commonwealthmigration.ca/special-measures/gaza |
+| → Work Permits | https://commonwealthmigration.ca/immigration/work-permit |
+| → Contact | https://commonwealthmigration.ca/contact-us |
+| Book Now → | https://commonwealthmigration.ca/contact-us |
+| Ukraine (CUAET) Canada-Ukraine Authorization for Emergency Travel - current status, extensions, work/study permits, pathway to PR. | https://commonwealthmigration.ca/special-measures/ukraine |
+| Gaza & West Bank Special measures for residents of Gaza and the West Bank - family reunification and temporary residence options. | https://commonwealthmigration.ca/special-measures/gaza |
+| Iran Public policy for Iranian nationals - temporary residence and family reunification measures. | https://commonwealthmigration.ca/special-measures/iran |
+| Sudan Measures for those affected by the situation in Sudan. Check IRCC for current programs. | https://commonwealthmigration.ca/special-measures# |
+| Haiti Measures for Haitian nationals. Check IRCC for current programs. | https://commonwealthmigration.ca/special-measures# |
+| Book Free Consultation | https://commonwealthmigration.ca/contact |
+| Book a Consultation | https://commonwealthmigration.ca/book |
+| 📞 contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| Ukraine (CUAET) | https://commonwealthmigration.ca/special-measures/ukraine |
+| Iran | https://commonwealthmigration.ca/special-measures/iran |
+| Gaza & West Bank | https://commonwealthmigration.ca/special-measures/gaza |
+| Work Permits | https://commonwealthmigration.ca/immigration/work-permit |
+| Contact | https://commonwealthmigration.ca/contact-us |
+| 📞 Call contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
 
 ---
 
@@ -168,11 +168,11 @@ Speak with a licensed RCIC. No obligation - we guide you through your options.
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Home","item":"https://cwmigrationgroup.com/"},{"@type":"ListItem","position":3,"name":"Special Measures"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Home","item":"https://commonwealthmigration.ca/"},{"@type":"ListItem","position":3,"name":"Special Measures"}]}
 ```
 
 ```json

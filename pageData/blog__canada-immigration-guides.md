@@ -1,6 +1,6 @@
 # Blog: clearer information for your next step
 
-> **Source URL:** https://cwmigrationgroup.com/blog
+> **Source URL:** https://commonwealthmigration.ca/blog
 > **Last modified:** 2026-08-19
 > **Sitemap priority:** 0.9
 > **Status:** ✅ Fresh English rewrite | SEO/GEO/AEO reviewed
@@ -10,7 +10,7 @@
 - **Title tag:** Canada Immigration Blog | Express Entry & Work
 - **Meta description:** Read practical Canada immigration guides on Express Entry, PNP, work and study permits, family sponsorship, visitor visas and refusals. Verify current rules.
 - **Meta keywords:** Canada immigration blog, Express Entry guides, Canadian immigration advice
-- **Canonical URL:** https://cwmigrationgroup.com/blog
+- **Canonical URL:** https://commonwealthmigration.ca/blog
 - **OG title:** Blog | Commonwealth Migration
 - **OG description:** Read Canadian immigration guides on Express Entry, work permits, study permits, family sponsorship and refusals, then verify the current official requirements before acting.
 - **Robots:** index, follow
@@ -120,7 +120,7 @@ Use this guide for preparation, then confirm current requirements with the offic
 
 
 
-If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://cwmigrationgroup.com/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
+If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
 
 ## Links & CTAs on this page
 
@@ -128,8 +128,8 @@ If you are ready to move from general research to a file-specific plan, [book a 
 | --- | --- |
 | official IRCC immigration hub | https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html |
 | verify an RCIC on the CICC register | https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx |
-| Book a focused immigration consultation | https://cwmigrationgroup.com/contact/book-immigration-consultation-canada |
-| Contact Commonwealth Migration Canada | https://cwmigrationgroup.com/contact/book-immigration-consultation-canada |
+| Book a focused immigration consultation | https://commonwealthmigration.ca/contact/book-immigration-consultation-canada |
+| Contact Commonwealth Migration Canada | https://commonwealthmigration.ca/contact/book-immigration-consultation-canada |
 
 ## Image Alt Texts
 
@@ -143,8 +143,8 @@ If you are ready to move from general research to a file-specific plan, [book a 
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://cwmigrationgroup.com/blog#webpage",
-      "url": "https://cwmigrationgroup.com/blog",
+      "@id": "https://commonwealthmigration.ca/blog#webpage",
+      "url": "https://commonwealthmigration.ca/blog",
       "name": "A practical guide to Blog | Commonwealth Migration",
       "description": "Read a practical blog guide, then verify the current official Canada immigration requirements before acting. See official rules before applying.",
       "inLanguage": "en-CA",
@@ -152,7 +152,7 @@ If you are ready to move from general research to a file-specific plan, [book a 
       "isPartOf": {
         "@type": "WebSite",
         "name": "Commonwealth Migration Canada",
-        "url": "https://cwmigrationgroup.com"
+        "url": "https://commonwealthmigration.ca"
       },
       "about": {
         "@type": "Thing",
@@ -166,13 +166,13 @@ If you are ready to move from general research to a file-specific plan, [book a 
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://cwmigrationgroup.com"
+          "item": "https://commonwealthmigration.ca"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Blog",
-          "item": "https://cwmigrationgroup.com/blog"
+          "item": "https://commonwealthmigration.ca/blog"
         }
       ]
     },

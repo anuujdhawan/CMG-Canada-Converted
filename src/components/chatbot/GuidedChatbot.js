@@ -1,12 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Chatbot, createChatBotMessage, createClientMessage } from "react-chatbot-kit";
 import { ArrowRight, CalendarCheck, Check, ExternalLink, MessageCircle, RotateCcw, Search, X } from "lucide-react";
-import { site } from "@/config/site";
 import { currentPagePath } from "@/config/pageRoutes";
-
-const whatsappHref = site.whatsappUrl;
 
 const services = [
   { id: "pr", icon: "🍁", label: "Express Entry / PR", keywords: ["express", "entry", "permanent", "pr", "pnp", "nominee", "immigrate"] },
@@ -342,7 +339,8 @@ const chatbotKitClass = [
   "[html[data-theme='light']_&_.react-chatbot-kit-user-chat-message]:!bg-[var(--cmg-light-primary,var(--brand-primary))] [html[data-theme='light']_&_.react-chatbot-kit-user-chat-message-arrow]:!border-l-[var(--cmg-light-primary,var(--brand-primary))]",
 ].join(" ");
 
-class ActionProvider {
+function createActionProvider(whatsappHref) {
+  return class ActionProvider {
   constructor(createChatBotMessageFn, setStateFunc) {
     this.createChatBotMessage = createChatBotMessageFn;
     this.setState = setStateFunc;
@@ -592,6 +590,7 @@ class ActionProvider {
     this.addUserMessage("Start over");
     this.addMessages(createServiceMenuMessage());
   }
+  };
 }
 
 class MessageParser {
@@ -604,8 +603,9 @@ class MessageParser {
   }
 }
 
-export default function GuidedChatbot() {
+export default function GuidedChatbot({ whatsappHref = "" }) {
   const [open, setOpen] = useState(false);
+  const ActionProvider = useMemo(() => createActionProvider(whatsappHref), [whatsappHref]);
 
   useEffect(() => {
     const openFromFloatingAction = () => setOpen(true);

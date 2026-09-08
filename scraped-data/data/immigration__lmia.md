@@ -1,6 +1,6 @@
 # LMIA Work Permit 2026 | Work in Canada with Employer Sponsorship | Licensed RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/immigration/lmia
+> **Source URL:** https://commonwealthmigration.ca/immigration/lmia
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** LMIA Work Permit 2026 | Work in Canada with Employer Sponsorship | Licensed RCIC
 - **Meta description:** A positive LMIA lets your employer hire you legally in Canada. Learn how LMIA works, find a legitimate employer, and build your PR pathway. Free assessment.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/immigration/lmia
+- **Canonical URL:** https://commonwealthmigration.ca/immigration/lmia
 - **OG title:** LMIA Work Permit 2026 | Employer Sponsorship & Work Permit | Licensed RCIC
 - **OG description:** LMIA for workers: employer sponsorship, work permit types, finding legitimate employers, PR pathway. Licensed RCIC guidance.
 - **Robots:** index, follow
@@ -387,29 +387,29 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/immigration/lmia#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| Home | https://cwmigrationgroup.com/ |
-| Immigration | https://cwmigrationgroup.com/immigration |
-| Work Permit | https://cwmigrationgroup.com/immigration/work-permit |
-| Book Free Assessment → | https://cwmigrationgroup.com/free-assessment |
-| LMIA-Exempt Options | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| Get a Free Assessment → | https://cwmigrationgroup.com/free-assessment |
-| Call contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
+| Skip to main content | https://commonwealthmigration.ca/immigration/lmia#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| Home | https://commonwealthmigration.ca/ |
+| Immigration | https://commonwealthmigration.ca/immigration |
+| Work Permit | https://commonwealthmigration.ca/immigration/work-permit |
+| Book Free Assessment → | https://commonwealthmigration.ca/free-assessment |
+| LMIA-Exempt Options | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| Get a Free Assessment → | https://commonwealthmigration.ca/free-assessment |
+| Call contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
 | jobbank.gc.ca | https://www.jobbank.gc.ca/ |
-| Explore LMIA-Exempt Options | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| Free Pathway Assessment | https://cwmigrationgroup.com/free-assessment |
-| Book Free Consultation | https://cwmigrationgroup.com/contact |
-| Work Permits | https://cwmigrationgroup.com/immigration/work-permit |
-| LMIA-Exempt Work Permits | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| Express Entry | https://cwmigrationgroup.com/immigration/express-entry |
-| LMIA for Employers | https://cwmigrationgroup.com/for-employers/lmia |
-| Global Talent Stream | https://cwmigrationgroup.com/for-employers/global-talent-stream |
-| LMIA Refusal Help | https://cwmigrationgroup.com/for-employers/lmia-refusal |
-| Canadian Experience Class | https://cwmigrationgroup.com/immigration/cec |
-| Book Free Consultation → | https://cwmigrationgroup.com/book |
+| Explore LMIA-Exempt Options | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| Free Pathway Assessment | https://commonwealthmigration.ca/free-assessment |
+| Book Free Consultation | https://commonwealthmigration.ca/contact |
+| Work Permits | https://commonwealthmigration.ca/immigration/work-permit |
+| LMIA-Exempt Work Permits | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| Express Entry | https://commonwealthmigration.ca/immigration/express-entry |
+| LMIA for Employers | https://commonwealthmigration.ca/for-employers/lmia |
+| Global Talent Stream | https://commonwealthmigration.ca/for-employers/global-talent-stream |
+| LMIA Refusal Help | https://commonwealthmigration.ca/for-employers/lmia-refusal |
+| Canadian Experience Class | https://commonwealthmigration.ca/immigration/cec |
+| Book Free Consultation → | https://commonwealthmigration.ca/book |
 
 ---
 
@@ -422,15 +422,15 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://cwmigrationgroup.com/immigration/lmia#service","name":"LMIA Work Permit Services for Workers","description":"Licensed RCIC guidance for LMIA-backed work permits, employer sponsorship, Canadian work experience pathways, Express Entry strategy, and work permit applications.","areaServed":"Canada","serviceType":"Immigration Consulting"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Work Permit","item":"https://cwmigrationgroup.com/immigration/work-permit"},{"@type":"ListItem","position":4,"name":"LMIA Work Permit","item":"https://cwmigrationgroup.com/immigration/lmia"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://commonwealthmigration.ca/immigration/lmia#service","name":"LMIA Work Permit Services for Workers","description":"Licensed RCIC guidance for LMIA-backed work permits, employer sponsorship, Canadian work experience pathways, Express Entry strategy, and work permit applications.","areaServed":"Canada","serviceType":"Immigration Consulting"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Work Permit","item":"https://commonwealthmigration.ca/immigration/work-permit"},{"@type":"ListItem","position":4,"name":"LMIA Work Permit","item":"https://commonwealthmigration.ca/immigration/lmia"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Work Permit","item":"https://cwmigrationgroup.com/immigration/work-permit"},{"@type":"ListItem","position":4,"name":"LMIA Work Permit"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Work Permit","item":"https://commonwealthmigration.ca/immigration/work-permit"},{"@type":"ListItem","position":4,"name":"LMIA Work Permit"}]}
 ```
 
 ```json

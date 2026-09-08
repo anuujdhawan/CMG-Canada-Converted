@@ -1,16 +1,12 @@
-"use client";
-
 import Image from "next/image";
-import { site } from "@/config/site";
+import { whatsappUrl } from "@/config/whatsapp";
 
-const whatsappHref = site.whatsappUrl;
-
-/** Sitewide WhatsApp handoff bubble. URL is driven by NEXT_PUBLIC_WHATSAPP_URL in .env — hidden until a number/URL is configured. */
+/** Sitewide WhatsApp handoff bubble. Hidden until a number/URL is configured. */
 export default function WhatsAppBubble() {
-  if (!whatsappHref) return null;
+  if (!whatsappUrl) return null;
   return (
     <a
-      href={whatsappHref}
+      href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"

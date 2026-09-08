@@ -4,38 +4,38 @@
 
 ## Start here
 
-- [Homepage](https://cwmigrationgroup.com/): Licensed RCIC immigration consulting services for Canada.
-- [Free Canada immigration assessment](https://cwmigrationgroup.com/assessment/free-canada-immigration-assessment): A starting point for identifying possible pathways and preparation needs.
-- [Book an immigration consultation](https://cwmigrationgroup.com/contact/book-immigration-consultation-canada): Consultation request page for file-specific guidance.
-- [Canada immigration calculators](https://cwmigrationgroup.com/tools/canada-immigration-calculators): Free planning tools and eligibility calculators.
-- [Immigration draws](https://cwmigrationgroup.com/immigration-draws): Draw information and planning context.
+- [Homepage](https://commonwealthmigration.ca/): Licensed RCIC immigration consulting services for Canada.
+- [Free Canada immigration assessment](https://commonwealthmigration.ca/assessment/free-canada-immigration-assessment): A starting point for identifying possible pathways and preparation needs.
+- [Book an immigration consultation](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada): Consultation request page for file-specific guidance.
+- [Canada immigration calculators](https://commonwealthmigration.ca/tools/canada-immigration-calculators): Free planning tools and eligibility calculators.
+- [Immigration draws](https://commonwealthmigration.ca/immigration-draws): Draw information and planning context.
 
 ## Permanent residence and immigration pathways
 
-- [Express Entry](https://cwmigrationgroup.com/immigrate/express-entry): Federal Express Entry pathway information.
-- [Provincial Nominee Programs](https://cwmigrationgroup.com/immigrate/provincial-nominee-program-all-provinces-consolidated): PNP overview and province-specific pathways.
-- [Federal Skilled Worker](https://cwmigrationgroup.com/immigrate/federal-skilled-worker): FSW eligibility and preparation information.
-- [Canadian Experience Class](https://cwmigrationgroup.com/immigrate/canadian-experience-class): CEC pathway information for qualifying Canadian experience.
-- [Family sponsorship](https://cwmigrationgroup.com/sponsor/family-sponsorship-overview-all-categories): Sponsorship categories and preparation guidance.
-- [Canadian citizenship](https://cwmigrationgroup.com/citizenship/adult-grant-of-citizenship): Citizenship pathway information.
+- [Express Entry](https://commonwealthmigration.ca/immigrate/express-entry): Federal Express Entry pathway information.
+- [Provincial Nominee Programs](https://commonwealthmigration.ca/immigrate/provincial-nominee-program-all-provinces-consolidated): PNP overview and province-specific pathways.
+- [Federal Skilled Worker](https://commonwealthmigration.ca/immigrate/federal-skilled-worker): FSW eligibility and preparation information.
+- [Canadian Experience Class](https://commonwealthmigration.ca/immigrate/canadian-experience-class): CEC pathway information for qualifying Canadian experience.
+- [Family sponsorship](https://commonwealthmigration.ca/sponsor/family-sponsorship-overview-all-categories): Sponsorship categories and preparation guidance.
+- [Canadian citizenship](https://commonwealthmigration.ca/citizenship/adult-grant-of-citizenship): Citizenship pathway information.
 
 ## Temporary residence, work, and study
 
-- [Canada work permits](https://cwmigrationgroup.com/work-and-study/canada-work-permit-overview): Work permit pathway information.
-- [Canada study permits](https://cwmigrationgroup.com/work-and-study/canada-study-permit): Study permit planning information.
-- [Post-Graduation Work Permit](https://cwmigrationgroup.com/work-and-study/post-graduation-work-permit-pgwp): PGWP information and preparation context.
-- [Visitor visa and Super Visa](https://cwmigrationgroup.com/visit/visitor-visa-trv-and-super-visa-combined): Visitor and Super Visa information.
+- [Canada work permits](https://commonwealthmigration.ca/work-and-study/canada-work-permit-overview): Work permit pathway information.
+- [Canada study permits](https://commonwealthmigration.ca/work-and-study/canada-study-permit): Study permit planning information.
+- [Post-Graduation Work Permit](https://commonwealthmigration.ca/work-and-study/post-graduation-work-permit-pgwp): PGWP information and preparation context.
+- [Visitor visa and Super Visa](https://commonwealthmigration.ca/visit/visitor-visa-trv-and-super-visa-combined): Visitor and Super Visa information.
 
 ## Inadmissibility and appeals
 
-- [Criminal inadmissibility](https://cwmigrationgroup.com/inadmissibility-and-appeals/criminal-inadmissibility-overview): Information about criminal inadmissibility options.
-- [Refusal and procedural fairness response](https://cwmigrationgroup.com/inadmissibility-and-appeals/refusal-and-pfl-response): General information about refusals and PFL responses.
-- [Judicial review](https://cwmigrationgroup.com/inadmissibility-and-appeals/judicial-review-federal-court): Federal Court judicial review information.
+- [Criminal inadmissibility](https://commonwealthmigration.ca/inadmissibility-and-appeals/criminal-inadmissibility-overview): Information about criminal inadmissibility options.
+- [Refusal and procedural fairness response](https://commonwealthmigration.ca/inadmissibility-and-appeals/refusal-and-pfl-response): General information about refusals and PFL responses.
+- [Judicial review](https://commonwealthmigration.ca/inadmissibility-and-appeals/judicial-review-federal-court): Federal Court judicial review information.
 
 ## About and sources
 
-- [About Commonwealth Migration](https://cwmigrationgroup.com/about/about-commonwealth-migration): Organization and service information.
-- [Blog and Canada immigration guides](https://cwmigrationgroup.com/blog): Educational immigration content.
-- [Privacy policy](https://cwmigrationgroup.com/legal/privacy-policy): Privacy information.
-- [Terms of service](https://cwmigrationgroup.com/legal/terms-of-service): Terms information.
-- [Disclaimer](https://cwmigrationgroup.com/legal/canada-immigration-disclaimer): General-information and responsibility disclaimer.
+- [About Commonwealth Migration](https://commonwealthmigration.ca/about/about-commonwealth-migration): Organization and service information.
+- [Blog and Canada immigration guides](https://commonwealthmigration.ca/blog): Educational immigration content.
+- [Privacy policy](https://commonwealthmigration.ca/legal/privacy-policy): Privacy information.
+- [Terms of service](https://commonwealthmigration.ca/legal/terms-of-service): Terms information.
+- [Disclaimer](https://commonwealthmigration.ca/legal/canada-immigration-disclaimer): General-information and responsibility disclaimer.

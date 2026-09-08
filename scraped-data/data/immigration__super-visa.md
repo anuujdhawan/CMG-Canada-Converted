@@ -1,6 +1,6 @@
 # Canada Super Visa 2026 | Parents & Grandparents | 5-Year Stay | Licensed RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/immigration/super-visa
+> **Source URL:** https://commonwealthmigration.ca/immigration/super-visa
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Canada Super Visa 2026 | Parents & Grandparents | 5-Year Stay | Licensed RCIC
 - **Meta description:** Super Visa Canada for parents and grandparents: stays up to 5 years, valid 10 years. Licensed RCIC support from start to finish. Free eligibility check.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/immigration/super-visa
+- **Canonical URL:** https://commonwealthmigration.ca/immigration/super-visa
 - **OG title:** Canada Super Visa 2026 | Licensed RCIC
 - **OG description:** Super Visa Canada for parents and grandparents: stays up to 5 years, valid 10 years. Licensed RCIC support from start to finish. Free eligibility check.
 - **Robots:** index, follow
@@ -310,29 +310,29 @@ Serving families in Brampton · Toronto · Mississauga · Ontario and across Can
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/immigration/super-visa#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| Home | https://cwmigrationgroup.com/ |
-| Immigration | https://cwmigrationgroup.com/immigration |
-| Book Free Consultation → | https://cwmigrationgroup.com/book |
-| Check My Eligibility | https://cwmigrationgroup.com/tools |
-| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| → Visitor Visa (TRV) | https://cwmigrationgroup.com/immigration/visitor-visa |
-| → PGP overview | https://cwmigrationgroup.com/immigration/pgp |
-| → Family sponsorship | https://cwmigrationgroup.com/immigration/family-sponsorship |
-| Book assessment → | https://cwmigrationgroup.com/book |
-| Book Free Assessment → | https://cwmigrationgroup.com/book |
-| Call contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| PGP information → | https://cwmigrationgroup.com/immigration/pgp |
-| Apply for Super Visa → | https://cwmigrationgroup.com/contact-us |
-| Use Free Tools | https://cwmigrationgroup.com/tools |
-| Visitor Visa (TRV) → | https://cwmigrationgroup.com/immigration/visitor-visa |
-| eTA → | https://cwmigrationgroup.com/immigration/eta |
-| Family Sponsorship → | https://cwmigrationgroup.com/immigration/family-sponsorship |
-| PGP Info → | https://cwmigrationgroup.com/immigration/pgp |
-| Visitor Record → | https://cwmigrationgroup.com/immigration/visitor-record |
-| Refusals & PFL → | https://cwmigrationgroup.com/refusals |
+| Skip to main content | https://commonwealthmigration.ca/immigration/super-visa#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| Home | https://commonwealthmigration.ca/ |
+| Immigration | https://commonwealthmigration.ca/immigration |
+| Book Free Consultation → | https://commonwealthmigration.ca/book |
+| Check My Eligibility | https://commonwealthmigration.ca/tools |
+| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| → Visitor Visa (TRV) | https://commonwealthmigration.ca/immigration/visitor-visa |
+| → PGP overview | https://commonwealthmigration.ca/immigration/pgp |
+| → Family sponsorship | https://commonwealthmigration.ca/immigration/family-sponsorship |
+| Book assessment → | https://commonwealthmigration.ca/book |
+| Book Free Assessment → | https://commonwealthmigration.ca/book |
+| Call contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| PGP information → | https://commonwealthmigration.ca/immigration/pgp |
+| Apply for Super Visa → | https://commonwealthmigration.ca/contact-us |
+| Use Free Tools | https://commonwealthmigration.ca/tools |
+| Visitor Visa (TRV) → | https://commonwealthmigration.ca/immigration/visitor-visa |
+| eTA → | https://commonwealthmigration.ca/immigration/eta |
+| Family Sponsorship → | https://commonwealthmigration.ca/immigration/family-sponsorship |
+| PGP Info → | https://commonwealthmigration.ca/immigration/pgp |
+| Visitor Record → | https://commonwealthmigration.ca/immigration/visitor-record |
+| Refusals & PFL → | https://commonwealthmigration.ca/refusals |
 
 ---
 
@@ -345,13 +345,13 @@ Serving families in Brampton · Toronto · Mississauga · Ontario and across Can
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://cwmigrationgroup.com/immigration/super-visa#service","name":"Canada Super Visa Services","description":"Licensed RCIC preparation of Super Visa applications for parents and grandparents - LICO verification, insurance guidance, invitation letters, and full IRCC submission.","areaServed":"Canada","serviceType":"Immigration Consulting"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who is eligible for a Super Visa?","acceptedAnswer":{"@type":"Answer","text":"Parents and grandparents of Canadian citizens or permanent residents. The child or grandchild in Canada must meet the minimum income (LICO) and provide an invitation. The applicant needs medical insurance of at least $100,000 CAD from a Canadian insurer."}},{"@type":"Question","name":"How much does Super Visa insurance cost?","acceptedAnswer":{"@type":"Answer","text":"Costs vary by age, health, and coverage period. Canadian insurers offer Super Visa-compliant policies. We can refer you to insurance providers; we do not sell insurance."}},{"@type":"Question","name":"How long does Super Visa processing take in 2026?","acceptedAnswer":{"@type":"Answer","text":"Processing times vary by visa office - often roughly 4-8 weeks for complete files, but always check IRCC's current processing times. We help you prepare a complete application to avoid delays."}},{"@type":"Question","name":"Can I extend my stay on a Super Visa?","acceptedAnswer":{"@type":"Answer","text":"A Super Visa allows stays of up to 5 years per entry. You may apply for a Visitor Record to extend your stay before your status expires."}},{"@type":"Question","name":"What is the difference between Super Visa and a regular visitor visa?","acceptedAnswer":{"@type":"Answer","text":"Super Visa allows up to 5 years per entry and up to 10 years validity, with mandatory medical insurance and host LICO. A regular visitor visa typically allows shorter stays and does not require the same insurance framework. Super Visa is only for parents and grandparents of Canadian citizens or PRs."}},{"@type":"Question","name":"Can both parents apply for a Super Visa at the same time?","acceptedAnswer":{"@type":"Answer","text":"Yes. Both parents can apply for their Super Visas simultaneously - either together in a single application package or separately. Each parent needs their own Super Visa and their own Canadian health insurance policy. We recommend applying together to streamline the process. Both parents are included in the same host invitation letter."}},{"@type":"Question","name":"What if my Super Visa was refused?","acceptedAnswer":{"@type":"Answer","text":"We analyze refusal letters and addresses officer concerns - often income proof, insurance, or ties. We prepare stronger reapplications and can advise on PGP or other options."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Super Visa","item":"https://cwmigrationgroup.com/immigration/super-visa"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://commonwealthmigration.ca/immigration/super-visa#service","name":"Canada Super Visa Services","description":"Licensed RCIC preparation of Super Visa applications for parents and grandparents - LICO verification, insurance guidance, invitation letters, and full IRCC submission.","areaServed":"Canada","serviceType":"Immigration Consulting"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who is eligible for a Super Visa?","acceptedAnswer":{"@type":"Answer","text":"Parents and grandparents of Canadian citizens or permanent residents. The child or grandchild in Canada must meet the minimum income (LICO) and provide an invitation. The applicant needs medical insurance of at least $100,000 CAD from a Canadian insurer."}},{"@type":"Question","name":"How much does Super Visa insurance cost?","acceptedAnswer":{"@type":"Answer","text":"Costs vary by age, health, and coverage period. Canadian insurers offer Super Visa-compliant policies. We can refer you to insurance providers; we do not sell insurance."}},{"@type":"Question","name":"How long does Super Visa processing take in 2026?","acceptedAnswer":{"@type":"Answer","text":"Processing times vary by visa office - often roughly 4-8 weeks for complete files, but always check IRCC's current processing times. We help you prepare a complete application to avoid delays."}},{"@type":"Question","name":"Can I extend my stay on a Super Visa?","acceptedAnswer":{"@type":"Answer","text":"A Super Visa allows stays of up to 5 years per entry. You may apply for a Visitor Record to extend your stay before your status expires."}},{"@type":"Question","name":"What is the difference between Super Visa and a regular visitor visa?","acceptedAnswer":{"@type":"Answer","text":"Super Visa allows up to 5 years per entry and up to 10 years validity, with mandatory medical insurance and host LICO. A regular visitor visa typically allows shorter stays and does not require the same insurance framework. Super Visa is only for parents and grandparents of Canadian citizens or PRs."}},{"@type":"Question","name":"Can both parents apply for a Super Visa at the same time?","acceptedAnswer":{"@type":"Answer","text":"Yes. Both parents can apply for their Super Visas simultaneously - either together in a single application package or separately. Each parent needs their own Super Visa and their own Canadian health insurance policy. We recommend applying together to streamline the process. Both parents are included in the same host invitation letter."}},{"@type":"Question","name":"What if my Super Visa was refused?","acceptedAnswer":{"@type":"Answer","text":"We analyze refusal letters and addresses officer concerns - often income proof, insurance, or ties. We prepare stronger reapplications and can advise on PGP or other options."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Super Visa","item":"https://commonwealthmigration.ca/immigration/super-visa"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Super Visa"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Super Visa"}]}
 ```

@@ -1,6 +1,6 @@
 # Spousal Sponsorship Canada 2026 | Inland & Outland | Licensed RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/immigration/spousal-sponsorship
+> **Source URL:** https://commonwealthmigration.ca/immigration/spousal-sponsorship
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.9
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Spousal Sponsorship Canada 2026 | Inland & Outland | Licensed RCIC
 - **Meta description:** Sponsor a spouse or common-law partner for Canadian PR. Inland and outland options with Licensed RCIC specialists in the GTA. Free assessment included.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/immigration/spousal-sponsorship
+- **Canonical URL:** https://commonwealthmigration.ca/immigration/spousal-sponsorship
 - **OG title:** Licensed RCIC Immigration Consultants | Canada & GTA
 - **OG description:** CICC-regulated RCICs: Express Entry, every PNP stream, employer LMIA (HGT), work permits, study permits, sponsorship, refusals & PFL. Brampton office. Free consult + tools.
 - **Robots:** index, follow
@@ -322,31 +322,31 @@ Toronto · Brampton · Mississauga · Markham · Vaughan · Hamilton · Niagara 
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/immigration/spousal-sponsorship#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| Book Consultation → | https://cwmigrationgroup.com/book |
-| Free Assessment | https://cwmigrationgroup.com/contact-us |
-| 📞 contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| Inland or outland? Free eligibility check - we'll recommend the best path. Start Free Assessment → | https://cwmigrationgroup.com/contact-us |
-| Sponsor Eligibility | https://cwmigrationgroup.com/immigration/spousal-sponsorship#sponsor-eligibility |
-| Inland vs Outland | https://cwmigrationgroup.com/immigration/spousal-sponsorship#inland-outland |
-| Evidence Package | https://cwmigrationgroup.com/immigration/spousal-sponsorship#evidence-package |
-| Spousal Work Permit (BOWP) | https://cwmigrationgroup.com/immigration/spousal-sponsorship#bowp |
-| FAQ | https://cwmigrationgroup.com/immigration/spousal-sponsorship#faq |
-| Check Outland Eligibility → | https://cwmigrationgroup.com/contact-us |
-| Check Inland Eligibility → | https://cwmigrationgroup.com/contact-us |
-| Assess My Relationship → | https://cwmigrationgroup.com/contact-us |
+| Skip to main content | https://commonwealthmigration.ca/immigration/spousal-sponsorship#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| Book Consultation → | https://commonwealthmigration.ca/book |
+| Free Assessment | https://commonwealthmigration.ca/contact-us |
+| 📞 contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| Inland or outland? Free eligibility check - we'll recommend the best path. Start Free Assessment → | https://commonwealthmigration.ca/contact-us |
+| Sponsor Eligibility | https://commonwealthmigration.ca/immigration/spousal-sponsorship#sponsor-eligibility |
+| Inland vs Outland | https://commonwealthmigration.ca/immigration/spousal-sponsorship#inland-outland |
+| Evidence Package | https://commonwealthmigration.ca/immigration/spousal-sponsorship#evidence-package |
+| Spousal Work Permit (BOWP) | https://commonwealthmigration.ca/immigration/spousal-sponsorship#bowp |
+| FAQ | https://commonwealthmigration.ca/immigration/spousal-sponsorship#faq |
+| Check Outland Eligibility → | https://commonwealthmigration.ca/contact-us |
+| Check Inland Eligibility → | https://commonwealthmigration.ca/contact-us |
+| Assess My Relationship → | https://commonwealthmigration.ca/contact-us |
 | Sponsor your spouse/partner/child - how to apply | https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/apply.html |
-| Check Eligibility Tool → | https://cwmigrationgroup.com/contact-us |
-| Start Free Assessment → | https://cwmigrationgroup.com/contact-us |
-| 📞 Call contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| Family Sponsorship Hub → | https://cwmigrationgroup.com/immigration/family-sponsorship |
-| Parents & Grandparents → | https://cwmigrationgroup.com/immigration/pgp |
-| Super Visa → | https://cwmigrationgroup.com/immigration/super-visa |
-| Spousal Work Permit → | https://cwmigrationgroup.com/immigration/spousal-work-permit |
-| Sponsorship Refusals → | https://cwmigrationgroup.com/refusals |
-| Visitor Visa → | https://cwmigrationgroup.com/immigration/visitor-visa |
+| Check Eligibility Tool → | https://commonwealthmigration.ca/contact-us |
+| Start Free Assessment → | https://commonwealthmigration.ca/contact-us |
+| 📞 Call contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| Family Sponsorship Hub → | https://commonwealthmigration.ca/immigration/family-sponsorship |
+| Parents & Grandparents → | https://commonwealthmigration.ca/immigration/pgp |
+| Super Visa → | https://commonwealthmigration.ca/immigration/super-visa |
+| Spousal Work Permit → | https://commonwealthmigration.ca/immigration/spousal-work-permit |
+| Sponsorship Refusals → | https://commonwealthmigration.ca/refusals |
+| Visitor Visa → | https://commonwealthmigration.ca/immigration/visitor-visa |
 
 ---
 
@@ -359,9 +359,9 @@ Toronto · Brampton · Mississauga · Markham · Vaughan · Hamilton · Niagara 
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Spousal Sponsorship Immigration Service","description":"Licensed RCIC guidance for spousal and common-law partner sponsorship. Inland and outland. GTA and Canada-wide.","areaServed":"Canada"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does spousal sponsorship take?","acceptedAnswer":{"@type":"Answer","text":"Spousal sponsorship typically takes 12-24 months depending on whether it is inland or outland and which visa office processes the application."}},{"@type":"Question","name":"Can my spouse work while sponsorship is processing?","acceptedAnswer":{"@type":"Answer","text":"Yes - inland applicants can apply for a Bridging Open Work Permit (BOWP) allowing them to work for any Canadian employer while waiting for PR."}},{"@type":"Question","name":"What is the difference between inland and outland sponsorship?","acceptedAnswer":{"@type":"Answer","text":"Inland is for sponsored persons already in Canada who can get a BOWP while waiting. Outland is processed at the overseas visa office for partners abroad."}},{"@type":"Question","name":"Can I appeal a spousal sponsorship refusal?","acceptedAnswer":{"@type":"Answer","text":"Yes. Spousal sponsorship refusals can be appealed to the Immigration Appeal Division (IAD) within 30 days of refusal."}},{"@type":"Question","name":"What evidence do I need for common-law sponsorship?","acceptedAnswer":{"@type":"Answer","text":"Common-law sponsorship requires 12+ months cohabitation evidence including joint lease, shared bank accounts, utility bills, photos over time, and statutory declarations."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Family Sponsorship","item":"https://cwmigrationgroup.com/immigration/family-sponsorship"},{"@type":"ListItem","position":3,"name":"Spousal Sponsorship","item":"https://cwmigrationgroup.com/immigration/spousal-sponsorship"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Spousal Sponsorship Immigration Service","description":"Licensed RCIC guidance for spousal and common-law partner sponsorship. Inland and outland. GTA and Canada-wide.","areaServed":"Canada"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does spousal sponsorship take?","acceptedAnswer":{"@type":"Answer","text":"Spousal sponsorship typically takes 12-24 months depending on whether it is inland or outland and which visa office processes the application."}},{"@type":"Question","name":"Can my spouse work while sponsorship is processing?","acceptedAnswer":{"@type":"Answer","text":"Yes - inland applicants can apply for a Bridging Open Work Permit (BOWP) allowing them to work for any Canadian employer while waiting for PR."}},{"@type":"Question","name":"What is the difference between inland and outland sponsorship?","acceptedAnswer":{"@type":"Answer","text":"Inland is for sponsored persons already in Canada who can get a BOWP while waiting. Outland is processed at the overseas visa office for partners abroad."}},{"@type":"Question","name":"Can I appeal a spousal sponsorship refusal?","acceptedAnswer":{"@type":"Answer","text":"Yes. Spousal sponsorship refusals can be appealed to the Immigration Appeal Division (IAD) within 30 days of refusal."}},{"@type":"Question","name":"What evidence do I need for common-law sponsorship?","acceptedAnswer":{"@type":"Answer","text":"Common-law sponsorship requires 12+ months cohabitation evidence including joint lease, shared bank accounts, utility bills, photos over time, and statutory declarations."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Family Sponsorship","item":"https://commonwealthmigration.ca/immigration/family-sponsorship"},{"@type":"ListItem","position":3,"name":"Spousal Sponsorship","item":"https://commonwealthmigration.ca/immigration/spousal-sponsorship"}]}]}
 ```

@@ -1,6 +1,6 @@
 # Northern Canada Immigration 2026 | Yukon, NWT & Nunavut PNP | Licensed RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/immigration/pnp/northern
+> **Source URL:** https://commonwealthmigration.ca/immigration/pnp/northern
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.7
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Northern Canada Immigration 2026 | Yukon, NWT & Nunavut PNP | Licensed RCIC
 - **Meta description:** Northern Canada immigration 2026 - Yukon YNP, NWT Nominee Program and Nunavut federal pathways (CEC, RNIP, TFWP). Territory strategy by licensed RCIC.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/immigration/pnp/northern
+- **Canonical URL:** https://commonwealthmigration.ca/immigration/pnp/northern
 - **OG title:** Northern Canada Immigration 2026 | Yukon · NWT · Nunavut | Licensed RCIC
 - **OG description:** Yukon YNP is Canada's most active territorial nominee program. NWT NTNP operates employer-driven nomination. Nunavut relies on federal routes - CEC, RNIP, TFWP. Commonwealth Migration maps the right program for each territory.
 - **Robots:** index, follow
@@ -419,29 +419,29 @@ Serving northern Canada immigration clients in Whitehorse · Yellowknife · Iqal
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/immigration/pnp/northern#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| Home | https://cwmigrationgroup.com/ |
-| Immigration | https://cwmigrationgroup.com/immigration |
-| PNP | https://cwmigrationgroup.com/immigration/pnp |
-| Book Northern Assessment → | https://cwmigrationgroup.com/free-assessment |
-| Check My Eligibility | https://cwmigrationgroup.com/tools |
-| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| → Alberta AAIP | https://cwmigrationgroup.com/immigration/pnp/alberta |
-| → Saskatchewan SINP | https://cwmigrationgroup.com/immigration/pnp/saskatchewan |
-| → Express Entry | https://cwmigrationgroup.com/immigration/express-entry |
-| Free assessment → | https://cwmigrationgroup.com/free-assessment |
-| Get Territory-Specific Immigration Advice → | https://cwmigrationgroup.com/free-assessment |
-| Book Free Consultation | https://cwmigrationgroup.com/contact |
-| Book Free Northern Canada Assessment → | https://cwmigrationgroup.com/free-assessment |
-| View All PNP Programs | https://cwmigrationgroup.com/immigration/pnp |
-| PNP Hub → All provincial programs | https://cwmigrationgroup.com/immigration/pnp |
-| Alberta AAIP → Strong western PNP | https://cwmigrationgroup.com/immigration/pnp/alberta |
-| Saskatchewan SINP → Active western province | https://cwmigrationgroup.com/immigration/pnp/saskatchewan |
-| Express Entry → Federal skilled worker | https://cwmigrationgroup.com/immigration/express-entry |
-| Work Permit → Bridge to PR | https://cwmigrationgroup.com/immigration/work-permit |
-| Newfoundland NLPNP → Atlantic Canada | https://cwmigrationgroup.com/immigration/pnp/newfoundland |
+| Skip to main content | https://commonwealthmigration.ca/immigration/pnp/northern#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| Home | https://commonwealthmigration.ca/ |
+| Immigration | https://commonwealthmigration.ca/immigration |
+| PNP | https://commonwealthmigration.ca/immigration/pnp |
+| Book Northern Assessment → | https://commonwealthmigration.ca/free-assessment |
+| Check My Eligibility | https://commonwealthmigration.ca/tools |
+| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| → Alberta AAIP | https://commonwealthmigration.ca/immigration/pnp/alberta |
+| → Saskatchewan SINP | https://commonwealthmigration.ca/immigration/pnp/saskatchewan |
+| → Express Entry | https://commonwealthmigration.ca/immigration/express-entry |
+| Free assessment → | https://commonwealthmigration.ca/free-assessment |
+| Get Territory-Specific Immigration Advice → | https://commonwealthmigration.ca/free-assessment |
+| Book Free Consultation | https://commonwealthmigration.ca/contact |
+| Book Free Northern Canada Assessment → | https://commonwealthmigration.ca/free-assessment |
+| View All PNP Programs | https://commonwealthmigration.ca/immigration/pnp |
+| PNP Hub → All provincial programs | https://commonwealthmigration.ca/immigration/pnp |
+| Alberta AAIP → Strong western PNP | https://commonwealthmigration.ca/immigration/pnp/alberta |
+| Saskatchewan SINP → Active western province | https://commonwealthmigration.ca/immigration/pnp/saskatchewan |
+| Express Entry → Federal skilled worker | https://commonwealthmigration.ca/immigration/express-entry |
+| Work Permit → Bridge to PR | https://commonwealthmigration.ca/immigration/work-permit |
+| Newfoundland NLPNP → Atlantic Canada | https://commonwealthmigration.ca/immigration/pnp/newfoundland |
 
 ---
 
@@ -454,13 +454,13 @@ Serving northern Canada immigration clients in Whitehorse · Yellowknife · Iqal
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cwmigrationgroup.com/immigration/pnp/northern#webpage","url":"https://cwmigrationgroup.com/immigration/pnp/northern","name":"Northern Canada Territorial Immigration 2026","description":"Northern Canada immigration 2026 - Yukon YNP, NWT Nominee Program and Nunavut federal pathways (CEC, RNIP, TFWP). Territory strategy by licensed RCIC."},{"@type":"Service","name":"Commonwealth Migration Northern Territories Immigration Support","serviceType":"Immigration Consulting","provider":{"@type":"LocalBusiness","name":"Licensed Regulated Canadian Immigration Consultants","address":"Canada-wide service by appointment, Brampton, Ontario"},"areaServed":[{"@type":"AdministrativeArea","name":"Yukon"},{"@type":"AdministrativeArea","name":"Northwest Territories"},{"@type":"AdministrativeArea","name":"Nunavut"}],"description":"Licensed RCIC guidance for northern Canada immigration - Yukon Nominee Program (YNP: Skilled Worker, Critical Impact, Express Entry, Business), NWT Nominee Program (NTNP: Employer-Driven, Business), and federal pathways for Nunavut (CEC, RNIP, TFWP, IMP). Housing and settlement pre-screening included."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"PNP","item":"https://cwmigrationgroup.com/immigration/pnp"},{"@type":"ListItem","position":4,"name":"Northern Canada","item":"https://cwmigrationgroup.com/immigration/pnp/northern"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://commonwealthmigration.ca/immigration/pnp/northern#webpage","url":"https://commonwealthmigration.ca/immigration/pnp/northern","name":"Northern Canada Territorial Immigration 2026","description":"Northern Canada immigration 2026 - Yukon YNP, NWT Nominee Program and Nunavut federal pathways (CEC, RNIP, TFWP). Territory strategy by licensed RCIC."},{"@type":"Service","name":"Commonwealth Migration Northern Territories Immigration Support","serviceType":"Immigration Consulting","provider":{"@type":"LocalBusiness","name":"Licensed Regulated Canadian Immigration Consultants","address":"Canada-wide service by appointment, Brampton, Ontario"},"areaServed":[{"@type":"AdministrativeArea","name":"Yukon"},{"@type":"AdministrativeArea","name":"Northwest Territories"},{"@type":"AdministrativeArea","name":"Nunavut"}],"description":"Licensed RCIC guidance for northern Canada immigration - Yukon Nominee Program (YNP: Skilled Worker, Critical Impact, Express Entry, Business), NWT Nominee Program (NTNP: Employer-Driven, Business), and federal pathways for Nunavut (CEC, RNIP, TFWP, IMP). Housing and settlement pre-screening included."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"PNP","item":"https://commonwealthmigration.ca/immigration/pnp"},{"@type":"ListItem","position":4,"name":"Northern Canada","item":"https://commonwealthmigration.ca/immigration/pnp/northern"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"PNP","item":"https://cwmigrationgroup.com/immigration/pnp"},{"@type":"ListItem","position":4,"name":"Northern Canada"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"PNP","item":"https://commonwealthmigration.ca/immigration/pnp"},{"@type":"ListItem","position":4,"name":"Northern Canada"}]}
 ```

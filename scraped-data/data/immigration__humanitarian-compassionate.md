@@ -1,6 +1,6 @@
 # Humanitarian & Compassionate (H&C) Applications Canada 2026 | IRPA s.25 | Licensed RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/immigration/humanitarian-compassionate
+> **Source URL:** https://commonwealthmigration.ca/immigration/humanitarian-compassionate
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.7
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Humanitarian & Compassionate (H&C) Applications Canada 2026 | IRPA s.25 | Licensed RCIC
 - **Meta description:** Humanitarian and Compassionate (H&C) applications under IRPA section 25: who qualifies, grounds considered, process, and documentation. For inadmissible persons, out-of-status individuals, and those with deep Canadian establishment. Licensed RCIC.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/immigration/humanitarian-compassionate
+- **Canonical URL:** https://commonwealthmigration.ca/immigration/humanitarian-compassionate
 - **OG title:** Humanitarian & Compassionate (H&C) Applications Canada 2026 | Licensed RCIC
 - **OG description:** H&C relief under IRPA s.25: overcome inadmissibility, out-of-status, best interests of children. Commonwealth Migration prepares strong H&C applications.
 - **Robots:** index, follow
@@ -272,21 +272,21 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/immigration/humanitarian-compassionate#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| Home | https://cwmigrationgroup.com/ |
-| Immigration | https://cwmigrationgroup.com/immigration |
-| Book Free Consultation → | https://cwmigrationgroup.com/book |
-| Free Assessment | https://cwmigrationgroup.com/free-assessment |
-| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| Book consultation → | https://cwmigrationgroup.com/book |
-| Book Free Consultation | https://cwmigrationgroup.com/contact |
-| Refugees & Protected Persons | https://cwmigrationgroup.com/immigration/refugees |
-| Temporary Resident Permit (TRP) | https://cwmigrationgroup.com/appeals/trp |
-| Criminal Inadmissibility | https://cwmigrationgroup.com/appeals/criminal-inadmissibility |
-| Refusals & PFL Responses | https://cwmigrationgroup.com/refusals |
-| Family Sponsorship | https://cwmigrationgroup.com/immigration/family-sponsorship |
+| Skip to main content | https://commonwealthmigration.ca/immigration/humanitarian-compassionate#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| Home | https://commonwealthmigration.ca/ |
+| Immigration | https://commonwealthmigration.ca/immigration |
+| Book Free Consultation → | https://commonwealthmigration.ca/book |
+| Free Assessment | https://commonwealthmigration.ca/free-assessment |
+| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| Book consultation → | https://commonwealthmigration.ca/book |
+| Book Free Consultation | https://commonwealthmigration.ca/contact |
+| Refugees & Protected Persons | https://commonwealthmigration.ca/immigration/refugees |
+| Temporary Resident Permit (TRP) | https://commonwealthmigration.ca/appeals/trp |
+| Criminal Inadmissibility | https://commonwealthmigration.ca/appeals/criminal-inadmissibility |
+| Refusals & PFL Responses | https://commonwealthmigration.ca/refusals |
+| Family Sponsorship | https://commonwealthmigration.ca/immigration/family-sponsorship |
 
 ---
 
@@ -299,15 +299,15 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://cwmigrationgroup.com/immigration/humanitarian-compassionate#service","name":"Humanitarian and Compassionate (H&C) Immigration Applications","description":"Licensed RCIC preparation of Humanitarian and Compassionate applications under IRPA section 25 - establishment, BIOC, hardship, and inadmissibility grounds.","areaServed":"Canada","serviceType":"Immigration Consulting","provider":{"@type":"Organization","name":"Commonwealth Migration Canada","url":"https://cwmigrationgroup.com"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Humanitarian & Compassionate","item":"https://cwmigrationgroup.com/immigration/humanitarian-compassionate"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://commonwealthmigration.ca/immigration/humanitarian-compassionate#service","name":"Humanitarian and Compassionate (H&C) Immigration Applications","description":"Licensed RCIC preparation of Humanitarian and Compassionate applications under IRPA section 25 - establishment, BIOC, hardship, and inadmissibility grounds.","areaServed":"Canada","serviceType":"Immigration Consulting","provider":{"@type":"Organization","name":"Commonwealth Migration Canada","url":"https://commonwealthmigration.ca"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Humanitarian & Compassionate","item":"https://commonwealthmigration.ca/immigration/humanitarian-compassionate"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://cwmigrationgroup.com/immigration"},{"@type":"ListItem","position":3,"name":"Humanitarian & Compassionate"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Immigration","item":"https://commonwealthmigration.ca/immigration"},{"@type":"ListItem","position":3,"name":"Humanitarian & Compassionate"}]}
 ```
 
 ```json

@@ -1,6 +1,6 @@
 # Canada Work Permit 2026 | LMIA, PGWP, Open Work Permit | Licensed RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/immigration/work-permit
+> **Source URL:** https://commonwealthmigration.ca/immigration/work-permit
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.9
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Canada Work Permit 2026 | LMIA, PGWP, Open Work Permit | Licensed RCIC
 - **Meta description:** LMIA, LMIA-exempt, PGWP, spousal OWP, IEC, and bridging work permits. Licensed RCIC guidance for every stream. Canada-wide. Free assessment.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/immigration/work-permit
+- **Canonical URL:** https://commonwealthmigration.ca/immigration/work-permit
 - **OG title:** Canada Work Permit 2026 | Licensed RCIC
 - **OG description:** Every work permit stream - LMIA, exempt, open permits. Licensed RCIC.
 - **Robots:** index, follow
@@ -324,64 +324,64 @@ Serving Toronto · Brampton · Mississauga · Vancouver · Calgary · Ottawa and
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/immigration/work-permit#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| Home | https://cwmigrationgroup.com/ |
-| Immigration | https://cwmigrationgroup.com/immigration |
-| Book Free Consultation → | https://cwmigrationgroup.com/book |
-| Check My Eligibility | https://cwmigrationgroup.com/tools |
-| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| → Open work permits | https://cwmigrationgroup.com/immigration/open-work-permit |
-| → LMIA-based permits | https://cwmigrationgroup.com/immigration/lmia |
-| → LMIA-exempt (trade & IMP) | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| → PGWP | https://cwmigrationgroup.com/immigration/pgwp |
-| → Spousal OWP | https://cwmigrationgroup.com/immigration/spousal-work-permit |
-| → IEC | https://cwmigrationgroup.com/immigration/iec |
-| Book consultation → | https://cwmigrationgroup.com/book |
-| OPEN PERMIT I don't need an employer to sponsor me Graduates, spouses of workers/students, IEC participants, and PR applicants can get open work permits - work for any employer in Canada. ✓ PGWP after Canadian graduation ✓ Spousal open work permit ✓ IEC Working Holiday & more Explore open work permits → | https://cwmigrationgroup.com/immigration/work-permit#open-permits |
-| HAS JOB OFFER I have a Canadian employer Your employer supports your application. Depending on the role, they need a positive LMIA or qualify for an LMIA-exempt category. ✓ Employer-specific (closed) work permit ✓ LMIA-based or LMIA-exempt ✓ Tied to one employer and job Explore LMIA & exempt streams → | https://cwmigrationgroup.com/immigration/work-permit#lmia-based |
-| NOT SURE I'm not sure what I need Your current status in Canada, immigration history, and long-term goals all affect which permit is right. A free RCIC assessment takes 15 minutes. ✓ Free eligibility assessment ✓ Inside vs outside Canada options ✓ Work permit to PR strategy Book free assessment → | https://cwmigrationgroup.com/contact-us |
-| Post-Graduation Work Permit (PGWP) Graduated from an eligible Canadian DLI in an eligible field of study? Work anywhere in Canada for up to 3 years. The most common path from study to PR. 2026: field-of-study rules apply for college/non-degree Eligible Program Required | https://cwmigrationgroup.com/immigration/pgwp |
-| Spousal Open Work Permit Spouse or common-law partner of a skilled worker or eligible student. Must meet TEER/program eligibility rules updated in 2024-2025. TEER 0/1 or select TEER 2/3 | https://cwmigrationgroup.com/immigration/spousal-work-permit |
-| IEC - International Experience Canada Citizens aged 18-35 from partner countries. Three categories: Working Holiday (most popular), Young Professionals, and International Co-op. Ages 18-35 | https://cwmigrationgroup.com/immigration/iec |
-| Co-Op Work Permit Full-time students in mandatory co-op or internship programs. Required in addition to your study permit. LMIA-exempt. Must be Mandatory Co-Op | https://cwmigrationgroup.com/immigration/iec |
-| Bridging Open Work Permit (BOWP) Current work permit expiring while you wait for a PR decision? BOWP lets you keep working for any employer without interruption. PR Application Pending | https://cwmigrationgroup.com/immigration/open-work-permit |
-| PNP-Linked Open Work Permit Nominated by a province? You may qualify for an open work permit while your PR application is processed - stay employed and in status. Provincial Nomination | https://cwmigrationgroup.com/immigration/open-work-permit |
-| Vulnerable Worker OWP Workers in an abusive or exploitative work situation can apply for an open work permit regardless of their current immigration status. Any Status | https://cwmigrationgroup.com/immigration/open-work-permit |
-| Hong Kong & Ukraine OWPs Special open work permits for Hong Kong residents under public policy and Ukrainian nationals under the CUAET program. Special Measures | https://cwmigrationgroup.com/immigration/open-work-permit |
-| Employer LMIA Services → | https://cwmigrationgroup.com/for-employers/lmia |
-| LMIA - Inside Canada Already in Canada with valid status? Your employer can apply for an LMIA to support a change of status or extension - no border crossing required. In-Canada Application | https://cwmigrationgroup.com/immigration/lmia |
-| LMIA - Outside Canada Applying from abroad with a Canadian job offer. Your employer obtains LMIA, then you apply for a work permit from your home country. From Abroad | https://cwmigrationgroup.com/immigration/lmia |
-| High-Wage LMIA Position pays at or above the provincial median wage. No cap on the number of TFWs. Transition plan required for renewals. No Worker Cap | https://cwmigrationgroup.com/immigration/lmia |
-| Low-Wage LMIA Position pays below the provincial median wage. Subject to 10-20% cap on TFW workforce. Not available in regions with high unemployment. Cap Applies | https://cwmigrationgroup.com/immigration/lmia |
-| Agricultural LMIA Seasonal Agricultural Worker Program and agricultural stream LMIA for farm and food production roles. Specialized rules and timelines. Agri Stream | https://cwmigrationgroup.com/immigration/lmia |
-| Global Talent Stream - Category A Referral-based stream for unique talent. 2-week processing target. Employer must be referred by a designated partner organization. 2-Week Target | https://cwmigrationgroup.com/for-employers/global-talent-stream |
-| Global Talent Stream - Category B For in-demand tech occupations on the GTS occupation list. 2-week processing target. No referral needed. Tech Roles | https://cwmigrationgroup.com/for-employers/global-talent-stream |
-| Book Work Permit Consultation → | https://cwmigrationgroup.com/book |
-| Call contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| CUSMA - US & Mexico Citizens of the US and Mexico in over 60 professional occupations can work in Canada under the Canada-United States-Mexico Agreement - no LMIA required. US · Mexico | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| CETA - European Union Citizens of EU member states may work in eligible professional categories under the Comprehensive Economic and Trade Agreement. EU Citizens | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| CPTPP - Asia-Pacific Professionals from CPTPP member countries including Japan, Australia, Chile, and others in eligible roles. Asia-Pacific | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| UKTCA - United Kingdom UK nationals may work under the Canada-UK Trade Continuity Agreement in eligible professional categories. UK Citizens | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| Intra-Company Transfer Executives, senior managers, and specialized knowledge workers transferring between offices of the same multinational company. ICT | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| French-Speaking Worker Francophone workers destined outside Quebec may be exempt under the significant benefit category supporting French-language communities. Francophone | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| Religious & Charitable Workers employed by a religious, charitable, or non-profit organization in roles that serve their organization's mandate. Non-Profit | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| Academic & Research Researchers, academics, and visiting professors at Canadian universities and research institutions under international exchange arrangements. Academic | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| Book Urgently → | https://cwmigrationgroup.com/book |
-| Express Entry hub → | https://cwmigrationgroup.com/immigration/express-entry |
-| PNP streams → | https://cwmigrationgroup.com/immigration/pnp |
-| Check Express Entry → | https://cwmigrationgroup.com/immigration/express-entry |
-| Book Free Consultation | https://cwmigrationgroup.com/book |
-| Use Free Tools | https://cwmigrationgroup.com/tools |
-| Express Entry → | https://cwmigrationgroup.com/immigration/express-entry |
-| PGWP → | https://cwmigrationgroup.com/immigration/pgwp |
-| Spousal Work Permit → | https://cwmigrationgroup.com/immigration/spousal-work-permit |
-| Study Permit → | https://cwmigrationgroup.com/immigration/study-permit |
-| PNP → | https://cwmigrationgroup.com/immigration/pnp |
-| Family Sponsorship → | https://cwmigrationgroup.com/immigration/family-sponsorship |
-| Visitor Visa → | https://cwmigrationgroup.com/immigration/visitor-visa |
-| Refusals & PFL → | https://cwmigrationgroup.com/refusals |
+| Skip to main content | https://commonwealthmigration.ca/immigration/work-permit#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| Home | https://commonwealthmigration.ca/ |
+| Immigration | https://commonwealthmigration.ca/immigration |
+| Book Free Consultation → | https://commonwealthmigration.ca/book |
+| Check My Eligibility | https://commonwealthmigration.ca/tools |
+| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| → Open work permits | https://commonwealthmigration.ca/immigration/open-work-permit |
+| → LMIA-based permits | https://commonwealthmigration.ca/immigration/lmia |
+| → LMIA-exempt (trade & IMP) | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| → PGWP | https://commonwealthmigration.ca/immigration/pgwp |
+| → Spousal OWP | https://commonwealthmigration.ca/immigration/spousal-work-permit |
+| → IEC | https://commonwealthmigration.ca/immigration/iec |
+| Book consultation → | https://commonwealthmigration.ca/book |
+| OPEN PERMIT I don't need an employer to sponsor me Graduates, spouses of workers/students, IEC participants, and PR applicants can get open work permits - work for any employer in Canada. ✓ PGWP after Canadian graduation ✓ Spousal open work permit ✓ IEC Working Holiday & more Explore open work permits → | https://commonwealthmigration.ca/immigration/work-permit#open-permits |
+| HAS JOB OFFER I have a Canadian employer Your employer supports your application. Depending on the role, they need a positive LMIA or qualify for an LMIA-exempt category. ✓ Employer-specific (closed) work permit ✓ LMIA-based or LMIA-exempt ✓ Tied to one employer and job Explore LMIA & exempt streams → | https://commonwealthmigration.ca/immigration/work-permit#lmia-based |
+| NOT SURE I'm not sure what I need Your current status in Canada, immigration history, and long-term goals all affect which permit is right. A free RCIC assessment takes 15 minutes. ✓ Free eligibility assessment ✓ Inside vs outside Canada options ✓ Work permit to PR strategy Book free assessment → | https://commonwealthmigration.ca/contact-us |
+| Post-Graduation Work Permit (PGWP) Graduated from an eligible Canadian DLI in an eligible field of study? Work anywhere in Canada for up to 3 years. The most common path from study to PR. 2026: field-of-study rules apply for college/non-degree Eligible Program Required | https://commonwealthmigration.ca/immigration/pgwp |
+| Spousal Open Work Permit Spouse or common-law partner of a skilled worker or eligible student. Must meet TEER/program eligibility rules updated in 2024-2025. TEER 0/1 or select TEER 2/3 | https://commonwealthmigration.ca/immigration/spousal-work-permit |
+| IEC - International Experience Canada Citizens aged 18-35 from partner countries. Three categories: Working Holiday (most popular), Young Professionals, and International Co-op. Ages 18-35 | https://commonwealthmigration.ca/immigration/iec |
+| Co-Op Work Permit Full-time students in mandatory co-op or internship programs. Required in addition to your study permit. LMIA-exempt. Must be Mandatory Co-Op | https://commonwealthmigration.ca/immigration/iec |
+| Bridging Open Work Permit (BOWP) Current work permit expiring while you wait for a PR decision? BOWP lets you keep working for any employer without interruption. PR Application Pending | https://commonwealthmigration.ca/immigration/open-work-permit |
+| PNP-Linked Open Work Permit Nominated by a province? You may qualify for an open work permit while your PR application is processed - stay employed and in status. Provincial Nomination | https://commonwealthmigration.ca/immigration/open-work-permit |
+| Vulnerable Worker OWP Workers in an abusive or exploitative work situation can apply for an open work permit regardless of their current immigration status. Any Status | https://commonwealthmigration.ca/immigration/open-work-permit |
+| Hong Kong & Ukraine OWPs Special open work permits for Hong Kong residents under public policy and Ukrainian nationals under the CUAET program. Special Measures | https://commonwealthmigration.ca/immigration/open-work-permit |
+| Employer LMIA Services → | https://commonwealthmigration.ca/for-employers/lmia |
+| LMIA - Inside Canada Already in Canada with valid status? Your employer can apply for an LMIA to support a change of status or extension - no border crossing required. In-Canada Application | https://commonwealthmigration.ca/immigration/lmia |
+| LMIA - Outside Canada Applying from abroad with a Canadian job offer. Your employer obtains LMIA, then you apply for a work permit from your home country. From Abroad | https://commonwealthmigration.ca/immigration/lmia |
+| High-Wage LMIA Position pays at or above the provincial median wage. No cap on the number of TFWs. Transition plan required for renewals. No Worker Cap | https://commonwealthmigration.ca/immigration/lmia |
+| Low-Wage LMIA Position pays below the provincial median wage. Subject to 10-20% cap on TFW workforce. Not available in regions with high unemployment. Cap Applies | https://commonwealthmigration.ca/immigration/lmia |
+| Agricultural LMIA Seasonal Agricultural Worker Program and agricultural stream LMIA for farm and food production roles. Specialized rules and timelines. Agri Stream | https://commonwealthmigration.ca/immigration/lmia |
+| Global Talent Stream - Category A Referral-based stream for unique talent. 2-week processing target. Employer must be referred by a designated partner organization. 2-Week Target | https://commonwealthmigration.ca/for-employers/global-talent-stream |
+| Global Talent Stream - Category B For in-demand tech occupations on the GTS occupation list. 2-week processing target. No referral needed. Tech Roles | https://commonwealthmigration.ca/for-employers/global-talent-stream |
+| Book Work Permit Consultation → | https://commonwealthmigration.ca/book |
+| Call contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| CUSMA - US & Mexico Citizens of the US and Mexico in over 60 professional occupations can work in Canada under the Canada-United States-Mexico Agreement - no LMIA required. US · Mexico | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| CETA - European Union Citizens of EU member states may work in eligible professional categories under the Comprehensive Economic and Trade Agreement. EU Citizens | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| CPTPP - Asia-Pacific Professionals from CPTPP member countries including Japan, Australia, Chile, and others in eligible roles. Asia-Pacific | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| UKTCA - United Kingdom UK nationals may work under the Canada-UK Trade Continuity Agreement in eligible professional categories. UK Citizens | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| Intra-Company Transfer Executives, senior managers, and specialized knowledge workers transferring between offices of the same multinational company. ICT | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| French-Speaking Worker Francophone workers destined outside Quebec may be exempt under the significant benefit category supporting French-language communities. Francophone | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| Religious & Charitable Workers employed by a religious, charitable, or non-profit organization in roles that serve their organization's mandate. Non-Profit | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| Academic & Research Researchers, academics, and visiting professors at Canadian universities and research institutions under international exchange arrangements. Academic | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| Book Urgently → | https://commonwealthmigration.ca/book |
+| Express Entry hub → | https://commonwealthmigration.ca/immigration/express-entry |
+| PNP streams → | https://commonwealthmigration.ca/immigration/pnp |
+| Check Express Entry → | https://commonwealthmigration.ca/immigration/express-entry |
+| Book Free Consultation | https://commonwealthmigration.ca/book |
+| Use Free Tools | https://commonwealthmigration.ca/tools |
+| Express Entry → | https://commonwealthmigration.ca/immigration/express-entry |
+| PGWP → | https://commonwealthmigration.ca/immigration/pgwp |
+| Spousal Work Permit → | https://commonwealthmigration.ca/immigration/spousal-work-permit |
+| Study Permit → | https://commonwealthmigration.ca/immigration/study-permit |
+| PNP → | https://commonwealthmigration.ca/immigration/pnp |
+| Family Sponsorship → | https://commonwealthmigration.ca/immigration/family-sponsorship |
+| Visitor Visa → | https://commonwealthmigration.ca/immigration/visitor-visa |
+| Refusals & PFL → | https://commonwealthmigration.ca/refusals |
 
 ---
 
@@ -394,5 +394,5 @@ Serving Toronto · Brampton · Mississauga · Vancouver · Calgary · Ottawa and
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```

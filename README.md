@@ -54,7 +54,7 @@ npm run lint       # eslint
 7. Verify: `npm run lint`, `npm run build`, and check every route returns 200.
 
 The current production domain is configured in `.env` as
-`https://cwmigrationgroup.com`. The rewritten Markdown pages use keyword-led
+`https://commonwealthmigration.ca`. The rewritten Markdown pages use keyword-led
 routes from `pageData/`; the former scraped paths redirect permanently to those
 new routes.
 

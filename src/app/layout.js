@@ -2,6 +2,7 @@ import "react-chatbot-kit/build/main.css";
 import "@/styles/globals.css";
 import localFont from "next/font/local";
 import { site } from "@/config/site";
+import { whatsappUrl } from "@/config/whatsapp";
 import { theme, themeCssVars, templateThemeCssVars } from "@/config/theme";
 import { absoluteUrl, buildMetadata } from "@/lib/seo";
 import Header from "@/components/layout/Header";
@@ -154,7 +155,7 @@ export default function RootLayout({ children }) {
         <WhatsAppBubble />
         <CallBubble />
         <ConsultationModal />
-        <GuidedChatbot />
+        <GuidedChatbot whatsappHref={whatsappUrl} />
       </body>
     </html>
   );

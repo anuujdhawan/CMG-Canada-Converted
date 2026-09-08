@@ -1,6 +1,6 @@
 # LMIA-Exempt Work Permits for Employers 2026 | CUSMA, ICT, GTS | Licensed RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/for-employers/lmia-exempt
+> **Source URL:** https://commonwealthmigration.ca/for-employers/lmia-exempt
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** LMIA-Exempt Work Permits for Employers 2026 | CUSMA, ICT, GTS | Licensed RCIC
 - **Meta description:** Hire international talent without a full LMIA. CUSMA/TN, CETA, ICT, Global Talent Stream and more. IMP compliance, Employer Portal. Licensed RCIC guidance.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/for-employers/lmia-exempt
+- **Canonical URL:** https://commonwealthmigration.ca/for-employers/lmia-exempt
 - **OG title:** LMIA-Exempt Employer Services Canada 2026 | CUSMA, ICT, GTS | Licensed RCIC
 - **OG description:** Faster hiring with no $1,000 LMIA fee in many cases. CUSMA, CETA, ICT, GTS - Commonwealth Migration confirms which stream fits and handles employer compliance.
 - **Robots:** index, follow
@@ -386,35 +386,35 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/for-employers/lmia-exempt#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| Home | https://cwmigrationgroup.com/ |
-| For Employers | https://cwmigrationgroup.com/for-employers |
-| Book Employer Consultation → | https://cwmigrationgroup.com/free-assessment |
-| LMIA Services | https://cwmigrationgroup.com/for-employers/lmia |
-| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| → Intra-Company Transfer (ICT) | https://cwmigrationgroup.com/for-employers/intra-company-transfer |
-| → Global Talent Stream | https://cwmigrationgroup.com/for-employers/global-talent-stream |
-| → LMIA Services | https://cwmigrationgroup.com/for-employers/lmia |
-| → Employer Compliance | https://cwmigrationgroup.com/for-employers/employer-compliance |
-| → All Employer Services | https://cwmigrationgroup.com/for-employers |
-| Book Free Consultation → | https://cwmigrationgroup.com/free-assessment |
-| Details | https://cwmigrationgroup.com/for-employers/lmia-exempt#cusma-employers |
-| Details | https://cwmigrationgroup.com/for-employers/lmia-exempt#ict |
-| Details | https://cwmigrationgroup.com/for-employers/lmia-exempt#gts |
-| Details | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| Full Global Talent Stream Details | https://cwmigrationgroup.com/for-employers/global-talent-stream |
-| Full Intra-Company Transfer Details | https://cwmigrationgroup.com/for-employers/intra-company-transfer |
-| Employer Compliance Services | https://cwmigrationgroup.com/for-employers/employer-compliance |
-| Book Free Consultation | https://cwmigrationgroup.com/contact |
-| Intra-Company Transfer → | https://cwmigrationgroup.com/for-employers/intra-company-transfer |
-| Global Talent Stream → | https://cwmigrationgroup.com/for-employers/global-talent-stream |
-| LMIA Services → | https://cwmigrationgroup.com/for-employers/lmia |
-| Employer Compliance → | https://cwmigrationgroup.com/for-employers/employer-compliance |
-| LMIA-Exempt for Workers → | https://cwmigrationgroup.com/immigration/lmia-exempt |
-| All Employer Services → | https://cwmigrationgroup.com/for-employers |
-| Book Free Consultation → | https://cwmigrationgroup.com/book |
+| Skip to main content | https://commonwealthmigration.ca/for-employers/lmia-exempt#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| Home | https://commonwealthmigration.ca/ |
+| For Employers | https://commonwealthmigration.ca/for-employers |
+| Book Employer Consultation → | https://commonwealthmigration.ca/free-assessment |
+| LMIA Services | https://commonwealthmigration.ca/for-employers/lmia |
+| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| → Intra-Company Transfer (ICT) | https://commonwealthmigration.ca/for-employers/intra-company-transfer |
+| → Global Talent Stream | https://commonwealthmigration.ca/for-employers/global-talent-stream |
+| → LMIA Services | https://commonwealthmigration.ca/for-employers/lmia |
+| → Employer Compliance | https://commonwealthmigration.ca/for-employers/employer-compliance |
+| → All Employer Services | https://commonwealthmigration.ca/for-employers |
+| Book Free Consultation → | https://commonwealthmigration.ca/free-assessment |
+| Details | https://commonwealthmigration.ca/for-employers/lmia-exempt#cusma-employers |
+| Details | https://commonwealthmigration.ca/for-employers/lmia-exempt#ict |
+| Details | https://commonwealthmigration.ca/for-employers/lmia-exempt#gts |
+| Details | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| Full Global Talent Stream Details | https://commonwealthmigration.ca/for-employers/global-talent-stream |
+| Full Intra-Company Transfer Details | https://commonwealthmigration.ca/for-employers/intra-company-transfer |
+| Employer Compliance Services | https://commonwealthmigration.ca/for-employers/employer-compliance |
+| Book Free Consultation | https://commonwealthmigration.ca/contact |
+| Intra-Company Transfer → | https://commonwealthmigration.ca/for-employers/intra-company-transfer |
+| Global Talent Stream → | https://commonwealthmigration.ca/for-employers/global-talent-stream |
+| LMIA Services → | https://commonwealthmigration.ca/for-employers/lmia |
+| Employer Compliance → | https://commonwealthmigration.ca/for-employers/employer-compliance |
+| LMIA-Exempt for Workers → | https://commonwealthmigration.ca/immigration/lmia-exempt |
+| All Employer Services → | https://commonwealthmigration.ca/for-employers |
+| Book Free Consultation → | https://commonwealthmigration.ca/book |
 
 ---
 
@@ -427,15 +427,15 @@ Ready to build your Canada plan? Speak with the licensed Canadian immigration te
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://cwmigrationgroup.com/for-employers/lmia-exempt#service","name":"LMIA-Exempt Work Permit Employer Services Canada","description":"Employer support for LMIA-exempt work permits including CUSMA, CETA, Intra-Company Transfer, Global Talent Stream, IMP compliance, and Employer Portal submissions. Licensed RCIC.","areaServed":"Canada","serviceType":"Immigration Consulting"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"For Employers","item":"https://cwmigrationgroup.com/for-employers"},{"@type":"ListItem","position":3,"name":"LMIA-Exempt Work Permits","item":"https://cwmigrationgroup.com/for-employers/lmia-exempt"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://commonwealthmigration.ca/for-employers/lmia-exempt#service","name":"LMIA-Exempt Work Permit Employer Services Canada","description":"Employer support for LMIA-exempt work permits including CUSMA, CETA, Intra-Company Transfer, Global Talent Stream, IMP compliance, and Employer Portal submissions. Licensed RCIC.","areaServed":"Canada","serviceType":"Immigration Consulting"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"For Employers","item":"https://commonwealthmigration.ca/for-employers"},{"@type":"ListItem","position":3,"name":"LMIA-Exempt Work Permits","item":"https://commonwealthmigration.ca/for-employers/lmia-exempt"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"For Employers","item":"https://cwmigrationgroup.com/for-employers"},{"@type":"ListItem","position":3,"name":"LMIA-Exempt Work Permits"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"For Employers","item":"https://commonwealthmigration.ca/for-employers"},{"@type":"ListItem","position":3,"name":"LMIA-Exempt Work Permits"}]}
 ```
 
 ```json

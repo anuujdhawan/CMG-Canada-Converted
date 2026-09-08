@@ -1,6 +1,6 @@
 # Visa Refusal & PFL Response Specialists Canada | Licensed RCIC
 
-> **Source URL:** https://cwmigrationgroup.com/refusals
+> **Source URL:** https://commonwealthmigration.ca/refusals
 > **Last modified:** 2026-08-13T16:43:55.760Z
 > **Sitemap priority:** 0.9
 > **Status:** ✅ Unique English content (processed)
@@ -12,7 +12,7 @@
 - **Title tag:** Visa Refusal & PFL Response Specialists Canada | Licensed RCIC
 - **Meta description:** Visa refused or got a Procedural Fairness Letter? Licensed RCIC specialists offer GCMS analysis, targeted responses, and IAD appeals. Free case review.
 - **Meta keywords:** (none)
-- **Canonical URL:** https://cwmigrationgroup.com/refusals
+- **Canonical URL:** https://commonwealthmigration.ca/refusals
 - **OG title:** Licensed RCIC Immigration Consultants | Canada & GTA
 - **OG description:** CICC-regulated RCICs: Express Entry, every PNP stream, employer LMIA (HGT), work permits, study permits, sponsorship, refusals & PFL. Brampton office. Free consult + tools.
 - **Robots:** index, follow
@@ -320,28 +320,28 @@ Serving refusal clients in Toronto · Brampton · Mississauga · Markham · Vaug
 
 | Anchor text | URL |
 | --- | --- |
-| Skip to main content | https://cwmigrationgroup.com/refusals#main-content |
-| Make Payment | https://cwmigrationgroup.com/pay |
-| Book Book Consultation | https://cwmigrationgroup.com/book |
-| ⚠️ Time-Sensitive: PFL deadlines are strict - usually 15-30 days. Missing the deadline = automatic refusal. Call now: contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| Home | https://cwmigrationgroup.com/ |
-| Get urgent case review → | https://cwmigrationgroup.com/contact-us |
-| contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| → Refusal types we handle | https://cwmigrationgroup.com/refusals#refusal-types |
-| → Procedural fairness (PFL) | https://cwmigrationgroup.com/refusals#pfl-explainer |
-| → Our 7-step process | https://cwmigrationgroup.com/refusals#refusal-process |
-| → Refusal & PFL FAQ | https://cwmigrationgroup.com/refusals#refusal-faq |
-| 📞 Call contact form | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| 📧 Email Your PFL | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| Book Free Consultation | https://cwmigrationgroup.com/contact |
-| 📧 Email Us | https://cwmigrationgroup.com/contact/contact-immigration-consultant-brampton |
-| Book a Consultation → | https://cwmigrationgroup.com/book |
-| Criminal Inadmissibility → | https://cwmigrationgroup.com/appeals/criminal-inadmissibility |
-| Temporary Resident Permit → | https://cwmigrationgroup.com/appeals/trp |
-| Judicial Review → | https://cwmigrationgroup.com/appeals/judicial-review |
-| Misrepresentation → | https://cwmigrationgroup.com/appeals/misrepresentation |
-| Spousal Sponsorship → | https://cwmigrationgroup.com/immigration/spousal-sponsorship |
-| Express Entry → | https://cwmigrationgroup.com/immigration/express-entry |
+| Skip to main content | https://commonwealthmigration.ca/refusals#main-content |
+| Make Payment | https://commonwealthmigration.ca/pay |
+| Book Book Consultation | https://commonwealthmigration.ca/book |
+| ⚠️ Time-Sensitive: PFL deadlines are strict - usually 15-30 days. Missing the deadline = automatic refusal. Call now: contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| Home | https://commonwealthmigration.ca/ |
+| Get urgent case review → | https://commonwealthmigration.ca/contact-us |
+| contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| → Refusal types we handle | https://commonwealthmigration.ca/refusals#refusal-types |
+| → Procedural fairness (PFL) | https://commonwealthmigration.ca/refusals#pfl-explainer |
+| → Our 7-step process | https://commonwealthmigration.ca/refusals#refusal-process |
+| → Refusal & PFL FAQ | https://commonwealthmigration.ca/refusals#refusal-faq |
+| 📞 Call contact form | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| 📧 Email Your PFL | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| Book Free Consultation | https://commonwealthmigration.ca/contact |
+| 📧 Email Us | https://commonwealthmigration.ca/contact/contact-immigration-consultant-brampton |
+| Book a Consultation → | https://commonwealthmigration.ca/book |
+| Criminal Inadmissibility → | https://commonwealthmigration.ca/appeals/criminal-inadmissibility |
+| Temporary Resident Permit → | https://commonwealthmigration.ca/appeals/trp |
+| Judicial Review → | https://commonwealthmigration.ca/appeals/judicial-review |
+| Misrepresentation → | https://commonwealthmigration.ca/appeals/misrepresentation |
+| Spousal Sponsorship → | https://commonwealthmigration.ca/immigration/spousal-sponsorship |
+| Express Entry → | https://commonwealthmigration.ca/immigration/express-entry |
 
 ---
 
@@ -354,13 +354,13 @@ Serving refusal clients in Toronto · Brampton · Mississauga · Markham · Vaug
 ## Structured Data (JSON-LD)
 
 ```json
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://cwmigrationgroup.com","logo":{"@type":"ImageObject","url":"https://cwmigrationgroup.com/logos/Commonwealth Migration-logo.svg"},"image":"https://cwmigrationgroup.com/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Commonwealth Migration Canada","alternateName":["Commonwealth Migration Canada","Commonwealth Migration","Commonwealth Migration"],"legalName":"Commonwealth Migration Canada","description":"CICC-regulated immigration consulting firm. Licensed RCICs specializing in Express Entry, all PNP streams, LMIA, work permits, study permits, spousal sponsorship, refusals, and citizenship. Serving all of Canada from our Brampton, Ontario office.","founder":{"@type":"Person","name":"Lead RCIC","jobTitle":"Regulated Canadian Immigration Consultant (RCIC)","memberOf":{"@type":"Organization","name":"College of Immigration and Citizenship Consultants (CICC)"}},"url":"https://commonwealthmigration.ca","logo":{"@type":"ImageObject","url":"https://commonwealthmigration.ca/logos/Commonwealth Migration-logo.svg"},"image":"https://commonwealthmigration.ca/opengraph-image","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Credit Card, Debit Card, Bank Transfer","address":{"@type":"PostalAddress","addressLocality":"Brampton","addressRegion":"ON","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"areaServed":{"@type":"Country","name":"Canada"},"serviceType":["Express Entry Immigration Consulting","Provincial Nominee Program (PNP) Consulting","Work Permit Application","Study Permit Application","Spousal Sponsorship","LMIA Processing","Visa Refusal Appeals","Citizenship Application","Super Visa Application"]}
 ```
 
 ```json
-{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Canadian Visa Refusal & PFL Response Service","description":"Licensed RCIC specialists for Canadian visa refusals and PFL responses. GCMS analysis, targeted responses, IAD appeals, and Judicial Review. Serving GTA and Canada.","areaServed":"Canada","url":"https://cwmigrationgroup.com/refusals"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I reapply after a Canadian visa refusal?","acceptedAnswer":{"@type":"Answer","text":"Yes - there is no mandatory waiting period. However, reapplying with the same materials will likely result in another refusal. We analyze the exact reasons via GCMS notes and builds a stronger application."}},{"@type":"Question","name":"What is a Procedural Fairness Letter?","acceptedAnswer":{"@type":"Answer","text":"A PFL is sent by IRCC when an officer has concerns and wants to give you a chance to respond before deciding. You typically have 15-30 days. Missing this deadline can result in automatic refusal."}},{"@type":"Question","name":"What are GCMS notes?","acceptedAnswer":{"@type":"Answer","text":"GCMS notes are the immigration officer's internal notes revealing the specific reasons for concern not stated in the refusal letter. We request these to build targeted responses."}},{"@type":"Question","name":"Can a refused Canadian visa be appealed?","acceptedAnswer":{"@type":"Answer","text":"Spousal and family sponsorship refusals can be appealed to the IAD. Most other refusals cannot be formally appealed but can be reapplied. Judicial Review is available in some cases."}},{"@type":"Question","name":"How quickly can Commonwealth Migration respond to an urgent PFL?","acceptedAnswer":{"@type":"Answer","text":"Our team begins work within 24 hours of receiving your documents and can turn around a complete PFL response in 5-7 business days. Call or WhatsApp immediately for urgent cases."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Refusals & Appeals","item":"https://cwmigrationgroup.com/refusals"}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"Canadian Visa Refusal & PFL Response Service","description":"Licensed RCIC specialists for Canadian visa refusals and PFL responses. GCMS analysis, targeted responses, IAD appeals, and Judicial Review. Serving GTA and Canada.","areaServed":"Canada","url":"https://commonwealthmigration.ca/refusals"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I reapply after a Canadian visa refusal?","acceptedAnswer":{"@type":"Answer","text":"Yes - there is no mandatory waiting period. However, reapplying with the same materials will likely result in another refusal. We analyze the exact reasons via GCMS notes and builds a stronger application."}},{"@type":"Question","name":"What is a Procedural Fairness Letter?","acceptedAnswer":{"@type":"Answer","text":"A PFL is sent by IRCC when an officer has concerns and wants to give you a chance to respond before deciding. You typically have 15-30 days. Missing this deadline can result in automatic refusal."}},{"@type":"Question","name":"What are GCMS notes?","acceptedAnswer":{"@type":"Answer","text":"GCMS notes are the immigration officer's internal notes revealing the specific reasons for concern not stated in the refusal letter. We request these to build targeted responses."}},{"@type":"Question","name":"Can a refused Canadian visa be appealed?","acceptedAnswer":{"@type":"Answer","text":"Spousal and family sponsorship refusals can be appealed to the IAD. Most other refusals cannot be formally appealed but can be reapplied. Judicial Review is available in some cases."}},{"@type":"Question","name":"How quickly can Commonwealth Migration respond to an urgent PFL?","acceptedAnswer":{"@type":"Answer","text":"Our team begins work within 24 hours of receiving your documents and can turn around a complete PFL response in 5-7 business days. Call or WhatsApp immediately for urgent cases."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Refusals & Appeals","item":"https://commonwealthmigration.ca/refusals"}]}]}
 ```
 
 ```json
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cwmigrationgroup.com"},{"@type":"ListItem","position":2,"name":"Refusals & Appeals"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthmigration.ca"},{"@type":"ListItem","position":2,"name":"Refusals & Appeals"}]}
 ```

@@ -8,8 +8,6 @@ import ReferenceHomepage from "@/components/home/ReferenceHomepage";
 import ReferenceServicePage from "@/components/home/ReferenceServicePage";
 
 const SITE_HOSTS = new Set([
-  "cwmigrationgroup.com",
-  "www.cwmigrationgroup.com",
   "commonwealthmigration.ca",
   "www.commonwealthmigration.ca",
 ]);
