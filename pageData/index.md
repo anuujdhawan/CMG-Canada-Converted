@@ -17,7 +17,7 @@
 
 ## Heading Outline
 
-- # Immigration Consultant Brampton & Canada-wide Guidance
+- # Immigration Consultant In Brampton & Canada-wide Guidance
 - ## Start with a Canadian immigration plan in Brampton
 - ## What a careful review should cover
 - ## Use official information as the final check
@@ -30,7 +30,7 @@
 
 ## Hero Section
 
-# Immigration Consultant Brampton & Canada-wide Guidance
+# Immigration Consultant Brampton And Canada-wide Guidance
 
 Looking for an immigration consultant in Brampton? Immigration decisions get easier when the program, evidence, deadline and next step are visible in one plan.
 

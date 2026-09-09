@@ -1,10 +1,11 @@
 /**
- * Central site/brand configuration — powered by the SINGLE `.env` file.
+ * Central site/brand configuration — powered by the SINGLE `.env` file where
+ * values are intentionally deploy-configurable.
  *
- * Every value a client may want to change (brand name, contact details,
- * CTA links, logo paths, legal routes, theme colors) lives in `.env` and is
- * read here with sensible Commonwealth Migration Canada defaults. Edit `.env`
- * and rebuild to rebrand or re-theme the whole site — nothing else changes.
+ * Values a client may want to change (brand name, contact details, CTA links,
+ * logo paths, legal routes, theme colors) live in `.env` and are read here
+ * with sensible Commonwealth Migration Canada defaults. Regulatory identifiers
+ * that must not be overridden at deploy time are kept hardcoded below.
  */
 
 // Next.js can only inline public environment variables in Client Components
@@ -33,7 +34,6 @@ const publicEnv = {
   NEXT_PUBLIC_SISTER_COMPANY_URL: process.env.NEXT_PUBLIC_SISTER_COMPANY_URL,
   NEXT_PUBLIC_HOURS: process.env.NEXT_PUBLIC_HOURS,
   NEXT_PUBLIC_TIMEZONE: process.env.NEXT_PUBLIC_TIMEZONE,
-  NEXT_PUBLIC_RCIC_NUMBER: process.env.NEXT_PUBLIC_RCIC_NUMBER,
   NEXT_PUBLIC_RCIC_REGULATOR: process.env.NEXT_PUBLIC_RCIC_REGULATOR,
   NEXT_PUBLIC_LOGO_LARGE: process.env.NEXT_PUBLIC_LOGO_LARGE,
   NEXT_PUBLIC_LOGO_WHITE: process.env.NEXT_PUBLIC_LOGO_WHITE,
@@ -136,7 +136,7 @@ export const site = {
   timezone: env("NEXT_PUBLIC_TIMEZONE", "Eastern Time (ET)"),
 
   rcic: {
-    number: env("NEXT_PUBLIC_RCIC_NUMBER", "R705959"),
+    number: "R711592",
     regulator: env("NEXT_PUBLIC_RCIC_REGULATOR", "College of Immigration and Citizenship Consultants (CICC)"),
   },
 
