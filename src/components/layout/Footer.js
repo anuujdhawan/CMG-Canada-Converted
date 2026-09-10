@@ -162,19 +162,21 @@ export default function Footer() {
                   </span>
                   <span className="site-footer__office-address grid gap-[.1rem] pl-[2.2rem]">{site.sisterConcern.address}</span>
                 </a>
+                <div className="site-footer__office site-footer__contact-card grid min-h-[8rem] items-center gap-[.2rem] rounded-[.8rem] border border-l-[3px] border-[var(--brand-border)] border-l-[var(--brand-primary)] bg-[color-mix(in_srgb,#fff_72%,var(--brand-surface))] px-3 py-[.7rem] text-[var(--brand-muted)] transition-[border-color,background,transform] duration-[180ms] ease-in-out hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--brand-primary)_32%,var(--brand-border))] hover:bg-[#ffffff]">
+                  <a href={site.phoneHref} className="site-footer__contact-row flex items-center gap-[.6rem] text-[var(--brand-muted)] text-[.78rem] leading-[1.45] no-underline transition-colors duration-[180ms] ease-in-out hover:text-[var(--brand-primary-dark)]">
+                    <span className="site-footer__contact-icon inline-flex size-[1.65rem] shrink-0 items-center justify-center rounded-[.55rem] border border-[var(--brand-border)] bg-white text-[var(--brand-primary)]">
+                      <Phone size={13} aria-hidden />
+                    </span>
+                    <span>{site.phone}</span>
+                  </a>
+                  <a href={site.emailHref} className="site-footer__contact-row flex items-center gap-[.6rem] text-[var(--brand-muted)] text-[.78rem] leading-[1.45] no-underline transition-colors duration-[180ms] ease-in-out hover:text-[var(--brand-primary-dark)]">
+                    <span className="site-footer__contact-icon inline-flex size-[1.65rem] shrink-0 items-center justify-center rounded-[.55rem] border border-[var(--brand-border)] bg-white text-[var(--brand-primary)]">
+                      <Mail size={13} aria-hidden />
+                    </span>
+                    <span>{site.email}</span>
+                  </a>
+                </div>
               </div>
-              <a href={site.phoneHref} className="site-footer__contact-row flex items-start gap-[.6rem] text-[var(--brand-muted)] text-[.78rem] leading-[1.45] no-underline transition-colors duration-[180ms] ease-in-out hover:text-[var(--brand-primary-dark)]">
-                <span className="site-footer__contact-icon inline-flex size-[1.65rem] shrink-0 items-center justify-center mt-[.02rem] rounded-[.55rem] border border-[var(--brand-border)] bg-white text-[var(--brand-primary)]">
-                  <Phone size={13} aria-hidden />
-                </span>
-                <span>{site.phone}</span>
-              </a>
-              <a href={site.emailHref} className="site-footer__contact-row flex items-start gap-[.6rem] text-[var(--brand-muted)] text-[.78rem] leading-[1.45] no-underline transition-colors duration-[180ms] ease-in-out hover:text-[var(--brand-primary-dark)]">
-                <span className="site-footer__contact-icon inline-flex size-[1.65rem] shrink-0 items-center justify-center mt-[.02rem] rounded-[.55rem] border border-[var(--brand-border)] bg-white text-[var(--brand-primary)]">
-                  <Mail size={13} aria-hidden />
-                </span>
-                <span>{site.email}</span>
-              </a>
             </div>
 
             {/* Social + CTA */}
