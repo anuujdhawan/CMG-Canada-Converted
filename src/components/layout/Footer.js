@@ -81,9 +81,9 @@ export default function Footer() {
 
   return (
     <footer className="site-footer relative isolate overflow-hidden border-t border-[var(--brand-border)] bg-[linear-gradient(180deg,#fff_0%,var(--brand-surface)_38%,var(--brand-surface-alt)_100%)] text-[var(--brand-text)]">
-      {/* Top accent — uses .env primary gradient */}
+      {/* Top accent — uses the configured primary gradient */}
       <div className="site-footer__accent absolute inset-x-0 top-0 z-[3] h-1 bg-[linear-gradient(90deg,var(--brand-primary),var(--brand-primary-light),var(--brand-gold))]" aria-hidden />
-      {/* Ambient decor — all colors from .env via CSS variables */}
+      {/* Ambient decor — all colors from the active CSS variables */}
       <div className="site-footer__bg absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden>
         <div className="site-footer__grid-pattern absolute inset-0 opacity-[.045] [background-image:linear-gradient(var(--brand-primary)_1px,transparent_1px),linear-gradient(90deg,var(--brand-primary)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:linear-gradient(180deg,black_0%,transparent_78%)]" />
         <div className="site-footer__orb site-footer__orb--a absolute top-[-6rem] right-[-4rem] size-[30rem] rounded-full bg-[radial-gradient(circle,color-mix(in_srgb,var(--brand-primary)_7%,transparent)_0%,transparent_68%)] blur-[18px] pointer-events-none" />
@@ -163,11 +163,11 @@ export default function Footer() {
                   <span className="site-footer__office-address grid gap-[.1rem] pl-[2.2rem]">{site.sisterConcern.address}</span>
                 </a>
               </div>
-              <a href="tel:14168569394" className="site-footer__contact-row flex items-start gap-[.6rem] text-[var(--brand-muted)] text-[.78rem] leading-[1.45] no-underline transition-colors duration-[180ms] ease-in-out hover:text-[var(--brand-primary-dark)]">
+              <a href={site.phoneHref} className="site-footer__contact-row flex items-start gap-[.6rem] text-[var(--brand-muted)] text-[.78rem] leading-[1.45] no-underline transition-colors duration-[180ms] ease-in-out hover:text-[var(--brand-primary-dark)]">
                 <span className="site-footer__contact-icon inline-flex size-[1.65rem] shrink-0 items-center justify-center mt-[.02rem] rounded-[.55rem] border border-[var(--brand-border)] bg-white text-[var(--brand-primary)]">
                   <Phone size={13} aria-hidden />
                 </span>
-                <span>+14168569394</span>
+                <span>{site.phone}</span>
               </a>
               <a href={site.emailHref} className="site-footer__contact-row flex items-start gap-[.6rem] text-[var(--brand-muted)] text-[.78rem] leading-[1.45] no-underline transition-colors duration-[180ms] ease-in-out hover:text-[var(--brand-primary-dark)]">
                 <span className="site-footer__contact-icon inline-flex size-[1.65rem] shrink-0 items-center justify-center mt-[.02rem] rounded-[.55rem] border border-[var(--brand-border)] bg-white text-[var(--brand-primary)]">
