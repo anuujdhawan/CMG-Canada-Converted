@@ -9,22 +9,22 @@ import { cn } from "@/lib/utils";
 const VIDEO_CARDS = [
   {
     id: "study-milestone",
-    src: "/images/videoCarousel/ChatGPT Image Aug 22, 2026, 03_22_19 PM.png",
+    src: "/images/videoCarousel/success-story-01.png",
     alt: "CMG client celebrating an immigration milestone with the Commonwealth Migration team",
   },
   {
     id: "family-milestone",
-    src: "/images/videoCarousel/ChatGPT Image Aug 22, 2026, 03_42_56 PM (1).png",
+    src: "/images/videoCarousel/success-story-02.png",
     alt: "CMG clients celebrating a successful immigration milestone with their family",
   },
   {
     id: "visa-milestone",
-    src: "/images/videoCarousel/ChatGPT Image Aug 22, 2026, 03_42_57 PM (2).png",
+    src: "/images/videoCarousel/success-story-03.png",
     alt: "CMG client holding travel documents after an immigration milestone",
   },
   {
     id: "pathway-milestone",
-    src: "/images/videoCarousel/ChatGPT Image Aug 22, 2026, 03_42_57 PM (3).png",
+    src: "/images/videoCarousel/success-story-04.png",
     alt: "CMG client celebrating a pathway milestone with the Commonwealth Migration team",
   },
 ];
