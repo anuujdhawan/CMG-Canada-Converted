@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { currentPagePath } from "@/config/pageRoutes";
 import { site } from "@/config/site";
 import { HERO_SLIDES } from "@/lib/heroSlides";
-import { getInlineFaqs, getPageFaqs } from "@/lib/faqs";
+import { getPageFaqs } from "@/lib/faqs";
 import { Block, parseBlocks, RelatedPagesList, rebrand } from "@/components/templates/MarkdownBlocks";
 import HeroCarousel from "./HeroCarousel";
 import HeroProofCardCarousel from "./HeroProofCardCarousel";
@@ -14,6 +14,8 @@ import ServiceContentImageFrame, { getServiceContentImages } from "./ServiceCont
 import TemplateMotion from "./TemplateMotion";
 import LiveSuccessVideos from "./LiveSuccessVideos";
 import FaqSection from "@/components/sections/FaqSection";
+import { getSeoContentBlocks } from "@/lib/seoContent";
+import { getFrameResearchParagraph, getFrameSupportContent } from "@/lib/seoBalancedContent";
 
 const href = (path) => currentPagePath(path);
 
@@ -59,7 +61,38 @@ function groupContentBlocks(blocks) {
   return { leading, sections };
 }
 
-function renderContentBlocks(blocks, prefix) {
+function extractRelatedPages(blocks) {
+  const contentBlocks = [];
+  const relatedBlocks = [];
+
+  for (let index = 0; index < blocks.length; index += 1) {
+    const block = blocks[index];
+    const nextBlock = blocks[index + 1];
+    const isRelatedHeading = block.type === "heading"
+      && block.level === 2
+      && /^related pages$/i.test(block.text);
+
+    if (isRelatedHeading && nextBlock?.type === "list") {
+      relatedBlocks.push(block, nextBlock);
+      index += 1;
+
+      // Keep the authored call to action with the relocated Related Pages
+      // section when it immediately follows the links.
+      const callToAction = blocks[index + 1];
+      if (callToAction?.type === "paragraph" && /^CTA\s*:/i.test(callToAction.text)) {
+        relatedBlocks.push(callToAction);
+        index += 1;
+      }
+      continue;
+    }
+
+    contentBlocks.push(block);
+  }
+
+  return { contentBlocks, relatedBlocks };
+}
+
+function renderContentBlocks(blocks, prefix, page, tableCounter) {
   let relatedPagesHeading = false;
   return blocks.map((block, index) => {
     if (block.type === "heading") {
@@ -70,7 +103,8 @@ function renderContentBlocks(blocks, prefix) {
     } else {
       relatedPagesHeading = false;
     }
-    return <Block key={`${prefix}-${block.type}-${index}`} block={block} />;
+    const tableIndex = block.type === "table" ? tableCounter.value++ : 0;
+    return <Block key={`${prefix}-${block.type}-${index}`} block={block} page={page} tableIndex={tableIndex} />;
   });
 }
 
@@ -78,25 +112,77 @@ function isFaqSection(section) {
   return section.some((block) => block.type === "heading" && block.level === 2 && /faq|questions people ask|frequently asked/i.test(block.text));
 }
 
+function sectionHeading(section) {
+  return section.find((block) => block.type === "heading" && block.level === 2)?.text || "";
+}
+
+function sectionHasTable(section) {
+  return section.some((block) => block.type === "table");
+}
+
+function sectionHasParagraph(section) {
+  return section.some((block) => block.type === "paragraph" && block.text?.trim());
+}
+
+function countSectionParagraphWords(section) {
+  return section
+    .filter((block) => block.type === "paragraph")
+    .reduce((total, block) => total + String(block.text || "").replace(/[^A-Za-z0-9]+/g, " ").trim().split(/\s+/).filter(Boolean).length, 0);
+}
+
+function findFeaturedParagraphSection(sections) {
+  const answerSection = sections.findIndex((section) => /^what is\b/i.test(sectionHeading(section)) && sectionHasParagraph(section) && !sectionHasTable(section));
+  if (answerSection >= 0) return answerSection;
+  return sections.findIndex((section) => sectionHasParagraph(section) && !sectionHasTable(section));
+}
+
+function findFeaturedTableSection(sections, paragraphSectionIndex) {
+  const candidates = sections
+    .map((section, index) => ({ section, index }))
+    .filter(({ section, index }) => index !== paragraphSectionIndex && sectionHasTable(section));
+  if (candidates.length === 0) return -1;
+
+  // Keep the page's primary route data with the featured table row while
+  // leaving any earlier overview tables in their original full-width order.
+  const beforeParagraph = candidates.filter(({ index }) => index < paragraphSectionIndex);
+  return (beforeParagraph.at(-1) || candidates[0]).index;
+}
+
+function addFrameResearchCopy(section, page) {
+  if (countSectionParagraphWords(section) >= 140) return section;
+  return [...section, { type: "paragraph", text: getFrameResearchParagraph(page) }];
+}
+
 function ServiceFaqSection({ faqs, isToolPage }) {
   return <FaqSection faqs={faqs} description={isToolPage ? "Open a question to understand what the tool can show, what it cannot decide and what to check next." : "Get a concise answer about this pathway and what to verify before you take the next step."} className={isToolPage ? "tool-faq-section" : "service-faq-section"} />;
 }
 
 export default function ReferenceServicePage({ page, children, interactivePosition = "bottom", interactiveHeading }) {
-  const blocks = page.contentBlocks || parseBlocks(page.content || "");
+  // Keep all authored blocks in their original order, then append the
+  // topic-aware search section. Nothing from the supplied page record is
+  // replaced or removed.
+  const blocks = [...(page.contentBlocks || parseBlocks(page.content || "")), ...getSeoContentBlocks(page)];
   const isToolPage = page.path.startsWith("/tools/") || page.path === "/assessment/free-canada-immigration-assessment";
   const isAboutOverviewPage = page.path === "/about/about-commonwealth-migration";
   const lead = getLead(page, blocks);
   const title = rebrand(page.h1);
-  const { leading, sections: allSections } = groupContentBlocks(blocks);
-  const sections = isToolPage ? allSections.filter((section) => !isFaqSection(section)) : allSections;
+  const { contentBlocks, relatedBlocks } = extractRelatedPages(blocks);
+  const { leading, sections: allSections } = groupContentBlocks(contentBlocks);
+  // FAQ content belongs in the shared styled FAQ section below the guide.
+  // Keeping authored FAQ blocks in the reading flow creates a second FAQ area
+  // and prevents the attached section from showing the page's real answers.
+  const sections = allSections.filter((section) => !isFaqSection(section));
   const pageFaqs = getPageFaqs(page);
-  const inlineFaqKeys = new Set((isToolPage ? [] : getInlineFaqs(page)).map((faq) => faq.question.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim()));
-  const supplementalFaqs = pageFaqs.filter((faq) => !inlineFaqKeys.has(faq.question.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim()));
   const headings = sections.flat().filter((block) => block.type === "heading" && block.level >= 2).slice(0, 5);
   const contentImages = getServiceContentImages(page);
-  const firstImageSection = sections.length > 1 ? 1 : 0;
-  const secondImageSection = sections.length > 3 ? 3 : Math.min(2, Math.max(sections.length - 1, 0));
+  const paragraphImageSection = findFeaturedParagraphSection(sections);
+  const tableImageSection = findFeaturedTableSection(sections, paragraphImageSection);
+  const featuredStart = paragraphImageSection >= 0 && tableImageSection >= 0
+    ? Math.min(paragraphImageSection, tableImageSection)
+    : paragraphImageSection >= 0
+      ? paragraphImageSection
+      : tableImageSection;
+  const tableCounter = { value: 0 };
 
   const interactiveSection = children && (
     <section className={cn("section relative z-[1] bg-[var(--surface-alt)] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16 alt service-interactive-section", interactivePosition === "top" && "service-interactive-section--top !pt-14 !pb-[4.5rem] max-[640px]:!pt-10 max-[640px]:!pb-12")}>
@@ -152,7 +238,7 @@ export default function ReferenceServicePage({ page, children, interactivePositi
 
       <section className="section relative z-[1] bg-[var(--surface-alt)] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16 alt">
         <div className="section-inner mx-auto w-[var(--container)] service-route-layout grid grid-cols-[.82fr_1.18fr] items-center gap-[46px] max-[880px]:grid-cols-1 max-[880px]:gap-[35px]">
-          <div className="service-route-copy reveal"><p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">What this service covers</p><h2 className="max-w-[590px]">Read the detail, then choose the next step</h2><p className="!max-w-[520px] !m-[18px_0_0] !text-[var(--muted)] !text-[15px] !leading-[1.8]">Use the guide below to understand the route before you book. Your existing page content remains the source of truth; this surface gives it the same visual hierarchy as the reference homepage.</p><TemplateLink path={site.ctas.primary.href} className="btn btn-primary !mt-[25px]">Talk through your file <ArrowUpRight width={18} height={18} aria-hidden="true" /></TemplateLink></div>
+          <div className="service-route-copy reveal"><p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">What this service covers</p><h2 className="max-w-[590px]">Map the requirements to your next move</h2><p className="!max-w-[520px] !m-[18px_0_0] !text-[var(--muted)] !text-[15px] !leading-[1.8]">Use the section index to move from the high-level route into the requirements, evidence and decisions that shape your file before you book.</p><TemplateLink path={site.ctas.primary.href} className="btn btn-primary !mt-[25px]">Talk through your file <ArrowUpRight width={18} height={18} aria-hidden="true" /></TemplateLink></div>
           <ol className="guide-list service-route-list block m-0 p-0 list-none border-t border-[var(--border)]">{headings.map((heading, index) => <li className="reveal grid grid-cols-[46px_1fr_24px] items-center gap-4 border-b border-[var(--border)] py-[18px]" key={`${heading.text}-${index}`} style={{ '--delay': `${index * 50}ms` }}><span className="text-[var(--primary)] text-[11px] font-extrabold leading-none">0{index + 1}</span><div><strong className="!text-[var(--ink)] !text-[15px] !font-bold !leading-normal">{rebrand(heading.text)}</strong><p className="!m-[3px_0_0] !text-[var(--muted)] !text-[13px] !leading-[1.65]">Open this section for the practical detail, evidence and requirements that shape the pathway.</p></div><ArrowUpRight className="text-[var(--primary)]" width={18} height={18} aria-hidden="true" /></li>)}</ol>
         </div>
       </section>
@@ -161,24 +247,41 @@ export default function ReferenceServicePage({ page, children, interactivePositi
         <div className="section-inner mx-auto w-[var(--container)] service-reading-shell max-w-[1020px]">
           <ServiceSectionHeading eyebrow="Your service guide" title="The details that move the file forward" lead="Review the complete guide below, then use the consultation path when your situation needs a tailored strategy." />
           <article className="service-reading max-w-[900px] mx-auto border-t border-[var(--border)] pt-[13px] reveal in">
-            {renderContentBlocks(leading, "leading")}
+            {renderContentBlocks(leading, "leading", page, tableCounter)}
             {sections.map((section, index) => {
-              if (index === firstImageSection) {
-                return <ServiceContentImageFrame key={`image-frame-${index}`} image={contentImages[0]} side="left">{renderContentBlocks(section, `frame-left-${index}`)}</ServiceContentImageFrame>;
+              if (index === featuredStart && paragraphImageSection >= 0 && tableImageSection >= 0) {
+                return (
+                  <div className="service-content-featured-stack" key={`featured-stack-${index}`}>
+                    <ServiceContentImageFrame image={contentImages[0]} side="right">
+                      {renderContentBlocks(addFrameResearchCopy(sections[paragraphImageSection], page), "frame-copy", page, tableCounter)}
+                    </ServiceContentImageFrame>
+                    <ServiceContentImageFrame image={contentImages[1]} side="left" supportingContent={getFrameSupportContent(page)}>
+                      {renderContentBlocks(sections[tableImageSection], "frame-table", page, tableCounter)}
+                    </ServiceContentImageFrame>
+                  </div>
+                );
               }
-              if (index === secondImageSection && secondImageSection !== firstImageSection) {
-                return <ServiceContentImageFrame key={`image-frame-${index}`} image={contentImages[1]} side="right">{renderContentBlocks(section, `frame-right-${index}`)}</ServiceContentImageFrame>;
-              }
-              return <div className="service-content-full-width w-full" key={`content-section-${index}`}>{renderContentBlocks(section, `full-${index}`)}</div>;
+              if (index === paragraphImageSection || index === tableImageSection) return null;
+              return <div className="service-content-full-width w-full" key={`content-section-${index}`}>{renderContentBlocks(section, `full-${index}`, page, tableCounter)}</div>;
             })}
-            {secondImageSection === firstImageSection && <ServiceContentImageFrame image={contentImages[1]} side="right"><p>When the route needs a second perspective, a focused review helps connect the facts, evidence and next decision.</p></ServiceContentImageFrame>}
+            {paragraphImageSection < 0 && tableImageSection < 0 && <ServiceContentImageFrame image={contentImages[1]} side="left"><p>When the route needs a second perspective, a focused review helps connect the facts, evidence and the next decision.</p></ServiceContentImageFrame>}
           </article>
         </div>
       </section>
 
       {isAboutOverviewPage && <ConsultantProfileSection id="vishal-arora-about" />}
 
-      {pageFaqs.length > 0 && <ServiceFaqSection faqs={supplementalFaqs} isToolPage={isToolPage} />}
+      {relatedBlocks.length > 0 && (
+        <section className="section relative z-[1] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16 service-related-section">
+          <div className="section-inner mx-auto w-[var(--container)] service-related-shell max-w-[1020px]">
+            <article className="service-reading max-w-[900px] mx-auto">
+              {renderContentBlocks(relatedBlocks, "related", page, tableCounter)}
+            </article>
+          </div>
+        </section>
+      )}
+
+      {pageFaqs.length > 0 && <ServiceFaqSection faqs={pageFaqs} isToolPage={isToolPage} />}
 
       <LiveSuccessVideos />
 

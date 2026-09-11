@@ -54,7 +54,7 @@ export default function PageIndexGrid({ pathname }) {
               {base === "/blog" ? "Latest articles" : isCities ? "Serving cities across Canada" : "Explore"}
             </p>
             <h2>
-              {base === "/blog" ? "Read the guides, then decide" : `${segmentLabel(base.split("/").pop())} guides`}
+              {base === "/blog" ? "Explore the guides before you decide" : `${segmentLabel(base.split("/").pop())} guides`}
             </h2>
           </div>
           <Link href={base} className="reference-index-grid__view-all text-[var(--template-ink)] mt-6 inline-flex items-center gap-[0.55rem] text-[0.82rem] font-extrabold no-underline transition-[color,transform] duration-[180ms] ease-[ease] hover:text-[var(--template-primary)] hover:translate-x-[3px] focus-visible:text-[var(--template-primary)] focus-visible:translate-x-[3px]">

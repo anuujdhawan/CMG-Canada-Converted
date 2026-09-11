@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * Single-source tool UI kit — every calculator/tool page MUST import from here.
- * All colors resolve through .env-driven active-theme CSS variables:
+ * All colors resolve through the active-theme CSS variables:
  *   --template-*  (the active dark/light template palette)
  *   --brand-*     (canonical brand palette)
  * Component visuals switch automatically via html[data-theme="dark"|"light"].

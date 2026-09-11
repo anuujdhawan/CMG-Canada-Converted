@@ -163,7 +163,7 @@ function getHeroContent(page) {
   };
 }
 
-/* ContentPage — unified new theme (no maple leaf, .env-driven dark/light) */
+/* ContentPage — unified new theme (no maple leaf, configured dark/light) */
 export default function ContentPage({ page, children }) {
   if (page.path === "/") {
     return (

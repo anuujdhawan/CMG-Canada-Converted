@@ -1,89 +1,84 @@
 /**
- * Central theme configuration — powered by the SINGLE `.env` file.
+ * Central theme configuration.
  *
- * Every brand color is read from `NEXT_PUBLIC_THEME_*` (see the "Theme"
- * section of `.env`), so a client can recolor the whole site by editing
- * `.env` and rebuilding. Fallbacks below match the defaults in
- * `src/styles/globals.css`.
- *
- * The exported `themeCssVars` map is injected as inline CSS variables on
- * the <html> element by `src/app/layout.js`, overriding the `:root`
- * defaults in globals.css — every Tailwind utility (bg-primary,
- * text-accent, border-line, …) resolves through those variables.
+ * These palette values are public design tokens, so they are hardcoded here
+ * rather than loaded from environment variables.
  */
-const env = (key, fallback = "") => process.env[key] || fallback;
 
 // Typography note: Manrope is the single site-wide font. It is hardcoded once
 // on <body> in src/app/layout.js / src/styles/globals.css — do not add
 // per-component font-family rules; everything inherits from <body>.
 
 const colors = {
-  primary: env("NEXT_PUBLIC_THEME_PRIMARY", "#D80621"),
-  primaryDark: env("NEXT_PUBLIC_THEME_PRIMARY_DARK", "#B3122A"),
-  primaryLight: env("NEXT_PUBLIC_THEME_PRIMARY_LIGHT", "#EF5A6A"),
-  secondary: env("NEXT_PUBLIC_THEME_SECONDARY", "#C8102E"),
-  accent: env("NEXT_PUBLIC_THEME_ACCENT", "#D80621"),
-  accentDark: env("NEXT_PUBLIC_THEME_ACCENT_DARK", "#B3122A"),
-  accentSoft: env("NEXT_PUBLIC_THEME_ACCENT_SOFT", "#FFF1F2"),
-  navy: env("NEXT_PUBLIC_THEME_NAVY", "#B21A2E"),
-  navyDark: env("NEXT_PUBLIC_THEME_NAVY_DARK", "#A51A2A"),
-  surface: env("NEXT_PUBLIC_THEME_SURFACE", "#FFFDFC"),
-  surfaceAlt: env("NEXT_PUBLIC_THEME_SURFACE_ALT", "#FFF8F8"),
-  text: env("NEXT_PUBLIC_THEME_TEXT", "#381116"),
-  muted: env("NEXT_PUBLIC_THEME_MUTED", "#6F4A50"),
-  border: env("NEXT_PUBLIC_THEME_BORDER", "#EBC5CA"),
-  gold: env("NEXT_PUBLIC_THEME_GOLD", "#B55B53"),
-  success: env("NEXT_PUBLIC_THEME_SUCCESS", "#2E8B57"),
-  error: env("NEXT_PUBLIC_THEME_ERROR", "#B3122A"),
-  logoBg: env("NEXT_PUBLIC_THEME_LOGO_BG", "#ffffff"),
-  heroPadTop: env("NEXT_PUBLIC_THEME_HERO_PAD_TOP", "7rem"),
+  primary: "#D80621",
+  primaryDark: "#B3122A",
+  primaryLight: "#EF5A6A",
+  secondary: "#C8102E",
+  accent: "#D80621",
+  accentDark: "#B3122A",
+  accentSoft: "#FFF1F2",
+  navy: "#B21A2E",
+  navyDark: "#A51A2A",
+  surface: "#FFFDFC",
+  surfaceAlt: "#FFF8F8",
+  text: "#381116",
+  muted: "#6F4A50",
+  border: "#EBC5CA",
+  gold: "#B55B53",
+  success: "#2E8B57",
+  error: "#B3122A",
+  logoBg: "#ffffff",
+  heroPadTop: "7rem",
 };
 
 const templateColors = {
   dark: {
-    primary: env("NEXT_PUBLIC_TEMPLATE_DARK_PRIMARY", "#f31f3f"),
-    secondary: env("NEXT_PUBLIC_TEMPLATE_DARK_SECONDARY", "#070d16"),
-    accent: env("NEXT_PUBLIC_TEMPLATE_DARK_ACCENT", "#c01847"),
-    bg: env("NEXT_PUBLIC_TEMPLATE_DARK_BG", "#070d16"),
-    surface: env("NEXT_PUBLIC_TEMPLATE_DARK_SURFACE", "#111925"),
-    surfaceAlt: env("NEXT_PUBLIC_TEMPLATE_DARK_SURFACE_ALT", "#0b121d"),
-    ink: env("NEXT_PUBLIC_TEMPLATE_DARK_INK", "#f7f8fb"),
-    muted: env("NEXT_PUBLIC_TEMPLATE_DARK_MUTED", "#aeb8c5"),
-    border: env("NEXT_PUBLIC_TEMPLATE_DARK_BORDER", "rgba(255,255,255,.13)"),
-    onPrimary: env("NEXT_PUBLIC_TEMPLATE_DARK_ON_PRIMARY", "#ffffff"),
-    success: env("NEXT_PUBLIC_TEMPLATE_DARK_SUCCESS", "#2e9d65")},
+    primary: "#f31f3f",
+    secondary: "#070d16",
+    accent: "#c01847",
+    bg: "#070d16",
+    surface: "#111925",
+    surfaceAlt: "#0b121d",
+    ink: "#f7f8fb",
+    muted: "#aeb8c5",
+    border: "rgba(255,255,255,.13)",
+    onPrimary: "#ffffff",
+    success: "#2e9d65",
+  },
   light: {
-    primary: env("NEXT_PUBLIC_TEMPLATE_LIGHT_PRIMARY", "#f31f3f"),
-    secondary: env("NEXT_PUBLIC_TEMPLATE_LIGHT_SECONDARY", "#ffffff"),
-    accent: env("NEXT_PUBLIC_TEMPLATE_LIGHT_ACCENT", "#c01847"),
-    bg: env("NEXT_PUBLIC_TEMPLATE_LIGHT_BG", "#f6f7f9"),
-    surface: env("NEXT_PUBLIC_TEMPLATE_LIGHT_SURFACE", "#ffffff"),
-    surfaceAlt: env("NEXT_PUBLIC_TEMPLATE_LIGHT_SURFACE_ALT", "#eef0f3"),
-    ink: env("NEXT_PUBLIC_TEMPLATE_LIGHT_INK", "#10151d"),
-    muted: env("NEXT_PUBLIC_TEMPLATE_LIGHT_MUTED", "#5d6875"),
-    border: env("NEXT_PUBLIC_TEMPLATE_LIGHT_BORDER", "rgba(7,13,22,.14)"),
-    onPrimary: env("NEXT_PUBLIC_TEMPLATE_LIGHT_ON_PRIMARY", "#ffffff"),
-    success: env("NEXT_PUBLIC_TEMPLATE_LIGHT_SUCCESS", "#237a4b")}};
+    primary: "#f31f3f",
+    secondary: "#ffffff",
+    accent: "#c01847",
+    bg: "#f6f7f9",
+    surface: "#ffffff",
+    surfaceAlt: "#eef0f3",
+    ink: "#10151d",
+    muted: "#5d6875",
+    border: "rgba(7,13,22,.14)",
+    onPrimary: "#ffffff",
+    success: "#237a4b",
+  },
+};
 
 const templateButtons = {
   nav: {
-    background: env("NEXT_PUBLIC_TEMPLATE_NAV_CTA", "#ff2746"),
-    text: env("NEXT_PUBLIC_TEMPLATE_NAV_CTA_TEXT", "#ffffff"),
-    hoverBackground: env("NEXT_PUBLIC_TEMPLATE_NAV_CTA_HOVER", "#ffffff"),
-    hoverText: env("NEXT_PUBLIC_TEMPLATE_NAV_CTA_HOVER_TEXT", "#a20b28"),
+    background: "#ff2746",
+    text: "#ffffff",
+    hoverBackground: "#ffffff",
+    hoverText: "#a20b28",
   },
   hero: {
     dark: {
-      background: env("NEXT_PUBLIC_TEMPLATE_HERO_CTA_DARK", "#050912"),
-      text: env("NEXT_PUBLIC_TEMPLATE_HERO_CTA_DARK_TEXT", "#ffffff"),
-      hoverBackground: env("NEXT_PUBLIC_TEMPLATE_HERO_CTA_DARK_HOVER", "#c91235"),
-      hoverText: env("NEXT_PUBLIC_TEMPLATE_HERO_CTA_DARK_HOVER_TEXT", "#ffffff"),
+      background: "#050912",
+      text: "#ffffff",
+      hoverBackground: "#c91235",
+      hoverText: "#ffffff",
     },
     light: {
-      background: env("NEXT_PUBLIC_TEMPLATE_HERO_CTA_LIGHT", "#c91235"),
-      text: env("NEXT_PUBLIC_TEMPLATE_HERO_CTA_LIGHT_TEXT", "#ffffff"),
-      hoverBackground: env("NEXT_PUBLIC_TEMPLATE_HERO_CTA_LIGHT_HOVER", "#050912"),
-      hoverText: env("NEXT_PUBLIC_TEMPLATE_HERO_CTA_LIGHT_HOVER_TEXT", "#ffffff"),
+      background: "#c91235",
+      text: "#ffffff",
+      hoverBackground: "#050912",
+      hoverText: "#ffffff",
     },
   },
 };
@@ -112,7 +107,7 @@ export const themeCssVars = {
 };
 
 /** Reference-template palette variables. Components select the active set by
- * switching the root data-theme attribute; values remain controlled by .env. */
+ * switching the root data-theme attribute. */
 export const templateThemeCssVars = {
   "--cmg-dark-primary": templateColors.dark.primary,
   "--cmg-dark-secondary": templateColors.dark.secondary,
@@ -136,16 +131,16 @@ export const templateThemeCssVars = {
   "--cmg-light-border": templateColors.light.border,
   "--cmg-light-on-primary": templateColors.light.onPrimary,
   "--cmg-light-success": templateColors.light.success,
-  "--cmg-template-primary-bright": env("NEXT_PUBLIC_TEMPLATE_PRIMARY_BRIGHT", "#ff3b5a"),
-  "--cmg-template-primary-highlight": env("NEXT_PUBLIC_TEMPLATE_PRIMARY_HIGHLIGHT", "#ff6b7f"),
-  "--cmg-template-primary-pale": env("NEXT_PUBLIC_TEMPLATE_PRIMARY_PALE", "#ffd2d8"),
-  "--cmg-template-deep-surface": env("NEXT_PUBLIC_TEMPLATE_DEEP_SURFACE", "#04080f"),
-  "--cmg-template-modal-end": env("NEXT_PUBLIC_TEMPLATE_MODAL_END", "#ff5269"),
-  "--cmg-template-nav-surface": env("NEXT_PUBLIC_TEMPLATE_NAV_SURFACE", "#05070b"),
-  "--cmg-template-nav-ink": env("NEXT_PUBLIC_TEMPLATE_NAV_INK", "#f7f8fb"),
-  "--cmg-template-utility-surface": env("NEXT_PUBLIC_TEMPLATE_UTILITY_SURFACE", "#050912"),
-  "--cmg-template-utility-ink": env("NEXT_PUBLIC_TEMPLATE_UTILITY_INK", "#f7f8fb"),
-  "--cmg-template-star": env("NEXT_PUBLIC_TEMPLATE_STAR", "#f2b94b"),
+  "--cmg-template-primary-bright": "#ff3b5a",
+  "--cmg-template-primary-highlight": "#ff6b7f",
+  "--cmg-template-primary-pale": "#ffd2d8",
+  "--cmg-template-deep-surface": "#04080f",
+  "--cmg-template-modal-end": "#ff5269",
+  "--cmg-template-nav-surface": "#05070b",
+  "--cmg-template-nav-ink": "#f7f8fb",
+  "--cmg-template-utility-surface": "#050912",
+  "--cmg-template-utility-ink": "#f7f8fb",
+  "--cmg-template-star": "#f2b94b",
   "--cmg-template-nav-cta": templateButtons.nav.background,
   "--cmg-template-nav-cta-text": templateButtons.nav.text,
   "--cmg-template-nav-cta-hover": templateButtons.nav.hoverBackground,

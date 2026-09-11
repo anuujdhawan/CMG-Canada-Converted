@@ -26,7 +26,7 @@ npm run lint       # eslint
 | Concern | Location |
 | --- | --- |
 | Brand, contact, CTAs, legal links, metadata defaults | `src/config/site.js` |
-| Colors, radii, shadows, typography | `NEXT_PUBLIC_THEME_*` in `.env` → `src/config/theme.js` → `:root` in `src/styles/globals.css` |
+| Colors, radii, shadows, typography | `src/config/theme.js` → `:root` in `src/styles/globals.css` |
 | Navigation (header, mobile, footer) | `src/config/navigation.js` |
 | Scroll-reveal motion (framer-motion) | `src/lib/motion.js` + `src/components/motion/` |
 | Floating contact bubbles + sticky mobile bar | `src/components/chatbot/GuidedChatbot.js`, `src/components/layout/WhatsAppBubble.js`, `src/components/layout/StickyMobileCTA.js` |
@@ -35,25 +35,24 @@ npm run lint       # eslint
 | FAQs, tools and NOC demo data | `src/lib/faqs.js`, `src/data/tools.js`, `src/data/noc.js` |
 | Metadata builder (domain-agnostic SEO) | `src/lib/seo.js` |
 | Rewritten SEO page content and route map | `pageData/` (validate with `npm run validate:page-data`) |
-| Single environment file | `.env` |
+| Server credentials | `.env` (`STRIPE_SECRET_KEY`, `RESEND_API_KEY`, `CRM_WEB_TO_LEADS_API_KEY`) |
 | Logos / icons / OG image | `public/images/` |
 
 ## Rebranding for a client
 
-1. **`.env`** — set brand name, support email, phone, social links, site URL,
-   integration keys, **and the entire color palette + hero spacing**
-   (`NEXT_PUBLIC_THEME_*`). This is the only env file (`NEXT_PUBLIC_` only for
-   browser-safe values). Edit → rebuild → the whole site recolors.
-2. **`public/images/`** — replace the configured brand assets (`logo-large.png`,
+1. **`src/config/site.js` and `src/config/theme.js`** — update the hardcoded
+   brand, contact, social, route, metadata and palette values, then rebuild.
+2. **`.env`** — set only server credentials (`STRIPE_SECRET_KEY`,
+   `RESEND_API_KEY`, and optionally `CRM_WEB_TO_LEADS_API_KEY`).
+3. **`public/images/`** — replace the configured brand assets (`logo-large.png`,
    `CMG-LOGO.webp`, the footer logo, `icon.png`, `apple-icon.png` and
-   `og-default.png`) while keeping the paths configured in `.env`.
-3. **`src/config/site.js`** — tagline, description, address, hours, CTA labels, legal links.
+   `og-default.png`) while keeping the paths configured in `src/config/site.js`.
 4. **`src/config/navigation.js`** — menu labels, order, enabled/disabled items, URLs.
 5. **`src/data/`** — replace program copy, FAQs, team, blog and guide content.
 6. **`src/config/content.js`** — hero copy, values, process steps, testimonials.
 7. Verify: `npm run lint`, `npm run build`, and check every route returns 200.
 
-The current production domain is configured in `.env` as
+The current production domain is configured in `src/config/site.js` as
 `https://commonwealthmigration.ca`. The rewritten Markdown pages use keyword-led
 routes from `pageData/`; the former scraped paths redirect permanently to those
 new routes.
@@ -61,10 +60,10 @@ new routes.
 ## Demo / placeholder functionality
 
 - **Forms** (contact, consultation, urgent, assessment, newsletter) validate and submit
-  to `/api/forms`; lead forms are handed off server-to-server to the CMG CRM when
-  `CRM_WEB_TO_LEADS_URL` is configured. The guided chatbot uses `/api/chat-leads` and
-  the same CRM mapping. Set `CRM_WEB_TO_LEADS_URL` and the optional
-  `CRM_WEB_TO_LEADS_API_KEY` in the production hosting environment.
+  to `/api/forms`; lead forms are handed off server-to-server to the CMG CRM using the
+  endpoint in `src/config/integrations.js`. The guided chatbot uses `/api/chat-leads`
+  and the same CRM mapping. Set the optional `CRM_WEB_TO_LEADS_API_KEY` in the
+  production hosting environment.
 - **Tools** — CRS calculator, PNP eligibility check, NOC finder, document checklist:
   working front-end logic marked as estimates/demo data. Verify against current
   IRCC/official sources before client launch.

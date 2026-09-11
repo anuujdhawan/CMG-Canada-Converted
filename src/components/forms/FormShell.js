@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * Form shell — single source for every assessment/contact form.
- * Theme-aware: dark/light via html[data-theme] + .env-driven --cmg-* vars.
+ * Theme-aware: dark/light via html[data-theme] + configured --cmg-* vars.
  */
 export function FormShell({ as: Tag = "div", className, bodyClassName, children, ...rest }) {
   return (

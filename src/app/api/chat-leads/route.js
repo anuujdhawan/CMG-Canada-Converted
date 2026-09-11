@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { site } from "@/config/site";
+import { LEAD_EMAIL_SENDER } from "@/config/integrations";
 import { pushLeadToCrm } from "@/lib/crmLead";
 
 export const runtime = "nodejs";
@@ -41,13 +43,12 @@ export async function POST(request) {
     return NextResponse.json({ ok: false, error: "Please provide a valid email address." }, { status: 422 });
   }
 
-  // CHAT_LEAD_EMAIL can override the inbox; otherwise use the official support email.
-  const recipient = clean(process.env.CHAT_LEAD_EMAIL || process.env.NEXT_PUBLIC_SUPPORT_EMAIL, 160);
+  const recipient = site.email;
   const resendApiKey = clean(process.env.RESEND_API_KEY, 240);
-  const sender = clean(process.env.CHAT_LEAD_FROM, 240);
+  const sender = LEAD_EMAIL_SENDER;
 
-  if (!recipient || !resendApiKey || !sender) {
-    console.error("Guided chat lead email is not configured. Set CHAT_LEAD_EMAIL, RESEND_API_KEY and CHAT_LEAD_FROM in .env.");
+  if (!resendApiKey) {
+    console.error("Guided chat lead email is not configured. Set RESEND_API_KEY in .env.");
     return NextResponse.json({ ok: false, error: "Lead delivery is not configured yet." }, { status: 503 });
   }
 

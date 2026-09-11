@@ -6,7 +6,12 @@
  * reaches the browser.
  */
 
-const CRM_ENDPOINT = process.env.CRM_WEB_TO_LEADS_URL?.trim() || "";
+import {
+  CRM_BRANCH,
+  CRM_DESTINATION_COUNTRY,
+  CRM_ENDPOINT,
+} from "@/config/integrations";
+
 const CRM_API_KEY = process.env.CRM_WEB_TO_LEADS_API_KEY?.trim() || "";
 
 function clean(value, maxLength = 500) {
@@ -80,12 +85,12 @@ export function toCrmLead(type, body) {
     fullName: clean(body.fullName, 120),
     email: clean(body.email, 160).toLowerCase(),
     phone: clean(body.phone, 80),
-    Branch: valueOrUndefined(process.env.CRM_BRANCH || "Canada", 80),
+    Branch: valueOrUndefined(CRM_BRANCH, 80),
     ResidentCountry: valueOrUndefined(
-      body.country || body.residentCountry || process.env.CRM_RESIDENT_COUNTRY || "Canada",
+      body.country || body.residentCountry || "Canada",
       120,
     ),
-    DestinationCountry: valueOrUndefined(process.env.CRM_DESTINATION_COUNTRY || "Canada", 120),
+    DestinationCountry: valueOrUndefined(CRM_DESTINATION_COUNTRY, 120),
     ImmigrationType: valueOrUndefined(immigrationType, 1000),
     Education: valueOrUndefined(body.education, 160),
     AgeRange: valueOrUndefined(body.ageRange, 80),

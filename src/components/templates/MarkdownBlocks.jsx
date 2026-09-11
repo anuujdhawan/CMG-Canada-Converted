@@ -5,6 +5,7 @@ import { site } from "@/config/site";
 import { pathForLegacyPath } from "@/lib/sitePages";
 import PathwayCard from "@/components/cards/PathwayCard";
 import ContentHeading from "@/components/ui/ContentHeading";
+import TableSeoIntro from "@/components/sections/TableSeoIntro";
 
 /* ════════════════════════════════════════════════════════════════════
    Shared markdown machinery for approved Markdown content pages:
@@ -438,7 +439,7 @@ export function RelatedPagesList({ items = [], ordered = true }) {
   );
 }
 
-export function Block({ block, dark = false, lead = false }) {
+export function Block({ block, dark = false, lead = false, page, tableIndex = 0 }) {
   switch (block.type) {
     case "heading":
       return (
@@ -498,7 +499,12 @@ export function Block({ block, dark = false, lead = false }) {
         </ul>
       );
     case "table":
-      return renderTable(block.rows);
+      return (
+        <>
+          {page && <TableSeoIntro page={page} block={block} tableIndex={tableIndex} />}
+          {renderTable(block.rows)}
+        </>
+      );
     case "quote":
       return (
         <blockquote

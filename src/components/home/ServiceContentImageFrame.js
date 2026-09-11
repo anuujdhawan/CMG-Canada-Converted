@@ -119,18 +119,41 @@ export function getServiceContentImages(page) {
   return [IMAGE_LIBRARY[pool[firstIndex]], IMAGE_LIBRARY[pool[secondIndex]]];
 }
 
-export default function ServiceContentImageFrame({ image, side = "left", children }) {
+export default function ServiceContentImageFrame({ image, side = "left", children, supportingContent }) {
+  const imageOnRight = side === "right";
+  const figure = (
+    <figure className="service-content-media-frame group relative h-[clamp(350px,31vw,520px)] min-h-[350px] max-[1100px]:h-[clamp(320px,34vw,450px)] max-[1100px]:min-h-[320px] max-[880px]:h-[310px] max-[880px]:min-h-[310px] max-[880px]:rounded-[20px] m-0 flex-none overflow-hidden border border-[var(--border)] rounded-[25px] bg-[var(--surface)] shadow-[var(--shadow-soft)] isolate">
+      <Image src={image.src} alt={image.alt} fill sizes="(max-width: 880px) 100vw, 42vw" className="object-cover transition-[transform,filter] duration-[850ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.06] group-hover:saturate-[1.08]" style={{ objectPosition: image.objectPosition || getImageObjectPosition(image.src) }} />
+      <div className="service-content-media-frame__wash absolute inset-0 z-[1] pointer-events-none bg-[linear-gradient(180deg,transparent_30%,color-mix(in_srgb,var(--cmg-template-deep-surface)_88%,transparent))]" aria-hidden="true" />
+      <figcaption className="absolute z-[2] right-[22px] bottom-5 left-[22px] grid gap-[9px] text-[var(--template-on-primary)]">
+        <span className="text-[var(--primary)] text-[13px] font-extrabold leading-[1.2] tracking-[.13em] uppercase">{image.label}</span>
+        <small className="max-w-[360px] text-[color-mix(in_srgb,var(--template-on-primary)_80%,transparent)] text-[14px] leading-[1.65]">{image.caption}</small>
+      </figcaption>
+    </figure>
+  );
+  const media = supportingContent ? (
+    <div className="service-content-media-column flex h-full min-w-0 flex-col gap-5 self-stretch max-[880px]:h-auto">
+      {figure}
+      <aside className="service-content-media-support flex min-h-0 flex-1 flex-col justify-between gap-7 rounded-[20px] border border-[color-mix(in_srgb,var(--primary)_24%,var(--border))] border-l-[3px] border-l-[var(--primary)] bg-[var(--bg)] p-[24px_26px] max-[620px]:p-5">
+        <div className="grid gap-4">
+          <p className="m-0 text-[var(--primary)] text-[11px] font-extrabold leading-[1.3] tracking-[.16em] uppercase">{supportingContent.eyebrow}</p>
+          <h3 className="m-0 text-[clamp(21px,1.2rem+0.7vw,30px)] font-semibold leading-[1.1] tracking-[-.02em] text-[var(--ink)]">{supportingContent.title}</h3>
+          {supportingContent.paragraphs.map((paragraph, index) => <p className="m-0 text-[var(--muted)] text-[15px] leading-[1.75]" key={`support-paragraph-${index}`}>{paragraph}</p>)}
+        </div>
+        <div className="border-t border-[var(--border)] pt-5">
+          <p className="m-0 mb-3 text-[var(--ink)] text-[12px] font-bold uppercase tracking-[.12em]">Key checks</p>
+          <ul className="m-0 grid gap-2 pl-5 text-[var(--muted)] text-[14px] leading-[1.55]">
+            {supportingContent.checks.map((check) => <li key={check}>{check}</li>)}
+          </ul>
+        </div>
+      </aside>
+    </div>
+  ) : figure;
+  const copy = <div className="service-content-media-copy min-w-0 [&_.content-section-heading:first-child]:!mt-0">{children}</div>;
+
   return (
-    <section className={`service-content-media-band service-content-media-band--${side} grid grid-cols-[1.05fr_.95fr] items-center gap-[42px] my-[62px] mx-[-60px] py-[34px] max-[880px]:grid-cols-1 max-[880px]:gap-7 max-[880px]:my-12 max-[880px]:mx-0 max-[880px]:py-0 max-[620px]:gap-5 max-[620px]:my-10 reveal`}>
-      <figure className="service-content-media-frame group relative min-h-[470px] max-[1100px]:min-h-[390px] max-[880px]:min-h-[310px] max-[880px]:rounded-[20px] m-0 overflow-hidden border border-[var(--border)] rounded-[25px] bg-[var(--surface)] shadow-[var(--shadow-soft)] isolate">
-        <Image src={image.src} alt={image.alt} fill sizes="(max-width: 880px) 100vw, 42vw" className="object-cover transition-[transform,filter] duration-[850ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.06] group-hover:saturate-[1.08]" style={{ objectPosition: image.objectPosition || getImageObjectPosition(image.src) }} />
-        <div className="service-content-media-frame__wash absolute inset-0 z-[1] pointer-events-none bg-[linear-gradient(180deg,transparent_30%,color-mix(in_srgb,var(--cmg-template-deep-surface)_88%,transparent))]" aria-hidden="true" />
-        <figcaption className="absolute z-[2] right-[22px] bottom-5 left-[22px] grid gap-[9px] text-[var(--template-on-primary)]">
-          <span className="text-[var(--primary)] text-[13px] font-extrabold leading-[1.2] tracking-[.13em] uppercase">{image.label}</span>
-          <small className="max-w-[360px] text-[color-mix(in_srgb,var(--template-on-primary)_80%,transparent)] text-[14px] leading-[1.65]">{image.caption}</small>
-        </figcaption>
-      </figure>
-      <div className="service-content-media-copy min-w-0 [&_.content-section-heading:first-child]:!mt-0">{children}</div>
+    <section className={`service-content-media-band service-content-media-band--${side} grid grid-cols-[1.05fr_.95fr] ${supportingContent ? "items-stretch" : "items-start"} gap-[42px] my-[62px] mx-[-60px] py-[34px] max-[880px]:grid-cols-1 max-[880px]:gap-7 max-[880px]:my-12 max-[880px]:mx-0 max-[880px]:py-0 max-[620px]:gap-5 max-[620px]:my-10 reveal`}>
+      {imageOnRight ? <>{copy}{media}</> : <>{media}{copy}</>}
     </section>
   );
 }

@@ -3,8 +3,7 @@ import { site } from "@/config/site";
 /**
  * Centralized, domain-agnostic metadata builder.
  *
- * Canonical/OG URLs are derived from NEXT_PUBLIC_SITE_URL — the prototype
- * ships with an empty URL, so no real domain ever leaks into metadata.
+ * Canonical/OG URLs are derived from the public site configuration.
  */
 
 /** Absolute URL from a path, or "" when no site URL is configured. */

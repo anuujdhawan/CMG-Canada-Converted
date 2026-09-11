@@ -10,6 +10,7 @@ import HeroProofCardCarousel from "@/components/home/HeroProofCardCarousel";
 import TemplateMotion from "@/components/home/TemplateMotion";
 import FaqSection from "@/components/sections/FaqSection";
 import { getPageFaqs } from "@/lib/faqs";
+import SeoGuideSection from "@/components/sections/SeoGuideSection";
 
 function TemplateLink({ children, path, className = "", ...props }) {
   const buttonSurface = className.includes("btn-primary")
@@ -77,6 +78,8 @@ export default function BlogIndexPage({ page }) {
       </section>
 
       <FaqSection faqs={getPageFaqs(page)} />
+
+      <SeoGuideSection page={page} eyebrow="Research that stays useful" title="How to use Canadian immigration guides" />
 
       <section className="cta-section reference-blog-cta !bg-[linear-gradient(120deg,var(--primary),color-mix(in_srgb,var(--primary)_56%,var(--accent)),var(--accent))] py-[72px]">
         <div className="cta-shell flex items-center justify-between max-[880px]:items-start max-[880px]:flex-col w-[var(--container)] gap-10 mx-auto p-0 rounded-none bg-transparent">

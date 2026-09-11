@@ -52,7 +52,7 @@ export default function LiveSuccessVideos() {
         <header className="section-head grid grid-cols-[.72fr_.42fr] items-end gap-[50px] mb-[42px] reveal">
           <div>
             <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">Client success gallery</p>
-            <h2 id="live-success-videos-title" className="max-w-[760px]">Real people. Real milestones. A clearer journey.</h2>
+            <h2 id="live-success-videos-title" className="max-w-[760px]">Pathways that move from planning to progress</h2>
           </div>
           <p className="text-[16px] leading-[1.65]">Explore moments from the Commonwealth Migration community, then visit our YouTube channel for the latest pathway conversations and client stories.</p>
         </header>
