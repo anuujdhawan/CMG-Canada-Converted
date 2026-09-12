@@ -32,7 +32,7 @@ export default function FaqSection({
           <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">
             {eyebrow}
           </p>
-          <h2 id={titleId} className="!max-w-[760px] !text-[40px] !leading-none">{title}</h2>
+          <h2 id={titleId} className="!max-w-[760px] !text-[40px] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-none">{title}</h2>
           <p className="!m-0 !mt-[15px] !max-w-[380px] !text-[var(--muted)] !text-[14px] !leading-[1.65]">{description}</p>
         </div>
         <div className="faq-list border-t border-[var(--border)]">

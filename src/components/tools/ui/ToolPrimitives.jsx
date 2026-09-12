@@ -29,7 +29,7 @@ export function ToolHeader({ icon: Icon, title, subtitle, kicker, action, classN
         </span>
         <div className="tool-header__text">
           {kicker && <p className="tool-header__kicker m-0 text-[var(--template-primary)] text-[0.6875rem] font-extrabold uppercase tracking-[0.12em]">{kicker}</p>}
-          <h2 className="tool-header__title mt-[0.18rem] mb-0 text-[var(--template-ink)] text-[clamp(1.05rem,2vw,1.22rem)] font-extrabold leading-[1.2] tracking-[-0.02em]">{title}</h2>
+          <h2 className="tool-header__title mt-[0.18rem] mb-0 text-[var(--template-ink)] !text-[clamp(1.05rem,2vw,1.22rem)] font-extrabold leading-[1.2] tracking-[-0.02em]">{title}</h2>
           {subtitle && <p className="tool-header__subtitle mt-[0.3rem] mb-0 max-w-[32rem] text-[var(--template-muted)] text-[0.76rem] leading-[1.5]">{subtitle}</p>}
         </div>
       </div>

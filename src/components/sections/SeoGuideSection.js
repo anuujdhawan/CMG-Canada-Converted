@@ -13,7 +13,7 @@ export default function SeoGuideSection({ page, eyebrow = "Useful context", titl
       <div className="mx-auto w-[var(--container)] max-w-[1020px]">
         <header className="mb-10 max-w-[780px]">
           <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--template-primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">{eyebrow}</p>
-          <h2 id="seo-guide-section-title" className="!m-0 !text-[clamp(30px,1.7rem+2vw,46px)] !leading-[1.08] !text-[var(--template-ink)]">{title}</h2>
+          <h2 id="seo-guide-section-title" className="!m-0 !text-[clamp(30px,1.7rem+2vw,46px)] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-[1.08] !text-[var(--template-ink)]">{title}</h2>
         </header>
         <article className="max-w-[900px] border-t border-[var(--template-border)] pt-5">
           {blocks.map((block, index) => <SeoBlock key={`${block.type}-${index}`} block={block} />)}

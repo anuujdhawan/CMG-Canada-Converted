@@ -49,7 +49,7 @@ export default function LiveSuccessVideos() {
   return (
     <section className="section relative z-[1] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16 dark live-success-videos" aria-labelledby="live-success-videos-title">
       <div className="section-inner mx-auto w-[var(--container)]">
-        <header className="section-head grid grid-cols-[.72fr_.42fr] items-end gap-[50px] mb-[42px] reveal">
+        <header className="section-head grid grid-cols-[.72fr_.42fr] max-[880px]:grid-cols-1 items-end gap-[50px] max-[880px]:gap-[17px] mb-[42px] reveal">
           <div>
             <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">Client success gallery</p>
             <h2 id="live-success-videos-title" className="max-w-[760px]">Pathways that move from planning to progress</h2>

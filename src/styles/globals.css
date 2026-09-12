@@ -1921,3 +1921,177 @@ html[data-theme="light"] .cmg-template-service .cta-section a.btn:focus-visible 
     -webkit-text-fill-color: var(--cmg-light-muted, #5d6875) !important;
   }
 }
+
+/* Responsive polish for the shared page system. These rules keep the existing
+   theme and authored content intact while giving tablet and phone layouts a
+   calmer type scale, tighter section rhythm, and safer touch spacing. */
+@media (max-width: 879.98px) {
+  .cmg-template-home .section-head,
+  .cmg-template-service .section-head {
+    margin-bottom: 2rem;
+  }
+
+  .cmg-template-home .section-head > p,
+  .cmg-template-service .section-head > p {
+    font-size: 0.95rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .cmg-template-home .section-head h2,
+  .cmg-template-service .section-head h2,
+  .cmg-template-home .faq-intro h2,
+  .cmg-template-service .faq-intro h2,
+  .cmg-template-home .service-route-copy h2,
+  .cmg-template-service .service-route-copy h2,
+  .cmg-template-home .service-transition-copy h2,
+  .cmg-template-service .service-transition-copy h2,
+  .cmg-template-home .cta-shell h2,
+  .cmg-template-service .cta-shell h2,
+  .cmg-template-home [aria-labelledby="seo-guide-section-title"] h2,
+  .cmg-template-service [aria-labelledby="seo-guide-section-title"] h2 {
+    font-size: clamp(30px, 5.2vw, 40px) !important;
+    line-height: 1.08 !important;
+  }
+
+  .cmg-template-home .eligibility-copy h2,
+  .cmg-template-home .refusal-copy h2,
+  .cmg-template-home .employer-copy h2,
+  .cmg-template-home .service-image-gallery__head h2 {
+    font-size: clamp(30px, 5.2vw, 40px) !important;
+  }
+
+  .cmg-template-home .hero-copy .lead,
+  .cmg-template-service .hero-copy .lead {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .cmg-template-home .hero-actions,
+  .cmg-template-service .hero-actions {
+    margin-top: 1.35rem;
+  }
+
+  .cmg-template-home .service-card,
+  .cmg-template-service .service-card {
+    min-height: 0;
+  }
+
+  .cmg-template-home .service-route-list li,
+  .cmg-template-service .service-route-list li {
+    gap: 0.75rem;
+    padding-block: 1rem;
+  }
+
+  .cmg-template-home .service-route-list li strong,
+  .cmg-template-service .service-route-list li strong {
+    font-size: 0.92rem !important;
+  }
+
+  .cmg-template-home .service-route-list li p,
+  .cmg-template-service .service-route-list li p {
+    font-size: 0.78rem !important;
+  }
+}
+
+@media (max-width: 619.98px) {
+  .cmg-template-home .section-head,
+  .cmg-template-service .section-head {
+    gap: 0.75rem;
+    margin-bottom: 1.65rem;
+  }
+
+  .cmg-template-home .section-head > p,
+  .cmg-template-service .section-head > p {
+    font-size: 0.9rem !important;
+  }
+
+  .cmg-template-home .section-head h2,
+  .cmg-template-service .section-head h2,
+  .cmg-template-home .faq-intro h2,
+  .cmg-template-service .faq-intro h2,
+  .cmg-template-home .service-route-copy h2,
+  .cmg-template-service .service-route-copy h2,
+  .cmg-template-home .service-transition-copy h2,
+  .cmg-template-service .service-transition-copy h2,
+  .cmg-template-home .cta-shell h2,
+  .cmg-template-service .cta-shell h2,
+  .cmg-template-home [aria-labelledby="seo-guide-section-title"] h2,
+  .cmg-template-service [aria-labelledby="seo-guide-section-title"] h2 {
+    font-size: clamp(29px, 8.6vw, 35px) !important;
+    line-height: 1.08 !important;
+  }
+
+  .cmg-template-home .eligibility-copy h2,
+  .cmg-template-home .refusal-copy h2,
+  .cmg-template-home .employer-copy h2,
+  .cmg-template-home .service-image-gallery__head h2 {
+    font-size: clamp(29px, 8.6vw, 35px) !important;
+    line-height: 1.06 !important;
+  }
+
+  .cmg-template-home .quote {
+    font-size: 1.15rem;
+  }
+
+  .cmg-template-home .hero-layout,
+  .cmg-template-service .hero-layout {
+    gap: 1.75rem;
+  }
+
+  .cmg-template-home .hero-visual,
+  .cmg-template-service .hero-visual {
+    margin-top: 0.25rem;
+  }
+
+  .cmg-template-home .hero-actions,
+  .cmg-template-service .hero-actions {
+    gap: 0.7rem;
+  }
+
+  .cmg-template-home .hero-actions a.btn-primary,
+  .cmg-template-service .hero-actions a.btn-primary {
+    min-height: 3.15rem !important;
+  }
+
+  .cmg-template-home .service-route-list li,
+  .cmg-template-service .service-route-list li {
+    grid-template-columns: 2rem minmax(0, 1fr) 1.25rem;
+  }
+
+  .cmg-template-home .service-route-list li p,
+  .cmg-template-service .service-route-list li p {
+    max-width: 100%;
+  }
+
+  .cmg-template-home .cta-shell,
+  .cmg-template-service .cta-shell {
+    gap: 1.5rem !important;
+  }
+
+  .cmg-template-home .cta-shell h2,
+  .cmg-template-service .cta-shell h2 {
+    font-size: clamp(28px, 8vw, 34px) !important;
+    line-height: 1.08 !important;
+  }
+
+  .cmg-template-home .cta-shell p,
+  .cmg-template-service .cta-shell p {
+    font-size: 0.95rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .cmg-template-home .cta-shell a.btn,
+  .cmg-template-service .cta-shell a.btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cmg-template-home .faq-item__summary {
+    padding-inline: 1rem;
+  }
+
+  .cmg-template-home .faq-item__summary > span:first-child {
+    font-size: 0.93rem !important;
+    line-height: 1.4 !important;
+  }
+}

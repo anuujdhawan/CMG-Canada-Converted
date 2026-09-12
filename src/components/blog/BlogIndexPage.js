@@ -38,7 +38,7 @@ export default function BlogIndexPage({ page }) {
         <div className="hero-layout relative z-[1] grid grid-cols-[minmax(0,1fr)_minmax(420px,.86fr)] max-[1120px]:grid-cols-[minmax(0,1fr)_minmax(360px,.85fr)] max-[880px]:grid-cols-1 items-center gap-[66px] max-[1120px]:gap-[38px] max-[880px]:gap-[44px] w-[min(1280px,calc(100%-48px))] max-[620px]:w-[var(--container)] mx-auto">
           <div className="hero-copy relative z-[2] max-w-[720px] reveal in">
             <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] uppercase">CMG insights · Canada immigration</p>
-            <h1 id="blog-hero-title" className="max-w-[790px] text-[clamp(42px,2.2rem+3.4vw,66px)] !font-semibold !leading-[1.04] !tracking-[-.03em] max-[1120px]:!text-[clamp(38px,4.6vw,52px)] max-[620px]:!text-[clamp(34px,10.5vw,44px)] !text-[var(--template-on-primary)]">Research the route.<br />Then decide.</h1>
+            <h1 id="blog-hero-title" className="max-w-[790px] text-[clamp(42px,2.2rem+3.4vw,66px)] !font-semibold max-[620px]:!font-extrabold !leading-[1.04] !tracking-[-.03em] max-[1120px]:!text-[clamp(36px,4.2vw,48px)] max-[620px]:!text-[clamp(24px,6.7vw,28px)] !text-[var(--template-on-primary)]">Research the route.<br />Then decide.</h1>
             <p className="lead !max-w-[620px] !mt-6 !text-[var(--cmg-dark-muted)] [text-shadow:0_1px_10px_color-mix(in_srgb,var(--cmg-template-deep-surface)_32%,transparent)] text-[var(--muted)] text-[17px] leading-[1.8] max-[620px]:text-[15px]">{description}</p>
             <div className="hero-actions flex flex-wrap gap-3 mt-[30px]">
               <TemplateLink path={site.ctas.primary.href} className="btn btn-primary">
@@ -84,7 +84,7 @@ export default function BlogIndexPage({ page }) {
       <section className="cta-section reference-blog-cta !bg-[linear-gradient(120deg,var(--primary),color-mix(in_srgb,var(--primary)_56%,var(--accent)),var(--accent))] py-[72px]">
         <div className="cta-shell flex items-center justify-between max-[880px]:items-start max-[880px]:flex-col w-[var(--container)] gap-10 mx-auto p-0 rounded-none bg-transparent">
           <div>
-            <h2 className="!text-[clamp(30px,1.8rem+2.2vw,46px)] !leading-none text-[var(--template-on-primary)]">Ready to make the research personal?</h2>
+            <h2 className="!text-[clamp(30px,1.8rem+2.2vw,46px)] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-none text-[var(--template-on-primary)]">Ready to make the research personal?</h2>
             <p className="!mt-[12px] max-w-[650px] !text-[16px] text-[var(--template-on-primary)]">Bring the guide that caught your attention, your questions and your timeline to a focused consultation with a licensed Canadian immigration team.</p>
           </div>
           <TemplateLink path={site.ctas.primary.href} className="btn !flex-none !px-6 !py-[17px] bg-[var(--template-on-primary)] text-[var(--secondary)] hover:bg-[var(--secondary)] hover:text-[var(--template-on-primary)]">
