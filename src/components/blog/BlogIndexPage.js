@@ -50,10 +50,10 @@ export default function BlogIndexPage({ page }) {
                 <ArrowUpRight width={18} height={18} aria-hidden="true" />
               </TemplateLink>
             </div>
-            <div className="hero-trust grid grid-cols-[repeat(3,max-content)] gap-[10px] mt-6 max-[620px]:flex max-[620px]:flex-col max-[620px]:items-center max-[620px]:gap-[10px] max-[620px]:mt-[18px]" aria-label="Blog highlights">
-              <span className="trust-chip"><ShieldCheck width={16} height={16} aria-hidden="true" /> Licensed RCIC insight</span>
-              <span className="trust-chip"><BookOpen width={16} height={16} aria-hidden="true" /> {postCount} practical guides</span>
-              <span className="trust-chip"><ArrowRight width={16} height={16} aria-hidden="true" /> Clear next steps</span>
+            <div className="hero-trust grid grid-cols-[repeat(3,max-content)] gap-[10px] mt-6 max-[880px]:grid-cols-[repeat(3,minmax(0,1fr))] max-[880px]:gap-1.5 max-[620px]:flex max-[620px]:items-center max-[620px]:gap-3 max-[360px]:gap-2 max-[620px]:mt-[18px]" aria-label="Blog highlights">
+              <span className="trust-chip inline-flex min-w-0 items-center justify-center gap-2 whitespace-nowrap max-[620px]:!gap-1 max-[620px]:!text-[11px] max-[420px]:!text-[10px] max-[360px]:!text-[9px]"><ShieldCheck className="shrink-0 max-[620px]:!h-[14px] max-[620px]:!w-[14px]" width={16} height={16} aria-hidden="true" /> Licensed RCIC insight</span>
+              <span className="trust-chip inline-flex min-w-0 items-center justify-center gap-2 whitespace-nowrap max-[620px]:!gap-1 max-[620px]:!text-[11px] max-[420px]:!text-[10px] max-[360px]:!text-[9px]"><BookOpen className="shrink-0 max-[620px]:!h-[14px] max-[620px]:!w-[14px]" width={16} height={16} aria-hidden="true" /> {postCount} practical guides</span>
+              <span className="trust-chip inline-flex min-w-0 items-center justify-center gap-2 whitespace-nowrap max-[620px]:!gap-1 max-[620px]:!text-[11px] max-[420px]:!text-[10px] max-[360px]:!text-[9px]"><ArrowRight className="shrink-0 max-[620px]:!h-[14px] max-[620px]:!w-[14px]" width={16} height={16} aria-hidden="true" /> Clear next steps</span>
             </div>
           </div>
 

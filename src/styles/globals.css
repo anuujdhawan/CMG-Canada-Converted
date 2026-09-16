@@ -920,6 +920,10 @@ html[data-theme="light"] .cmg-template-home .faq-item__answer p {
   .cmg-template-home *, .cmg-template-home *::before, .cmg-template-home *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .cmg-template-home .reveal { opacity: 1; transform: none; }
 }
+html[data-theme="dark"] .cmg-template-home .hero-copy .lead {
+  color: var(--cmg-dark-on-primary) !important;
+  -webkit-text-fill-color: var(--cmg-dark-on-primary) !important;
+}
 html[data-theme="light"] .cmg-template-home .hero::before { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 4%, transparent), color-mix(in srgb, var(--cmg-light-bg) 58%, transparent) 145%); }
 html[data-theme="light"] .cmg-template-home .hero-background-carousel .cmg-hero-carousel__wash { background: linear-gradient(90deg, color-mix(in srgb, var(--cmg-light-secondary) 60%, transparent) 0%, color-mix(in srgb, var(--cmg-light-secondary) 38%, transparent) 42%, color-mix(in srgb, var(--cmg-light-secondary) 14%, transparent) 68%, color-mix(in srgb, var(--cmg-light-secondary) 3%, transparent) 100%), linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 9%, transparent) 0%, transparent 62%, color-mix(in srgb, var(--cmg-light-bg) 18%, transparent) 100%); }
 html[data-theme="light"] .cmg-template-home .hero-copy h1 {
@@ -928,7 +932,11 @@ html[data-theme="light"] .cmg-template-home .hero-copy h1 {
   text-shadow: none !important;
 }
 html[data-theme="light"] .cmg-template-home .hero-copy { color: var(--cmg-light-ink); text-shadow: none; }
-html[data-theme="light"] .cmg-template-home .hero-copy .lead { color: var(--cmg-light-muted) !important; text-shadow: none; }
+html[data-theme="light"] .cmg-template-home .hero-copy .lead {
+  color: var(--cmg-light-ink) !important;
+  -webkit-text-fill-color: var(--cmg-light-ink) !important;
+  text-shadow: none;
+}
 html[data-theme="light"] .cmg-template-home .hero-copy .eyebrow { color: var(--primary); text-shadow: none; }
 html[data-theme="light"] .cmg-template-home .pathways-section-head h2 {
   color: var(--cmg-light-ink) !important;

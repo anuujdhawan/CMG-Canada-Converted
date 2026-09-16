@@ -15,6 +15,8 @@ import TemplateMotion from "./TemplateMotion";
 import LiveSuccessVideos from "./LiveSuccessVideos";
 import FaqSection from "@/components/sections/FaqSection";
 import { getSeoContentBlocks } from "@/lib/seoContent";
+import { getKeywordPageExpansionBlocks } from "@/lib/keywordPageExpansions";
+import { getKeywordFrameContent } from "@/lib/keywordFrameContent";
 import { getFrameResearchParagraph, getFrameSupportContent } from "@/lib/seoBalancedContent";
 
 const href = (path) => currentPagePath(path);
@@ -153,15 +155,25 @@ function addFrameResearchCopy(section, page) {
   return [...section, { type: "paragraph", text: getFrameResearchParagraph(page) }];
 }
 
+function addFrameKeywordCopy(section, page) {
+  const frameBlocks = getKeywordFrameContent(page);
+  return frameBlocks.length > 0 ? [...section, ...frameBlocks] : section;
+}
+
 function ServiceFaqSection({ faqs, isToolPage }) {
   return <FaqSection faqs={faqs} description={isToolPage ? "Open a question to understand what the tool can show, what it cannot decide and what to check next." : "Get a concise answer about this pathway and what to verify before you take the next step."} className={isToolPage ? "tool-faq-section" : "service-faq-section"} />;
 }
 
 export default function ReferenceServicePage({ page, children, interactivePosition = "bottom", interactiveHeading }) {
-  // Keep all authored blocks in their original order, then append the
-  // topic-aware search section. Nothing from the supplied page record is
-  // replaced or removed.
-  const blocks = [...(page.contentBlocks || parseBlocks(page.content || "")), ...getSeoContentBlocks(page)];
+  // Put route-specific keyword sections into the reading flow before the
+  // authored route guide. This lets the featured image/text frame use the
+  // expanded copy, while the rest of the page still preserves its source
+  // content and receives the shared SEO/AEO additions afterward.
+  const blocks = [
+    ...getKeywordPageExpansionBlocks(page),
+    ...(page.contentBlocks || parseBlocks(page.content || "")),
+    ...getSeoContentBlocks(page),
+  ];
   const isToolPage = page.path.startsWith("/tools/") || page.path === "/assessment/free-canada-immigration-assessment";
   const isAboutOverviewPage = page.path === "/about/about-commonwealth-migration";
   const lead = getLead(page, blocks);
@@ -256,7 +268,7 @@ export default function ReferenceServicePage({ page, children, interactivePositi
                       {renderContentBlocks(addFrameResearchCopy(sections[paragraphImageSection], page), "frame-copy", page, tableCounter)}
                     </ServiceContentImageFrame>
                     <ServiceContentImageFrame image={contentImages[1]} side="left" supportingContent={getFrameSupportContent(page)}>
-                      {renderContentBlocks(sections[tableImageSection], "frame-table", page, tableCounter)}
+                      {renderContentBlocks(addFrameKeywordCopy(sections[tableImageSection], page), "frame-table", page, tableCounter)}
                     </ServiceContentImageFrame>
                   </div>
                 );

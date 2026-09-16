@@ -6,6 +6,8 @@
  * prompts and authoritative verification links to the rendered page only.
  */
 
+import { getLocalPageContent } from "./seoLocalPageContent";
+
 const OFFICIAL_SOURCES = {
   immigration: {
     label: "IRCC immigration programs guide",
@@ -359,20 +361,31 @@ export function getLocalSeoExpansion(page) {
   const path = normalizePath(page?.path);
   const rule = ROUTE_RULES.find((candidate) => candidate.test(path)) || DEFAULT_RULE;
   const pageTitle = cleanText(page?.h1) || cleanText(rule.subject);
-  const source = rule.source || OFFICIAL_SOURCES.immigration;
-  const localQuestion = rule === DEFAULT_RULE
-    ? `What should Brampton applicants know about ${pageTitle}?`
-    : rule.questions[0];
-  const planningQuestion = rule.questions[1];
+  const custom = getLocalPageContent(path);
+  const source = (custom?.sourceKey && OFFICIAL_SOURCES[custom.sourceKey]) || rule.source || OFFICIAL_SOURCES.immigration;
+  const localQuestion = custom?.questions?.[0] || `What should Brampton applicants verify for ${pageTitle}?`;
+  const planningQuestion = custom?.questions?.[1] || `How can a Brampton applicant prepare ${pageTitle} evidence?`;
+  const answer = custom?.answer || `For ${pageTitle}, start by checking ${rule.lens}. A Brampton applicant should connect those facts to the current route instructions and keep the evidence consistent across forms, records and deadlines. The page can explain the pathway, but the decision-maker applies the current rules to the applicant’s personal facts.`;
+  const detail = custom?.detail || `A focused Brampton review of ${pageTitle} should identify the first decision, the evidence gap that could change the route and the deadline that needs protecting. Compare the page with the [${source.label}]({SOURCE}) and keep any consultation focused on the facts that the selected pathway actually tests.`;
+  const items = custom?.items || [
+    `the exact ${pageTitle.toLowerCase()} route and current intake or application stage`,
+    "identity, status, family and personal-history records",
+    "education, language, work, funds or travel evidence where relevant",
+    "the official instructions, deadline and next owner for the file",
+  ];
+  const verificationQuestion = custom?.verificationQuestion || `What should you verify before relying on ${rule.keyphrase} for ${pageTitle}?`;
+  const verificationAnswer = custom?.verificationAnswer
+    ? `${custom.verificationAnswer} Use the [${source.label}]({SOURCE}) as the controlling reference.`
+    : `Before relying on ${rule.keyphrase} for ${pageTitle}, check ${rule.lens} against the current [${source.label}]({SOURCE}). Search results and tools can help you frame the question, but they cannot replace the decision-maker’s rules or a complete review of your personal facts.`;
 
   return [
     { type: "heading", level: 2, text: localQuestion },
-    { type: "paragraph", text: rule.answer },
+    { type: "paragraph", text: resolveSource(answer, source) },
     { type: "heading", level: 2, text: planningQuestion },
-    { type: "paragraph", text: resolveSource(rule.detail, source) },
-    { type: "list", ordered: false, items: rule.items.map((item) => `**${item}** — compare it with the current route instructions and keep the supporting record together.`) },
-    { type: "heading", level: 2, text: `What should you verify before relying on ${rule.keyphrase}?` },
-    { type: "paragraph", text: resolveSource(`Before relying on ${rule.keyphrase}, check ${rule.lens} against the current [${source.label}]({SOURCE}). Search results and tools can help you frame the question, but they cannot replace the decision-maker’s rules or a complete review of your personal facts.`, source) },
+    { type: "paragraph", text: resolveSource(detail, source) },
+    { type: "list", ordered: false, items: items.map((item) => `**${item}** — compare it with the current route instructions and keep the supporting record together.`) },
+    { type: "heading", level: 2, text: verificationQuestion },
+    { type: "paragraph", text: resolveSource(verificationAnswer, source) },
   ];
 }
 

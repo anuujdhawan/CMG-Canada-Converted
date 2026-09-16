@@ -26,12 +26,12 @@ export const site = {
   phone,
   phoneHref: `tel:${phone.trim().startsWith("+") ? "+" : ""}${phoneDigits}`,
   address: {
-    line1: "615, 2250 Bovaird Dr East",
-    city: "Brampton, Sandringham- Wellington",
+    line1: "2250 Bovaird Dr E #615",
+    city: "Brampton",
     region: "ON",
-    postal: "",
-    country: "Canada 🇨🇦",
-    full: "615, 2250 Bovaird Dr East, Brampton, Sandringham- Wellington, ON, Canada 🇨🇦",
+    postal: "L6R 3J5",
+    country: "Canada",
+    full: "2250 Bovaird Dr E #615, Brampton, ON L6R 3J5",
   },
   sisterConcern: {
     name: "Commonwealth Migration Group",

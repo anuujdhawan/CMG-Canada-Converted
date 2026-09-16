@@ -432,7 +432,11 @@ export function getSeoContentBlocks(page) {
     { type: "heading", level: 2, text: `Where can you verify current ${topic} rules?` },
     { type: "paragraph", text: `Use the [${config.source.label}](${config.source.url}) as the final reference for current requirements. Rules, program openings, fees, forms and processing information can change, so check the source date and compare it with the facts in your file before relying on this guide.` },
   ];
-  const additions = [...sharedBlocks, ...getUniqueSeoContentBlocks(page), ...getLocalSeoExpansion(page)];
+  const additions = [
+    ...sharedBlocks,
+    ...getUniqueSeoContentBlocks(page),
+    ...getLocalSeoExpansion(page),
+  ];
   return [...additions, ...getBalancedSeoContentBlocks(page, additions)];
 }
 
