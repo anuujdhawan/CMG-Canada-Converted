@@ -1,11 +1,73 @@
+import fs from "fs";
+import path from "path";
+import { execFileSync } from "child_process";
 import { getAllPages } from "@/lib/sitePages";
 import { site } from "@/config/site";
+
+/**
+ * Last resort when a page declares no date and its source file cannot be read.
+ * Only reached if the content files are missing at build time.
+ */
+const FALLBACK_LASTMOD = new Date("2026-08-29");
+
+const mtimeCache = new Map();
+
+/**
+ * Date of the last commit that touched a page's source file.
+ *
+ * Preferred over the file's mtime because a fresh CI checkout stamps every
+ * file with the deploy time, which would make `lastmod` change on every build
+ * even when the content did not.
+ */
+function gitCommitDate(sourceFile) {
+  try {
+    const iso = execFileSync("git", ["log", "-1", "--format=%cI", "--", sourceFile], {
+      cwd: process.cwd(),
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    }).trim();
+    const date = new Date(iso);
+    return Number.isNaN(date.getTime()) ? null : date;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Real modification date of a page's source file.
+ *
+ * Every JSON/JS page record used to fall back to one frozen "2026-08-29"
+ * string, so 98 of 108 sitemap entries claimed an identical — and increasingly
+ * stale — lastmod. Newly authored pages looked untouched. Reading the source
+ * file's real change date instead means a freshly written page advertises a
+ * recent date, which is what gets it crawled.
+ */
+function sourceFileDate(sourceFile) {
+  if (!sourceFile) return null;
+  if (mtimeCache.has(sourceFile)) return mtimeCache.get(sourceFile);
+  const value = gitCommitDate(sourceFile) || (() => {
+    try {
+      return fs.statSync(path.join(process.cwd(), sourceFile)).mtime;
+    } catch {
+      return null;
+    }
+  })();
+  mtimeCache.set(sourceFile, value);
+  return value;
+}
+
+function resolveLastModified(page) {
+  if (page.meta?.lastModified) {
+    const declared = new Date(page.meta.lastModified);
+    if (!Number.isNaN(declared.getTime())) return declared;
+  }
+  return sourceFileDate(page.meta?.sourceFile) || FALLBACK_LASTMOD;
+}
 
 // Transactional and confirmation pages must not be advertised as indexable
 // search destinations. Their route metadata still controls the rendered
 // robots directive; this set keeps the sitemap aligned with that decision.
 const EXCLUDED_SITEMAP_PATHS = new Set([
-  "/contact/pay-immigration-consultation-canada",
   "/pay/success",
 ]);
 
@@ -22,7 +84,7 @@ export default function sitemap() {
   const pages = getAllPages()
     .filter((page) => !EXCLUDED_SITEMAP_PATHS.has(page.path))
     .map((page) => {
-      const lastModified = page.meta.lastModified ? new Date(page.meta.lastModified) : new Date();
+      const lastModified = resolveLastModified(page);
       return {
         url: `${base}${page.path === "/" ? "" : page.path}`,
         lastModified,

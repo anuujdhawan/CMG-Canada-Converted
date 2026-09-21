@@ -206,6 +206,17 @@
             "status": "Content Ready"
           }
         ]
+      },
+      {
+        "label": "Immigrate from the UK",
+        "pages": [
+          {
+            "label": "Canada Immigration from the UK",
+            "href": "/canada-immigration-from-uk",
+            "url": "https://commonwealthmigration.ca/canada-immigration-from-uk",
+            "status": "Content Ready"
+          }
+        ]
       }
     ]
   },

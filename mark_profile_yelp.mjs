@@ -1,0 +1,5 @@
+import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
+const path='outputs/2026-09-20-directory-prospects/commonwealth-migration-free-directory-prospects.xlsx'; const wb=await SpreadsheetFile.importXlsx(await FileBlob.load(path)); const sh=wb.worksheets.getItem('Directory Prospects');
+sh.getRange('K62').values=[['Unavailable - no Playwright response']]; sh.getRange('O62').values=[['Playwright did not return a usable ProfileCanada page or confirmation from the add/update route; no listing was claimed.']]; sh.getRange('P62').values=[['https://www.profilecanada.com/advertising/editlisting.cfm']];
+sh.getRange('K63').values=[['Manual Yelp verification required']]; sh.getRange('O63').values=[['Playwright confirmed Yelp advertises a free business listing/claim, but the route redirects to Yelp for Business and requires the business search/verification flow; no public listing URL or successful claim confirmation was produced.']]; sh.getRange('P63').values=[['https://business.yelp.com/']];
+const out=await SpreadsheetFile.exportXlsx(wb); await out.save(path); console.log('updated');

@@ -1,0 +1,142 @@
+{
+ "part": "01",
+ "theme": "Immigrate — Express Entry & Federal Programs",
+ "topics": [
+  {
+   "category": "Immigrate",
+   "group": "Express Entry",
+   "label": "Express Entry",
+   "path": "/immigrate/express-entry",
+   "url": "https://commonwealthmigration.ca/immigrate/express-entry",
+   "seoTitle": "Express Entry Canada 2026: CRS Score, Draws & Eligibility | CMG",
+   "metaDescription": "Check your Express Entry eligibility for 2026. CRS score breakdown, category draws, FSW/CEC/FST requirements, and a licensed RCIC review — free consultation.",
+   "h1": "Express Entry Canada: Your Complete 2026 Guide",
+   "lead": "Express Entry is the federal system Immigration, Refugees and Citizenship Canada (IRCC) uses to manage applications for three economic immigration programs — the Federal Skilled Worker Program, the Canadian Experience Class, and the Federal Skilled Trades Program. Candidates are ranked by a Comprehensive Ranking System (CRS) score, and IRCC periodically invites the highest-ranked candidates in each draw to apply for permanent residence. Since 2023, an increasing share of invitations has come…",
+   "headings": [
+    "Which Express Entry Program Do You Qualify Under?",
+    "2026 Category-Based Draws — Where Invitations Are Actually Landing",
+    "CRS Score Breakdown (Maximum 1,200 Points)",
+    "Express Entry: What Happens After an Invitation to Apply (ITA)",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Immigrate",
+   "group": "Express Entry",
+   "label": "Federal Skilled Worker",
+   "path": "/immigrate/federal-skilled-worker",
+   "url": "https://commonwealthmigration.ca/immigrate/federal-skilled-worker",
+   "seoTitle": "Federal Skilled Worker Program (FSW) Canada 2026 | CMG",
+   "metaDescription": "Federal Skilled Worker Program requirements for 2026: the 67-point grid, CLB 7 language rules, ECA requirements, and CRS strategy. Free RCIC assessment.",
+   "h1": "Federal Skilled Worker Program (FSW)",
+   "lead": "The Federal Skilled Worker Program is one of three programs managed through Express Entry, designed specifically for candidates applying with foreign work experience — most often from outside Canada. Unlike the Canadian Experience Class, FSW candidates must first clear a 67-point minimum on the program's own selection grid before their CRS score is even considered for a draw.",
+   "headings": [
+    "FSW Eligibility Requirements",
+    "FSW Selection Grid — Point Categories",
+    "Process: From Assessment to ITA",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Immigrate",
+   "group": "Express Entry",
+   "label": "Canadian Experience Class",
+   "path": "/immigrate/canadian-experience-class",
+   "url": "https://commonwealthmigration.ca/immigrate/canadian-experience-class",
+   "seoTitle": "Canadian Experience Class (CEC) 2026: Requirements & CRS | CMG",
+   "metaDescription": "CEC eligibility for 2026: 1 year Canadian work experience, CLB requirements, and current draw cutoffs. PGWP-to-PR strategy from a licensed RCIC — free review.",
+   "h1": "Canadian Experience Class (CEC)",
+   "lead": "The Canadian Experience Class is built for candidates who already have skilled work experience inside Canada — most commonly, international graduates who transitioned from a study permit to a Post-Graduation Work Permit. CEC has been the most consistently active Express Entry program through 2025–2026, with no minimum education requirement of its own.",
+   "headings": [
+    "CEC Eligibility Requirements",
+    "The PGWP → CEC → PR Route",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Immigrate",
+   "group": "Express Entry",
+   "label": "Federal Skilled Trades",
+   "path": "/immigrate/federal-skilled-trades",
+   "url": "https://commonwealthmigration.ca/immigrate/federal-skilled-trades",
+   "seoTitle": "Federal Skilled Trades (FST) Program Canada 2026 | CMG",
+   "metaDescription": "FST eligibility for tradespeople: 2 years' experience, CLB 4/5 language requirements, job offer or certificate of qualification. Free RCIC eligibility review.",
+   "h1": "Federal Skilled Trades Program (FST)",
+   "lead": "The Federal Skilled Trades Program is the Express Entry pathway built specifically for qualified tradespeople, and is frequently paired with the trades category-based draw lane, which has run at CRS scores well below the general pool.",
+   "headings": [
+    "FST Eligibility Requirements",
+    "Eligible Trade Categories",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Immigrate",
+   "group": "Express Entry",
+   "label": "PNP-Linked Express Entry",
+   "path": "/immigrate/pnp-linked-express-entry",
+   "url": "https://commonwealthmigration.ca/immigrate/pnp-linked-express-entry",
+   "seoTitle": "PNP-Linked Express Entry Canada 2026 | CMG",
+   "metaDescription": "How a provincial nomination adds 600 CRS points to your Express Entry profile — the aligned-stream process explained. Free eligibility check.",
+   "h1": "PNP-Linked Express Entry",
+   "lead": "A PNP-linked application is a provincial nomination obtained through a stream specifically aligned with Express Entry — the nomination adds 600 CRS points directly to an existing profile, rather than running as a separate application outside the federal system entirely.",
+   "headings": [
+    "How PNP-Linked Differs From a Base PNP Stream",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Immigrate",
+   "group": "Provincial Nominee Program",
+   "label": "Provincial Nominee Program (all provinces, consolidated)",
+   "path": "/immigrate/provincial-nominee-program-all-provinces-consolidated",
+   "url": "https://commonwealthmigration.ca/immigrate/provincial-nominee-program-all-provinces-consolidated",
+   "seoTitle": "Provincial Nominee Program (PNP) Canada 2026: All Provinces | CMG",
+   "metaDescription": "Compare PNP streams across all 10 Canadian provinces and territories. A nomination adds 600 CRS points — see which stream fits your profile. Free assessment.",
+   "h1": "Provincial Nominee Program (PNP)",
+   "lead": "Every Canadian province and territory except Quebec and Nunavut operates at least one Provincial Nominee Program stream. A nomination adds a flat 600 points to a candidate's Express Entry CRS score — enough to place nearly any nominated candidate above recent draw cutoffs — while some provincial streams run entirely outside Express Entry with their own separate process.",
+   "headings": [
+    "PNP Streams by Province",
+    "Nomination Process",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Immigrate",
+   "group": "Provincial Nominee Program",
+   "label": "British Columbia PNP",
+   "path": "/immigrate/british-columbia-pnp",
+   "url": "https://commonwealthmigration.ca/immigrate/british-columbia-pnp",
+   "seoTitle": "British Columbia PNP 2026: Streams & Requirements | CMG",
+   "metaDescription": "British Columbia Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+   "h1": "British Columbia Provincial Nominee Program",
+   "lead": "British Columbia's nominee program focuses on Skills Immigration Registration System (SIRS) — tech, healthcare, and skilled worker categories. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't.",
+   "headings": [
+    "British Columbia Stream Overview",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Immigrate",
+   "group": "Provincial Nominee Program",
+   "label": "Alberta PNP (AAIP)",
+   "path": "/immigrate/alberta-pnp-aaip",
+   "url": "https://commonwealthmigration.ca/immigrate/alberta-pnp-aaip",
+   "seoTitle": "Alberta PNP 2026: Streams & Requirements | CMG",
+   "metaDescription": "Alberta Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+   "h1": "Alberta Provincial Nominee Program",
+   "lead": "Alberta's nominee program focuses on Alberta Opportunity Stream and an Express Entry-aligned stream. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't.",
+   "headings": [
+    "Alberta Stream Overview",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  }
+ ]
+}

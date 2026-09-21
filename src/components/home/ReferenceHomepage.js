@@ -28,7 +28,11 @@ import { HERO_SLIDES } from "@/lib/heroSlides";
 import HeroCarousel from "./HeroCarousel";
 import HeroProofCardCarousel from "./HeroProofCardCarousel";
 import ConsultantProfileSection from "./ConsultantProfileSection";
-import LiveSuccessVideos from "./LiveSuccessVideos";
+// Client Success Gallery — temporarily disabled (not wanted on the site right
+// now). The component file is kept at ./LiveSuccessVideos.js for later reuse:
+// restore this import and the <LiveSuccessVideos /> call below to bring it back.
+// import LiveSuccessVideos from "./LiveSuccessVideos";
+import LatestBlogsCarousel from "./LatestBlogsCarousel";
 import TemplateMotion from "./TemplateMotion";
 import FaqSection from "@/components/sections/FaqSection";
 import { getPageFaqs } from "@/lib/faqs";
@@ -197,7 +201,8 @@ export default function ReferenceHomepage({ page, heroData }) {
 
       <ConsultantProfileSection />
 
-      <LiveSuccessVideos />
+      {/* Client Success Gallery — temporarily disabled. Restore with: <LiveSuccessVideos /> */}
+      <LatestBlogsCarousel />
 
       <section className="section relative z-[1] bg-[var(--secondary)] py-[104px] max-[880px]:py-[76px] max-[620px]:py-16 dark" id="employers"><div className="section-inner mx-auto w-[var(--container)] employer-layout grid grid-cols-[.82fr_1.18fr] max-[880px]:grid-cols-1 items-start gap-[54px]"><div className="employer-copy reveal"><p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">For employers hiring in Canada</p><h2 className="max-w-[690px] !text-[clamp(32px,1.8rem+2.4vw,50px)] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-[1.02]">Immigration support for Canadian employers</h2><p className="!mt-5 !max-w-[570px] !text-[15px] !leading-[1.8]">LMIA, Global Talent Stream, ESDC compliance and employer-side provincial representation—planned around the role, the evidence and the employer’s compliance obligations.</p><div className="employer-stat block mt-[30px] border-l-4 border-[var(--primary)] p-6 bg-[color-mix(in_srgb,var(--template-on-primary)_6%,transparent)] text-[var(--muted)] text-[12px]"><strong className="block text-[var(--primary)] text-[34px] font-semibold leading-none max-[620px]:!text-[42px] max-[620px]:!leading-none" data-count="500">500<span>+</span></strong><span className="text-[color-mix(in_srgb,var(--template-on-primary)_65%,transparent)] text-[13px]">LMIAs filed across streams</span></div></div><div className="employer-grid grid grid-cols-2 max-[620px]:grid-cols-1 gap-[15px]">{[["High- & low-wage LMIA", "Plan the LMIA strategy and supporting record for the applicable wage level.", BadgeDollarSign], ["Global Talent Stream", "Assess eligible tech and in-demand roles against the employer-side requirements.", Zap], ["Agricultural LMIA", "Prepare seasonal or year-round agricultural hiring files with the right evidence.", Wheat], ["ESDC compliance", "Track employer obligations, inspection readiness and TFWP integrity.", ShieldCheck]].map(([title, description, Icon], index) => <article className="employer-card min-h-0 p-6 rounded-[18px] reveal bg-[color-mix(in_srgb,var(--template-on-primary)_7%,transparent)] border-[color-mix(in_srgb,var(--template-on-primary)_14%,transparent)]" key={title} style={{ "--delay": `${index * 60}ms` }}><IconBox icon={Icon} /><h3 className="!m-[9px_0_8px] !text-[19px] text-[var(--ink)] !font-extrabold !leading-[1.25] tracking-normal">{title}</h3><p className="!m-0 !text-[14px] !leading-[1.65]">{description}</p></article>)}</div></div></section>
 

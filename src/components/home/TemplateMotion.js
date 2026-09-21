@@ -31,19 +31,38 @@ function animateCount(element, reduced) {
   window.requestAnimationFrame(tick);
 }
 
+/**
+ * Scroll-reveal + count-up + hero parallax for every `.cmg-template-home` page.
+ *
+ * This effect used to collect its targets exactly once, on mount. That works on
+ * a first load, but not after a client-side navigation: React swaps in a fresh
+ * tree while this component instance survives, so the effect never re-runs and
+ * every `.reveal` element in the new tree stays at `opacity: 0` — the page
+ * looked empty until a hard refresh. It was most visible on the blog, where
+ * changing category replaces the whole card grid, but it affected any page
+ * whose content changes without a remount.
+ *
+ * The scan is now re-run whenever the DOM changes. The observers are created
+ * once and kept alive; re-`observe()`ing a target is a no-op, so re-scanning is
+ * cheap and idempotent.
+ */
 export default function TemplateMotion() {
   useEffect(() => {
-    const roots = [...document.querySelectorAll(".cmg-template-home")];
     const reduced = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-    const revealElements = roots.flatMap((root) => [...root.querySelectorAll(".reveal:not(.in)")]);
-    const countElements = roots.flatMap((root) => [...root.querySelectorAll("[data-count]")]);
-    const cleanups = [];
+    const heroBindings = [];
+    let frame = 0;
 
-    if (reduced || !window.IntersectionObserver) {
-      revealElements.forEach((element) => element.classList.add("in"));
-      countElements.forEach((element) => animateCount(element, true));
-    } else {
-      const revealObserver = new IntersectionObserver(
+    const query = (selector) => [...document.querySelectorAll(`.cmg-template-home ${selector}`)];
+    const revealTargets = () => query(".reveal:not(.in)");
+    const countTargets = () => query("[data-count]:not([data-counted])");
+
+    // No IntersectionObserver (or motion is unwelcome): reveal everything and
+    // count up immediately, but still re-scan so later navigations are covered.
+    const instant = reduced || !window.IntersectionObserver;
+
+    const revealObserver = instant
+      ? null
+      : new IntersectionObserver(
         (entries) => entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           entry.target.classList.add("in");
@@ -51,10 +70,10 @@ export default function TemplateMotion() {
         }),
         { threshold: 0.12, rootMargin: "0px 0px -45px" }
       );
-      revealElements.forEach((element) => revealObserver.observe(element));
-      cleanups.push(() => revealObserver.disconnect());
 
-      const countObserver = new IntersectionObserver(
+    const countObserver = instant
+      ? null
+      : new IntersectionObserver(
         (entries) => entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           animateCount(entry.target, false);
@@ -62,35 +81,69 @@ export default function TemplateMotion() {
         }),
         { threshold: 0.7 }
       );
-      countElements.forEach((element) => countObserver.observe(element));
-      cleanups.push(() => countObserver.disconnect());
-    }
 
-    roots.forEach((root) => {
-      const hero = root.querySelector(".hero");
-      if (!hero) return;
+    /**
+     * The hero element is replaced on navigation too, so the pointer listeners
+     * have to be re-attached — and only once per root, or every scan would pile
+     * another pair on top of the existing ones.
+     */
+    const bindHeroes = () => {
+      document.querySelectorAll(".cmg-template-home").forEach((root) => {
+        if (root.dataset.heroBound === "true") return;
+        const hero = root.querySelector(".hero");
+        if (!hero) return;
 
-      const onMove = (event) => {
-        const bounds = hero.getBoundingClientRect();
-        const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 16;
-        const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 16;
-        root.style.setProperty("--px", `${x}px`);
-        root.style.setProperty("--py", `${y}px`);
-      };
-      const onLeave = () => {
-        root.style.setProperty("--px", "0px");
-        root.style.setProperty("--py", "0px");
-      };
+        root.dataset.heroBound = "true";
+        const onMove = (event) => {
+          const bounds = hero.getBoundingClientRect();
+          const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 16;
+          const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 16;
+          root.style.setProperty("--px", `${x}px`);
+          root.style.setProperty("--py", `${y}px`);
+        };
+        const onLeave = () => {
+          root.style.setProperty("--px", "0px");
+          root.style.setProperty("--py", "0px");
+        };
 
-      hero.addEventListener("pointermove", onMove, { passive: true });
-      hero.addEventListener("pointerleave", onLeave, { passive: true });
-      cleanups.push(() => {
-        hero.removeEventListener("pointermove", onMove);
-        hero.removeEventListener("pointerleave", onLeave);
+        hero.addEventListener("pointermove", onMove, { passive: true });
+        hero.addEventListener("pointerleave", onLeave, { passive: true });
+        heroBindings.push(() => {
+          hero.removeEventListener("pointermove", onMove);
+          hero.removeEventListener("pointerleave", onLeave);
+        });
       });
-    });
+    };
 
-    return () => cleanups.forEach((cleanup) => cleanup());
+    const scan = () => {
+      frame = 0;
+      const reveals = revealTargets();
+      const counts = countTargets();
+      if (revealObserver) reveals.forEach((element) => revealObserver.observe(element));
+      else reveals.forEach((element) => element.classList.add("in"));
+      if (countObserver) counts.forEach((element) => countObserver.observe(element));
+      else counts.forEach((element) => animateCount(element, true));
+      bindHeroes();
+    };
+
+    // Coalesce bursts of mutations into one scan per frame.
+    const scheduleScan = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(scan);
+    };
+
+    scan();
+
+    const mutations = new MutationObserver(scheduleScan);
+    mutations.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      mutations.disconnect();
+      if (frame) window.cancelAnimationFrame(frame);
+      revealObserver?.disconnect();
+      countObserver?.disconnect();
+      heroBindings.forEach((unbind) => unbind());
+    };
   }, []);
 
   return null;

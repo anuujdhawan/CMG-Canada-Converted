@@ -1,0 +1,137 @@
+{
+ "part": "04",
+ "theme": "Immigrate — Other PR Pathways, Refugees & Caregivers",
+ "topics": [
+  {
+   "category": "Immigrate",
+   "group": "Refugees & Protection",
+   "label": "Protected Persons — Apply for PR",
+   "path": "/immigrate/protected-persons-apply-for-pr",
+   "url": "https://commonwealthmigration.ca/immigrate/protected-persons-apply-for-pr",
+   "seoTitle": "Protected Persons: Apply for PR in Canada 2026 | CMG",
+   "metaDescription": "How recognized Convention refugees and protected persons apply for permanent residence in Canada, including family inclusion rules.",
+   "h1": "Protected Persons — Apply for Permanent Residence",
+   "lead": "Individuals recognized as Convention refugees or protected persons — whether through an IRB decision or a positive PRRA — can apply for permanent residence, generally without needing to separately meet standard economic-class eligibility criteria.",
+   "headings": [
+    "Eligibility & Process",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Immigrate",
+   "group": "Refugees & Protection",
+   "label": "Refugee Travel Document",
+   "path": "/immigrate/refugee-travel-document",
+   "url": "https://commonwealthmigration.ca/immigrate/refugee-travel-document",
+   "seoTitle": "Refugee Travel Document Canada 2026 | CMG",
+   "metaDescription": "How to apply for and renew a Canadian Refugee Travel Document — eligibility, restrictions, and renewal timelines for protected persons.",
+   "h1": "Refugee Travel Document",
+   "lead": "A Refugee Travel Document is issued to protected persons and permanent residents who came to Canada as refugees, allowing international travel when a passport from their country of origin isn't a safe or realistic option.",
+   "headings": [
+    "What to Know",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Immigrate",
+   "group": "Refugees & Protection",
+   "label": "One-Year Window Reunification",
+   "path": "/immigrate/one-year-window-reunification",
+   "url": "https://commonwealthmigration.ca/immigrate/one-year-window-reunification",
+   "seoTitle": "One-Year Window Reunification Canada 2026 | CMG",
+   "metaDescription": "Reunite with family left behind after a protected person's PR approval — the 12-month window rule explained, and what happens if you miss it.",
+   "h1": "One-Year Window Reunification",
+   "lead": "The One-Year Window provision lets protected persons include eligible family members on their permanent residence application without those family members needing to independently meet protected-person criteria — provided the application is made within roughly one year of the principal applicant becoming a permanent resident.",
+   "headings": [
+    "What to Know",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Immigrate",
+   "group": "Refugees & Protection",
+   "label": "Humanitarian & Compassionate",
+   "path": "/immigrate/humanitarian-and-compassionate",
+   "url": "https://commonwealthmigration.ca/immigrate/humanitarian-and-compassionate",
+   "seoTitle": "Humanitarian & Compassionate Application Canada 2026 | CMG",
+   "metaDescription": "H&C applications explained: establishment, best interests of the child, and hardship factors IRCC weighs in this discretionary PR route.",
+   "h1": "Humanitarian & Compassionate (H&C) Consideration",
+   "lead": "H&C is a discretionary route allowing IRCC to grant permanent residence outside standard eligibility criteria, for applicants whose circumstances don't fit any other established pathway but who can demonstrate compelling humanitarian and compassionate grounds.",
+   "headings": [
+    "What's Typically Considered",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Immigrate",
+   "group": "Caregivers",
+   "label": "Home Child Care Provider Pilot",
+   "path": "/immigrate/home-child-care-provider-pilot",
+   "url": "https://commonwealthmigration.ca/immigrate/home-child-care-provider-pilot",
+   "seoTitle": "Home Child Care Provider Pilot Canada 2026 | CMG",
+   "metaDescription": "Home Child Care Provider Pilot: combined work permit + PR pathway for caregivers. Language, education, and work experience requirements explained.",
+   "h1": "Home Child Care Provider Pilot",
+   "lead": "The Home Child Care Provider Pilot offers caregivers providing child care in a private household a combined work permit and direct route to permanent residence — built to remove the separate, later PR application many earlier caregiver programs required.",
+   "headings": [
+    "Eligibility Requirements",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Immigrate",
+   "group": "Caregivers",
+   "label": "Home Support Worker Pilot",
+   "path": "/immigrate/home-support-worker-pilot",
+   "url": "https://commonwealthmigration.ca/immigrate/home-support-worker-pilot",
+   "seoTitle": "Home Support Worker Pilot Canada 2026 | CMG",
+   "metaDescription": "Home Support Worker Pilot for caregivers supporting seniors or people with disabilities — combined work permit and PR pathway requirements.",
+   "h1": "Home Support Worker Pilot",
+   "lead": "The Home Support Worker Pilot is the counterpart to the Home Child Care Provider Pilot, built for caregivers supporting seniors, people with disabilities, or those managing chronic illness in a private household — with the same combined work-permit-to-PR structure.",
+   "headings": [
+    "Eligibility Requirements",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Immigrate",
+   "group": "Immigrate from the UK",
+   "label": "Canada Immigration from the UK",
+   "path": "/canada-immigration-from-uk",
+   "url": "https://commonwealthmigration.ca/canada-immigration-from-uk",
+   "seoTitle": "Canada Immigration from the UK: Routes, Costs & Next Steps",
+   "metaDescription": "A UK-specific guide to moving to Canada — Express Entry, IEC working holiday, work and study permits, eTA travel, UK police certificates and credential recognition.",
+   "h1": "Canada Immigration from the UK",
+   "lead": "A regional guide for UK-based clients planning a move to Canada. It covers the routes most relevant to UK applicants — Express Entry and CRS scoring, the International Experience Canada (IEC) working holiday route for UK citizens, employer-backed work permits, study permits, and eTA travel for visits — alongside UK-specific practicalities: UK qualifications and WES credential assessment, UK English-language evidence, ACRO/PSNI police certificates, IRCC panel physicians in the UK, GBP-to-CAD money movement, the UK-Canada time difference and remote consultations.",
+   "headings": [
+    "Routes Open to UK Applicants",
+    "Express Entry & CRS for UK Profiles",
+    "IEC Working Holiday for UK Citizens",
+    "UK-Specific Documents & Evidence",
+    "Remote Consultation from the UK"
+   ]
+  },
+  {
+   "category": "Visit",
+   "group": "Visitor & Temporary",
+   "label": "Visitor Visa (TRV) & Super Visa (combined)",
+   "path": "/visit/visitor-visa-trv-and-super-visa-combined",
+   "url": "https://commonwealthmigration.ca/visit/visitor-visa-trv-and-super-visa-combined",
+   "seoTitle": "Canada Visitor Visa & Super Visa 2026: TRV Requirements | CMG",
+   "metaDescription": "Visitor visa (TRV) and Super Visa requirements for 2026: ties assessment, insurance rules, and income thresholds for parents & grandparents.",
+   "h1": "Visitor Visa & Super Visa",
+   "lead": "A Temporary Resident Visa (TRV), commonly called a visitor visa, is required for citizens of many countries to enter Canada temporarily. The Super Visa is a specialized long-validity version for parents and grandparents of Canadian citizens or permanent residents, allowing extended stays without annual renewal.",
+   "headings": [
+    "Standard Visitor Visa (TRV) Requirements",
+    "Super Visa Requirements",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  }
+ ]
+}

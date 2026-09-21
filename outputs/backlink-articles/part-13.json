@@ -1,0 +1,141 @@
+{
+ "part": "13",
+ "theme": "About, Tools & Calculators",
+ "topics": [
+  {
+   "category": "About",
+   "group": "About",
+   "label": "About Commonwealth Migration",
+   "path": "/about/about-commonwealth-migration",
+   "url": "https://commonwealthmigration.ca/about/about-commonwealth-migration",
+   "seoTitle": "About Commonwealth Migration Group Inc. | CICC-Regulated RCICs",
+   "metaDescription": "Commonwealth Migration Group Inc. — CICC-regulated Canadian immigration consultants based in Brampton, Ontario, serving clients across Canada.",
+   "h1": "About Commonwealth Migration",
+   "lead": "Commonwealth Migration Group Inc. is a CICC-regulated Canadian immigration practice based in Brampton, Ontario, working alongside a sister office in Dubai, UAE. We handle federal and provincial immigration pathways, employer LMIA programs, and refusal or appeal files for clients across Canada.",
+   "headings": [
+    "What We Handle",
+    "Our Process",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Home / Core Services",
+   "group": "Company",
+   "label": "Licensed RCIC Immigration Consultants in Canada",
+   "path": "/",
+   "url": "https://commonwealthmigration.ca",
+   "seoTitle": "Immigration Consultant Brampton | Canada Immigration Guidance",
+   "metaDescription": "Licensed RCIC immigration consultants serving Canada-wide — Express Entry, PNP, LMIA, work and study permits, family sponsorship and refusals.",
+   "h1": "Licensed RCIC Immigration Consultants in Canada",
+   "lead": "Commonwealth Migration Group Inc. is a CICC-regulated Canadian immigration consultancy based in Brampton, Ontario, with a sister office in Dubai. Licensed RCICs (RCIC No. R711592) help individuals, families and employers compare and pursue Canadian permanent residence, temporary residence, work and study permits, family sponsorship, citizenship and complex refusal or appeal matters. Guidance is grounded in current IRCC and provincial requirements; no outcome is guaranteed.",
+   "headings": [
+    "Compare Your Options",
+    "Permanent Residence Pathways",
+    "Temporary Residence",
+    "Family & Citizenship",
+    "Book a Consultation"
+   ]
+  },
+  {
+   "category": "About",
+   "group": "Our firm",
+   "label": "Our Canada Immigration Consulting Process",
+   "path": "/about/canada-immigration-consulting-process",
+   "url": "https://commonwealthmigration.ca/about/canada-immigration-consulting-process",
+   "seoTitle": "Canada Immigration Consulting Process | Commonwealth Migration",
+   "metaDescription": "See how our licensed RCIC team assesses your profile, builds an evidence-led Canada immigration plan, prepares the application and tracks the next decision.",
+   "h1": "Our Canada Immigration Consulting Process",
+   "lead": "Our Canada immigration consulting process turns a broad goal into a practical plan: diagnose the facts, build the evidence, protect deadlines and decide the next step. It typically runs through an initial consultation and eligibility diagnosis, a pathway strategy, a document and evidence plan, application preparation and filing, and ongoing tracking until a decision — with the client kept informed at each stage.",
+   "headings": [
+    "Step 1 — Consultation & Eligibility Diagnosis",
+    "Step 2 — Pathway Strategy",
+    "Step 3 — Evidence & Document Plan",
+    "Step 4 — Preparation & Filing",
+    "Step 5 — Tracking to Decision"
+   ]
+  },
+  {
+   "category": "About",
+   "group": "Our firm",
+   "label": "Our Brampton Immigration Office",
+   "path": "/about/immigration-office-brampton-ontario",
+   "url": "https://commonwealthmigration.ca/about/immigration-office-brampton-ontario",
+   "seoTitle": "Immigration Office in Brampton, Ontario | Commonwealth Migration",
+   "metaDescription": "Visit or contact our Brampton, Ontario immigration office — CICC-regulated RCICs serving clients across Canada and internationally.",
+   "h1": "Our Brampton Immigration Office",
+   "lead": "Commonwealth Migration Group Inc. is based at 615, 2250 Bovaird Dr East, Brampton, Ontario, with a sister office in Dubai, UAE. The Brampton office serves clients across the Greater Toronto Area, Ontario and Canada-wide, with consultations available by phone and video for clients outside the region. Office hours are Monday to Friday 9:00am-6:00pm and Saturday 10:00am-4:00pm (Eastern Time).",
+   "headings": [
+    "Where We Are",
+    "Who We Serve",
+    "Book an In-Person or Virtual Consultation"
+   ]
+  },
+  {
+   "category": "Tools",
+   "group": "Free self-service tools",
+   "label": "Canada Immigration Calculators",
+   "path": "/tools/canada-immigration-calculators",
+   "url": "https://commonwealthmigration.ca/tools/canada-immigration-calculators",
+   "seoTitle": "Canada Immigration Calculators & Free Tools | CMG",
+   "metaDescription": "Free Canada immigration calculators and self-service tools — CRS score, PNP eligibility, NOC occupation finder and a document checklist.",
+   "h1": "Canada Immigration Calculators",
+   "lead": "A hub of free, no-obligation self-service tools for anyone planning a Canadian immigration application: a CRS calculator for Express Entry, a provincial nominee program eligibility check, a NOC occupation finder, and a document checklist. The tools give an indicative picture only; a licensed RCIC review is the reliable next step.",
+   "headings": [
+    "CRS Calculator",
+    "PNP Eligibility Check",
+    "NOC / Occupation Finder",
+    "Document Checklist"
+   ]
+  },
+  {
+   "category": "Tools",
+   "group": "Free self-service tools",
+   "label": "CRS Calculator Canada",
+   "path": "/tools/crs-calculator-canada",
+   "url": "https://commonwealthmigration.ca/tools/crs-calculator-canada",
+   "seoTitle": "CRS Calculator Canada | Free Express Entry Score Tool",
+   "metaDescription": "Estimate your Comprehensive Ranking System (CRS) score for Express Entry in minutes with this free calculator, then check how to improve it.",
+   "h1": "CRS Calculator Canada",
+   "lead": "The Comprehensive Ranking System (CRS) is the points grid IRCC uses to rank Express Entry candidates. This free calculator estimates a score across core human capital (age, education, language, work experience), spouse or partner factors, skill transferability and additional points such as a provincial nomination or a job offer. It is indicative only — official scores are calculated by IRCC from your profile.",
+   "headings": [
+    "How the CRS Works",
+    "Core Human Capital Factors",
+    "Skill Transferability & Additional Points",
+    "Ways to Improve Your Score"
+   ]
+  },
+  {
+   "category": "Tools",
+   "group": "Free self-service tools",
+   "label": "PNP Eligibility Check Canada",
+   "path": "/tools/pnp-eligibility-canada",
+   "url": "https://commonwealthmigration.ca/tools/pnp-eligibility-canada",
+   "seoTitle": "PNP Eligibility Check Canada | Free Provincial Nominee Tool",
+   "metaDescription": "Check which Provincial Nominee Programs may fit your profile — free eligibility check across Canada s provinces and territories.",
+   "h1": "PNP Eligibility Check Canada",
+   "lead": "Each Canadian province and territory runs its own Provincial Nominee Program (PNP) with its own streams, occupation lists and criteria. This free check gives an indicative read on which PNPs may be worth exploring based on your occupation, experience, language ability and ties to a province. A nomination can add significant points to an Express Entry profile and is one of the most direct routes to permanent residence for candidates outside the top of the federal pool.",
+   "headings": [
+    "How PNP Streams Differ",
+    "Base vs Enhanced Nominations",
+    "Province-by-Province Snapshot"
+   ]
+  },
+  {
+   "category": "Tools",
+   "group": "Free self-service tools",
+   "label": "NOC / Occupation Finder Canada",
+   "path": "/tools/noc-finder-canada",
+   "url": "https://commonwealthmigration.ca/tools/noc-finder-canada",
+   "seoTitle": "NOC / Occupation Finder Canada | Find Your NOC Code",
+   "metaDescription": "Find the National Occupational Classification (NOC) code and TEER category for your job — the first step in most Canadian immigration applications.",
+   "h1": "NOC / Occupation Finder Canada",
+   "lead": "Canada s National Occupational Classification (NOC) assigns every occupation a code and a TEER category. Almost every economic immigration program — Express Entry, most PNPs, LMIA-based work permits — turns on which NOC code your job experience matches and whether it is TEER 0, 1, 2 or 3. This finder helps you locate the code and category that best fit your duties, which should then be confirmed against the official NOC description.",
+   "headings": [
+    "Why the NOC Code Matters",
+    "TEER Categories Explained",
+    "Matching Duties, Not Job Titles"
+   ]
+  }
+ ]
+}

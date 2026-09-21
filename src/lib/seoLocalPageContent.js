@@ -10,6 +10,26 @@
 const localEntry = (config) => config;
 
 export const LOCAL_PAGE_CONTENT = {
+  "/canada-immigration-from-uk": localEntry({
+    subject: "Canada immigration from the United Kingdom",
+    sourceKey: "immigration",
+    keyphrase: "Canada immigration consultant for UK residents",
+    questions: [
+      "What should UK applicants verify before starting a Canada immigration application?",
+      "Which UK documents carry the longest lead time in a Canadian application?",
+    ],
+    answer: "A UK applicant should verify the Canadian route first, then the UK-side evidence behind it. Express Entry needs a designated language test result and an Educational Credential Assessment even for a British passport holder, a work or study route needs the authorisation tied to that specific purpose, and any permanent-residence file needs a UK police certificate from the correct issuing body and a funds history that converts cleanly from GBP to Canadian dollars.",
+    detail: "Work backwards from the filing date. Book the language test and the credential assessment in parallel because they are usually the longest items, request the police certificate for the part of the UK you actually lived in, and only book the panel-physician medical when IRCC asks for it. Keep every UK record — employer reference letters, payslips, tenancy and travel history — in a form a Canadian officer can map to the occupation and dates you are claiming.",
+    verificationQuestion: "What should you verify before relying on a Canada immigration consultant for UK residents?",
+    verificationAnswer: "Before relying on a Canada immigration consultant for UK residents, verify the Canadian route and its current instructions, the language test and credential assessment requirements, the UK police certificate and medical process, the funds evidence in Canadian dollars and the representative's current licence status. Note that UK-side advisers are not authorised to advise on Canadian immigration law — only a Canadian-regulated representative can.",
+    lens: "the Canadian route, the UK-side evidence, the funds position and the filing deadline",
+    items: [
+      "the Canadian route and its current instructions",
+      "language test result, validity window and score conversion",
+      "Educational Credential Assessment and UK qualification equivalency",
+      "UK police certificate, panel-physician medical and GBP-to-CAD funds history",
+    ],
+  }),
   "/immigrate/provincial-nominee-program-all-provinces-consolidated": localEntry({
     subject: "a province-by-province PNP comparison",
     keyphrase: "PNP consultant in Brampton",

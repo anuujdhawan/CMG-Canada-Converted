@@ -1,0 +1,5 @@
+import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
+const path='outputs/2026-09-20-directory-prospects/commonwealth-migration-free-directory-prospects.xlsx'; const wb=await SpreadsheetFile.importXlsx(await FileBlob.load(path)); const sh=wb.worksheets.getItem('Directory Prospects');
+sh.getRange('K60').values=[['Attempted - unverified']]; sh.getRange('O60').values=[['Playwright filled the N49 dashboard and clicked “Save All Changes”; the page remained on the dashboard showing “Saving Changes / Please wait” with no listing URL or success confirmation.']]; sh.getRange('P60').values=[['https://dashboard.n49.com/add-biz']];
+sh.getRange('K61').values=[['Email verification / form issue']]; sh.getRange('O61').values=[['Playwright reached ZipLeaf’s six-step free listing flow. The site requires a one-time email link before publication; the first-step attempt returned a validation message and did not advance. No listing was claimed.']]; sh.getRange('P61').values=[['https://www.zipleaf.ca/accounts/create-listing']];
+const out=await SpreadsheetFile.exportXlsx(wb); await out.save(path); console.log('updated');

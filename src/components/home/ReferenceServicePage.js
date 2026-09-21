@@ -12,7 +12,11 @@ import ConsultantProfileSection from "./ConsultantProfileSection";
 import ServiceImageGallery from "./ServiceImageGallery";
 import ServiceContentImageFrame, { getServiceContentImages } from "./ServiceContentImageFrame";
 import TemplateMotion from "./TemplateMotion";
-import LiveSuccessVideos from "./LiveSuccessVideos";
+// Client Success Gallery — temporarily disabled (not wanted on the site right
+// now). The component file is kept at ./LiveSuccessVideos.js for later reuse:
+// restore this import and the <LiveSuccessVideos /> call below to bring it back.
+// import LiveSuccessVideos from "./LiveSuccessVideos";
+import LatestBlogsCarousel from "./LatestBlogsCarousel";
 import FaqSection from "@/components/sections/FaqSection";
 import { getSeoContentBlocks } from "@/lib/seoContent";
 import { getKeywordPageExpansionBlocks } from "@/lib/keywordPageExpansions";
@@ -295,7 +299,8 @@ export default function ReferenceServicePage({ page, children, interactivePositi
 
       {pageFaqs.length > 0 && <ServiceFaqSection faqs={pageFaqs} isToolPage={isToolPage} />}
 
-      <LiveSuccessVideos />
+      {/* Client Success Gallery — temporarily disabled. Restore with: <LiveSuccessVideos /> */}
+      <LatestBlogsCarousel />
 
       <section className="cta-section py-[72px]"><div className="cta-shell flex items-center justify-between max-[880px]:items-start max-[880px]:flex-col !w-[var(--container)] !gap-10 mx-auto !p-0 !rounded-none !bg-transparent"><div><h2 className="!text-[clamp(30px,1.8rem+2.2vw,46px)] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-none !text-[var(--template-on-primary)]">Ready to make the next step clearer?</h2><p className="!mt-3 !max-w-[650px] !text-[16px] !text-[color-mix(in_srgb,var(--template-on-primary)_80%,transparent)]">Bring your questions, history and documents to a focused review with a licensed Canadian immigration team.</p></div><TemplateLink path={site.ctas.primary.href} className="btn !flex-none !px-6 !py-[17px] !bg-[var(--template-on-primary)] !text-[var(--cmg-dark-secondary)]">Book a Consultation <ArrowUpRight width={19} height={19} aria-hidden="true" /></TemplateLink></div></section>
 

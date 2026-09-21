@@ -11,7 +11,6 @@ export const metadata = buildMetadata({
   title: rebrand(page?.seo.title || page?.h1 || "Pay Online"),
   description: rebrand(page?.seo.description || "Make a secure online payment to Commonwealth Migration Canada by card."),
   path: pagePath,
-  noIndex: true,
 });
 
 const interactiveHeading = {

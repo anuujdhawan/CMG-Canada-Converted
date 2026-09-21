@@ -1,0 +1,5 @@
+import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
+const path='outputs/2026-09-20-directory-prospects/commonwealth-migration-free-directory-prospects.xlsx'; const wb=await SpreadsheetFile.importXlsx(await FileBlob.load(path)); const sh=wb.worksheets.getItem('Directory Prospects');
+sh.getRange('K58').values=[['No online submission route']]; sh.getRange('O58').values=[['Playwright confirmed the page invites missing businesses to contact the editor, but it exposes no online form or listing URL. No submission was attempted; the page provides a phone contact only.']]; sh.getRange('P58').values=[['https://peelvillagelife.ca/peel-village-businesses']];
+sh.getRange('K59').values=[['Unavailable - no Playwright response']]; sh.getRange('O59').values=[['Playwright did not return a usable page or listing/claim form from the 411.ca Brampton directory route; no submission was attempted.']]; sh.getRange('P59').values=[['https://411.ca/business-directory/on/brampton']];
+const out=await SpreadsheetFile.exportXlsx(wb); await out.save(path); console.log('updated');

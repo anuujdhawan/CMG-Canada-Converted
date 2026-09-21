@@ -1,0 +1,3 @@
+import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
+const path='outputs/2026-09-20-directory-prospects/commonwealth-migration-free-directory-prospects.xlsx'; const wb=await SpreadsheetFile.importXlsx(await FileBlob.load(path)); const sh=wb.worksheets.getItem('Directory Prospects');
+sh.getRange('K48').values=[['Blocked - bot access']]; sh.getRange('O48').values=[['Playwright reached the Brampton directory URL, but the site returned “Forbidden: Bot access is restricted”; no listing route could be inspected or submitted.']]; sh.getRange('P48').values=[['https://allbizcanada.ca/states/on/cities/brampton']]; const out=await SpreadsheetFile.exportXlsx(wb); await out.save(path); console.log('updated');

@@ -77,6 +77,25 @@ const ROUTE_RULES = [
     source: OFFICIAL_SOURCES.immigration,
   },
   {
+    test: (path) => path === "/canada-immigration-from-uk",
+    subject: "Canada immigration from the United Kingdom",
+    keyphrase: "Canada immigration consultant for UK residents",
+    lens: "the Canadian route, the UK-side evidence, the funds position and the filing deadline",
+    questions: [
+      "What should UK applicants verify before starting a Canada immigration application?",
+      "How can a UK applicant prepare Canada immigration evidence from outside Canada?",
+    ],
+    answer: "For a UK applicant, the first question is which Canadian route actually fits the profile: Express Entry, a provincial nomination, an International Experience Canada working holiday, an employer-specific work permit, a study permit, family sponsorship or a business route. The second question is whether the UK-side evidence behind that route is complete and current — language test, credential assessment, police certificate, funds history and travel records.",
+    detail: "A useful UK review separates the decision you control from the one you do not. You control the language test, the credential assessment, the police certificate, the medical and the consistency of your documents; you do not control draw cutoffs or processing queues. Map each UK document to the stage it supports, note its validity window, and keep the GBP-to-CAD funds evidence traceable so nothing expires while you wait for something else.",
+    items: [
+      "The Canadian route that matches the profile you can evidence",
+      "Language test result, validity window and score conversion",
+      "Educational Credential Assessment and UK qualification equivalency",
+      "UK police certificate, medical and funds history",
+    ],
+    source: OFFICIAL_SOURCES.immigration,
+  },
+  {
     test: (path) => /tools\/crs-calculator/.test(path),
     subject: "a CRS calculator Canada result",
     keyphrase: "CRS calculator Canada",

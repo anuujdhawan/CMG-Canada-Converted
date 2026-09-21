@@ -11,6 +11,20 @@ const BALANCED_WORD_TARGET = 1300;
 
 const ROUTE_RESEARCH_RULES = [
   {
+    test: (path) => path === "/canada-immigration-from-uk",
+    topic: "Canada immigration from the United Kingdom",
+    sentences: [
+      "Research for a UK applicant starts with the Canadian route rather than the visa label: Express Entry, a provincial nomination, an International Experience Canada working holiday, an employer-specific work permit, a study permit, family sponsorship or a business route each test different facts.",
+      "Language evidence is mandatory for the federal economic programs even for a British passport holder, so a valid designated test result and its conversion to Canadian Language Benchmarks belong in the plan before a profile is created.",
+      "UK qualifications are usually evidenced through an Educational Credential Assessment, which states the Canadian equivalency of the credential and feeds the points claimed; it is an academic comparison, not a licence to practise a regulated profession.",
+      "Police certificates follow UK geography rather than nationality: England and Wales, Scotland and Northern Ireland each have their own issuing route, and IRCC's United Kingdom page is the controlling instruction for what is accepted.",
+      "The immigration medical examination must be completed by an IRCC-designated panel physician in the UK, and the result has a validity window that should be sequenced against the filing date rather than booked as early as possible.",
+      "Settlement funds are assessed in Canadian dollars, so GBP balances, joint accounts, recent deposits and exchange movement all need a traceable history and a written explanation where the source is not obvious.",
+      "A temporary permit is not a settlement plan: a work or study permit does not convert into permanent residence, so UK applicants should identify which later route the temporary period is building towards before committing to it.",
+      "The strongest UK-focused guidance answers which Canadian route fits the profile, which UK documents carry the longest lead time, how the evidence is sequenced, and which official IRCC source controls the current rule.",
+    ],
+  },
+  {
     test: (path) => /express-entry|federal-skilled|canadian-experience|federal-skilled-trades/.test(path),
     topic: "Express Entry Canada",
     sentences: [
@@ -217,6 +231,10 @@ export function getFrameResearchParagraph(page) {
 
 function getFrameSupportTitle(page) {
   const path = normalizePath(page?.path);
+
+  if (path === "/canada-immigration-from-uk") {
+    return "Which Canadian route fits your UK profile, and which UK documents carry the longest lead time?";
+  }
 
   if (path === "/immigrate/express-entry") {
     return "Which Express Entry eligibility and CRS factors should you verify before creating a profile?";
@@ -590,6 +608,10 @@ function getFrameSupportTitle(page) {
 export function getFrameSupportParagraph(page) {
   const path = normalizePath(page?.path);
 
+  if (path === "/canada-immigration-from-uk") {
+    return "A UK application is realistic when the chosen Canadian route matches the evidence the applicant can produce: a valid language test, an Educational Credential Assessment for UK qualifications, the police certificate for the part of the UK actually lived in, a panel-physician medical when requested and settlement funds traceable in Canadian dollars. A British passport removes the visitor-visa step, not the language, credential, police or funds requirements behind an economic immigration route.";
+  }
+
   if (path === "/immigrate/pnp-linked-express-entry") {
     return "A provincial nomination changes an Express Entry strategy only when the applicant meets both the province's stream requirements and the applicable federal program requirements. Confirm the nomination route, valid profile facts, CRS impact, supporting documents and the federal filing deadline before treating the nomination as a permanent-residence result.";
   }
@@ -675,6 +697,10 @@ export function getFrameSupportParagraph(page) {
 
 function getFrameSupportClosing(page) {
   const path = normalizePath(page?.path);
+
+  if (path === "/canada-immigration-from-uk") {
+    return "The practical next step is to pick the Canadian route, then run the long-lead UK items in parallel so the language test, credential assessment, police certificate and funds history are all current on the day you file.";
+  }
 
   if (/express-entry|crs|federal-skilled|canadian-experience|pnp-linked/.test(path)) {
     return "The practical next step is to identify the federal program, document the points or experience being claimed and protect the invitation response window.";

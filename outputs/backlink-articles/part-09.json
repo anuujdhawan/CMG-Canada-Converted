@@ -1,0 +1,138 @@
+{
+ "part": "09",
+ "theme": "Citizenship & PR Travel Documents",
+ "topics": [
+  {
+   "category": "Citizenship",
+   "group": "Canadian Citizenship",
+   "label": "Citizenship Certificate",
+   "path": "/citizenship/citizenship-certificate",
+   "url": "https://commonwealthmigration.ca/citizenship/citizenship-certificate",
+   "seoTitle": "Canadian Citizenship Certificate 2026: Apply or Replace | CMG",
+   "metaDescription": "How to obtain proof of Canadian citizenship — new certificate applications and replacements for lost, stolen, or damaged documents.",
+   "h1": "Citizenship Certificate",
+   "lead": "A citizenship certificate is the official document proving Canadian citizenship, needed for passport applications and other government processes — this covers both first-time applications for those who acquired citizenship without one, and replacements for lost or damaged certificates.",
+   "headings": [
+    "When You Need This",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Citizenship",
+   "group": "Canadian Citizenship",
+   "label": "Citizenship Resumption",
+   "path": "/citizenship/citizenship-resumption",
+   "url": "https://commonwealthmigration.ca/citizenship/citizenship-resumption",
+   "seoTitle": "Citizenship Resumption Canada 2026 | CMG",
+   "metaDescription": "Reclaim Canadian citizenship after it was lost or renounced — eligibility and the resumption application process explained.",
+   "h1": "Citizenship Resumption",
+   "lead": "Citizenship resumption is the process for former Canadian citizens — who lost citizenship through renunciation or an older rule that no longer applies — to reclaim their status, generally through a defined application process rather than starting over as a new applicant.",
+   "headings": [
+    "Who Typically Qualifies",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Citizenship",
+   "group": "Canadian Citizenship",
+   "label": "Citizenship Renunciation",
+   "path": "/citizenship/citizenship-renunciation",
+   "url": "https://commonwealthmigration.ca/citizenship/citizenship-renunciation",
+   "seoTitle": "Citizenship Renunciation Canada 2026 | CMG",
+   "metaDescription": "How to formally renounce Canadian citizenship — eligibility conditions and why applicants typically pursue this process.",
+   "h1": "Citizenship Renunciation",
+   "lead": "Citizenship renunciation is the formal process of voluntarily giving up Canadian citizenship, generally pursued by dual citizens who need to satisfy another country's requirements or who no longer wish to hold Canadian status.",
+   "headings": [
+    "Core Requirements",
+    "Frequently Asked Questions",
+    "Related Pages",
+    "Important Consequences",
+    "Documents to Prepare",
+    "Renunciation Decision Checklist"
+   ]
+  },
+  {
+   "category": "Citizenship",
+   "group": "Canadian Citizenship",
+   "label": "Citizenship Revocation Appeal",
+   "path": "/citizenship/citizenship-revocation-appeal",
+   "url": "https://commonwealthmigration.ca/citizenship/citizenship-revocation-appeal",
+   "seoTitle": "Citizenship Revocation Appeal Canada 2026 | CMG",
+   "metaDescription": "Facing citizenship revocation for misrepresentation or fraud? Understand the process and your appeal or review options.",
+   "h1": "Citizenship Revocation Appeal",
+   "lead": "Citizenship revocation is a serious process where the government seeks to remove citizenship already granted, most commonly on grounds of fraud or material misrepresentation during the original application. Individuals facing revocation have defined rights to respond and, in many cases, seek review.",
+   "headings": [
+    "Process Overview",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Citizenship",
+   "group": "PR & Travel Documents",
+   "label": "PR Card Renewal & Citizenship (combined overview)",
+   "path": "/citizenship/pr-card-renewal-and-citizenship-combined-overview",
+   "url": "https://commonwealthmigration.ca/citizenship/pr-card-renewal-and-citizenship-combined-overview",
+   "seoTitle": "PR Card Renewal & Canadian Citizenship 2026 | CMG",
+   "metaDescription": "PR card renewal, residency obligation rules, and Canadian citizenship application requirements — physical presence, language, and test prep.",
+   "h1": "PR Card Renewal & Canadian Citizenship",
+   "lead": "Once granted permanent residence, staying in status means meeting an ongoing residency obligation and keeping a valid PR card for travel. Citizenship is the natural next step for permanent residents who meet Canada's physical presence and other eligibility requirements.",
+   "headings": [
+    "PR Residency Obligation",
+    "Canadian Citizenship Requirements",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Citizenship",
+   "group": "PR & Travel Documents",
+   "label": "PR Card Renewal — standalone page",
+   "path": "/citizenship/pr-card-renewal-standalone-page",
+   "url": "https://commonwealthmigration.ca/citizenship/pr-card-renewal-standalone-page",
+   "seoTitle": "PR Card Renewal Canada 2026 | CMG",
+   "metaDescription": "How to renew your Permanent Resident Card: residency obligation check, processing times, and how early to apply before expiry.",
+   "h1": "PR Card Renewal",
+   "lead": "A PR card is generally valid for 5 years and must be renewed to continue using it as proof of status for travel and re-entry to Canada. Renewal also involves confirming the holder still meets the residency obligation.",
+   "headings": [
+    "Renewal Process",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Citizenship",
+   "group": "PR & Travel Documents",
+   "label": "PR Card Replacement",
+   "path": "/citizenship/pr-card-replacement",
+   "url": "https://commonwealthmigration.ca/citizenship/pr-card-replacement",
+   "seoTitle": "PR Card Replacement Canada 2026 | CMG",
+   "metaDescription": "Lost, stolen, or damaged PR card? Replacement application process and how to travel in the meantime.",
+   "h1": "PR Card Replacement",
+   "lead": "A lost, stolen, or damaged PR card needs to be replaced through a dedicated application, distinct from a standard renewal — since the card may still be within its validity period when replacement becomes necessary.",
+   "headings": [
+    "What to Do",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Citizenship",
+   "group": "PR & Travel Documents",
+   "label": "PR Travel Document (PRTD)",
+   "path": "/citizenship/pr-travel-document-prtd",
+   "url": "https://commonwealthmigration.ca/citizenship/pr-travel-document-prtd",
+   "seoTitle": "PR Travel Document (PRTD) Canada 2026 | CMG",
+   "metaDescription": "PRTD application process for permanent residents abroad without a valid PR card — requirements and processing at Canadian visa offices.",
+   "h1": "PR Travel Document (PRTD)",
+   "lead": "A Permanent Resident Travel Document (PRTD) allows a permanent resident outside Canada without a valid PR card to board a flight back to Canada — applied for through the Canadian visa office responsible for the applicant's location.",
+   "headings": [
+    "When a PRTD Is Needed",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  }
+ ]
+}

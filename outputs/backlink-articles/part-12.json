@@ -1,0 +1,135 @@
+{
+ "part": "12",
+ "theme": "Appeals, Judicial Review & Legal Remedies",
+ "topics": [
+  {
+   "category": "Inadmissibility & Appeals",
+   "group": "Enforcement",
+   "label": "ARC — Authorization to Return to Canada",
+   "path": "/inadmissibility-and-appeals/arc-authorization-to-return-to-canada",
+   "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/arc-authorization-to-return-to-canada",
+   "seoTitle": "ARC — Authorization to Return to Canada 2026 | CMG",
+   "metaDescription": "How to apply for an Authorization to Return to Canada (ARC) after a deportation or exclusion order — eligibility and process.",
+   "h1": "ARC — Authorization to Return to Canada",
+   "lead": "An Authorization to Return to Canada (ARC) is required for individuals previously subject to a deportation order, or an exclusion order within its applicable bar period, who wish to return to Canada before that bar would otherwise expire.",
+   "headings": [
+    "When an ARC Is Needed",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Inadmissibility & Appeals",
+   "group": "Appeals & Legal",
+   "label": "Sponsorship Appeal (IAD)",
+   "path": "/inadmissibility-and-appeals/sponsorship-appeal-iad",
+   "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/sponsorship-appeal-iad",
+   "seoTitle": "Sponsorship Appeal — IAD Canada 2026 | CMG",
+   "metaDescription": "Appeal a refused sponsorship application to the Immigration Appeal Division — process, deadlines, and evidence strategy.",
+   "h1": "Sponsorship Appeal (IAD)",
+   "lead": "Most refused family sponsorship applications can be appealed to the Immigration Appeal Division (IAD), an independent tribunal that reviews the case afresh — including new evidence not seen by the original decision-maker.",
+   "headings": [
+    "IAD Appeal Timeline",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Inadmissibility & Appeals",
+   "group": "Appeals & Legal",
+   "label": "Removal Order Appeal",
+   "path": "/inadmissibility-and-appeals/removal-order-appeal",
+   "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/removal-order-appeal",
+   "seoTitle": "Removal Order Appeal Canada 2026 | CMG",
+   "metaDescription": "Appealing a removal order to the Immigration Appeal Division — eligibility, humanitarian factors, and the appeal timeline.",
+   "h1": "Removal Order Appeal",
+   "lead": "Permanent residents and certain protected persons facing a removal order may have the right to appeal to the Immigration Appeal Division, which can consider both the legal validity of the order and humanitarian and compassionate factors.",
+   "headings": [
+    "What the IAD Can Consider",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Inadmissibility & Appeals",
+   "group": "Appeals & Legal",
+   "label": "Residency Obligation Appeal",
+   "path": "/inadmissibility-and-appeals/residency-obligation-appeal",
+   "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/residency-obligation-appeal",
+   "seoTitle": "Residency Obligation Appeal Canada 2026 | CMG",
+   "metaDescription": "Appeal a finding that you failed to meet the PR residency obligation — qualifying exceptions and the IAD appeal process.",
+   "h1": "Residency Obligation Appeal",
+   "lead": "Permanent residents found to have not met the 730-day residency obligation can appeal that finding to the Immigration Appeal Division, which can consider both qualifying exceptions to the residency count and broader humanitarian and compassionate factors.",
+   "headings": [
+    "Common Exceptions to the Residency Count",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Inadmissibility & Appeals",
+   "group": "Appeals & Legal",
+   "label": "Judicial Review — Federal Court",
+   "path": "/inadmissibility-and-appeals/judicial-review-federal-court",
+   "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/judicial-review-federal-court",
+   "seoTitle": "Judicial Review — Federal Court Canada 2026 | CMG",
+   "metaDescription": "How to seek Federal Court judicial review of a negative immigration decision — leave applications and strict filing deadlines.",
+   "h1": "Judicial Review — Federal Court",
+   "lead": "When no appeal route is available — or an appeal has been unsuccessful — Federal Court judicial review offers a narrower form of oversight, examining whether the original decision was made reasonably and lawfully, rather than reassessing the underlying facts from scratch.",
+   "headings": [
+    "Judicial Review Process",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Inadmissibility & Appeals",
+   "group": "Appeals & Legal",
+   "label": "Stay Motion",
+   "path": "/inadmissibility-and-appeals/stay-motion",
+   "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/stay-motion",
+   "seoTitle": "Stay Motion Canada 2026: Federal Court | CMG",
+   "metaDescription": "How to file an urgent Federal Court stay motion to pause removal while a judicial review is pending.",
+   "h1": "Stay Motion",
+   "lead": "A stay motion is an urgent Federal Court application to pause a removal while a related judicial review application is pending — typically filed on very short notice when a removal date is imminent.",
+   "headings": [
+    "The Legal Test for a Stay",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Inadmissibility & Appeals",
+   "group": "Appeals & Legal",
+   "label": "Mandamus Application",
+   "path": "/inadmissibility-and-appeals/mandamus-application",
+   "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/mandamus-application",
+   "seoTitle": "Mandamus Application Canada 2026 | CMG",
+   "metaDescription": "How a mandamus application can compel IRCC to make a decision on an unreasonably delayed immigration application.",
+   "h1": "Mandamus Application",
+   "lead": "A mandamus application asks the Federal Court to order IRCC to make a decision on an application that has been unreasonably delayed — used specifically for delay, not to challenge the substance of a decision that hasn't been made yet.",
+   "headings": [
+    "What's Assessed",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Inadmissibility & Appeals",
+   "group": "Appeals & Legal",
+   "label": "Refusal & PFL Response",
+   "path": "/inadmissibility-and-appeals/refusal-and-pfl-response",
+   "url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/refusal-and-pfl-response",
+   "seoTitle": "Canada Visa Refusal Help 2026: GCMS, PFL & Appeals | CMG",
+   "metaDescription": "Refused a Canadian visa or received a Procedural Fairness Letter? GCMS notes, response strategy, and appeal options from a licensed RCIC. Urgent review.",
+   "h1": "Visa Refusal & Appeals",
+   "lead": "Officers refuse the specific application in front of them, not an applicant's full circumstances. Requesting GCMS notes, isolating the officer's actual stated concern, and building evidence directly against that concern turns most refusals into a workable next step.",
+   "headings": [
+    "Refusal Types",
+    "Procedural Fairness Letters (PFL)",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  }
+ ]
+}

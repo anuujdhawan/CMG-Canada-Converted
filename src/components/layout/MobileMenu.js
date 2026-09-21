@@ -9,26 +9,33 @@ import { navigation } from "@/config/navigation";
 import { site } from "@/config/site";
 import { cn, slugify } from "@/lib/utils";
 import { isActiveNavItem } from "@/lib/navActive";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { EASE_OUT } from "@/lib/motion";
 
 /**
  * Slide-over mobile navigation in the source sheet style:
  * red mark header, accordion groups, phone + red CTA footer.
+ *
+ * The drawer is always mounted. It used to be mounted only while `mobileOpen`
+ * was true, which removed every navigation link from the mobile-rendered HTML
+ * — and Googlebot crawls as a smartphone, so the site's entire internal link
+ * graph was missing from the version of the page Google actually renders.
+ * It now slides off-canvas when closed and is marked `inert` so it stays out
+ * of the tab order and the accessibility tree.
  */
-export default function MobileMenu({ onClose }) {
+export default function MobileMenu({ open, onClose }) {
   const [expanded, setExpanded] = useState(null);
   const pathname = usePathname();
-  const shouldReduce = useReducedMotion() ?? false;
 
-  // Lock body scroll while mounted
+  // Lock body scroll only while the drawer is actually open
   useEffect(() => {
+    if (!open) return undefined;
     const previous = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = previous;
     };
-  }, []);
+  }, [open]);
 
   // Close if the route changes while open
   const [lastPath, setLastPath] = useState(pathname);
@@ -37,24 +44,18 @@ export default function MobileMenu({ onClose }) {
     setExpanded(null);
   }
 
-  const collapseVariants = {
-    hidden: { opacity: 0, height: 0, overflow: "hidden" },
-    visible: {
-      opacity: 1,
-      height: "auto",
-      overflow: "hidden",
-      transition: { duration: 0.22, ease: EASE_OUT },
-    },
-    exit: {
-      opacity: 0,
-      height: 0,
-      overflow: "hidden",
-      transition: { duration: 0.16, ease: EASE_OUT },
-    },
-  };
-
   return (
-    <div className="fixed inset-0 z-[1100] min-[1120px]:hidden" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <div
+      className={cn(
+        "fixed inset-0 z-[1100] min-[1120px]:hidden overflow-hidden",
+        !open && "pointer-events-none"
+      )}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile menu"
+      aria-hidden={!open}
+      inert={!open}
+    >
       {/* Backdrop */}
       <button
         type="button"
@@ -65,9 +66,8 @@ export default function MobileMenu({ onClose }) {
 
       {/* Panel */}
       <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: 0 }}
-        exit={{ x: "100%" }}
+        initial={false}
+        animate={{ x: open ? 0 : "100%" }}
         transition={{ duration: 0.28, ease: EASE_OUT }}
         className="cmg-mobile-menu absolute right-0 top-0 flex h-full w-[85vw] sm:w-[320px] flex-col shadow-dropdown"
       >
@@ -140,37 +140,35 @@ export default function MobileMenu({ onClose }) {
                     className={cn("h-4 w-4 text-muted transition-transform duration-200", isOpen && "rotate-180")}
                   />
                 </button>
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      key={`panel-${item.label}`}
-                      id={`mobile-${slugify(item.label)}`}
-                      variants={shouldReduce ? {} : collapseVariants}
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
-                      className="ml-3 space-y-0.5 pb-2 border-l-2 border-primary/10 pl-3"
-                    >
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href + child.label}
-                          href={child.href}
-                          onClick={onClose}
-                          className="block px-3 py-2.5 rounded-xl text-sm text-muted font-medium hover:text-primary hover:bg-accent-soft transition-all"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                      <Link
-                        href={item.href}
-                        onClick={onClose}
-                        className="dropdown-view-all block px-3 py-2.5 rounded-xl text-sm font-bold text-primary no-underline"
-                      >
-                        View all {item.label.toLowerCase()} →
-                      </Link>
-                    </motion.div>
+                {/* Kept mounted while collapsed: these are the real page links,
+                    and unmounting them removed them from the crawled HTML. */}
+                <div
+                  id={`mobile-${slugify(item.label)}`}
+                  aria-hidden={!isOpen}
+                  inert={!isOpen}
+                  className={cn(
+                    "ml-3 space-y-0.5 border-l-2 border-primary/10 pl-3 overflow-hidden transition-[max-height,opacity,padding] duration-200 ease-out",
+                    isOpen ? "max-h-[70vh] pb-2 opacity-100" : "max-h-0 pb-0 opacity-0 pointer-events-none"
                   )}
-                </AnimatePresence>
+                >
+                  {item.children.map((child) => (
+                    <Link
+                      key={child.href + child.label}
+                      href={child.href}
+                      onClick={onClose}
+                      className="block px-3 py-2.5 rounded-xl text-sm text-muted font-medium hover:text-primary hover:bg-accent-soft transition-all"
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                  <Link
+                    href={item.href}
+                    onClick={onClose}
+                    className="dropdown-view-all block px-3 py-2.5 rounded-xl text-sm font-bold text-primary no-underline"
+                  >
+                    View all {item.label.toLowerCase()} →
+                  </Link>
+                </div>
               </div>
             );
           })}

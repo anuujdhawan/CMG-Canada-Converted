@@ -1,3 +1,16 @@
+/**
+ * Client Success Gallery ("Pathways that move from planning to progress").
+ *
+ * CURRENTLY NOT RENDERED — the section was taken off the site, but the
+ * component is intentionally kept so it can be switched back on without
+ * rebuilding it. Its call sites were commented out in:
+ *   - src/components/home/ReferenceHomepage.js
+ *   - src/components/home/ReferenceServicePage.js
+ * Its place is currently taken by ./LatestBlogsCarousel.js.
+ *
+ * To restore: uncomment the import and the <LiveSuccessVideos /> call in those
+ * two files (the exact lines are left in place as comments).
+ */
 "use client";
 
 import Image from "next/image";

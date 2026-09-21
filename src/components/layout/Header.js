@@ -4,7 +4,7 @@ import { useCallback, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Menu, ChevronDown, AlertTriangle, ArrowRight } from "lucide-react";
 import { navigation } from "@/config/navigation";
 import { site } from "@/config/site";
@@ -34,14 +34,31 @@ function BrandLogo() {
 }
 
 /* ─── Dropdown panel wrapper ──────────────────────────────────────── */
-function DropdownPanel({ children, className, id }) {
+
+/**
+ * The panel is always mounted, even while closed.
+ *
+ * Mounting it conditionally (`{open && …}`) meant none of the mega-menu links
+ * existed in the server-rendered HTML: the entire site navigation — roughly a
+ * hundred internal links per page — was invisible to crawlers, and pages that
+ * only appeared inside a dropdown had zero crawlable inbound links. That is
+ * why so many URLs sat in Search Console as "Discovered - currently not
+ * indexed" with no last-crawl date.
+ *
+ * The panel is now hidden with opacity + `pointer-events: none` (+ `inert` for
+ * assistive tech) instead of being unmounted, so every menu link is present in
+ * the HTML on first paint while the interaction still feels identical.
+ */
+function DropdownPanel({ children, className, id, open }) {
   return (
     <motion.div
       id={id}
-      initial={{ opacity: 0, y: -6, scale: 0.97 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: -6, scale: 0.97 }}
+      initial={false}
+      animate={{ opacity: open ? 1 : 0, y: open ? 0 : -6, scale: open ? 1 : 0.97 }}
       transition={{ duration: 0.18, ease: EASE_OUT }}
+      aria-hidden={!open}
+      inert={!open}
+      style={{ pointerEvents: open ? "auto" : "none" }}
       className={cn(
         "site-header__dropdown-panel absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white rounded-2xl p-4",
         "border border-line shadow-[0_20px_60px_color-mix(in_srgb,var(--brand-navy)_12%,transparent),0_4px_16px_color-mix(in_srgb,var(--brand-navy)_5%,transparent)]",
@@ -56,37 +73,68 @@ function DropdownPanel({ children, className, id }) {
 }
 
 /* ─── CMG-style mega dropdown (grouped columns + featured card) ─────── */
+
+/**
+ * Groups that are rendered as a nested sub-section inside the "Other PR
+ * Pathways" column instead of as their own top-level column. Relocating them
+ * keeps the column count stable, which in turn keeps the featured card in the
+ * fifth column exactly where it has always been.
+ */
+const RELOCATED_MENU_CATEGORIES = ["Caregivers", "Immigrate from the UK"];
+
 function MegaDropdown({ item, open, onClose }) {
   const sourceColumns = item.columns || [];
-  const relocatedColumn = sourceColumns.find((column) => column.category === "Caregivers");
-  const columns = sourceColumns.filter((column) => column !== relocatedColumn);
+  const relocatedColumns = sourceColumns.filter((column) => RELOCATED_MENU_CATEGORIES.includes(column.category));
+  const columns = sourceColumns.filter((column) => !relocatedColumns.includes(column));
   const featured = item.featured;
-  // Caregivers sits below Other PR Pathways in the Immigrate menu, leaving
-  // room for its featured Express Entry Draws card in the fifth column.
+  // Relocated groups sit below Other PR Pathways in the Immigrate menu,
+  // leaving room for its featured Express Entry Draws card in the fifth column.
   const showFeatured = featured && columns.length < 5;
   const gridCols = `${columns.map(() => "minmax(0, 1fr)").join(" ")}${showFeatured ? " minmax(200px, 0.9fr)" : ""}`;
 
   return (
-    <AnimatePresence>
-      {open && (        <DropdownPanel
-          id={`${slugify(item.label)}-dropdown-panel`}>
-          <div className="grid min-w-0 items-start gap-x-5 gap-y-1 pt-2" style={{ gridTemplateColumns: gridCols }}>
-            {columns.map((col) => {
-              const viewAll = col.items[0]?.href;
-              return (
-                <div key={col.category} className="flex flex-col">
+    <DropdownPanel
+      id={`${slugify(item.label)}-dropdown-panel`}
+      open={open}
+    >
+      <div className="grid min-w-0 items-start gap-x-5 gap-y-1 pt-2" style={{ gridTemplateColumns: gridCols }}>
+        {columns.map((col) => {
+          const viewAll = col.items[0]?.href;
+          return (
+            <div key={col.category} className="flex flex-col">
+              <p className="dropdown-category-title flex items-center gap-1.5 whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.08em] text-primary mb-2.5 pl-2.5">
+                <span aria-hidden className="h-1 w-3 rounded-full bg-accent" />
+                {col.category}
+              </p>
+              <div className="space-y-0.5">
+                {col.items.map((link) => (
+                  <DropdownLink key={link.href + link.label} link={link} onClose={onClose} />
+                ))}
+              </div>
+              {viewAll && (
+                <Link
+                  href={viewAll}
+                  onClick={onClose}
+                  className="dropdown-view-all group mt-1.5 flex items-center gap-1 pl-2.5 text-[11.5px] font-bold text-accent-dark hover:text-primary transition-colors no-underline after:hidden"
+                >
+                  View all
+                  <ArrowRight aria-hidden className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5" />
+                </Link>
+              )}
+              {col.category === "Other PR Pathways" && relocatedColumns.map((relocated) => (
+                <div key={relocated.category} className="mt-5 border-t border-line/60 pt-4">
                   <p className="dropdown-category-title flex items-center gap-1.5 whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.08em] text-primary mb-2.5 pl-2.5">
                     <span aria-hidden className="h-1 w-3 rounded-full bg-accent" />
-                    {col.category}
+                    {relocated.category}
                   </p>
                   <div className="space-y-0.5">
-                    {col.items.map((link) => (
+                    {relocated.items.map((link) => (
                       <DropdownLink key={link.href + link.label} link={link} onClose={onClose} />
                     ))}
                   </div>
-                  {viewAll && (
+                  {relocated.items.length > 1 && relocated.items[0]?.href && (
                     <Link
-                      href={viewAll}
+                      href={relocated.items[0].href}
                       onClick={onClose}
                       className="dropdown-view-all group mt-1.5 flex items-center gap-1 pl-2.5 text-[11.5px] font-bold text-accent-dark hover:text-primary transition-colors no-underline after:hidden"
                     >
@@ -94,53 +142,30 @@ function MegaDropdown({ item, open, onClose }) {
                       <ArrowRight aria-hidden className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5" />
                     </Link>
                   )}
-                  {relocatedColumn && col.category === "Other PR Pathways" && (
-                    <div className="mt-5 border-t border-line/60 pt-4">
-                      <p className="dropdown-category-title flex items-center gap-1.5 whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.08em] text-primary mb-2.5 pl-2.5">
-                        <span aria-hidden className="h-1 w-3 rounded-full bg-accent" />
-                        {relocatedColumn.category}
-                      </p>
-                      <div className="space-y-0.5">
-                        {relocatedColumn.items.map((link) => (
-                          <DropdownLink key={link.href + link.label} link={link} onClose={onClose} />
-                        ))}
-                      </div>
-                      {relocatedColumn.items[0]?.href && (
-                        <Link
-                          href={relocatedColumn.items[0].href}
-                          onClick={onClose}
-                          className="dropdown-view-all group mt-1.5 flex items-center gap-1 pl-2.5 text-[11.5px] font-bold text-accent-dark hover:text-primary transition-colors no-underline after:hidden"
-                        >
-                          View all
-                          <ArrowRight aria-hidden className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5" />
-                        </Link>
-                      )}
-                    </div>
-                  )}
                 </div>
-              );
-            })}
+              ))}
+            </div>
+          );
+        })}
 
-            {showFeatured && (
-              <div className="flex min-w-0 flex-col bg-navy rounded-xl p-6">
-                <p className="text-[11px] font-bold uppercase tracking-widest text-white/60 mb-2">{featured.label}</p>
-                <p className="font-bold text-white text-lg mb-2 leading-snug">{featured.title}</p>
-                <p className="mb-4 flex-1 text-sm leading-relaxed text-white/70">
-                  {featured.desc || "Open the source-backed guide and compare the route with related options."}
-                </p>
-                <Link
-                  href={featured.href}
-                  onClick={onClose}
-                  className="text-xs font-bold text-white hover:text-accent-soft transition-colors inline-flex items-center gap-1"
-                >
-                  Learn More →
-                </Link>
-              </div>
-            )}
+        {showFeatured && (
+          <div className="flex min-w-0 flex-col bg-navy rounded-xl p-6">
+            <p className="text-[11px] font-bold uppercase tracking-widest text-white/60 mb-2">{featured.label}</p>
+            <p className="font-bold text-white text-lg mb-2 leading-snug">{featured.title}</p>
+            <p className="mb-4 flex-1 text-sm leading-relaxed text-white/70">
+              {featured.desc || "Open the source-backed guide and compare the route with related options."}
+            </p>
+            <Link
+              href={featured.href}
+              onClick={onClose}
+              className="text-xs font-bold text-white hover:text-accent-soft transition-colors inline-flex items-center gap-1"
+            >
+              Learn More →
+            </Link>
           </div>
-        </DropdownPanel>
-      )}
-    </AnimatePresence>
+        )}
+      </div>
+    </DropdownPanel>
   );
 }
 
@@ -184,9 +209,48 @@ function NavLabel({ item }) {
   if (!item.shortLabel) return item.label;
   return (
     <>
-      <span className="xl:hidden">{item.shortLabel}</span>
-      <span className="hidden xl:inline">{item.label}</span>
+      <span className="min-[1800px]:hidden">{item.shortLabel}</span>
+      <span className="hidden min-[1800px]:inline">{item.label}</span>
     </>
+  );
+}
+
+/**
+ * Inner content of a top-level item — identical for a plain link and for a
+ * dropdown trigger, so the two branches cannot drift apart again.
+ *
+ * The chevron slot is rendered even when there is no panel to open. "Home"
+ * used to be the only bare `<Link>` in the row, which made its box ~18px
+ * narrower than every neighbour and pushed its label off the grid the
+ * dropdown triggers sit on — the one item that visibly did not belong.
+ * Reserving the slot puts every label on the same rhythm; `invisible` keeps
+ * it out of the accessibility tree and out of hit-testing.
+ */
+function NavItemInner({ item, open = false, hasPanel = false }) {
+  return (
+    <>
+      {item.standalone && (
+        <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent animate-pulse" />
+      )}
+      <NavLabel item={item} />
+      <ChevronDown
+        aria-hidden
+        className={cn(
+          "h-3.5 w-3.5 shrink-0 transition-transform duration-200",
+          open && "rotate-180",
+          !hasPanel && "invisible"
+        )}
+      />
+    </>
+  );
+}
+
+/* State colours, shared by both branches (hover/geometry live in globals.css). */
+function navItemStateClass(active, open = false, standalone = false) {
+  return cn(
+    (active || open) && "text-primary bg-primary/10",
+    active && "nav-tab-active-light",
+    standalone && "text-accent-dark font-bold"
   );
 }
 
@@ -222,10 +286,19 @@ export default function Header() {
     [openMenu]
   );
 
-  const navLinkClass =
-    "relative px-1.5 py-2.5 rounded-md text-[13px] font-semibold text-white hover:text-white hover:bg-white/10 transition-all duration-150 whitespace-nowrap";
-  const dropdownBtnClass =
-    "relative flex items-center gap-0.5 px-1.5 py-2.5 rounded-md text-[13px] font-semibold text-white hover:text-white hover:bg-white/10 transition-all duration-150 whitespace-nowrap";
+  /* One geometry for every top-level item, Home included.
+   *
+   * The row gap is a single value rather than `gap-1 xl:gap-1.5`: the old
+   * split made the whole menu shift a few pixels sideways the moment the
+   * viewport crossed 1280px, and a menu that re-spaces itself on resize is
+   * exactly what "not in symmetry" looks like. The tighter 2px gap also
+   * pays for the chevron slot Home now reserves, so the row stays inside
+   * the pill at 1120px where it previously only just fitted.
+   *
+   * Hover (background + border) and the active pill are owned by
+   * globals.css, so no hover utilities here — one owner per property. */
+  const navItemClass =
+    "relative flex items-center gap-1 rounded-md px-0.5 py-2.5 text-[11px] xl:text-[12px] font-semibold text-white transition-all duration-150 whitespace-nowrap";
 
   return (
     <>
@@ -257,11 +330,14 @@ export default function Header() {
               <BrandLogo />
 
               {/* Desktop Nav */}
-              <nav className="site-header__desktop-nav hidden min-[1120px]:flex items-center gap-4" aria-label="Main">
+              <nav className="site-header__desktop-nav hidden min-[1120px]:flex items-center gap-0.5" aria-label="Main">
                 {navigation.header.map((item) => {
                   const open = openMenu === item.label;
                   const active = isActiveNavItem(pathname, item);
-                  if (item.columns?.length) {
+                  const hasPanel = !!item.columns?.length;
+                  const stateClass = navItemStateClass(active, open, item.standalone);
+
+                  if (hasPanel) {
                     return (
                       <div
                         key={item.label}
@@ -272,33 +348,30 @@ export default function Header() {
                           ref={(el) => {
                             triggerRefs.current[item.label] = el;
                           }}
-                          className={cn(
-                            dropdownBtnClass,
-                            (open || active) && "text-primary bg-primary/10",
-                            active && "nav-tab-active-light",
-                            item.standalone && "text-accent-dark font-bold"
-                          )}
+                          className={cn(navItemClass, stateClass)}
                           aria-haspopup="true"
                           aria-expanded={open}
                           aria-controls={`${slugify(item.label)}-dropdown-panel`}
                           onClick={() => setOpenMenu(open ? null : item.label)}
                           onKeyDown={(e) => handleKeyDown(e, item.label)}
                         >
-                          {item.standalone && (
-                            <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-                          )}
-                          <NavLabel item={item} />
-                          <ChevronDown
-                            className={cn("h-3.5 w-3.5 transition-transform duration-200", open && "rotate-180")}
-                          />
+                          <NavItemInner item={item} open={open} hasPanel />
                         </button>
                         <MegaDropdown item={item} open={open} onClose={close} />
                       </div>
                     );
                   }
+
+                  /* Plain link — same shell, same active pill, same chevron
+                     slot as a trigger, so it reads as one of the set. */
                   return (
-                    <Link key={item.label} href={item.href} className={navLinkClass}>
-                      <NavLabel item={item} />
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      className={cn(navItemClass, stateClass)}
+                      aria-current={active ? "page" : undefined}
+                    >
+                      <NavItemInner item={item} />
                     </Link>
                   );
                 })}
@@ -308,7 +381,7 @@ export default function Header() {
               <div className="hidden min-[1120px]:flex items-center">
                 <Link
                   href={site.ctas.primary.href}
-                  className="site-header__cta rounded-md bg-primary text-white font-bold px-4 py-2.5 text-[13px] hover:bg-navy transition-colors shadow-md whitespace-nowrap"
+                  className="site-header__cta rounded-md bg-primary text-white font-bold px-3.5 py-2.5 text-[12px] hover:bg-navy transition-colors shadow-md whitespace-nowrap"
                 >
                   {site.ctas.primary.label}
                 </Link>
@@ -327,7 +400,10 @@ export default function Header() {
         </div>
       </motion.header>
 
-      {mobileOpen && <MobileMenu onClose={() => setMobileOpen(false)} />}
+      {/* Always mounted so the mobile-rendered HTML (Googlebot crawls as a
+          smartphone) contains the full navigation. Closed state is an
+          off-canvas panel with pointer-events disabled — see MobileMenu. */}
+      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
     </>
   );
 }

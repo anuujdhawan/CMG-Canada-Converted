@@ -1,4 +1,5 @@
 import { getAllPages } from "./sitePages";
+import { RESEARCH_BLOG_POSTS } from "@/data/blog-research";
 
 export const BLOG_CATEGORIES = [
   {
@@ -58,6 +59,41 @@ export const BLOG_CATEGORIES = [
 ];
 
 const CATEGORY_BY_SLUG = Object.fromEntries(BLOG_CATEGORIES.map((category) => [category.slug, category]));
+
+/** Category slug used when no category is requested, or an unknown one is. */
+export const ALL_BLOG_CATEGORY = "all";
+
+/**
+ * The research posts in `src/data/blog-research.js` carry their own editorial
+ * category label; this maps each label onto one of the tabs above. Kept at
+ * module scope because both `getBlogPosts` and the article route need it.
+ */
+const RESEARCH_CATEGORY_SLUG = {
+  "Canada Immigration": "immigration-guides",
+  "Canada Immigration News": "immigration-guides",
+  "Permanent Residence": "immigration-guides",
+  "Express Entry": "express-entry",
+  "Provincial Nominee Programs": "provincial-nominee-programs",
+  "Regional Immigration": "provincial-nominee-programs",
+  "Work Permits": "work-permits",
+  "Employer Immigration": "employer-immigration",
+  "Study to Work": "study-permits",
+  "Study Permits": "study-permits",
+  "Visitor Visas": "visitor-visas",
+  "Family Sponsorship": "family-sponsorship",
+  "Processing Times": "immigration-guides",
+  "Citizenship": "immigration-guides",
+};
+
+/** Resolve a research post's editorial label to a tab slug. */
+export function researchCategorySlug(label) {
+  return RESEARCH_CATEGORY_SLUG[label] || "immigration-guides";
+}
+
+/** The tab definition (label, title, description) behind a slug. */
+export function getBlogCategory(slug) {
+  return CATEGORY_BY_SLUG[slug] || null;
+}
 
 const BLOG_IMAGE_BY_FILE = {
   "blog__canada-visitor-visa-refused.md": {
@@ -179,7 +215,7 @@ function imageForPost(page, category) {
 }
 
 export function getBlogPosts() {
-  return getAllPages()
+  const sourcePosts = getAllPages()
     .filter((page) => page.path.startsWith("/blog/"))
     .map((page) => {
       const category = categoryForPath(page.path);
@@ -190,11 +226,83 @@ export function getBlogPosts() {
         image: imageForPost(page, category),
       };
     })
-    .sort((a, b) => {
-      const categoryDifference = BLOG_CATEGORIES.indexOf(a.category) - BLOG_CATEGORIES.indexOf(b.category);
-      if (categoryDifference !== 0) return categoryDifference;
-      return a.title.localeCompare(b.title);
-    });
+    .sort((a, b) => a.title.localeCompare(b.title));
+  const generatedPosts = RESEARCH_BLOG_POSTS.map((post) => ({
+    path: `/blog/${post.slug}`,
+    title: post.title,
+    seo: { title: `${post.title} | Commonwealth Migration Canada`, description: post.description, keywords: post.keywords.split('; ') },
+    meta: { lastModified: '2026-09-21' },
+    category: { slug: researchCategorySlug(post.category), label: post.category, title: post.category, description: post.description },
+    image: DEFAULT_BLOG_IMAGE,
+    research: post,
+  }));
+  return [...sourcePosts, ...generatedPosts].sort((a, b) => a.title.localeCompare(b.title));
+}
+
+/** A single post by its `/blog/<slug>` path, or null. */
+export function getBlogPostBySlug(slug) {
+  return getBlogPosts().find((post) => post.path === `/blog/${slug}`) || null;
+}
+
+/** A post plus its category slug and tab definition, resolved once. */
+export function getBlogPostContext(slug) {
+  const post = getBlogPostBySlug(slug);
+  if (!post) return null;
+  const categorySlug = post.category?.slug || ALL_BLOG_CATEGORY;
+  return { post, categorySlug, category: getBlogCategory(categorySlug) || post.category };
+}
+
+/**
+ * Normalise a `?category=` value from the URL.
+ *
+ * Falls back to "all" for anything unrecognised so `?category=typo` shows the
+ * full library instead of an empty panel.
+ */
+export function resolveBlogCategory(value) {
+  const slug = String(Array.isArray(value) ? value[0] ?? "" : value ?? "").trim().toLowerCase();
+  if (!slug || slug === ALL_BLOG_CATEGORY) return ALL_BLOG_CATEGORY;
+  return CATEGORY_BY_SLUG[slug] ? slug : ALL_BLOG_CATEGORY;
+}
+
+/** Parse a `?page=` value, defaulting to 1 for anything unusable. */
+export function resolveBlogPage(value) {
+  const raw = Array.isArray(value) ? value[0] : value;
+  const parsed = Number.parseInt(String(raw ?? "1"), 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
+}
+
+/**
+ * Shareable, crawlable href for a blog view.
+ *
+ * The default view stays at the bare `/blog` so the canonical list URL is not
+ * duplicated by a `?category=all` twin.
+ */
+export function blogHref({ category, page } = {}) {
+  const params = new URLSearchParams();
+  if (category && category !== ALL_BLOG_CATEGORY) params.set("category", category);
+  if (Number(page) > 1) params.set("page", String(page));
+  const query = params.toString();
+  return query ? `/blog?${query}` : "/blog";
+}
+
+/**
+ * Page a list of posts, clamping the requested page into range.
+ *
+ * Clamping matters: `?page=99` must render the last page rather than an empty
+ * grid, and an out-of-range page must never produce a "Page 99 of 1" label.
+ */
+export function paginateBlogPosts(items = [], page = 1, perPage = 6) {
+  const totalPages = Math.max(1, Math.ceil(items.length / perPage));
+  const current = Math.min(Math.max(1, Number(page) || 1), totalPages);
+  const start = (current - 1) * perPage;
+  return {
+    items: items.slice(start, start + perPage),
+    page: current,
+    totalPages,
+    total: items.length,
+    hasPrev: current > 1,
+    hasNext: current < totalPages,
+  };
 }
 
 export function getBlogGroups() {
@@ -205,4 +313,29 @@ export function getBlogGroups() {
       posts: posts.filter((post) => post.category.slug === category.slug),
     }))
     .filter((group) => group.posts.length > 0);
+}
+
+/**
+ * Editorial "newest first" order for the Canada immigration news index.
+ *
+ * Deliberately a curated slug list rather than a date sort: the research posts
+ * carry no publish date, and this index is meant to be the *policy and timing*
+ * feed — levels plans, category announcements, processing updates — not a
+ * second copy of the topic library. Any slug that no longer exists is skipped
+ * silently, so removing a post cannot leave a dead card behind.
+ */
+const NEWS_SLUGS = [
+  "canada-immigration-levels-plan-2026",
+  "express-entry-canada-2026-categories",
+  "canada-immigration-news-monthly-ircc-update",
+  "provincial-nominee-program-canada-2026",
+  "canada-immigration-processing-times",
+  "what-delays-canada-immigration-application",
+];
+
+/** The curated news feed, resolved against the full post library. */
+export function getNewsPosts() {
+  const posts = getBlogPosts();
+  const byPath = new Map(posts.map((post) => [post.path, post]));
+  return NEWS_SLUGS.map((slug) => byPath.get(`/blog/${slug}`)).filter(Boolean);
 }

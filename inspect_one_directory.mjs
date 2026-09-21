@@ -1,0 +1,7 @@
+import {createRequire} from 'node:module'; const {chromium}=createRequire(import.meta.url)('playwright-core');
+const b=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'}); const p=await b.newPage();
+await p.goto('https://dashboard.n49.com/add-biz',{waitUntil:'domcontentloaded',timeout:20000}); await p.waitForTimeout(1500);
+console.log('URL',p.url(),'TITLE',await p.title()); console.log('LINKS',await p.locator('a').evaluateAll(es=>es.map(e=>({text:(e.innerText||'').trim(),href:e.href})).filter(x=>/add|list|business|free/i.test(x.text+' '+x.href)).slice(0,80))); console.log('FORMS',await p.locator('form').count()); console.log('INPUTS',await p.locator('input,textarea,select,button').evaluateAll(es=>es.map(e=>({tag:e.tagName,type:e.type||'',name:e.name||'',id:e.id||'',text:(e.innerText||e.value||'').trim().slice(0,80),href:e.href||''})).slice(0,100)));
+console.log('BODY', (await p.locator('body').innerText()).slice(0,2500));
+console.log('FORM_META',await p.locator('form').evaluateAll(fs=>fs.map(f=>({action:f.action,method:f.method,html:f.outerHTML.slice(0,1200)}))));
+await b.close();

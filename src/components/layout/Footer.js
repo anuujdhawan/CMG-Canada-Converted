@@ -30,7 +30,7 @@ const REGULATORY_BODIES = [
     name: "CICC",
     full: "College of Immigration and Citizenship Consultants",
     sub: "Regulator of RCIC Consultants",
-    href: "https://college-ic.ca/",
+    href: "https://register.college-ic.ca/",
   },
   {
     name: "ESDC",
@@ -195,6 +195,7 @@ export default function Footer() {
                         className="site-footer__social-link inline-flex size-[2.15rem] items-center justify-center rounded-full border border-[var(--brand-border)] bg-white text-[var(--brand-primary)] shadow-[0_2px_8px_color-mix(in_srgb,var(--brand-primary)_4%,transparent)] transition-[transform,background,color,border-color] duration-[180ms] ease-in-out hover:-translate-y-0.5 hover:border-[var(--brand-primary)] hover:bg-[var(--brand-primary)] hover:text-[#ffffff]"
                       >
                         <Icon className="h-[15px] w-[15px]" />
+                        <span className="sr-only">{label}</span>
                       </a>
                     );
                   })}
@@ -230,7 +231,7 @@ export default function Footer() {
           </div>
 
           {/* Link columns */}
-          <div className="site-footer__links grid grid-cols-5 items-start gap-x-5 gap-y-7 pt-[.35rem] max-[1100px]:grid-cols-3 max-[720px]:grid-cols-2 max-[720px]:gap-[1.6rem_1rem] max-[520px]:gap-[1.75rem_1rem]">
+          <div className="site-footer__links grid grid-cols-6 items-start gap-x-5 gap-y-7 pt-[.35rem] max-[1100px]:grid-cols-3 max-[720px]:grid-cols-2 max-[720px]:gap-[1.6rem_1rem] max-[520px]:gap-[1.75rem_1rem]">
             {linkColumns.map((col) => (
               <LinkColumn key={col.title} title={col.title} links={col.links} />
             ))}

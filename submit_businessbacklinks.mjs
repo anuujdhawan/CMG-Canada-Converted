@@ -1,0 +1,14 @@
+import {createRequire} from 'node:module'; const {chromium}=createRequire(import.meta.url)('playwright-core');
+const b=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'}); const p=await b.newPage();
+await p.goto('https://www.businessbacklinks.co.uk/addbusiness/category.php?category=legal-services',{waitUntil:'domcontentloaded',timeout:20000});
+const desc='Commonwealth Migration Group Inc. is a CICC-regulated Canadian immigration practice serving clients in Brampton and across Canada. The firm provides Express Entry, provincial nominee, work permit, study permit, family sponsorship, visitor visa, citizenship, refusal and inadmissibility guidance. Clients receive clear, evidence-led preparation based on their circumstances and current official requirements.';
+await p.locator('input[name="firstname"]').fill('Commonwealth');
+await p.locator('input[name="name"]').fill('Commonwealth Migration Group Inc.');
+await p.locator('input[name="website"]').fill('https://commonwealthmigration.ca/');
+await p.locator('input[name="email"]').fill('info@commonwealthmigration.ca');
+await p.locator('textarea[name="description"]').fill(desc);
+await p.locator('input[name="password"]').fill('Cmg-Directory-2026!R711592');
+await p.locator('input[name="security"]').fill('8');
+console.log('form-ready',await p.locator('input[name="firstname"]').inputValue(),await p.locator('input[name="website"]').inputValue());
+await p.locator('input[type="submit"][value*="Submit"]').click(); await p.waitForLoadState('domcontentloaded').catch(()=>{}); await p.waitForTimeout(1000);
+console.log('result-url',p.url()); console.log('result-title',await p.title()); console.log((await p.locator('body').innerText()).slice(0,5000)); await b.close();

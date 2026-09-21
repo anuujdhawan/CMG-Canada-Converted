@@ -1,0 +1,5 @@
+import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
+const path='outputs/2026-09-20-directory-prospects/commonwealth-migration-free-directory-prospects.xlsx'; const wb=await SpreadsheetFile.importXlsx(await FileBlob.load(path)); const sh=wb.worksheets.getItem('Directory Prospects');
+sh.getRange('K51').values=[['Unavailable - no Playwright response']]; sh.getRange('O51').values=[['Playwright launch did not return a page response or listing form from the advertised add-company URL; no submission was attempted.']]; sh.getRange('P51').values=[['https://ontariobusinessdir.com/u/company_add.php']];
+sh.getRange('K52').values=[['Manual account step required']]; sh.getRange('O52').values=[['Playwright confirmed AD18 advertises free 60-day listings and exposes a signup route. Signup requires date-of-birth selection plus account/email onboarding; no listing was submitted without completing that account step.']]; sh.getRange('P52').values=[['https://www.ad18.ca/signup']];
+const out=await SpreadsheetFile.exportXlsx(wb); await out.save(path); console.log('updated');

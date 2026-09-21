@@ -1,0 +1,3 @@
+import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
+const path='outputs/2026-09-20-directory-prospects/commonwealth-migration-free-directory-prospects.xlsx'; const wb=await SpreadsheetFile.importXlsx(await FileBlob.load(path)); const sh=wb.worksheets.getItem('Directory Prospects');
+sh.getRange('K49').values=[['Manual CAPTCHA required']]; sh.getRange('O49').values=[['Playwright found a contact/listing inquiry form that explicitly invites businesses to list. Submission is protected by a visible math CAPTCHA (12 + 12); no submission was attempted or claimed.']]; sh.getRange('P49').values=[['https://bramptonbusinesses.ca/contact/']]; const out=await SpreadsheetFile.exportXlsx(wb); await out.save(path); console.log('updated');

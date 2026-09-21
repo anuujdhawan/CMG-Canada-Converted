@@ -8,7 +8,9 @@ export const whatsappUrl = (() => {
   if (/^https?:\/\/(wa\.me|api\.whatsapp\.com|chat\.whatsapp\.com)/i.test(raw)) return raw;
   if (/^https?:\/\//i.test(raw)) return raw;
 
-  // Bare phone number (e.g. +14165551234 or 14165551234) → build wa.me link.
+  // Bare phone number (e.g. +14165551234 or 14165551234) → build a direct
+  // api.whatsapp.com link. The wa.me shortlink is avoided because it answers
+  // with a 302 redirect, which crawlers report as an external 3XX link.
   const digits = raw.replace(/[^\d]/g, "");
-  return digits.length >= 8 ? `https://wa.me/${digits}` : raw;
+  return digits.length >= 8 ? `https://api.whatsapp.com/send/?phone=${digits}` : raw;
 })();

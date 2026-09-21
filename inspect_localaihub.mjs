@@ -1,0 +1,13 @@
+import {createRequire} from 'node:module';
+const {chromium}=createRequire(import.meta.url)('playwright-core');
+const b=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
+const p=await b.newPage();
+try {
+  await p.goto('https://localaihub.ca/directory/brampton',{waitUntil:'domcontentloaded',timeout:25000});
+  await p.waitForTimeout(1200);
+  console.log('URL',p.url(),'TITLE',await p.title());
+  console.log('LINKS',await p.locator('a').evaluateAll(es=>es.map(e=>({text:(e.innerText||'').trim(),href:e.href})).filter(x=>/add|list|submit|claim|business|directory/i.test(x.text+' '+x.href)).slice(0,80)));
+  console.log('FIELDS',await p.locator('input,textarea,select,button').evaluateAll(es=>es.map(e=>({tag:e.tagName,type:e.type||'',name:e.name||'',id:e.id||'',text:(e.innerText||e.value||'').trim().slice(0,80)})).slice(0,120)));
+  console.log('BODY',(await p.locator('body').innerText()).slice(0,3000));
+} catch(e) { console.log('ERROR',e.message); }
+await b.close();

@@ -1,0 +1,139 @@
+{
+ "part": "05",
+ "theme": "Immigrate — UK Route, Visit & Visitor Visas",
+ "topics": [
+  {
+   "category": "Visit",
+   "group": "Visitor & Temporary",
+   "label": "Visitor Visa (TRV) — standalone page",
+   "path": "/visit/visitor-visa-trv-standalone-page",
+   "url": "https://commonwealthmigration.ca/visit/visitor-visa-trv-standalone-page",
+   "seoTitle": "Visitor Visa (TRV) Canada 2026: Requirements | CMG",
+   "metaDescription": "Temporary Resident Visa (TRV) requirements: ties assessment, funds, and common refusal reasons. Free application review from a licensed RCIC.",
+   "h1": "Visitor Visa (TRV)",
+   "lead": "A Temporary Resident Visa (TRV) is required for citizens of many countries to enter Canada as a visitor. Officers assess each application primarily on whether the traveller is likely to leave Canada by the end of their authorized stay.",
+   "headings": [
+    "What Officers Assess",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Visit",
+   "group": "Visitor & Temporary",
+   "label": "eTA (Electronic Travel Authorization)",
+   "path": "/visit/eta-electronic-travel-authorization",
+   "url": "https://commonwealthmigration.ca/visit/eta-electronic-travel-authorization",
+   "seoTitle": "Electronic Travel Authorization (eTA) Canada 2026 | CMG",
+   "metaDescription": "eTA requirements for visa-exempt travellers flying to Canada: eligibility, validity period, and how it differs from a visitor visa.",
+   "h1": "Electronic Travel Authorization (eTA)",
+   "lead": "An eTA is a lightweight entry requirement for citizens of visa-exempt countries arriving in Canada by air — electronically linked to the traveller's passport rather than issued as a physical visa document.",
+   "headings": [
+    "eTA vs. Visitor Visa",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Visit",
+   "group": "Visitor & Temporary",
+   "label": "Super Visa — standalone page",
+   "path": "/visit/super-visa-standalone-page",
+   "url": "https://commonwealthmigration.ca/visit/super-visa-standalone-page",
+   "seoTitle": "Super Visa Canada 2026: Parents & Grandparents | CMG",
+   "metaDescription": "Super Visa requirements: invitation letter, sponsor income, and mandatory medical insurance for parents and grandparents visiting Canada.",
+   "h1": "Super Visa",
+   "lead": "The Super Visa is a long-validity, multiple-entry visa for parents and grandparents of Canadian citizens or permanent residents, allowing stays of up to 5 years per visit without the annual renewals a standard visitor visa would require.",
+   "headings": [
+    "Super Visa Requirements",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Visit",
+   "group": "Visitor & Temporary",
+   "label": "Business Visa",
+   "path": "/visit/business-visa",
+   "url": "https://commonwealthmigration.ca/visit/business-visa",
+   "seoTitle": "Business Visitor Visa Canada 2026 | CMG",
+   "metaDescription": "Business visitor rules for Canada: what activities qualify without a work permit, and how this differs from an employer-specific work permit.",
+   "h1": "Business Visa",
+   "lead": "Business visitor status covers temporary entry for those attending meetings, conferences, or exploring business opportunities in Canada, without entering the Canadian labour market — meaning no separate work permit is required.",
+   "headings": [
+    "What Qualifies as a Business Visitor",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Visit",
+   "group": "Visitor & Temporary",
+   "label": "Transit Visa",
+   "path": "/visit/transit-visa",
+   "url": "https://commonwealthmigration.ca/visit/transit-visa",
+   "seoTitle": "Canada Transit Visa 2026: Airport Connections | CMG",
+   "metaDescription": "Transit visa and Transit Without a Visa (TWOV) requirements for travellers connecting through a Canadian airport en route elsewhere.",
+   "h1": "Transit Visa",
+   "lead": "A transit visa may be required for travellers passing through a Canadian airport on their way to another country, without formally entering Canada — whether a visa or the visa-free transit program applies depends on nationality and connecting flight details.",
+   "headings": [
+    "Transit Options Compared",
+    "Frequently Asked Questions",
+    "Related Pages",
+    "Common Transit Problems",
+    "Travel-Planning Checklist",
+    "Transit Decision Guide"
+   ]
+  },
+  {
+   "category": "Visit",
+   "group": "Visitor & Temporary",
+   "label": "Visitor Record",
+   "path": "/visit/visitor-record",
+   "url": "https://commonwealthmigration.ca/visit/visitor-record",
+   "seoTitle": "Visitor Record Canada 2026: Extend Your Stay | CMG",
+   "metaDescription": "How to extend visitor status in Canada with a Visitor Record — application timing, implied status, and what it does and doesn't authorize.",
+   "h1": "Visitor Record",
+   "lead": "A Visitor Record is the document confirming an extension of authorized visitor status in Canada, generally applied for from within the country before the original authorized stay expires.",
+   "headings": [
+    "Key Facts",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Work & Study",
+   "group": "Work & Study",
+   "label": "Canada Work Permit (overview)",
+   "path": "/work-and-study/canada-work-permit-overview",
+   "url": "https://commonwealthmigration.ca/work-and-study/canada-work-permit-overview",
+   "seoTitle": "Canada Work Permit 2026: Types, LMIA & Requirements | CMG",
+   "metaDescription": "Employer-specific, LMIA-exempt, or open work permit — find the right route to work in Canada. Requirements, LMIA process, and timelines. Free RCIC review.",
+   "h1": "Canada Work Permits",
+   "lead": "A Canadian work permit is either tied to a single employer or open to work for almost any employer — and that distinction determines which documents are required, how long processing takes, and how the permit connects to a future permanent residence application.",
+   "headings": [
+    "Work Permit Types",
+    "What an LMIA Actually Checks",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  },
+  {
+   "category": "Work & Study",
+   "group": "Work & Study",
+   "label": "Canada Study Permit",
+   "path": "/work-and-study/canada-study-permit",
+   "url": "https://commonwealthmigration.ca/work-and-study/canada-study-permit",
+   "seoTitle": "Canada Study Permit 2026: DLI, PAL & PGWP Rules | CMG",
+   "metaDescription": "Study permit requirements for 2026: DLI selection, Provincial Attestation Letters, and how your program choice affects PGWP and PR eligibility.",
+   "h1": "Canada Study Permits",
+   "lead": "A study permit application is strongest when it's planned around where it leads — a Post-Graduation Work Permit, then Canadian work experience, then a route to permanent residence — not evaluated purely on getting the permit approved in isolation.",
+   "headings": [
+    "Core Study Permit Requirements",
+    "The Study Permit → PGWP → PR Route",
+    "Frequently Asked Questions",
+    "Related Pages"
+   ]
+  }
+ ]
+}

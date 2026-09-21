@@ -1,0 +1,5 @@
+import {FileBlob,SpreadsheetFile} from '@oai/artifact-tool';
+const path='outputs/2026-09-20-directory-prospects/commonwealth-migration-free-directory-prospects.xlsx'; const wb=await SpreadsheetFile.importXlsx(await FileBlob.load(path)); const sh=wb.worksheets.getItem('Directory Prospects');
+sh.getRange('K53').values=[['No public listing form']]; sh.getRange('O53').values=[['Playwright reached the Aubaine directory URL, but it rendered only a bilingual availability notice and no directory, account, or listing controls. No submission was attempted.']]; sh.getRange('P53').values=[['https://aubaine.ca/en/directory']];
+sh.getRange('K54').values=[['No public add-listing form']]; sh.getRange('O54').values=[['Playwright confirmed GTA Search has an “Add or update your business” link to /contact, but that page contains only support/reporting information and no listing form or public add route. No submission was attempted.']]; sh.getRange('P54').values=[['https://www.gtasearch.com/contact']];
+const out=await SpreadsheetFile.exportXlsx(wb); await out.save(path); console.log('updated');

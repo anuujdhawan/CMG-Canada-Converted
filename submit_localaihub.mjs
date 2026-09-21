@@ -1,0 +1,17 @@
+import {createRequire} from 'node:module';
+const {chromium}=createRequire(import.meta.url)('playwright-core');
+const b=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
+const p=await b.newPage();
+await p.goto('https://localaihub.ca/contact?topic=missing-business&city=Brampton&province=ON',{waitUntil:'domcontentloaded',timeout:25000});
+await p.fill('#name','Commonwealth Migration Group Inc.');
+await p.fill('#email','seolaunchers@gmail.com');
+await p.fill('#phone','+1 (416) 856-9394');
+await p.fill('#businessName','Commonwealth Migration Group Inc.');
+await p.fill('#sourceUrl','https://commonwealthmigration.ca/');
+await p.fill('#message','Please consider adding Commonwealth Migration Group Inc. to the Brampton business directory. Official details checked 2026-09-20: 2250 Bovaird Dr E #615, Brampton, ON L6R 3J5, Canada; phone +1 (416) 856-9394; official contact info@commonwealthmigration.ca; website https://commonwealthmigration.ca/. Commonwealth Migration Group Inc. is a CICC-regulated Canadian immigration practice serving clients in Brampton and across Canada. CICC licence R711592.');
+await p.check('#contributionConsent');
+await Promise.all([p.waitForLoadState('domcontentloaded').catch(()=>{}),p.click('button[type=submit]')]);
+await p.waitForTimeout(1200);
+console.log('URL',p.url(),'TITLE',await p.title());
+console.log('BODY',(await p.locator('body').innerText()).slice(0,2400));
+await b.close();

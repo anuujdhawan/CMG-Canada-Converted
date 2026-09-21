@@ -1,6 +1,7 @@
 import { getUniqueSeoContentBlocks } from "./seoUniqueContent";
 import { getLocalSeoExpansion } from "./seoLocalExpansion";
 import { getBalancedSeoContentBlocks } from "./seoBalancedContent";
+import { getRegionalLandingLinks } from "./seoRegionalLinks";
 
 /*
  * Additive search content for published pages.
@@ -78,6 +79,14 @@ const SPECIAL_CONFIGS = {
     fit: "Write down whether you want permanent residence, temporary entry, work, study, family reunification, citizenship or help after a refusal. Then record your status, location, work and education history, language results, family details, funds, travel and any deadline.",
     evidence: ["your goal, location and current immigration status", "education, language and employment history", "family, financial, travel and admissibility records", "the current IRCC or provincial page that controls the route"],
     next: "Use the pathway guide and free tools to organize the facts, then compare the estimate with the official source. When the history is complex, a licensed representative can help turn the questions into a prioritized, file-specific plan.",
+  },
+  "/canada-immigration-from-uk": {
+    topic: "Canada immigration from the UK",
+    source: OFFICIAL_SOURCES.immigration,
+    answer: "Canada immigration from the UK means choosing the Canadian route that matches the profile a UK applicant can actually evidence, then preparing the UK-side documents that route requires. Express Entry, a provincial nomination, an International Experience Canada working holiday, an employer-specific work permit, a study permit and family sponsorship each test different facts, and a British passport does not remove the language-test, credential-assessment, police-certificate or funds requirements.",
+    fit: "Start with the outcome you want — permanent residence, a temporary working holiday, work, study or family reunification — and the date you are working towards. Then check the language test, Educational Credential Assessment, UK police certificate, panel-physician medical and funds history that the chosen route will actually ask for.",
+    evidence: ["a designated language test result with a valid expiry date", "an Educational Credential Assessment for UK qualifications", "the UK police certificate issued for the part of the UK you lived in", "settlement funds held in your own name and traceable in Canadian dollars"],
+    next: "Work backwards from the filing date and run the long-lead items in parallel: language test, credential assessment, police certificate and funds history. Keep employer reference letters, payslips and travel records consistent with the occupation and dates you are claiming, and confirm every requirement against the current IRCC page before you pay a fee or submit.",
   },
   "/immigrate/express-entry": {
     topic: "Express Entry Canada",
@@ -436,6 +445,9 @@ export function getSeoContentBlocks(page) {
     ...sharedBlocks,
     ...getUniqueSeoContentBlocks(page),
     ...getLocalSeoExpansion(page),
+    // Inbound cross-links so a regional landing page is reachable from body
+    // content, not only from the (client-rendered) navigation and sitemap.
+    ...getRegionalLandingLinks(page),
   ];
   return [...additions, ...getBalancedSeoContentBlocks(page, additions)];
 }

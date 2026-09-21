@@ -62,7 +62,9 @@ const TOOLS_MENU_ITEM = {
       category: "Learn & prepare",
       items: [
         DRAW_PAGE_LINK,
-        { label: "Blog", href: "/blog" },
+        // Blog removed from the Tools dropdown — it still has a crawlable link
+        // under Resources and in the footer. Kept commented so it can come back.
+        // { label: "Blog", href: "/blog" },
         { label: "Express Entry Guide", href: "/immigrate/express-entry" },
         { label: "PNP Pathway Guide", href: "/immigrate/provincial-nominee-program-all-provinces-consolidated" },
       ],
@@ -105,9 +107,34 @@ const ABOUT_MENU_ITEM = {
   },
 };
 
+const RESOURCES_MENU_ITEM = {
+  label: "Resources",
+  href: "/blog",
+  columns: [
+    { category: "Immigration Blog", items: [
+      { label: "All Immigration Blogs", href: "/blog" },
+      { label: "Canada Immigration News", href: "/canada-immigration-news" },
+      { label: "Immigration Guides", href: "/blog?category=immigration-guides" },
+    ] },
+    // Every entry here must name a category that actually holds posts —
+    // `getBlogGroups()` drops empty ones, so a link to a category with nothing
+    // in it would land the reader on an empty panel.
+    { category: "By topic", items: [
+      { label: "Express Entry", href: "/blog?category=express-entry" },
+      { label: "Work Permits", href: "/blog?category=work-permits" },
+      { label: "Study Permits", href: "/blog?category=study-permits" },
+      { label: "Family Sponsorship", href: "/blog?category=family-sponsorship" },
+      { label: "Provincial Nominee Programs", href: "/blog?category=provincial-nominee-programs" },
+      { label: "Visitor Visas", href: "/blog?category=visitor-visas" },
+    ] },
+  ],
+  featured: { label: "Start with research", title: "Find the right Canadian pathway", desc: "Browse current guides, news and practical checklists before your consultation.", href: "/blog" },
+};
+
 const navigationMenuItems = [
   ...sourceMenuItems.filter((item) => item.label !== "About"),
   TOOLS_MENU_ITEM,
+  RESOURCES_MENU_ITEM,
   ABOUT_MENU_ITEM,
 ];
 
@@ -144,6 +171,19 @@ const rawNavigation = {
         ...item.columns.flatMap((column) => column.items).slice(0, 4),
       ],
     })),
+    // The blog index and the self-service tools previously had no crawlable
+    // link anywhere on the site: they only ever appeared inside the JS-driven
+    // menus, so crawlers found them in the sitemap alone. The footer renders
+    // server-side on every page — including mobile — so these get a real,
+    // always-visible inbound link.
+    { title: "Tools & Resources", links: [
+      { label: "Immigration Blog", href: "/blog" },
+      { label: "CRS Calculator", href: "/tools/crs-calculator-canada" },
+      { label: "NOC / Occupation Finder", href: "/tools/noc-finder-canada" },
+      { label: "PNP Eligibility Check", href: "/tools/pnp-eligibility-canada" },
+      { label: "Document Checklist", href: "/tools/document-checklist-canada" },
+      { label: "Free Assessment", href: "/assessment/free-canada-immigration-assessment" },
+    ] },
     { title: "Contact", links: [
       { label: "Book consultation", href: site.ctas.primary.href },
       { label: site.email, href: site.emailHref },

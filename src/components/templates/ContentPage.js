@@ -1,5 +1,6 @@
 import { parseBlocks, rebrand, localizeUrl } from "@/components/templates/MarkdownBlocks";
 import { site } from "@/config/site";
+import { UK_LANDING_PATH } from "@/data/uk-pages";
 import { breadcrumbsFor } from "@/lib/sitePages";
 import { absoluteUrl } from "@/lib/seo";
 import { getPageFaqs } from "@/lib/faqs";
@@ -65,6 +66,11 @@ export function pageStructuredData(page) {
   const url = absoluteUrl(page.path);
   const organizationId = `${site.url}#organization`;
   const websiteId = `${site.url}#website`;
+  // The United Kingdom landing page is written and maintained for a UK
+  // audience, so its structured data declares en-GB and an areaServed that
+  // covers the market the page is built for rather than Canada alone.
+  const isUkLandingPage = page.path === UK_LANDING_PATH;
+  const pageLanguage = isUkLandingPage ? "en-GB" : "en-CA";
   const breadcrumbTrail = breadcrumbsFor(page.path, page.h1);
   const breadcrumbs = breadcrumbTrail.map((crumb, index) => ({
     "@type": "ListItem",
@@ -82,7 +88,10 @@ export function pageStructuredData(page) {
       url,
       name: page.h1,
       description: page.seo?.description || site.description,
-      inLanguage: "en-CA",
+      inLanguage: pageLanguage,
+      ...(isUkLandingPage
+        ? { audience: { "@type": "Audience", geographicArea: { "@type": "Country", name: "United Kingdom" } } }
+        : {}),
       ...(page.meta?.lastModified ? { dateModified: page.meta.lastModified } : {}),
       isPartOf: { "@id": websiteId },
       publisher: { "@id": organizationId },
@@ -95,7 +104,7 @@ export function pageStructuredData(page) {
     },
   ];
 
-  const servicePath = /^\/(immigrate|work-and-study|visit|sponsor|citizenship|inadmissibility-and-appeals)(\/|$)/.test(page.path);
+  const servicePath = isUkLandingPage || /^\/(immigrate|work-and-study|visit|sponsor|citizenship|inadmissibility-and-appeals)(\/|$)/.test(page.path);
   if (servicePath) {
     schemas.push({
       "@context": "https://schema.org",
@@ -104,7 +113,12 @@ export function pageStructuredData(page) {
       serviceType: page.h1,
       description: page.seo?.description || site.description,
       provider: { "@id": organizationId },
-      areaServed: { "@type": "Country", name: "Canada" },
+      areaServed: isUkLandingPage
+        ? [
+            { "@type": "Country", name: "United Kingdom" },
+            { "@type": "Country", name: "Canada" },
+          ]
+        : { "@type": "Country", name: "Canada" },
       url,
     });
   }
@@ -116,7 +130,7 @@ export function pageStructuredData(page) {
       "@type": "FAQPage",
       "@id": `${url}#faq`,
       url,
-      inLanguage: "en-CA",
+      inLanguage: pageLanguage,
       isPartOf: { "@id": `${url}#webpage` },
       mainEntity: faqs.map((faq) => ({
         "@type": "Question",
@@ -134,7 +148,7 @@ export function pageStructuredData(page) {
       headline: page.h1,
       description: page.seo?.description || site.description,
       url,
-      inLanguage: "en-CA",
+      inLanguage: pageLanguage,
       ...(page.meta?.lastModified ? { dateModified: page.meta.lastModified } : {}),
       author: { "@id": organizationId },
       publisher: { "@id": organizationId },
