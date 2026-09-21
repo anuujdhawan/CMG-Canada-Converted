@@ -94,8 +94,9 @@ export function toCrmLead(type, body) {
     ImmigrationType: valueOrUndefined(immigrationType, 1000),
     Education: valueOrUndefined(body.education, 160),
     AgeRange: valueOrUndefined(body.ageRange, 80),
-    // This is a validated CRM value from the handoff document.
-    LeadSource: "SEO Leads (English)",
+    // Validated CRM values from the handoff document: chatbot leads are
+    // tagged as guided-chat traffic, every other website form as Website.
+    LeadSource: type === "chatbot" ? "Livechat - SEO" : "Website",
     UTMSource: valueOrUndefined(body.utm_source || body.utmSource, 160),
   };
 }
