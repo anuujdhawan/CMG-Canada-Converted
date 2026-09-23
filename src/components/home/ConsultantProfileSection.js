@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, BadgeCheck, BriefcaseBusiness, FileCheck2, Globe2, GraduationCap, HeartHandshake, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, BriefcaseBusiness, FileCheck2, Globe2, GraduationCap, HeartHandshake, ShieldCheck } from "lucide-react";
 import { site } from "@/config/site";
 import { cn } from "@/lib/utils";
 
@@ -61,19 +60,9 @@ export default function ConsultantProfileSection({ profile = VISHAL_ARORA_PROFIL
       <div className="section-inner mx-auto w-(--container)">
         <article className="relative grid overflow-hidden rounded-3xl border border-template-border bg-template-surface text-template-ink shadow-template-soft before:absolute before:inset-x-0 before:top-0 before:z-[1] before:h-[3px] before:bg-template-profile-line before:content-[''] lg:grid-cols-[340px_minmax(0,1fr)]">
           <div className="flex flex-col items-center justify-start p-5 sm:p-6 lg:items-start lg:p-7">
-            <div className="relative aspect-[4/5] w-full max-w-[300px] overflow-hidden rounded-[18px] border border-template-border bg-template-surface-alt shadow-template-soft">
-              <Image
-                src={profile.image}
-                alt={profile.imageAlt}
-                fill
-                sizes="(max-width: 1023px) min(80vw, 300px), 300px"
-                className="object-cover object-top"
-              />
-            </div>
             <div className="mt-3 w-full max-w-[300px] rounded-xl border border-template-border bg-template-primary-surface-5 px-3.5 py-3">
               <p className="m-0 text-[9px] font-extrabold uppercase tracking-[.17em] text-template-primary">Licensed RCIC</p>
               <p className="m-[3px_0_0] text-[13px] font-bold leading-tight text-template-ink">{profile.name}</p>
-              <p className="m-[3px_0_0] text-[10px] text-template-muted">Licence {profile.licence}</p>
             </div>
           </div>
 
@@ -100,10 +89,6 @@ export default function ConsultantProfileSection({ profile = VISHAL_ARORA_PROFIL
               </div>
 
               <div className="mt-4 flex flex-wrap gap-2">
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-template-border px-3 py-1.5 text-[10px] font-bold tracking-[.04em] text-template-muted">
-                  <BadgeCheck className="h-3.5 w-3.5 text-template-primary" aria-hidden="true" />
-                  RCIC · {profile.licence}
-                </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-template-border px-3 py-1.5 text-[10px] font-bold tracking-[.04em] text-template-muted">
                   <ShieldCheck className="h-3.5 w-3.5 text-template-primary" aria-hidden="true" />
                   Commonwealth Migration Group

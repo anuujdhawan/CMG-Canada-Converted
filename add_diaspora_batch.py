@@ -1,0 +1,10 @@
+from openpyxl import load_workbook
+from pathlib import Path
+from datetime import date
+p=Path('outputs/backlink-outreach-progress-2026-09-23.xlsx'); wb=load_workbook(p)
+ws=wb['Prospects']; log=wb['Submission Log']
+ws.append(['IndoCanadians.ca','Canada','Indian diaspora in Canada','Story submission route','https://indocanadians.ca/submit','https://indocanadians.ca/submit','Direct route returned blank page','Inactive or blank response','Fresh prospect','Live URL returned no rendered content or submission controls in the available inspection. No submission made; no backlink exists.','Not independently verified; do not assume dofollow','Inspected 2026-09-23; route unusable'])
+log.append(['IndoCanadians.ca','https://indocanadians.ca/submit','Blank page / no form controls','Not submitted; inactive route','https://indocanadians.ca/submit','The route returned no rendered content or usable submission controls.','Exclude until the route becomes usable or a current contact is found.',date(2026,9,23)])
+ws.append(['Diaspora Dreams','Global / Indian diaspora / Canada','Visas and law / diaspora journalism','Pitch form','https://diasporadreams.com/write-for-us','https://diasporadreams.com/write-for-us','Direct pitch form; editorial review','Not suitable for current generated-content workflow','Fresh prospect','Current editorial rules explicitly reject AI-generated or AI-assisted writing and PR placements/brand-funded content. A CMG-authored pitch prepared in this workflow cannot truthfully confirm compliance, so no submission made.','Not independently verified; do not assume dofollow','Inspected 2026-09-23; excluded by explicit editorial rules'])
+log.append(['Diaspora Dreams','https://diasporadreams.com/write-for-us','Direct pitch form; rejects AI-assisted and brand-funded content','Unsuitable; not submitted','https://diasporadreams.com/write-for-us','Current page requires the work not to be AI-generated or AI-assisted and excludes PR placements/brand-funded content. No pitch sent.','Exclude from this workflow unless a genuinely human-authored, independently supplied article is available.',date(2026,9,23)])
+wb.save(p); print(p.resolve())
