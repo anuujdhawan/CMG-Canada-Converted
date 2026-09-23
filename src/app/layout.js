@@ -32,11 +32,12 @@ export const metadata = {
     path: "/",
     keywords: site.meta.keywords,
   }),
-  icons: {
-    icon: "/images/favicon.webp",
-    shortcut: "/images/favicon.webp",
-    apple: "/images/apple-icon.png",
-  },
+  // Icons come from Next 16 file conventions in src/app/ (favicon.ico 16/32/48/64,
+  // icon.png 192, apple-icon.png 180), not from metadata.icons. Google Search
+  // dropped WebP/SVG favicon support in the Aug 2026 docs update (supported:
+  // BMP, GIF, ICO, PNG, JPEG, PPM, TIFF), so every icon the head links must be a
+  // supported format. The old /images/favicon.webp and the 1912x1140
+  // /images/apple-icon.png are kept on disk but no longer referenced.
 };
 
 export const viewport = {
