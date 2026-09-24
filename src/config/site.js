@@ -42,9 +42,36 @@ export const site = {
   hours: "Monday - Friday, 9:00 am - 6:00 pm - Saturday 10:00 am - 4:00 pm (EST)",
   timezone: "Eastern Time (ET)",
 
+  // ---- Regulated representative --------------------------------------
+  // Single source of truth for the licensed RCIC behind this practice.
+  // The licence number, the CICC profile URL and the displayed name are all
+  // derived from here — do not hardcode "R711256" or the consultant's name in
+  // a component, because a stale copy of a licence number on a regulated site
+  // is a compliance problem, not just a typo.
+  //
+  // `profileUrl` is the individual licensee record on the CICC public register.
+  // Verified 2026-09-24: Pankaj Khanna · College ID R711256 · Type RCIC ·
+  // "Eligible to Provide Service" · no revocations, suspensions, restrictions,
+  // current proceedings or past decisions.
+  //
+  // The CICC site appends a per-session token (…&b9100e1006f6=2#b9100e1006f6)
+  // to its profile URLs. That token is session-scoped, so the canonical
+  // `?ID=14725` form is used instead — it resolves correctly without it.
   rcic: {
-    number: "R711592",
+    number: "R711256",
     regulator: "College of Immigration and Citizenship Consultants (CICC)",
+    regulatorUrl: "https://college-ic.ca/",
+    registerUrl: "https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx",
+    profileUrl: "https://register.college-ic.ca/Public-Register-EN/Licensee/Profile.aspx?ID=14725",
+    consultant: {
+      name: "Pankaj Khanna",
+      // Used where the credential belongs in the visible label, e.g. "Pankaj Khanna, RCIC".
+      nameWithCredential: "Pankaj Khanna, RCIC",
+      licence: "R711256",
+      role: "Regulated Canadian Immigration Consultant",
+      // Taken verbatim from the CICC public register entry.
+      status: "Eligible to Provide Service",
+    },
   },
 
   // ---- Assets ---------------------------------------------------------

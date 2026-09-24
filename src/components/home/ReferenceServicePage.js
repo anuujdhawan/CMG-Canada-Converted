@@ -285,7 +285,7 @@ export default function ReferenceServicePage({ page, children, interactivePositi
         </div>
       </section>
 
-      {isAboutOverviewPage && <ConsultantProfileSection id="vishal-arora-about" />}
+      {isAboutOverviewPage && <ConsultantProfileSection id="licensed-rcic-about" />}
 
       {relatedBlocks.length > 0 && (
         <section className="section relative z-[1] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16 service-related-section">

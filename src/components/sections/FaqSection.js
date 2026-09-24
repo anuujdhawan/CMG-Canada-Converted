@@ -45,6 +45,15 @@ export default function FaqSection({
                 </span>
               </summary>
               <div className="faq-item__answer grid grid-rows-[0fr] p-0 transition-[grid-template-rows] duration-[350ms] ease-[ease] group-open:grid-rows-[1fr]">
+                {/* NOTE: this renders the answer as plain text, so markdown links
+                    ("[label](url)") in an FAQ answer print as literal markdown.
+                    Do not switch this to MarkdownBlocks' renderInline: that module
+                    imports pathForLegacyPath from @/lib/sitePages, which reads
+                    route-map.json via `fs` at module scope. FaqSection is pulled
+                    into the client bundle through ReferenceHomepage ("use client"),
+                    so importing it breaks the build with "Can't resolve 'fs'".
+                    Fixing this properly means making the route map importable
+                    without fs, or extracting a dependency-free inline renderer. */}
                 <p className="min-h-0 overflow-hidden !m-0 !pr-[50px] !mb-[22px] !pb-[22px] !text-[var(--muted)] !text-[13px] !leading-[1.75]">{faq.answer}</p>
               </div>
             </details>

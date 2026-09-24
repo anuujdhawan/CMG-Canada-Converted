@@ -1,6 +1,7 @@
-import Image from "next/image";
+import Link from "next/link";
 import { BadgeCheck, Check, ShieldCheck } from "lucide-react";
 import HeroCardShell from "./HeroCardShell";
+import { site } from "@/config/site";
 
 const PROFILE_POINTS = [
   "Professional guidance & representation",
@@ -16,30 +17,27 @@ const PROFILE_POINTS = [
   "Properly prepared applications",
 ];
 
-export default function HeroProfileCard({ ariaLabel = "Vishal Arora, Regulated Canadian Immigration Consultant" }) {
+export default function HeroProfileCard({ ariaLabel = `${site.rcic.consultant.name}, Regulated Canadian Immigration Consultant` }) {
   return (
     <HeroCardShell ariaLabel={ariaLabel} className="hero-profile-card hero-profile-card-shell -translate-y-[50%]" flush>
-      <div className="relative h-[145px] overflow-hidden max-[480px]:h-[120px]">
-        <Image
-          src="/images/team/vishal-arora.jpeg"
-          alt="Vishal Arora, RCIC"
-          fill
-          sizes="(max-width: 880px) 100vw, 440px"
-          className="object-cover object-[center_28%]"
-          priority={false}
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,4,12,.02)_20%,rgba(5,4,12,.78)_100%)]" aria-hidden="true" />
+      {/* Photo band — deliberately photo-less for now.
+          This slot previously rendered a headshot of the previous consultant.
+          The profile is being re-cut around a different expert, so the image is
+          removed rather than left showing the wrong person. The height is kept
+          so that dropping a photo back in needs no layout change: replace the
+          gradient background with <Image fill /> when the asset is supplied. */}
+      <div className="relative flex h-[145px] flex-col justify-end overflow-hidden bg-[linear-gradient(135deg,color-mix(in_srgb,var(--template-primary)_34%,transparent),color-mix(in_srgb,var(--primary)_10%,transparent))] max-[480px]:h-[120px]">
         <div className="absolute right-5 bottom-4 left-5 text-[var(--template-on-primary)] max-[480px]:right-4 max-[480px]:bottom-3 max-[480px]:left-4">
-          <p className="!m-0 !text-[20px] !font-extrabold !leading-none !tracking-[-.03em] text-[var(--template-on-primary)]">Vishal Arora, RCIC</p>
-          <p className="!m-[6px_0_0] !text-[10px] !font-bold !leading-[1.3] !tracking-[.08em] text-[color-mix(in_srgb,var(--template-on-primary)_78%,transparent)] uppercase">Licensed consultant · R711592</p>
+          <p className="!m-0 !text-[20px] !font-extrabold !leading-none !tracking-[-.03em] text-[var(--template-on-primary)]">{site.rcic.consultant.nameWithCredential}</p>
+          <p className="!m-[6px_0_0] !text-[10px] !font-bold !leading-[1.3] !tracking-[.08em] text-[color-mix(in_srgb,var(--template-on-primary)_78%,transparent)] uppercase">Licensed consultant · {site.rcic.number}</p>
         </div>
       </div>
 
       <div className="hero-profile-card__body flex flex-1 flex-col p-[16px_24px_15px] max-[480px]:p-[14px_17px_13px]">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="mini-badge inline-flex items-center gap-[6px] rounded-full border border-[color-mix(in_srgb,var(--template-on-primary)_13%,transparent)] bg-[color-mix(in_srgb,var(--template-on-primary)_9%,transparent)] p-[6px_9px_6px_8px] text-[color-mix(in_srgb,var(--template-on-primary)_92%,transparent)] text-[10px] font-extrabold leading-[1.5] tracking-[.06em] uppercase backdrop-blur-[10px] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_7%,transparent)]">
-            <ShieldCheck className="flex-none text-[var(--cmg-template-primary-bright)]" width={15} height={15} aria-hidden="true" /> RCIC · R711592
-          </span>
+          <Link href={site.rcic.profileUrl} target="_blank" rel="noopener noreferrer" className="mini-badge inline-flex items-center gap-[6px] rounded-full border border-[color-mix(in_srgb,var(--template-on-primary)_13%,transparent)] bg-[color-mix(in_srgb,var(--template-on-primary)_9%,transparent)] p-[6px_9px_6px_8px] text-[color-mix(in_srgb,var(--template-on-primary)_92%,transparent)] text-[10px] font-extrabold leading-[1.5] tracking-[.06em] uppercase no-underline backdrop-blur-[10px] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_7%,transparent)] hover:underline">
+            <ShieldCheck className="flex-none text-[var(--cmg-template-primary-bright)]" width={15} height={15} aria-hidden="true" /> RCIC · {site.rcic.number}
+          </Link>
           <span className="mini-badge inline-flex items-center gap-[6px] rounded-full border border-[color-mix(in_srgb,var(--template-on-primary)_10%,transparent)] bg-[color-mix(in_srgb,var(--template-on-primary)_6%,transparent)] p-[6px_9px_6px_8px] text-[color-mix(in_srgb,var(--template-on-primary)_74%,transparent)] text-[10px] font-bold leading-[1.5] tracking-[.04em] normal-case backdrop-blur-[10px] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_7%,transparent)]">
             <BadgeCheck className="flex-none text-[var(--cmg-template-primary-bright)]" width={15} height={15} aria-hidden="true" /> CMG Inc.
           </span>

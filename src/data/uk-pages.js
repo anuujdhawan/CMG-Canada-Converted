@@ -31,6 +31,8 @@ const OFFICIAL = {
   panelPhysicians: "https://secure.cic.gc.ca/pp-md/pp-list.aspx",
   wes: "https://www.wes.org/",
   ciccRegister: "https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx",
+  // This practice's own licensee record on the register (see site.rcic).
+  ciccProfile: site.rcic.profileUrl,
 };
 
 /** Q/A paragraph pairs are folded into the styled FAQ section at render time. */
@@ -69,7 +71,7 @@ const ukFaqs = [
   ),
   faq(
     "Can a UK-based applicant work with a Canadian immigration consultant remotely?",
-    `Yes. Commonwealth Migration is a CICC-regulated Canadian practice (${site.rcic.number}) and works with UK clients by scheduled video or phone consultation. Because the UK is typically five hours ahead of Brampton, appointments are usually booked for UK afternoon or early evening slots. Confirm the representative's current licence status on the [CICC public register](${OFFICIAL.ciccRegister}) before you share documents or pay fees.`,
+    `Yes. Commonwealth Migration is a CICC-regulated Canadian practice (${site.rcic.number}) and works with UK clients by scheduled video or phone consultation. Because the UK is typically five hours ahead of Brampton, appointments are usually booked for UK afternoon or early evening slots. Confirm the representative's current licence status on the CICC public register (register.college-ic.ca) before you share documents or pay fees.`,
   ),
 ];
 
@@ -329,7 +331,7 @@ export const ukPages = [
       },
       {
         type: "paragraph",
-        text: `Before engaging anyone, confirm that the representative is licensed. Commonwealth Migration is a CICC-regulated practice (${site.rcic.number}), and you can verify the current status of any representative on the [CICC public register](${OFFICIAL.ciccRegister}). A legitimate adviser will explain the scope of service, the limits of what can be promised and the documents required before asking for payment.`,
+        text: `Before engaging anyone, confirm that the representative is licensed. Commonwealth Migration is a CICC-regulated practice (${site.rcic.number}), and you can verify the current status of any representative on the [CICC public register](${OFFICIAL.ciccRegister}) — our own record is at [Pankaj Khanna, RCIC (${site.rcic.number})](${OFFICIAL.ciccProfile}). A legitimate adviser will explain the scope of service, the limits of what can be promised and the documents required before asking for payment.`,
       },
       {
         type: "list",

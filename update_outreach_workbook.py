@@ -34,6 +34,54 @@ append_if_missing((
     "No backlink submitted. The form's Written Post Upload validator rejected DOCX, PDF, and TXT files; user chose to move on.", False,
 ))
 append_if_missing((
+    "TravelPulse Canada", "https://www.travelpulse.ca", "https://www.travelpulse.ca/write-for-us",
+    "The questions travel advisors should ask when clients plan family visits to Canada",
+    "https://commonwealthmigration.ca/visit/visitor-visa-trv-standalone-page", date(2026, 9, 24),
+    "researched", "https://www.travelpulse.ca/write-for-us",
+    "Current TravelPulse Canada pitch guidance accepts original, timely travel-trade stories and requires a headline, summary, reporting sources, and why-now hook; it rejects advertorials and PR-driven content. A tailored family-visit information pitch was prepared in Gmail with CMG affiliation and the contextual visitor-visa destination disclosed; it remains unsent and no public article or backlink exists.", False,
+))
+append_if_missing((
+    "The Local", "https://thelocal.to", "https://thelocal.to/tips/",
+    "Not submitted — investigative tip channel, not an article-contributor route", "", date(2026, 9, 24),
+    "unsuitable", "https://thelocal.to/tips/",
+    "Current route is a secure anonymous tip channel for suspected illegal, unethical, harmful, or document-backed matters. It is not a general article-pitch route and is not appropriate for a CMG promotional backlink submission. No submission made and no backlink claimed.", False,
+))
+append_if_missing((
+    "Situation237", "https://situation237.com", "https://situation237.com/contact",
+    "How Cameroonian families can check Canadian immigration information before sharing it",
+    "https://commonwealthmigration.ca/visit/visitor-visa-trv-and-super-visa-combined", date(2026, 9, 24),
+    "researched", "https://situation237.com/contact",
+    "Current Cameroon-focused publication accepts English or French story pitches through a public contact form, asks for who/what/where/when, and states a two-business-day response target. A diaspora-relevant, source-backed Canada-information pitch is queued for the form with CMG affiliation and the visitor/super-visa destination disclosed; it remains unsent and no public article or backlink exists.", False,
+))
+append_if_missing((
+    "StudioX News", "https://studioxnews.ca", "https://studioxnews.ca/canada/share-your-story-studiox-news-multilingual-canada/",
+    "How multilingual communities can verify Canadian immigration information before sharing it",
+    "https://commonwealthmigration.ca/visit/visitor-visa-trv-and-super-visa-combined", date(2026, 9, 24),
+    "researched", "https://studioxnews.ca/canada/share-your-story-studiox-news-multilingual-canada/",
+    "Current Canadian multilingual newsroom invites community stories and editorial submissions at editor@studioxnews.ca and says relevant submissions may be considered for coverage. A source-backed newcomer-information story is queued for Gmail with CMG affiliation and the visitor/super-visa destination disclosed; it remains unsent and no public article or backlink exists.", False,
+))
+append_if_missing((
+    "The Bridge News", "https://thebridgenews.ca", "https://thebridgenews.ca/join-us/",
+    "How newcomer information becomes a neighbourhood resource in Toronto’s Downtown East",
+    "https://commonwealthmigration.ca/immigrate/express-entry", date(2026, 9, 23),
+    "researched", "https://thebridgenews.ca/join-us/",
+    "Current Toronto Downtown East route invites story inquiries at editor@thebridgenews.ca, limits articles to 700 words, and says successful contributors are contacted within 1-2 weeks. A local newcomer-information pitch is queued for Gmail with CMG affiliation and the Express Entry destination disclosed; it remains unsent and no public article or backlink exists.", False,
+))
+append_if_missing((
+    "TDot News", "https://tdotnews.com", "https://tdotnews.com/contact/",
+    "The information handoff gap facing newcomers across the GTA",
+    "https://commonwealthmigration.ca/visit/visitor-visa-trv-standalone-page", date(2026, 9, 23),
+    "researched", "https://tdotnews.com/contact/",
+    "Current independent Toronto/GTA newsroom accepts pitches by email with PITCH in the subject line and directs contributors to its current writing guidance. A factual GTA newcomer-information pitch is queued for Gmail with CMG affiliation and the visitor-visa destination disclosed; it remains unsent and no public article or backlink exists.", False,
+))
+append_if_missing((
+    "Spacing", "https://spacing.ca", "https://spacing.ca/contribute/",
+    "How newcomer wayfinding shapes access to public space in Toronto",
+    "https://commonwealthmigration.ca/immigrate/express-entry", date(2026, 9, 23),
+    "researched", "https://spacing.ca/contribute/",
+    "Current contributor guidance welcomes Toronto/GTA issue pitches about public space and lists pitch@spacing.ca. A Toronto-centred, non-promotional newcomer-wayfinding pitch is queued for Gmail with CMG affiliation and the Express Entry destination disclosed; it remains unsent and no public article or backlink exists.", False,
+))
+append_if_missing((
     "ToVancouver", "https://tovancouver.com", "https://tovancouver.com/write-for-us",
     "A Newcomer's First Rainy Season in Vancouver: A Practical Preparation Guide",
     "https://commonwealthmigration.ca/immigrate/express-entry", date(2026, 9, 23),
@@ -561,8 +609,8 @@ append_if_missing((
     "Open Canada", "https://opencanada.org", "https://opencanada.org/open-canada-author-writing-guide/",
     "When an immigration mistake becomes a credibility problem: understanding misrepresentation in Canadian applications",
     "https://commonwealthmigration.ca/inadmissibility-and-appeals/misrepresentation", date(2026, 9, 23),
-    "researched", "https://opencanada.org/open-canada-author-writing-guide/",
-    "Current author guide says Open Canada is a volunteer-run foreign-policy magazine, welcomes pitches before full drafts, and requires original referenced work of 1,000-2,500 words; it lists opencanada@thecic.org for proposals. A transparent expert pitch could fit its policy focus, but no message has been sent; no public article or backlink yet.", False,
+    "submitted/pending", "Gmail Sent mail: Pitch: When an immigration mistake becomes a credibility problem",
+    "Tailored pitch sent to opencanada@thecic.org from seolaunchers@gmail.com as Anooj Dhawan. The email disclosed the CMG affiliation, proposed an original 1,000-2,500-word policy analysis, and requested editorial approval for one contextual link to the CMG misrepresentation page. Gmail displayed Message sent. No public article or backlink yet.", False,
 ))
 append_if_missing((
     "rabble.ca", "https://rabble.ca", "https://rabble.ca/about/submit-a-story/",
@@ -617,8 +665,8 @@ append_if_missing((
     "Spheres of Influence", "https://spheresofinfluence.ca", "https://spheresofinfluence.ca/guest-submissions/",
     "Family reunification policy and the human consequences of sponsorship delays",
     "https://commonwealthmigration.ca/sponsor/spousal-and-partner-sponsorship-overview", date(2026, 9, 23),
-    "researched", "https://spheresofinfluence.ca/guest-submissions/",
-    "Current guest-submissions page invites pitches about stories, issues, and perspectives, with editor@spheresofinfluence.ca listed for questions and editorial review. A transparent family-reunification policy pitch could fit, but no message has been sent; no public article or backlink yet.", False,
+    "submitted/pending", "Gmail Sent mail: Pitch: Family reunification policy and the human cost of sponsorship delays",
+    "Tailored pitch sent to editor@spheresofinfluence.ca from seolaunchers@gmail.com as Anooj Dhawan. The email disclosed the CMG affiliation, proposed an original 800-1,200-word policy analysis aligned with the publication's progressive/intersectional brief, and requested editorial approval for one contextual link to the CMG spousal-sponsorship overview. Gmail displayed Message sent. No public article or backlink yet.", False,
 ))
 append_if_missing((
     "IRCC.com", "https://ircc.com", "https://ircc.com/masthead",
@@ -633,6 +681,111 @@ append_if_missing((
     "", date(2026, 9, 23),
     "unsuitable", "https://theimmigrantstories.com/write-for-us/",
     "Current guidelines require a genuine first-person immigration experience and explicitly reject promotion of paid immigration consultancy services. No personal story was represented and no submission was made; no backlink claimed.", False,
+))
+append_if_missing((
+    "Meridian Source", "https://meridiansource.ca", "https://meridiansource.ca/submit-your-story/",
+    "How newcomers can find reliable local information after arriving in Canada",
+    "https://commonwealthmigration.ca/visit/visitor-visa-trv-standalone-page", date(2026, 9, 23),
+    "researched", "https://meridiansource.ca/submit-your-story/",
+    "Current community publication invites readers to submit stories, events, photos, or video through a live form and states that submissions may be featured. A locally grounded newcomer-information story may fit, but the page does not promise external links or accept promotional copy. The form was inspected and prefilled with a disclosed, non-promotional draft; it remains unsent and no public article or backlink exists.", False,
+))
+append_if_missing((
+    "Refugee Story Bank of Canada", "https://www.refugeestorybank.ca", "https://www.refugeestorybank.ca/shareyourstory",
+    "Not submitted — requires an authentic refugee experience",
+    "", date(2026, 9, 23),
+    "unsuitable", "https://www.refugeestorybank.ca/shareyourstory",
+    "Current route invites refugees to share their own stories for a research and public resource. An organizational immigration-information article would not meet the first-person eligibility and authenticity requirement; no submission made and no backlink claimed.", False,
+))
+append_if_missing((
+    "The Diaspolitan Magazine", "https://diaspolitan.com", "https://diaspolitan.com/form/contribute-a-story",
+    "Not submitted — Cloudflare Turnstile human verification",
+    "", date(2026, 9, 23),
+    "blocked", "https://diaspolitan.com/form/contribute-a-story",
+    "Current editorial form welcomes original articles, research, commentary, and stories, but requires Cloudflare Turnstile security verification before submission. No human verification was bypassed and no submission or backlink was claimed.", False,
+))
+append_if_missing((
+    "Sanj Talks", "https://sanjtalks.com", "https://sanjtalks.com/featured-article/",
+    "Not submitted — route includes paid-interview packages",
+    "", date(2026, 9, 23),
+    "unsuitable", "https://sanjtalks.com/featured-article/",
+    "Current featured-article route offers editorial story creation from supplied materials but the site separately advertises pay-for-interview packages and bartering options. Because the unpaid editorial status and external-link policy are unclear, no submission was made and no backlink claimed.", False,
+))
+append_if_missing((
+    "Chinatown Storytelling Centre", "https://www.chinatownstorytellingcentre.org", "https://www.chinatownstorytellingcentre.org/submit-your-story/",
+    "Not submitted — antispam challenge and culturally specific story requirement",
+    "", date(2026, 9, 23),
+    "blocked", "https://www.chinatownstorytellingcentre.org/submit-your-story/",
+    "The indexed route requests a story connected to Vancouver's Chinatown or Chinese Canadian culture, requires an antispam arithmetic challenge, and asks for an image. No eligibility was assumed and no human verification was bypassed; no submission or backlink claimed.", False,
+))
+append_if_missing((
+    "Christian Courier", "https://www.christiancourier.ca", "https://www.christiancourier.ca/write-for-us/",
+    "Not submitted — AI and self-organization restrictions",
+    "", date(2026, 9, 23),
+    "unsuitable", "https://www.christiancourier.ca/write-for-us/",
+    "Current guidelines prohibit AI-assisted writing or sentence editing and exclude articles supplied by authors reporting on their own organizations. A CMG-authored backlink article would not meet those conditions; no submission made and no backlink claimed.", False,
+))
+append_if_missing((
+    "Black Canadian Creators", "https://blackcanadiancreators.ca", "https://blackcanadiancreators.ca/submit-your-story/",
+    "Not submitted — no verified Black Canadian cultural fit",
+    "", date(2026, 9, 23),
+    "unsuitable", "https://blackcanadiancreators.ca/submit-your-story/",
+    "Current guidelines focus on Black Canadian creator experiences, cultural commentary rooted in Black perspectives, and Black-led or culturally aligned work. No such personal or organizational connection was established, so no submission was made and no backlink claimed.", False,
+))
+append_if_missing((
+    "Dromline", "https://dromline.ca", "https://dromline.ca/submissions/",
+    "When health screening becomes an information barrier for newcomers",
+    "https://commonwealthmigration.ca/inadmissibility-and-appeals/medical-inadmissibility", date(2026, 9, 23),
+    "researched", "https://dromline.ca/submissions/",
+    "Current Toronto-based, community-rooted magazine welcomes political analysis, local reporting, commentary, and resource writing from writers and organizers. It accepts either a 500-2,000-word completed piece or a 1-2 paragraph pitch at info@dromline.ca. A non-promotional newcomer-information explainer could fit, but no message has been sent and no public article or backlink exists.", False,
+))
+append_if_missing((
+    "The Independent", "https://theindependent.ca", "https://theindependent.ca/submissions/",
+    "What Atlantic newcomers need from immigration information after approval",
+    "https://commonwealthmigration.ca/immigrate/provincial-nominee-program-all-provinces-consolidated", date(2026, 9, 23),
+    "researched", "https://theindependent.ca/submissions/",
+    "Current Newfoundland and Labrador publication invites concise pitches by email at pitches@theindependent.ca, accepts analysis and reported pieces, and publishes community-focused news and analysis. A clearly Atlantic, source-backed newcomer-information angle could fit, but no message has been sent and no public article or backlink exists.", False,
+))
+append_if_missing((
+    "Pulse", "https://pulsenews.ca", "https://pulsenews.ca/submissions/",
+    "How newcomers build trusted information networks in Toronto’s Downtown East",
+    "https://commonwealthmigration.ca/work-and-study/canada-work-permit-overview", date(2026, 9, 23),
+    "researched", "https://pulsenews.ca/submissions/",
+    "Current publication invites diverse voices from Toronto’s Downtown East to submit stories, articles, photographs, artwork, and other work for possible print or website publication. A locally reported newcomer-work-information story could fit, but no message or form submission was made and no public article or backlink exists.", False,
+))
+append_if_missing((
+    "Toronto Review", "https://thetorontoreview.ca", "https://thetorontoreview.ca/pitch/",
+    "Citizenship paperwork and the lived meaning of belonging in Toronto",
+    "https://commonwealthmigration.ca/citizenship/citizenship-certificate", date(2026, 9, 23),
+    "researched", "https://thetorontoreview.ca/pitch/",
+    "Current pitch guidance asks for a section-specific pitch before submission and welcomes accessible, rigorous writing by experts. A Toronto-centred essay on citizenship documentation and belonging could fit, but no message has been sent and no public article or backlink exists.", False,
+))
+append_if_missing((
+    "The Media Co-op", "https://mediacoop.ca", "https://toronto.mediacoop.ca/contributors2021",
+    "What refugee claimants need from community information networks",
+    "https://commonwealthmigration.ca/immigrate/in-canada-refugee-claim", date(2026, 9, 23),
+    "researched", "https://toronto.mediacoop.ca/contributors2021",
+    "Current contributor guidance asks for a pitch to info@mediacoop.ca and centres grassroots Canadian journalism, housing, labour, anti-racism, and community struggles. A source-backed refugee-information story could fit if it centres ordinary people and community voices; no message has been sent and no public article or backlink exists.", False,
+))
+append_if_missing((
+    "WTFTO.ca", "https://wtfto.ca", "https://wtfto.ca/submit/",
+    "How newcomers find reliable public information across the GTA",
+    "https://commonwealthmigration.ca/visit/visitor-visa-trv-standalone-page", date(2026, 9, 23),
+    "researched", "https://wtfto.ca/submit/",
+    "Current GTA submission form accepts story, opinion, and issue reports, asks for sources/evidence, and states that every submission is reviewed rather than published automatically. A factual newcomer-information story could fit, but no form submission was made and no public article or backlink exists.", False,
+))
+append_if_missing((
+    "The Hub", "https://thehub.ca", "https://thehub.ca/hubguidelines/",
+    "Not submitted — AI-generated writing prohibited",
+    "", date(2026, 9, 23),
+    "unsuitable", "https://thehub.ca/hubguidelines/",
+    "Current opinion-submission guidelines accept timely policy commentary but explicitly state that The Hub does not accept AI-generated written submissions. No submission made and no backlink claimed.", False,
+))
+append_if_missing((
+    "Toronto Business Journal", "https://tobj.ca", "https://tobj.ca/news/market_insider/2026/08/27/35355-call-for-submissions-share-your-toronto-stories-with-us.html",
+    "Not submitted — press-release and promotional route",
+    "", date(2026, 9, 23),
+    "unsuitable", "https://tobj.ca/news/market_insider/2026/08/27/35355-call-for-submissions-share-your-toronto-stories-with-us.html",
+    "Current call is for Toronto-focused press releases, business announcements, events, and brand or community promotion rather than independent editorial articles. No submission made and no backlink claimed.", False,
 ))
 
 for row in range(2, ws.max_row + 1):
@@ -657,6 +810,24 @@ for row in range(2, ws.max_row + 1):
 
 for row in range(2, ws.max_row + 1):
     site = ws.cell(row, 1).value
+    if site == "Situation237":
+        ws.cell(row, 6).value = date(2026, 9, 24)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://situation237.com/contact"
+        ws.cell(row, 9).value = "The public no-login contact form was inspected and prefilled as Anooj Dhawan with seolaunchers@gmail.com, topic Story tip / news lead, and a transparent Cameroon-diaspora newcomer-information pitch containing the contextual CMG visitor/super-visa destination. The Send message control was left untouched; no submission receipt or public article/backlink exists."
+        ws.cell(row, 10).value = False
+    if site == "Daily Hive":
+        ws.cell(row, 6).value = date(2026, 9, 24)
+        ws.cell(row, 7).value = "blocked"
+        ws.cell(row, 8).value = "https://dailyhive.com/page/tips"
+        ws.cell(row, 9).value = "Current public tips route could not be inspected because the live page returned HTTP 403. No form submission or email is claimed and no access control was bypassed; no article or public backlink exists."
+        ws.cell(row, 10).value = False
+    if site == "New Canadian Media" and ws.cell(row, 3).value == "Pitch form rendered without form controls":
+        ws.cell(row, 6).value = date(2026, 9, 24)
+        ws.cell(row, 7).value = "blocked"
+        ws.cell(row, 8).value = "https://newcanadianmedia.ca/pitch-form/"
+        ws.cell(row, 9).value = "The current pitch page still displays submission instructions but no visible form controls or working submission path in the browser. No fields were submitted and no CAPTCHA was bypassed; the separate Gmail pitch already logged below remains the only submission record, with no public article or backlink yet."
+        ws.cell(row, 10).value = False
     if site == "Outcome Canada":
         ws.cell(row, 6).value = date(2026, 9, 23)
         ws.cell(row, 7).value = "submitted/pending"
@@ -681,13 +852,118 @@ for row in range(2, ws.max_row + 1):
         ws.cell(row, 6).value = date(2026, 9, 23)
         ws.cell(row, 7).value = "researched"
         ws.cell(row, 8).value = "https://hersidemagazine.com/"
-        ws.cell(row, 9).value = "Current Canadian diaspora and multicultural publication has active News, HerSuccess, HerPOV, lifestyle, and motherhood coverage and explicitly invites story or pitch submissions at editor@hersidemagazine.com. A tailored pitch using a distinct CMG family-sponsorship destination is suitable, but no message has been sent; no public article or backlink yet."
+        ws.cell(row, 9).value = "Current Canadian diaspora and multicultural publication has active News, HerSuccess, HerPOV, lifestyle, and motherhood coverage and explicitly invites story or pitch submissions at editor@hersidemagazine.com. A tailored family-information pitch was prepared in Gmail with CMG affiliation and the family-sponsorship destination disclosed; it remains unsent and no public article or backlink exists."
         ws.cell(row, 10).value = False
     elif site == "Open Canada":
         ws.cell(row, 6).value = date(2026, 9, 23)
+        ws.cell(row, 7).value = "submitted/pending"
+        ws.cell(row, 8).value = "Gmail Sent mail: Pitch: When an immigration mistake becomes a credibility problem"
+        ws.cell(row, 9).value = "Tailored pitch sent to opencanada@thecic.org from seolaunchers@gmail.com as Anooj Dhawan. The email disclosed the CMG affiliation, proposed an original 1,000-2,500-word policy analysis, and requested editorial approval for one contextual link to the CMG misrepresentation page. Gmail displayed Message sent. No public article or backlink yet."
+        ws.cell(row, 10).value = False
+    elif site == "Spheres of Influence":
+        ws.cell(row, 6).value = date(2026, 9, 23)
+        ws.cell(row, 7).value = "submitted/pending"
+        ws.cell(row, 8).value = "Gmail Sent mail: Pitch: Family reunification policy and the human cost of sponsorship delays"
+        ws.cell(row, 9).value = "Tailored pitch sent to editor@spheresofinfluence.ca from seolaunchers@gmail.com as Anooj Dhawan. The email disclosed the CMG affiliation, proposed an original 800-1,200-word policy analysis aligned with the publication's progressive/intersectional brief, and requested editorial approval for one contextual link to the CMG spousal-sponsorship overview. Gmail displayed Message sent. No public article or backlink yet."
+        ws.cell(row, 10).value = False
+    elif site == "Meridian Source":
+        ws.cell(row, 6).value = date(2026, 9, 23)
         ws.cell(row, 7).value = "researched"
-        ws.cell(row, 8).value = "https://opencanada.org/open-canada-author-writing-guide/"
-        ws.cell(row, 9).value = "Current author guide says Open Canada is a volunteer-run foreign-policy magazine, welcomes pitches before full drafts, and requires original referenced work of 1,000-2,500 words; it lists opencanada@thecic.org for proposals. A tailored pitch using the CMG misrepresentation page was prepared in Gmail with CMG affiliation disclosed, but it remains an unsent draft pending action-time confirmation; no public article or backlink yet."
+        ws.cell(row, 8).value = "https://meridiansource.ca/submit-your-story/"
+        ws.cell(row, 9).value = "Current community publication invites readers to submit stories, events, photos, or video through a live form and states that submissions may be featured. A locally grounded newcomer-information story may fit, but the page does not promise external links or accept promotional copy. The form was inspected and prefilled with a disclosed, non-promotional draft; it remains unsent and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+    elif site == "Dromline":
+        ws.cell(row, 6).value = date(2026, 9, 23)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://dromline.ca/submissions/"
+        ws.cell(row, 9).value = "Current Toronto-based, community-rooted magazine welcomes political analysis, local reporting, commentary, and resource writing and accepts a short pitch or 500-2,000-word piece at info@dromline.ca. A tailored medical-information pitch was prepared in Gmail with CMG affiliation and the contextual destination disclosed; it remains unsent and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+    elif site == "The Independent":
+        ws.cell(row, 6).value = date(2026, 9, 23)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://theindependent.ca/submissions/"
+        ws.cell(row, 9).value = "Current Newfoundland and Labrador publication invites concise pitches at pitches@theindependent.ca and accepts analysis and reported pieces. A tailored Atlantic newcomer-information pitch was prepared in Gmail with CMG affiliation and a provincial-nominee destination disclosed; it remains unsent and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+    elif site == "Pulse":
+        ws.cell(row, 6).value = date(2026, 9, 23)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://pulsenews.ca/submissions/"
+        ws.cell(row, 9).value = "Current publication invites diverse voices from Toronto’s Downtown East to submit stories and articles for possible print or website publication. A tailored local newcomer-information pitch was prepared in Gmail with CMG affiliation and a work-permit destination disclosed; it remains unsent and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+    elif site == "Toronto Review":
+        ws.cell(row, 6).value = date(2026, 9, 23)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://thetorontoreview.ca/pitch/"
+        ws.cell(row, 9).value = "Current pitch guidance requests a 200-300-word essay pitch before any full submission and lists essays@thetorontoreview.ca. A tailored Toronto-centred essay pitch was prepared in Gmail with CMG affiliation and a citizenship-certificate destination disclosed; it remains unsent and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+    elif site == "The Media Co-op":
+        ws.cell(row, 6).value = date(2026, 9, 23)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://toronto.mediacoop.ca/contributors2021"
+        ws.cell(row, 9).value = "Current contributor guidance asks for a pitch to info@mediacoop.ca and centres grassroots Canadian journalism and community voices. A tailored refugee-information pitch was prepared in Gmail with CMG affiliation and the destination disclosed; it remains unsent and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+    elif site == "WTFTO.ca":
+        ws.cell(row, 6).value = date(2026, 9, 23)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://wtfto.ca/submit/"
+        ws.cell(row, 9).value = "Current GTA form accepts story and opinion submissions with source notes and states that every submission is reviewed before publication. A factual newcomer-information opinion was prefilled with CMG affiliation and the contextual destination disclosed; the required consent checkbox was left untouched. The browser tab is now closed, so no submission occurred and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+    elif site == "rabble.ca":
+        ws.cell(row, 6).value = date(2026, 9, 23)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://rabble.ca/about/submit-a-story/"
+        ws.cell(row, 9).value = "Current pitch guidance invites news, long-form, and opinion ideas by email at editor@rabble.ca. A progressive equality-focused citizenship-information pitch was prepared in Gmail with CMG affiliation and the contextual destination disclosed; it remains unsent and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+    elif site == "HerSide Magazine":
+        ws.cell(row, 6).value = date(2026, 9, 23)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://hersidemagazine.com/"
+        ws.cell(row, 9).value = "Current publication invites stories and pitches at editor@hersidemagazine.com and covers diaspora identity, ambition, motherhood, and multicultural communities. A tailored family-information pitch was prepared in Gmail with CMG affiliation and the family-sponsorship destination disclosed; it remains unsent and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+    elif site == "Diaspora Digital News":
+        ws.cell(row, 6).value = date(2026, 9, 23)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://diasporadigitalnews.com/contact/"
+        ws.cell(row, 9).value = "Current publication identifies itself as a digital voice for the global diaspora and publicly invites stories and content by email at media@diasporadigitalnews.com. A tailored visitor-information explainer was prepared in Gmail with CMG affiliation and the visitor/super-visa destination disclosed; it remains unsent and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+
+for row in range(2, ws.max_row + 1):
+    site = ws.cell(row, 1).value
+    if site == "Vision Newspaper":
+        ws.cell(row, 6).value = date(2026, 9, 24)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://visionnewspaper.ca/contact/"
+        ws.cell(row, 9).value = "Current Canadian digital news publication covers Canadian, Caribbean, African, African-American, business, politics, arts, culture, and diaspora news and lists info@visionnewspaper.ca as a public contact. A tailored provincial-immigration explainer was prepared in Gmail with CMG affiliation and the contextual destination disclosed; it remains unsent and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+    elif site == "Afro Diaspora Pulse":
+        ws.cell(row, 6).value = date(2026, 9, 24)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://afrodiasporapulse.com/contact/"
+        ws.cell(row, 9).value = "Current Black-led media platform amplifies African and immigrant diaspora voices and lists editorial/news and opinion/contribution routes. A transparent, source-backed refugee-information pitch was prepared in Gmail with CMG affiliation and the contextual destination disclosed; it remains unsent and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+    elif site == "Local Canadian News":
+        ws.cell(row, 6).value = date(2026, 9, 24)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://lcn.today/contact-us/"
+        ws.cell(row, 9).value = "Current Canadian local-news site publicly invites original, factual contributions at editorial@lcn.today. A practical newcomer citizenship-document explainer was prepared in Gmail with CMG affiliation and the contextual destination disclosed; it remains unsent and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+    elif site == "The Masthead News":
+        ws.cell(row, 6).value = date(2026, 9, 24)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://themastheadnews.ca/contact-us/"
+        ws.cell(row, 9).value = "Current community-news site invites story content or letters to the editor up to 350 words at stories@themastheadnews.ca. A concise Atlantic newcomer-family visitor-information pitch was prepared in Gmail with CMG affiliation and the contextual destination disclosed; it remains unsent and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+    elif site == "WestCoast Families Magazine":
+        ws.cell(row, 6).value = date(2026, 9, 24)
+        ws.cell(row, 7).value = "researched"
+        ws.cell(row, 8).value = "https://westcoastfamilies.com/editorial/"
+        ws.cell(row, 9).value = "Current family/parenting magazine accepts email queries with a brief proposal, relevant experience, writing sample, and source list, and requires objective, balanced material rather than business promotion. A tailored newcomer-family travel/document query was prepared in Gmail with CMG affiliation and the contextual PR-card destination disclosed; it remains unsent and no public article or backlink exists."
+        ws.cell(row, 10).value = False
+    elif site == "Meridian Source":
+        ws.cell(row, 6).value = date(2026, 9, 24)
+        ws.cell(row, 7).value = "blocked"
+        ws.cell(row, 8).value = "https://meridiansource.ca/submit-your-story/"
+        ws.cell(row, 9).value = "The current Share Your Story form requires a Visual Code/security-verification field. No fields were submitted and no verification was solved or bypassed; no article receipt or public backlink exists."
         ws.cell(row, 10).value = False
 
 for row in range(2, ws.max_row + 1):
@@ -769,8 +1045,14 @@ for site_url in [
     "https://outcomecanada.ca/submit",
     "https://www.vietfederation.ca/write-for-us/",
     "https://immigrantmuse.ca/contact-us/",
+    "https://opencanada.org/open-canada-author-writing-guide/",
+    "https://spheresofinfluence.ca/guest-submissions/",
 ]:
-    pair = (site_url, "https://commonwealthmigration.ca/immigrate/express-entry")
+    destination = {
+        "https://opencanada.org/open-canada-author-writing-guide/": "https://commonwealthmigration.ca/inadmissibility-and-appeals/misrepresentation",
+        "https://spheresofinfluence.ca/guest-submissions/": "https://commonwealthmigration.ca/sponsor/spousal-and-partner-sponsorship-overview",
+    }.get(site_url, "https://commonwealthmigration.ca/immigrate/express-entry")
+    pair = (site_url, destination)
     if pair not in detail_rows:
         r = detail_ws.max_row + 1
         for c, value in enumerate(pair, start=1):

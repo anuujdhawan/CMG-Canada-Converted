@@ -3,12 +3,20 @@ import { ArrowUpRight, BriefcaseBusiness, FileCheck2, Globe2, GraduationCap, Hea
 import { site } from "@/config/site";
 import { cn } from "@/lib/utils";
 
-export const VISHAL_ARORA_PROFILE = {
-  name: "Vishal Arora, RCIC",
-  licence: "R711592",
-  role: "Regulated Canadian Immigration Consultant",
-  image: "/images/team/vishal-arora.jpeg",
-  imageAlt: "Vishal Arora, Regulated Canadian Immigration Consultant",
+/**
+ * Profile of the licensed RCIC behind the practice.
+ *
+ * Identity fields are derived from `site.rcic` rather than typed in here, so the
+ * licence number and the CICC register link cannot drift apart. There is no
+ * `image` field: the photo slot is being re-cut around the final expert profile
+ * and must not silently fall back to a previous consultant's headshot.
+ */
+export const LICENSED_RCIC_PROFILE = {
+  name: site.rcic.consultant.nameWithCredential,
+  licence: site.rcic.number,
+  status: site.rcic.consultant.status,
+  role: site.rcic.consultant.role,
+  profileUrl: site.rcic.profileUrl,
   intro: "Client-focused, compliance-driven guidance for individuals and families navigating Canadian immigration with clarity and confidence.",
   expertise: [
     {
@@ -44,7 +52,7 @@ export const VISHAL_ARORA_PROFILE = {
   ],
 };
 
-export default function ConsultantProfileSection({ profile = VISHAL_ARORA_PROFILE, id = "vishal-arora", className = "" }) {
+export default function ConsultantProfileSection({ profile = LICENSED_RCIC_PROFILE, id = "licensed-rcic", className = "" }) {
   const titleId = `${id}-title`;
   const expertiseId = `${id}-expertise`;
 
@@ -63,6 +71,21 @@ export default function ConsultantProfileSection({ profile = VISHAL_ARORA_PROFIL
             <div className="mt-3 w-full max-w-[300px] rounded-xl border border-template-border bg-template-primary-surface-5 px-3.5 py-3">
               <p className="m-0 text-[9px] font-extrabold uppercase tracking-[.17em] text-template-primary">Licensed RCIC</p>
               <p className="m-[3px_0_0] text-[13px] font-bold leading-tight text-template-ink">{profile.name}</p>
+              <p className="m-[5px_0_0] text-[11px] font-semibold leading-tight text-template-muted">Licence No. {profile.licence}</p>
+              <p className="m-[7px_0_0] flex items-center gap-1.5 text-[9.5px] font-extrabold uppercase tracking-[.08em] text-template-primary">
+                <ShieldCheck className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                <span>{profile.status}</span>
+              </p>
+              {/* The trust claim is only worth making if it is one click from the
+                  regulator's own record. Colour goes on the inner span because
+                  `.cmg-template-home a { color: inherit }` is unlayered and wins
+                  over text-colour utilities on the <a> itself. */}
+              <div className="mt-3 border-t border-template-border pt-3">
+                <a href={profile.profileUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-[.06em] no-underline">
+                  <span className="text-template-primary underline underline-offset-2">Verify on the CICC register</span>
+                  <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-template-primary" aria-hidden="true" />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -82,10 +105,10 @@ export default function ConsultantProfileSection({ profile = VISHAL_ARORA_PROFIL
                   <p className="m-0 text-[14px] font-semibold text-template-primary sm:text-[16px]">{profile.role}</p>
                 </div>
 
-                <div className="flex shrink-0 items-center gap-2 rounded-full border border-template-border bg-template-primary-surface-6 px-3 py-2 text-[10px] font-extrabold uppercase tracking-[.08em] text-template-muted">
-                  <ShieldCheck className="h-4 w-4 text-template-primary" aria-hidden="true" />
-                  CICC regulated
-                </div>
+                <a href={profile.profileUrl} target="_blank" rel="noopener noreferrer" className="flex shrink-0 items-center gap-2 rounded-full border border-template-border bg-template-primary-surface-6 px-3 py-2 text-[10px] font-extrabold uppercase tracking-[.08em] no-underline transition-colors hover:border-template-primary">
+                  <ShieldCheck className="h-4 w-4 shrink-0 text-template-primary" aria-hidden="true" />
+                  <span className="text-template-muted">CICC regulated · {profile.licence}</span>
+                </a>
               </div>
 
               <div className="mt-4 flex flex-wrap gap-2">

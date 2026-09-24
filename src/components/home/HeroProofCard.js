@@ -1,8 +1,13 @@
 import Link from "next/link";
 import { Check, MapPin, ShieldCheck } from "lucide-react";
 import HeroCardShell from "./HeroCardShell";
+import { site } from "@/config/site";
 
-const CICC_REGISTER_URL = "https://register.college-ic.ca/Public-Register-EN/Licensee/Profile.aspx?ID=18715";
+// Points at the practice's own licensee record on the CICC public register, so
+// the "CICC-regulated" claim is one click away from the regulator's own page.
+// This previously pointed at Profile.aspx?ID=18715, which is a different
+// licensee entirely — a bad link to carry under a trust badge.
+const CICC_PROFILE_URL = site.rcic.profileUrl;
 
 const HANDLED_FILES = [
   "Express Entry refusals (CRS, eligibility)",
@@ -17,8 +22,8 @@ export default function HeroProofCard({ ariaLabel = "Track record and files we h
   return (
     <HeroCardShell ariaLabel={ariaLabel} className="hero-proof-card -translate-y-[50%] max-[880px]:!translate-y-0">
       <div className="mini-badges flex flex-wrap items-center gap-2">
-        <Link href={CICC_REGISTER_URL} target="_blank" rel="noopener noreferrer" className="mini-badge inline-flex items-center gap-[7px] rounded-full border border-[color-mix(in_srgb,var(--template-on-primary)_13%,transparent)] bg-[color-mix(in_srgb,var(--template-on-primary)_9%,transparent)] p-[7px_11px_7px_9px] text-[color-mix(in_srgb,var(--template-on-primary)_92%,transparent)] text-[11px] font-extrabold leading-[1.65] tracking-[.07em] uppercase backdrop-blur-[10px] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_7%,transparent)]">
-          <ShieldCheck className="flex-none text-[var(--cmg-template-primary-bright)] drop-shadow-[0_1px_8px_color-mix(in_srgb,var(--template-primary)_42%,transparent)]" width={15} height={15} aria-hidden="true" /> CICC-regulated
+        <Link href={CICC_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="mini-badge inline-flex items-center gap-[7px] rounded-full border border-[color-mix(in_srgb,var(--template-on-primary)_13%,transparent)] bg-[color-mix(in_srgb,var(--template-on-primary)_9%,transparent)] p-[7px_11px_7px_9px] text-[color-mix(in_srgb,var(--template-on-primary)_92%,transparent)] text-[11px] font-extrabold leading-[1.65] tracking-[.07em] uppercase backdrop-blur-[10px] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_7%,transparent)]">
+          <ShieldCheck className="flex-none text-[var(--cmg-template-primary-bright)] drop-shadow-[0_1px_8px_color-mix(in_srgb,var(--template-primary)_42%,transparent)]" width={15} height={15} aria-hidden="true" /> CICC-regulated · {site.rcic.number}
         </Link>
         <span className="mini-badge inline-flex items-center gap-[7px] rounded-full border border-[color-mix(in_srgb,var(--template-on-primary)_10%,transparent)] bg-[color-mix(in_srgb,var(--template-on-primary)_6%,transparent)] p-[7px_11px_7px_9px] text-[color-mix(in_srgb,var(--template-on-primary)_74%,transparent)] text-[11px] font-bold leading-[1.65] tracking-[.04em] normal-case backdrop-blur-[10px] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_7%,transparent)]"><MapPin className="flex-none text-[var(--cmg-template-primary-bright)] drop-shadow-[0_1px_8px_color-mix(in_srgb,var(--template-primary)_42%,transparent)]" width={15} height={15} aria-hidden="true" /> Canada-wide</span>
       </div>
@@ -35,7 +40,12 @@ export default function HeroProofCard({ ariaLabel = "Track record and files we h
       </ul>
       <div className="visual-card__footer flex flex-wrap items-baseline justify-between gap-x-3 gap-y-2 mt-[18px] border-t border-[color-mix(in_srgb,var(--template-on-primary)_15%,transparent)] pt-[14px] text-[color-mix(in_srgb,var(--template-on-primary)_66%,transparent)] text-[12px] leading-[1.35] max-[480px]:mt-[10px] max-[480px]:pt-2 max-[480px]:text-[10.5px]">
         <span>Commonwealth Migration Group Inc</span>
-        <strong className="font-bold text-[color-mix(in_srgb,var(--template-on-primary)_86%,transparent)] text-right">CICC-Regulated Practice</strong>
+        {/* Names the licensed consultant behind the practice. The colour sits on
+            the inner span because `.cmg-template-home a { color: inherit }` is
+            unlayered and beats text-colour utilities on the <a> itself. */}
+        <Link href={CICC_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="text-right font-bold underline-offset-2 hover:underline">
+          <span className="text-[color-mix(in_srgb,var(--template-on-primary)_86%,transparent)]">{site.rcic.consultant.nameWithCredential}</span>
+        </Link>
       </div>
     </HeroCardShell>
   );

@@ -471,9 +471,13 @@ export function Block({ block, dark = false, lead = false, page, tableIndex = 0 
         </details>
       );
     case "legalText":
+      // Rendered through renderInline so compliance copy can carry real links
+      // (out to the CICC public register, IRCC, etc.) instead of printing a dead
+      // "www.college-ic.ca". The surrounding `whitespace-pre-line` still preserves
+      // the paragraph breaks because the text nodes keep their newlines.
       return (
         <div className="my-6 whitespace-pre-line rounded-[18px] border border-[var(--border)] bg-[var(--surface)] px-5 py-6 text-[14px] leading-[1.85] text-[var(--muted)] shadow-[var(--shadow-soft)]">
-          {block.text}
+          {renderInline(block.text)}
         </div>
       );
     case "list":

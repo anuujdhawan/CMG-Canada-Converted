@@ -4,6 +4,11 @@ const aboutPath = "/about/about-commonwealth-migration";
 const aboutRoot = `${site.url.replace(/\/$/, "")}${aboutPath}`;
 const officialRepresentativeGuide = "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose/authorized.html";
 const ciccRegister = "https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx";
+// Direct link to this practice's own licensee record (verified 2026-09-24:
+// Pankaj Khanna · R711256 · "Eligible to Provide Service"). The register root
+// above is kept for the "verify any representative" advice, where the specific
+// record would be the wrong target.
+const ciccProfile = site.rcic.profileUrl;
 
 const faq = (question, answer) => [
   { type: "paragraph", text: `Q: ${question}` },
@@ -40,7 +45,10 @@ const faqPage = (items) => ({
 
 const aboutFaqs = [
   ["What does Commonwealth Migration do?", "Commonwealth Migration provides Canadian immigration guidance for permanent residence, temporary residence, family sponsorship, employer programs, citizenship, and complex refusal or appeal matters."],
-  ["Are Commonwealth Migration consultants licensed?", "Commonwealth Migration is a CICC-regulated practice. Verify the current licence status and contact details for the representative you engage on the CICC Public Register before paying for immigration advice."],
+  // FAQ answers are rendered visibly AND emitted into FAQPage structured data,
+  // so the licence number is written as plain text here rather than as a
+  // markdown link — a link would surface as raw `[label](url)` in the schema.
+  ["Are Commonwealth Migration consultants licensed?", `Commonwealth Migration is a CICC-regulated practice. The licensed consultant behind the practice is ${site.rcic.consultant.nameWithCredential}, licence number ${site.rcic.number}. Verify the current licence status and contact details for the representative you engage on the CICC Public Register before paying for immigration advice.`],
   ["Does Commonwealth Migration guarantee a visa or permanent residence result?", "No. Immigration decisions are made by the relevant Canadian authority. The team provides professional assessment, preparation and representation where authorized, but no consultant can guarantee an outcome."],
 ];
 
@@ -79,6 +87,7 @@ export const aboutPages = [
         "Ask what the engagement includes, who owns each next step and how changes in the rules will be handled.",
         "Expect a fact-specific review and a clear explanation of uncertainty; no professional can guarantee an immigration decision.",
       ] },
+      { type: "paragraph", text: `The licensed consultant behind Commonwealth Migration is ${site.rcic.consultant.nameWithCredential}, licence number ${site.rcic.number}, whose current status on the regulator's register is "${site.rcic.consultant.status}". You can open our record directly at [the CICC public register](${ciccProfile}), or search the status of any other representative at [register.college-ic.ca](${ciccRegister}). Licence status is the first thing worth checking before you share documents or pay a fee — it applies to any consultant, not just ours.` },
       { type: "heading", level: 2, text: "Which Canadian immigration matters do we handle?" },
       { type: "table", rows: [
         ["Client goal", "Common areas of support"],

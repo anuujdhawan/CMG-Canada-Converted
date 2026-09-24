@@ -14,7 +14,7 @@ export function Field({ label, htmlFor, required, error, hint, children }) {
       </label>
       {children}
       {hint && !error && <p className="tool-field__hint m-0 text-[var(--template-muted)] text-[0.68rem] leading-[1.4]">{hint}</p>}
-      {error && <p role="alert" className="mt-1.5 text-xs font-medium text-[var(--brand-error)]">{error}</p>}
+      {error && <p role="alert" className="mt-1.5 text-xs font-medium text-error">{error}</p>}
     </div>
   );
 }
@@ -35,7 +35,7 @@ export function CheckboxField({ label, htmlFor, checked, onChange, error, classN
         <input id={htmlFor} type="checkbox" checked={checked} onChange={onChange} className="tool-checkbox mt-[0.15rem] h-[1.05rem] w-[1.05rem] accent-[var(--template-primary)]" />
         <span>{label}</span>
       </label>
-      {error && <p role="alert" className="mt-1.5 text-xs font-medium text-[var(--brand-error)]">{error}</p>}
+      {error && <p role="alert" className="mt-1.5 text-xs font-medium text-error">{error}</p>}
     </div>
   );
 }

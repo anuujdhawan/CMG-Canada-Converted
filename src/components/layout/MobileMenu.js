@@ -56,12 +56,21 @@ export default function MobileMenu({ open, onClose }) {
       aria-hidden={!open}
       inert={!open}
     >
-      {/* Backdrop */}
+      {/* Backdrop.
+          The drawer stays mounted so its nav links survive in the crawled
+          HTML, so the scrim has to be faded out explicitly. `inert` and
+          `pointer-events-none` only stop interaction — they do not stop the
+          element painting. Left visible it dimmed the entire page by 72% at
+          every width below 1120px, which made tablet and phone layouts look
+          far darker than the desktop one. */}
       <button
         type="button"
         aria-label="Close menu"
         onClick={onClose}
-        className="cmg-mobile-menu__backdrop absolute inset-0 h-full w-full cursor-default"
+        className={cn(
+          "cmg-mobile-menu__backdrop absolute inset-0 h-full w-full cursor-default transition-opacity duration-300 ease-out",
+          open ? "opacity-100" : "opacity-0"
+        )}
       />
 
       {/* Panel */}

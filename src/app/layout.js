@@ -60,6 +60,14 @@ const organizationContactPoint = [
   site.email.includes("@") ? { "@type": "ContactPoint", contactType: "customer support", email: site.email, areaServed: "CA", availableLanguage: ["English"] } : null,
   site.phone.replace(/\D/g, "").length >= 7 ? { "@type": "ContactPoint", contactType: "customer support", telephone: site.phone, areaServed: "CA", availableLanguage: ["English"] } : null,
 ].filter(Boolean);
+// Stable @id for the licensed RCIC entity, shared by the Organization's
+// `employee` reference and the Person node below.
+const consultantSlug = site.rcic.consultant.name
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/^-|-$/g, "");
+const consultantId = `${site.url}#${consultantSlug}`;
+
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -68,6 +76,9 @@ const organizationJsonLd = {
   alternateName: [site.tradingName, site.shortName].filter(Boolean),
   description: site.description,
   url: site.url,
+  // Ties the business to the licence that authorises it to give immigration
+  // advice — the entity link search engines use to resolve "licensed RCIC".
+  employee: { "@id": consultantId },
   ...(site.email.includes("@") ? { email: site.email } : {}),
   ...(site.phone.replace(/\D/g, "").length >= 7 ? { telephone: site.phone } : {}),
   priceRange: "$$",
@@ -107,6 +118,52 @@ const websiteJsonLd = {
   about: { "@id": `${site.url}#organization` },
 };
 
+// ---- Licensed representative -------------------------------------------
+// The practice's whole trust claim is "planned by a licensed RCIC", but the
+// site previously emitted no Person node at all — so the credential existed in
+// copy and nowhere in the structured data. This connects the business entity to
+// a regulator-issued licence that Google can verify independently, and points
+// `url`/`sameAs` at the licensee record on the CICC public register.
+//
+// Everything is derived from site.rcic so the licence number, the name and the
+// register URL cannot drift out of sync with the visible page copy.
+const consultantJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": consultantId,
+  name: site.rcic.consultant.name,
+  honorificSuffix: "RCIC",
+  jobTitle: site.rcic.consultant.role,
+  // site.name already ends in a period ("…Group Inc."), so strip it before
+  // appending sentence punctuation to avoid "Inc..".
+  description: `${site.rcic.consultant.name} is a Regulated Canadian Immigration Consultant (RCIC) licensed by the ${site.rcic.regulator}, licence number ${site.rcic.number}, providing Canadian immigration services through ${site.name.replace(/\.$/, "")}.`,
+  worksFor: { "@id": `${site.url}#organization` },
+  url: site.rcic.profileUrl,
+  sameAs: [site.rcic.profileUrl],
+  knowsAbout: [
+    "Express Entry",
+    "Provincial Nominee Programs",
+    "Canadian work permits",
+    "Canadian study permits",
+    "Family sponsorship",
+    "Permanent residence",
+    "Temporary residence",
+  ],
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    credentialCategory: "license",
+    name: "Regulated Canadian Immigration Consultant (RCIC) licence",
+    identifier: site.rcic.number,
+    url: site.rcic.profileUrl,
+    recognizedBy: {
+      "@type": "Organization",
+      name: "College of Immigration and Citizenship Consultants",
+      alternateName: "CICC",
+      url: site.rcic.regulatorUrl,
+    },
+  },
+};
+
 // Apply the persisted theme before the browser paints the page. Reading
 // localStorage in ThemeToggle's effect alone causes a one-frame dark theme
 // flash on refreshes when the saved preference is light.
@@ -142,6 +199,10 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(consultantJsonLd) }}
         />
         <a href="#main-content" className="skip-link absolute left-4 top-4 z-100 -translate-y-24 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white shadow-md transition-transform focus:translate-y-0">
           Skip to main content

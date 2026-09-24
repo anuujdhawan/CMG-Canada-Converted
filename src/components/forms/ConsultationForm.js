@@ -63,7 +63,7 @@ export default function ConsultationForm({ variant = "standard" }) {
   }
 
   return (
-      <FormShell as="form" onSubmit={onSubmit} noValidate className="consultation-form-shell !rounded-[20px] !p-0 before:absolute before:top-0 before:right-0 before:left-0 before:h-1 before:bg-[var(--brand-gold)] before:content-[''] border border-[var(--template-border)] bg-[var(--template-surface)] shadow-[0_14px_38px_color-mix(in_srgb,var(--template-ink)_8%,transparent),0_2px_8px_color-mix(in_srgb,var(--template-ink)_4%,transparent)]" bodyClassName="!gap-4 !p-[1.15rem_clamp(0.75rem,1.5vw,1.2rem)_1.25rem]">
+      <FormShell as="form" onSubmit={onSubmit} noValidate className="consultation-form-shell !rounded-[20px] !p-0 before:absolute before:top-0 before:right-0 before:left-0 before:h-1 before:bg-(--brand-gold) before:content-[''] border border-[var(--template-border)] bg-[var(--template-surface)] shadow-[0_14px_38px_color-mix(in_srgb,var(--template-ink)_8%,transparent),0_2px_8px_color-mix(in_srgb,var(--template-ink)_4%,transparent)]" bodyClassName="!gap-4 !p-[1.15rem_clamp(0.75rem,1.5vw,1.2rem)_1.25rem]">
       <div className="consultation-form-intro flex items-start gap-[0.8rem] mb-[1.15rem] border-b !border-b-[var(--modal-border,var(--template-border))] pb-[1.05rem]">
         <span className="consultation-form-intro-mark inline-flex h-[2.9rem] w-[2.9rem] shrink-0 items-center justify-center rounded-[15px] border border-[color-mix(in_srgb,var(--template-primary)_24%,transparent)] bg-[var(--template-secondary)] text-[var(--template-on-primary)] shadow-[0_8px_18px_color-mix(in_srgb,var(--template-ink)_12%,transparent)]" aria-hidden="true">
           <CalendarCheck className="h-6 w-6" />
