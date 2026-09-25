@@ -127,6 +127,11 @@ export default function ReferenceHomepage({ page, heroData }) {
         </div>
       </section>
 
+      {/* Directly under the hero: this is the first thing a visitor meets after
+          scrolling, so the licensed consultant leads the page rather than
+          appearing eight sections further down. */}
+      <ConsultantProfileSection />
+
       <section className="section relative z-[1] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16" id="pathways">
         <div className="section-inner mx-auto w-[var(--container)]">
           <SectionHeading className="pathways-section-head" title="Choose the pathway that feels like yours" lead="The best immigration plan starts with the right question. Pick a goal and we will take you to the deeper guide, tools and next steps." />
@@ -198,8 +203,6 @@ export default function ReferenceHomepage({ page, heroData }) {
       <section className="section relative z-[1] bg-[var(--secondary)] py-[104px] max-[620px]:py-[75px] dark" id="refusals">
         <div className="section-inner mx-auto w-[var(--container)] refusal-layout grid !grid-cols-[.54fr_1fr] max-[880px]:!grid-cols-1 items-center gap-[55px] max-[880px]:gap-8"><div className="refusal-copy reveal"><p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">When the file gets complicated</p><h2 className="max-w-[690px] !text-[clamp(32px,1.8rem+2.4vw,50px)] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-[1.02]">Turn a refusal into a clearer next move</h2><p className="!mt-5 !max-w-[570px] !text-[15px] !leading-[1.8]">The decision-maker sees the record in front of them. We isolate the refusal concerns and shape evidence-backed replies, reapplications or appeal paths around those findings.</p><div className="quote mt-7 border-l-0 border-t p-[20px_0_0] text-[24px] font-semibold italic leading-[1.25]">“A refusal response should make every concern easier to verify.”</div></div><div className="refusal-grid grid grid-cols-2 max-[620px]:!grid-cols-1 gap-[15px]">{[["Visitor visa refused", "We rebuild the evidence around ties, available funds and the reason for travel.", MapPin], ["Study permit refused", "We examine the study plan, finances and program logic to close the gaps.", BookOpenCheck], ["Sponsorship refused", "We arrange relationship and eligibility proof so the record answers the refusal.", HeartHandshake], ["Procedural fairness", "We prioritize the deadline and structure the response around every concern.", Timer]].map(([title, description, Icon], index) => <article className="refusal-card min-h-0 p-6 rounded-[18px] reveal bg-[color-mix(in_srgb,var(--template-on-primary)_7%,transparent)] border-[color-mix(in_srgb,var(--template-on-primary)_14%,transparent)]" key={title} style={{ "--delay": `${index * 60}ms` }}><IconBox icon={Icon} /><h3 className="!m-[9px_0_8px] !text-[19px] text-[var(--ink)] !font-extrabold !leading-[1.25] tracking-normal">{title}</h3><p className="!m-0 !text-[14px] !leading-[1.65]">{description}</p></article>)}</div></div>
       </section>
-
-      <ConsultantProfileSection />
 
       {/* Client Success Gallery — temporarily disabled. Restore with: <LiveSuccessVideos /> */}
       <LatestBlogsCarousel />

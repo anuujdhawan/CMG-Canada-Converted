@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "validate:page-data": "node scripts/validate-page-data.mjs",
-    "validate:blog-content": "node scripts/verify-blog-content.mjs"
+    "validate:blog-content": "node scripts/verify-blog-content.mjs",
+    "build:icons": "node scripts/build-brand-icons.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
