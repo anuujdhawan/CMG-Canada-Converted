@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -17,7 +18,8 @@ import BlogHero, { TemplateLink } from "./BlogHero";
 import BlogCard from "./BlogCard";
 import TemplateMotion from "@/components/home/TemplateMotion";
 import FaqSection from "@/components/sections/FaqSection";
-import { getBlogCategory, getBlogGroups, researchCategorySlug } from "@/lib/blog";
+import { getBlogCategory, getBlogGroups, getResearchBlogImage, researchCategorySlug } from "@/lib/blog";
+import { getImageObjectPosition } from "@/lib/imagePresentation";
 import { countArticleWords } from "@/data/blog-articles";
 
 /**
@@ -348,6 +350,7 @@ export default function BlogArticlePage({ post, article = null }) {
   const articlePath = `/blog/${post.slug}`;
   const categorySlug = researchCategorySlug(post.category);
   const category = getBlogCategory(categorySlug);
+  const cover = getResearchBlogImage(post.slug, post.category);
   const guidance = CATEGORY_GUIDANCE[categorySlug] || CATEGORY_GUIDANCE["immigration-guides"];
   const reviewed = formatMonth(post.updated || post.date || "2026-09-21");
 
@@ -407,6 +410,27 @@ export default function BlogArticlePage({ post, article = null }) {
           </>
         }
       />
+
+      <section className="relative z-[2] -mt-[82px] pb-[22px] max-[880px]:-mt-[52px] max-[620px]:-mt-[30px] max-[620px]:pb-3" aria-label="Article cover image">
+        <div className="section-inner mx-auto w-[var(--container)]">
+          <figure className="relative isolate m-0 aspect-[16/6] overflow-hidden rounded-[26px] border border-[color-mix(in_srgb,var(--template-on-primary)_18%,var(--border))] bg-[var(--secondary)] shadow-[0_24px_70px_color-mix(in_srgb,var(--cmg-template-deep-surface)_42%,transparent)] max-[620px]:aspect-[16/8]">
+            <Image
+              src={cover.src}
+              alt={cover.alt}
+              fill
+              priority
+              sizes="(max-width: 620px) 100vw, 1220px"
+              className="object-cover [transition:transform_.8s_cubic-bezier(.16,1,.3,1),filter_.5s_ease]"
+              style={{ objectPosition: getImageObjectPosition(cover.src) }}
+            />
+            <span className="absolute inset-0 bg-[linear-gradient(100deg,color-mix(in_srgb,var(--cmg-template-deep-surface)_70%,transparent)_0%,transparent_52%,color-mix(in_srgb,var(--primary)_20%,transparent)_100%)]" aria-hidden="true" />
+            <figcaption className="absolute inset-x-5 bottom-5 z-[1] flex items-center justify-between gap-4 max-[620px]:inset-x-4 max-[620px]:bottom-4">
+              <span className="inline-flex max-w-[78%] items-center rounded-full border border-[color-mix(in_srgb,var(--template-on-primary)_24%,transparent)] bg-[color-mix(in_srgb,var(--cmg-template-deep-surface)_60%,transparent)] px-4 py-2 text-[11px] font-extrabold uppercase tracking-[.12em] text-[var(--template-on-primary)] backdrop-blur-[10px]">{post.category}</span>
+              <span className="hidden text-[10px] font-extrabold uppercase tracking-[.16em] text-[color-mix(in_srgb,var(--template-on-primary)_72%,transparent)] sm:inline">CMG guide</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
 
       {article && (
         <section className="section relative z-[1] border-b border-[var(--border)] bg-[var(--surface-alt)] py-[64px] max-[880px]:py-[52px] max-[620px]:py-11 article-summary" aria-labelledby="quick-answer-label">

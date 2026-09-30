@@ -56,7 +56,9 @@ function PagerButton({ href, disabled, children }) {
   if (disabled) {
     return <span aria-disabled="true" className="rounded-lg border border-[var(--border)] px-4 py-2 font-bold opacity-40">{children}</span>;
   }
-  return <Link href={href} scroll={false} className="rounded-lg border border-[var(--border)] px-4 py-2 font-bold transition-colors hover:border-[var(--primary)]"><span className="text-[var(--ink)]">{children}</span></Link>;
+  // Pagination should land at the start of the refreshed blog panel rather
+  // than preserving the old page's scroll position at the pager.
+  return <Link href={`${href}#blog-panel`} className="rounded-lg border border-[var(--border)] px-4 py-2 font-bold transition-colors hover:border-[var(--primary)]"><span className="text-[var(--ink)]">{children}</span></Link>;
 }
 
 export default function BlogCategoryTabs({ groups = [], activeCategory = ALL_BLOG_CATEGORY, activePage = 1 }) {
@@ -84,7 +86,7 @@ export default function BlogCategoryTabs({ groups = [], activeCategory = ALL_BLO
       </nav>
 
       <section
-        className="reference-blog-tab-panel animate-[blog-panel-in_.42s_cubic-bezier(.16,1,.3,1)_both] border-t border-[var(--border)] pt-[27px] max-[620px]:pt-[22px] focus-visible:!outline-2 focus-visible:!outline-[var(--primary)] focus-visible:!outline-offset-[8px]"
+        className="reference-blog-tab-panel scroll-mt-[140px] animate-[blog-panel-in_.42s_cubic-bezier(.16,1,.3,1)_both] border-t border-[var(--border)] pt-[27px] max-[620px]:scroll-mt-[100px] max-[620px]:pt-[22px] focus-visible:!outline-2 focus-visible:!outline-[var(--primary)] focus-visible:!outline-offset-[8px]"
         id="blog-panel"
         key={activeGroup.slug}
         tabIndex={-1}

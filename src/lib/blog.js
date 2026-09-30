@@ -193,6 +193,96 @@ const BLOG_IMAGE_BY_CATEGORY = {
   },
 };
 
+/**
+ * Research posts need a slug-level cover rather than the category fallback:
+ * several current posts share a category, and using one category image made
+ * the blog grid look like the same article repeated across every card.
+ * All covers are local WebP assets so the listing does not depend on remote
+ * image hosts or runtime downloads.
+ */
+const BLOG_IMAGE_BY_RESEARCH_SLUG = {
+  "canada-immigration-levels-plan-2026": {
+    src: "/images/blog/canada-flag-office.webp",
+    alt: "Canadian flag representing the national immigration levels plan",
+  },
+  "express-entry-canada-2026-categories": {
+    src: "/images/blog/pr-application-form.webp",
+    alt: "Organized immigration documents prepared for Express Entry category selection",
+  },
+  "crs-score-canada-how-to-improve": {
+    src: "/images/blog/city-night.webp",
+    alt: "Canadian city skyline representing an Express Entry CRS planning decision",
+  },
+  "canada-immigration-news-monthly-ircc-update": {
+    src: "/images/blog/financial-district.webp",
+    alt: "Canadian financial district representing current immigration news and policy updates",
+  },
+  "canada-pr-pathways-2026": {
+    src: "/images/blog/toronto-newcomer.webp",
+    alt: "Newcomer enjoying Toronto while considering Canadian permanent residence pathways",
+  },
+  "provincial-nominee-program-canada-2026": {
+    src: "/images/blog/quebec-city.webp",
+    alt: "Quebec City representing provincial nominee program options across Canada",
+  },
+  "rural-community-immigration-pilot-canada": {
+    src: "/images/blog/small-town.webp",
+    alt: "Small Canadian town representing rural community immigration options",
+  },
+  "atlantic-immigration-program-guide": {
+    src: "/images/blog/bridge-at-dusk.webp",
+    alt: "Bridge representing the journey through an Atlantic immigration pathway",
+  },
+  "canada-work-permit-types-2026": {
+    src: "/images/blog/city-walk.webp",
+    alt: "People moving through a Canadian city while planning work permit options",
+  },
+  "lmia-canada-explained": {
+    src: "/images/blog/calgary-skyline.webp",
+    alt: "Canadian business district representing an LMIA employer immigration plan",
+  },
+  "pgwp-canada-2026": {
+    src: "/images/blog/toronto-newcomer.webp",
+    alt: "Newcomer enjoying Toronto while planning post-graduation work in Canada",
+  },
+  "canada-study-permit-2026": {
+    src: "/images/pages/students-study.webp",
+    alt: "Students planning a Canadian study permit pathway",
+  },
+  "canada-visitor-visa-documents-refusal": {
+    src: "/images/blog/mountain-lake.webp",
+    alt: "Canadian mountain lake representing a planned visitor trip",
+  },
+  "canada-super-visa-2026": {
+    src: "/images/blog/maple-leaves.webp",
+    alt: "Canadian maple leaves representing a family visit and Super Visa plan",
+  },
+  "spousal-sponsorship-canada-2026": {
+    src: "/images/pages/couple.webp",
+    alt: "Couple planning a Canadian spousal sponsorship application",
+  },
+  "parents-grandparents-program-canada": {
+    src: "/images/pages/family.webp",
+    alt: "Family planning a parents and grandparents sponsorship pathway",
+  },
+  "canada-immigration-processing-times": {
+    src: "/images/blog/shipping-containers.webp",
+    alt: "Shipping containers representing the stages and movement of an immigration application",
+  },
+  "canada-citizenship-requirements": {
+    src: "/images/blog/canada-flag-office.webp",
+    alt: "Canadian flag representing Canadian citizenship requirements",
+  },
+  "pr-card-renewal-canada": {
+    src: "/images/blog/pr-application-form.webp",
+    alt: "Permanent residence application form representing a Canadian PR card renewal plan",
+  },
+  "what-delays-canada-immigration-application": {
+    src: "/images/blog/prairie-silos.webp",
+    alt: "Prairie landscape representing the patience and preparation needed for an immigration application",
+  },
+};
+
 const DEFAULT_BLOG_IMAGE = {
   src: "/images/pages/documents.webp",
   alt: "Canadian immigration documents prepared for review",
@@ -214,6 +304,11 @@ function imageForPost(page, category) {
   return BLOG_IMAGE_BY_FILE[page.file] || BLOG_IMAGE_BY_CATEGORY[category.slug] || DEFAULT_BLOG_IMAGE;
 }
 
+/** Resolve the cover used by both research cards and the article page. */
+export function getResearchBlogImage(slug, categoryLabel) {
+  return BLOG_IMAGE_BY_RESEARCH_SLUG[slug] || BLOG_IMAGE_BY_CATEGORY[researchCategorySlug(categoryLabel)] || DEFAULT_BLOG_IMAGE;
+}
+
 export function getBlogPosts() {
   const sourcePosts = getAllPages()
     .filter((page) => page.path.startsWith("/blog/"))
@@ -233,7 +328,7 @@ export function getBlogPosts() {
     seo: { title: `${post.title} | Commonwealth Migration Canada`, description: post.description, keywords: post.keywords.split('; ') },
     meta: { lastModified: '2026-09-21' },
     category: { slug: researchCategorySlug(post.category), label: post.category, title: post.category, description: post.description },
-    image: DEFAULT_BLOG_IMAGE,
+    image: getResearchBlogImage(post.slug, post.category),
     research: post,
   }));
   return [...sourcePosts, ...generatedPosts].sort((a, b) => a.title.localeCompare(b.title));

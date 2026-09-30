@@ -53,12 +53,12 @@ export const LICENSED_RCIC_PROFILE = {
     width: 900,
     height: 1125,
   },
-  // Sits beside the general "Book a consultation" CTA as an annotation on it,
-  // not as a second route: it is deliberately not a link, so there is no `url`.
-  // The left arrow points back at the button, which is what makes the two read
-  // as one action.
+  // Sits beside the general "Book a consultation" CTA as a profile-specific
+  // booking option. The left arrow points back at the button, which is what
+  // makes the two read as one action.
   booking: {
     label: "Book With Pankaj",
+    href: "https://calendar.app.google/coxwFVa4cXZTbntdA",
   },
   intro: "Client-focused, compliance-driven guidance for individuals and families navigating Canadian immigration with clarity and confidence.",
   expertise: [
@@ -203,20 +203,24 @@ export default function ConsultantProfileSection({ profile = LICENSED_RCIC_PROFI
                   <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
 
-                {/* Informational tab, not a control — it annotates the button to
-                    its left rather than offering a second destination, so it is
-                    a <span>: nothing to click, nothing to focus, and no href that
-                    could drift out of sync with the button. The arrow carries the
-                    relationship, so it is coloured to match the button it points
-                    at; colour goes on the inner <span> because
-                    `.cmg-template-home a { color: inherit }` is unlayered and
-                    beats text-colour utilities on the element itself. */}
+                {/* Profile-specific booking link. It opens in a new tab so visitors
+                    keep the immigration page available while scheduling. The arrow
+                    carries the relationship to the consultation CTA, so it is
+                    coloured to match that button; colour goes on the inner <span>
+                    because `.cmg-template-home a { color: inherit }` is unlayered
+                    and beats text-colour utilities on the element itself. */}
                 {booking?.label ? (
-                  <span className="inline-flex min-h-10 items-center gap-2 rounded-full border border-template-border bg-template-primary-surface-6 px-3.5 py-2.5 text-[11px] font-extrabold">
+                  <a
+                    href={booking.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${booking.label} (opens in a new tab)`}
+                    className="inline-flex min-h-10 items-center gap-2 rounded-full border border-template-border bg-template-primary-surface-6 px-3.5 py-2.5 text-[11px] font-extrabold no-underline transition-colors hover:border-template-primary"
+                  >
                     <ArrowLeft className="h-4 w-4 shrink-0 text-template-primary" aria-hidden="true" />
                     <GoogleCalendarMark className="h-4 w-4 shrink-0" />
                     <span className="text-template-ink">{booking.label}</span>
-                  </span>
+                  </a>
                 ) : null}
               </div>
 
