@@ -27,11 +27,11 @@ export default function HeroCarousel({ slides = HERO_SLIDES, className }) {
       aria-label="Canadian locations and opportunities"
     >
       <div className="cmg-hero-carousel__slides absolute inset-0">
-        {slides.map((slide, index) => (
+        {slides.map((slide, index) => index === activeIndex ? (
           <div
             key={slide.src}
-            className={cn("cmg-hero-carousel__slide absolute inset-0 opacity-0 [transition:opacity_.8s_ease]", index === activeIndex && "is-active !opacity-100")}
-            aria-hidden={index !== activeIndex}
+            className="cmg-hero-carousel__slide is-active absolute inset-0 opacity-100 [transition:opacity_.8s_ease]"
+            aria-hidden="false"
           >
             <Image
               src={slide.src}
@@ -39,10 +39,10 @@ export default function HeroCarousel({ slides = HERO_SLIDES, className }) {
               fill
               priority={index === 0}
               sizes="100vw"
-              className={cn("cmg-hero-carousel__image group-hover/hero:scale-[1.035] absolute inset-0 object-cover object-center brightness-[1.06] contrast-[1.04] saturate-[1.08] [transition:transform_1s_cubic-bezier(.2,.8,.2,1),filter_400ms_ease]", index === activeIndex ? "scale-[1.055]" : "scale-[1.01]")}
+              className="cmg-hero-carousel__image group-hover/hero:scale-[1.035] absolute inset-0 scale-[1.055] object-cover object-center brightness-[1.06] contrast-[1.04] saturate-[1.08] [transition:transform_1s_cubic-bezier(.2,.8,.2,1),filter_400ms_ease]"
             />
           </div>
-        ))}
+        ) : null)}
       </div>
 
       <div className="cmg-hero-carousel__wash absolute inset-0 " aria-hidden />

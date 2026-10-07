@@ -1,0 +1,240 @@
+Prepared by Loud Launchers
+Page 1
+MONTHLY COMPLETION REPORT
+ SEO, GEO & AEO Services
+September 2026 - Website Completion Report
+Prepared by Loud Launchers for Commonwealth Migration Group Inc. This report records
+the completed work against the September action plan for the UAE website.
+CLIENT Commonwealth Migration
+Group Inc.
+WEBSITE COVERED
+https://www.cwmigrationgroup.ae
+SERVICE PROVIDER Loud
+Launchers
+SERVICE PLAN Advanced SEO +
+Maintenance
+REPORT PERIOD September
+2026
+REPORT STATUS Completed
+summary
+Executive Summary
+During September 2026, Loud Launchers completed a substantial SEO, GEO and AEO
+improvement programme for cwmigrationgroup.ae. The work went beyond basic metadata
+changes: the website received a major content expansion, stronger answer-focused content,
+improved crawl surfaces, better internal linking, structured data, local entity signals and new
+trust-building features.
+The site previously had important content areas with limited depth and incomplete AEO and GEO
+optimisation. These gaps were addressed by adding significantly more useful content to priority
+pages and creating a larger, clearer information structure for search engines, AI systems and users.
+Payment gateway work is excluded from this report because it was outside the SEO, GEO and
+AEO completion scope.
+
+Prepared by Loud Launchers
+Page 2
+Report Scope and Headline Results
+The proposal described separate action plans for two websites. This completion report covers the
+work evidenced in the current CMG UAE website project: cwmigrationgroup.ae.
+CONTENT FOOTPRINT
+77 indexable content URLs currently represented in the sitemap
+BLOG / RESOURCE LIBRARY
+21 published resource articles in total, including 12 additional
+articles added in this content expansion
+CONTENT DEPTH
+Approximately 199,539 words increased to more than 321,081
+words across the measured site content
+CONTENT EXPANSION
+1.6x overall increase, with every measured content page expanded
+by at least 1.5x
+VISA COVERAGE
+26 visa pages with expanded SEO, AEO and GEO content
+SERVICE COVERAGE
+13 dedicated service pages, with topic-specific content and internal
+links
+What Was Originally Missing
+The project began with a clear content and search-visibility gap on important pages.
+   Several priority pages did not have enough content depth to fully answer the questions users
+ search before choosing a visa or service.
+  AEO and GEO content patterns were not consistently present, including concise direct answers,
+ question-led headings, factual context and clear entity information.
+  Some pages needed stronger metadata, heading structure, internal links, structured data and
+ crawl discovery paths.
+  Important trust, expertise and local signals required strengthening for Dubai, UAE, GCC and
+ wider Middle East searches.
+These gaps were addressed through a site-wide content and technical improvement programme
+rather than isolated page edits.
+
+Prepared by Loud Launchers
+Page 3
+Commitment vs Completion
+The following table maps the main proposal commitments to the work completed during the
+reporting period.
+Proposal commitment
+September completion position
+Keyword and competitor research
+Keyword research was used to structure visa, service, location
+and resource topics, including UAE, GCC, UK and Australia
+migration intent.
+10-12 SEO-optimised blog articles
+12 additional articles were created and added. The site now
+contains 21 resource articles in total.
+Existing page SEO, GEO and AEO
+optimisation
+Priority pages received expanded content, direct answers,
+FAQs, key facts, process guidance, risks, costs and document
+information.
+Titles, descriptions, headings, alt text and
+internal links
+Metadata and headings were remediated, internal linking was
+strengthened and new article imagery was added with local
+WebP assets.
+Sitemap, robots, canonical and indexing
+review
+Sitemap, robots.txt, canonical URLs, llms.txt and page
+discovery pathways were reviewed and improved.
+Technical SEO and broken-link checks
+Long metadata, missing H1s, broken external links, incorrect
+WhatsApp links, orphan pages and route issues were
+corrected.
+Schema and structured data
+Organisation, Service, Article, FAQ, HowTo and Breadcrumb
+structured data were added or improved where relevant.
+Internal linking between pages and blogs
+Visa, service, comparison, resource, footer and directory links
+were strengthened to improve crawl paths and topical
+relationships.
+Local GEO and business signals
+Dubai, UAE, GCC, UK and Middle East service-area context,
+expert identity and official registration references were
+strengthened.
+Backlinks and citations
+On-site official citations were improved. A 419-site outreach
+database and 60 backlink-ready articles were prepared;
+external live placements remain subject to publisher
+acceptance.
+
+Prepared by Loud Launchers
+Page 4
+Content Expansion and New Resource Articles
+The strongest additional SEO boost came from materially increasing the amount of useful,
+search-aligned information available on the site.
+The 12 new resource articles were created as evergreen, search-focused guides. Each article
+includes a dedicated title, meta description, on-page headline, structured sections, practical
+answers, internal relevance and a locally hosted WebP image.
+NO.
+NEW ARTICLE
+1
+How to Choose an Australia Migration Agent You Can Trust
+2
+Australia Visa Documents: A Checklist Before You Start
+3
+What to Prepare Before an Online Australia Visa Consultation
+4
+Planning an Australia Student Visa with Your Longer-Term Goals in Mind
+5
+Family Migration to Australia: Evidence, Timing and Preparation
+6
+Australia PR Points Test: Which Improvements Matter Most?
+7
+Employer-Sponsored Visas in Australia: A Planning Guide for Both Sides
+8
+Planning an Australia Migration Application from Dubai or the GCC
+9
+Regional Australia Migration: Is the 491 Pathway Right for You?
+10
+Partner Visa Evidence: Building a Clear Australian Relationship Application
+11
+Australia Migration Career Planning: Start with the Work You Actually Do
+12
+Settling in Australia: What to Organise After Your Visa Grant
+The article library now supports a wider range of search intents, from early-stage research and
+document preparation to skilled migration, family visas, employer sponsorship, regional pathways
+and post-grant settlement.
+
+Prepared by Loud Launchers
+Page 5
+SEO, AEO and GEO Improvements
+The work was designed to improve both traditional search visibility and the ability of answer engines
+and AI systems to understand the website.
+SEO improvements
+   Corrected title tags and meta descriptions, including removal of over-length metadata.
+   Improved H1 and heading structures so page topics are clearer to crawlers and users.
+   Expanded keyword coverage across visa, service, location and resource pages.
+   Added and improved canonical URLs, Open Graph information and sitemap entries.
+   Created a server-rendered visa directory and strengthened footer, service and resource links.
+   Improved image handling, descriptive image alt text and local WebP assets for new resources.
+ AEO improvements
+   Added question-led sections and concise direct-answer paragraphs.
+   Expanded FAQs and answer blocks across priority pages.
+   Added comparison tables, key facts, process steps, checklists and practical explanations.
+   Improved FAQ and HowTo structured data to support answer extraction and rich results.
+   Improved responsive presentation of FAQs and content sections for mobile and tablet visitors.
+ GEO improvements
+   Added more fact-rich, entity-clear content that AI systems can interpret and cite.
+   Strengthened organisation, service, expert and registration information.
+   Added official-source references and clearer source-aware explanations.
+   Improved Dubai, UAE, GCC, UK and Middle East context for local and regional search intent.
+   Added or improved llms.txt and other crawl surfaces supporting machine-readable discovery.
+ 
+Prepared by Loud Launchers
+Page 6
+Technical SEO, Indexing and Authority Work
+Technical SEO and indexing
+   Important routes were checked for HTTP 200 responses and correct page rendering.
+   The sitemap, robots.txt, canonical signals and llms.txt were reviewed and updated.
+   Missing H1 output, long titles, long descriptions and route-shadowing issues were corrected.
+   Broken or outdated external links and weak anchor text were fixed.
+   Internal orphaning was reduced through the visa directory, service grids, footer links, related
+ resources and comparison links.
+  The current sitemap represents 77 indexable content URLs, excluding noindex transactional and
+ utility pages.
+Authority, citations and backlink preparation
+   Official references and citations were added to relevant migration content, including Department
+ of Home Affairs and OMARA-related references.
+  A researched prospect database containing 419 potential guest-post, editorial and directory
+ opportunities was prepared.
+  A pack of 60 backlink-ready articles was prepared, with each article mapped to a relevant CMG
+ website page.
+  The report does not count those assets as live external backlinks because publication depends
+ on third-party acceptance and placement.
+Additional SEO-supporting website features
+   Dedicated UK migration landing page with country-specific sections, FAQs, comparisons and
+ official references.
+  Subclass 485 Temporary Graduate visa page and Employer Nomination Scheme subclass 186
+ page.
+  Success Stories page to strengthen trust and experience signals.
+   Expert profile stack on the About page with biographies, expertise areas and professional
+ registration references.
+  Associated expert carousel on the homepage below the hero section.
+ 
+Prepared by Loud Launchers
+Page 7
+Verification and Completion Status
+The completed work was reviewed through code checks, route checks and browser-based
+responsive verification.
+TYPE CHECK
+Passed with no TypeScript errors.
+LINT CHECK
+Passed for the changed resource, article and image components.
+AUTOMATED TESTS
+179 tests passed across 16 test files.
+RESPONSIVE CHECK
+Resource index and representative new articles checked at 390px,
+768px and 1440px.
+BROWSER CHECK
+No horizontal overflow or JavaScript errors detected in the
+representative Playwright checks.
+IMAGE CHECK
+12 new local WebP images created, integrated and verified on
+article pages.
+Final Completion Summary
+The September programme delivered a significantly stronger search foundation for
+cwmigrationgroup.ae. The website moved from having limited content depth and incomplete
+AEO/GEO coverage to a substantially richer platform with broader topic coverage, clearer answers,
+stronger trust signals, improved crawlability and more structured information for Google and
+AI-powered search systems.
+The additional work completed beyond the basic action list - including the 12 new articles, major
+content expansion, 419-site outreach research, 60 backlink-ready articles, new visa and location
+pages, expert trust features and responsive improvements - provides the website with a much
+larger and more useful search footprint.
+Prepared by Loud Launchers
+SEO, GEO & AEO Services - September 2026

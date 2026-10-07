@@ -12,6 +12,11 @@ export function absoluteUrl(path = "") {
   return `${site.url.replace(/\/$/, "")}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
+/** Serialize JSON-LD safely for an inline script in the rendered document. */
+export function serializeJsonLd(value) {
+  return JSON.stringify(value).replace(/</g, "\\u003c");
+}
+
 const TITLE_LIMIT = 60;
 
 /**
@@ -25,7 +30,11 @@ export function normalizePageTitle(title) {
   value = value.replace(/\s*\|\s*(?:CMG|Commonwealth Migration(?: Group Inc\.?| Canada)?)\s*$/i, "").trim();
   if (value.length <= TITLE_LIMIT) return value;
 
-  const withoutYear = value.replace(/\s+20\d{2}\b/g, "").replace(/\s+/g, " ").trim();
+  const withoutYear = value
+    .replace(/\s+20\d{2}(?:\s*[–-]\s*20\d{2})?\b/g, "")
+    .replace(/\s+(?:in|for|from|the)\s*:/gi, ":")
+    .replace(/\s+/g, " ")
+    .trim();
   if (withoutYear.length <= TITLE_LIMIT) return withoutYear;
 
   const withoutParenthetical = withoutYear.replace(/\s*\([^)]*\)/g, "").replace(/\s+/g, " ").trim();
@@ -54,12 +63,15 @@ export function buildMetadata({
   type = "website",
   keywords,
   noIndex = false,
+  image,
 } = {}) {
   const resolvedTitle = title || site.meta.defaultTitle;
   const resolvedDescription = description || site.meta.defaultDescription;
   const pageTitle = normalizePageTitle(resolvedTitle);
   const url = absoluteUrl(path);
-  const imageUrl = absoluteUrl(site.meta.ogImage);
+  const imageConfig = typeof image === "string" ? { url: image } : image;
+  const imageUrl = absoluteUrl(imageConfig?.url || site.meta.ogImage);
+  const imageAlt = imageConfig?.alt || site.name + " — Canadian immigration guidance";
 
   return {
     // Omit `title` entirely when no page title is given, so the root layout's
@@ -68,7 +80,7 @@ export function buildMetadata({
     ...(title ? { title: { absolute: pageTitle } } : {}),
     description: resolvedDescription,
     ...(keywords && { keywords: Array.isArray(keywords) ? keywords.join(", ") : keywords }),
-    ...(noIndex && { robots: { index: false, follow: false } }),
+    ...(noIndex && { robots: { index: false, follow: true } }),
     alternates: url ? { canonical: url } : undefined,
     openGraph: {
       type,
@@ -78,7 +90,7 @@ export function buildMetadata({
       description: resolvedDescription,
       url: url || undefined,
       ...(imageUrl && {
-        images: [{ url: imageUrl, width: 1280, height: 1280, alt: site.name }],
+        images: [{ url: imageUrl, width: 1912, height: 1140, alt: imageAlt }],
       }),
     },
     twitter: {

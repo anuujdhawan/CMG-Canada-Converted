@@ -1,6 +1,6 @@
 // WhatsApp configuration is public contact information. The final href is
 // passed to the browser only where the UI needs to open WhatsApp.
-const raw = "+1 365 909 3959";
+const raw = "+1 9429913999";
 
 export const whatsappUrl = (() => {
   if (!raw) return "";

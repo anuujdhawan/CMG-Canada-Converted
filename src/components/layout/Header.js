@@ -26,6 +26,7 @@ function BrandLogo() {
           width={1912}
           height={1140}
           priority
+          sizes="(max-width: 640px) 150px, 180px"
           className="h-9 w-auto object-contain sm:h-10"
         />
       </div>

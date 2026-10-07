@@ -168,7 +168,7 @@ function ServiceFaqSection({ faqs, isToolPage }) {
   return <FaqSection faqs={faqs} description={isToolPage ? "Open a question to understand what the tool can show, what it cannot decide and what to check next." : "Get a concise answer about this pathway and what to verify before you take the next step."} className={isToolPage ? "tool-faq-section" : "service-faq-section"} />;
 }
 
-export default function ReferenceServicePage({ page, children, interactivePosition = "bottom", interactiveHeading }) {
+export default function ReferenceServicePage({ page, children, interactivePosition = "bottom", interactiveHeading, interactiveWide = false }) {
   // Put route-specific keyword sections into the reading flow before the
   // authored route guide. This lets the featured image/text frame use the
   // expanded copy, while the rest of the page still preserves its source
@@ -202,13 +202,13 @@ export default function ReferenceServicePage({ page, children, interactivePositi
 
   const interactiveSection = children && (
     <section className={cn("section relative z-[1] bg-[var(--surface-alt)] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16 alt service-interactive-section", interactivePosition === "top" && "service-interactive-section--top !pt-14 !pb-[4.5rem] max-[640px]:!pt-10 max-[640px]:!pb-12")}>
-      <div className={cn("section-inner mx-auto w-[var(--container)] service-interactive-shell", interactivePosition === "top" && "max-w-[640px]")}>
-        <ServiceSectionHeading
+      <div className={cn("section-inner mx-auto w-[var(--container)] service-interactive-shell", interactivePosition === "top" && !interactiveWide && "max-w-[640px]")}>
+        {!interactiveHeading?.hide && <ServiceSectionHeading
           eyebrow={interactiveHeading?.eyebrow ?? "Your next step"}
           title={interactiveHeading?.title ?? "Turn the overview into a focused review"}
           lead={interactiveHeading?.lead ?? "Complete the guided form below and bring the result into a consultation when your situation needs tailored strategy."}
           compact={interactivePosition === "top"}
-        />
+        />}
         {children}
       </div>
     </section>
@@ -237,6 +237,8 @@ export default function ReferenceServicePage({ page, children, interactivePositi
         </div>
       </section>
 
+      {interactivePosition === "top" && interactiveSection}
+
       <section className="section relative z-[1] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16">
         <div className="section-inner mx-auto w-[var(--container)]">
           <ServiceSectionHeading eyebrow="A sharper service plan" title="Built around the decision your file needs" lead="The right service is more than a checklist. It is a sequence that turns your facts into a coherent, review-ready pathway." />
@@ -250,7 +252,7 @@ export default function ReferenceServicePage({ page, children, interactivePositi
 
       {/* Keep the page's primary interaction close to the visual route guide.
           Supporting explanation and related content follow below it. */}
-      {interactiveSection}
+      {interactivePosition !== "top" && interactiveSection}
 
       <section className="section relative z-[1] bg-[var(--surface-alt)] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16 alt">
         <div className="section-inner mx-auto w-[var(--container)] service-route-layout grid grid-cols-[.82fr_1.18fr] items-center gap-[46px] max-[880px]:grid-cols-1 max-[880px]:gap-[35px]">
@@ -262,7 +264,7 @@ export default function ReferenceServicePage({ page, children, interactivePositi
       <section className="section relative z-[1] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16 service-reading-section">
         <div className="section-inner mx-auto w-[var(--container)] service-reading-shell max-w-[1020px]">
           <ServiceSectionHeading eyebrow="Your service guide" title="The details that move the file forward" lead="Review the complete guide below, then use the consultation path when your situation needs a tailored strategy." />
-          <article className="service-reading max-w-[900px] mx-auto border-t border-[var(--border)] pt-[13px] reveal in">
+          <article className="service-reading max-w-[900px] mx-auto reveal in">
             {renderContentBlocks(leading, "leading", page, tableCounter)}
             {sections.map((section, index) => {
               if (index === featuredStart && paragraphImageSection >= 0 && tableImageSection >= 0) {

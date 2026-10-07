@@ -112,8 +112,8 @@ export function getLegalPage(pathname) {
     ],
     content: page.text,
     seo: {
-      title: `${page.title} | Commonwealth Migration Canada`,
-      description: `${page.title} for Commonwealth Migration Group Inc.`,
+      title: page.seoTitle || `${page.title} | Commonwealth Migration Canada`,
+      description: page.seoDescription || `${page.title} for Commonwealth Migration Group Inc.`,
       canonical: page.path,
       robots: "index, follow",
     },

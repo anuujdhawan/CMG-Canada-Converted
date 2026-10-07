@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, serializeJsonLd } from "@/lib/seo";
 import { getPage } from "@/lib/sitePages";
 import { pageStructuredData } from "@/components/templates/ContentPage";
 import AssessmentForm from "@/components/forms/AssessmentForm";
@@ -19,7 +19,7 @@ export default function FreeCanadaImmigrationAssessmentPage() {
     <>
       <ReferenceServicePage page={page}><AssessmentForm /></ReferenceServicePage>
       {pageStructuredData(page).map((obj, index) => (
-        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(obj) }} />
+        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(obj) }} />
       ))}
     </>
   );

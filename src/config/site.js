@@ -7,7 +7,7 @@
 
 const brandName = "Commonwealth Migration Group Inc.";
 const supportEmail = "info@commonwealthmigration.ca";
-const phone = "+1 365 909 3959";
+const phone = "+1 9429913999";
 const phoneDigits = phone.replace(/[^\d]/g, "");
 
 export const site = {
@@ -80,14 +80,16 @@ export const site = {
     white: "/images/CMG-LOGO.webp",
     footer: "/images/CMG-LOGO-FOOTER.webp",
     favicon: "/images/icon.png",
-    og: "/images/favicon_LG.webp",
+    og: "/images/og-default.png",
   },
 
   // ---- Social ---------------------------------------------------------
   social: {
     facebook: "https://www.facebook.com/people/Commonwealth-Migration-Canada/61593464346589/",
     instagram: "https://www.instagram.com/commonwealthmigration",
-    linkedin: "https://www.instagram.com/commonwealthmigration",
+    // Leave this empty until the practice has a verified LinkedIn company URL.
+    // A different network's URL here would create a false sameAs relationship.
+    linkedin: "",
     youtube: "https://www.youtube.com/@Commonwealthmigration",
   },
 
@@ -109,7 +111,7 @@ export const site = {
       "LMIA",
       "licensed RCIC",
     ],
-    ogImage: "/images/favicon_LG.webp",
+    ogImage: "/images/og-default.png",
     locale: "en_CA",
   },
 

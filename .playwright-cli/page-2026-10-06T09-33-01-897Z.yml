@@ -1,0 +1,1152 @@
+- generic [ref=f300e1]:
+  - link "Skip to main content" [ref=f300e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f300e3]:
+    - button "Switch to light theme" [ref=f300e7]:
+      - generic [ref=f300e14]: Light
+    - generic [ref=f300e17]:
+      - link "Commonwealth Migration Group Inc. — home" [ref=f300e18] [cursor=pointer]:
+        - /url: /
+        - img "Commonwealth Migration Group Inc." [ref=f300e20]
+      - navigation "Main" [ref=f300e21]:
+        - link "Home" [ref=f300e22] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f300e23]:
+          - button "Immigrate" [ref=f300e24]
+          - generic [aria-hidden]:
+            - generic:
+              - generic:
+                - paragraph: Express Entry
+                - generic:
+                  - link:
+                    - /url: /immigrate/express-entry
+                    - generic: Express Entry
+                  - link:
+                    - /url: /immigrate/federal-skilled-worker
+                    - generic: Federal Skilled Worker
+                  - link:
+                    - /url: /immigrate/canadian-experience-class
+                    - generic: Canadian Experience Class
+                  - link:
+                    - /url: /immigrate/federal-skilled-trades
+                    - generic: Federal Skilled Trades
+                  - link:
+                    - /url: /immigrate/pnp-linked-express-entry
+                    - generic: PNP-Linked Express Entry
+                - link:
+                  - /url: /immigrate/express-entry
+                  - text: View all
+              - generic:
+                - paragraph: Provincial Nominee Program
+                - generic:
+                  - link:
+                    - /url: /immigrate/provincial-nominee-program-all-provinces-consolidated
+                    - generic: Provincial Nominee Program (all provinces, consolidated)
+                  - link:
+                    - /url: /immigrate/british-columbia-pnp
+                    - generic: British Columbia PNP
+                  - link:
+                    - /url: /immigrate/alberta-pnp-aaip
+                    - generic: Alberta PNP (AAIP)
+                  - link:
+                    - /url: /immigrate/saskatchewan-pnp-sinp
+                    - generic: Saskatchewan PNP (SINP)
+                  - link:
+                    - /url: /immigrate/manitoba-pnp-mpnp
+                    - generic: Manitoba PNP (MPNP)
+                  - link:
+                    - /url: /immigrate/ontario-pnp-oinp
+                    - generic: Ontario PNP (OINP)
+                  - link:
+                    - /url: /immigrate/nova-scotia-pnp-nsnp
+                    - generic: Nova Scotia PNP (NSNP)
+                  - link:
+                    - /url: /immigrate/new-brunswick-pnp
+                    - generic: New Brunswick PNP
+                  - link:
+                    - /url: /immigrate/prince-edward-island-pnp
+                    - generic: Prince Edward Island PNP
+                  - link:
+                    - /url: /immigrate/newfoundland-and-labrador-pnp
+                    - generic: Newfoundland & Labrador PNP
+                  - link:
+                    - /url: /immigrate/yukon-nwt-nunavut-nominee-programs
+                    - generic: Yukon / NWT / Nunavut Nominee Programs
+                - link:
+                  - /url: /immigrate/provincial-nominee-program-all-provinces-consolidated
+                  - text: View all
+              - generic:
+                - paragraph: Other PR Pathways
+                - generic:
+                  - link:
+                    - /url: /immigrate/atlantic-immigration-program
+                    - generic: Atlantic Immigration Program
+                  - link:
+                    - /url: /immigrate/agri-food-immigration-pilot
+                    - generic: Agri-Food Immigration Pilot
+                  - link:
+                    - /url: /immigrate/rural-and-northern-immigration-pilot
+                    - generic: Rural and Northern Immigration Pilot
+                  - link:
+                    - /url: /immigrate/municipal-nominee-program
+                    - generic: Municipal Nominee Program
+                  - link:
+                    - /url: /immigrate/business-immigration-and-start-up-visa
+                    - generic: Business Immigration & Start-Up Visa
+                  - link:
+                    - /url: /immigrate/temporary-resident-to-pr-pathway
+                    - generic: Temporary Resident to PR Pathway
+                - link:
+                  - /url: /immigrate/atlantic-immigration-program
+                  - text: View all
+                - generic:
+                  - paragraph: Caregivers
+                  - generic:
+                    - link:
+                      - /url: /immigrate/home-child-care-provider-pilot
+                      - generic: Home Child Care Provider Pilot
+                    - link:
+                      - /url: /immigrate/home-support-worker-pilot
+                      - generic: Home Support Worker Pilot
+                  - link:
+                    - /url: /immigrate/home-child-care-provider-pilot
+                    - text: View all
+                - generic:
+                  - paragraph: Immigrate from the UK
+                  - generic:
+                    - link:
+                      - /url: /canada-immigration-from-uk
+                      - generic: Canada Immigration from the UK
+              - generic:
+                - paragraph: Refugees & Protection
+                - generic:
+                  - link:
+                    - /url: /immigrate/in-canada-refugee-claim
+                    - generic: In-Canada Refugee Claim
+                  - link:
+                    - /url: /immigrate/pre-removal-risk-assessment-prra
+                    - generic: Pre-Removal Risk Assessment (PRRA)
+                  - link:
+                    - /url: /immigrate/protected-persons-apply-for-pr
+                    - generic: Protected Persons — Apply for PR
+                  - link:
+                    - /url: /immigrate/refugee-travel-document
+                    - generic: Refugee Travel Document
+                  - link:
+                    - /url: /immigrate/one-year-window-reunification
+                    - generic: One-Year Window Reunification
+                  - link:
+                    - /url: /immigrate/humanitarian-and-compassionate
+                    - generic: Humanitarian & Compassionate
+                - link:
+                  - /url: /immigrate/in-canada-refugee-claim
+                  - text: View all
+              - generic:
+                - paragraph: Official IRCC data
+                - paragraph: Express Entry Draws
+                - paragraph: Track the latest invitation rounds, CRS cutoffs and program updates.
+                - link:
+                  - /url: /immigration-draws
+                  - text: Learn More →
+        - generic [ref=f300e28]:
+          - button "Visit" [ref=f300e29]
+          - generic [aria-hidden]:
+            - generic:
+              - generic:
+                - paragraph: Visitor & Temporary
+                - generic:
+                  - link:
+                    - /url: /visit/visitor-visa-trv-and-super-visa-combined
+                    - generic: Visitor Visa (TRV) & Super Visa (combined)
+                  - link:
+                    - /url: /visit/visitor-visa-trv-standalone-page
+                    - generic: Visitor Visa (TRV) — standalone page
+                  - link:
+                    - /url: /visit/eta-electronic-travel-authorization
+                    - generic: eTA (Electronic Travel Authorization)
+                  - link:
+                    - /url: /visit/super-visa-standalone-page
+                    - generic: Super Visa — standalone page
+                  - link:
+                    - /url: /visit/business-visa
+                    - generic: Business Visa
+                  - link:
+                    - /url: /visit/transit-visa
+                    - generic: Transit Visa
+                  - link:
+                    - /url: /visit/visitor-record
+                    - generic: Visitor Record
+                - link:
+                  - /url: /visit/visitor-visa-trv-and-super-visa-combined
+                  - text: View all
+              - generic:
+                - paragraph: Explore this menu
+                - paragraph: Visitor Visa (TRV) & Super Visa (combined)
+                - paragraph: Open the source-backed guide and compare the route with related options.
+                - link:
+                  - /url: /visit/visitor-visa-trv-and-super-visa-combined
+                  - text: Learn More →
+        - generic [ref=f300e33]:
+          - button "Work & Study" [ref=f300e34]
+          - generic [aria-hidden]:
+            - generic:
+              - generic:
+                - paragraph: Work & Study
+                - generic:
+                  - link:
+                    - /url: /work-and-study/canada-work-permit-overview
+                    - generic: Canada Work Permit (overview)
+                  - link:
+                    - /url: /work-and-study/canada-study-permit
+                    - generic: Canada Study Permit
+                  - link:
+                    - /url: /work-and-study/post-graduation-work-permit-pgwp
+                    - generic: Post-Graduation Work Permit (PGWP)
+                  - link:
+                    - /url: /work-and-study/international-experience-canada-iec
+                    - generic: International Experience Canada (IEC)
+                - link:
+                  - /url: /work-and-study/canada-work-permit-overview
+                  - text: View all
+              - generic:
+                - paragraph: For Employers
+                - generic:
+                  - link:
+                    - /url: /work-and-study/lmia-and-employer-services-overview
+                    - generic: LMIA & Employer Services (overview)
+                  - link:
+                    - /url: /work-and-study/global-talent-stream
+                    - generic: Global Talent Stream
+                  - link:
+                    - /url: /work-and-study/tfwp-employer-compliance
+                    - generic: TFWP Employer Compliance
+                - link:
+                  - /url: /work-and-study/lmia-and-employer-services-overview
+                  - text: View all
+              - generic:
+                - paragraph: Explore this menu
+                - paragraph: Canada Work Permit (overview)
+                - paragraph: Open the source-backed guide and compare the route with related options.
+                - link:
+                  - /url: /work-and-study/canada-work-permit-overview
+                  - text: Learn More →
+        - generic [ref=f300e38]:
+          - button "Sponsor" [ref=f300e39]
+          - generic [aria-hidden]:
+            - generic:
+              - generic:
+                - paragraph: Spousal & Partner Sponsorship
+                - generic:
+                  - link:
+                    - /url: /sponsor/spousal-and-partner-sponsorship-overview
+                    - generic: Spousal & Partner Sponsorship (overview)
+                  - link:
+                    - /url: /sponsor/spousal-common-law-sponsorship
+                    - generic: Spousal / Common-Law Sponsorship
+                  - link:
+                    - /url: /sponsor/conjugal-partner-sponsorship
+                    - generic: Conjugal Partner Sponsorship
+                  - link:
+                    - /url: /sponsor/outland-sponsorship
+                    - generic: Outland Sponsorship
+                  - link:
+                    - /url: /sponsor/inland-sponsorship
+                    - generic: Inland Sponsorship
+                  - link:
+                    - /url: /sponsor/spousal-open-work-permit
+                    - generic: Spousal Open Work Permit
+                - link:
+                  - /url: /sponsor/spousal-and-partner-sponsorship-overview
+                  - text: View all
+              - generic:
+                - paragraph: Family Members
+                - generic:
+                  - link:
+                    - /url: /sponsor/family-sponsorship-overview-all-categories
+                    - generic: Family Sponsorship (overview, all categories)
+                  - link:
+                    - /url: /sponsor/dependent-child-sponsorship
+                    - generic: Dependent Child Sponsorship
+                  - link:
+                    - /url: /sponsor/adopted-child-sponsorship
+                    - generic: Adopted Child Sponsorship
+                  - link:
+                    - /url: /sponsor/parents-and-grandparents-program-pgp
+                    - generic: Parents & Grandparents Program (PGP)
+                  - link:
+                    - /url: /sponsor/pgp-invitation-to-apply-canada
+                    - generic: PGP Invitation to Apply
+                  - link:
+                    - /url: /sponsor/super-visa-for-parents
+                    - generic: Super Visa for Parents
+                  - link:
+                    - /url: /sponsor/orphaned-relatives
+                    - generic: Orphaned Relatives
+                - link:
+                  - /url: /sponsor/family-sponsorship-overview-all-categories
+                  - text: View all
+              - generic:
+                - paragraph: Sponsorship Requirements
+                - generic:
+                  - link:
+                    - /url: /sponsor/minimum-necessary-income
+                    - generic: Minimum Necessary Income
+                  - link:
+                    - /url: /sponsor/sponsorship-eligibility
+                    - generic: Sponsorship Eligibility
+                  - link:
+                    - /url: /sponsor/sponsorship-processing-times
+                    - generic: Sponsorship Processing Times
+                  - link:
+                    - /url: /sponsor/sponsorship-appeal
+                    - generic: Sponsorship Appeal
+                - link:
+                  - /url: /sponsor/minimum-necessary-income
+                  - text: View all
+              - generic:
+                - paragraph: Explore this menu
+                - paragraph: Spousal & Partner Sponsorship (overview)
+                - paragraph: Open the source-backed guide and compare the route with related options.
+                - link:
+                  - /url: /sponsor/spousal-and-partner-sponsorship-overview
+                  - text: Learn More →
+        - generic [ref=f300e43]:
+          - button "Citizenship" [ref=f300e44]
+          - generic [aria-hidden]:
+            - generic:
+              - generic:
+                - paragraph: Canadian Citizenship
+                - generic:
+                  - link:
+                    - /url: /citizenship/adult-grant-of-citizenship
+                    - generic: Adult Grant of Citizenship
+                  - link:
+                    - /url: /citizenship/minor-grant-of-citizenship
+                    - generic: Minor Grant of Citizenship
+                  - link:
+                    - /url: /citizenship/citizenship-certificate
+                    - generic: Citizenship Certificate
+                  - link:
+                    - /url: /citizenship/citizenship-resumption
+                    - generic: Citizenship Resumption
+                  - link:
+                    - /url: /citizenship/citizenship-renunciation
+                    - generic: Citizenship Renunciation
+                  - link:
+                    - /url: /citizenship/citizenship-revocation-appeal
+                    - generic: Citizenship Revocation Appeal
+                - link:
+                  - /url: /citizenship/adult-grant-of-citizenship
+                  - text: View all
+              - generic:
+                - paragraph: PR & Travel Documents
+                - generic:
+                  - link:
+                    - /url: /citizenship/pr-card-renewal-and-citizenship-combined-overview
+                    - generic: PR Card Renewal & Citizenship (combined overview)
+                  - link:
+                    - /url: /citizenship/pr-card-renewal-standalone-page
+                    - generic: PR Card Renewal — standalone page
+                  - link:
+                    - /url: /citizenship/pr-card-replacement
+                    - generic: PR Card Replacement
+                  - link:
+                    - /url: /citizenship/pr-travel-document-prtd
+                    - generic: PR Travel Document (PRTD)
+                - link:
+                  - /url: /citizenship/pr-card-renewal-and-citizenship-combined-overview
+                  - text: View all
+              - generic:
+                - paragraph: Adoption
+                - generic:
+                  - link:
+                    - /url: /citizenship/citizenship-through-adoption
+                    - generic: Citizenship through Adoption
+                  - link:
+                    - /url: /citizenship/pr-through-adoption
+                    - generic: PR through Adoption
+                  - link:
+                    - /url: /citizenship/proof-of-adoption-record
+                    - generic: Proof of Adoption Record
+                - link:
+                  - /url: /citizenship/citizenship-through-adoption
+                  - text: View all
+              - generic:
+                - paragraph: Explore this menu
+                - paragraph: Adult Grant of Citizenship
+                - paragraph: Open the source-backed guide and compare the route with related options.
+                - link:
+                  - /url: /citizenship/adult-grant-of-citizenship
+                  - text: Learn More →
+        - generic [ref=f300e48]:
+          - button "Appeals" [ref=f300e49]
+          - generic [aria-hidden]:
+            - generic:
+              - generic:
+                - paragraph: Criminal Inadmissibility
+                - generic:
+                  - link:
+                    - /url: /inadmissibility-and-appeals/criminal-inadmissibility-overview
+                    - generic: Criminal Inadmissibility (overview)
+                  - link:
+                    - /url: /inadmissibility-and-appeals/criminal-rehabilitation
+                    - generic: Criminal Rehabilitation
+                  - link:
+                    - /url: /inadmissibility-and-appeals/temporary-resident-permit-trp
+                    - generic: Temporary Resident Permit (TRP)
+                  - link:
+                    - /url: /inadmissibility-and-appeals/record-suspension-pardon
+                    - generic: Record Suspension / Pardon
+                  - link:
+                    - /url: /inadmissibility-and-appeals/deemed-rehabilitation
+                    - generic: Deemed Rehabilitation
+                - link:
+                  - /url: /inadmissibility-and-appeals/criminal-inadmissibility-overview
+                  - text: View all
+              - generic:
+                - paragraph: Other Inadmissibility
+                - generic:
+                  - link:
+                    - /url: /inadmissibility-and-appeals/medical-inadmissibility
+                    - generic: Medical Inadmissibility
+                  - link:
+                    - /url: /inadmissibility-and-appeals/financial-inadmissibility
+                    - generic: Financial Inadmissibility
+                  - link:
+                    - /url: /inadmissibility-and-appeals/misrepresentation
+                    - generic: Misrepresentation
+                - link:
+                  - /url: /inadmissibility-and-appeals/medical-inadmissibility
+                  - text: View all
+              - generic:
+                - paragraph: Enforcement
+                - generic:
+                  - link:
+                    - /url: /inadmissibility-and-appeals/admissibility-hearing
+                    - generic: Admissibility Hearing
+                  - link:
+                    - /url: /inadmissibility-and-appeals/detention-review
+                    - generic: Detention Review
+                  - link:
+                    - /url: /inadmissibility-and-appeals/removal-order
+                    - generic: Removal Order
+                  - link:
+                    - /url: /inadmissibility-and-appeals/stay-of-removal
+                    - generic: Stay of Removal
+                  - link:
+                    - /url: /inadmissibility-and-appeals/deferral-request
+                    - generic: Deferral Request
+                  - link:
+                    - /url: /inadmissibility-and-appeals/arc-authorization-to-return-to-canada
+                    - generic: ARC — Authorization to Return to Canada
+                - link:
+                  - /url: /inadmissibility-and-appeals/admissibility-hearing
+                  - text: View all
+              - generic:
+                - paragraph: Appeals & Legal
+                - generic:
+                  - link:
+                    - /url: /inadmissibility-and-appeals/sponsorship-appeal-iad
+                    - generic: Sponsorship Appeal (IAD)
+                  - link:
+                    - /url: /inadmissibility-and-appeals/removal-order-appeal
+                    - generic: Removal Order Appeal
+                  - link:
+                    - /url: /inadmissibility-and-appeals/residency-obligation-appeal
+                    - generic: Residency Obligation Appeal
+                  - link:
+                    - /url: /inadmissibility-and-appeals/judicial-review-federal-court
+                    - generic: Judicial Review — Federal Court
+                  - link:
+                    - /url: /inadmissibility-and-appeals/stay-motion
+                    - generic: Stay Motion
+                  - link:
+                    - /url: /inadmissibility-and-appeals/mandamus-application
+                    - generic: Mandamus Application
+                  - link:
+                    - /url: /inadmissibility-and-appeals/refusal-and-pfl-response
+                    - generic: Refusal & PFL Response
+                - link:
+                  - /url: /inadmissibility-and-appeals/sponsorship-appeal-iad
+                  - text: View all
+              - generic:
+                - paragraph: Explore this menu
+                - paragraph: Criminal Inadmissibility (overview)
+                - paragraph: Open the source-backed guide and compare the route with related options.
+                - link:
+                  - /url: /inadmissibility-and-appeals/criminal-inadmissibility-overview
+                  - text: Learn More →
+        - generic [ref=f300e53]:
+          - button "Tools" [ref=f300e54]
+          - generic [aria-hidden]:
+            - generic:
+              - generic:
+                - paragraph: Free self-service tools
+                - generic:
+                  - link:
+                    - /url: /tools/crs-calculator-canada
+                    - generic: CRS Calculator
+                  - link:
+                    - /url: /tools/pnp-eligibility-canada
+                    - generic: PNP Eligibility Check
+                  - link:
+                    - /url: /tools/noc-finder-canada
+                    - generic: NOC / Occupation Finder
+                - link:
+                  - /url: /tools/crs-calculator-canada
+                  - text: View all
+              - generic:
+                - paragraph: Plan & prepare
+                - generic:
+                  - link:
+                    - /url: /tools/document-checklist-canada
+                    - generic: Document Checklist
+                  - link:
+                    - /url: /assessment/free-canada-immigration-assessment
+                    - generic: Free Assessment
+                - link:
+                  - /url: /tools/document-checklist-canada
+                  - text: View all
+              - generic:
+                - paragraph: Learn & prepare
+                - generic:
+                  - link:
+                    - /url: /immigration-draws
+                    - generic: Express Entry Draws
+                  - link:
+                    - /url: /immigrate/express-entry
+                    - generic: Express Entry Guide
+                  - link:
+                    - /url: /immigrate/provincial-nominee-program-all-provinces-consolidated
+                    - generic: PNP Pathway Guide
+                - link:
+                  - /url: /immigration-draws
+                  - text: View all
+              - generic:
+                - paragraph: Free tool
+                - paragraph: CRS Calculator
+                - paragraph: See your Express Entry score in under two minutes.
+                - link:
+                  - /url: /tools/crs-calculator-canada
+                  - text: Learn More →
+        - generic [ref=f300e57]:
+          - button "Resources" [ref=f300e58]
+          - generic [aria-hidden]:
+            - generic:
+              - generic:
+                - paragraph: Immigration Blog
+                - generic:
+                  - link:
+                    - /url: /blog
+                    - generic: All Immigration Blogs
+                  - link:
+                    - /url: /canada-immigration-news
+                    - generic: Canada Immigration News
+                  - link:
+                    - /url: /blog?category=immigration-guides
+                    - generic: Immigration Guides
+                - link:
+                  - /url: /blog
+                  - text: View all
+              - generic:
+                - paragraph: By topic
+                - generic:
+                  - link:
+                    - /url: /blog?category=express-entry
+                    - generic: Express Entry
+                  - link:
+                    - /url: /blog?category=work-permits
+                    - generic: Work Permits
+                  - link:
+                    - /url: /blog?category=study-permits
+                    - generic: Study Permits
+                  - link:
+                    - /url: /blog?category=family-sponsorship
+                    - generic: Family Sponsorship
+                  - link:
+                    - /url: /blog?category=provincial-nominee-programs
+                    - generic: Provincial Nominee Programs
+                  - link:
+                    - /url: /blog?category=visitor-visas
+                    - generic: Visitor Visas
+                - link:
+                  - /url: /blog?category=express-entry
+                  - text: View all
+              - generic:
+                - paragraph: Start with research
+                - paragraph: Find the right Canadian pathway
+                - paragraph: Browse current guides, news and practical checklists before your consultation.
+                - link:
+                  - /url: /blog
+                  - text: Learn More →
+        - generic [ref=f300e61]:
+          - button "About" [ref=f300e62]
+          - generic [aria-hidden]:
+            - generic:
+              - generic:
+                - paragraph: Our firm
+                - generic:
+                  - link:
+                    - /url: /about/about-commonwealth-migration
+                    - generic: About Us
+                  - link:
+                    - /url: /about/canada-immigration-consulting-process
+                    - generic: Our Process
+                  - link:
+                    - /url: /about/immigration-office-brampton-ontario
+                    - generic: Our Office
+                - link:
+                  - /url: /about/about-commonwealth-migration
+                  - text: View all
+              - generic:
+                - paragraph: Get in touch
+                - generic:
+                  - link:
+                    - /url: /contact/book-immigration-consultation-canada
+                    - generic: Book Consultation
+                  - link:
+                    - /url: /assessment/free-canada-immigration-assessment
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: Book Urgent Consultation
+                          - generic: Urgent
+                  - link:
+                    - /url: /contact/pay-immigration-consultation-canada
+                    - generic: Make Payment
+                - link:
+                  - /url: /contact/book-immigration-consultation-canada
+                  - text: View all
+              - generic:
+                - paragraph: Free first step
+                - paragraph: Book a Consultation
+                - paragraph: Speak with a licensed consultant about your goal — at no cost.
+                - link:
+                  - /url: /contact/book-immigration-consultation-canada
+                  - text: Learn More →
+      - link "Book a Consultation" [ref=f300e66] [cursor=pointer]:
+        - /url: /contact/book-immigration-consultation-canada
+  - main [ref=f300e67]:
+    - generic [ref=f300e68]:
+      - region [ref=f300e69]:
+        - region "Canadian locations and opportunities":
+          - generic:
+            - generic:
+              - img "Downtown Toronto office towers viewed from below"
+        - generic [ref=f300e72]:
+          - generic [ref=f300e73]:
+            - paragraph [ref=f300e74]: CMG insights · Canada immigration
+            - heading "Research the route. Then decide." [level=1] [ref=f300e75]
+            - paragraph [ref=f300e76]: Clear, current Canadian immigration guidance for the decision in front of you.
+            - generic [ref=f300e77]:
+              - link "Book a Consultation" [ref=f300e78] [cursor=pointer]:
+                - /url: /contact/book-immigration-consultation-canada
+              - link "Explore free tools" [ref=f300e81] [cursor=pointer]:
+                - /url: /tools/canada-immigration-calculators
+            - generic "Highlights" [ref=f300e85]:
+              - generic [ref=f300e86]: Licensed RCIC insight
+              - generic [ref=f300e90]: 20 practical guides
+              - generic [ref=f300e93]: Clear next steps
+          - region "Commonwealth Migration Group highlights" [ref=f300e98]:
+            - generic [ref=f300e99]:
+              - article "Track record and files we handle" [ref=f300e101]:
+                - generic [ref=f300e102]:
+                  - link "CICC-regulated · R711256" [ref=f300e103] [cursor=pointer]:
+                    - /url: https://register.college-ic.ca/Public-Register-EN/Licensee/Profile.aspx?ID=14725
+                  - generic [ref=f300e107]: Canada-wide
+                - heading "Experience behind the file" [level=2] [ref=f300e111]
+                - paragraph [ref=f300e112]: A broad record across Canadian immigration routes, with attention to the decisions that shape each file.
+                - generic "Track record highlights" [ref=f300e113]:
+                  - generic [ref=f300e114]:
+                    - generic [ref=f300e115]: Cases since 2016
+                    - strong [ref=f300e116]: 10,000+
+                  - generic [ref=f300e117]:
+                    - generic [ref=f300e118]: File reviews
+                    - strong [ref=f300e119]: 100%
+                  - generic [ref=f300e120]:
+                    - generic [ref=f300e121]: Urgent deadlines
+                    - strong [ref=f300e122]: Same-day
+                - paragraph [ref=f300e123]: What we handle
+                - list [ref=f300e124]:
+                  - listitem [ref=f300e125]: Express Entry refusals (CRS, eligibility)
+                  - listitem [ref=f300e128]: Provincial Nominee Program (PNP) refusals
+                  - listitem [ref=f300e131]: Study permit & PGWP refusals
+                  - listitem [ref=f300e134]: Spousal & family sponsorship refusals
+                  - listitem [ref=f300e137]: LMIA & work permit refusals
+                  - listitem [ref=f300e140]: Judicial review referrals
+                - generic [ref=f300e143]:
+                  - generic [ref=f300e144]: Commonwealth Migration Group Inc
+                  - link "Pankaj Khanna, RCIC" [ref=f300e145] [cursor=pointer]:
+                    - /url: https://register.college-ic.ca/Public-Register-EN/Licensee/Profile.aspx?ID=14725
+              - generic [aria-hidden]:
+                - article:
+                  - generic:
+                    - generic: Official IRCC data
+                    - status: LIVE FEED · UPDATED NOW
+                  - heading [level=2]: Latest Express Entry draw
+                  - paragraph: Federal invitation rounds, refreshed from Canada.ca.
+                  - generic:
+                    - status
+                  - generic:
+                    - generic: Commonwealth Migration Group Inc
+                    - link:
+                      - /url: /immigration-draws
+                      - text: View all draws
+            - generic "Choose hero card" [ref=f300e146]:
+              - button "Show Track record" [ref=f300e147]
+              - button "Show Latest draw" [ref=f300e148]
+      - generic [ref=f300e150]:
+        - generic [ref=f300e151]:
+          - generic [ref=f300e152]:
+            - paragraph [ref=f300e153]: All articles
+            - heading "Guides grouped around your next decision" [level=2] [ref=f300e154]
+          - paragraph [ref=f300e155]: Follow the category that fits your current question, then use the article as a starting point for a more focused review.
+        - generic [ref=f300e156]:
+          - navigation "Blog categories" [ref=f300e157]:
+            - link "All categories 20" [ref=f300e158] [cursor=pointer]:
+              - /url: /blog
+              - generic [ref=f300e159]: All categories
+              - generic [ref=f300e160]: "20"
+            - link "Express Entry 02" [ref=f300e161] [cursor=pointer]:
+              - /url: /blog?category=express-entry
+              - generic [ref=f300e162]: Express Entry
+              - generic [ref=f300e163]: "02"
+            - link "Work permits & PR 01" [ref=f300e164] [cursor=pointer]:
+              - /url: /blog?category=work-permits
+              - generic [ref=f300e165]: Work permits & PR
+              - generic [ref=f300e166]: "01"
+            - link "Study permits & student pathways 02" [ref=f300e167] [cursor=pointer]:
+              - /url: /blog?category=study-permits
+              - generic [ref=f300e168]: Study permits & student pathways
+              - generic [ref=f300e169]: "02"
+            - link "Family sponsorship 03" [ref=f300e170] [cursor=pointer]:
+              - /url: /blog?category=family-sponsorship
+              - generic [ref=f300e171]: Family sponsorship
+              - generic [ref=f300e172]: "03"
+            - link "Provincial nominee programs 03" [ref=f300e173] [cursor=pointer]:
+              - /url: /blog?category=provincial-nominee-programs
+              - generic [ref=f300e174]: Provincial nominee programs
+              - generic [ref=f300e175]: "03"
+            - link "Employer immigration 01" [ref=f300e176] [cursor=pointer]:
+              - /url: /blog?category=employer-immigration
+              - generic [ref=f300e177]: Employer immigration
+              - generic [ref=f300e178]: "01"
+            - link "Visitor visas & travel 01" [ref=f300e179] [cursor=pointer]:
+              - /url: /blog?category=visitor-visas
+              - generic [ref=f300e180]: Visitor visas & travel
+              - generic [ref=f300e181]: "01"
+            - link "Immigration planning guides 07" [ref=f300e182] [cursor=pointer]:
+              - /url: /blog?category=immigration-guides
+              - generic [ref=f300e183]: Immigration planning guides
+              - generic [ref=f300e184]: "07"
+          - generic [ref=f300e185]:
+            - generic [ref=f300e186]:
+              - generic [ref=f300e187]:
+                - paragraph [ref=f300e188]: All categories
+                - heading "Every guide in one place" [level=3] [ref=f300e189]
+              - paragraph [ref=f300e190]: Browse the full library and use the page controls as the collection grows.
+            - 'link "Open CRS Score Canada: How to Improve Your Express Entry Ranking" [ref=f300e191] [cursor=pointer]':
+              - /url: /blog/crs-score-canada-how-to-improve
+              - img "Canadian city skyline representing an Express Entry CRS planning decision" [ref=f300e192]
+              - generic [ref=f300e193]: "Open: CRS Score Canada: How to Improve Your Express Entry Ranking"
+            - generic [ref=f300e198]:
+              - 'link "Express Entry Sep 2026 Express Entry 2026: New Categories, Eligibility and How to Prepare Learn what Canada’s 2026 Express Entry categories target, who may qualify and what to prepare before an invitation round. Verify current IRCC rules. Read article" [ref=f300e199] [cursor=pointer]':
+                - /url: /blog/express-entry-canada-2026-categories
+                - figure [ref=f300e200]:
+                  - img "Organized immigration documents prepared for Express Entry category selection" [ref=f300e201]
+                  - generic [ref=f300e202]: Express Entry
+                  - generic [ref=f300e203]: "01"
+                - generic [ref=f300e204]:
+                  - generic [ref=f300e205]:
+                    - generic [ref=f300e206]: Express Entry
+                    - generic [ref=f300e207]: Sep 2026
+                  - 'heading "Express Entry 2026: New Categories, Eligibility and How to Prepare" [level=3] [ref=f300e208]'
+                  - paragraph [ref=f300e209]: Learn what Canada’s 2026 Express Entry categories target, who may qualify and what to prepare before an invitation round. Verify current IRCC rules.
+                  - generic [ref=f300e210]: Read article
+              - 'link "Work Permits Sep 2026 Canada Work Permit in 2026: Open vs Employer-Specific Permits Open and employer-specific permits are different tools. Compare eligibility, employer involvement, status conditions and the documents needed for your situation. Read article" [ref=f300e214] [cursor=pointer]':
+                - /url: /blog/canada-work-permit-types-2026
+                - figure [ref=f300e215]:
+                  - img "People moving through a Canadian city while planning work permit options" [ref=f300e216]
+                  - generic [ref=f300e217]: Work Permits
+                  - generic [ref=f300e218]: "02"
+                - generic [ref=f300e219]:
+                  - generic [ref=f300e220]:
+                    - generic [ref=f300e221]: Work Permits
+                    - generic [ref=f300e222]: Sep 2026
+                  - 'heading "Canada Work Permit in 2026: Open vs Employer-Specific Permits" [level=3] [ref=f300e223]'
+                  - paragraph [ref=f300e224]: Open and employer-specific permits are different tools. Compare eligibility, employer involvement, status conditions and the documents needed for your situation.
+                  - generic [ref=f300e225]: Read article
+              - 'link "Study Permits Sep 2026 Canada Study Permit 2026: Requirements, Proof of Funds and Common Refusals A strong study permit file connects the program, finances, purpose of study and temporary-resident evidence. Use this checklist to find gaps early. Read article" [ref=f300e229] [cursor=pointer]':
+                - /url: /blog/canada-study-permit-2026
+                - figure [ref=f300e230]:
+                  - img "Students planning a Canadian study permit pathway" [ref=f300e231]
+                  - generic [ref=f300e232]: Study Permits
+                  - generic [ref=f300e233]: "03"
+                - generic [ref=f300e234]:
+                  - generic [ref=f300e235]:
+                    - generic [ref=f300e236]: Study Permits
+                    - generic [ref=f300e237]: Sep 2026
+                  - 'heading "Canada Study Permit 2026: Requirements, Proof of Funds and Common Refusals" [level=3] [ref=f300e238]'
+                  - paragraph [ref=f300e239]: A strong study permit file connects the program, finances, purpose of study and temporary-resident evidence. Use this checklist to find gaps early.
+                  - generic [ref=f300e240]: Read article
+              - 'link "Study to Work Sep 2026 PGWP Canada 2026: Eligibility, Field of Study and Application Checklist A post-graduation work permit plan should begin before choosing a program. Confirm the current eligibility rules, timing and transition options. Read article" [ref=f300e244] [cursor=pointer]':
+                - /url: /blog/pgwp-canada-2026
+                - figure [ref=f300e245]:
+                  - img "Newcomer enjoying Toronto while planning post-graduation work in Canada" [ref=f300e246]
+                  - generic [ref=f300e247]: Study to Work
+                  - generic [ref=f300e248]: "04"
+                - generic [ref=f300e249]:
+                  - generic [ref=f300e250]:
+                    - generic [ref=f300e251]: Study to Work
+                    - generic [ref=f300e252]: Sep 2026
+                  - 'heading "PGWP Canada 2026: Eligibility, Field of Study and Application Checklist" [level=3] [ref=f300e253]'
+                  - paragraph [ref=f300e254]: A post-graduation work permit plan should begin before choosing a program. Confirm the current eligibility rules, timing and transition options.
+                  - generic [ref=f300e255]: Read article
+              - 'link "Family Sponsorship Sep 2026 Canada Super Visa 2026: Parent and Grandparent Eligibility, Income and Insurance The Super Visa can be an alternative to permanent-residence sponsorship for some families. Compare invitation, income, insurance and stay requirements. Read article" [ref=f300e259] [cursor=pointer]':
+                - /url: /blog/canada-super-visa-2026
+                - figure [ref=f300e260]:
+                  - img "Canadian maple leaves representing a family visit and Super Visa plan" [ref=f300e261]
+                  - generic [ref=f300e262]: Family Sponsorship
+                  - generic [ref=f300e263]: "05"
+                - generic [ref=f300e264]:
+                  - generic [ref=f300e265]:
+                    - generic [ref=f300e266]: Family Sponsorship
+                    - generic [ref=f300e267]: Sep 2026
+                  - 'heading "Canada Super Visa 2026: Parent and Grandparent Eligibility, Income and Insurance" [level=3] [ref=f300e268]'
+                  - paragraph [ref=f300e269]: The Super Visa can be an alternative to permanent-residence sponsorship for some families. Compare invitation, income, insurance and stay requirements.
+                  - generic [ref=f300e270]: Read article
+              - 'link "Family Sponsorship Sep 2026 Parents and Grandparents Program Canada: Invitations, Income and Alternatives PGP intake and invitation rules can change. Compare the current program with Super Visa planning and verify the latest IRCC instructions. Read article" [ref=f300e274] [cursor=pointer]':
+                - /url: /blog/parents-grandparents-program-canada
+                - figure [ref=f300e275]:
+                  - img "Family planning a parents and grandparents sponsorship pathway" [ref=f300e276]
+                  - generic [ref=f300e277]: Family Sponsorship
+                  - generic [ref=f300e278]: "06"
+                - generic [ref=f300e279]:
+                  - generic [ref=f300e280]:
+                    - generic [ref=f300e281]: Family Sponsorship
+                    - generic [ref=f300e282]: Sep 2026
+                  - 'heading "Parents and Grandparents Program Canada: Invitations, Income and Alternatives" [level=3] [ref=f300e283]'
+                  - paragraph [ref=f300e284]: PGP intake and invitation rules can change. Compare the current program with Super Visa planning and verify the latest IRCC instructions.
+                  - generic [ref=f300e285]: Read article
+            - navigation "Blog pagination" [ref=f300e289]:
+              - generic [ref=f300e290]: Previous
+              - generic [ref=f300e291]: Page 1 of 4
+              - link "Next" [ref=f300e292] [cursor=pointer]:
+                - /url: /blog?page=2#blog-panel
+      - region [ref=f300e293]:
+        - generic [ref=f300e294]:
+          - generic [ref=f300e295]:
+            - paragraph [ref=f300e296]: Clear answers, before you decide
+            - heading "Frequently asked questions" [level=2] [ref=f300e297]
+            - paragraph [ref=f300e298]: Open a question to understand the context behind the pathway and what to check next.
+          - generic [ref=f300e299]:
+            - group [ref=f300e300]:
+              - generic [ref=f300e301] [cursor=pointer]
+              - paragraph [ref=f300e307]: Verify that the current program or process is open and that your status, documents, timing and core eligibility fit the official instructions.
+            - group [ref=f300e308]:
+              - generic [ref=f300e309] [cursor=pointer]
+            - group [ref=f300e312]:
+              - generic [ref=f300e313] [cursor=pointer]
+            - group [ref=f300e316]:
+              - generic [ref=f300e317] [cursor=pointer]
+            - group [ref=f300e320]:
+              - generic [ref=f300e321] [cursor=pointer]
+            - group [ref=f300e324]:
+              - generic [ref=f300e325] [cursor=pointer]
+            - group [ref=f300e328]:
+              - generic [ref=f300e329] [cursor=pointer]
+            - group [ref=f300e332]:
+              - generic [ref=f300e333] [cursor=pointer]
+      - region [ref=f300e336]:
+        - generic [ref=f300e337]:
+          - generic [ref=f300e338]:
+            - paragraph [ref=f300e339]: Research that stays useful
+            - heading "How to use Canadian immigration guides" [level=2] [ref=f300e340]
+          - article [ref=f300e341]:
+            - heading "What is Canadian immigration guides and who may be a fit?" [level=3] [ref=f300e342]
+            - paragraph [ref=f300e343]: Canadian immigration guides are research starting points for decisions about permanent residence, Express Entry, PNP, work permits, study permits, family sponsorship, visitors and refusals. The most useful guide explains the route in plain language, names the evidence and points to the official source that controls the current rule.
+            - heading "Which Canadian immigration guides requirements should you verify first?" [level=3] [ref=f300e344]
+            - paragraph [ref=f300e345]: Choose the guide by the decision in front of you, not by a broad promise. Record the facts that could change the answer, check the publication or update date, and compare the explanation with the linked IRCC, provincial or regulatory source.
+            - list [ref=f300e346]:
+              - listitem [ref=f300e347]:
+                - strong [ref=f300e349]: The guide’s exact pathway and eligibility question
+                - text: — keep the record current and explain any gap or mismatch.
+              - listitem [ref=f300e350]:
+                - strong [ref=f300e352]: Your current status, key dates and previous applications
+                - text: — keep the record current and explain any gap or mismatch.
+              - listitem [ref=f300e353]:
+                - strong [ref=f300e355]: The official rule, form, fee or processing page linked from the guide
+                - text: — keep the record current and explain any gap or mismatch.
+              - listitem [ref=f300e356]:
+                - strong [ref=f300e358]: A short list of uncertainties to take into a focused review
+                - text: — keep the record current and explain any gap or mismatch.
+            - heading "How should you prepare a stronger Canadian immigration guides application?" [level=3] [ref=f300e359]
+            - paragraph [ref=f300e360]: Use the articles to narrow the question, then move from research to verification. A calculator, article or historical cutoff can help organize your thinking, but the decision-maker applies the current instructions to the evidence in your file.
+            - list [ref=f300e361]:
+              - listitem [ref=f300e362]: Write down the goal, current status, location and exact deadline.
+              - listitem [ref=f300e363]: Compare the relevant eligibility criteria with documents you can support.
+              - listitem [ref=f300e364]: Check the current official source for forms, fees, processing times and exceptions.
+              - listitem [ref=f300e365]: Keep a complete copy of the evidence and record the next owner and date.
+            - heading "Where can you verify current Canadian immigration guides rules?" [level=3] [ref=f300e366]
+            - paragraph [ref=f300e367]:
+              - text: Use the
+              - link "IRCC Express Entry guide" [ref=f300e368] [cursor=pointer]:
+                - /url: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html
+              - text: as the final reference for current requirements. Rules, program openings, fees, forms and processing information can change, so check the source date and compare it with the facts in your file before relying on this guide.
+            - heading "How can a Canada immigration blog help you research a pathway?" [level=3] [ref=f300e369]
+            - paragraph [ref=f300e370]: A Canada immigration blog is most useful when it turns a broad search into a precise question. Use an article to learn the vocabulary of a program, identify the documents that may matter and locate the official rule; then test that information against your own status, dates and history.
+            - heading "What makes an immigration guide worth using?" [level=3] [ref=f300e371]
+            - paragraph [ref=f300e372]: Look for a clear scope, a visible update date, plain-language definitions, practical document guidance and links to the decision-maker. Be cautious with articles that promise an invitation, approval or fixed processing time without explaining the assumptions behind the claim.
+            - list [ref=f300e373]:
+              - listitem [ref=f300e374]:
+                - strong [ref=f300e376]: The exact pathway and applicant profile the guide covers
+                - text: — verify it against the current route instructions.
+              - listitem [ref=f300e377]:
+                - strong [ref=f300e379]: The date and official source behind a rule or number
+                - text: — verify it against the current route instructions.
+              - listitem [ref=f300e380]:
+                - strong [ref=f300e382]: The unanswered question to take into a focused review
+                - text: — verify it against the current route instructions.
+            - 'heading "What should Brampton applicants verify for Blog: clearer information for your next step?" [level=3] [ref=f300e383]'
+            - paragraph [ref=f300e384]: "For Blog: clearer information for your next step, start by checking plain-language definitions, current official sources, practical questions and the next decision for the reader. A Brampton applicant should connect those facts to the current route instructions and keep the evidence consistent across forms, records and deadlines. The page can explain the pathway, but the decision-maker applies the current rules to the applicant’s personal facts."
+            - 'heading "How can a Brampton applicant prepare Blog: clearer information for your next step evidence?" [level=3] [ref=f300e385]'
+            - paragraph [ref=f300e386]:
+              - text: "A focused Brampton review of Blog: clearer information for your next step should identify the first decision, the evidence gap that could change the route and the deadline that needs protecting. Compare the page with the"
+              - link "IRCC immigration programs guide" [ref=f300e387] [cursor=pointer]:
+                - /url: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html
+              - text: and keep any consultation focused on the facts that the selected pathway actually tests.
+            - list [ref=f300e388]:
+              - listitem [ref=f300e389]:
+                - strong [ref=f300e391]: "the exact blog: clearer information for your next step route and current intake or application stage"
+                - text: — compare it with the current route instructions and keep the supporting record together.
+              - listitem [ref=f300e392]:
+                - strong [ref=f300e394]: identity, status, family and personal-history records
+                - text: — compare it with the current route instructions and keep the supporting record together.
+              - listitem [ref=f300e395]:
+                - strong [ref=f300e397]: education, language, work, funds or travel evidence where relevant
+                - text: — compare it with the current route instructions and keep the supporting record together.
+              - listitem [ref=f300e398]:
+                - strong [ref=f300e400]: the official instructions, deadline and next owner for the file
+                - text: — compare it with the current route instructions and keep the supporting record together.
+            - 'heading "What should you verify before relying on Canada immigration information in Brampton for Blog: clearer information for your next step?" [level=3] [ref=f300e401]'
+            - paragraph [ref=f300e402]:
+              - text: "Before relying on Canada immigration information in Brampton for Blog: clearer information for your next step, check plain-language definitions, current official sources, practical questions and the next decision for the reader against the current"
+              - link "IRCC immigration programs guide" [ref=f300e403] [cursor=pointer]:
+                - /url: https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html
+              - text: . Search results and tools can help you frame the question, but they cannot replace the decision-maker’s rules or a complete review of your personal facts.
+            - 'heading "What should you research before relying on Blog: clearer information for your next step?" [level=3] [ref=f300e404]'
+            - paragraph [ref=f300e405]: Research for this Canadian immigration pathway should begin with the exact program, service or decision and the applicant's location, status, family situation and deadline. Long-tail questions about eligibility, documents, processing, fees, status and the next application should be answered with the current official instructions rather than a broad summary alone. A useful page connects the goal, requirements, evidence, timeline and decision-maker so readers can understand which facts could change the route. The most important keyword is the question the applicant needs answered, supported by the program name, document type, application stage and relevant personal history. Identity, education, work, language, family, funds, travel and admissibility records should be checked for consistency before a form or calculator result is relied on. A professional review should clarify the service scope and next decision without promising an approval that only the responsible Canadian authority can make. The application calendar should protect expiry dates, document requests and response deadlines while leaving room to obtain translations or explanations.
+            - paragraph [ref=f300e406]: The strongest guidance answers what the route is, who may be a fit, what evidence is missing and which official source should be checked next. Use the page to match the search phrase to the exact route, then confirm the person, document, decision-maker and application stage before relying on a general answer. A dated record of the official instructions, the facts supplied and the evidence available makes later changes easier to spot and keeps the application explanation consistent. When a rule, intake, fee or deadline is time-sensitive, treat the official source as controlling and use a focused review to resolve the question that a general search cannot answer. Readers should leave the section knowing which fact to verify, which document supports it and which next action protects the application timeline. This approach makes the content useful for a direct answer, a comparison search and a real file review without repeating the same phrase unnaturally.
+      - generic [ref=f300e408]:
+        - generic [ref=f300e409]:
+          - heading "Ready to make the research personal?" [level=2] [ref=f300e410]
+          - paragraph [ref=f300e411]: Bring the guide that caught your attention, your questions and your timeline to a focused consultation with a licensed Canadian immigration team.
+        - link "Book a Consultation" [ref=f300e412] [cursor=pointer]:
+          - /url: /contact/book-immigration-consultation-canada
+  - contentinfo [ref=f300e416]:
+    - generic [ref=f300e418]:
+      - generic [ref=f300e419]:
+        - generic [ref=f300e420]:
+          - link "Commonwealth Migration Group Inc. home" [ref=f300e421] [cursor=pointer]:
+            - /url: /
+            - img "Commonwealth Migration Group Inc." [ref=f300e422]
+          - paragraph [ref=f300e423]:
+            - text: Canada Immigration
+            - strong [ref=f300e424]: Simplified
+          - paragraph [ref=f300e425]:
+            - strong [ref=f300e426]: CICC-regulated licensed RCICs
+            - text: serving clients across Canada — Express Entry, every PNP stream, LMIA (HGT), work & study permits, family sponsorship, and refusals.
+          - link "Licensed RCIC R711256 · CICC-Regulated" [ref=f300e427] [cursor=pointer]:
+            - /url: https://register.college-ic.ca/Public-Register-EN/Licensee/Profile.aspx?ID=14725
+          - generic [ref=f300e439]:
+            - paragraph [ref=f300e440]: Our offices
+            - generic [ref=f300e441]:
+              - link "Commonwealth Migration Group Inc. Canada 615, 2250 Bovaird Dr East Brampton, Sandringham- Wellington, ON, Canada 🇨🇦" [ref=f300e442] [cursor=pointer]:
+                - /url: https://maps.google.com/?q=615%2C%202250%20Bovaird%20Dr%20East%2C%20Brampton%2C%20Sandringham-%20Wellington%2C%20ON%2C%20Canada%20%F0%9F%87%A8%F0%9F%87%A6
+                - generic [ref=f300e448]:
+                  - strong [ref=f300e449]: Commonwealth Migration Group Inc.
+                  - generic [ref=f300e450]: Canada
+                - generic [ref=f300e451]:
+                  - generic [ref=f300e452]: 615, 2250 Bovaird Dr East
+                  - text: Brampton, Sandringham- Wellington, ON, Canada 🇨🇦
+              - link "Commonwealth Migration Group Dubai 307 Business Atrium Building, Oud Metha, Dubai , UAE 🇦🇪" [ref=f300e453] [cursor=pointer]:
+                - /url: https://www.cwmigrationgroup.com/
+                - generic [ref=f300e459]:
+                  - strong [ref=f300e460]: Commonwealth Migration Group
+                  - generic [ref=f300e461]: Dubai
+                - generic [ref=f300e462]: 307 Business Atrium Building, Oud Metha, Dubai , UAE 🇦🇪
+              - generic [ref=f300e463]:
+                - link "+1 647 617 0750" [ref=f300e464] [cursor=pointer]:
+                  - /url: tel:+16476170750
+                - link "info@commonwealthmigration.ca" [ref=f300e469] [cursor=pointer]:
+                  - /url: mailto:info@commonwealthmigration.ca
+          - generic [ref=f300e475]:
+            - generic [ref=f300e476]:
+              - link "Commonwealth Migration Group Inc. on Facebook" [ref=f300e477] [cursor=pointer]:
+                - /url: https://www.facebook.com/people/Commonwealth-Migration-Canada/61593464346589/
+              - link "Commonwealth Migration Group Inc. on Instagram" [ref=f300e481] [cursor=pointer]:
+                - /url: https://www.instagram.com/commonwealthmigration
+              - link "Commonwealth Migration Group Inc. on YouTube" [ref=f300e485] [cursor=pointer]:
+                - /url: https://www.youtube.com/@Commonwealthmigration
+            - generic [ref=f300e489]:
+              - link "Free Assessment" [ref=f300e490] [cursor=pointer]:
+                - /url: /assessment/free-canada-immigration-assessment
+              - generic [ref=f300e494]:
+                - link "Pay Online" [ref=f300e495] [cursor=pointer]:
+                  - /url: /contact/pay-immigration-consultation-canada
+                - generic [ref=f300e498]:
+                  - paragraph [ref=f300e499]: Powered by Stripe
+                  - generic [ref=f300e500]:
+                    - img "Visa" [ref=f300e502]
+                    - img "Mastercard" [ref=f300e504]
+                    - img "Apple Pay" [ref=f300e506]
+                    - img "Google Pay" [ref=f300e508]
+          - paragraph [ref=f300e509]:
+            - text: Monday - Friday, 9:00 am - 6:00 pm - Saturday 10:00 am - 4:00 pm (EST)
+            - generic [ref=f300e510]: · Eastern Time (ET)
+        - generic [ref=f300e511]:
+          - navigation "Immigrate" [ref=f300e512]:
+            - paragraph [ref=f300e513]: Immigrate
+            - list [ref=f300e515]:
+              - listitem [ref=f300e516]:
+                - link "Express Entry Draws" [ref=f300e517] [cursor=pointer]:
+                  - /url: /immigration-draws
+              - listitem [ref=f300e522]:
+                - link "Express Entry" [ref=f300e523] [cursor=pointer]:
+                  - /url: /immigrate/express-entry
+              - listitem [ref=f300e528]:
+                - link "Federal Skilled Worker" [ref=f300e529] [cursor=pointer]:
+                  - /url: /immigrate/federal-skilled-worker
+              - listitem [ref=f300e534]:
+                - link "Canadian Experience Class" [ref=f300e535] [cursor=pointer]:
+                  - /url: /immigrate/canadian-experience-class
+              - listitem [ref=f300e540]:
+                - link "Federal Skilled Trades" [ref=f300e541] [cursor=pointer]:
+                  - /url: /immigrate/federal-skilled-trades
+          - navigation "Visit" [ref=f300e546]:
+            - paragraph [ref=f300e547]: Visit
+            - list [ref=f300e549]:
+              - listitem [ref=f300e550]:
+                - link "Visitor Visa (TRV) & Super Visa (combined)" [ref=f300e551] [cursor=pointer]:
+                  - /url: /visit/visitor-visa-trv-and-super-visa-combined
+              - listitem [ref=f300e556]:
+                - link "Visitor Visa (TRV) — standalone page" [ref=f300e557] [cursor=pointer]:
+                  - /url: /visit/visitor-visa-trv-standalone-page
+              - listitem [ref=f300e562]:
+                - link "eTA (Electronic Travel Authorization)" [ref=f300e563] [cursor=pointer]:
+                  - /url: /visit/eta-electronic-travel-authorization
+              - listitem [ref=f300e568]:
+                - link "Super Visa — standalone page" [ref=f300e569] [cursor=pointer]:
+                  - /url: /visit/super-visa-standalone-page
+          - navigation "Work & Study" [ref=f300e574]:
+            - paragraph [ref=f300e575]: Work & Study
+            - list [ref=f300e577]:
+              - listitem [ref=f300e578]:
+                - link "Canada Work Permit (overview)" [ref=f300e579] [cursor=pointer]:
+                  - /url: /work-and-study/canada-work-permit-overview
+              - listitem [ref=f300e584]:
+                - link "Canada Study Permit" [ref=f300e585] [cursor=pointer]:
+                  - /url: /work-and-study/canada-study-permit
+              - listitem [ref=f300e590]:
+                - link "Post-Graduation Work Permit (PGWP)" [ref=f300e591] [cursor=pointer]:
+                  - /url: /work-and-study/post-graduation-work-permit-pgwp
+              - listitem [ref=f300e596]:
+                - link "International Experience Canada (IEC)" [ref=f300e597] [cursor=pointer]:
+                  - /url: /work-and-study/international-experience-canada-iec
+          - navigation "Sponsor" [ref=f300e602]:
+            - paragraph [ref=f300e603]: Sponsor
+            - list [ref=f300e605]:
+              - listitem [ref=f300e606]:
+                - link "Spousal & Partner Sponsorship (overview)" [ref=f300e607] [cursor=pointer]:
+                  - /url: /sponsor/spousal-and-partner-sponsorship-overview
+              - listitem [ref=f300e612]:
+                - link "Spousal / Common-Law Sponsorship" [ref=f300e613] [cursor=pointer]:
+                  - /url: /sponsor/spousal-common-law-sponsorship
+              - listitem [ref=f300e618]:
+                - link "Conjugal Partner Sponsorship" [ref=f300e619] [cursor=pointer]:
+                  - /url: /sponsor/conjugal-partner-sponsorship
+              - listitem [ref=f300e624]:
+                - link "Outland Sponsorship" [ref=f300e625] [cursor=pointer]:
+                  - /url: /sponsor/outland-sponsorship
+          - navigation "Tools & Resources" [ref=f300e630]:
+            - paragraph [ref=f300e631]: Tools & Resources
+            - list [ref=f300e633]:
+              - listitem [ref=f300e634]:
+                - link "Immigration Blog" [ref=f300e635] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=f300e640]:
+                - link "CRS Calculator" [ref=f300e641] [cursor=pointer]:
+                  - /url: /tools/crs-calculator-canada
+              - listitem [ref=f300e646]:
+                - link "NOC / Occupation Finder" [ref=f300e647] [cursor=pointer]:
+                  - /url: /tools/noc-finder-canada
+              - listitem [ref=f300e652]:
+                - link "PNP Eligibility Check" [ref=f300e653] [cursor=pointer]:
+                  - /url: /tools/pnp-eligibility-canada
+              - listitem [ref=f300e658]:
+                - link "Document Checklist" [ref=f300e659] [cursor=pointer]:
+                  - /url: /tools/document-checklist-canada
+              - listitem [ref=f300e664]:
+                - link "Free Assessment" [ref=f300e665] [cursor=pointer]:
+                  - /url: /assessment/free-canada-immigration-assessment
+          - navigation "Contact" [ref=f300e670]:
+            - paragraph [ref=f300e671]: Contact
+            - list [ref=f300e673]:
+              - listitem [ref=f300e674]:
+                - link "Book consultation" [ref=f300e675] [cursor=pointer]:
+                  - /url: /contact/book-immigration-consultation-canada
+              - listitem [ref=f300e680]:
+                - link "info@commonwealthmigration.ca" [ref=f300e681] [cursor=pointer]:
+                  - /url: mailto:info@commonwealthmigration.ca
+              - listitem [ref=f300e686]:
+                - link "+1 647 617 0750" [ref=f300e687] [cursor=pointer]:
+                  - /url: tel:+16476170750
+          - generic [ref=f300e692]:
+            - paragraph [ref=f300e695]: Regulated & Recognised By
+            - generic [ref=f300e697]:
+              - link "IRCC Immigration, Refugees and Citizenship Canada Federal Immigration Authority" [ref=f300e698] [cursor=pointer]:
+                - /url: https://www.canada.ca/en/immigration-refugees-citizenship.html
+                - generic [ref=f300e704]: IRCC
+                - generic [ref=f300e705]: Immigration, Refugees and Citizenship Canada
+                - generic [ref=f300e706]: Federal Immigration Authority
+              - link "CICC College of Immigration and Citizenship Consultants Regulator of RCIC Consultants" [ref=f300e707] [cursor=pointer]:
+                - /url: https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx
+                - generic [ref=f300e713]: CICC
+                - generic [ref=f300e714]: College of Immigration and Citizenship Consultants
+                - generic [ref=f300e715]: Regulator of RCIC Consultants
+              - link "ESDC Employment and Social Development Canada LMIA & Labour Programs" [ref=f300e716] [cursor=pointer]:
+                - /url: https://www.canada.ca/en/employment-social-development/services/foreign-workers.html
+                - generic [ref=f300e722]: ESDC
+                - generic [ref=f300e723]: Employment and Social Development Canada
+                - generic [ref=f300e724]: LMIA & Labour Programs
+              - link "CBSA Canada Border Services Agency Border & Enforcement Authority" [ref=f300e725] [cursor=pointer]:
+                - /url: https://www.cbsa-asfc.gc.ca/
+                - generic [ref=f300e731]: CBSA
+                - generic [ref=f300e732]: Canada Border Services Agency
+                - generic [ref=f300e733]: Border & Enforcement Authority
+      - generic [ref=f300e734]:
+        - generic [ref=f300e735]:
+          - paragraph [ref=f300e736]:
+            - text: © 2026 Commonwealth Migration Group Inc.. All rights reserved.·
+            - generic [ref=f300e737]: Licensed by College of Immigration and Citizenship Consultants (CICC)
+          - navigation "Legal" [ref=f300e738]:
+            - link "Privacy Policy" [ref=f300e739] [cursor=pointer]:
+              - /url: /legal/privacy-policy
+            - generic [aria-hidden] [ref=f300e740]: ·
+            - link "Terms of Use" [ref=f300e741] [cursor=pointer]:
+              - /url: /legal/terms-of-service
+            - generic [aria-hidden] [ref=f300e742]: ·
+            - link "Disclaimer" [ref=f300e743] [cursor=pointer]:
+              - /url: /legal/canada-immigration-disclaimer
+            - generic [aria-hidden] [ref=f300e744]: ·
+            - link "Refund Policy" [ref=f300e745] [cursor=pointer]:
+              - /url: /legal/refund-policy
+        - paragraph [ref=f300e746]:
+          - text: Commonwealth Migration is a trading name. Content on this site is general information only and does not constitute legal advice. Immigration outcomes depend on individual circumstances and current IRCC requirements. Commonwealth Migration Group Inc.
+          - strong [ref=f300e747]: does not guarantee
+          - text: visa approval.
+  - link "Chat on WhatsApp" [ref=f300e748] [cursor=pointer]:
+    - /url: https://api.whatsapp.com/send/?phone=16476170750
+    - img "Chat on WhatsApp" [ref=f300e750]
+  - button "Open CMG Pathway Guide" [ref=f300e753]
+  - button "Open Next.js Dev Tools" [ref=f300e762] [cursor=pointer]

@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import { site } from "@/config/site";
 import { whatsappUrl } from "@/config/whatsapp";
 import { theme, themeCssVars, templateThemeCssVars } from "@/config/theme";
-import { absoluteUrl, buildMetadata } from "@/lib/seo";
+import { absoluteUrl, buildMetadata, serializeJsonLd } from "@/lib/seo";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollProgressBar from "@/components/layout/ScrollProgressBar";
@@ -12,7 +12,7 @@ import StickyMobileCTA from "@/components/layout/StickyMobileCTA";
 import WhatsAppBubble from "@/components/layout/WhatsAppBubble";
 import CallBubble from "@/components/layout/CallBubble";
 import ConsultationModal from "@/components/layout/ConsultationModal";
-import GuidedChatbot from "@/components/chatbot/GuidedChatbot";
+import GuidedChatbotShell from "@/components/chatbot/GuidedChatbotShell";
 
 const manrope = localFont({
   src: "../../public/fonts/manrope-latin.woff2",
@@ -32,12 +32,10 @@ export const metadata = {
     path: "/",
     keywords: site.meta.keywords,
   }),
-  // Icons come from Next 16 file conventions in src/app/ (favicon.ico 16/32/48/64,
-  // icon.png 192, apple-icon.png 180), not from metadata.icons. Google Search
-  // dropped WebP/SVG favicon support in the Aug 2026 docs update (supported:
-  // BMP, GIF, ICO, PNG, JPEG, PPM, TIFF), so every icon the head links must be a
-  // supported format. The old /images/favicon.webp and the 1912x1140
-  // /images/apple-icon.png are kept on disk but no longer referenced.
+  // Icons come from Next 16 file conventions in src/app/ (favicon.ico, icon.png
+  // and apple-icon.png), not from metadata.icons. Keep the social preview image
+  // separate from the square app icon so link previews have a useful landscape
+  // canvas.
 };
 
 export const viewport = {
@@ -194,15 +192,15 @@ export default function RootLayout({ children }) {
       <body className={`${manrope.className} flex min-h-full flex-col`}>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(organizationJsonLd) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(websiteJsonLd) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(consultantJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(consultantJsonLd) }}
         />
         <a href="#main-content" className="skip-link absolute left-4 top-4 z-100 -translate-y-24 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white shadow-md transition-transform focus:translate-y-0">
           Skip to main content
@@ -217,7 +215,7 @@ export default function RootLayout({ children }) {
         <WhatsAppBubble />
         <CallBubble />
         <ConsultationModal />
-        <GuidedChatbot whatsappHref={whatsappUrl} />
+        <GuidedChatbotShell whatsappHref={whatsappUrl} />
       </body>
     </html>
   );

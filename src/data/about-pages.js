@@ -104,7 +104,7 @@ export const aboutPages = [
       { type: "list", ordered: true, items: [
         "Our Canada Immigration Consulting Process → /about/canada-immigration-consulting-process",
         "Our Brampton Immigration Office → /about/immigration-office-brampton-ontario",
-        "Meet the Licensed RCIC Team → /about/licensed-rcic-team-canada",
+        "Meet the Licensed RCIC Team → /about/about-commonwealth-migration#licensed-rcic-about",
         "Book an Immigration Consultation → /contact/book-immigration-consultation-canada",
       ] },
     ],

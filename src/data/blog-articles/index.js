@@ -35,6 +35,26 @@ import canadaImmigrationProcessingTimes from "./canada-immigration-processing-ti
 import canadaCitizenshipRequirements from "./canada-citizenship-requirements";
 import prCardRenewalCanada from "./pr-card-renewal-canada";
 import whatDelaysCanadaImmigrationApplication from "./what-delays-canada-immigration-application";
+import expressEntryFrenchLanguageCategory2026 from "./express-entry-french-language-category-2026";
+import canadianExperienceClass2026Requirements from "./canadian-experience-class-2026-requirements";
+import expressEntryProofOfFunds2026 from "./express-entry-proof-of-funds-2026";
+import expressEntryProfileExpiryWhatToDo from "./express-entry-profile-expiry-what-to-do";
+import ontarioPnp2026OinpUpdates from "./ontario-pnp-2026-oinp-updates";
+import albertaAdvantageImmigrationProgram2026 from "./alberta-advantage-immigration-program-2026";
+import bcPnp2026StreamsPriorities from "./bc-pnp-2026-streams-priorities";
+import manitobaPnp2026SkilledWorkerGuide from "./manitoba-pnp-2026-skilled-worker-guide";
+import atlanticImmigrationProgramEmployerChecklist from "./atlantic-immigration-program-employer-checklist";
+import francophoneCommunityImmigrationPilotCanada from "./francophone-community-immigration-pilot-canada";
+import lmiaWageThresholds2026 from "./lmia-wage-thresholds-2026";
+import ruralLmiaTemporaryMeasures2026 from "./rural-lmia-temporary-measures-2026";
+import spouseOpenWorkPermit2026 from "./spouse-open-work-permit-2026";
+import maintainedStatusWorkPermitExtensionCanada from "./maintained-status-work-permit-extension-canada";
+import restoreStatusCanadaWorkerStudent from "./restore-status-canada-worker-student";
+import studyPermitPalTalExemption2026 from "./study-permit-pal-tal-exemption-2026";
+import pgwpFieldOfStudy2026 from "./pgwp-field-of-study-2026";
+import changeDliStudyPermitCanada from "./change-dli-study-permit-canada";
+import visitorRecordVsTrvCanada from "./visitor-record-vs-trv-canada";
+import canadaImmigrationScamsAuthorizedRepresentative from "./canada-immigration-scams-authorized-representative";
 
 /** Article bodies keyed by the slug used in `blog-research.js`. */
 export const BLOG_ARTICLES = {
@@ -58,6 +78,26 @@ export const BLOG_ARTICLES = {
   "canada-citizenship-requirements": canadaCitizenshipRequirements,
   "pr-card-renewal-canada": prCardRenewalCanada,
   "what-delays-canada-immigration-application": whatDelaysCanadaImmigrationApplication,
+  "express-entry-french-language-category-2026": expressEntryFrenchLanguageCategory2026,
+  "canadian-experience-class-2026-requirements": canadianExperienceClass2026Requirements,
+  "express-entry-proof-of-funds-2026": expressEntryProofOfFunds2026,
+  "express-entry-profile-expiry-what-to-do": expressEntryProfileExpiryWhatToDo,
+  "ontario-pnp-2026-oinp-updates": ontarioPnp2026OinpUpdates,
+  "alberta-advantage-immigration-program-2026": albertaAdvantageImmigrationProgram2026,
+  "bc-pnp-2026-streams-priorities": bcPnp2026StreamsPriorities,
+  "manitoba-pnp-2026-skilled-worker-guide": manitobaPnp2026SkilledWorkerGuide,
+  "atlantic-immigration-program-employer-checklist": atlanticImmigrationProgramEmployerChecklist,
+  "francophone-community-immigration-pilot-canada": francophoneCommunityImmigrationPilotCanada,
+  "lmia-wage-thresholds-2026": lmiaWageThresholds2026,
+  "rural-lmia-temporary-measures-2026": ruralLmiaTemporaryMeasures2026,
+  "spouse-open-work-permit-2026": spouseOpenWorkPermit2026,
+  "maintained-status-work-permit-extension-canada": maintainedStatusWorkPermitExtensionCanada,
+  "restore-status-canada-worker-student": restoreStatusCanadaWorkerStudent,
+  "study-permit-pal-tal-exemption-2026": studyPermitPalTalExemption2026,
+  "pgwp-field-of-study-2026": pgwpFieldOfStudy2026,
+  "change-dli-study-permit-canada": changeDliStudyPermitCanada,
+  "visitor-record-vs-trv-canada": visitorRecordVsTrvCanada,
+  "canada-immigration-scams-authorized-representative": canadaImmigrationScamsAuthorizedRepresentative,
 };
 
 /** The body for a slug, or null when a post has not been expanded yet. */

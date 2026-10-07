@@ -1788,7 +1788,7 @@
         "type": "list",
         "ordered": true,
         "items": [
-          "Our Team → /about/licensed-rcic-team-canada",
+          "Our Team → /about/about-commonwealth-migration#licensed-rcic-about",
           "How It Works → /about/how-immigration-consulting-works-canada",
           "Contact / Office → /contact/contact-immigration-consultant-brampton"
         ]
@@ -5602,7 +5602,7 @@
       "lead": "Yukon / NWT (territorial nominee programs)'s nominee program focuses on Employer-driven territorial nominee streams. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
     },
     "title": "Yukon / NWT (territorial nominee programs) PNP 2026: Streams & Requirements | CMG",
-    "description": "Yukon / NWT (territorial nominee programs) Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "description": "Compare Yukon and northern territorial nominee streams, eligibility focus, Express Entry alignment and distinct requirements for applicants.",
     "contentBlocks": [
       {
         "type": "paragraph",

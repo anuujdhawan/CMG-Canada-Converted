@@ -1,6 +1,6 @@
 import { getExpressEntryDraws, EXPRESS_ENTRY_API_URL } from "@/lib/expressEntryDraws";
 
-export const revalidate = 900;
+export const revalidate = 14_400;
 
 export async function GET() {
   try {

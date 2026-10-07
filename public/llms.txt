@@ -36,6 +36,29 @@
 
 - [About Commonwealth Migration](https://commonwealthmigration.ca/about/about-commonwealth-migration): Organization and service information.
 - [Blog and Canada immigration guides](https://commonwealthmigration.ca/blog): Educational immigration content.
+
+## Current 2026 research guides
+
+- [Express Entry French language category 2026](https://commonwealthmigration.ca/blog/express-entry-french-language-category-2026): French category eligibility, language evidence and preparation.
+- [Canadian Experience Class 2026 requirements](https://commonwealthmigration.ca/blog/canadian-experience-class-2026-requirements): Canadian work experience, NOC and CRS planning.
+- [Express Entry proof of funds 2026](https://commonwealthmigration.ca/blog/express-entry-proof-of-funds-2026): Settlement funds and account evidence.
+- [Express Entry profile expiry](https://commonwealthmigration.ca/blog/express-entry-profile-expiry-what-to-do): What to do before or after a profile expires.
+- [Ontario PNP and OINP 2026](https://commonwealthmigration.ca/blog/ontario-pnp-2026-oinp-updates): Ontario stream and employer planning.
+- [Alberta Advantage Immigration Program 2026](https://commonwealthmigration.ca/blog/alberta-advantage-immigration-program-2026): AAIP stream and eligibility planning.
+- [BC PNP 2026 streams and priorities](https://commonwealthmigration.ca/blog/bc-pnp-2026-streams-priorities): British Columbia registration and nomination planning.
+- [Manitoba PNP skilled worker guide](https://commonwealthmigration.ca/blog/manitoba-pnp-2026-skilled-worker-guide): Manitoba connection and settlement evidence.
+- [Atlantic Immigration Program employer checklist](https://commonwealthmigration.ca/blog/atlantic-immigration-program-employer-checklist): Designation, job offer and endorsement planning.
+- [Francophone Community Immigration Pilot](https://commonwealthmigration.ca/blog/francophone-community-immigration-pilot-canada): French-speaking community and employer pathway.
+- [LMIA wage thresholds 2026](https://commonwealthmigration.ca/blog/lmia-wage-thresholds-2026): High-wage, low-wage and prevailing-wage planning.
+- [Rural LMIA temporary measures 2026](https://commonwealthmigration.ca/blog/rural-lmia-temporary-measures-2026): Rural employer caps and effective dates.
+- [Spousal open work permit 2026](https://commonwealthmigration.ca/blog/spouse-open-work-permit-2026): Family work-permit eligibility and evidence.
+- [Maintained status and work permit extensions](https://commonwealthmigration.ca/blog/maintained-status-work-permit-extension-canada): Conditions while an extension is pending.
+- [Restore status as a worker or student](https://commonwealthmigration.ca/blog/restore-status-canada-worker-student): Restoration deadline, documents and limits.
+- [Study permit PAL/TAL exemption 2026](https://commonwealthmigration.ca/blog/study-permit-pal-tal-exemption-2026): Graduate-study attestation exemption and remaining requirements.
+- [PGWP field of study 2026](https://commonwealthmigration.ca/blog/pgwp-field-of-study-2026): CIP codes and eligible program checks.
+- [Change DLI in Canada](https://commonwealthmigration.ca/blog/change-dli-study-permit-canada): Study-permit and PGWP considerations when changing schools.
+- [Visitor record vs TRV](https://commonwealthmigration.ca/blog/visitor-record-vs-trv-canada): Status inside Canada versus travel documents.
+- [Verify an immigration representative](https://commonwealthmigration.ca/blog/canada-immigration-scams-authorized-representative): Licence checks, fees and scam red flags.
 - [Privacy policy](https://commonwealthmigration.ca/legal/privacy-policy): Privacy information.
 - [Terms of service](https://commonwealthmigration.ca/legal/terms-of-service): Terms information.
 - [Disclaimer](https://commonwealthmigration.ca/legal/canada-immigration-disclaimer): General-information and responsibility disclaimer.

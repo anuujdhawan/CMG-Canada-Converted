@@ -281,6 +281,86 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
     src: "/images/blog/prairie-silos.webp",
     alt: "Prairie landscape representing the patience and preparation needed for an immigration application",
   },
+  "express-entry-french-language-category-2026": {
+    src: "/images/blog/express-entry-french-language-category-2026.webp",
+    alt: "French-language study notes and Canadian immigration documents for Express Entry",
+  },
+  "canadian-experience-class-2026-requirements": {
+    src: "/images/blog/canadian-experience-class-2026-requirements.webp",
+    alt: "Canadian work documents prepared for a Canadian Experience Class review",
+  },
+  "express-entry-proof-of-funds-2026": {
+    src: "/images/blog/express-entry-proof-of-funds-2026.webp",
+    alt: "Bank statement and calculator used to review Express Entry proof of funds",
+  },
+  "express-entry-profile-expiry-what-to-do": {
+    src: "/images/blog/express-entry-profile-expiry-what-to-do.webp",
+    alt: "Calendar and immigration profile documents prepared before an Express Entry profile expires",
+  },
+  "ontario-pnp-2026-oinp-updates": {
+    src: "/images/blog/ontario-pnp-2026-oinp-updates.webp",
+    alt: "Toronto skyline representing Ontario PNP planning and OINP updates",
+  },
+  "alberta-advantage-immigration-program-2026": {
+    src: "/images/blog/alberta-advantage-immigration-program-2026.webp",
+    alt: "Calgary skyline representing Alberta Advantage Immigration Program planning",
+  },
+  "bc-pnp-2026-streams-priorities": {
+    src: "/images/blog/bc-pnp-2026-streams-priorities.webp",
+    alt: "Vancouver harbour representing British Columbia PNP streams and priorities",
+  },
+  "manitoba-pnp-2026-skilled-worker-guide": {
+    src: "/images/blog/manitoba-pnp-2026-skilled-worker-guide.webp",
+    alt: "Prairie landscape representing Manitoba skilled-worker immigration planning",
+  },
+  "atlantic-immigration-program-employer-checklist": {
+    src: "/images/blog/atlantic-immigration-program-employer-checklist.webp",
+    alt: "Atlantic Canada bridge representing an Atlantic Immigration Program employer checklist",
+  },
+  "francophone-community-immigration-pilot-canada": {
+    src: "/images/blog/francophone-community-immigration-pilot-canada.webp",
+    alt: "Canadian city at dusk representing French-speaking community immigration",
+  },
+  "lmia-wage-thresholds-2026": {
+    src: "/images/blog/lmia-wage-thresholds-2026.webp",
+    alt: "Canadian business team reviewing LMIA wage thresholds and employer documents",
+  },
+  "rural-lmia-temporary-measures-2026": {
+    src: "/images/blog/rural-lmia-temporary-measures-2026.webp",
+    alt: "Small Canadian community representing rural LMIA temporary measures",
+  },
+  "spouse-open-work-permit-2026": {
+    src: "/images/blog/spouse-open-work-permit-2026.webp",
+    alt: "Couple reviewing documents for a Canadian spousal open work permit",
+  },
+  "maintained-status-work-permit-extension-canada": {
+    src: "/images/blog/maintained-status-work-permit-extension-canada.webp",
+    alt: "Worker reviewing a Canadian work permit extension and maintained-status dates",
+  },
+  "restore-status-canada-worker-student": {
+    src: "/images/blog/restore-status-canada-worker-student.webp",
+    alt: "Immigration consultation documents prepared to restore worker or student status in Canada",
+  },
+  "study-permit-pal-tal-exemption-2026": {
+    src: "/images/blog/study-permit-pal-tal-exemption-2026.webp",
+    alt: "Canadian university students reviewing study permit and PAL or TAL documents",
+  },
+  "pgwp-field-of-study-2026": {
+    src: "/images/blog/pgwp-field-of-study-2026.webp",
+    alt: "Graduation documents and study notes used to review PGWP field-of-study rules",
+  },
+  "change-dli-study-permit-canada": {
+    src: "/images/blog/change-dli-study-permit-canada.webp",
+    alt: "Canadian university campus representing a designated learning institution change",
+  },
+  "visitor-record-vs-trv-canada": {
+    src: "/images/blog/visitor-record-vs-trv-canada.webp",
+    alt: "Passport and travel documents comparing a Canadian visitor record and TRV",
+  },
+  "canada-immigration-scams-authorized-representative": {
+    src: "/images/blog/canada-immigration-scams-authorized-representative.webp",
+    alt: "Immigration documents and verification checklist for choosing an authorised representative",
+  },
 };
 
 const DEFAULT_BLOG_IMAGE = {
@@ -326,7 +406,7 @@ export function getBlogPosts() {
     path: `/blog/${post.slug}`,
     title: post.title,
     seo: { title: `${post.title} | Commonwealth Migration Canada`, description: post.description, keywords: post.keywords.split('; ') },
-    meta: { lastModified: '2026-09-21' },
+    meta: { lastModified: post.updated || post.date || '2026-10-06' },
     category: { slug: researchCategorySlug(post.category), label: post.category, title: post.category, description: post.description },
     image: getResearchBlogImage(post.slug, post.category),
     research: post,
@@ -422,8 +502,11 @@ export function getBlogGroups() {
 const NEWS_SLUGS = [
   "canada-immigration-levels-plan-2026",
   "express-entry-canada-2026-categories",
+  "express-entry-french-language-category-2026",
   "canada-immigration-news-monthly-ircc-update",
   "provincial-nominee-program-canada-2026",
+  "study-permit-pal-tal-exemption-2026",
+  "lmia-wage-thresholds-2026",
   "canada-immigration-processing-times",
   "what-delays-canada-immigration-application",
 ];

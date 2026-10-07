@@ -13,7 +13,7 @@
 import fs from "fs";
 import path from "path";
 import { parsePageDataFile } from "./scraped";
-import { getCmgPage, getCmgPages, getLegalPage } from "./cmgPages";
+import { getCmgPage, getCmgPages, getLegalPage, getLegalRoutePaths } from "./cmgPages";
 
 const PAGE_DATA_DIR = path.join(process.cwd(), "pageData");
 const ROUTE_MAP_FILE = path.join(PAGE_DATA_DIR, "route-map.json");
@@ -107,7 +107,12 @@ export function getAllPages() {
     ...parsePageDataFile(fs.readFileSync(path.join(PAGE_DATA_DIR, file), "utf8"), file),
   }));
   const knownPaths = new Set(legacyPages.map((page) => page.path));
-  return [...legacyPages, ...getCmgPages().filter((page) => !knownPaths.has(page.path))];
+  const contentPages = getCmgPages().filter((page) => !knownPaths.has(page.path));
+  const contentPaths = new Set([...knownPaths, ...contentPages.map((page) => page.path)]);
+  const legalPages = getLegalRoutePaths()
+    .map((path) => getLegalPage(path))
+    .filter((page) => page && !contentPaths.has(page.path));
+  return [...legacyPages, ...contentPages, ...legalPages];
 }
 
 /** Human label for a URL segment (used in breadcrumbs / index grids). */

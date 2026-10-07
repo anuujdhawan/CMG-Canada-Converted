@@ -30,8 +30,8 @@ export default function BlogCard({ post, index = 0 }) {
           <span>{post.category.label}</span>
           <span className="text-[var(--muted)] font-bold tracking-[.04em] normal-case">{formatDate(post.meta.lastModified)}</span>
         </div>
-        <h3 className="max-w-[470px] text-[clamp(21px,1.35rem+.9vw,27px)] max-[620px]:text-[24px] leading-[1.03] transition-colors duration-200 group-hover:text-[var(--primary)] group-focus-visible:text-[var(--primary)]">{post.title}</h3>
-        <p className="mt-[14px] text-[var(--muted)] text-[14px] leading-[1.7]">{post.seo.description}</p>
+        <h3 className="max-w-[470px] text-[clamp(19px,1.1rem+.5vw,22px)] max-[620px]:text-[24px] leading-[1.03] transition-colors duration-200 group-hover:text-[var(--primary)] group-focus-visible:text-[var(--primary)]">{post.title}</h3>
+        <p className="mt-[14px] text-[var(--muted)] !text-[12px] leading-[1.7]">{post.seo.description}</p>
         <span className="reference-blog-card__action inline-flex items-center justify-between gap-2 mt-auto pt-[18px] border-t border-[var(--border)] text-[var(--ink)] font-extrabold text-[12px] leading-none tracking-[.02em]">
           Read article
           <ArrowUpRight className="text-[var(--primary)] transition-transform duration-[300ms] ease-in-out group-hover:translate-x-[3px] group-hover:translate-y-[-3px] group-focus-visible:translate-x-[3px] group-focus-visible:translate-y-[-3px]" width={17} height={17} aria-hidden="true" />

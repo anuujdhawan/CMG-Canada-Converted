@@ -1,4 +1,5 @@
 import { getPage } from "@/lib/sitePages";
+import { serializeJsonLd } from "@/lib/seo";
 import ReferenceServicePage from "@/components/home/ReferenceServicePage";
 import { pageStructuredData } from "@/components/templates/ContentPage";
 
@@ -19,7 +20,7 @@ export default function ToolShell({ eyebrow, title, lead, currentSlug, pagePath:
     <>
       <ReferenceServicePage page={resolvedPage}>{children}</ReferenceServicePage>
       {pageStructuredData(resolvedPage).map((obj, index) => (
-        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(obj) }} />
+        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(obj) }} />
       ))}
     </>
   );

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, BookOpen } from "lucide-react";
+import { ArrowUpRight, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { getImageObjectPosition } from "@/lib/imagePresentation";
 import { getLatestBlogPosts } from "@/lib/latestBlogs";
@@ -45,6 +45,25 @@ const CARD_CLASS = [
   "focus-visible:shadow-[0_28px_58px_color-mix(in_srgb,var(--primary)_22%,transparent)]",
   "focus-visible:before:scale-x-100",
 ].join(" ");
+
+const MOBILE_CONTROL_STYLE = {
+  position: "absolute",
+  top: "50%",
+  zIndex: 5,
+  display: "inline-flex",
+  width: "2.75rem",
+  height: "2.75rem",
+  alignItems: "center",
+  justifyContent: "center",
+  border: "1px solid color-mix(in srgb, var(--template-on-primary) 34%, transparent)",
+  borderRadius: "999px",
+  background: "color-mix(in srgb, var(--cmg-template-deep-surface) 84%, transparent)",
+  color: "var(--template-on-primary)",
+  boxShadow: "0 8px 20px color-mix(in srgb, var(--cmg-template-deep-surface) 38%, transparent)",
+  transform: "translateY(-50%)",
+  backdropFilter: "blur(8px)",
+  cursor: "pointer",
+};
 
 function BlogCard({ post, decorative = false }) {
   const TitleTag = decorative ? "span" : "h3";
@@ -106,6 +125,28 @@ function BlogCard({ post, decorative = false }) {
 export default function LatestBlogsCarousel() {
   const viewportRef = useRef(null);
   const [offscreen, setOffscreen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const scrollMobileCard = (direction) => {
+    const viewport = viewportRef.current;
+    if (!viewport) return;
+
+    const cards = Array.from(viewport.querySelectorAll(".cmg-blog-marquee__card:not([inert])"));
+    const firstCard = cards[0];
+    if (!firstCard) return;
+
+    const cardStride = firstCard.getBoundingClientRect().width
+      + Number.parseFloat(window.getComputedStyle(firstCard).marginRight || "0");
+    if (!cardStride) return;
+
+    const currentIndex = Math.round(viewport.scrollLeft / cardStride);
+    const targetIndex = (currentIndex + direction + cards.length) % cards.length;
+
+    viewport.scrollTo({
+      left: targetIndex * cardStride,
+      behavior: "smooth",
+    });
+  };
 
   // A long homepage should not keep animating a strip nobody can see.
   useEffect(() => {
@@ -117,6 +158,14 @@ export default function LatestBlogsCarousel() {
     );
     observer.observe(viewport);
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 620px)");
+    const updateIsMobile = () => setIsMobile(mediaQuery.matches);
+    updateIsMobile();
+    mediaQuery.addEventListener("change", updateIsMobile);
+    return () => mediaQuery.removeEventListener("change", updateIsMobile);
   }, []);
 
   return (
@@ -147,22 +196,51 @@ export default function LatestBlogsCarousel() {
         </header>
       </div>
 
-      <div
-        className="cmg-blog-marquee__viewport"
-        ref={viewportRef}
-        data-paused={offscreen ? "true" : undefined}
-      >
+      <div className="cmg-blog-marquee__rail" style={{ position: "relative" }}>
+        {isMobile && (
+          <button
+            className="cmg-blog-marquee__control cmg-blog-marquee__control--prev"
+            style={{ ...MOBILE_CONTROL_STYLE, left: "0.5rem" }}
+            type="button"
+            aria-label="Previous immigration guide"
+            aria-controls="latest-guides-viewport"
+            onClick={() => scrollMobileCard(-1)}
+          >
+            <ChevronLeft width={22} height={22} aria-hidden="true" />
+          </button>
+        )}
+
         <div
-          className="cmg-blog-marquee__track"
-          style={{ "--cmg-blog-duration": `${POSTS.length * SECONDS_PER_CARD}s` }}
+          id="latest-guides-viewport"
+          className="cmg-blog-marquee__viewport"
+          ref={viewportRef}
+          data-paused={offscreen ? "true" : undefined}
         >
-          {POSTS.map((post) => (
-            <BlogCard key={post.id} post={post} />
-          ))}
-          {POSTS.map((post) => (
-            <BlogCard key={`loop-${post.id}`} post={post} decorative />
-          ))}
+          <div
+            className="cmg-blog-marquee__track"
+            style={{ "--cmg-blog-duration": `${POSTS.length * SECONDS_PER_CARD}s` }}
+          >
+            {POSTS.map((post) => (
+              <BlogCard key={post.id} post={post} />
+            ))}
+            {POSTS.map((post) => (
+              <BlogCard key={`loop-${post.id}`} post={post} decorative />
+            ))}
+          </div>
         </div>
+
+        {isMobile && (
+          <button
+            className="cmg-blog-marquee__control cmg-blog-marquee__control--next"
+            style={{ ...MOBILE_CONTROL_STYLE, right: "0.5rem" }}
+            type="button"
+            aria-label="Next immigration guide"
+            aria-controls="latest-guides-viewport"
+            onClick={() => scrollMobileCard(1)}
+          >
+            <ChevronRight width={22} height={22} aria-hidden="true" />
+          </button>
+        )}
       </div>
 
       <div className="section-inner relative mx-auto w-[var(--container)]">

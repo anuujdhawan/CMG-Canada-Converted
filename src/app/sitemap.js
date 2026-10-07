@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { execFileSync } from "child_process";
 import { getAllPages } from "@/lib/sitePages";
+import { RESEARCH_BLOG_POSTS } from "@/data/blog-research";
 import { site } from "@/config/site";
 
 /**
@@ -71,6 +72,29 @@ const EXCLUDED_SITEMAP_PATHS = new Set([
   "/pay/success",
 ]);
 
+const ADDITIONAL_INDEXABLE_PAGES = [
+  // Dedicated app routes do not come from pageData, so keep them explicit.
+  { path: "/canada-immigration-news", lastModified: "2026-10-06", changeFrequency: "daily", priority: 0.8 },
+  { path: "/immigration-draws", lastModified: "2026-10-06", changeFrequency: "daily", priority: 0.8 },
+  { path: "/assessment/free-canada-immigration-assessment", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/tools/canada-immigration-calculators", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/tools/crs-calculator-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/tools/pnp-eligibility-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/tools/noc-finder-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/tools/document-checklist-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/contact/book-immigration-consultation-canada", lastModified: "2026-10-06", changeFrequency: "monthly", priority: 0.8 },
+  ...RESEARCH_BLOG_POSTS.map((post) => ({
+    path: `/blog/${post.slug}`,
+    lastModified: "2026-10-06",
+    changeFrequency: "monthly",
+    priority: 0.7,
+  })),
+];
+
+function isIndexable(page) {
+  return !EXCLUDED_SITEMAP_PATHS.has(page.path) && !/\bnoindex\b/i.test(page.seo?.robots || "");
+}
+
 /**
  * Sitemap — one URL for every page built from the approved Markdown content, using each
  * page's own sitemap priority and last-modified date from the content files.
@@ -82,7 +106,7 @@ export default function sitemap() {
   const base = site.url.replace(/\/$/, "");
 
   const pages = getAllPages()
-    .filter((page) => !EXCLUDED_SITEMAP_PATHS.has(page.path))
+    .filter(isIndexable)
     .map((page) => {
       const lastModified = resolveLastModified(page);
       return {
@@ -94,17 +118,15 @@ export default function sitemap() {
     });
 
   const knownUrls = new Set(pages.map((page) => page.url));
-  const additionalPages = [
-    ["/immigration-draws", "daily", 0.8],
-    ["/tools/pnp-eligibility-canada", "weekly", 0.7],
-    ["/tools/noc-finder-canada", "weekly", 0.7],
-    ["/tools/document-checklist-canada", "weekly", 0.7],
-    ["/contact/book-immigration-consultation-canada", "monthly", 0.8],
-  ];
-  for (const [path, changeFrequency, priority] of additionalPages) {
-    const url = `${base}${path}`;
+  for (const entry of ADDITIONAL_INDEXABLE_PAGES) {
+    const url = `${base}${entry.path}`;
     if (knownUrls.has(url)) continue;
-    pages.push({ url, lastModified: new Date("2026-09-07"), changeFrequency, priority });
+    pages.push({
+      url,
+      lastModified: new Date(entry.lastModified),
+      changeFrequency: entry.changeFrequency,
+      priority: entry.priority,
+    });
     knownUrls.add(url);
   }
 

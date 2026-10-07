@@ -39,7 +39,7 @@ export function normalizeDraw(draw) {
 export async function getExpressEntryDraws() {
   const response = await fetch(EXPRESS_ENTRY_API_URL, {
     headers: { Accept: "application/json" },
-    next: { revalidate: 900 },
+    next: { revalidate: 14_400 },
   });
 
   if (!response.ok) {

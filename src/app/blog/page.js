@@ -1,5 +1,5 @@
 import { getPage } from "@/lib/sitePages";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, serializeJsonLd } from "@/lib/seo";
 import { pageStructuredData } from "@/components/templates/ContentPage";
 import BlogIndexPage from "@/components/blog/BlogIndexPage";
 import { resolveBlogCategory, resolveBlogPage } from "@/lib/blog";
@@ -42,7 +42,7 @@ export default async function BlogPage({ searchParams }) {
     <>
       <BlogIndexPage page={page} activeCategory={activeCategory} activePage={activePage} />
       {pageStructuredData(page).map((obj, index) => (
-        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(obj) }} />
+        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(obj) }} />
       ))}
     </>
   );

@@ -45,6 +45,11 @@ const OFFICIAL_DOMAINS = [
   "justice.gc.ca",
   "canada.ca/en/immigration-refugees-citizenship",
   "www.canada.ca",
+  "ontario.ca",
+  "alberta.ca",
+  "welcomebc.ca",
+  "immigratemanitoba.com",
+  "college-ic.ca",
 ];
 
 const failures = [];
@@ -78,7 +83,16 @@ function articleWords(article) {
 
 // ---------------------------------------------------------------- live routes
 function liveRoutes() {
-  const routes = new Set(["/", "/blog", "/canada-immigration-news"]);
+  const routes = new Set([
+    "/", "/blog", "/canada-immigration-news",
+    "/contact/book-immigration-consultation-canada",
+    "/tools/canada-immigration-calculators",
+    "/tools/crs-calculator-canada",
+    "/tools/pnp-eligibility-canada",
+    "/tools/noc-finder-canada",
+    "/tools/document-checklist-canada",
+    "/assessment/free-canada-immigration-assessment",
+  ]);
   const addAll = (records) => {
     for (const record of records) if (record?.path) routes.add(record.path);
   };
@@ -95,6 +109,7 @@ function liveRoutes() {
 const researchModule = await import(pathToFileURL(path.join(root, "src/data/blog-research.js")).href);
 const posts = researchModule.RESEARCH_BLOG_POSTS;
 const routes = liveRoutes();
+for (const post of posts) routes.add("/blog/" + post.slug);
 
 const files = fs.readdirSync(articlesDir).filter((file) => file.endsWith(".js") && file !== "index.js").sort();
 const articles = new Map();

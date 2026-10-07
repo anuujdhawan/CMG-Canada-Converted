@@ -453,6 +453,23 @@ html[data-theme="light"] .cmg-chatbot-lead-success svg { color: #15803d; }
 .site-footer__trust-card:hover::before {
   opacity: 1;
 }
+
+/* Long footer links, especially the email address, must be allowed to wrap
+   inside their grid track instead of widening the final column past the
+   viewport and being clipped by the footer's overflow guard. */
+.site-footer__col,
+.site-footer__col-list,
+.site-footer__link,
+.site-footer__link > span {
+  min-width: 0;
+}
+
+.site-footer__link,
+.site-footer__link > span {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
 html[data-theme="dark"] .site-footer {
   border-top-color: rgba(255,255,255,0.08);
   background:
@@ -2036,6 +2053,30 @@ html[data-theme="light"] .cmg-template-home .live-success-videos__arrow:focus-vi
 }
 .cmg-blog-marquee__title { -webkit-line-clamp: 3; }
 .cmg-blog-marquee__text { -webkit-line-clamp: 3; }
+/* On narrow screens an always-moving, masked marquee leaves every card in an
+   arbitrary clipped state. Use a normal touch rail instead so mobile users
+   can read one complete card and swipe deliberately between guides. */
+@media (max-width: 620px) {
+  .cmg-template-home .cmg-blog-marquee__viewport {
+    margin: 0 1rem;
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .cmg-template-home .cmg-blog-marquee__viewport::-webkit-scrollbar { display: none; }
+  .cmg-template-home .cmg-blog-marquee__track {
+    animation: none;
+    transform: none;
+  }
+  .cmg-template-home .cmg-blog-marquee__card {
+    width: min(20.5rem, calc(100vw - 2rem));
+    margin-right: 1rem;
+    scroll-snap-align: start;
+  }
+  .cmg-template-home .cmg-blog-marquee__card[inert] { display: none; }
+}
 html[data-theme="light"] .cmg-template-home .cmg-blog-marquee {
   /* In light theme `--secondary` is pure white, which is also the card surface;
      the band needs its own tone for the cards to read as cards. */
@@ -2222,6 +2263,115 @@ html[data-theme="light"] .cmg-template-service .cta-section a.btn:focus-visible 
   html[data-theme="light"] .cmg-template-service .cta-section p {
     color: var(--cmg-light-muted, #5d6875) !important;
     -webkit-text-fill-color: var(--cmg-light-muted, #5d6875) !important;
+  }
+}
+
+/* Reading surfaces: long-form guidance should feel like a designed panel,
+   especially on narrow screens where an unbroken column of copy feels heavy. */
+.cmg-template-service .service-reading,
+.cmg-template-home .seo-guide-reading {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--primary) 25%, var(--border));
+  border-radius: 1.6rem;
+  padding: clamp(1.5rem, 3.2vw, 2.8rem);
+  background:
+    radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--primary) 11%, transparent), transparent 32%),
+    linear-gradient(145deg, color-mix(in srgb, var(--surface) 88%, var(--primary) 12%), var(--surface));
+  box-shadow:
+    0 24px 58px color-mix(in srgb, var(--ink) 10%, transparent),
+    0 4px 16px color-mix(in srgb, var(--primary) 8%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--template-on-primary) 10%, transparent);
+}
+
+.cmg-template-service .service-reading::before,
+.cmg-template-home .seo-guide-reading::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent), transparent 86%);
+  content: "";
+}
+
+.cmg-template-service .service-reading h2,
+.cmg-template-service .service-reading h3,
+.cmg-template-home .seo-guide-reading > h3 {
+  margin-top: 1.8rem !important;
+  padding-top: 1.25rem;
+  border-top: 1px solid color-mix(in srgb, var(--border) 78%, transparent);
+  color: var(--ink) !important;
+  letter-spacing: -0.02em;
+}
+
+.cmg-template-service .service-reading > h2:first-child,
+.cmg-template-service .service-reading > h3:first-child,
+.cmg-template-home .seo-guide-reading > h3:first-child {
+  margin-top: 0 !important;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.cmg-template-service .service-reading p,
+.cmg-template-home .seo-guide-reading > p {
+  max-width: 76ch;
+  margin-top: 1.2rem !important;
+  color: color-mix(in srgb, var(--muted) 92%, var(--ink)) !important;
+  font-size: clamp(0.96rem, 0.91rem + 0.18vw, 1.08rem) !important;
+  line-height: 1.9 !important;
+}
+
+.cmg-template-service .service-reading > p:first-of-type,
+.cmg-template-home .seo-guide-reading > p:first-of-type {
+  margin-top: 1.45rem !important;
+  font-size: clamp(1rem, 0.94rem + 0.24vw, 1.15rem) !important;
+}
+
+.cmg-template-service .service-reading > p + p,
+.cmg-template-home .seo-guide-reading > p + p {
+  margin-top: 1.35rem !important;
+}
+
+.cmg-template-service .service-reading strong,
+.cmg-template-home .seo-guide-reading strong {
+  color: var(--ink);
+}
+
+/* The media bands intentionally pull out of the article's inner padding, but
+   the old fixed -60px pull was wider than the reading card at desktop sizes.
+   Since the card clips its contents to preserve the rounded surface, that
+   hid the first and last characters of the two-column copy. Match the card's
+   responsive padding instead and return to the normal flow on narrow screens. */
+.cmg-template-service .service-content-media-band {
+  margin-inline: max(-45px, -3.2vw);
+  padding-inline: 20px;
+}
+
+@media (max-width: 880px) {
+  .cmg-template-service .service-content-media-band {
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+}
+
+@media (max-width: 619.98px) {
+  .cmg-template-service .service-reading,
+  .cmg-template-home .seo-guide-reading {
+    border-radius: 1.25rem;
+    padding: 1.35rem 1.1rem 1.5rem;
+    box-shadow: 0 18px 38px color-mix(in srgb, var(--ink) 10%, transparent), 0 3px 12px color-mix(in srgb, var(--primary) 7%, transparent);
+  }
+
+  .cmg-template-service .service-reading h2,
+  .cmg-template-service .service-reading h3,
+  .cmg-template-home .seo-guide-reading > h3 {
+    margin-top: 1.45rem !important;
+    padding-top: 1rem;
+  }
+
+  .cmg-template-service .service-reading p,
+  .cmg-template-home .seo-guide-reading > p {
+    font-size: 0.98rem !important;
+    line-height: 1.82 !important;
   }
 }
 

@@ -2,11 +2,13 @@ import { parseBlocks, rebrand, localizeUrl } from "@/components/templates/Markdo
 import { site } from "@/config/site";
 import { UK_LANDING_PATH } from "@/data/uk-pages";
 import { breadcrumbsFor } from "@/lib/sitePages";
-import { absoluteUrl } from "@/lib/seo";
+import { absoluteUrl, serializeJsonLd } from "@/lib/seo";
 import { getPageFaqs } from "@/lib/faqs";
 import { HERO_TRUST_BADGES } from "@/lib/hero";
 import ReferenceHomepage from "@/components/home/ReferenceHomepage";
 import ReferenceServicePage from "@/components/home/ReferenceServicePage";
+import PnpProgramExperience from "@/components/tools/PnpProgramExperience";
+import { getPnpProgramForPath } from "@/data/pnp-programs";
 
 const SITE_HOSTS = new Set([
   "commonwealthmigration.ca",
@@ -62,7 +64,7 @@ function stripManagedSchema(obj) {
   };
 }
 
-export function pageStructuredData(page) {
+export function pageStructuredData(page, { includeFaq = true, pageType = "WebPage" } = {}) {
   const url = absoluteUrl(page.path);
   const organizationId = `${site.url}#organization`;
   const websiteId = `${site.url}#website`;
@@ -83,7 +85,7 @@ export function pageStructuredData(page) {
     ...sourceSchemas,
     {
       "@context": "https://schema.org",
-      "@type": "WebPage",
+      "@type": pageType,
       "@id": `${url}#webpage`,
       url,
       name: page.h1,
@@ -123,7 +125,7 @@ export function pageStructuredData(page) {
     });
   }
 
-  const faqs = getPageFaqs(page);
+  const faqs = includeFaq ? getPageFaqs(page) : [];
   if (faqs.length > 0) {
     schemas.push({
       "@context": "https://schema.org",
@@ -184,18 +186,26 @@ export default function ContentPage({ page, children }) {
       <>
         <ReferenceHomepage page={page} heroData={getHeroContent(page)} />
         {pageStructuredData(page).map((obj, i) => (
-          <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: rebrand(JSON.stringify(obj)) }} />
+          <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: rebrand(serializeJsonLd(obj)) }} />
         ))}
       </>
     );
   }
 
   // Explicit service and tool pages share the service visual system.
+  const pnpProgram = getPnpProgramForPath(page.path);
   return (
     <>
-      <ReferenceServicePage page={page}>{children}</ReferenceServicePage>
+      <ReferenceServicePage
+        page={page}
+        interactivePosition={pnpProgram ? "top" : "bottom"}
+        interactiveWide={Boolean(pnpProgram)}
+        interactiveHeading={pnpProgram ? { hide: true } : undefined}
+      >
+        {pnpProgram ? <PnpProgramExperience program={pnpProgram} /> : children}
+      </ReferenceServicePage>
       {pageStructuredData(page).map((obj, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: rebrand(JSON.stringify(obj)) }} />
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: rebrand(serializeJsonLd(obj)) }} />
       ))}
     </>
   );

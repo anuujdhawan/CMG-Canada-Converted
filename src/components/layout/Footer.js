@@ -101,6 +101,7 @@ export default function Footer() {
                 alt={site.name}
                 width={1912}
                 height={1140}
+                sizes="180px"
                 className="site-footer__logo-img h-[2.45rem] w-auto object-contain"
               />
             </Link>
@@ -225,7 +226,7 @@ export default function Footer() {
                     <div className="site-footer__pay-logos flex flex-wrap items-center gap-[.45rem]">
                       {PAYMENT_LOGOS.map((logo) => (
                           <span key={logo.key} className="site-footer__pay-logo inline-flex h-7 items-center justify-center rounded-lg border border-line bg-white px-[.4rem] py-1 shadow-[0_2px_8px_color-mix(in_srgb,var(--brand-primary)_4%,transparent)]">
-                          <Image className="h-full w-auto object-contain" src={logo.src} alt={logo.label} width={logo.width} height={logo.height} />
+                          <Image className="h-full w-auto object-contain" src={logo.src} alt={logo.label} width={logo.width} height={logo.height} sizes="64px" />
                         </span>
                       ))}
                     </div>
@@ -240,7 +241,7 @@ export default function Footer() {
           </div>
 
           {/* Link columns */}
-          <div className="site-footer__links grid grid-cols-6 items-start gap-x-5 gap-y-7 pt-[.35rem] max-[1100px]:grid-cols-3 max-[720px]:grid-cols-2 max-[720px]:gap-[1.6rem_1rem] max-[520px]:gap-[1.75rem_1rem]">
+          <div className="site-footer__links grid grid-cols-[repeat(6,minmax(0,1fr))] items-start gap-x-5 gap-y-7 pt-[.35rem] max-[1100px]:grid-cols-3 max-[720px]:grid-cols-2 max-[720px]:gap-[1.6rem_1rem] max-[520px]:gap-[1.75rem_1rem]">
             {linkColumns.map((col) => (
               <LinkColumn key={col.title} title={col.title} links={col.links} />
             ))}

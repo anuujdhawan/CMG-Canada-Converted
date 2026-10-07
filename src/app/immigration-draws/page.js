@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, serializeJsonLd } from "@/lib/seo";
 import { pageStructuredData } from "@/components/templates/ContentPage";
 import ExpressEntryDrawsPage from "@/components/draws/ExpressEntryDrawsPage";
 
@@ -24,7 +24,7 @@ export default function ImmigrationDrawsRoute() {
     <>
       <ExpressEntryDrawsPage page={page} />
       {pageStructuredData(page).map((obj, index) => (
-        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(obj) }} />
+        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(obj) }} />
       ))}
     </>
   );

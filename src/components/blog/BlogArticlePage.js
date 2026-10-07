@@ -352,7 +352,7 @@ export default function BlogArticlePage({ post, article = null }) {
   const category = getBlogCategory(categorySlug);
   const cover = getResearchBlogImage(post.slug, post.category);
   const guidance = CATEGORY_GUIDANCE[categorySlug] || CATEGORY_GUIDANCE["immigration-guides"];
-  const reviewed = formatMonth(post.updated || post.date || "2026-09-21");
+  const reviewed = formatMonth(post.updated || post.date || post.meta?.lastModified || "2026-10-06");
 
   // Related guides lead with the article's own category, then widen to the rest
   // of the library so a single-post category still shows something useful.

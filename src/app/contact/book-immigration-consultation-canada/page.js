@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, serializeJsonLd } from "@/lib/seo";
 import ReferenceServicePage from "@/components/home/ReferenceServicePage";
 import { pageStructuredData } from "@/components/templates/ContentPage";
 import ConsultationForm from "@/components/forms/ConsultationForm";
@@ -37,7 +37,7 @@ export default function BookImmigrationConsultationPage() {
     <>
       <ReferenceServicePage page={page}><ConsultationForm /></ReferenceServicePage>
       {pageStructuredData(page).map((obj, index) => (
-        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(obj) }} />
+        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(obj) }} />
       ))}
     </>
   );

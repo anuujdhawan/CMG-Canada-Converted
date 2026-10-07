@@ -603,8 +603,8 @@ class MessageParser {
   }
 }
 
-export default function GuidedChatbot({ whatsappHref = "" }) {
-  const [open, setOpen] = useState(false);
+export default function GuidedChatbot({ whatsappHref = "", initialOpen = false }) {
+  const [open, setOpen] = useState(initialOpen);
   const ActionProvider = useMemo(() => createActionProvider(whatsappHref), [whatsappHref]);
 
   useEffect(() => {
