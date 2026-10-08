@@ -76,7 +76,10 @@ const ADDITIONAL_INDEXABLE_PAGES = [
   // Dedicated app routes do not come from pageData, so keep them explicit.
   { path: "/canada-immigration-news", lastModified: "2026-10-06", changeFrequency: "daily", priority: 0.8 },
   { path: "/immigration-draws", lastModified: "2026-10-06", changeFrequency: "daily", priority: 0.8 },
-  { path: "/pnp-draws", lastModified: "2026-10-06", changeFrequency: "daily", priority: 0.8 },
+  // Keep the dedicated PNP results route in the sitemap with the same
+  // freshness signal as its page metadata. Filtered query-string views use
+  // the page's canonical URL and are intentionally not emitted separately.
+  { path: "/pnp-draws", lastModified: "2026-10-08", changeFrequency: "daily", priority: 0.8 },
   { path: "/assessment/free-canada-immigration-assessment", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.8 },
   { path: "/tools/canada-immigration-calculators", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.8 },
   { path: "/tools/crs-calculator-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.8 },

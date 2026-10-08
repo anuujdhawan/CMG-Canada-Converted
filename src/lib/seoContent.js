@@ -128,6 +128,20 @@ const SPECIAL_CONFIGS = {
     evidence: ["the exact provincial stream instructions and intake status", "job offer, employer and wage evidence where the stream requires it", "language, education, work and settlement documents", "proof of ties, intention to settle and a complete federal admissibility record"],
     next: "Shortlist streams from the evidence you can genuinely support. Track the province’s official updates, avoid assuming that a past intake will reopen unchanged, and compare Express Entry-linked and non-Express Entry routes before choosing a province.",
   },
+  "/pnp-draws": {
+    topic: "Canadian PNP draw results",
+    source: OFFICIAL_SOURCES.pnp,
+    headings: {
+      definition: "What are Canadian PNP draw results?",
+      requirements: "What should you verify when reviewing PNP draw results?",
+      prepare: "How can you use PNP draw history to plan your next step?",
+      source: "Where can you verify current PNP draw information?",
+    },
+    answer: "Canadian PNP draw results are historical records of provincial or territorial invitation rounds. They can show the date, stream, number of invitations and a published score, cutoff or selection signal, but they do not guarantee that a future candidate will be invited or nominated.",
+    fit: "Use the tracker by selecting a province or territory and then a stream. Compare the published signal with your occupation, job offer, language, education, work experience, settlement funds and intention to live in the nominating province. Provincial criteria are not interchangeable.",
+    evidence: ["the exact province, stream and current intake status", "the published score, cutoff or selection method for the round", "occupation, language, education, work and job-offer evidence where required", "the official provincial notice and current IRCC PNP guidance"],
+    next: "Treat draw history as planning context. Record the round date, stream, invitations and source link, then verify the current stream rules, intake status, fees, forms and nomination route before changing your immigration plan.",
+  },
   "/work-and-study/canada-work-permit-overview": {
     topic: "Canada work permit",
     source: OFFICIAL_SOURCES.work,
@@ -425,12 +439,12 @@ export function getSeoContentBlocks(page) {
   const topic = config.topic;
   const evidenceList = config.evidence.map((item) => `**${item.charAt(0).toUpperCase()}${item.slice(1)}** — keep the record current and explain any gap or mismatch.`);
   const sharedBlocks = [
-    { type: "heading", level: 2, text: `What is ${topic} and who may be a fit?` },
+    { type: "heading", level: 2, text: config.headings?.definition || `What is ${topic} and who may be a fit?` },
     { type: "paragraph", text: config.answer },
-    { type: "heading", level: 2, text: `Which ${topic} requirements should you verify first?` },
+    { type: "heading", level: 2, text: config.headings?.requirements || `Which ${topic} requirements should you verify first?` },
     { type: "paragraph", text: config.fit },
     { type: "list", ordered: false, items: evidenceList },
-    { type: "heading", level: 2, text: `How should you prepare a stronger ${topic} application?` },
+    { type: "heading", level: 2, text: config.headings?.prepare || `How should you prepare a stronger ${topic} application?` },
     { type: "paragraph", text: config.next },
     { type: "list", ordered: true, items: [
       "Write down the goal, current status, location and exact deadline.",
@@ -438,7 +452,7 @@ export function getSeoContentBlocks(page) {
       "Check the current official source for forms, fees, processing times and exceptions.",
       "Keep a complete copy of the evidence and record the next owner and date.",
     ] },
-    { type: "heading", level: 2, text: `Where can you verify current ${topic} rules?` },
+    { type: "heading", level: 2, text: config.headings?.source || `Where can you verify current ${topic} rules?` },
     { type: "paragraph", text: `Use the [${config.source.label}](${config.source.url}) as the final reference for current requirements. Rules, program openings, fees, forms and processing information can change, so check the source date and compare it with the facts in your file before relying on this guide.` },
   ];
   const additions = [

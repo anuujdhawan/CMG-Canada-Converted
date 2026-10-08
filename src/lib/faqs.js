@@ -69,24 +69,24 @@ const SPECIFIC_FAQS = {
   ],
   "/pnp-draws": [
     {
-      question: "What are PNP draw results?",
-      answer: "PNP draw results record provincial or territorial invitation activity, including the stream, date, selection method, published score signal and number of invitations where that information is available.",
+      question: "What are Canadian PNP draw results?",
+      answer: "Canadian PNP draw results are historical records of provincial or territorial invitation rounds. They show the date, stream, invitations and a published score, cutoff or selection signal when available. Use them to understand past activity, not as a guarantee of a future invitation or nomination.",
     },
     {
-      question: "Do all provinces use the same PNP cutoff score?",
-      answer: "No. Provincial programs use different systems. Some publish points, while others select by occupation, priority, employer, intake window or another program-specific process.",
+      question: "Do all Canadian provinces use the same PNP cutoff score?",
+      answer: "No. Provincial and territorial programs use different selection systems. Some publish points, while others select by occupation, priority, employer, intake window or another stream-specific method. A cutoff from one province cannot be used as the cutoff for another.",
     },
     {
       question: "Can a PNP draw result guarantee an invitation or nomination?",
-      answer: "No. A historical draw result is context only. The province applies the current stream rules, available spaces, evidence requirements and selection priorities to each candidate.",
+      answer: "No. A historical draw result is context only. The province or territory applies the current stream rules, available spaces, evidence requirements and selection priorities to each candidate, and a nomination still requires a federal admissibility review.",
     },
     {
-      question: "Where does the PNP draw data come from?",
-      answer: "The tracker presents verified provincial snapshots with a source link on every draw record. Open the linked provincial or territorial source and confirm the current instructions before relying on a cutoff or invitation count.",
+      question: "Where can I verify Canadian PNP draw data?",
+      answer: "This tracker provides a source link on every draw record. Open the linked provincial or territorial notice, then compare it with the current IRCC Provincial Nominee Program guide before relying on a cutoff, selection signal or invitation count.",
     },
     {
-      question: "How should I use the province and stream filters?",
-      answer: "Choose a province or territory first, then narrow the feed by the available stream lens. The page requests the selected view from its API and updates the URL so the filtered result can be revisited or shared.",
+      question: "How should I use the province and stream filters on this PNP tracker?",
+      answer: "Select a province or territory first, then choose the available stream or selection type. The page fetches the filtered view from its API, updates the URL and lets you load every available result without leaving the page.",
     },
   ],
   "/tools/crs-calculator": [

@@ -54,7 +54,7 @@ export default function PnpDrawsTable({ draws, totalCount = draws.length }) {
 
       <div className="overflow-x-auto">
         <table className="w-full min-w-[900px] border-collapse text-left text-[13px]">
-          <caption className="sr-only">Provincial nominee draw results with province, date, stream, score or cutoff, and invitations</caption>
+          <caption className="sr-only">Canadian PNP draw results with province, date, stream, score or cutoff, and invitations</caption>
           <thead>
             <tr className="border-b border-[color-mix(in_srgb,var(--template-on-primary)_34%,transparent)] bg-[linear-gradient(135deg,var(--template-primary),var(--template-accent))] shadow-[0_10px_22px_color-mix(in_srgb,var(--template-ink)_18%,transparent)]">
               {COLUMN_HEADERS.map((column) => (
