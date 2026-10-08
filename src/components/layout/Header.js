@@ -83,11 +83,36 @@ function DropdownPanel({ children, className, id, open }) {
  */
 const RELOCATED_MENU_CATEGORIES = ["Caregivers", "Immigrate from the UK"];
 
+function FeaturedMenuCard({ card, secondary = false, onClose }) {
+  return (
+    <div className={cn(
+      "flex min-w-0 flex-col rounded-xl p-6",
+      secondary
+        ? "bg-[linear-gradient(145deg,var(--brand-primary),var(--brand-primary-dark))] shadow-[0_14px_32px_color-mix(in_srgb,var(--brand-primary)_22%,transparent)]"
+        : "bg-navy"
+    )}>
+      <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-white/70">{card.label}</p>
+      <p className="mb-2 text-lg font-bold leading-snug text-white">{card.title}</p>
+      <p className="mb-4 flex-1 text-sm leading-relaxed text-white/80">
+        {card.desc || "Open the source-backed guide and compare the route with related options."}
+      </p>
+      <Link
+        href={card.href}
+        onClick={onClose}
+        className="inline-flex items-center gap-1 text-xs font-bold text-white transition-colors hover:text-accent-soft"
+      >
+        Learn more <ArrowRight aria-hidden className="h-3 w-3" />
+      </Link>
+    </div>
+  );
+}
+
 function MegaDropdown({ item, open, onClose }) {
   const sourceColumns = item.columns || [];
   const relocatedColumns = sourceColumns.filter((column) => RELOCATED_MENU_CATEGORIES.includes(column.category));
   const columns = sourceColumns.filter((column) => !relocatedColumns.includes(column));
   const featured = item.featured;
+  const featuredSecondary = item.featuredSecondary;
   // Relocated groups sit below Other PR Pathways in the Immigrate menu,
   // leaving room for its featured Express Entry Draws card in the fifth column.
   const showFeatured = featured && columns.length < 5;
@@ -150,19 +175,9 @@ function MegaDropdown({ item, open, onClose }) {
         })}
 
         {showFeatured && (
-          <div className="flex min-w-0 flex-col bg-navy rounded-xl p-6">
-            <p className="text-[11px] font-bold uppercase tracking-widest text-white/60 mb-2">{featured.label}</p>
-            <p className="font-bold text-white text-lg mb-2 leading-snug">{featured.title}</p>
-            <p className="mb-4 flex-1 text-sm leading-relaxed text-white/70">
-              {featured.desc || "Open the source-backed guide and compare the route with related options."}
-            </p>
-            <Link
-              href={featured.href}
-              onClick={onClose}
-              className="text-xs font-bold text-white hover:text-accent-soft transition-colors inline-flex items-center gap-1"
-            >
-              Learn More →
-            </Link>
+          <div className="grid min-w-0 gap-4">
+            <FeaturedMenuCard card={featured} onClose={onClose} />
+            {featuredSecondary && <FeaturedMenuCard card={featuredSecondary} secondary onClose={onClose} />}
           </div>
         )}
       </div>

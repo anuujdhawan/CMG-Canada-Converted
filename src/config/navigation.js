@@ -3,6 +3,7 @@ import { currentPagePath } from "@/config/pageRoutes";
 import { getCmgMenu } from "@/lib/cmgPages";
 
 const DRAW_PAGE_LINK = { label: "Express Entry Draws", href: "/immigration-draws" };
+const PNP_DRAWS_LINK = { label: "PNP Draw Results", href: "/pnp-draws" };
 
 /**
  * Navigation structure — Commonwealth Migration Canada.
@@ -17,10 +18,13 @@ const sourceMenuItems = getCmgMenu().map((top) => ({
   href: top.groups[0]?.pages[0]?.href || "/",
   columns: top.groups.map((group) => ({
     category: group.label,
-    items: group.pages.map((page) => ({
-      label: page.label,
-      href: page.href,
-    })),
+    items: [
+      ...group.pages.map((page) => ({
+        label: page.label,
+        href: page.href,
+      })),
+      ...(top.label === "Immigrate" && group.label === "Provincial Nominee Program" ? [PNP_DRAWS_LINK] : []),
+    ],
   })),
   featured: top.label === "Immigrate"
     ? {
@@ -37,6 +41,14 @@ const sourceMenuItems = getCmgMenu().map((top) => ({
         href: top.groups[0].pages[0].href,
       }
   : null,
+  featuredSecondary: top.label === "Immigrate"
+    ? {
+        label: "Provincial selection data",
+        title: "PNP Draw Results",
+        desc: "Compare provincial invitation rounds by province, stream and selection signal.",
+        href: PNP_DRAWS_LINK.href,
+      }
+    : null,
 }));
 
 const TOOLS_MENU_ITEM = {
@@ -167,7 +179,7 @@ const rawNavigation = {
     ...sourceMenuItems.slice(0, 4).map((item) => ({
       title: item.label,
       links: [
-        ...(item.label === "Immigrate" ? [DRAW_PAGE_LINK] : []),
+        ...(item.label === "Immigrate" ? [DRAW_PAGE_LINK, PNP_DRAWS_LINK] : []),
         ...item.columns.flatMap((column) => column.items).slice(0, 4),
       ],
     })),

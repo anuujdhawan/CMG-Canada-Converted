@@ -67,6 +67,28 @@ const SPECIFIC_FAQS = {
       answer: "Review the factors that can lawfully change your score, check whether another draw category or program fits, and confirm your options against current IRCC requirements before taking action.",
     },
   ],
+  "/pnp-draws": [
+    {
+      question: "What are PNP draw results?",
+      answer: "PNP draw results record provincial or territorial invitation activity, including the stream, date, selection method, published score signal and number of invitations where that information is available.",
+    },
+    {
+      question: "Do all provinces use the same PNP cutoff score?",
+      answer: "No. Provincial programs use different systems. Some publish points, while others select by occupation, priority, employer, intake window or another program-specific process.",
+    },
+    {
+      question: "Can a PNP draw result guarantee an invitation or nomination?",
+      answer: "No. A historical draw result is context only. The province applies the current stream rules, available spaces, evidence requirements and selection priorities to each candidate.",
+    },
+    {
+      question: "Where does the PNP draw data come from?",
+      answer: "The tracker presents verified provincial snapshots with a source link on every draw record. Open the linked provincial or territorial source and confirm the current instructions before relying on a cutoff or invitation count.",
+    },
+    {
+      question: "How should I use the province and stream filters?",
+      answer: "Choose a province or territory first, then narrow the feed by the available stream lens. The page requests the selected view from its API and updates the URL so the filtered result can be revisited or shared.",
+    },
+  ],
   "/tools/crs-calculator": [
     {
       question: "What does the CRS calculator estimate?",
