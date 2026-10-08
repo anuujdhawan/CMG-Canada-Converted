@@ -131,10 +131,6 @@ export default function ConsultantProfileSection({ profile = LICENSED_RCIC_PROFI
               <p className="m-0 text-[9px] font-extrabold uppercase tracking-[.17em] text-template-primary">Licensed RCIC</p>
               <p className="m-[3px_0_0] text-[13px] font-bold leading-tight text-template-ink">{profile.name}</p>
               <p className="m-[5px_0_0] text-[11px] font-semibold leading-tight text-template-muted">Licence No. {profile.licence}</p>
-              <p className="m-[7px_0_0] flex items-center gap-1.5 text-[9.5px] font-extrabold uppercase tracking-[.08em] text-template-primary">
-                <ShieldCheck className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-                <span>{profile.status}</span>
-              </p>
               {/* The trust claim is only worth making if it is one click from the
                   regulator's own record. Colour goes on the inner span because
                   `.cmg-template-home a { color: inherit }` is unlayered and wins

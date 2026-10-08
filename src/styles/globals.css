@@ -25,6 +25,58 @@
   --brand-shadow-dropdown: 0 16px 42px color-mix(in srgb, var(--brand-navy) 10%, transparent), 0 4px 12px color-mix(in srgb, var(--brand-navy) 4%, transparent);
 }
 
+/* PNP snapshot contrast: the component's dark-mode on-primary utilities need
+   light-mode ink and muted colours when the snapshot surface becomes pale. */
+@layer utilities {
+  html[data-theme="light"] .pnp-program-experience .pnp-snapshot-card {
+    background: linear-gradient(145deg, color-mix(in srgb, var(--cmg-light-primary) 5%, var(--cmg-light-surface)), color-mix(in srgb, var(--cmg-light-primary) 2%, var(--cmg-light-surface-alt))) !important;
+    border-color: color-mix(in srgb, var(--cmg-light-primary) 25%, var(--cmg-light-border)) !important;
+    box-shadow: 0 18px 42px color-mix(in srgb, var(--cmg-light-ink) 10%, transparent) !important;
+    color: var(--cmg-light-ink) !important;
+  }
+
+  html[data-theme="light"] .pnp-program-experience .pnp-snapshot-card > .pointer-events-none {
+    background-image: linear-gradient(color-mix(in srgb, var(--cmg-light-ink) 8%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--cmg-light-ink) 8%, transparent) 1px, transparent 1px), radial-gradient(circle at 8% 12%, color-mix(in srgb, var(--cmg-light-primary) 18%, transparent), transparent 28%) !important;
+    opacity: 0.62 !important;
+  }
+
+  html[data-theme="light"] .pnp-program-experience .pnp-snapshot-card h3,
+  html[data-theme="light"] .pnp-program-experience .pnp-snapshot-card strong {
+    color: var(--cmg-light-ink) !important;
+    -webkit-text-fill-color: var(--cmg-light-ink) !important;
+  }
+
+  html[data-theme="light"] .pnp-program-experience .pnp-snapshot-card > .relative > div:last-child {
+    border-top-color: var(--cmg-light-border) !important;
+  }
+
+  html[data-theme="light"] .pnp-program-experience .pnp-snapshot-card > .relative > div:last-child p {
+    color: var(--cmg-light-muted) !important;
+    -webkit-text-fill-color: var(--cmg-light-muted) !important;
+  }
+
+  html[data-theme="light"] .pnp-program-experience .pnp-snapshot-card > .relative > div:last-child a {
+    color: var(--cmg-light-primary) !important;
+    -webkit-text-fill-color: var(--cmg-light-primary) !important;
+  }
+
+  html[data-theme="light"] .pnp-program-experience .pnp-snapshot-card .mt-1\.5 {
+    color: var(--cmg-light-muted) !important;
+    -webkit-text-fill-color: var(--cmg-light-muted) !important;
+  }
+
+  html[data-theme="light"] .pnp-program-experience .pnp-snapshot-card .pnp-status-badge {
+    border-color: color-mix(in srgb, var(--cmg-light-success) 32%, var(--cmg-light-border)) !important;
+    background: color-mix(in srgb, var(--cmg-light-success) 9%, var(--cmg-light-surface)) !important;
+    color: var(--cmg-light-success) !important;
+    -webkit-text-fill-color: var(--cmg-light-success) !important;
+  }
+
+  html[data-theme="light"] .pnp-program-experience .pnp-snapshot-card .pnp-status-badge > span {
+    background: var(--cmg-light-success) !important;
+  }
+}
+
 /* Shared navbar polish: keep the header refined and consistent across templates. */
 .site-header__nav-shell {
   background: linear-gradient(135deg, rgba(5, 8, 14, 0.97), rgba(14, 19, 30, 0.94) 58%, rgba(5, 8, 14, 0.97)) !important;

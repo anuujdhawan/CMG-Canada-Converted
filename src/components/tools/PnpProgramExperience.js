@@ -55,7 +55,7 @@ function getSnapshotStats(program) {
 
 function StatusBadge({ status, children }) {
   const stale = status === "stale";
-  return <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[0.62rem] font-extrabold uppercase tracking-[0.08em] ${stale ? "border-amber-400/30 bg-amber-400/10 text-amber-200" : "border-emerald-300/25 bg-emerald-300/10 text-emerald-100"}`}><span className={`h-1.5 w-1.5 rounded-full ${stale ? "bg-amber-300" : "bg-emerald-300"}`} aria-hidden="true" />{children}</span>;
+  return <span className={`pnp-status-badge inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[0.62rem] font-extrabold uppercase tracking-[0.08em] ${stale ? "border-amber-400/30 bg-amber-400/10 text-amber-200" : "border-emerald-300/25 bg-emerald-300/10 text-emerald-100"}`}><span className={`h-1.5 w-1.5 rounded-full ${stale ? "bg-amber-300" : "bg-emerald-300"}`} aria-hidden="true" />{children}</span>;
 }
 
 function sourceDate(source) {

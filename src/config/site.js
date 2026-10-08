@@ -7,7 +7,7 @@
 
 const brandName = "Commonwealth Migration Group Inc.";
 const supportEmail = "info@commonwealthmigration.ca";
-const phone = "+1 9429913999";
+const phone = "+1 942 991 3999";
 const phoneDigits = phone.replace(/[^\d]/g, "");
 
 export const site = {
