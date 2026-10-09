@@ -33,9 +33,8 @@ export const metadata = {
     keywords: site.meta.keywords,
   }),
   // Icons come from Next 16 file conventions in src/app/ (favicon.ico, icon.png
-  // and apple-icon.png), not from metadata.icons. Keep the social preview image
-  // separate from the square app icon so link previews have a useful landscape
-  // canvas.
+  // and apple-icon.png), not from metadata.icons. The default social preview
+  // intentionally uses the same square bird/chakra mark as the title-bar icon.
 };
 
 export const viewport = {

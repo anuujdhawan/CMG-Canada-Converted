@@ -32,6 +32,7 @@ const sourceMenuItems = getCmgMenu().map((top) => ({
         title: "Express Entry Draws",
         desc: "Track the latest invitation rounds, CRS cutoffs and program updates.",
         href: DRAW_PAGE_LINK.href,
+        ctaLabel: "See latest draws",
       }
     : top.groups[0]?.pages[0]
       ? {
@@ -47,6 +48,7 @@ const sourceMenuItems = getCmgMenu().map((top) => ({
         title: "PNP Draw Results",
         desc: "Compare provincial invitation rounds by province, stream and selection signal.",
         href: PNP_DRAWS_LINK.href,
+        ctaLabel: "Compare PNP draws",
       }
     : null,
 }));
@@ -87,6 +89,7 @@ const TOOLS_MENU_ITEM = {
     title: "CRS Calculator",
     desc: "See your Express Entry score in under two minutes.",
     href: "/tools/crs-calculator-canada",
+    ctaLabel: "Calculate your score",
   },
 };
 
@@ -99,7 +102,7 @@ const ABOUT_MENU_ITEM = {
       items: [
         { label: "About Us", href: "/about/about-commonwealth-migration" },
         { label: "Our Process", href: "/about/canada-immigration-consulting-process" },
-        { label: "Our Office", href: "/about/immigration-office-brampton-ontario" },
+        { label: "Brampton Immigration Office", href: "/about/immigration-office-brampton-ontario" },
       ],
     },
     {
@@ -116,6 +119,7 @@ const ABOUT_MENU_ITEM = {
     title: "Book a Consultation",
     desc: "Speak with a licensed consultant about your goal — at no cost.",
     href: site.ctas.primary.href,
+    ctaLabel: "Start your consultation",
   },
 };
 
@@ -140,7 +144,7 @@ const RESOURCES_MENU_ITEM = {
       { label: "Visitor Visas", href: "/blog?category=visitor-visas" },
     ] },
   ],
-  featured: { label: "Start with research", title: "Find the right Canadian pathway", desc: "Browse current guides, news and practical checklists before your consultation.", href: "/blog" },
+  featured: { label: "Start with research", title: "Find the right Canadian pathway", desc: "Browse current guides, news and practical checklists before your consultation.", href: "/blog", ctaLabel: "Explore your options" },
 };
 
 const navigationMenuItems = [
@@ -197,6 +201,7 @@ const rawNavigation = {
       { label: "Free Assessment", href: "/assessment/free-canada-immigration-assessment" },
     ] },
     { title: "Contact", links: [
+      { label: "Brampton immigration office", href: "/about/immigration-office-brampton-ontario" },
       { label: "Book consultation", href: site.ctas.primary.href },
       { label: site.email, href: site.emailHref },
       { label: site.phone, href: site.phoneHref },

@@ -78,10 +78,10 @@ export default function MobileMenu({ open, onClose }) {
         initial={false}
         animate={{ x: open ? 0 : "100%" }}
         transition={{ duration: 0.28, ease: EASE_OUT }}
-        className="cmg-mobile-menu absolute right-0 top-0 flex h-full w-[85vw] sm:w-[320px] flex-col shadow-dropdown"
+        className="cmg-mobile-menu absolute right-0 top-0 flex h-[100dvh] w-[85vw] flex-col overflow-hidden shadow-dropdown sm:w-[320px]"
       >
         {/* Header */}
-        <div className="px-5 py-4 border-b border-white/10 flex items-center justify-between">
+        <div className="shrink-0 px-5 py-4 border-b border-white/10 flex items-center justify-between">
           <div className="flex items-center">
             <Image
               src={site.logos.white}
@@ -101,7 +101,10 @@ export default function MobileMenu({ open, onClose }) {
         </div>
 
         {/* Nav links */}
-        <nav className="flex-1 overflow-y-auto p-3 space-y-0.5" aria-label="Mobile">
+        <nav
+          className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-3 space-y-0.5 [scrollbar-gutter:stable] [touch-action:pan-y] [-webkit-overflow-scrolling:touch]"
+          aria-label="Mobile"
+        >
           <Link
             href="/"
             onClick={onClose}
@@ -184,7 +187,7 @@ export default function MobileMenu({ open, onClose }) {
         </nav>
 
         {/* Bottom CTA */}
-        <div className="p-4 border-t border-line bg-accent-soft/40 space-y-2.5">
+        <div className="shrink-0 p-4 border-t border-line bg-accent-soft/40 space-y-2.5">
           <a
             href={site.emailHref}
             className="flex items-center justify-center gap-2 w-full py-3 rounded-full border-2 border-primary/20 text-primary text-sm font-semibold hover:bg-primary hover:text-white hover:border-primary transition-all"

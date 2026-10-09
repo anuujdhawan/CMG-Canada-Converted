@@ -32,12 +32,14 @@ export const site = {
     postal: "",
     country: "Canada 🇨🇦",
     full: "615, 2250 Bovaird Dr East, Brampton, Sandringham- Wellington, ON, Canada 🇨🇦",
+    mapsUrl: "https://www.google.com/maps/place/Commonwealth+Migration+Group+Brampton,+Canada/@43.7508147,-79.7393151,17z/data=!3m1!4b1!4m6!3m5!1s0x882b3d9a6c4122cb:0x2c2dca427aeb83e1!8m2!3d43.7508147!4d-79.7393151!16s%2Fg%2F11nvkrfkzy?hl=en&entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D",
   },
   sisterConcern: {
     name: "Commonwealth Migration Group",
     shortName: "CMG",
     address: "307 Business Atrium Building, Oud Metha, Dubai , UAE 🇦🇪",
     href: "https://www.cwmigrationgroup.com/",
+    mapsUrl: "https://www.google.com/maps/place/Commonwealth+Migration+Group/@25.244279,55.3094955,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f43202eff61c7:0x597a52926876d279!8m2!3d25.244279!4d55.3120704!16s%2Fg%2F11nvjs_vq7?entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D",
   },
   hours: "Monday - Friday, 9:00 am - 6:00 pm - Saturday 10:00 am - 4:00 pm (EST)",
   timezone: "Eastern Time (ET)",
@@ -79,8 +81,11 @@ export const site = {
     large: "/images/logo-large.png",
     white: "/images/CMG-LOGO.webp",
     footer: "/images/CMG-LOGO-FOOTER.webp",
-    favicon: "/images/icon.png",
-    og: "/images/og-default.png",
+    // Next serves the generated square bird/chakra mark from src/app/icon.png.
+    // Keep this path canonical so browser icons and shared-link previews use
+    // the same brand asset.
+    favicon: "/icon.png",
+    og: "/icon.png",
   },
 
   // ---- Social ---------------------------------------------------------
@@ -111,7 +116,9 @@ export const site = {
       "LMIA",
       "licensed RCIC",
     ],
-    ogImage: "/images/og-default.png",
+    ogImage: "/icon.png",
+    ogImageWidth: 192,
+    ogImageHeight: 192,
     locale: "en_CA",
   },
 

@@ -69,9 +69,20 @@ export function buildMetadata({
   const resolvedDescription = description || site.meta.defaultDescription;
   const pageTitle = normalizePageTitle(resolvedTitle);
   const url = absoluteUrl(path);
-  const imageConfig = typeof image === "string" ? { url: image } : image;
-  const imageUrl = absoluteUrl(imageConfig?.url || site.meta.ogImage);
+  const requestedImage = typeof image === "string" ? { url: image } : image;
+  const imageConfig = requestedImage?.url
+    ? requestedImage
+    : {
+        url: site.meta.ogImage,
+        width: site.meta.ogImageWidth,
+        height: site.meta.ogImageHeight,
+      };
+  const imageUrl = absoluteUrl(imageConfig.url);
   const imageAlt = imageConfig?.alt || site.name + " — Canadian immigration guidance";
+  // Page-specific article images predate the square brand preview and do not
+  // carry dimensions here, so preserve their existing 1912x1140 metadata.
+  const imageWidth = imageConfig.width || 1912;
+  const imageHeight = imageConfig.height || 1140;
 
   return {
     // Omit `title` entirely when no page title is given, so the root layout's
@@ -90,7 +101,7 @@ export function buildMetadata({
       description: resolvedDescription,
       url: url || undefined,
       ...(imageUrl && {
-        images: [{ url: imageUrl, width: 1912, height: 1140, alt: imageAlt }],
+        images: [{ url: imageUrl, width: imageWidth, height: imageHeight, alt: imageAlt }],
       }),
     },
     twitter: {

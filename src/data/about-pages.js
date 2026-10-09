@@ -2,6 +2,8 @@ import { site } from "@/config/site";
 
 const aboutPath = "/about/about-commonwealth-migration";
 const aboutRoot = `${site.url.replace(/\/$/, "")}${aboutPath}`;
+const bramptonOfficePath = "/about/immigration-office-brampton-ontario";
+const bramptonOfficeUrl = `${site.url.replace(/\/$/, "")}${bramptonOfficePath}`;
 const officialRepresentativeGuide = "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose/authorized.html";
 const ciccRegister = "https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx";
 // Direct link to this practice's own licensee record (verified 2026-09-24:
@@ -174,19 +176,20 @@ export const aboutPages = [
     ],
   },
   {
-    path: "/about/immigration-office-brampton-ontario",
-    h1: "Our Brampton Immigration Office",
-    title: "Immigration Office in Brampton, Ontario | Commonwealth Migration",
-    description: "Find Commonwealth Migration's Brampton, Ontario immigration office, contact details, appointment options and Canada-wide service information.",
-    keywords: ["immigration office Brampton", "immigration consultant Brampton Ontario", "Brampton RCIC office", "Canada immigration consultant office"],
-    priority: 0.8,
+    path: bramptonOfficePath,
+    h1: "Commonwealth Migration Group Brampton, Canada",
+    title: "Commonwealth Migration Group Brampton, Canada | Office",
+    description: "Visit Commonwealth Migration Group's Brampton, Canada office for licensed RCIC immigration guidance, contact details and appointment options.",
+    keywords: ["Commonwealth Migration Group Brampton Canada", "immigration office Brampton", "immigration consultant Brampton Ontario", "Brampton RCIC office", "Canada immigration consultant office"],
+    priority: 0.95,
+    lastModified: "2026-10-09",
     hero: {
-      lead: "Commonwealth Migration is a Brampton, Ontario immigration consultancy serving clients across Canada and internationally. Arrange an appointment by phone, email or online consultation and we will confirm the best way to discuss your matter.",
+      lead: "Commonwealth Migration Group Inc. is a CICC-regulated Canadian immigration consultancy based in Brampton, Canada. Arrange an appointment by phone, email or online consultation and we will confirm the best way to discuss your matter.",
     },
     contentBlocks: [
-      { type: "paragraph", text: "Our Brampton immigration office is the Canadian base for Commonwealth Migration. The team works with people in Brampton, the Greater Toronto Area, other parts of Canada and clients abroad who need a licensed RCIC-led review of a Canadian immigration matter." },
+      { type: "paragraph", text: "Commonwealth Migration Group Inc.'s Brampton, Canada office is the Canadian base for the practice. The team works with people in Brampton, the Greater Toronto Area, other parts of Canada and clients abroad who need a licensed RCIC-led review of a Canadian immigration matter." },
       { type: "table", rows: [
-        ["Office", "Commonwealth Migration Canada"],
+        ["Office", "Commonwealth Migration Group Inc."],
         ["Location", "Brampton, Ontario, Canada"],
         ["Service area", "Canada-wide and international clients"],
         ["Appointments", "Scheduled in-person, phone or video consultation"],
@@ -194,7 +197,7 @@ export const aboutPages = [
         ["Phone", site.phone],
         ["Hours", site.hours],
       ] },
-      { type: "heading", level: 2, text: "Where is our immigration office in Brampton?" },
+      { type: "heading", level: 2, text: "Where is the Commonwealth Migration Group office in Brampton?" },
       { type: "paragraph", text: `Commonwealth Migration is based in Brampton, Ontario. The current office contact details are ${site.address.full || "Brampton, Ontario, Canada"}. Because appointments and service arrangements can change, contact the team before travelling so we can confirm availability and the right meeting format for your matter.` },
       { type: "heading", level: 2, text: "Do we serve clients outside Brampton?" },
       { type: "paragraph", text: "Yes. An immigration matter does not need to be local to receive a careful review. Clients can begin remotely, share documents through the agreed secure channel and meet by phone or video. The Brampton office also works with clients applying from outside Canada, subject to the scope of the requested service and the representative's authorization." },
@@ -218,21 +221,25 @@ export const aboutPages = [
       ] },
     ],
     jsonLd: [
-      webPage("Our Brampton Immigration Office", "Find Commonwealth Migration's Brampton, Ontario immigration office, contact details, appointment options and Canada-wide service information.", "/about/immigration-office-brampton-ontario", { breadcrumb: breadcrumbs("Our Brampton Immigration Office", "/about/immigration-office-brampton-ontario") }),
+      webPage("Commonwealth Migration Group Brampton, Canada", "Visit Commonwealth Migration Group's Brampton, Canada office for licensed RCIC immigration guidance, contact details and appointment options.", bramptonOfficePath, { breadcrumb: breadcrumbs("Commonwealth Migration Group Brampton, Canada", bramptonOfficePath) }),
       {
         "@type": "ProfessionalService",
+        "@id": `${bramptonOfficeUrl}#local-business`,
         name: site.name,
-        url: site.url,
+        alternateName: "Commonwealth Migration Group Brampton, Canada",
+        url: bramptonOfficeUrl,
+        parentOrganization: { "@id": `${site.url}#organization` },
         telephone: site.phone,
         email: site.email,
         address: {
           "@type": "PostalAddress",
           streetAddress: site.address.line1,
-          addressLocality: site.address.city,
+          addressLocality: site.address.city.split(",")[0].trim() || "Brampton",
           addressRegion: site.address.region || "ON",
           postalCode: site.address.postal || undefined,
           addressCountry: "CA",
         },
+        hasMap: site.address.mapsUrl,
         areaServed: ["Brampton", "Ontario", "Canada"],
       },
       faqPage(officeFaqs),

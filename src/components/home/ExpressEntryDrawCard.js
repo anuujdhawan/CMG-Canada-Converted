@@ -139,7 +139,10 @@ export default function ExpressEntryDrawCard() {
 
       <div className="mt-auto flex flex-wrap items-baseline justify-between gap-x-3 gap-y-2 border-t border-[color-mix(in_srgb,var(--template-on-primary)_15%,transparent)] pt-[14px] text-[12px] leading-[1.35] text-[color-mix(in_srgb,var(--template-on-primary)_66%,transparent)] max-[480px]:mt-[10px] max-[480px]:pt-2 max-[480px]:text-[10.5px]">
         <span>Commonwealth Migration Group Inc</span>
-        <Link href={DRAW_PAGE_PATH} className="inline-flex items-center gap-1.5 font-bold text-[color-mix(in_srgb,var(--template-on-primary)_90%,transparent)] underline decoration-[color-mix(in_srgb,var(--template-on-primary)_34%,transparent)] underline-offset-4 transition-colors hover:text-[var(--cmg-template-primary-highlight)]">View all draws <ArrowUpRight width={16} height={16} aria-hidden="true" /></Link>
+        <Link href={DRAW_PAGE_PATH} className="hero-draw-card__cta">
+          <span>View all draws</span>
+          <span className="hero-draw-card__cta-icon" aria-hidden="true"><ArrowUpRight width={15} height={15} /></span>
+        </Link>
       </div>
     </HeroCardShell>
   );

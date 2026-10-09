@@ -86,7 +86,7 @@ const RELOCATED_MENU_CATEGORIES = ["Caregivers", "Immigrate from the UK"];
 function FeaturedMenuCard({ card, secondary = false, onClose }) {
   return (
     <div className={cn(
-      "flex min-w-0 flex-col rounded-xl p-6",
+      "featured-menu-card flex min-w-0 flex-col rounded-xl p-6",
       secondary
         ? "bg-[linear-gradient(145deg,var(--brand-primary),var(--brand-primary-dark))] shadow-[0_14px_32px_color-mix(in_srgb,var(--brand-primary)_22%,transparent)]"
         : "bg-navy"
@@ -99,9 +99,13 @@ function FeaturedMenuCard({ card, secondary = false, onClose }) {
       <Link
         href={card.href}
         onClick={onClose}
-        className="inline-flex items-center gap-1 text-xs font-bold text-white transition-colors hover:text-accent-soft"
+        className="featured-menu-card__cta"
+        aria-label={`${card.ctaLabel || "Explore this guide"}: ${card.title}`}
       >
-        Learn more <ArrowRight aria-hidden className="h-3 w-3" />
+        <span className="featured-menu-card__cta-label">{card.ctaLabel || "Explore this guide"}</span>
+        <span className="featured-menu-card__cta-arrow" aria-hidden="true">
+          <ArrowRight className="h-3.5 w-3.5" />
+        </span>
       </Link>
     </div>
   );

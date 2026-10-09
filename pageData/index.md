@@ -1,24 +1,24 @@
-# Immigration Consultant Brampton & Canada-wide Guidance
+# Canadian Immigration Guidance | Commonwealth Migration
 
 > **Source URL:** https://commonwealthmigration.ca
-> **Last modified:** 2026-08-19
+> **Last modified:** 2026-10-09
 > **Sitemap priority:** 1
 > **Status:** ✅ Fresh English rewrite | SEO/GEO/AEO reviewed
 
 ## SEO Metadata
 
-- **Title tag:** Immigration Consultant Brampton | Canada Immigration
-- **Meta description:** Looking for an immigration consultant in Brampton? Compare Express Entry, PNP, work, study and family routes with Canada-wide guidance and official sources.
-- **Meta keywords:** immigration consultant Brampton, Canada immigration consultant, Express Entry consultant, PNP consultant Canada
+- **Title tag:** Commonwealth Migration Canada | Immigration Guidance
+- **Meta description:** Plan Express Entry, PNP, work, study and family immigration with Commonwealth Migration's licensed RCIC team serving clients across Canada.
+- **Meta keywords:** Canada immigration consultant, Express Entry consultant, PNP consultant Canada, licensed RCIC Canada
 - **Canonical URL:** https://commonwealthmigration.ca
-- **OG title:** Immigration Consultant Brampton | Canada Immigration
-- **OG description:** Compare Express Entry, PNP, work, study and family routes with Canada-wide guidance and official sources.
+- **OG title:** Commonwealth Migration Canada | Immigration Guidance
+- **OG description:** Plan Express Entry, PNP, work, study and family immigration with Commonwealth Migration's licensed RCIC team serving clients across Canada.
 - **Robots:** index, follow
 
 ## Heading Outline
 
-- # Immigration Consultant In Brampton & Canada-wide Guidance
-- ## Start with a Canadian immigration plan in Brampton
+- # Canadian Immigration Guidance from Commonwealth Migration
+- ## Start with a Canadian immigration plan
 - ## What a careful review should cover
 - ## Use official information as the final check
 - ## Research before you retain
@@ -30,9 +30,9 @@
 
 ## Hero Section
 
-# Immigration Consultant Brampton And Canada-wide Guidance
+# Canadian Immigration Guidance from Commonwealth Migration
 
-Looking for an immigration consultant in Brampton? Immigration decisions get easier when the program, evidence, deadline and next step are visible in one plan.
+Immigration decisions get easier when the program, evidence, deadline and next step are visible in one plan. Commonwealth Migration's licensed RCIC team serves clients across Canada, with its Canadian base in Brampton.
 
 - eligibility and admissibility
 - documents and timing
@@ -40,11 +40,11 @@ Looking for an immigration consultant in Brampton? Immigration decisions get eas
 
 ## Page Content
 
-## Start with a Canadian immigration plan in Brampton
+## Start with a Canadian immigration plan
 
 
 
-Looking for an immigration consultant in Brampton? Start by connecting your goal, evidence, deadline and next step in one Canadian immigration plan.
+Start by connecting your goal, evidence, deadline and next step in one Canadian immigration plan. Our [Brampton immigration office](/about/immigration-office-brampton-ontario) is the Canadian base for scheduled in-person, phone and video consultations.
 
 
 

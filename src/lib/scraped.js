@@ -43,7 +43,10 @@ function splitSections(raw) {
 function parseKeyValueList(text) {
   const out = {};
   if (!text) return out;
-  const keyRe = /[-*]\s*\*\*([^*]+):\*\*\s*(.*)$/g;
+  // Metadata entries are one key/value pair per line. The multiline flag is
+  // required here; without it `$` only matched the end of the whole section,
+  // so page-specific titles and descriptions silently fell back to defaults.
+  const keyRe = /[-*]\s*\*\*([^*]+):\*\*\s*(.*)$/gm;
   let match;
   while ((match = keyRe.exec(text))) out[match[1].trim()] = match[2].trim();
   return out;

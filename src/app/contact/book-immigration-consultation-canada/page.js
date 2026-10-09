@@ -1,7 +1,9 @@
 import { buildMetadata, serializeJsonLd } from "@/lib/seo";
+import { ArrowUpRight, MapPin } from "lucide-react";
 import ReferenceServicePage from "@/components/home/ReferenceServicePage";
 import { pageStructuredData } from "@/components/templates/ContentPage";
 import ConsultationForm from "@/components/forms/ConsultationForm";
+import { site } from "@/config/site";
 
 const pagePath = "/contact/book-immigration-consultation-canada";
 const page = {
@@ -35,7 +37,30 @@ export const metadata = buildMetadata({
 export default function BookImmigrationConsultationPage() {
   return (
     <>
-      <ReferenceServicePage page={page}><ConsultationForm /></ReferenceServicePage>
+      <ReferenceServicePage page={page}>
+        <div className="grid gap-4">
+          <aside className="grid gap-3 rounded-[18px] border border-[var(--template-border)] bg-[var(--template-surface)] p-4 shadow-[0_8px_24px_color-mix(in_srgb,var(--template-ink)_5%,transparent)]" aria-label="Brampton office location">
+            <div className="flex items-start gap-3">
+              <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-[12px] bg-[color-mix(in_srgb,var(--template-primary)_12%,transparent)] text-[var(--template-primary)]">
+                <MapPin size={20} aria-hidden="true" />
+              </span>
+              <div className="grid gap-1">
+                <h3 className="m-0 text-[16px] font-extrabold text-[var(--template-ink)]">Visit our Brampton office</h3>
+                <p className="m-0 text-[13px] leading-[1.6] text-[var(--template-muted)]">{site.address.full}</p>
+              </div>
+            </div>
+            <a
+              href={site.address.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 self-start text-[13px] font-extrabold text-[var(--template-primary)] no-underline transition-colors hover:text-[var(--template-accent)]"
+            >
+              View our location on Google Maps <ArrowUpRight size={16} aria-hidden="true" />
+            </a>
+          </aside>
+          <ConsultationForm />
+        </div>
+      </ReferenceServicePage>
       {pageStructuredData(page).map((obj, index) => (
         <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(obj) }} />
       ))}

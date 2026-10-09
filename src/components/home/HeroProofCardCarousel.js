@@ -3,19 +3,22 @@
 import { useEffect, useState } from "react";
 import ExpressEntryDrawCard from "./ExpressEntryDrawCard";
 import HeroProofCard from "./HeroProofCard";
+import PnpDrawCard from "./PnpDrawCard";
 
 const AUTOPLAY_MS = 5000;
+const CARDS = [HeroProofCard, ExpressEntryDrawCard, PnpDrawCard];
+const CARD_LABELS = ["Track record", "Latest Express Entry draw", "PNP highlights"];
 
 export default function HeroProofCardCarousel({ ariaLabel = "Commonwealth Migration Group highlights" }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const slideCount = 2;
+  const slideCount = CARDS.length;
 
   useEffect(() => {
     const timer = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % slideCount);
     }, AUTOPLAY_MS);
     return () => window.clearInterval(timer);
-  }, []);
+  }, [slideCount]);
 
   return (
     <div
@@ -25,7 +28,7 @@ export default function HeroProofCardCarousel({ ariaLabel = "Commonwealth Migrat
       aria-label={ariaLabel}
     >
       <div className="absolute inset-0 max-[880px]:static max-[880px]:grid" aria-live="polite">
-        {[HeroProofCard, ExpressEntryDrawCard].map((Card, index) => (
+        {CARDS.map((Card, index) => (
           <div
             className={`absolute inset-0 max-[880px]:static max-[880px]:[grid-area:1/1] transition-transform duration-[850ms] ease-[cubic-bezier(.2,.8,.2,1)] ${index === activeIndex ? "z-[1] translate-x-0 opacity-100" : "pointer-events-none translate-x-3 opacity-0"}`}
             aria-hidden={index !== activeIndex}
@@ -36,7 +39,7 @@ export default function HeroProofCardCarousel({ ariaLabel = "Commonwealth Migrat
         ))}
       </div>
       <div className="absolute right-0 bottom-[-27px] z-[2] flex items-center gap-2 max-[880px]:static max-[880px]:justify-end max-[880px]:pt-3" aria-label="Choose hero card">
-        {["Track record", "Latest draw"].map((label, index) => (
+        {CARD_LABELS.map((label, index) => (
           <button
             type="button"
             key={label}

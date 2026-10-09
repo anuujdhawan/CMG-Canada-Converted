@@ -136,7 +136,7 @@ export default function Footer() {
               <p className="site-footer__locations-label m-[0_0_.1rem] text-(--brand-navy-dark) text-[.6875rem] font-extrabold tracking-[.14em] leading-[1.2] uppercase">Our offices</p>
               <div className="site-footer__locations grid gap-2">
                 <a
-                  href={`https://maps.google.com/?q=${encodeURIComponent(site.address.full)}`}
+                  href={site.address.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="site-footer__office site-footer__office--primary grid gap-[.45rem] rounded-[.8rem] border border-l-[3px] border-line border-l-primary bg-[color-mix(in_srgb,#fff_72%,var(--brand-surface))] text-muted px-3 py-[.7rem] text-[.72rem] leading-[1.45] no-underline transition-[border-color,background,transform] duration-180 ease-in-out hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--brand-primary)_32%,var(--brand-border))] hover:bg-[#ffffff]"
@@ -156,7 +156,7 @@ export default function Footer() {
                   </span>
                 </a>
                 <a
-                  href={site.sisterConcern.href}
+                  href={site.sisterConcern.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="site-footer__office site-footer__office--sister grid gap-[.45rem] rounded-[.8rem] border border-l-[3px] border-line border-l-(--brand-gold) bg-[color-mix(in_srgb,#fff_72%,var(--brand-surface))] text-muted px-3 py-[.7rem] text-[.72rem] leading-[1.45] no-underline transition-[border-color,background,transform] duration-180 ease-in-out hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--brand-primary)_32%,var(--brand-border))] hover:bg-[#ffffff]"
