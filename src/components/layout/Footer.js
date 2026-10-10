@@ -155,7 +155,7 @@ export default function Footer() {
                     {[site.address.city, site.address.region, site.address.postal, site.address.country].filter(Boolean).join(", ")}
                   </span>
                 </a>
-                <a
+                {/* <a
                   href={site.sisterConcern.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -171,7 +171,7 @@ export default function Footer() {
                     </span>
                   </span>
                   <span className="site-footer__office-address grid gap-[.1rem] pl-[2.2rem]">{site.sisterConcern.address}</span>
-                </a>
+                </a>  */}
                 <div className="site-footer__office site-footer__contact-card grid min-h-32 items-center gap-[.2rem] rounded-[.8rem] border border-l-[3px] border-line border-l-primary bg-[color-mix(in_srgb,#fff_72%,var(--brand-surface))] px-3 py-[.7rem] text-muted transition-[border-color,background,transform] duration-180 ease-in-out hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--brand-primary)_32%,var(--brand-border))] hover:bg-[#ffffff]">
                   <a href={site.phoneHref} className="site-footer__contact-row flex items-center gap-[.6rem] text-muted text-[.78rem] leading-[1.45] no-underline transition-colors duration-180 ease-in-out hover:text-primary-dark">
                     <span className="site-footer__contact-icon inline-flex size-[1.65rem] shrink-0 items-center justify-center rounded-[.55rem] border border-line bg-white text-primary">
