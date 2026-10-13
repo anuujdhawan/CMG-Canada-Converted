@@ -32,7 +32,7 @@ function animateCount(element, reduced) {
 }
 
 /**
- * Scroll-reveal + count-up + hero parallax for every `.cmg-template-home` page.
+ * Scroll-reveal + count-up for every `.cmg-template-home` page.
  *
  * This effect used to collect its targets exactly once, on mount. That works on
  * a first load, but not after a client-side navigation: React swaps in a fresh
@@ -49,10 +49,11 @@ function animateCount(element, reduced) {
 export default function TemplateMotion() {
   useEffect(() => {
     const reduced = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-    const heroBindings = [];
     let frame = 0;
+    const root = document.querySelector(".cmg-template-home");
+    if (!root) return undefined;
 
-    const query = (selector) => [...document.querySelectorAll(`.cmg-template-home ${selector}`)];
+    const query = (selector) => [...root.querySelectorAll(selector)];
     const revealTargets = () => query(".reveal:not(.in)");
     const countTargets = () => query("[data-count]:not([data-counted])");
 
@@ -82,39 +83,6 @@ export default function TemplateMotion() {
         { threshold: 0.7 }
       );
 
-    /**
-     * The hero element is replaced on navigation too, so the pointer listeners
-     * have to be re-attached — and only once per root, or every scan would pile
-     * another pair on top of the existing ones.
-     */
-    const bindHeroes = () => {
-      document.querySelectorAll(".cmg-template-home").forEach((root) => {
-        if (root.dataset.heroBound === "true") return;
-        const hero = root.querySelector(".hero");
-        if (!hero) return;
-
-        root.dataset.heroBound = "true";
-        const onMove = (event) => {
-          const bounds = hero.getBoundingClientRect();
-          const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 16;
-          const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 16;
-          root.style.setProperty("--px", `${x}px`);
-          root.style.setProperty("--py", `${y}px`);
-        };
-        const onLeave = () => {
-          root.style.setProperty("--px", "0px");
-          root.style.setProperty("--py", "0px");
-        };
-
-        hero.addEventListener("pointermove", onMove, { passive: true });
-        hero.addEventListener("pointerleave", onLeave, { passive: true });
-        heroBindings.push(() => {
-          hero.removeEventListener("pointermove", onMove);
-          hero.removeEventListener("pointerleave", onLeave);
-        });
-      });
-    };
-
     const scan = () => {
       frame = 0;
       const reveals = revealTargets();
@@ -123,7 +91,6 @@ export default function TemplateMotion() {
       else reveals.forEach((element) => element.classList.add("in"));
       if (countObserver) counts.forEach((element) => countObserver.observe(element));
       else counts.forEach((element) => animateCount(element, true));
-      bindHeroes();
     };
 
     // Coalesce bursts of mutations into one scan per frame.
@@ -135,14 +102,13 @@ export default function TemplateMotion() {
     scan();
 
     const mutations = new MutationObserver(scheduleScan);
-    mutations.observe(document.body, { childList: true, subtree: true });
+    mutations.observe(root, { childList: true, subtree: true });
 
     return () => {
       mutations.disconnect();
       if (frame) window.cancelAnimationFrame(frame);
       revealObserver?.disconnect();
       countObserver?.disconnect();
-      heroBindings.forEach((unbind) => unbind());
     };
   }, []);
 

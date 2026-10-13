@@ -62,7 +62,8 @@ const templateColors = {
 
 const templateButtons = {
   nav: {
-    background: "#ff2746",
+    // Keep white CTA text above the WCAG AA contrast threshold in the header.
+    background: "#b3122a",
     text: "#ffffff",
     hoverBackground: "#ffffff",
     hoverText: "#a20b28",

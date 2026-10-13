@@ -205,7 +205,7 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Rural Community Immigration Pilot", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-community-immigration-pilot.html" },
+    { label: "IRCC — Rural Community Immigration Pilot", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration.html" },
     { label: "IRCC — Check processing times", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html" },
   ],
 };

@@ -17,7 +17,7 @@ export default function WhatsAppBubble() {
         <Image
           className="cmg-whatsapp-bubble-svg block w-full h-full"
           src="/images/whatsapp-red.svg"
-          alt="Chat on WhatsApp"
+          alt=""
           width={256}
           height={256}
           draggable={false}

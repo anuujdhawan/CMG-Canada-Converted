@@ -31,7 +31,7 @@ export default function HeroProofCardCarousel({ ariaLabel = "Commonwealth Migrat
         {CARDS.map((Card, index) => (
           <div
             className={`absolute inset-0 max-[880px]:static max-[880px]:[grid-area:1/1] transition-transform duration-[850ms] ease-[cubic-bezier(.2,.8,.2,1)] ${index === activeIndex ? "z-[1] translate-x-0 opacity-100" : "pointer-events-none translate-x-3 opacity-0"}`}
-            aria-hidden={index !== activeIndex}
+            inert={index !== activeIndex}
             key={Card.name}
           >
             <Card />
@@ -46,8 +46,13 @@ export default function HeroProofCardCarousel({ ariaLabel = "Commonwealth Migrat
             aria-label={`Show ${label}`}
             aria-current={index === activeIndex ? "true" : undefined}
             onClick={() => setActiveIndex(index)}
-            className={`h-2 rounded-full transition-[width,background] duration-300 ${index === activeIndex ? "w-7 bg-[var(--cmg-template-primary-bright)]" : "w-2 bg-[color-mix(in_srgb,var(--template-on-primary)_50%,transparent)] hover:bg-[var(--template-on-primary)]"}`}
-          />
+            className="relative flex h-11 w-11 items-center justify-center rounded-full p-0"
+          >
+            <span
+              aria-hidden="true"
+              className={`block rounded-full transition-[width,background] duration-300 ${index === activeIndex ? "h-2 w-7 bg-[var(--cmg-template-primary-bright)]" : "h-2 w-2 bg-[color-mix(in_srgb,var(--template-on-primary)_50%,transparent)] hover:bg-[var(--template-on-primary)]"}`}
+            />
+          </button>
         ))}
       </div>
     </div>

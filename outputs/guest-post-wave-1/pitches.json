@@ -1,0 +1,92 @@
+[
+  {
+    "id": "migrantiq",
+    "platform": "MigrantIQ",
+    "to": "editorial@migrantiq.com",
+    "subject": "Guest post pitch — India→Canada work permit & PR timeline guide (sourced, ~1,800 words)",
+    "offering": "India→Canada corridor guide",
+    "target_url": "https://commonwealthmigration.ca/work-and-study/canada-work-permit-overview",
+    "anchor": "Canada work permit overview",
+    "body": "Hi MigrantIQ editors,\n\nI've been reading your corridor guides — the sourced, cost-first approach is exactly what this space needs. Most \"move to Canada\" content skips the timelines and the official links.\n\nI'd like to pitch one: \"Moving from India to Canada in 2026: the work-permit to PR timeline, with every step sourced.\" It walks through the permit streams, the realistic processing windows, and the points pathways that follow — every fee and deadline linked to IRCC rather than quoted from memory. Corridor: India→Canada, with a short section for other South Asian applicants.\n\nHappy to send the full draft as a Google Doc with sources inline, plus a bio and photo.\n\nThanks,\n{sender_name}"
+  },
+  {
+    "id": "canadian-immigrant",
+    "platform": "Canadian Immigrant",
+    "to": "editor@canadianimmigrant.ca",
+    "subject": "Pitch — a 2026 family-sponsorship timeline explainer for your readers",
+    "offering": "family sponsorship explainer",
+    "target_url": "https://commonwealthmigration.ca/sponsor/family-sponsorship-overview-all-categories",
+    "anchor": "family sponsorship overview",
+    "body": "Hi Baisakhi,\n\nCanadian Immigrant is one of the few outlets that treats settlement as a practical problem rather than a headline, so this feels like a natural fit.\n\nPitch: \"Bringing family to Canada in 2026: what the sponsorship timelines actually look like.\" It sets the spousal, parent/grandparent and dependent-child routes side by side — who qualifies, what the current wait looks like, and the documents families get caught out by. Plain language, no legal advice, official sources linked.\n\nI can send a draft this week. Bio and headshot available on acceptance.\n\nThanks,\n{sender_name}"
+  },
+  {
+    "id": "the-pie-news",
+    "platform": "The PIE News",
+    "to": "editorial@thepienews.com",
+    "subject": "Feature pitch — what changed for students planning Canada in 2026",
+    "offering": "study-permit feature",
+    "target_url": "https://commonwealthmigration.ca/work-and-study/canada-study-permit",
+    "anchor": "Canada study permit",
+    "body": "Hi PIE editorial team,\n\nYour coverage of study-destination policy shifts is the reference point for anyone advising students, so I'd like to pitch a piece in that lane.\n\n\"What changed for students planning Canada in 2026 — and what the study permit actually requires.\" It maps the current requirements, the proof-of-funds thresholds, and the post-study work pathway that students and their advisers plan around, with official sources linked. Aimed at your recruiter/institution readership rather than prospective students.\n\nHappy to send an outline first if that's easier.\n\nThanks,\n{sender_name}"
+  },
+  {
+    "id": "lmic-cimt",
+    "platform": "LMIC-CIMT",
+    "to": "communications@lmic-cimt.ca",
+    "subject": "Guest blog idea — using labour market information before arrival (1,200 words)",
+    "offering": "LMI guest blog",
+    "target_url": "https://commonwealthmigration.ca/work-and-study/lmia-and-employer-services-overview",
+    "anchor": "LMIA and employer services overview",
+    "body": "Hi LMIC team,\n\nYour point that LMI is only useful if it reaches people at the moment they're deciding is the thread I'd like to pull on.\n\nIdea: \"The information handoff: why newcomers need labour market information before they land, not after.\" It looks at how LMI is produced and shared, where the handoff to arriving workers breaks down, and what a clearer pathway could look like — Canadian examples, written for your engaged non-expert reader.\n\nI can send it as a Word document with a short bio and headshot.\n\nThanks,\n{sender_name}"
+  },
+  {
+    "id": "immigration-monitor",
+    "platform": "Immigration Monitor",
+    "to": "editor@immigrationmonitor.com",
+    "subject": "Explainer pitch — Canada's procedural fairness letter process (neutral, fully sourced)",
+    "offering": "neutral procedural explainer",
+    "target_url": "https://commonwealthmigration.ca/inadmissibility-and-appeals/refusal-and-pfl-response",
+    "anchor": "refusal and PFL response",
+    "body": "Hi Alex,\n\nYour neutrality standard is the reason I'm pitching here rather than somewhere looser — this is a procedural explainer, not advice.\n\nPitch: \"The procedural fairness letter: how Canada's refusal-response process works.\" It describes what a procedural fairness letter is, when IRCC issues one, what the process generally requires of an applicant, and how it fits the wider refusal framework — no case interpretation, no eligibility opinions, every statement tied to official sources.\n\nHappy to follow your structure and citation requirements exactly.\n\nThanks,\n{sender_name}"
+  },
+  {
+    "id": "global-mobility-lawyer",
+    "platform": "The Global Mobility Lawyer",
+    "to": "john.vdld@theglobalmobilitylawyer.com",
+    "subject": "Pitch — Global Talent Stream: what mobility teams should know",
+    "offering": "thought-leadership piece",
+    "target_url": "https://commonwealthmigration.ca/work-and-study/global-talent-stream",
+    "anchor": "Global Talent Stream",
+    "body": "Hi John,\n\nAbstract for a thought-leadership piece:\n\nCanada's Global Talent Stream offers a two-week processing commitment for employers hiring in designated tech occupations — but eligibility, the Labour Market Benefits Plan and the referral requirement trip up teams who treat it as a faster LMIA. This piece sets out how the stream is structured, where employers most often misjudge the requirements, and how mobility teams can plan around the two-week clock. Written for in-house counsel and mobility managers, not as a service promotion.\n\nI can follow with the full draft in Word, plus a one-sentence bio and headshot.\n\nThanks,\n{sender_name}"
+  },
+  {
+    "id": "the-migrationist",
+    "platform": "The Migrationist",
+    "to": "themigrationist.net@gmail.com",
+    "subject": "Pitch — Express Entry as a labour-market instrument (policy analysis, ~1,200 words)",
+    "offering": "policy analysis",
+    "target_url": "https://commonwealthmigration.ca/immigrate/express-entry",
+    "anchor": "Express Entry guide",
+    "body": "Hi editors,\n\nYour note that you don't take \"how to\" pieces is exactly why this pitch is a policy analysis rather than a guide.\n\nPitch: \"Express Entry as a labour-market instrument: what the draw data actually shows.\" It examines how the selection categories and draw patterns track labour-market demand rather than applicant merit, what that means for the composition of arrivals, and the tensions it creates for a system that markets itself as merit-based. Sourced to IRCC data and published analysis; no advice.\n\nBio and previous writing available on request.\n\nThanks,\n{sender_name}"
+  },
+  {
+    "id": "refugee-research-online",
+    "platform": "Refugee Research Online",
+    "to": "refugeeresearchonline@gmail.com",
+    "subject": "Submission — the information gap facing refugee claimants in Canada (1,200 words)",
+    "offering": "evidence-led essay",
+    "target_url": "https://commonwealthmigration.ca/immigrate/humanitarian-and-compassionate",
+    "anchor": "Humanitarian and Compassionate applications",
+    "body": "Hi editors,\n\nYour willingness to publish uninvited submissions from under-represented contributors is the reason I'm writing to you directly.\n\nI'd like to submit: \"Separating official requirements from online myth: the information gap facing refugee claimants in Canada.\" It examines how claimants encounter conflicting, outdated or simply wrong information about the Canadian process, what that costs them in avoidable errors, and how public-interest information channels could close the gap. Evidence-led, no organisational promotion, and I'll declare affiliations.\n\nWord document with a short bio and image to follow.\n\nThanks,\n{sender_name}"
+  },
+  {
+    "id": "doing-sociology",
+    "platform": "Doing Sociology",
+    "to": "doingsociology2020@gmail.com",
+    "subject": "Submission — the sociology of migration information inequality (1,000 words)",
+    "offering": "sociology essay",
+    "target_url": "https://commonwealthmigration.ca/citizenship/adult-grant-of-citizenship",
+    "anchor": "adult grant of Canadian citizenship",
+    "body": "Hi editors,\n\n\"Migration\" is one of your listed themes and I have a piece that sits squarely in it, with a sociological rather than a policy frame.\n\n\"Information inequality and the migrant experience: who gets to know the rules, and when.\" It argues that access to reliable settlement information is itself a form of social stratification — patterned by class, language and network — and that this shapes outcomes long before any formal eligibility test applies. APA references, endnotes, Word file, two-line bio-note and keywords to follow.\n\nThanks,\n{sender_name}"
+  }
+]

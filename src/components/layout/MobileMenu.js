@@ -9,19 +9,15 @@ import { navigation } from "@/config/navigation";
 import { site } from "@/config/site";
 import { cn, slugify } from "@/lib/utils";
 import { isActiveNavItem } from "@/lib/navActive";
-import { motion } from "framer-motion";
-import { EASE_OUT } from "@/lib/motion";
 
 /**
  * Slide-over mobile navigation in the source sheet style:
  * red mark header, accordion groups, phone + red CTA footer.
  *
- * The drawer is always mounted. It used to be mounted only while `mobileOpen`
- * was true, which removed every navigation link from the mobile-rendered HTML
- * — and Googlebot crawls as a smartphone, so the site's entire internal link
- * graph was missing from the version of the page Google actually renders.
- * It now slides off-canvas when closed and is marked `inert` so it stays out
- * of the tab order and the accessibility tree.
+ * The drawer is loaded only after the visitor opens it. The desktop navigation
+ * remains in the initial HTML at every viewport, so deep links stay crawlable
+ * without paying for a second copy of the entire navigation tree on first
+ * paint.
  */
 export default function MobileMenu({ open, onClose }) {
   const [expanded, setExpanded] = useState(null);
@@ -53,16 +49,11 @@ export default function MobileMenu({ open, onClose }) {
       role="dialog"
       aria-modal="true"
       aria-label="Mobile menu"
-      aria-hidden={!open}
-      inert={!open}
     >
-      {/* Backdrop.
-          The drawer stays mounted so its nav links survive in the crawled
-          HTML, so the scrim has to be faded out explicitly. `inert` and
-          `pointer-events-none` only stop interaction — they do not stop the
-          element painting. Left visible it dimmed the entire page by 72% at
-          every width below 1120px, which made tablet and phone layouts look
-          far darker than the desktop one. */}
+      {/* Backdrop. The drawer is mounted only while open, but the scrim still
+          fades explicitly so the page is not dimmed during the transition.
+          `inert` and `pointer-events-none` only stop interaction — they do not
+          stop the element painting. */}
       <button
         type="button"
         aria-label="Close menu"
@@ -74,11 +65,11 @@ export default function MobileMenu({ open, onClose }) {
       />
 
       {/* Panel */}
-      <motion.div
-        initial={false}
-        animate={{ x: open ? 0 : "100%" }}
-        transition={{ duration: 0.28, ease: EASE_OUT }}
-        className="cmg-mobile-menu absolute right-0 top-0 flex h-[100dvh] w-[85vw] flex-col overflow-hidden shadow-dropdown sm:w-[320px]"
+      <div
+        className={cn(
+          "cmg-mobile-menu absolute right-0 top-0 flex h-[100dvh] w-[85vw] flex-col overflow-hidden shadow-dropdown transition-transform duration-300 ease-out sm:w-[320px]",
+          open ? "translate-x-0" : "translate-x-full"
+        )}
       >
         {/* Header */}
         <div className="shrink-0 px-5 py-4 border-b border-white/10 flex items-center justify-between">
@@ -152,11 +143,11 @@ export default function MobileMenu({ open, onClose }) {
                     className={cn("h-4 w-4 text-muted transition-transform duration-200", isOpen && "rotate-180")}
                   />
                 </button>
-                {/* Kept mounted while collapsed: these are the real page links,
-                    and unmounting them removed them from the crawled HTML. */}
+                {/* Keep the submenu mounted while collapsed so expanding it is
+                    a simple state change; `inert` keeps its links out of the
+                    tab order until the group is opened. */}
                 <div
                   id={`mobile-${slugify(item.label)}`}
-                  aria-hidden={!isOpen}
                   inert={!isOpen}
                   className={cn(
                     "ml-3 space-y-0.5 border-l-2 border-primary/10 pl-3 overflow-hidden transition-[max-height,opacity,padding] duration-200 ease-out",
@@ -203,7 +194,7 @@ export default function MobileMenu({ open, onClose }) {
             {site.ctas.primary.label}
           </Link>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

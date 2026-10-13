@@ -173,7 +173,11 @@ add_source(doc, "Government of Quebec, Settle and integrate in Quebec", "https:/
 add_source(doc, "Government of Canada, Find a job in Canada as a newcomer", "https://www.jobbank.gc.ca/trouverunemploi/nouveaux-arrivants", "28 September 2026")
 
 doc.add_paragraph("Author bio", style="Heading 1")
-add_body(doc, "Anooj Dhawan is a content and outreach professional working with Commonwealth Migration Group Inc. He supports communications and editorial partnerships relating to newcomer and relocation information. His work focuses on practical, source-led writing for people making work, business, and settlement decisions in Canada.")
+bio = doc.add_paragraph(style="Normal")
+bio.paragraph_format.space_after = Pt(8)
+bio.add_run("Anooj Dhawan is a content and outreach professional working with Commonwealth Migration Group Inc. He supports communications and editorial partnerships relating to newcomer and relocation information. His work focuses on practical, source-led writing for people making work, business, and settlement decisions in Canada. For related reader guidance, see ")
+add_hyperlink(bio, "Canada work permit information", "https://commonwealthmigration.ca/work-and-study/canada-work-permit-overview")
+bio.add_run(".")
 
 footer = section.footer.paragraphs[0]
 footer.alignment = WD_ALIGN_PARAGRAPH.CENTER

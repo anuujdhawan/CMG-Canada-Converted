@@ -1,19 +1,22 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Menu, ChevronDown, AlertTriangle, ArrowRight } from "lucide-react";
 import { navigation } from "@/config/navigation";
 import { site } from "@/config/site";
 import { cn, slugify } from "@/lib/utils";
 import { isActiveNavItem } from "@/lib/navActive";
-import { EASE_OUT, DURATION } from "@/lib/motion";
 import { useScrolled } from "@/hooks/useScrolled";
-import MobileMenu from "./MobileMenu";
 import ThemeToggle from "./ThemeToggle";
+
+// The mobile drawer duplicates the full navigation tree. Keep it out of the
+// desktop DOM and client bundle until a visitor actually opens it; the desktop
+// navigation still provides the crawlable internal-link graph in the HTML.
+const MobileMenu = dynamic(() => import("./MobileMenu"), { ssr: false });
 
 /* ─── Logo lockup (CMG wordmark) ──────────────────────────────────── */
 function BrandLogo() {
@@ -52,24 +55,22 @@ function BrandLogo() {
  */
 function DropdownPanel({ children, className, id, open }) {
   return (
-    <motion.div
+    <div
       id={id}
-      initial={false}
-      animate={{ opacity: open ? 1 : 0, y: open ? 0 : -6, scale: open ? 1 : 0.97 }}
-      transition={{ duration: 0.18, ease: EASE_OUT }}
-      aria-hidden={!open}
       inert={!open}
       style={{ pointerEvents: open ? "auto" : "none" }}
       className={cn(
         "site-header__dropdown-panel absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white rounded-2xl p-4",
         "border border-line shadow-[0_20px_60px_color-mix(in_srgb,var(--brand-navy)_12%,transparent),0_4px_16px_color-mix(in_srgb,var(--brand-navy)_5%,transparent)]",
         "max-h-[calc(100vh-120px)] overflow-y-auto",
+        "transition-[opacity,transform] duration-180 ease-out",
+        open ? "translate-y-0 scale-100 opacity-100" : "-translate-y-1.5 scale-[.97] opacity-0",
         className
       )}
     >
       <div className="absolute top-0 left-6 right-6 h-0.5 bg-primary rounded-full" />
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -322,10 +323,9 @@ export default function Header() {
 
   return (
     <>
-      <motion.header
+      <header
         className="site-header fixed top-0 inset-x-0"
         style={{ zIndex: 200 }}
-        transition={{ duration: DURATION.hover, ease: EASE_OUT }}
       >
         {/* Utility strip */}
         <div className="site-header__utility-strip">
@@ -418,12 +418,12 @@ export default function Header() {
             </div>
           </div>
         </div>
-      </motion.header>
+      </header>
 
-      {/* Always mounted so the mobile-rendered HTML (Googlebot crawls as a
-          smartphone) contains the full navigation. Closed state is an
-          off-canvas panel with pointer-events disabled — see MobileMenu. */}
-      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
+      {/* Load the mobile drawer on demand. The desktop navigation remains in
+          the initial HTML at every viewport, preserving crawlable links
+          without duplicating the full mobile tree in the initial DOM. */}
+      {mobileOpen && <MobileMenu open onClose={() => setMobileOpen(false)} />}
     </>
   );
 }

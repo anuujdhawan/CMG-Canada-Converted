@@ -813,6 +813,7 @@ html[data-theme="dark"] .site-footer__disclaimer strong {
   to { opacity: 1; transform: translateY(0); }
 }
 .cmg-template-home .hero-background-carousel .cmg-hero-carousel__wash { background: linear-gradient(90deg, color-mix(in srgb, var(--cmg-template-deep-surface) 58%, transparent) 0%, color-mix(in srgb, var(--cmg-template-deep-surface) 22%, transparent) 48%, color-mix(in srgb, var(--cmg-template-deep-surface) 6%, transparent) 100%), linear-gradient(180deg, color-mix(in srgb, var(--cmg-template-deep-surface) 6%, transparent) 0%, transparent 58%, color-mix(in srgb, var(--cmg-template-deep-surface) 28%, transparent) 100%); }
+.cmg-template-home .hero-background-image .hero-background-image__wash { background: linear-gradient(90deg, color-mix(in srgb, var(--cmg-template-deep-surface) 58%, transparent) 0%, color-mix(in srgb, var(--cmg-template-deep-surface) 22%, transparent) 48%, color-mix(in srgb, var(--cmg-template-deep-surface) 6%, transparent) 100%), linear-gradient(180deg, color-mix(in srgb, var(--cmg-template-deep-surface) 6%, transparent) 0%, transparent 58%, color-mix(in srgb, var(--cmg-template-deep-surface) 28%, transparent) 100%); }
 .site-header__nav-shell {
   background: #05070b !important;
   border-color: rgba(255, 255, 255, 0.14) !important;
@@ -1754,7 +1755,9 @@ html[data-theme="light"] .cmg-template-home .hero-profile-card__body > div:last-
 @media (max-width: 880px) {
   body:has(.cmg-template-home) .site-header > div:first-child { display: block; }
   .cmg-template-home .hero-background-carousel .cmg-hero-carousel__wash { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-template-deep-surface) 52%, transparent) 0%, color-mix(in srgb, var(--cmg-template-deep-surface) 14%, transparent) 48%, color-mix(in srgb, var(--cmg-template-deep-surface) 52%, transparent) 100%); }
+  .cmg-template-home .hero-background-image .hero-background-image__wash { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-template-deep-surface) 52%, transparent) 0%, color-mix(in srgb, var(--cmg-template-deep-surface) 14%, transparent) 48%, color-mix(in srgb, var(--cmg-template-deep-surface) 52%, transparent) 100%); }
   html[data-theme="light"] .cmg-template-home .hero-background-carousel .cmg-hero-carousel__wash { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 54%, transparent) 0%, color-mix(in srgb, var(--cmg-light-secondary) 18%, transparent) 48%, color-mix(in srgb, var(--cmg-light-bg) 36%, transparent) 100%); }
+  html[data-theme="light"] .cmg-template-home .hero-background-image .hero-background-image__wash { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 54%, transparent) 0%, color-mix(in srgb, var(--cmg-light-secondary) 18%, transparent) 48%, color-mix(in srgb, var(--cmg-light-bg) 36%, transparent) 100%); }
 }
 body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav a:not(.site-header__cta)::after,
 body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav button::after {
@@ -2362,8 +2365,15 @@ body:has(.cmg-template-home) .site-header__nav-shell .site-header__menu-button:h
   color: var(--cmg-template-nav-ink) !important;
 }
 body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav .nav-tab-active-light {
-  background: var(--template-primary) !important;
+  background: #b3122a !important;
   color: var(--cmg-template-nav-ink) !important;
+}
+body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav button[aria-expanded="true"] {
+  background: #b3122a !important;
+  color: var(--cmg-template-nav-ink) !important;
+}
+html[data-theme="light"] .cmg-template-home .cmg-blog-marquee__action {
+  color: #a20b28 !important;
 }
 body:has(.cmg-template-home) .site-header__nav-shell [id$="-dropdown-panel"] .bg-navy .text-white,
 body:has(.cmg-template-home) .site-header__nav-shell [id$="-dropdown-panel"] .bg-navy .text-white\/60 {
