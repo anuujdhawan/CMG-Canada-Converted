@@ -240,9 +240,11 @@
   align-items: center;
   gap: 0.62rem;
   width: max-content;
+  max-width: 100%;
+  box-sizing: border-box;
   margin-top: auto;
   overflow: hidden;
-  padding: 0.62rem 0.78rem 0.62rem 1.05rem;
+  padding: 0.62rem 1.15rem 0.62rem 1.35rem !important;
   border: 1px solid rgba(255, 255, 255, 0.42);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.12);
@@ -289,6 +291,8 @@
 .featured-menu-card__cta-label {
   position: relative;
   z-index: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .featured-menu-card__cta-arrow {
@@ -1715,6 +1719,32 @@ html[data-theme="light"] .cmg-template-home .hero-visual .visual-card {
     inset 0 1px 0 color-mix(in srgb, var(--cmg-light-surface) 78%, transparent);
   backdrop-filter: blur(22px) saturate(1.5);
   -webkit-backdrop-filter: blur(22px) saturate(1.5);
+}
+/* Keep the dark hero cards legible over the bright skyline image. The shared
+   shell intentionally starts as a translucent glass surface, but the image
+   can become too luminous behind white card copy in dark mode. */
+html[data-theme="dark"] .cmg-template-home .hero-visual .visual-card {
+  color: var(--cmg-dark-ink);
+  background:
+    radial-gradient(220px 160px at 88% 12%, color-mix(in srgb, var(--cmg-dark-primary) 12%, transparent), transparent 62%),
+    radial-gradient(280px 200px at 10% 100%, color-mix(in srgb, var(--cmg-dark-accent) 8%, transparent), transparent 64%),
+    linear-gradient(145deg, rgba(7, 13, 22, 0.78) 0%, rgba(10, 16, 27, 0.74) 52%, rgba(18, 11, 26, 0.78) 100%);
+  border-color: color-mix(in srgb, var(--cmg-dark-ink) 24%, transparent);
+  box-shadow:
+    0 22px 48px color-mix(in srgb, var(--cmg-template-deep-surface) 38%, transparent),
+    0 8px 22px color-mix(in srgb, var(--cmg-template-deep-surface) 24%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--cmg-dark-ink) 14%, transparent);
+  backdrop-filter: blur(28px) saturate(1.28);
+  -webkit-backdrop-filter: blur(28px) saturate(1.28);
+}
+html[data-theme="dark"] .cmg-template-home .hero-visual .visual-card .mini-badge,
+html[data-theme="dark"] .cmg-template-home .hero-visual .visual-card .hero-pnp-draw-card__eyebrow,
+html[data-theme="dark"] .cmg-template-home .hero-visual .visual-card .hero-pnp-draw-card__status {
+  background: color-mix(in srgb, var(--cmg-dark-ink) 10%, transparent);
+  border-color: color-mix(in srgb, var(--cmg-dark-ink) 20%, transparent);
+}
+html[data-theme="dark"] .cmg-template-home .hero-visual .visual-card .hero-live-feed {
+  background: color-mix(in srgb, #65f28d 10%, transparent);
 }
 html[data-theme="light"] .cmg-template-home .hero-visual .visual-card h2 { color: var(--cmg-light-ink); }
 html[data-theme="light"] .cmg-template-home .hero-visual .visual-card > p { color: var(--cmg-light-muted); }
