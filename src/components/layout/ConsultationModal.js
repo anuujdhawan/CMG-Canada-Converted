@@ -3,7 +3,16 @@
 import { useEffect, useRef, useState } from "react";
 import { CalendarCheck, X } from "lucide-react";
 import { site } from "@/config/site";
-import ConsultationForm from "@/components/forms/ConsultationForm";
+
+let consultationFormPromise;
+
+function loadConsultationForm() {
+  consultationFormPromise ||= import("@/components/forms/ConsultationForm").catch((error) => {
+    consultationFormPromise = null;
+    throw error;
+  });
+  return consultationFormPromise;
+}
 
 function localPath(value) {
   try {
@@ -20,6 +29,7 @@ function localPath(value) {
  */
 export default function ConsultationModal() {
   const [open, setOpen] = useState(false);
+  const [ConsultationFormComponent, setConsultationFormComponent] = useState(null);
   const closeButtonRef = useRef(null);
 
   useEffect(() => {
@@ -27,6 +37,20 @@ export default function ConsultationModal() {
       localPath(site.ctas.primary.href),
       localPath(site.ctas.urgent.href),
     ].filter(Boolean));
+
+    function bookingLinkFromEvent(event) {
+      const target = event.target instanceof Element ? event.target.closest("a") : null;
+      if (!target || target.target === "_blank" || target.hasAttribute("download")) return null;
+
+      const href = target.getAttribute("href");
+      const path = href ? localPath(href) : null;
+      return path && bookingPaths.has(path) ? target : null;
+    }
+
+    function prefetchBookingForm(event) {
+      if (!bookingLinkFromEvent(event)) return;
+      void loadConsultationForm().catch(() => {});
+    }
 
     function handleBookingClick(event) {
       if (
@@ -40,19 +64,30 @@ export default function ConsultationModal() {
         return;
       }
 
-      const target = event.target instanceof Element ? event.target.closest("a") : null;
-      if (!target || target.target === "_blank" || target.hasAttribute("download")) return;
-
-      const href = target.getAttribute("href");
-      const path = href ? localPath(href) : null;
-      if (!path || !bookingPaths.has(path)) return;
+      const target = bookingLinkFromEvent(event);
+      if (!target) return;
 
       event.preventDefault();
-      setOpen(true);
+      void loadConsultationForm()
+        .then(({ default: FormComponent }) => {
+          setConsultationFormComponent(() => FormComponent);
+          setOpen(true);
+        })
+        .catch(() => {
+          window.location.assign(target.href);
+        });
     }
 
+    // Warm the form chunk on hover or keyboard focus so the booking modal can
+    // open immediately without including its form code in every route bundle.
+    document.addEventListener("pointerover", prefetchBookingForm);
+    document.addEventListener("focusin", prefetchBookingForm);
     document.addEventListener("click", handleBookingClick, true);
-    return () => document.removeEventListener("click", handleBookingClick, true);
+    return () => {
+      document.removeEventListener("pointerover", prefetchBookingForm);
+      document.removeEventListener("focusin", prefetchBookingForm);
+      document.removeEventListener("click", handleBookingClick, true);
+    };
   }, []);
 
   useEffect(() => {
@@ -115,7 +150,7 @@ export default function ConsultationModal() {
         </div>
 
         <div className="consultation-modal__body min-h-0 overflow-y-auto bg-[var(--modal-bg)] !p-2 sm:!px-4 sm:!py-3">
-          <ConsultationForm />
+          {ConsultationFormComponent && <ConsultationFormComponent />}
         </div>
       </section>
     </div>

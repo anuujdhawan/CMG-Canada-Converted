@@ -147,10 +147,73 @@ const RESOURCES_MENU_ITEM = {
   featured: { label: "Start with research", title: "Find the right Canadian pathway", desc: "Browse current guides, news and practical checklists before your consultation.", href: "/blog", ctaLabel: "Explore your options" },
 };
 
+const LOCATIONS_MENU_ITEM = {
+  label: "Locations",
+  href: "/locations",
+  columns: [
+    {
+      category: "Ontario",
+      showViewAll: false,
+      items: [
+        { label: "Canada", href: "/locations" },
+        { label: "Toronto", href: "/locations/toronto" },
+        { label: "Brampton", href: "/locations/brampton" },
+        { label: "Mississauga", href: "/locations/mississauga" },
+        { label: "Ottawa", href: "/locations/ottawa" },
+        { label: "Hamilton", href: "/locations/hamilton" },
+        { label: "London", href: "/locations/london" },
+        { label: "Kitchener-Waterloo", href: "/locations/kitchener-waterloo" },
+        { label: "Windsor", href: "/locations/windsor" },
+      ],
+    },
+    {
+      category: "British Columbia",
+      showViewAll: false,
+      items: [
+        { label: "Vancouver", href: "/locations/vancouver" },
+        { label: "Surrey", href: "/locations/surrey" },
+        { label: "Victoria", href: "/locations/victoria" },
+        { label: "Kelowna", href: "/locations/kelowna" },
+      ],
+    },
+    {
+      category: "Alberta",
+      showViewAll: false,
+      items: [
+        { label: "Calgary", href: "/locations/calgary" },
+        { label: "Edmonton", href: "/locations/edmonton" },
+      ],
+    },
+    {
+      category: "Manitoba",
+      showViewAll: false,
+      items: [
+        { label: "Winnipeg", href: "/locations/winnipeg" },
+      ],
+    },
+    {
+      category: "Saskatchewan",
+      showViewAll: false,
+      items: [
+        { label: "Saskatoon", href: "/locations/saskatoon" },
+        { label: "Regina", href: "/locations/regina" },
+      ],
+    },
+    {
+      category: "Nova Scotia",
+      showViewAll: false,
+      items: [
+        { label: "Halifax", href: "/locations/halifax" },
+      ],
+    },
+  ],
+};
+
 const navigationMenuItems = [
   ...sourceMenuItems.filter((item) => item.label !== "About"),
   TOOLS_MENU_ITEM,
   RESOURCES_MENU_ITEM,
+  LOCATIONS_MENU_ITEM,
   ABOUT_MENU_ITEM,
 ];
 
@@ -199,6 +262,14 @@ const rawNavigation = {
       { label: "PNP Eligibility Check", href: "/tools/pnp-eligibility-canada" },
       { label: "Document Checklist", href: "/tools/document-checklist-canada" },
       { label: "Free Assessment", href: "/assessment/free-canada-immigration-assessment" },
+    ] },
+    { title: "Locations", links: [
+      { label: "Canada", href: "/locations" },
+      { label: "Toronto", href: "/locations/toronto" },
+      { label: "Brampton", href: "/locations/brampton" },
+      { label: "Vancouver", href: "/locations/vancouver" },
+      { label: "Calgary", href: "/locations/calgary" },
+      { label: "Halifax", href: "/locations/halifax" },
     ] },
     { title: "Contact", links: [
       { label: "Brampton immigration office", href: "/about/immigration-office-brampton-ontario" },

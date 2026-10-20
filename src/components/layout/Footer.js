@@ -101,7 +101,7 @@ export default function Footer() {
                 alt={site.name}
                 width={1912}
                 height={1140}
-                sizes="180px"
+                sizes="66px"
                 className="site-footer__logo-img h-[2.45rem] w-auto object-contain"
               />
             </Link>

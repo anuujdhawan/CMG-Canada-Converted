@@ -28,10 +28,10 @@ const ROUTE_RESEARCH_RULES = [
     test: (path) => /express-entry|federal-skilled|canadian-experience|federal-skilled-trades/.test(path),
     topic: "Express Entry Canada",
     sentences: [
-      "A useful Express Entry Canada research trail starts with eligibility for the Federal Skilled Worker Program, Canadian Experience Class or Federal Skilled Trades Program, then moves to the profile facts that affect ranking and invitation readiness.",
-      "Long-tail questions such as how to qualify for Express Entry, how the CRS score is calculated, what documents are needed after an Invitation to Apply and whether a category-based draw fits the profile should be answered with the same evidence used in the application.",
+      "If you are researching Express Entry Canada, start by confirming eligibility for the Federal Skilled Worker Program, Canadian Experience Class or Federal Skilled Trades Program. Only then move to the profile facts that affect ranking and invitation readiness.",
+      "A useful Express Entry guide should explain how qualification works, how the CRS score is calculated, what documents are needed after an Invitation to Apply and whether a category-based draw fits the profile. Each answer should be grounded in evidence the applicant can actually submit.",
       "The Comprehensive Ranking System is only meaningful when the underlying language result, education credential, Educational Credential Assessment, skilled work history, spouse factors and additional points are eligible and still valid on the date they are claimed.",
-      "Category-based selection is a separate research lens: an eligible candidate must still enter the Express Entry pool, then meet the instructions for the selected language, occupation, education or other category before a category round can become relevant.",
+      "Category-based selection deserves its own check: an eligible candidate must still enter the Express Entry pool, then meet the instructions for the selected language, occupation, education or other category before a category round can become relevant.",
       "NOC research should compare the lead statement and main duties with the work actually performed, because a favourable job title or TEER label does not prove that the claimed experience meets the federal program requirement.",
       "Language-test planning, proof of funds, police certificates, civil-status records and employer reference letters should be mapped to the filing window so a candidate can respond within the application period after an invitation.",
       "A provincial nomination, Canadian work experience, a stronger language result or a corrected NOC may change the strategy, but each improvement must be lawful, documentable and compatible with the applicant's complete history.",
@@ -43,7 +43,7 @@ const ROUTE_RESEARCH_RULES = [
     topic: "a Canada Provincial Nominee Program pathway",
     sentences: [
       "Research for a Canada Provincial Nominee Program pathway should begin with the exact province or territory and stream, because a skilled-worker, employer, graduate, regional or entrepreneur stream can apply different criteria to similar applicants.",
-      "Long-tail searches such as PNP eligibility in Canada, how to get a provincial nomination, PNP job-offer requirements and Express Entry-linked PNP versus base PNP should be answered with the current stream instructions rather than a national shortcut.",
+      "Questions about PNP eligibility, getting a provincial nomination, job-offer requirements and Express Entry-linked versus base PNP routes should be answered with the current stream instructions rather than a national shortcut.",
       "A strong provincial nominee profile connects the occupation and NOC duties, language result, education, work experience, job offer, employer, settlement funds, legal status and genuine intention to live in the nominating province.",
       "An Express Entry-linked nomination requires the applicant to satisfy both the provincial stream and the applicable federal Express Entry program, while a non-Express Entry nomination follows the province's process before the federal permanent-residence stage.",
       "Province-specific research should record the intake status, invitation method, employer conditions, wage or work-location rules, document format and any deadline because an open stream can change before the application is submitted.",
@@ -57,7 +57,7 @@ const ROUTE_RESEARCH_RULES = [
     topic: "a Canada work permit or employer immigration pathway",
     sentences: [
       "Research for a Canada work permit or employer immigration pathway should identify the authorization type first: employer-specific, open, LMIA-based, LMIA-exempt or a program with its own worker and employer conditions.",
-      "Long-tail questions such as how to apply for a Canadian work permit, whether an LMIA is required, how to change employers and what happens when a work permit expires should be answered from the applicant's location and current status.",
+      "A work-permit guide should answer how to apply, whether an LMIA is required, how an employer change works and what happens when a permit expires, using the applicant's location and current status.",
       "Employer-specific work permit planning should connect the real job duties, NOC, wage, work location, contract, recruitment or exemption record and employer compliance history with the worker's experience and authorization timeline.",
       "A job offer by itself is not a work authorization, and a permit condition may limit the employer, occupation, location or period of work, so the proposed start date and any change in employment should be checked before work begins.",
       "LMIA and employer-service content should distinguish the employer's business need and recruitment evidence from the worker's passport, experience, language, education, status and admissibility records.",
@@ -71,7 +71,7 @@ const ROUTE_RESEARCH_RULES = [
     topic: "a Canada study permit or post-graduation pathway",
     sentences: [
       "Research for a Canada study permit or post-graduation pathway should start with the designated learning institution, the exact program and the application date, because school and program details can affect both the permit decision and later work options.",
-      "Long-tail questions such as Canada study permit requirements, proof of funds for international students, the provincial attestation letter, study permit conditions and PGWP eligibility should be answered with the current federal and school information.",
+      "A study-permit guide should explain the current requirements, proof of funds, provincial attestation letter, permit conditions and PGWP eligibility using both the federal and school information.",
       "A convincing study permit plan connects the letter of acceptance, tuition, living and travel funds, education and employment history, language record, family circumstances and a clear explanation of why the proposed study makes sense.",
       "Applicants should understand the conditions attached to study status, including progress, enrolment, permitted work and the requirement to follow the terms of the permit, before treating part-time work or a future immigration option as guaranteed.",
       "PGWP research belongs in the decision before tuition is paid: the DLI, credential, program length, delivery format, language or field-of-study rules and the timing of the study-permit application can all matter.",
@@ -85,7 +85,7 @@ const ROUTE_RESEARCH_RULES = [
     topic: "Canada family sponsorship",
     sentences: [
       "Research for Canada family sponsorship should identify the exact relationship category first: spouse, common-law partner, conjugal partner, dependent child, parent, grandparent or another permitted relative does not use one universal evidence standard.",
-      "Long-tail questions such as who can sponsor a spouse in Canada, inland versus outland sponsorship, how to prove a genuine relationship and what an undertaking means should be answered from the current category guide.",
+      "A family-sponsorship guide should explain who can sponsor a spouse, how inland and outland routes differ, how to prove a genuine relationship and what the undertaking means under the current category guide.",
       "A strong family-class record aligns the sponsor's status, relationship history, civil documents, shared residence, communication, visits, finances, family composition, immigration history and the forms submitted by every family member.",
       "Relationship evidence is more useful when it is labelled by time period and question than when it is uploaded as a large unstructured collection of photographs, messages or financial records.",
       "Sponsor eligibility, income or undertaking rules, medical and police requirements, translations and admissibility should be reviewed separately from the relationship question so one strong area does not hide a different problem.",
@@ -99,7 +99,7 @@ const ROUTE_RESEARCH_RULES = [
     topic: "a Canada visitor visa or temporary-residence document",
     sentences: [
       "Research for a Canada visitor visa or temporary-residence document should begin with the purpose of travel, expected length of stay, passport and nationality, because a visitor visa, eTA, transit visa, business visit and Super Visa are not the same route.",
-      "Long-tail questions such as Canada visitor visa requirements, how to prove ties to a home country, what to include in a letter of invitation and whether a parent or grandparent may need a Super Visa should be answered with the current visit instructions.",
+      "A visitor-visa guide should explain the requirements, how to show ties to a home country, what belongs in an invitation letter and when a parent or grandparent may need a Super Visa, using the current visit instructions.",
       "A credible temporary-residence application connects the itinerary, accommodation, funding, employment, family, residence, travel history and host or business evidence with the applicant's stated plan to follow the conditions of the stay.",
       "Bank statements, an employer letter, proof of residence outside Canada and a clear invitation can answer different questions; none should be treated as a substitute for the complete temporary-visit explanation.",
       "Business visitors should separate meetings, conferences or short activities that do not enter the Canadian labour market from work that requires a work permit or another authorization.",
@@ -113,7 +113,7 @@ const ROUTE_RESEARCH_RULES = [
     topic: "a Canadian citizenship or permanent-resident document application",
     sentences: [
       "Research for a Canadian citizenship or permanent-resident document application should begin with the immediate decision: citizenship grant, citizenship certificate, PR card renewal or replacement, PR travel document, resumption, renunciation or an adoption-related process.",
-      "Long-tail questions such as Canadian citizenship eligibility, how to calculate physical presence, PR card residency obligation, citizenship certificate by descent and when a permanent resident needs a travel document should be matched to the exact official guide.",
+      "A citizenship or PR-document guide should explain eligibility, physical presence, the PR card residency obligation, citizenship certificates by descent and when a permanent resident needs a travel document, using the exact official guide.",
       "A reliable presence record reconciles passports, entry and exit dates, addresses, employment, education, tax information, family changes and immigration status before any calculator result is treated as final.",
       "Citizenship and PR card planning overlap in the travel history but use different tests, forms and evidence, so a person should not assume that a valid PR card proves citizenship eligibility or that renewal resolves a residency concern.",
       "Identity, name changes, family records, adoption documents and status history should be organized chronologically and explained when a document is unavailable, inconsistent or issued in a different name.",
@@ -127,7 +127,7 @@ const ROUTE_RESEARCH_RULES = [
     topic: "a Canadian immigration refusal, inadmissibility or appeal matter",
     sentences: [
       "Research for a Canadian immigration refusal, inadmissibility or appeal matter should begin with the decision, reasons, date received, status consequence and deadline rather than the title of the service or a generic refusal checklist.",
-      "Long-tail questions such as how to respond to a Canadian immigration refusal, criminal rehabilitation Canada, temporary resident permit eligibility, authorization to return to Canada and judicial review deadlines require the actual decision and record.",
+      "A refusal or inadmissibility response may involve criminal rehabilitation, a temporary resident permit, authorization to return to Canada or judicial review. The correct option depends on the actual decision, record and deadline.",
       "A focused review separates criminal, medical, security, financial, misrepresentation, procedural fairness, residency and document concerns because each issue can involve a different remedy, evidence standard and decision-maker.",
       "The original application, refusal letter, officer notes when available, correspondence, evidence and delivery record should be preserved before a new explanation or reapplication is prepared.",
       "A response is stronger when each concern is matched with the original record, a corrected fact, a new document or a legal explanation instead of repeating the same narrative without addressing the reason for the decision.",
@@ -141,7 +141,7 @@ const ROUTE_RESEARCH_RULES = [
     topic: "Canada business immigration and an entrepreneur pathway",
     sentences: [
       "Research for Canada business immigration should identify the exact federal or provincial route before a business plan is written, because a Start-up Visa, entrepreneur nomination, self-employed route and temporary business visit have different purposes.",
-      "Long-tail questions such as Canada business immigration requirements, Start-up Visa eligibility, entrepreneur PNP streams, source-of-funds evidence and business visitor versus work authorization should be answered from the current program instructions.",
+      "A business-immigration guide should cover current requirements, Start-up Visa eligibility, entrepreneur PNP streams, source-of-funds evidence and the difference between a business visit and work authorization.",
       "A strong business file connects ownership, management experience, investment or source of funds, proposed role, market research, job creation or settlement plan and the applicant's language, education, family and admissibility record.",
       "A business concept is not the same as an eligible immigration pathway, and commercial projections should not be presented as guaranteed immigration outcomes or as a substitute for the program's formal criteria.",
       "Entrepreneur and provincial research should record the province, intake status, net-worth or investment assumptions, performance conditions, work authorization and federal stage so the full timeline is visible before funds are committed.",
@@ -156,9 +156,9 @@ const DEFAULT_RULE = {
   topic: "this Canadian immigration pathway",
   sentences: [
     "Research for this Canadian immigration pathway should begin with the exact program, service or decision and the applicant's location, status, family situation and deadline.",
-    "Long-tail questions about eligibility, documents, processing, fees, status and the next application should be answered with the current official instructions rather than a broad summary alone.",
+    "A useful page should answer the reader's questions about eligibility, documents, processing, fees, status and the next application using the current official instructions rather than a broad summary alone.",
     "A useful page connects the goal, requirements, evidence, timeline and decision-maker so readers can understand which facts could change the route.",
-    "The most important keyword is the question the applicant needs answered, supported by the program name, document type, application stage and relevant personal history.",
+    "The most useful focus is the question the applicant needs answered, supported by the program name, document type, application stage and relevant personal history.",
     "Identity, education, work, language, family, funds, travel and admissibility records should be checked for consistency before a form or calculator result is relied on.",
     "A professional review should clarify the service scope and next decision without promising an approval that only the responsible Canadian authority can make.",
     "The application calendar should protect expiry dates, document requests and response deadlines while leaving room to obtain translations or explanations.",
@@ -167,7 +167,7 @@ const DEFAULT_RULE = {
 };
 
 const COMMON_RESEARCH_SENTENCES = [
-  "Use the page to match the search phrase to the exact route, then confirm the person, document, decision-maker and application stage before relying on a general answer.",
+  "Use the page to match the reader's question to the exact route, then confirm the person, document, decision-maker and application stage before relying on a general answer.",
   "A dated record of the official instructions, the facts supplied and the evidence available makes later changes easier to spot and keeps the application explanation consistent.",
   "When a rule, intake, fee or deadline is time-sensitive, treat the official source as controlling and use a focused review to resolve the question that a general search cannot answer.",
   "Readers should leave the section knowing which fact to verify, which document supports it and which next action protects the application timeline.",
@@ -741,9 +741,35 @@ function getFrameSupportClosing(page) {
   return "The practical next step is to name the decision, gather the evidence that answers it and verify the current official instructions before filing.";
 }
 
+function getLocationSupportContext(page) {
+  const path = normalizePath(page?.path);
+  if (!/^\/locations\/[^/]+$/.test(path)) return null;
+
+  const city = String(page?.h1 || "").replace(/^Immigration consultants in /i, "").trim();
+  const table = page?.contentBlocks?.find(
+    (block) => block.type === "table" && block.rows?.[0]?.[0] === "City-specific planning factor",
+  );
+  if (!city || !table) return null;
+
+  const rows = Object.fromEntries(
+    table.rows.slice(1).map(([label, value]) => [String(label), String(value)]),
+  );
+
+  return {
+    eyebrow: `LOCAL CONTEXT FOR ${city}`,
+    intro: `Immigration planning in ${city} should connect the route to the work, study and settlement facts that are specific to this city.`,
+    items: [
+      `Work sectors: ${rows["Local work sectors"] || "Review your occupation and duties carefully."}`,
+      `Study options: ${rows["Study options"] || "Confirm the institution and program before relying on a study plan."}`,
+      `Consultation focus: ${rows["Consultation focus"] || "Start with your status, goal, documents and deadline."}`,
+    ],
+  };
+}
+
 export function getFrameSupportContent(page) {
   const path = normalizePath(page?.path);
   const researchSentences = getResearchRule(page).sentences;
+  const localContext = getLocationSupportContext(page);
   const content = {
     eyebrow: "CHECK THE NEXT DECISION",
     title: getFrameSupportTitle(page),
@@ -757,6 +783,7 @@ export function getFrameSupportContent(page) {
       "Keep the evidence, dates and status history consistent.",
       "Confirm the current official instructions before filing.",
     ],
+    ...(localContext ? { localContext } : {}),
   };
 
   if (/express-entry|crs|federal-skilled|canadian-experience/.test(path)) {
@@ -836,8 +863,16 @@ export function getBalancedSeoContentBlocks(page, existingSeoBlocks = []) {
   if (deficit <= 0) return [];
 
   const rule = getResearchRule(page);
+  const locationPage = path === "/locations" || path.startsWith("/locations/");
+  const city = locationPage && path !== "/locations"
+    ? String(page?.h1 || "").replace(/^Immigration consultants in\s+/i, "").replace(/\s+/g, " ").trim()
+    : "";
   const topic = page?.h1 ? String(page.h1).replace(/\b20\d{2}\b/g, "").replace(/\s+/g, " ").trim() : rule.topic;
-  const heading = `What should you research before relying on ${topic}?`;
+  const heading = locationPage
+    ? city
+      ? `What should you research before relying on immigration guidance in ${city}?`
+      : "What should you research before relying on city-specific immigration guidance?"
+    : `What should you research before relying on ${topic}?`;
   const headingWords = countWords(heading);
   const selected = selectSentences(
     [...rule.sentences, ...COMMON_RESEARCH_SENTENCES],

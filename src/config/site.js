@@ -17,7 +17,7 @@ export const site = {
   shortName: "CMG",
   tagline: "Your Canadian Permanent Residence, Planned by a Licensed RCIC",
   description:
-    "Commonwealth Migration Canada is a CICC-regulated Canadian immigration consultancy. Licensed RCICs serving Canada-wide - Express Entry, PNP, LMIA, work & study permits, family sponsorship, and refusals.",
+    "Commonwealth Migration Group Inc. is a CICC-regulated Canadian immigration consultancy based in Brampton, Ontario. Our licensed RCIC team supports Express Entry, PNP, LMIA, work and study permits, family sponsorship and refusal matters across Canada.",
 
   // ---- Contact -------------------------------------------------------
   url: "https://commonwealthmigration.ca",
@@ -103,11 +103,14 @@ export const site = {
   // ---- Default metadata (used by lib/seo.js) --------------------------
   meta: {
     titleTemplate: `%s | ${brandName}`,
-    defaultTitle: "Immigration Consultant Brampton | Canada Immigration Guidance",
+    defaultTitle: "Immigration Consultants in Brampton | Canada Immigration",
     defaultDescription:
-      "Looking for an immigration consultant in Brampton? Compare Express Entry, PNP, work, study and family routes with Canada-wide guidance and official sources.",
+      "Commonwealth Migration's licensed RCIC team is based in Brampton, Ontario, helping with Express Entry, PNP, work, study and family immigration across Canada.",
     keywords: [
       "Canadian immigration",
+      "immigration consultants in Brampton",
+      "Canada immigration consultant Brampton",
+      "licensed RCIC Brampton",
       "Express Entry",
       "immigration consultants",
       "study permit",

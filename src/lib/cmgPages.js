@@ -3,6 +3,7 @@ import sourceMenu from "@/data/cmg-menu.json";
 import legalPages from "@/data/cmg-legal.json";
 import aboutPages from "@/data/about-pages";
 import ukPages from "@/data/uk-pages";
+import locationPages from "@/data/location-pages";
 
 const normalizePath = (value) => {
   const pathname = String(value || "/").split("?")[0].split("#")[0];
@@ -39,6 +40,7 @@ const SOURCE_FILES = {
   source: "src/data/cmg-pages.json",
   about: "src/data/about-pages.js",
   uk: "src/data/uk-pages.js",
+  locations: "src/data/location-pages.js",
   legal: "src/data/cmg-legal.json",
 };
 
@@ -86,6 +88,7 @@ const pagesByPath = new Map(
     ...sourcePages.map((page) => [page, SOURCE_FILES.source]),
     ...aboutPages.map((page) => [page, SOURCE_FILES.about]),
     ...ukPages.map((page) => [page, SOURCE_FILES.uk]),
+    ...locationPages.map((page) => [page, SOURCE_FILES.locations]),
   ].map(([page, sourceFile]) => [normalizePath(page.path), sourcePageToPage(page, sourceFile)])
 );
 const legalByPath = new Map(legalPages.map((page) => [normalizePath(page.path), page]));

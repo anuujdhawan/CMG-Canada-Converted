@@ -109,8 +109,8 @@ export default function BlogCategoryTabs({ groups = [], activeCategory = ALL_BLO
               src={featured.image.src}
               alt={featured.image.alt}
               fill
-              sizes="(max-width: 1023px) 100vw, 72vw"
-              priority={false}
+              quality={75}
+              sizes="(max-width: 620px) calc(100vw - 28px), (max-width: 1023px) calc(100vw - 32px), (max-width: 1120px) calc(75.4vw - 25.4px), (max-width: 1260px) calc(75.4vw - 31.75px), (max-width: 1440px) calc(968.3px - 0.3968vw), 912px"
               className="object-cover [transition:transform_.8s_cubic-bezier(.16,1,.3,1),filter_.5s_ease] group-hover:scale-[1.04] group-hover:saturate-[1.08] group-focus-visible:scale-[1.04] group-focus-visible:saturate-[1.08]"
               style={{ objectPosition: getImageObjectPosition(featured.image.src) }}
             />

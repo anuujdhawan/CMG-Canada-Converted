@@ -37,7 +37,7 @@ export default function HeroCarousel({ slides = HERO_SLIDES, className }) {
               src={slide.src}
               alt={slide.alt}
               fill
-              priority={index === 0}
+              preload={index === 0}
               sizes="100vw"
               className="cmg-hero-carousel__image group-hover/hero:scale-[1.035] absolute inset-0 scale-[1.055] object-cover object-center brightness-[1.06] contrast-[1.04] saturate-[1.08] [transition:transform_1s_cubic-bezier(.2,.8,.2,1),filter_400ms_ease]"
             />

@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Mail, CalendarCheck } from "lucide-react";
 import { site } from "@/config/site";

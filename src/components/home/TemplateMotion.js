@@ -34,17 +34,9 @@ function animateCount(element, reduced) {
 /**
  * Scroll-reveal + count-up for every `.cmg-template-home` page.
  *
- * This effect used to collect its targets exactly once, on mount. That works on
- * a first load, but not after a client-side navigation: React swaps in a fresh
- * tree while this component instance survives, so the effect never re-runs and
- * every `.reveal` element in the new tree stays at `opacity: 0` — the page
- * looked empty until a hard refresh. It was most visible on the blog, where
- * changing category replaces the whole card grid, but it affected any page
- * whose content changes without a remount.
- *
- * The scan is now re-run whenever the DOM changes. The observers are created
- * once and kept alive; re-`observe()`ing a target is a no-op, so re-scanning is
- * cheap and idempotent.
+ * Observe the initial page once, then only inspect newly inserted DOM nodes.
+ * This keeps client-side content changes (such as blog category filters)
+ * animated without querying the full page tree after every React update.
  */
 export default function TemplateMotion() {
   useEffect(() => {
@@ -53,12 +45,8 @@ export default function TemplateMotion() {
     const root = document.querySelector(".cmg-template-home");
     if (!root) return undefined;
 
-    const query = (selector) => [...root.querySelectorAll(selector)];
-    const revealTargets = () => query(".reveal:not(.in)");
-    const countTargets = () => query("[data-count]:not([data-counted])");
-
     // No IntersectionObserver (or motion is unwelcome): reveal everything and
-    // count up immediately, but still re-scan so later navigations are covered.
+    // count up immediately, including content inserted later.
     const instant = reduced || !window.IntersectionObserver;
 
     const revealObserver = instant
@@ -83,23 +71,38 @@ export default function TemplateMotion() {
         { threshold: 0.7 }
       );
 
-    const scan = () => {
-      frame = 0;
-      const reveals = revealTargets();
-      const counts = countTargets();
+    const scan = (nodes) => {
+      const reveals = new Set();
+      const counts = new Set();
+
+      for (const node of nodes) {
+        if (node.nodeType !== Node.ELEMENT_NODE) continue;
+        if (node.matches(".reveal:not(.in)")) reveals.add(node);
+        if (node.matches("[data-count]:not([data-counted])")) counts.add(node);
+        node.querySelectorAll(".reveal:not(.in)").forEach((element) => reveals.add(element));
+        node.querySelectorAll("[data-count]:not([data-counted])").forEach((element) => counts.add(element));
+      }
+
       if (revealObserver) reveals.forEach((element) => revealObserver.observe(element));
       else reveals.forEach((element) => element.classList.add("in"));
       if (countObserver) counts.forEach((element) => countObserver.observe(element));
       else counts.forEach((element) => animateCount(element, true));
     };
 
-    // Coalesce bursts of mutations into one scan per frame.
-    const scheduleScan = () => {
-      if (frame) return;
-      frame = window.requestAnimationFrame(scan);
-    };
+    scan([root]);
 
-    scan();
+    // Coalesce bursts of mutations into one scan of only the inserted nodes.
+    const pendingNodes = new Set();
+    const scheduleScan = (records) => {
+      records.forEach((record) => record.addedNodes.forEach((node) => pendingNodes.add(node)));
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        const nodes = [...pendingNodes];
+        pendingNodes.clear();
+        frame = 0;
+        scan(nodes);
+      });
+    };
 
     const mutations = new MutationObserver(scheduleScan);
     mutations.observe(root, { childList: true, subtree: true });

@@ -161,28 +161,28 @@ export default function CrsCalculator() {
             <ToolField labelClassName={CRS_LABEL_CLASS} label="Age" htmlFor="crs-age">
               <ToolInput className={CRS_INPUT_CLASS} id="crs-age" type="number" inputMode="numeric" step={1} min={18} max={50} value={form.age} onChange={handleAgeChange} onBlur={handleAgeBlur} />
             </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Education">
-              <ToolSelect className={CRS_INPUT_CLASS} value={form.education} onChange={set("education")}>
+            <ToolField labelClassName={CRS_LABEL_CLASS} label="Education" htmlFor="crs-education">
+              <ToolSelect className={CRS_INPUT_CLASS} id="crs-education" value={form.education} onChange={set("education")}>
                 {EDUCATION.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
               </ToolSelect>
             </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="First official language">
-              <ToolSelect className={CRS_INPUT_CLASS} value={form.language} onChange={set("language")}>
+            <ToolField labelClassName={CRS_LABEL_CLASS} label="First official language" htmlFor="crs-language">
+              <ToolSelect className={CRS_INPUT_CLASS} id="crs-language" value={form.language} onChange={set("language")}>
                 {LANGUAGE.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
               </ToolSelect>
             </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Second official language (optional)">
-              <ToolSelect className={CRS_INPUT_CLASS} value={form.secondLanguage} onChange={set("secondLanguage")}>
+            <ToolField labelClassName={CRS_LABEL_CLASS} label="Second official language (optional)" htmlFor="crs-second-language">
+              <ToolSelect className={CRS_INPUT_CLASS} id="crs-second-language" value={form.secondLanguage} onChange={set("secondLanguage")}>
                 {SECOND_LANGUAGE.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
               </ToolSelect>
             </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Canadian work experience">
-              <ToolSelect className={CRS_INPUT_CLASS} value={form.canadianExperience} onChange={set("canadianExperience")}>
+            <ToolField labelClassName={CRS_LABEL_CLASS} label="Canadian work experience" htmlFor="crs-canadian-experience">
+              <ToolSelect className={CRS_INPUT_CLASS} id="crs-canadian-experience" value={form.canadianExperience} onChange={set("canadianExperience")}>
                 {CANADIAN_EXPERIENCE.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
               </ToolSelect>
             </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Foreign work experience">
-              <ToolSelect className={CRS_INPUT_CLASS} value={form.foreignExperience} onChange={set("foreignExperience")}>
+            <ToolField labelClassName={CRS_LABEL_CLASS} label="Foreign work experience" htmlFor="crs-foreign-experience">
+              <ToolSelect className={CRS_INPUT_CLASS} id="crs-foreign-experience" value={form.foreignExperience} onChange={set("foreignExperience")}>
                 {FOREIGN_EXPERIENCE.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
               </ToolSelect>
             </ToolField>
@@ -199,41 +199,41 @@ export default function CrsCalculator() {
             <ToolCheckboxCard labelClassName={CRS_CHECK_LABEL_CLASS} hintClassName={CRS_CHECK_HINT_CLASS} className="crs-calculator__toggle h-[3.25rem] min-h-[3.25rem] box-border items-center rounded-[.95rem] px-4 py-[.55rem] bg-[color-mix(in_srgb,var(--template-surface-alt)_95%,var(--template-primary)_5%)] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_5%,transparent),0_4px_12px_color-mix(in_srgb,var(--template-bg)_14%,transparent)] crs-calculator__toggle--spouse mt-[calc(1.05rem+0.38rem)] max-[639px]:mt-0 max-[639px]:h-auto max-[639px]:min-h-[3.25rem] max-[639px]:py-[0.7rem]" label="Applying with a spouse / partner" hint="Toggle to include spouse factors" checked={form.hasSpouse} onChange={setBool("hasSpouse")} />
             {form.hasSpouse && (
               <div className="tool-group rounded-[0.95rem] border border-[var(--template-border)] bg-[var(--template-surface)] grid gap-4 p-3">
-                <ToolField labelClassName={CRS_LABEL_CLASS} label="Spouse education">
-                  <ToolSelect className={CRS_INPUT_CLASS} value={form.spouseEducation} onChange={set("spouseEducation")}>
+                <ToolField labelClassName={CRS_LABEL_CLASS} label="Spouse education" htmlFor="crs-spouse-education">
+                  <ToolSelect className={CRS_INPUT_CLASS} id="crs-spouse-education" value={form.spouseEducation} onChange={set("spouseEducation")}>
                     {SPOUSE_EDUCATION.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
                   </ToolSelect>
                 </ToolField>
-                <ToolField labelClassName={CRS_LABEL_CLASS} label="Spouse language (CLB)">
-                  <ToolSelect className={CRS_INPUT_CLASS} value={form.spouseLanguage} onChange={set("spouseLanguage")}>
+                <ToolField labelClassName={CRS_LABEL_CLASS} label="Spouse language (CLB)" htmlFor="crs-spouse-language">
+                  <ToolSelect className={CRS_INPUT_CLASS} id="crs-spouse-language" value={form.spouseLanguage} onChange={set("spouseLanguage")}>
                     {SPOUSE_LANGUAGE.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
                   </ToolSelect>
                 </ToolField>
-                <ToolField labelClassName={CRS_LABEL_CLASS} label="Spouse Canadian work experience">
-                  <ToolSelect className={CRS_INPUT_CLASS} value={form.spouseExperience} onChange={set("spouseExperience")}>
+                <ToolField labelClassName={CRS_LABEL_CLASS} label="Spouse Canadian work experience" htmlFor="crs-spouse-experience">
+                  <ToolSelect className={CRS_INPUT_CLASS} id="crs-spouse-experience" value={form.spouseExperience} onChange={set("spouseExperience")}>
                     {SPOUSE_EXPERIENCE.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
                   </ToolSelect>
                 </ToolField>
               </div>
             )}
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Provincial nomination (adds 600 points)">
-              <ToolSelect className={CRS_INPUT_CLASS} value={form.provincialNomination ? "yes" : "no"} onChange={(e) => setForm((f) => ({ ...f, provincialNomination: e.target.value === "yes" }))}>
+            <ToolField labelClassName={CRS_LABEL_CLASS} label="Provincial nomination (adds 600 points)" htmlFor="crs-provincial-nomination">
+              <ToolSelect className={CRS_INPUT_CLASS} id="crs-provincial-nomination" value={form.provincialNomination ? "yes" : "no"} onChange={(e) => setForm((f) => ({ ...f, provincialNomination: e.target.value === "yes" }))}>
                 <option value="no">No</option>
                 <option value="yes">Yes — nominated</option>
               </ToolSelect>
             </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Qualifying job offer">
-              <ToolSelect className={CRS_INPUT_CLASS} value={form.jobOffer} onChange={set("jobOffer")}>
+            <ToolField labelClassName={CRS_LABEL_CLASS} label="Qualifying job offer" htmlFor="crs-job-offer">
+              <ToolSelect className={CRS_INPUT_CLASS} id="crs-job-offer" value={form.jobOffer} onChange={set("jobOffer")}>
                 {JOB_OFFER.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
               </ToolSelect>
             </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Canadian education">
-              <ToolSelect className={CRS_INPUT_CLASS} value={form.canadianEducation} onChange={set("canadianEducation")}>
+            <ToolField labelClassName={CRS_LABEL_CLASS} label="Canadian education" htmlFor="crs-canadian-education">
+              <ToolSelect className={CRS_INPUT_CLASS} id="crs-canadian-education" value={form.canadianEducation} onChange={set("canadianEducation")}>
                 {CANADIAN_EDUCATION.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
               </ToolSelect>
             </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="French ability">
-              <ToolSelect className={CRS_INPUT_CLASS} value={form.french} onChange={set("french")}>
+            <ToolField labelClassName={CRS_LABEL_CLASS} label="French ability" htmlFor="crs-french">
+              <ToolSelect className={CRS_INPUT_CLASS} id="crs-french" value={form.french} onChange={set("french")}>
                 {FRENCH.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
               </ToolSelect>
             </ToolField>

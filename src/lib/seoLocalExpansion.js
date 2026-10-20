@@ -378,6 +378,43 @@ function resolveSource(text, source) {
 
 export function getLocalSeoExpansion(page) {
   const path = normalizePath(page?.path);
+  const isLocationPage = path === "/locations" || path.startsWith("/locations/");
+  if (isLocationPage) {
+    const city = path === "/locations"
+      ? ""
+      : cleanText(page?.h1).replace(/^Immigration consultants in\s+/i, "").trim();
+    const audience = city ? `${city} applicants` : "applicants comparing Canadian cities";
+    const locationLabel = city ? `immigration planning in ${city}` : "city-specific Canadian immigration planning";
+    const source = OFFICIAL_SOURCES.immigration;
+    const localQuestion = city
+      ? `What should ${city} applicants verify before choosing an immigration pathway?`
+      : "What should you verify before choosing a Canadian city immigration guide?";
+    const planningQuestion = city
+      ? `How can ${city} applicants prepare a stronger immigration application?`
+      : "How can applicants prepare a stronger Canada immigration application?";
+    const verificationQuestion = city
+      ? `What should you verify before relying on an immigration consultant in ${city}?`
+      : "What should you verify before relying on an immigration consultant serving clients across Canada?";
+    const answer = `${audience} should compare the route that fits their goal, current status, occupation, education, language, family facts, documents and deadline. Local context can make the questions more practical, but the current federal and provincial instructions control ${locationLabel}.`;
+    const detail = `Before filing, align identity, status, education, language, work, funds, family, travel and previous-application records with the selected route. Keep a dated checklist and verify the current [${source.label}]({SOURCE}) before relying on a score, fee, form, intake or processing estimate.`;
+    const verificationAnswer = `Before relying on an immigration consultant${city ? ` in ${city}` : " serving clients across Canada"}, verify current CICC authorization, the written scope and fees, the evidence-review process and the official source controlling your route. No representative can guarantee a decision. Use the [${source.label}]({SOURCE}) as the controlling reference.`;
+
+    return [
+      { type: "heading", level: 2, text: localQuestion },
+      { type: "paragraph", text: resolveSource(answer, source) },
+      { type: "heading", level: 2, text: planningQuestion },
+      { type: "paragraph", text: resolveSource(detail, source) },
+      { type: "list", ordered: false, items: [
+        "the current federal and provincial instructions",
+        "identity, status, work, education and family records",
+        "language, funds, travel and previous-application evidence",
+        "dates, forms and any settlement or employer plan that affects the route",
+      ].map((item) => `**${item}** — compare it with the current route instructions and keep the supporting record together.`) },
+      { type: "heading", level: 2, text: verificationQuestion },
+      { type: "paragraph", text: resolveSource(verificationAnswer, source) },
+    ];
+  }
+
   const rule = ROUTE_RULES.find((candidate) => candidate.test(path)) || DEFAULT_RULE;
   const pageTitle = cleanText(page?.h1) || cleanText(rule.subject);
   const custom = getLocalPageContent(path);

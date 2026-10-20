@@ -20,6 +20,7 @@ export default function WhatsAppBubble() {
           alt=""
           width={256}
           height={256}
+          sizes="48px"
           draggable={false}
         />
       </span>

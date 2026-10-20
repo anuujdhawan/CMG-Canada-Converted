@@ -1,4 +1,3 @@
-import "react-chatbot-kit/build/main.css";
 import "@/styles/globals.css";
 import localFont from "next/font/local";
 import { site } from "@/config/site";
@@ -21,17 +20,22 @@ const manrope = localFont({
   fallback: ["system-ui", "sans-serif"],
 });
 
+const sitewideMetadataDefaults = buildMetadata({
+  description: site.meta.defaultDescription,
+  keywords: site.meta.keywords,
+});
+delete sitewideMetadataDefaults.robots;
+delete sitewideMetadataDefaults.alternates;
+delete sitewideMetadataDefaults.openGraph;
+delete sitewideMetadataDefaults.twitter;
+
 export const metadata = {
   title: {
     template: `%s | ${site.name}`,
     default: site.meta.defaultTitle,
   },
   metadataBase: site.url ? new URL(site.url) : undefined,
-  ...buildMetadata({
-    description: site.meta.defaultDescription,
-    path: "/",
-    keywords: site.meta.keywords,
-  }),
+  ...sitewideMetadataDefaults,
   // Icons come from Next 16 file conventions in src/app/ (favicon.ico, icon.png
   // and apple-icon.png), not from metadata.icons. The default social preview
   // intentionally uses the same square bird/chakra mark as the title-bar icon.
@@ -80,7 +84,10 @@ const organizationJsonLd = {
   ...(site.phone.replace(/\D/g, "").length >= 7 ? { telephone: site.phone } : {}),
   priceRange: "$$",
   currenciesAccepted: "CAD",
-  areaServed: { "@type": "Country", name: "Canada" },
+  areaServed: [
+    { "@type": "City", name: "Brampton" },
+    { "@type": "Country", name: "Canada" },
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: site.address.line1,

@@ -1,8 +1,5 @@
-"use client";
-
 import Link from "next/link";
 import { Activity, ArrowUpRight, ExternalLink, MapPin, ShieldCheck, UsersRound } from "lucide-react";
-import { useEffect, useState } from "react";
 import HeroCardShell from "./HeroCardShell";
 
 const PNP_PAGE_PATH = "/pnp-draws";
@@ -30,19 +27,9 @@ function publishedInvitationTotal(draws) {
   }, 0);
 }
 
-function PnpCardLoading() {
-  return (
-    <div className="grid gap-3" aria-label="Loading PNP draw highlights" role="status">
-      {["w-28", "w-full", "w-4/5"].map((width) => (
-        <div key={width} className={`h-5 ${width} animate-pulse rounded-lg bg-[color-mix(in_srgb,var(--template-on-primary)_12%,transparent)]`} />
-      ))}
-    </div>
-  );
-}
-
-export default function PnpDrawCard() {
-  const [draws, setDraws] = useState([]);
-  const [status, setStatus] = useState("loading");
+export default function PnpDrawCard({ initialDraws = [] }) {
+  const draws = initialDraws;
+  const status = draws.length ? "ready" : "error";
 
   const representedProvinces = new Set(draws.map((draw) => draw.province || draw.provinceLabel)).size;
   const invitationTotal = publishedInvitationTotal(draws);
@@ -51,27 +38,6 @@ export default function PnpDrawCard() {
     { value: representedProvinces || "—", label: "provinces", Icon: MapPin },
     { value: invitationTotal ? invitationTotal.toLocaleString("en-CA") : "—", label: "invites", Icon: UsersRound },
   ];
-
-  useEffect(() => {
-    let cancelled = false;
-    fetch("/api/pnp-draws?province=all&stream=all")
-      .then((response) => {
-        if (!response.ok) throw new Error("PNP draw feed unavailable");
-        return response.json();
-      })
-      .then((payload) => {
-        if (cancelled) return;
-        setDraws((payload.draws || []).slice(0, 3));
-        setStatus("ready");
-      })
-      .catch(() => {
-        if (!cancelled) setStatus("error");
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
 
   return (
     <HeroCardShell ariaLabel="Latest Canadian PNP draw highlights" className="hero-draw-card hero-pnp-draw-card -translate-y-[50%] max-[880px]:!translate-y-0">
@@ -88,7 +54,7 @@ export default function PnpDrawCard() {
       <p className="!mt-3 !max-w-none !text-[13px] !leading-[1.65] !tracking-[-0.01em] text-[color-mix(in_srgb,var(--template-on-primary)_74%,transparent)]">Compare recent provincial invitation rounds across Canada.</p>
 
       <div className="hero-pnp-draw-card__feed mt-4" aria-live="polite">
-        {status === "loading" ? <PnpCardLoading /> : status === "error" ? (
+        {status === "error" ? (
           <div className="flex items-start gap-3 text-[13px] leading-[1.55] text-[color-mix(in_srgb,var(--template-on-primary)_76%,transparent)]">
             <ExternalLink className="mt-0.5 flex-none text-[var(--cmg-template-primary-bright)]" width={16} height={16} aria-hidden="true" />
             <span>PNP highlights are temporarily unavailable. <a className="font-bold text-[var(--template-on-primary)] underline underline-offset-4" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html" target="_blank" rel="noopener noreferrer">Check official sources</a>.</span>

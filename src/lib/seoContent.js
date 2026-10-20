@@ -405,6 +405,40 @@ function defaultConfig(page) {
   const special = SPECIAL_CONFIGS[path];
   if (special) return { ...special };
 
+  if (path === "/locations" || path.startsWith("/locations/")) {
+    const city = path === "/locations"
+      ? null
+      : String(page?.h1 || "").replace(/^Immigration consultants in\s+/i, "").trim();
+    const topic = city ? `Canadian immigration options for ${city}` : "immigration consultants across Canada";
+    return {
+      topic,
+      headings: city
+        ? {
+            definition: `What can an immigration consultant in ${city} help you compare?`,
+            requirements: `Which immigration requirements should ${city} applicants verify first?`,
+            prepare: `How should ${city} applicants prepare a stronger immigration application?`,
+            source: `Where can ${city} applicants verify current immigration rules?`,
+          }
+        : {
+            definition: "How do immigration consultants serve clients across Canada?",
+            requirements: "What should you compare when choosing a Canadian immigration pathway?",
+            prepare: "How should applicants prepare a stronger Canada immigration application?",
+            source: "Where can applicants verify current Canadian immigration rules?",
+          },
+      answer: city
+        ? `An immigration consultant in ${city} can help compare federal and provincial programs, organize supporting evidence, prepare forms and track deadlines. The consultant does not decide the case: IRCC, a province or another authorized decision-maker applies the current rules to the evidence submitted.`
+        : "Immigration consultants serving clients across Canada help compare federal and provincial programs, organize evidence, prepare forms and track deadlines. The right pathway depends on the applicant's real location, status, history, family, documents and intended destination, while the final decision remains with the authorized government or tribunal decision-maker.",
+      fit: city
+        ? `Start with your actual location, status, goal, work and education history, language results, family facts and deadline. Then compare the federal route with the provincial or family pathway that fits the evidence you can support from ${city}.`
+        : "Start with the outcome you need, your current location and status, the province or community where you genuinely plan to settle, and the evidence you can support. City-specific guidance is useful context, but no location page replaces the current federal or provincial instructions.",
+      evidence: ["identity, status and civil records", "education, language and work history", "family, financial, travel and admissibility records", "the official guide, form and deadline for the selected route"],
+      next: city
+        ? `Use the local guide to identify the route and evidence questions, then verify the current official instructions before paying fees or filing. When your history or deadline is complex, a file-specific review can help test the plan before submission.`
+        : "Use the city guides and free tools to organize the facts, then verify the selected route against the current official source. When the history or deadline is complex, a file-specific review can help test the plan before submission.",
+      source: OFFICIAL_SOURCES.immigration,
+    };
+  }
+
   const family = FAMILY_CONFIGS.find((config) => config.test(path));
   if (family) return { ...family, topic: cleanTopic(page?.h1) || family.topic };
 

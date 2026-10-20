@@ -12,8 +12,9 @@ export default function HeroBackground() {
         src="/images/hero/toronto-skyline-autumn-park.webp"
         alt=""
         fill
-        priority
-        quality={60}
+        loading="eager"
+        fetchPriority="high"
+        quality={75}
         sizes="(max-width: 880px) 100vw, 1440px"
         className="absolute inset-0 scale-[1.055] object-cover object-center brightness-[1.06] contrast-[1.04] saturate-[1.08]"
       />

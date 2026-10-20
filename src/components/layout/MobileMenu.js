@@ -79,6 +79,7 @@ export default function MobileMenu({ open, onClose }) {
               alt={site.name}
               width={1912}
               height={1140}
+              sizes="60px"
               className="h-9 w-auto object-contain"
             />
           </div>
@@ -150,27 +151,31 @@ export default function MobileMenu({ open, onClose }) {
                   id={`mobile-${slugify(item.label)}`}
                   inert={!isOpen}
                   className={cn(
-                    "ml-3 space-y-0.5 border-l-2 border-primary/10 pl-3 overflow-hidden transition-[max-height,opacity,padding] duration-200 ease-out",
-                    isOpen ? "max-h-[70vh] pb-2 opacity-100" : "max-h-0 pb-0 opacity-0 pointer-events-none"
+                    "ml-3 grid border-l-2 border-primary/10 pl-3 transition-[grid-template-rows,opacity,padding] duration-200 ease-out",
+                    isOpen ? "grid-rows-[1fr] pb-2 opacity-100" : "grid-rows-[0fr] pb-0 opacity-0 pointer-events-none"
                   )}
                 >
-                  {item.children.map((child) => (
-                    <Link
-                      key={child.href + child.label}
-                      href={child.href}
-                      onClick={onClose}
-                      className="block px-3 py-2.5 rounded-xl text-sm text-muted font-medium hover:text-primary hover:bg-accent-soft transition-all"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                  <Link
-                    href={item.href}
-                    onClick={onClose}
-                    className="dropdown-view-all block px-3 py-2.5 rounded-xl text-sm font-bold text-primary no-underline"
-                  >
-                    View all {item.label.toLowerCase()} →
-                  </Link>
+                  <div className="min-h-0 overflow-hidden space-y-0.5">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.href + child.label}
+                        href={child.href}
+                        onClick={onClose}
+                        className="block px-3 py-2.5 rounded-xl text-sm text-muted font-medium hover:text-primary hover:bg-accent-soft transition-all"
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                    {!item.children.some((child) => child.href === item.href) && (
+                      <Link
+                        href={item.href}
+                        onClick={onClose}
+                        className="dropdown-view-all block px-3 py-2.5 rounded-xl text-sm font-bold text-primary no-underline"
+                      >
+                        View all {item.label.toLowerCase()} →
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </div>
             );

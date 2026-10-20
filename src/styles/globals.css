@@ -921,7 +921,8 @@ html[data-theme="light"] body:has(.cmg-template-home) {
   --template-success: var(--cmg-light-success);
 }
 body:has(.cmg-template-home) .site-header__nav-shell {
-  max-width: 1220px !important;
+  width: calc(100% - 48px);
+  max-width: 1340px !important;
   min-height: 72px;
   padding: 10px 14px !important;
   border-radius: 18px;
@@ -1633,7 +1634,7 @@ html[data-theme="light"] .cmg-template-home .faq-item__answer p {
 }
 @media (max-width: 1120px) {
   body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav a,
-  body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav button { font-size: 11px; }
+  body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav button { font-size: 12px; }
 }
 @media (max-width: 880px) {
   body:has(.cmg-template-home) .site-header__nav-shell .header-logo-shell,
@@ -1809,10 +1810,15 @@ body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav .
   transform: scaleX(1);
 }
 body:has(.cmg-template-home) .site-header__nav-shell [id$="-dropdown-panel"] {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   will-change: opacity, transform;
 }
 body:has(.cmg-template-home) .site-header__nav-shell [id$="-dropdown-panel"] > div:first-child {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 2;
+  pointer-events: none;
   background: var(--template-primary) !important;
   transform: scaleX(.28);
   transform-origin: left;
@@ -1984,7 +1990,7 @@ body:has(.cmg-template-home) .site-header > div:first-child a {
 }
 body:has(.cmg-template-home) .site-header__desktop-nav a,
 body:has(.cmg-template-home) .site-header__desktop-nav button {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   line-height: 1.4;
 }
@@ -2073,13 +2079,8 @@ body:has(.cmg-template-home) .site-header__nav-shell .site-header__cta {
   font-weight: 800;
   line-height: 1;
   box-shadow: 0 13px 28px color-mix(in srgb, var(--cmg-template-nav-cta) 72%, transparent);
-  /* Deliberate: the CTA floats on the pill's right edge — 70% of it inside
-     the pill, 30% hanging outside.
-     The 15px term is the shell's own inset (1px border + 14px padding), so
-     the percentage is measured from the pill's visible border rather than
-     from the content box. Keeping it in % means the split holds if the label
-     or font size changes; a fixed px nudge only hit the target for the one
-     button width it was tuned against. */
+  /* Let the CTA float across the pill's right edge, with roughly 30% of the
+     button extending beyond the black navbar shell. */
   transform: translateX(calc(30% + 15px));
   transition: transform .25s, box-shadow .25s, background .25s, color .25s;
 }
@@ -2448,14 +2449,14 @@ body:has(.cmg-template-home) .cmg-mobile-menu > div:last-child {
   background: var(--cmg-template-nav-surface) !important;
 }
 body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav {
-  flex: 1 1 auto;
+  flex: 1 1 0%;
   min-width: 0;
   justify-content: flex-start !important;
-  gap: 0.25rem !important;
+  gap: clamp(0.3rem, 0.35vw, 0.4rem) !important;
 }
 body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav + div {
   flex: 0 0 auto;
-  margin-left: clamp(0.25rem, 0.5vw, 0.6rem);
+  margin-left: clamp(1rem, 1.5vw, 1.75rem);
 }
 @media (max-width: 1119px) {
   body:has(.cmg-template-home) .site-header__utility-strip,

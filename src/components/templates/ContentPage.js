@@ -7,8 +7,8 @@ import { getPageFaqs } from "@/lib/faqs";
 import { HERO_TRUST_BADGES } from "@/lib/hero";
 import ReferenceHomepage from "@/components/home/ReferenceHomepage";
 import ReferenceServicePage from "@/components/home/ReferenceServicePage";
-import PnpProgramExperience from "@/components/tools/PnpProgramExperience";
-import { getPnpProgramForPath } from "@/data/pnp-programs";
+import PnpProgramExperienceGate from "@/components/tools/PnpProgramExperienceGate";
+import { getPnpProgramForPath, PNP_PROGRAMS, PNP_PROGRAM_OPTIONS } from "@/data/pnp-programs";
 
 const SITE_HOSTS = new Set([
   "commonwealthmigration.ca",
@@ -202,7 +202,7 @@ export default function ContentPage({ page, children }) {
         interactiveWide={Boolean(pnpProgram)}
         interactiveHeading={pnpProgram ? { hide: true } : undefined}
       >
-        {pnpProgram ? <PnpProgramExperience program={pnpProgram} /> : children}
+        {pnpProgram ? <PnpProgramExperienceGate program={pnpProgram} programs={pnpProgram.isOverview ? PNP_PROGRAMS : undefined} programOptions={pnpProgram.isOverview ? PNP_PROGRAM_OPTIONS : undefined} /> : children}
       </ReferenceServicePage>
       {pageStructuredData(page).map((obj, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: rebrand(serializeJsonLd(obj)) }} />

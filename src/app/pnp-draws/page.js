@@ -1,6 +1,10 @@
 import { buildMetadata, serializeJsonLd } from "@/lib/seo";
 import { pageStructuredData } from "@/components/templates/ContentPage";
 import PnpDrawsPage from "@/components/draws/PnpDrawsPage";
+import { getPnpDrawFeed } from "@/lib/pnpDraws";
+
+export const revalidate = 14_400;
+const INITIAL_DRAW_LIMIT = 15;
 
 const page = {
   path: "/pnp-draws",
@@ -30,9 +34,19 @@ export const metadata = buildMetadata({
 });
 
 export default function PnpDrawsRoute() {
+  const fullFeed = getPnpDrawFeed();
+  const initialFeed = {
+    ...fullFeed,
+    draws: fullFeed.draws.slice(0, INITIAL_DRAW_LIMIT),
+    totalInvitations: fullFeed.draws.reduce((total, draw) => {
+      const value = Number(String(draw.invitations).replace(/[^\d]/g, ""));
+      return Number.isFinite(value) ? total + value : total;
+    }, 0),
+  };
+
   return (
     <>
-      <PnpDrawsPage page={page} />
+      <PnpDrawsPage page={page} initialFeed={initialFeed} />
       {pageStructuredData(page, { includeFaq: true, pageType: "CollectionPage" }).map((obj, index) => (
         <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(obj) }} />
       ))}

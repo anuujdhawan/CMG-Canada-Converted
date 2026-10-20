@@ -1,5 +1,6 @@
 "use client";
 
+import "react-chatbot-kit/build/main.css";
 import { useEffect, useMemo, useState } from "react";
 import { Chatbot, createChatBotMessage, createClientMessage } from "react-chatbot-kit";
 import { ArrowRight, CalendarCheck, Check, ExternalLink, MessageCircle, RotateCcw, Search, X } from "lucide-react";

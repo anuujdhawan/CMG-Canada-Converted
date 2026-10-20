@@ -1,11 +1,12 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { ArrowUpRight, BookOpen } from "lucide-react";
 import { getImageObjectPosition } from "@/lib/imagePresentation";
 import { getLatestBlogPosts } from "@/lib/latestBlogs";
+import {
+  LatestBlogsCarouselControl,
+  LatestBlogsCarouselObserver,
+} from "./LatestBlogsCarouselControls";
 
 /**
  * "Latest guides" strip — a continuously auto-scrolling carousel of blog cards.
@@ -46,25 +47,6 @@ const CARD_CLASS = [
   "focus-visible:before:scale-x-100",
 ].join(" ");
 
-const MOBILE_CONTROL_STYLE = {
-  position: "absolute",
-  top: "50%",
-  zIndex: 5,
-  display: "inline-flex",
-  width: "2.75rem",
-  height: "2.75rem",
-  alignItems: "center",
-  justifyContent: "center",
-  border: "1px solid color-mix(in srgb, var(--template-on-primary) 34%, transparent)",
-  borderRadius: "999px",
-  background: "color-mix(in srgb, var(--cmg-template-deep-surface) 84%, transparent)",
-  color: "var(--template-on-primary)",
-  boxShadow: "0 8px 20px color-mix(in srgb, var(--cmg-template-deep-surface) 38%, transparent)",
-  transform: "translateY(-50%)",
-  backdropFilter: "blur(8px)",
-  cursor: "pointer",
-};
-
 function BlogCard({ post, decorative = false }) {
   const TitleTag = decorative ? "span" : "h3";
 
@@ -76,7 +58,8 @@ function BlogCard({ post, decorative = false }) {
           src={post.cover.src}
           alt={decorative ? "" : post.cover.alt}
           fill
-          sizes="(max-width: 620px) 240px, 328px"
+          quality={75}
+          sizes="(max-width: 1043px) 240px, (max-width: 1426px) 23vw, 328px"
           style={{ objectPosition: getImageObjectPosition(post.cover.src) }}
         />
         <span className="absolute left-[0.8rem] top-[0.8rem] z-[1] inline-flex items-center gap-[6px] rounded-full border border-[color-mix(in_srgb,var(--template-on-primary)_26%,transparent)] bg-[color-mix(in_srgb,var(--cmg-template-deep-surface)_64%,transparent)] px-[11px] py-[6px] text-[10px] font-extrabold uppercase leading-none tracking-[.13em] text-[var(--template-on-primary)] backdrop-blur-[10px]">
@@ -123,51 +106,6 @@ function BlogCard({ post, decorative = false }) {
 }
 
 export default function LatestBlogsCarousel() {
-  const viewportRef = useRef(null);
-  const [offscreen, setOffscreen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  const scrollMobileCard = (direction) => {
-    const viewport = viewportRef.current;
-    if (!viewport) return;
-
-    const cards = Array.from(viewport.querySelectorAll(".cmg-blog-marquee__card:not([inert])"));
-    const firstCard = cards[0];
-    if (!firstCard) return;
-
-    const cardStride = firstCard.getBoundingClientRect().width
-      + Number.parseFloat(window.getComputedStyle(firstCard).marginRight || "0");
-    if (!cardStride) return;
-
-    const currentIndex = Math.round(viewport.scrollLeft / cardStride);
-    const targetIndex = (currentIndex + direction + cards.length) % cards.length;
-
-    viewport.scrollTo({
-      left: targetIndex * cardStride,
-      behavior: "smooth",
-    });
-  };
-
-  // A long homepage should not keep animating a strip nobody can see.
-  useEffect(() => {
-    const viewport = viewportRef.current;
-    if (!viewport || typeof IntersectionObserver === "undefined") return undefined;
-    const observer = new IntersectionObserver(
-      ([entry]) => setOffscreen(!entry.isIntersecting),
-      { threshold: 0 },
-    );
-    observer.observe(viewport);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 620px)");
-    const updateIsMobile = () => setIsMobile(mediaQuery.matches);
-    updateIsMobile();
-    mediaQuery.addEventListener("change", updateIsMobile);
-    return () => mediaQuery.removeEventListener("change", updateIsMobile);
-  }, []);
-
   return (
     <section
       id="latest-guides"
@@ -197,24 +135,11 @@ export default function LatestBlogsCarousel() {
       </div>
 
       <div className="cmg-blog-marquee__rail" style={{ position: "relative" }}>
-        {isMobile && (
-          <button
-            className="cmg-blog-marquee__control cmg-blog-marquee__control--prev"
-            style={{ ...MOBILE_CONTROL_STYLE, left: "0.5rem" }}
-            type="button"
-            aria-label="Previous immigration guide"
-            aria-controls="latest-guides-viewport"
-            onClick={() => scrollMobileCard(-1)}
-          >
-            <ChevronLeft width={22} height={22} aria-hidden="true" />
-          </button>
-        )}
+        <LatestBlogsCarouselControl direction="previous" />
 
         <div
           id="latest-guides-viewport"
           className="cmg-blog-marquee__viewport"
-          ref={viewportRef}
-          data-paused={offscreen ? "true" : undefined}
         >
           <div
             className="cmg-blog-marquee__track"
@@ -229,18 +154,8 @@ export default function LatestBlogsCarousel() {
           </div>
         </div>
 
-        {isMobile && (
-          <button
-            className="cmg-blog-marquee__control cmg-blog-marquee__control--next"
-            style={{ ...MOBILE_CONTROL_STYLE, right: "0.5rem" }}
-            type="button"
-            aria-label="Next immigration guide"
-            aria-controls="latest-guides-viewport"
-            onClick={() => scrollMobileCard(1)}
-          >
-            <ChevronRight width={22} height={22} aria-hidden="true" />
-          </button>
-        )}
+        <LatestBlogsCarouselControl direction="next" />
+        <LatestBlogsCarouselObserver />
       </div>
 
       <div className="section-inner relative mx-auto w-[var(--container)]">

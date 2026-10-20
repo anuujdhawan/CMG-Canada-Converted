@@ -418,8 +418,9 @@ export default function BlogArticlePage({ post, article = null }) {
               src={cover.src}
               alt={cover.alt}
               fill
-              priority
-              sizes="(max-width: 620px) 100vw, 1220px"
+              quality={75}
+              preload
+              sizes="(max-width: 620px) calc(100vw - 28px), (max-width: 1120px) calc(100vw - 32px), (max-width: 1260px) calc(100vw - 40px), 1220px"
               className="object-cover [transition:transform_.8s_cubic-bezier(.16,1,.3,1),filter_.5s_ease]"
               style={{ objectPosition: getImageObjectPosition(cover.src) }}
             />

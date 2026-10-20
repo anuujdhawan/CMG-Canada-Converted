@@ -91,7 +91,7 @@ export function buildMetadata({
     ...(title ? { title: { absolute: pageTitle } } : {}),
     description: resolvedDescription,
     ...(keywords && { keywords: Array.isArray(keywords) ? keywords.join(", ") : keywords }),
-    ...(noIndex && { robots: { index: false, follow: true } }),
+    robots: { index: !noIndex, follow: true },
     alternates: url ? { canonical: url } : undefined,
     openGraph: {
       type,

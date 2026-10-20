@@ -123,7 +123,7 @@ export default function ServiceContentImageFrame({ image, side = "left", childre
   const imageOnRight = side === "right";
   const figure = (
     <figure className="service-content-media-frame group relative h-[clamp(350px,31vw,520px)] min-h-[350px] max-[1100px]:h-[clamp(320px,34vw,450px)] max-[1100px]:min-h-[320px] max-[880px]:h-[310px] max-[880px]:min-h-[310px] max-[880px]:rounded-[20px] m-0 flex-none overflow-hidden border border-[var(--border)] rounded-[25px] bg-[var(--surface)] shadow-[var(--shadow-soft)] isolate">
-      <Image src={image.src} alt={image.alt} fill sizes="(max-width: 880px) 100vw, 42vw" className="object-cover transition-[transform,filter] duration-[850ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.06] group-hover:saturate-[1.08]" style={{ objectPosition: image.objectPosition || getImageObjectPosition(image.src) }} />
+      <Image src={image.src} alt={image.alt} fill quality={75} sizes="(max-width: 620px) calc(100vw - 28px), (max-width: 880px) calc(100vw - 32px), (max-width: 1052px) 55vw, 576px" className="object-cover transition-[transform,filter] duration-[850ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.06] group-hover:saturate-[1.08]" style={{ objectPosition: image.objectPosition || getImageObjectPosition(image.src) }} />
       <div className="service-content-media-frame__wash absolute inset-0 z-[1] pointer-events-none bg-[linear-gradient(180deg,transparent_30%,color-mix(in_srgb,var(--cmg-template-deep-surface)_88%,transparent))]" aria-hidden="true" />
       <figcaption className="absolute z-[2] right-[22px] bottom-5 left-[22px] grid gap-[9px] text-[var(--template-on-primary)]">
         <span className="text-[var(--primary)] text-[13px] font-extrabold leading-[1.2] tracking-[.13em] uppercase">{image.label}</span>
@@ -147,6 +147,16 @@ export default function ServiceContentImageFrame({ image, side = "left", childre
           </ul>
         </div>
       </aside>
+      {supportingContent.localContext && (
+        <aside className="service-content-media-location-note rounded-[20px] border border-[color-mix(in_srgb,var(--primary)_24%,var(--border))] border-l-[3px] border-l-[var(--primary)] bg-[color-mix(in_srgb,var(--surface)_74%,var(--bg))] p-[24px_26px] max-[620px]:p-5">
+          <p className="m-0 mb-3 text-[var(--primary)] text-[11px] font-extrabold leading-[1.3] tracking-[.16em] uppercase">{supportingContent.localContext.eyebrow}</p>
+          <h3 className="m-0 mb-3 text-[clamp(21px,1.2rem+0.7vw,30px)] font-semibold leading-[1.1] tracking-[-.02em] text-[var(--ink)]">Plan around this city</h3>
+          <p className="m-0 text-[var(--muted)] text-[14px] leading-[1.55]">{supportingContent.localContext.intro}</p>
+          <ul className="mt-4 mb-0 grid gap-3 pl-5 text-[var(--muted)] text-[14px] leading-[1.55]">
+            {supportingContent.localContext.items.map((item) => <li key={`location-note-${item}`}>{item}</li>)}
+          </ul>
+        </aside>
+      )}
     </div>
   ) : figure;
   const copy = <div className="service-content-media-copy min-w-0 [&_.content-section-heading:first-child]:!mt-0">{children}</div>;

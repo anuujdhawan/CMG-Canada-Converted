@@ -23,6 +23,22 @@ for (const route of routeMap) {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactCompiler: true,
+  experimental: {
+    // SERP visitors commonly arrive on a cold cache and mobile connection. The
+    // shared Tailwind stylesheet otherwise adds a render-blocking request.
+    inlineCss: true,
+  },
+
+  // Keep the shared photo quality at Next Image's standard quality setting.
+  images: {
+    // The shared hero is served at a 1440px desktop slot. Include that exact
+    // breakpoint so 1x desktop screens do not receive the 1920px candidate.
+    deviceSizes: [640, 750, 828, 1080, 1200, 1440, 1920, 2048, 3840],
+    // Keep photo delivery on WebP until an AVIF quality setting is verified
+    // against the site's images; at quality 75 our sampled photos encoded larger.
+    formats: ["image/webp"],
+    qualities: [60, 75],
+  },
 
   async redirects() {
     return [

@@ -18,7 +18,8 @@ export default function BlogCard({ post, index = 0 }) {
           src={post.image.src}
           alt={post.image.alt}
           fill
-          sizes="(max-width: 620px) 100vw, (max-width: 1100px) 50vw, 33vw"
+          quality={75}
+          sizes="(max-width: 620px) calc(100vw - 28px), (max-width: 1100px) calc(50vw - 25px), (max-width: 1120px) calc(33.333vw - 22.667px), (max-width: 1260px) calc(33.333vw - 25.333px), 395px"
           className="object-cover [transition:transform_.8s_cubic-bezier(.16,1,.3,1),filter_.5s_ease] group-hover:scale-[1.065] group-hover:saturate-[1.08] group-focus-visible:scale-[1.065] group-focus-visible:saturate-[1.08]"
           style={{ objectPosition: getImageObjectPosition(post.image.src) }}
         />

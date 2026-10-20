@@ -1,22 +1,12 @@
-"use client";
-
-import { useCallback, useRef, useState } from "react";
-import dynamic from "next/dynamic";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { Menu, ChevronDown, AlertTriangle, ArrowRight } from "lucide-react";
+import { ChevronDown, AlertTriangle, ArrowRight } from "lucide-react";
 import { navigation } from "@/config/navigation";
 import { site } from "@/config/site";
 import { cn, slugify } from "@/lib/utils";
-import { isActiveNavItem } from "@/lib/navActive";
-import { useScrolled } from "@/hooks/useScrolled";
 import ThemeToggle from "./ThemeToggle";
-
-// The mobile drawer duplicates the full navigation tree. Keep it out of the
-// desktop DOM and client bundle until a visitor actually opens it; the desktop
-// navigation still provides the crawlable internal-link graph in the HTML.
-const MobileMenu = dynamic(() => import("./MobileMenu"), { ssr: false });
+import HeaderInteractionController from "./HeaderInteractionController";
+import HeaderMobileMenuLauncher from "./HeaderMobileMenuLauncher";
 
 /* ─── Logo lockup (CMG wordmark) ──────────────────────────────────── */
 function BrandLogo() {
@@ -28,8 +18,9 @@ function BrandLogo() {
           alt={site.name}
           width={1912}
           height={1140}
-          priority
-          sizes="(max-width: 640px) 150px, 180px"
+          loading="eager"
+          fetchPriority="low"
+          sizes="124px"
           className="h-9 w-auto object-contain sm:h-10"
         />
       </div>
@@ -84,7 +75,7 @@ function DropdownPanel({ children, className, id, open }) {
  */
 const RELOCATED_MENU_CATEGORIES = ["Caregivers", "Immigrate from the UK"];
 
-function FeaturedMenuCard({ card, secondary = false, onClose }) {
+function FeaturedMenuCard({ card, secondary = false }) {
   return (
     <div className={cn(
       "featured-menu-card flex min-w-0 flex-col rounded-xl p-6",
@@ -99,7 +90,6 @@ function FeaturedMenuCard({ card, secondary = false, onClose }) {
       </p>
       <Link
         href={card.href}
-        onClick={onClose}
         className="featured-menu-card__cta"
         aria-label={`${card.ctaLabel || "Explore this guide"}: ${card.title}`}
       >
@@ -112,7 +102,7 @@ function FeaturedMenuCard({ card, secondary = false, onClose }) {
   );
 }
 
-function MegaDropdown({ item, open, onClose }) {
+function MegaDropdown({ item }) {
   const sourceColumns = item.columns || [];
   const relocatedColumns = sourceColumns.filter((column) => RELOCATED_MENU_CATEGORIES.includes(column.category));
   const columns = sourceColumns.filter((column) => !relocatedColumns.includes(column));
@@ -126,11 +116,11 @@ function MegaDropdown({ item, open, onClose }) {
   return (
     <DropdownPanel
       id={`${slugify(item.label)}-dropdown-panel`}
-      open={open}
+      open={false}
     >
       <div className="grid min-w-0 items-start gap-x-5 gap-y-1 pt-2" style={{ gridTemplateColumns: gridCols }}>
         {columns.map((col) => {
-          const viewAll = col.items[0]?.href;
+          const viewAll = col.showViewAll === false ? null : col.items[0]?.href;
           return (
             <div key={col.category} className="flex flex-col">
               <p className="dropdown-category-title flex items-center gap-1.5 whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.08em] text-primary mb-2.5 pl-2.5">
@@ -139,13 +129,12 @@ function MegaDropdown({ item, open, onClose }) {
               </p>
               <div className="space-y-0.5">
                 {col.items.map((link) => (
-                  <DropdownLink key={link.href + link.label} link={link} onClose={onClose} />
+                  <DropdownLink key={link.href + link.label} link={link} />
                 ))}
               </div>
               {viewAll && (
                 <Link
                   href={viewAll}
-                  onClick={onClose}
                   className="dropdown-view-all group mt-1.5 flex items-center gap-1 pl-2.5 text-[11.5px] font-bold text-accent-dark hover:text-primary transition-colors no-underline after:hidden"
                 >
                   View all
@@ -160,13 +149,12 @@ function MegaDropdown({ item, open, onClose }) {
                   </p>
                   <div className="space-y-0.5">
                     {relocated.items.map((link) => (
-                      <DropdownLink key={link.href + link.label} link={link} onClose={onClose} />
+                      <DropdownLink key={link.href + link.label} link={link} />
                     ))}
                   </div>
                   {relocated.items.length > 1 && relocated.items[0]?.href && (
                     <Link
                       href={relocated.items[0].href}
-                      onClick={onClose}
                       className="dropdown-view-all group mt-1.5 flex items-center gap-1 pl-2.5 text-[11.5px] font-bold text-accent-dark hover:text-primary transition-colors no-underline after:hidden"
                     >
                       View all
@@ -181,8 +169,8 @@ function MegaDropdown({ item, open, onClose }) {
 
         {showFeatured && (
           <div className="grid min-w-0 gap-4">
-            <FeaturedMenuCard card={featured} onClose={onClose} />
-            {featuredSecondary && <FeaturedMenuCard card={featuredSecondary} secondary onClose={onClose} />}
+            <FeaturedMenuCard card={featured} />
+            {featuredSecondary && <FeaturedMenuCard card={featuredSecondary} secondary />}
           </div>
         )}
       </div>
@@ -190,7 +178,7 @@ function MegaDropdown({ item, open, onClose }) {
   );
 }
 
-function DropdownLink({ link, onClose }) {
+function DropdownLink({ link }) {
   const content = (
     <span className="group relative flex items-start gap-2.5 px-2.5 py-2 transition-all duration-150">
       {link.urgent && <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden />}
@@ -213,13 +201,13 @@ function DropdownLink({ link, onClose }) {
 
   if (link.external) {
     return (
-      <a href={link.href} target="_blank" rel="noopener noreferrer" onClick={onClose} className="block">
+      <a href={link.href} target="_blank" rel="noopener noreferrer" className="block">
         {content}
       </a>
     );
   }
   return (
-    <Link href={link.href} onClick={onClose} className="block">
+    <Link href={link.href} className="block">
       {content}
     </Link>
   );
@@ -247,7 +235,7 @@ function NavLabel({ item }) {
  * Reserving the slot puts every label on the same rhythm; `invisible` keeps
  * it out of the accessibility tree and out of hit-testing.
  */
-function NavItemInner({ item, open = false, hasPanel = false }) {
+function NavItemInner({ item, hasPanel = false }) {
   return (
     <>
       {item.standalone && (
@@ -258,7 +246,6 @@ function NavItemInner({ item, open = false, hasPanel = false }) {
         aria-hidden
         className={cn(
           "h-3.5 w-3.5 shrink-0 transition-transform duration-200",
-          open && "rotate-180",
           !hasPanel && "invisible"
         )}
       />
@@ -266,130 +253,66 @@ function NavItemInner({ item, open = false, hasPanel = false }) {
   );
 }
 
-/* State colours, shared by both branches (hover/geometry live in globals.css). */
-function navItemStateClass(active, open = false, standalone = false) {
-  return cn(
-    (active || open) && "text-primary bg-primary/10",
-    active && "nav-tab-active-light",
-    standalone && "text-accent-dark font-bold"
-  );
+/* One geometry for every top-level item, Home included. Hover, active and
+ * scrolled states are enhanced by a small client controller. */
+const NAV_ITEM_CLASS = "relative flex items-center gap-1 rounded-md px-0.5 py-2.5 text-[12px] xl:text-[12px] font-semibold text-white transition-all duration-150 whitespace-nowrap";
+
+function activePathsFor(item) {
+  return [
+    item.href,
+    ...(item.columns || []).flatMap((column) => column.items || []).map((link) => link.href),
+    ...(item.children || []).map((link) => link.href),
+    item.featured?.href,
+  ].filter(Boolean);
 }
 
-/* ─── Header ──────────────────────────────────────────────────────── */
+const ACTIVE_NAV_RULES = navigation.header.map(activePathsFor);
+
 export default function Header() {
-  const [openMenu, setOpenMenu] = useState(null);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const pathname = usePathname();
-  const scrolled = useScrolled(20);
-
-  const triggerRefs = useRef({});
-  const timers = useRef({});
-
-  const handleEnter = useCallback((label) => {
-    if (timers.current[label]) clearTimeout(timers.current[label]);
-    setOpenMenu(label);
-  }, []);
-
-  const handleLeave = useCallback((label) => {
-    timers.current[label] = setTimeout(() => setOpenMenu((cur) => (cur === label ? null : cur)), 180);
-  }, []);
-
-  const close = useCallback(() => setOpenMenu(null), []);
-
-  const handleKeyDown = useCallback(
-    (e, label) => {
-      if (e.key === "Escape" && openMenu === label) {
-        e.preventDefault();
-        setOpenMenu(null);
-        triggerRefs.current[label]?.focus();
-      }
-    },
-    [openMenu]
-  );
-
-  /* One geometry for every top-level item, Home included.
-   *
-   * The row gap is a single value rather than `gap-1 xl:gap-1.5`: the old
-   * split made the whole menu shift a few pixels sideways the moment the
-   * viewport crossed 1280px, and a menu that re-spaces itself on resize is
-   * exactly what "not in symmetry" looks like. The tighter 2px gap also
-   * pays for the chevron slot Home now reserves, so the row stays inside
-   * the pill at 1120px where it previously only just fitted.
-   *
-   * Hover (background + border) and the active pill are owned by
-   * globals.css, so no hover utilities here — one owner per property. */
-  const navItemClass =
-    "relative flex items-center gap-1 rounded-md px-0.5 py-2.5 text-[11px] xl:text-[12px] font-semibold text-white transition-all duration-150 whitespace-nowrap";
-
   return (
     <>
-      <header
-        className="site-header fixed top-0 inset-x-0"
-        style={{ zIndex: 200 }}
-      >
-        {/* Utility strip */}
+      <HeaderInteractionController activeNavRules={ACTIVE_NAV_RULES} />
+      <header className="site-header fixed top-0 inset-x-0" style={{ zIndex: 200 }}>
         <div className="site-header__utility-strip">
           <div className="mx-auto flex h-9 max-w-7xl items-center justify-end px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-5">
-              <ThemeToggle />
-            </div>
+            <div className="flex items-center gap-5"><ThemeToggle /></div>
           </div>
         </div>
 
-        {/* Main pill */}
-        <div className="px-3 pt-3 sm:px-4">
-          <div
-            className={cn(
-              "site-header__nav-shell relative mx-auto max-w-350 backdrop-blur-md rounded-2xl border px-4 transition-shadow duration-300",
-              scrolled
-                ? "shadow-[0_8px_32px_color-mix(in_srgb,var(--brand-navy)_12%,transparent),0_2px_8px_color-mix(in_srgb,var(--brand-navy)_6%,transparent)]"
-                : "shadow-[0_4px_24px_color-mix(in_srgb,var(--brand-navy)_8%,transparent),0_1px_4px_color-mix(in_srgb,var(--brand-navy)_4%,transparent)]"
-            )}
-          >
+        <div className="px-1 pt-3 sm:px-1">
+          <div className="site-header__nav-shell relative mx-auto max-w-none backdrop-blur-md rounded-2xl border px-4 transition-shadow duration-300 shadow-[0_4px_24px_color-mix(in_srgb,var(--brand-navy)_8%,transparent),0_1px_4px_color-mix(in_srgb,var(--brand-navy)_4%,transparent)]">
             <div className="flex items-center justify-between">
               <BrandLogo />
 
-              {/* Desktop Nav */}
-              <nav className="site-header__desktop-nav hidden min-[1120px]:flex items-center gap-0.5" aria-label="Main">
-                {navigation.header.map((item) => {
-                  const open = openMenu === item.label;
-                  const active = isActiveNavItem(pathname, item);
+              <nav className="site-header__desktop-nav hidden min-[1120px]:flex items-center gap-1" aria-label="Main">
+                {navigation.header.map((item, index) => {
                   const hasPanel = !!item.columns?.length;
-                  const stateClass = navItemStateClass(active, open, item.standalone);
+                  const standaloneClass = item.standalone ? "text-accent-dark font-bold" : "";
 
                   if (hasPanel) {
                     return (
-                      <div
-                        key={item.label}
-                        onMouseEnter={() => handleEnter(item.label)}
-                        onMouseLeave={() => handleLeave(item.label)}
-                      >
+                      <div key={item.label} data-nav-menu data-nav-label={item.label}>
                         <button
-                          ref={(el) => {
-                            triggerRefs.current[item.label] = el;
-                          }}
-                          className={cn(navItemClass, stateClass)}
+                          data-nav-index={index}
+                          data-nav-trigger
+                          className={cn(NAV_ITEM_CLASS, standaloneClass)}
                           aria-haspopup="true"
-                          aria-expanded={open}
+                          aria-expanded="false"
                           aria-controls={`${slugify(item.label)}-dropdown-panel`}
-                          onClick={() => setOpenMenu(open ? null : item.label)}
-                          onKeyDown={(e) => handleKeyDown(e, item.label)}
                         >
-                          <NavItemInner item={item} open={open} hasPanel />
+                          <NavItemInner item={item} hasPanel />
                         </button>
-                        <MegaDropdown item={item} open={open} onClose={close} />
+                        <MegaDropdown item={item} />
                       </div>
                     );
                   }
 
-                  /* Plain link — same shell, same active pill, same chevron
-                     slot as a trigger, so it reads as one of the set. */
                   return (
                     <Link
                       key={item.label}
                       href={item.href}
-                      className={cn(navItemClass, stateClass)}
-                      aria-current={active ? "page" : undefined}
+                      data-nav-index={index}
+                      className={cn(NAV_ITEM_CLASS, standaloneClass)}
                     >
                       <NavItemInner item={item} />
                     </Link>
@@ -397,33 +320,17 @@ export default function Header() {
                 })}
               </nav>
 
-              {/* Right: CTA — always visible, never crowded out */}
               <div className="hidden min-[1120px]:flex items-center">
-                <Link
-                  href={site.ctas.primary.href}
-                  className="site-header__cta rounded-md bg-primary text-white font-bold px-3.5 py-2.5 text-[12px] hover:bg-navy transition-colors shadow-md whitespace-nowrap"
-                >
+                <Link href={site.ctas.primary.href} className="site-header__cta rounded-md bg-primary text-white font-bold px-3.5 py-2.5 text-[12px] hover:bg-navy transition-colors shadow-md whitespace-nowrap">
                   {site.ctas.primary.label}
                 </Link>
               </div>
 
-              {/* Mobile hamburger */}
-              <button
-                onClick={() => setMobileOpen(true)}
-                className="site-header__menu-button min-[1120px]:hidden p-2.5 rounded-md text-primary hover:bg-primary/10 transition-colors"
-                aria-label="Open menu"
-              >
-                <Menu className="h-6 w-6" />
-              </button>
+              <HeaderMobileMenuLauncher />
             </div>
           </div>
         </div>
       </header>
-
-      {/* Load the mobile drawer on demand. The desktop navigation remains in
-          the initial HTML at every viewport, preserving crawlable links
-          without duplicating the full mobile tree in the initial DOM. */}
-      {mobileOpen && <MobileMenu open onClose={() => setMobileOpen(false)} />}
     </>
   );
 }

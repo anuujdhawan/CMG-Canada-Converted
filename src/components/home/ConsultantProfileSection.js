@@ -60,7 +60,7 @@ export const LICENSED_RCIC_PROFILE = {
     label: "Book With Pankaj",
     href: "https://calendar.app.google/coxwFVa4cXZTbntdA",
   },
-  intro: "Client-focused, compliance-driven guidance for individuals and families navigating Canadian immigration with clarity and confidence.",
+  intro: "Based in Brampton, Ontario, our CICC-regulated practice provides client-focused, compliance-driven guidance for individuals and families navigating Canadian immigration with clarity and confidence.",
   expertise: [
     {
       title: "Economic immigration",

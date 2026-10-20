@@ -204,7 +204,8 @@ export default function ServiceImageGallery({ page }) {
                 src={item.src}
                 alt={item.alt}
                 fill
-                sizes="(max-width: 620px) 100vw, (max-width: 880px) 50vw, 32vw"
+                quality={75}
+                sizes="(max-width: 620px) calc(100vw - 28px), (max-width: 880px) calc(50vw - 23px), (max-width: 1120px) calc(33.333vw - 20px), (max-width: 1260px) calc(33.333vw - 22.667px), 397px"
                 className="service-image-gallery__image object-cover"
                 style={{ objectPosition: getImageObjectPosition(item.src) }}
               />
