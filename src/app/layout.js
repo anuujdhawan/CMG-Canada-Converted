@@ -213,7 +213,7 @@ export default function RootLayout({ children }) {
         </a>
         <ScrollProgressBar />
         <Header />
-        <main id="main-content" className="site-theme flex-1 pb-12 min-[1120px]:pb-0">
+        <main id="main-content" className="site-theme flex-1 pb-12 min-[1360px]:pb-0">
           {children}
         </main>
         <Footer />

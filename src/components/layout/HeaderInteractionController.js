@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import { isActivePath } from "@/lib/navActive";
@@ -50,6 +50,15 @@ export default function HeaderInteractionController({ activeNavRules }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const closeMenusRef = useRef(() => {});
   const indexes = activeIndexes(pathname, activeNavRules);
+
+  const closeMobileMenu = useCallback(() => {
+    setMobileOpen(false);
+    window.requestAnimationFrame(() => {
+      const button = document.getElementById("site-header-mobile-menu-button");
+      button?.setAttribute("aria-expanded", "false");
+      button?.focus();
+    });
+  }, []);
 
   useEffect(() => {
     const header = document.querySelector(".site-header");
@@ -146,7 +155,10 @@ export default function HeaderInteractionController({ activeNavRules }) {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
 
-    const openMobileMenu = () => setMobileOpen(true);
+    const openMobileMenu = () => {
+      setMobileOpen(true);
+      document.getElementById("site-header-mobile-menu-button")?.setAttribute("aria-expanded", "true");
+    };
     window.addEventListener("cmg:open-mobile-menu", openMobileMenu);
 
     return () => {
@@ -156,6 +168,7 @@ export default function HeaderInteractionController({ activeNavRules }) {
       header.removeEventListener("click", closeFromLink);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("cmg:open-mobile-menu", openMobileMenu);
+      document.getElementById("site-header-mobile-menu-button")?.setAttribute("aria-expanded", "false");
     };
   }, []);
 
@@ -175,7 +188,7 @@ export default function HeaderInteractionController({ activeNavRules }) {
   return (
     <>
       <style data-cmg-header-active>{activeStyles(indexes)}</style>
-      {mobileOpen && <MobileMenu open onClose={() => setMobileOpen(false)} />}
+      {mobileOpen && <MobileMenu open onClose={closeMobileMenu} />}
     </>
   );
 }

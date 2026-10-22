@@ -352,7 +352,7 @@ export default function BlogArticlePage({ post, article = null }) {
   const category = getBlogCategory(categorySlug);
   const cover = getResearchBlogImage(post.slug, post.category);
   const guidance = CATEGORY_GUIDANCE[categorySlug] || CATEGORY_GUIDANCE["immigration-guides"];
-  const reviewed = formatMonth(post.updated || post.date || post.meta?.lastModified || "2026-10-06");
+  const reviewed = formatMonth(post.updated || post.date || post.meta?.lastModified);
 
   // Related guides lead with the article's own category, then widen to the rest
   // of the library so a single-post category still shows something useful.
@@ -391,8 +391,10 @@ export default function BlogArticlePage({ post, article = null }) {
         title={post.title}
         lead={post.description}
         chips={[
-          { icon: ShieldCheck, label: "Licensed RCIC insight" },
-          { icon: CalendarDays, label: reviewed ? `Reviewed ${reviewed}` : "Reviewed 2026" },
+          { icon: ShieldCheck, label: `By ${site.rcic.consultant.nameWithCredential}` },
+          reviewed
+            ? { icon: CalendarDays, label: `Updated ${reviewed}` }
+            : { icon: ExternalLink, label: `Official source: ${sourceLabel(post.source)}` },
           wordCount > 0
             ? { icon: Clock, label: `${readingMinutes} min read` }
             : { icon: ExternalLink, label: `Official source: ${sourceLabel(post.source)}` },
@@ -449,9 +451,13 @@ export default function BlogArticlePage({ post, article = null }) {
               </p>
               <div className="mt-auto flex flex-wrap items-center gap-x-[20px] gap-y-[9px] border-t border-[var(--border)] pt-[18px] max-[980px]:mt-[20px]">
                 <span className="inline-flex items-center gap-[7px]">
-                  <CalendarDays width={14} height={14} aria-hidden="true" className="text-[var(--primary)]" />
-                  <span className="text-[12.5px] font-bold text-[var(--muted)]">Reviewed {reviewed || "September 2026"}</span>
+                  <ShieldCheck width={14} height={14} aria-hidden="true" className="text-[var(--primary)]" />
+                  <span className="text-[12.5px] font-bold text-[var(--muted)]">By {site.rcic.consultant.nameWithCredential}</span>
                 </span>
+                {reviewed && <span className="inline-flex items-center gap-[7px]">
+                  <CalendarDays width={14} height={14} aria-hidden="true" className="text-[var(--primary)]" />
+                  <span className="text-[12.5px] font-bold text-[var(--muted)]">Updated {reviewed}</span>
+                </span>}
                 <a href={post.source} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-[7px]">
                   <ExternalLink width={14} height={14} aria-hidden="true" className="text-[var(--primary)]" />
                   <span className="text-[12.5px] font-bold text-[var(--muted)] group-hover:text-[var(--primary)]">

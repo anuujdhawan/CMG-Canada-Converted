@@ -123,7 +123,7 @@ export default function BlogHero({
         </div>
 
         <div className="hero-visual self-start relative w-full min-h-[530px] max-[880px]:static max-[880px]:min-h-0 max-[880px]:transform-none max-[880px]:mt-[26px] reveal in">
-          <HeroProofCardCarousel />
+          <HeroProofCardCarousel pagePath="/blog" />
         </div>
       </div>
     </section>

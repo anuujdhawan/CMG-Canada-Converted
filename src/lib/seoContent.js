@@ -471,7 +471,7 @@ export function getSeoContentBlocks(page) {
 
   const config = defaultConfig(page);
   const topic = config.topic;
-  const evidenceList = config.evidence.map((item) => `**${item.charAt(0).toUpperCase()}${item.slice(1)}** — keep the record current and explain any gap or mismatch.`);
+  const evidenceList = config.evidence.map((item) => `**${item.charAt(0).toUpperCase()}${item.slice(1)}**`);
   const sharedBlocks = [
     { type: "heading", level: 2, text: config.headings?.definition || `What is ${topic} and who may be a fit?` },
     { type: "paragraph", text: config.answer },

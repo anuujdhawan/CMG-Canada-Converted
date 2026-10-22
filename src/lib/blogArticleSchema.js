@@ -17,16 +17,13 @@ import { site } from "@/config/site";
 import { countArticleWords } from "@/data/blog-articles";
 import { getResearchBlogImage } from "./blog";
 
-/** Editorial review date stamped on every research guide. */
-export const REVIEWED = "2026-10-06";
-
 /** Rough reading speed used for `timeRequired`, in words per minute. */
 const WORDS_PER_MINUTE = 220;
 
 export function articleStructuredData(post, article) {
   const url = absoluteUrl(`/blog/${post.slug}`);
   const cover = getResearchBlogImage(post.slug, post.category);
-  const reviewed = post.meta?.lastModified || REVIEWED;
+  const reviewed = post.meta?.lastModified || null;
   const wordCount = countArticleWords(article);
   const nodes = [
     {
@@ -38,8 +35,7 @@ export function articleStructuredData(post, article) {
       image: [absoluteUrl(cover.src)],
       keywords: post.keywords,
       inLanguage: "en-CA",
-      datePublished: reviewed,
-      dateModified: reviewed,
+      ...(reviewed ? { datePublished: reviewed, dateModified: reviewed } : {}),
       author: { "@id": `${site.url}#organization` },
       publisher: { "@id": `${site.url}#organization` },
       mainEntityOfPage: { "@type": "WebPage", "@id": `${url}#webpage` },

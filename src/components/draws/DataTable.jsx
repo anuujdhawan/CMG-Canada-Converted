@@ -1,6 +1,6 @@
 import { ArrowRight, Table2 } from "lucide-react";
 
-export default function DataTable({ caption, columns, rows, sourceLabel = "Official data" }) {
+export default function DataTable({ caption, columns, rows, sourceLabel = "Source" }) {
   return (
     <div className="my-7 max-h-[640px] overflow-auto rounded-[18px] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-surface)_82%,transparent)] shadow-[var(--shadow-soft)] [isolation:isolate] max-[620px]:max-h-[560px]">
       <table className="w-full min-w-[860px] border-collapse text-left text-[13px]">
@@ -30,7 +30,7 @@ export default function DataTable({ caption, columns, rows, sourceLabel = "Offic
         </tbody>
       </table>
       <div className="flex items-center justify-between gap-4 border-t border-[color-mix(in_srgb,var(--template-border)_78%,transparent)] px-5 py-3 text-[11px] font-semibold text-[var(--template-muted)] max-[620px]:items-start max-[620px]:flex-col max-[620px]:gap-1">
-        <span>Swipe horizontally to explore all columns</span>
+        <span>Scroll to view all columns</span>
         <span className="inline-flex items-center gap-1.5 font-extrabold uppercase tracking-[.1em] text-[var(--template-primary)]">Canada.ca source <ArrowRight width={13} height={13} aria-hidden="true" /></span>
       </div>
     </div>

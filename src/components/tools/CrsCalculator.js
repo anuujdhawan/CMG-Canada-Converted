@@ -77,11 +77,6 @@ const SPOUSE_EXPERIENCE = [
   { value: "3", label: "3–4 years in Canada", points: 7 },
   { value: "5", label: "5+ years in Canada", points: 10 },
 ];
-const JOB_OFFER = [
-  { value: "none", label: "No qualifying job offer", points: 0 },
-  { value: "nocc0", label: "NOC 00 (senior management)", points: 200 },
-  { value: "other", label: "Other qualifying offer", points: 50 },
-];
 const CANADIAN_EDUCATION = [
   { value: "none", label: "None", points: 0 },
   { value: "1", label: "One- or two-year credential", points: 15 },
@@ -94,9 +89,9 @@ const FRENCH = [
 ];
 
 const initialState = {
-  age: 30, hasSpouse: false, education: "bachelor", language: "clb7", secondLanguage: "none",
-  canadianExperience: "1", foreignExperience: "3", spouseEducation: "bachelor", spouseLanguage: "none",
-  spouseExperience: "none", provincialNomination: false, jobOffer: "none", canadianEducation: "none", french: "none", sibling: false,
+  age: "", hasSpouse: false, education: "none", language: "none", secondLanguage: "none",
+  canadianExperience: "none", foreignExperience: "none", spouseEducation: "none", spouseLanguage: "none",
+  spouseExperience: "none", provincialNomination: false, canadianEducation: "none", french: "none", sibling: false,
 };
 
 const CRS_INPUT_CLASS = "!h-[3.25rem] !min-h-[3.25rem] !rounded-[0.95rem] !px-4 !bg-[color-mix(in_srgb,var(--template-surface-alt)_95%,var(--template-primary)_5%)] !text-[var(--template-ink)] !font-bold !text-[0.82rem] !leading-[1.2] !shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_5%,transparent),0_4px_12px_color-mix(in_srgb,var(--template-bg)_14%,transparent)] hover:!border-[color-mix(in_srgb,var(--template-primary)_45%,var(--template-border))] hover:!bg-[var(--template-surface)] focus:!border-[var(--template-primary)] focus:!shadow-[0_0_0_4px_color-mix(in_srgb,var(--template-primary)_15%,transparent),inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_5%,transparent)]";
@@ -130,15 +125,15 @@ export default function CrsCalculator() {
   const reset = () => setForm(initialState);
   const score = computeScore(form);
   const breakdown = computeBreakdown(form);
-  const level = score >= 1000 ? "Elite" : score >= 480 ? "Competitive" : score >= 440 ? "Potential" : "Developing";
+  const hasMinimumInputs = form.age !== "" && form.education !== "none" && form.language !== "none";
 
   return (
     <ToolCard className="crs-calculator rounded-[1.35rem]">
       <ToolHeader
         icon={Calculator}
         kicker="Free · Instant · No sign-up"
-        title="CRS Score Estimator"
-        subtitle="Close estimate based on the official IRCC grid — a planning snapshot before you submit."
+        title="Rough CRS score estimate"
+        subtitle="A simplified planning tool — compare the result with the current IRCC criteria before relying on it."
         action={<ToolResetButton onClick={reset}><RefreshCw className="h-3.5 w-3.5" /> Reset</ToolResetButton>}
       />
 
@@ -222,11 +217,6 @@ export default function CrsCalculator() {
                 <option value="yes">Yes — nominated</option>
               </ToolSelect>
             </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Qualifying job offer" htmlFor="crs-job-offer">
-              <ToolSelect className={CRS_INPUT_CLASS} id="crs-job-offer" value={form.jobOffer} onChange={set("jobOffer")}>
-                {JOB_OFFER.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-              </ToolSelect>
-            </ToolField>
             <ToolField labelClassName={CRS_LABEL_CLASS} label="Canadian education" htmlFor="crs-canadian-education">
               <ToolSelect className={CRS_INPUT_CLASS} id="crs-canadian-education" value={form.canadianEducation} onChange={set("canadianEducation")}>
                 {CANADIAN_EDUCATION.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
@@ -245,11 +235,11 @@ export default function CrsCalculator() {
         <ToolResultCard className="mt-7">
           <div className="tool-result__layout flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div className="tool-result__summary flex min-w-[230px] flex-col items-start max-[620px]:items-center max-[620px]:text-center">
-              <p className="tool-result__label flex items-center gap-2 text-xs font-bold uppercase tracking-widest !text-[var(--template-on-primary)]"><TrendingUp className="h-3.5 w-3.5" /> Estimated CRS — {level}</p>
+              <p className="tool-result__label flex items-center gap-2 text-xs font-bold uppercase tracking-widest !text-[var(--template-on-primary)]"><TrendingUp className="h-3.5 w-3.5" /> Planning estimate</p>
               <div
                 className="tool-result__score-gauge relative mt-3 grid size-[170px] place-items-center rounded-full bg-[conic-gradient(var(--template-on-primary)_var(--score-progress),color-mix(in_srgb,var(--template-on-primary)_18%,transparent)_0)] shadow-[0_12px_28px_color-mix(in_srgb,var(--cmg-template-deep-surface)_20%,transparent)] before:absolute before:inset-2.5 before:rounded-full before:bg-[color-mix(in_srgb,var(--template-primary)_82%,var(--template-accent))] before:content-['']"
                 style={{ "--score-progress": `${Math.min(100, Math.round((score / 1200) * 100))}%` }}
-                aria-label={`Estimated CRS score ${score} out of 1200`}
+                aria-label={`Planning CRS estimate ${score} out of 1200`}
               >
                 <div className="tool-result__score-gauge-content relative z-[1] flex flex-col items-center text-[var(--template-on-primary)]">
                   <strong className="tool-result__score font-extrabold !text-[var(--template-on-primary)] !text-[clamp(2.5rem,1.6rem+3vw,3.75rem)] !leading-[1.02] tracking-[-0.028em]">{score}</strong>
@@ -257,7 +247,7 @@ export default function CrsCalculator() {
                 </div>
               </div>
               <p className="tool-result__copy mt-2 max-w-md text-sm leading-relaxed !text-[var(--template-on-primary)] max-[620px]:max-w-[32rem]">
-                {score >= 1000 ? "With a provincial nomination or senior-management offer, you're effectively guaranteed an invitation." : score >= 480 ? "Competitive — you'd likely receive an invitation in recent draws." : score >= 440 ? "Potentially competitive depending on recent cut-offs." : "Below recent cut-offs — provincial streams or score improvements could change that."}
+                {hasMinimumInputs ? "This simplified result is a planning signal, not an invitation prediction or eligibility decision." : "Enter your age, education and language details to see a planning estimate."}
               </p>
             </div>
             <div className="w-full max-w-xs space-y-2">
@@ -269,7 +259,7 @@ export default function CrsCalculator() {
 
         <p className="text-[var(--template-muted)] mt-4 flex items-start gap-2 text-xs leading-relaxed">
           <Info className="text-[var(--template-primary)] mt-0.5 h-4 w-4 shrink-0" />
-          Simplified CRS grid (one CLB across all abilities, skill-transferability approximated). Official score is set by IRCC at submission — use this as a planning estimate.
+          Simplified CRS grid (one CLB across all abilities, skill-transferability approximated). Compare the result with the <a className="font-bold underline underline-offset-2 hover:text-[var(--template-primary)]" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html" target="_blank" rel="noopener noreferrer">current IRCC CRS criteria</a> before relying on it.
         </p>
       </div>
     </ToolCard>
@@ -310,8 +300,6 @@ function computeBreakdown(form) {
   }
   const additional = [];
   if (form.provincialNomination) additional.push({ label: "Provincial nomination", points: 600 });
-  const offer = JOB_OFFER.find((o) => o.value === form.jobOffer);
-  if (offer.points > 0) additional.push({ label: "Job offer", points: offer.points });
   const canEdu = CANADIAN_EDUCATION.find((o) => o.value === form.canadianEducation);
   if (canEdu.points > 0) additional.push({ label: "Canadian education", points: canEdu.points });
   const french = FRENCH.find((o) => o.value === form.french);

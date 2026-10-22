@@ -7,7 +7,7 @@
  * sponsorship, temporary residence, citizenship and inadmissibility.
  */
 
-const BALANCED_WORD_TARGET = 1300;
+const BALANCED_WORD_TARGET = 900;
 
 const ROUTE_RESEARCH_RULES = [
   {
@@ -155,10 +155,10 @@ const ROUTE_RESEARCH_RULES = [
 const DEFAULT_RULE = {
   topic: "this Canadian immigration pathway",
   sentences: [
-    "Research for this Canadian immigration pathway should begin with the exact program, service or decision and the applicant's location, status, family situation and deadline.",
-    "A useful page should answer the reader's questions about eligibility, documents, processing, fees, status and the next application using the current official instructions rather than a broad summary alone.",
-    "A useful page connects the goal, requirements, evidence, timeline and decision-maker so readers can understand which facts could change the route.",
-    "The most useful focus is the question the applicant needs answered, supported by the program name, document type, application stage and relevant personal history.",
+    "Start with the exact program, service or decision and the applicant's location, status, family situation and deadline.",
+    "Check eligibility, documents, processing, fees, status and the next application against the current official instructions.",
+    "Connect the goal, requirements, evidence, timeline and decision-maker so the facts that could change the route are visible.",
+    "Focus on the question the applicant needs answered, supported by the program name, document type, application stage and relevant personal history.",
     "Identity, education, work, language, family, funds, travel and admissibility records should be checked for consistency before a form or calculator result is relied on.",
     "A professional review should clarify the service scope and next decision without promising an approval that only the responsible Canadian authority can make.",
     "The application calendar should protect expiry dates, document requests and response deadlines while leaving room to obtain translations or explanations.",
@@ -226,7 +226,10 @@ function getResearchRule(page) {
 }
 
 export function getFrameResearchParagraph(page) {
-  return getResearchRule(page).sentences.slice(0, 4).join(" ");
+  return getResearchRule(page).sentences
+    .filter((sentence) => !/^Research for\b/i.test(sentence) && !/^A useful page should\b/i.test(sentence))
+    .slice(0, 3)
+    .join(" ");
 }
 
 function getFrameSupportTitle(page) {
@@ -875,7 +878,8 @@ export function getBalancedSeoContentBlocks(page, existingSeoBlocks = []) {
     : `What should you research before relying on ${topic}?`;
   const headingWords = countWords(heading);
   const selected = selectSentences(
-    [...rule.sentences, ...COMMON_RESEARCH_SENTENCES],
+    [...rule.sentences, ...COMMON_RESEARCH_SENTENCES]
+      .filter((sentence) => !/^Research for\b/i.test(sentence) && !/^A useful page should\b/i.test(sentence)),
     Math.max(deficit - headingWords + 20, 55)
   );
   const splitPoint = Math.max(1, Math.ceil(selected.length / 2));

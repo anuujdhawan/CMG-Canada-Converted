@@ -3122,3 +3122,253 @@ html[data-theme="light"] .cmg-template-service .cta-section a.btn:focus-visible 
     line-height: 1.4 !important;
   }
 }
+
+/* -------------------------------------------------------------------------
+   Responsive header contract
+
+   Keep the compact menu until the full navigation has enough room, keep the
+   phone shell centred, and keep the desktop CTA inside the shell. These rules
+   intentionally live at the end of the stylesheet because the home template
+   has older, more specific header overrides above them.
+---------------------------------------------------------------------------- */
+.site-header__utility-inner {
+  min-height: 2.75rem;
+}
+
+.site-header__nav-frame {
+  padding-top: 0.5rem !important;
+}
+
+.site-header__nav-shell > div:first-child {
+  min-height: 3.25rem !important;
+  gap: clamp(0.5rem, 1.6vw, 1rem) !important;
+}
+
+.site-header__menu-button {
+  flex: 0 0 2.75rem;
+  min-height: 2.75rem !important;
+  min-width: 2.75rem !important;
+}
+
+@media (max-width: 1359.98px) {
+  .site-header__utility-strip,
+  .site-header__utility-inner {
+    min-height: 2.75rem;
+    height: 2.75rem !important;
+  }
+
+  .site-header__nav-frame {
+    padding-inline: 0 !important;
+  }
+
+  body:has(.cmg-template-home) .site-header__nav-shell,
+  .site-header__nav-shell {
+    width: calc(100% - 2rem) !important;
+    max-width: 1220px !important;
+    margin-inline: auto !important;
+    min-height: 4.25rem !important;
+    padding: 0.5rem 0.75rem !important;
+    border-radius: 1rem !important;
+  }
+
+  body:has(.cmg-template-home) .site-header__nav-shell > div:first-child,
+  .site-header__nav-shell > div:first-child {
+    min-height: 3.25rem !important;
+  }
+
+  body:has(.cmg-template-home) .site-header__nav-shell .header-logo-shell,
+  .site-header__nav-shell .header-logo-shell {
+    min-width: 6.25rem !important;
+    width: 6.25rem !important;
+    height: 3rem !important;
+  }
+
+  body:has(.cmg-template-home) .site-header__nav-shell .header-logo-shell img,
+  .site-header__nav-shell .header-logo-shell img {
+    width: 6.25rem !important;
+    height: 3rem !important;
+  }
+
+  .site-header__menu-button {
+    color: var(--cmg-template-nav-ink, #f7f8fb) !important;
+  }
+
+  .site-header__nav-shell .site-header__desktop-nav,
+  .site-header__desktop-cta {
+    display: none !important;
+  }
+
+  .cmg-mobile-menu {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .cmg-mobile-menu > div:first-child {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+
+  .cmg-mobile-menu > div:last-child {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  .cmg-floating-bubble--call:not(.cmg-chatbot-root--open) {
+    display: inline-flex !important;
+  }
+}
+
+@media (max-width: 639.98px) {
+  body:has(.cmg-template-home) .site-header__nav-shell,
+  .site-header__nav-shell {
+    width: calc(100% - 10px) !important;
+    margin-inline: 5px !important;
+    min-height: 4.25rem !important;
+    padding-inline: 0.75rem !important;
+  }
+
+  body:has(.cmg-template-home) .site-header__nav-shell .header-logo-shell,
+  .site-header__nav-shell .header-logo-shell {
+    min-width: 5.375rem !important;
+    width: 5.375rem !important;
+    height: 2.75rem !important;
+  }
+
+  body:has(.cmg-template-home) .site-header__nav-shell .header-logo-shell img,
+  .site-header__nav-shell .header-logo-shell img {
+    width: 5.375rem !important;
+    height: 2.75rem !important;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1359.98px) {
+  body:has(.cmg-template-home) .site-header__nav-shell .header-logo-shell,
+  .site-header__nav-shell .header-logo-shell {
+    min-width: 6.5rem !important;
+    width: 6.5rem !important;
+  }
+
+  body:has(.cmg-template-home) .site-header__nav-shell .header-logo-shell img,
+  .site-header__nav-shell .header-logo-shell img {
+    width: 6.5rem !important;
+  }
+}
+
+@media (min-width: 1360px) {
+  .site-header__nav-shell {
+    width: min(1340px, calc(100% - 3rem)) !important;
+    max-width: 1340px !important;
+    padding: 0.625rem 0.875rem !important;
+  }
+
+  .site-header__nav-shell > div:first-child {
+    min-height: 3.625rem !important;
+  }
+
+  .site-header__nav-shell .site-header__desktop-nav {
+    flex: 1 1 auto;
+    min-width: 0;
+    justify-content: center !important;
+    gap: clamp(0.1rem, 0.25vw, 0.35rem) !important;
+  }
+
+  .site-header__desktop-nav > a,
+  .site-header__desktop-nav > div > button {
+    flex: 0 1 auto;
+    padding-inline: clamp(0.3rem, 0.55vw, 0.65rem) !important;
+    font-size: clamp(0.7rem, 0.73vw, 0.78rem) !important;
+  }
+
+  .site-header__desktop-cta {
+    flex: 0 0 auto;
+    margin-left: clamp(0.5rem, 1vw, 1rem);
+  }
+
+  body:has(.cmg-template-home) .site-header__nav-shell .site-header__cta,
+  .site-header__nav-shell .site-header__cta {
+    transform: none !important;
+  }
+
+  body:has(.cmg-template-home) .site-header__nav-shell .site-header__cta:hover,
+  body:has(.cmg-template-home) .site-header__nav-shell .site-header__cta:focus-visible,
+  .site-header__nav-shell .site-header__cta:hover,
+  .site-header__nav-shell .site-header__cta:focus-visible {
+    transform: translateY(-2px) !important;
+  }
+}
+
+@media (max-width: 1359.98px) {
+  .cmg-floating-bubble:not(.cmg-chatbot-root--open) {
+    right: 0.75rem !important;
+    left: auto !important;
+    width: 2.75rem !important;
+    height: 2.75rem !important;
+  }
+
+  .cmg-floating-bubble--call:not(.cmg-chatbot-root--open) {
+    bottom: 4rem !important;
+  }
+
+  .cmg-floating-bubble--whatsapp:not(.cmg-chatbot-root--open) {
+    bottom: 7.375rem !important;
+  }
+
+  .cmg-floating-bubble--chat:not(.cmg-chatbot-root--open) {
+    bottom: 10.75rem !important;
+  }
+}
+
+@media (min-width: 1360px) {
+  .cmg-floating-bubble:not(.cmg-chatbot-root--open) {
+    right: 1.25rem !important;
+    left: auto !important;
+  }
+}
+
+/* Keep the skyline visible in the hero. Contrast is handled with explicit
+ * theme text colours and a restrained text shadow rather than a copy panel. */
+.cmg-template-home .hero-copy h1 {
+  color: var(--cmg-dark-ink) !important;
+  -webkit-text-fill-color: var(--cmg-dark-ink) !important;
+  text-shadow: 0 2px 16px color-mix(in srgb, var(--cmg-template-deep-surface) 44%, transparent) !important;
+}
+
+.cmg-template-home .hero-copy .lead {
+  color: color-mix(in srgb, var(--cmg-dark-ink) 88%, transparent) !important;
+  -webkit-text-fill-color: color-mix(in srgb, var(--cmg-dark-ink) 88%, transparent) !important;
+  text-shadow: 0 1px 10px color-mix(in srgb, var(--cmg-template-deep-surface) 42%, transparent) !important;
+}
+
+.cmg-template-home .hero-copy .eyebrow {
+  color: var(--cmg-template-primary-highlight) !important;
+  -webkit-text-fill-color: var(--cmg-template-primary-highlight) !important;
+  text-shadow: 0 1px 8px color-mix(in srgb, var(--cmg-template-deep-surface) 44%, transparent) !important;
+}
+
+.cmg-template-home .hero-copy .btn-secondary {
+  background: color-mix(in srgb, var(--cmg-template-deep-surface) 42%, transparent) !important;
+  border-color: color-mix(in srgb, var(--cmg-dark-ink) 38%, transparent) !important;
+  color: var(--cmg-dark-ink) !important;
+  -webkit-text-fill-color: var(--cmg-dark-ink) !important;
+}
+
+html[data-theme="light"] .cmg-template-home .hero-copy h1 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(5, 7, 11, 0.78), 0 0 18px rgba(5, 7, 11, 0.42) !important;
+}
+
+html[data-theme="light"] .cmg-template-home .hero-copy .lead {
+  color: rgba(255, 255, 255, 0.94) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.94) !important;
+  text-shadow: 0 1px 3px rgba(5, 7, 11, 0.82), 0 0 14px rgba(5, 7, 11, 0.46) !important;
+}
+
+html[data-theme="light"] .cmg-template-home .hero-copy .eyebrow {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 1px 4px rgba(5, 7, 11, 0.82) !important;
+}
+
+html[data-theme="light"] .cmg-template-home .hero-copy .btn-secondary {
+  border-color: rgba(255, 255, 255, 0.72) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}

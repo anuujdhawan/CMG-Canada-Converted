@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -22,6 +22,20 @@ import { isActiveNavItem } from "@/lib/navActive";
 export default function MobileMenu({ open, onClose }) {
   const [expanded, setExpanded] = useState(null);
   const pathname = usePathname();
+  const closeButtonRef = useRef(null);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    closeButtonRef.current?.focus();
+
+    const onKeyDown = (event) => {
+      if (event.key !== "Escape") return;
+      event.preventDefault();
+      onClose();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open, onClose]);
 
   // Lock body scroll only while the drawer is actually open
   useEffect(() => {
@@ -43,12 +57,14 @@ export default function MobileMenu({ open, onClose }) {
   return (
     <div
       className={cn(
-        "fixed inset-0 z-[1100] min-[1120px]:hidden overflow-hidden",
+        "fixed inset-0 z-[1100] min-[1360px]:hidden overflow-hidden",
         !open && "pointer-events-none"
       )}
       role="dialog"
       aria-modal="true"
       aria-label="Mobile menu"
+      aria-hidden={!open}
+      id="cmg-mobile-menu"
     >
       {/* Backdrop. The drawer is mounted only while open, but the scrim still
           fades explicitly so the page is not dimmed during the transition.
@@ -67,7 +83,7 @@ export default function MobileMenu({ open, onClose }) {
       {/* Panel */}
       <div
         className={cn(
-          "cmg-mobile-menu absolute right-0 top-0 flex h-[100dvh] w-[85vw] flex-col overflow-hidden shadow-dropdown transition-transform duration-300 ease-out sm:w-[320px]",
+          "cmg-mobile-menu absolute right-0 top-0 flex h-[100dvh] w-[min(88vw,360px)] max-w-[calc(100vw-8px)] flex-col overflow-hidden shadow-dropdown transition-transform duration-300 ease-out",
           open ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -84,6 +100,8 @@ export default function MobileMenu({ open, onClose }) {
             />
           </div>
           <button
+            ref={closeButtonRef}
+            type="button"
             onClick={onClose}
             className="p-2.5 rounded-lg text-white hover:bg-white/10 transition-colors"
             aria-label="Close menu"

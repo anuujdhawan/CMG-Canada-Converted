@@ -17,7 +17,6 @@ import TemplateMotion from "./TemplateMotion";
 // now). The component file is kept at ./LiveSuccessVideos.js for later reuse:
 // restore this import and the <LiveSuccessVideos /> call below to bring it back.
 // import LiveSuccessVideos from "./LiveSuccessVideos";
-import LatestBlogsCarousel from "./LatestBlogsCarousel";
 import FaqSection from "@/components/sections/FaqSection";
 import { getSeoContentBlocks } from "@/lib/seoContent";
 import { getKeywordPageExpansionBlocks } from "@/lib/keywordPageExpansions";
@@ -131,6 +130,14 @@ function sectionHasParagraph(section) {
   return section.some((block) => block.type === "paragraph" && block.text?.trim());
 }
 
+function sectionSummary(section) {
+  const paragraph = section.find((block) => block.type === "paragraph" && block.text?.trim());
+  if (!paragraph) return "";
+  const summary = rebrand(paragraph.text).replace(/\s+/g, " ").trim();
+  if (summary.length <= 150) return summary;
+  return `${summary.slice(0, 145).replace(/\s+\S*$/, "")}…`;
+}
+
 function countSectionParagraphWords(section) {
   return section
     .filter((block) => block.type === "paragraph")
@@ -190,7 +197,12 @@ export default function ReferenceServicePage({ page, children, interactivePositi
   // and prevents the attached section from showing the page's real answers.
   const sections = allSections.filter((section) => !isFaqSection(section));
   const pageFaqs = getPageFaqs(page);
-  const headings = sections.flat().filter((block) => block.type === "heading" && block.level >= 2).slice(0, 5);
+  const headings = sections
+    .flatMap((section) => section
+      .filter((block) => block.type === "heading" && block.level >= 2)
+      .map((block) => ({ ...block, summary: sectionSummary(section) })))
+    .slice(0, 5);
+  const showCrsCta = /express-entry|crs-calculator|pnp|provincial-nominee/.test(page.path);
   const contentImages = getServiceContentImages(page);
   const paragraphImageSection = findFeaturedParagraphSection(sections);
   const tableImageSection = findFeaturedTableSection(sections, paragraphImageSection);
@@ -231,11 +243,11 @@ export default function ReferenceServicePage({ page, children, interactivePositi
             <p className="lead max-w-[680px] max-[1023.98px]:text-center max-[1023.98px]:mx-auto !mt-6 text-[color-mix(in_srgb,var(--template-on-primary)_82%,transparent)] [text-shadow:0_1px_10px_color-mix(in_srgb,var(--cmg-template-deep-surface)_48%,transparent)] text-[17px] leading-[1.8] max-[620px]:text-[15px]">{lead}</p>
             <div className="hero-actions flex flex-wrap gap-3 mt-[30px] max-[768px]:!flex max-[768px]:!flex-col max-[768px]:!items-center max-[768px]:!gap-3 max-[768px]:!mt-6">
               <TemplateLink path={site.ctas.primary.href} className="btn btn-primary max-[768px]:!w-full max-[768px]:!min-h-[52px] max-[768px]:!px-[22px] max-[768px]:!py-[14px] max-[768px]:!rounded-[14px] max-[768px]:!text-[14px]">Book a Consultation <ArrowRight width={18} height={18} aria-hidden="true" /></TemplateLink>
-              <TemplateLink path="/tools/crs-calculator" className="btn btn-secondary max-[768px]:!w-auto max-[768px]:!min-h-10 max-[768px]:!px-[18px] max-[768px]:!py-[9px] max-[768px]:!rounded-full max-[768px]:!text-[12.5px]">Check your CRS <Calculator width={18} height={18} aria-hidden="true" /></TemplateLink>
+              {showCrsCta && <TemplateLink path="/tools/crs-calculator" className="btn btn-secondary max-[768px]:!w-auto max-[768px]:!min-h-10 max-[768px]:!px-[18px] max-[768px]:!py-[9px] max-[768px]:!rounded-full max-[768px]:!text-[12.5px]">Check your CRS <Calculator width={18} height={18} aria-hidden="true" /></TemplateLink>}
             </div>
           </div>
           <div className="hero-visual self-start relative w-full min-h-[530px] max-[880px]:static max-[880px]:min-h-0 max-[880px]:transform-none max-[880px]:mt-[26px] reveal in">
-            <HeroProofCardCarousel />
+            <HeroProofCardCarousel pagePath={page.path} />
           </div>
         </div>
       </section>
@@ -260,7 +272,7 @@ export default function ReferenceServicePage({ page, children, interactivePositi
       <section className="section relative z-[1] bg-[var(--surface-alt)] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16 alt">
         <div className="section-inner mx-auto w-[var(--container)] service-route-layout grid grid-cols-[.82fr_1.18fr] items-center gap-[46px] max-[880px]:grid-cols-1 max-[880px]:gap-[35px]">
           <div className="service-route-copy reveal"><p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">What this service covers</p><h2 className="max-w-[590px]">Map the requirements to your next move</h2><p className="!max-w-[520px] !m-[18px_0_0] !text-[var(--muted)] !text-[15px] !leading-[1.8]">Use the section index to move from the high-level route into the requirements, evidence and decisions that shape your file before you book.</p><TemplateLink path={site.ctas.primary.href} className="btn btn-primary !mt-[25px]">Talk through your file <ArrowUpRight width={18} height={18} aria-hidden="true" /></TemplateLink></div>
-          <ol className="guide-list service-route-list block m-0 p-0 list-none border-t border-[var(--border)]">{headings.map((heading, index) => <li className="reveal grid grid-cols-[46px_1fr_24px] items-center gap-4 border-b border-[var(--border)] py-[18px]" key={`${heading.text}-${index}`} style={{ '--delay': `${index * 50}ms` }}><span className="text-[var(--primary)] text-[11px] font-extrabold leading-none">0{index + 1}</span><div><strong className="!text-[var(--ink)] !text-[15px] !font-bold !leading-normal">{rebrand(heading.text)}</strong><p className="!m-[3px_0_0] !text-[var(--muted)] !text-[13px] !leading-[1.65]">Open this section for the practical detail, evidence and requirements that shape the pathway.</p></div><ArrowUpRight className="text-[var(--primary)]" width={18} height={18} aria-hidden="true" /></li>)}</ol>
+          <ol className="guide-list service-route-list block m-0 p-0 list-none border-t border-[var(--border)]">{headings.map((heading, index) => <li className="reveal grid grid-cols-[46px_1fr_24px] items-center gap-4 border-b border-[var(--border)] py-[18px]" key={`${heading.text}-${index}`} style={{ '--delay': `${index * 50}ms` }}><span className="text-[var(--primary)] text-[11px] font-extrabold leading-none">0{index + 1}</span><div><strong className="!text-[var(--ink)] !text-[15px] !font-bold !leading-normal">{rebrand(heading.text)}</strong>{heading.summary && <p className="!m-[3px_0_0] !text-[var(--muted)] !text-[13px] !leading-[1.65]">{heading.summary}</p>}</div><ArrowUpRight className="text-[var(--primary)]" width={18} height={18} aria-hidden="true" /></li>)}</ol>
         </div>
       </section>
 
@@ -303,9 +315,6 @@ export default function ReferenceServicePage({ page, children, interactivePositi
       )}
 
       {pageFaqs.length > 0 && <ServiceFaqSection faqs={pageFaqs} isToolPage={isToolPage} />}
-
-      {/* Client Success Gallery — temporarily disabled. Restore with: <LiveSuccessVideos /> */}
-      <LatestBlogsCarousel />
 
       <section className="cta-section py-[72px]"><div className="cta-shell flex items-center justify-between max-[880px]:items-start max-[880px]:flex-col !w-[var(--container)] !gap-10 mx-auto !p-0 !rounded-none !bg-transparent"><div><h2 className="!text-[clamp(30px,1.8rem+2.2vw,46px)] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-none !text-[var(--template-on-primary)]">Ready to make the next step clearer?</h2><p className="!mt-3 !max-w-[650px] !text-[16px] !text-[color-mix(in_srgb,var(--template-on-primary)_80%,transparent)]">Bring your questions, history and documents to a focused review with a licensed Canadian immigration team.</p></div><TemplateLink path={site.ctas.primary.href} className="btn !flex-none !px-6 !py-[17px] !bg-[var(--template-on-primary)] !text-[var(--cmg-dark-secondary)]">Book a Consultation <ArrowUpRight width={19} height={19} aria-hidden="true" /></TemplateLink></div></section>
 

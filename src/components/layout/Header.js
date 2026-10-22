@@ -274,17 +274,17 @@ export default function Header() {
       <HeaderInteractionController activeNavRules={ACTIVE_NAV_RULES} />
       <header className="site-header fixed top-0 inset-x-0" style={{ zIndex: 200 }}>
         <div className="site-header__utility-strip">
-          <div className="mx-auto flex h-9 max-w-7xl items-center justify-end px-4 sm:px-6 lg:px-8">
+          <div className="site-header__utility-inner mx-auto flex h-9 max-w-7xl items-center justify-end px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-5"><ThemeToggle /></div>
           </div>
         </div>
 
-        <div className="px-1 pt-3 sm:px-1">
+        <div className="site-header__nav-frame px-1 pt-3 sm:px-1">
           <div className="site-header__nav-shell relative mx-auto max-w-none backdrop-blur-md rounded-2xl border px-4 transition-shadow duration-300 shadow-[0_4px_24px_color-mix(in_srgb,var(--brand-navy)_8%,transparent),0_1px_4px_color-mix(in_srgb,var(--brand-navy)_4%,transparent)]">
             <div className="flex items-center justify-between">
               <BrandLogo />
 
-              <nav className="site-header__desktop-nav hidden min-[1120px]:flex items-center gap-1" aria-label="Main">
+              <nav className="site-header__desktop-nav hidden min-[1360px]:flex items-center gap-1" aria-label="Main">
                 {navigation.header.map((item, index) => {
                   const hasPanel = !!item.columns?.length;
                   const standaloneClass = item.standalone ? "text-accent-dark font-bold" : "";
@@ -320,7 +320,7 @@ export default function Header() {
                 })}
               </nav>
 
-              <div className="hidden min-[1120px]:flex items-center">
+              <div className="site-header__desktop-cta hidden min-[1360px]:flex items-center">
                 <Link href={site.ctas.primary.href} className="site-header__cta rounded-md bg-primary text-white font-bold px-3.5 py-2.5 text-[12px] hover:bg-navy transition-colors shadow-md whitespace-nowrap">
                   {site.ctas.primary.label}
                 </Link>

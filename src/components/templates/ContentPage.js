@@ -7,6 +7,7 @@ import { getPageFaqs } from "@/lib/faqs";
 import { HERO_TRUST_BADGES } from "@/lib/hero";
 import ReferenceHomepage from "@/components/home/ReferenceHomepage";
 import ReferenceServicePage from "@/components/home/ReferenceServicePage";
+import LegalPage from "@/components/templates/LegalPage";
 import PnpProgramExperienceGate from "@/components/tools/PnpProgramExperienceGate";
 import { getPnpProgramForPath, PNP_PROGRAMS, PNP_PROGRAM_OPTIONS } from "@/data/pnp-programs";
 
@@ -185,6 +186,17 @@ export default function ContentPage({ page, children }) {
     return (
       <>
         <ReferenceHomepage page={page} heroData={getHeroContent(page)} />
+        {pageStructuredData(page).map((obj, i) => (
+          <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: rebrand(serializeJsonLd(obj)) }} />
+        ))}
+      </>
+    );
+  }
+
+  if (page.path.startsWith("/legal/")) {
+    return (
+      <>
+        <LegalPage page={page} />
         {pageStructuredData(page).map((obj, i) => (
           <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: rebrand(serializeJsonLd(obj)) }} />
         ))}

@@ -35,7 +35,7 @@ export default function ExpressEntryDrawsPage({ page }) {
             <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] font-bold text-[color-mix(in_srgb,var(--template-on-primary)_72%,transparent)] max-[1023.98px]:justify-center"><span className="inline-flex items-center gap-2"><CheckCircle2 className="text-[var(--cmg-template-primary-bright)]" width={16} height={16} aria-hidden="true" />Official Canada.ca feed</span><a href={OFFICIAL_PAGE} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[color-mix(in_srgb,var(--template-on-primary)_84%,transparent)] underline underline-offset-4">Open source page <ExternalLink width={14} height={14} aria-hidden="true" /></a></div>
           </div>
           <div className="hero-visual self-start relative w-full min-h-[530px] max-[880px]:static max-[880px]:min-h-0 max-[880px]:transform-none max-[880px]:mt-[26px] reveal in">
-            <HeroProofCardCarousel />
+            <HeroProofCardCarousel pagePath="/immigration-draws" />
           </div>
         </div>
       </section>

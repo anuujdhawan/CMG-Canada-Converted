@@ -406,7 +406,7 @@ export function getBlogPosts() {
     path: `/blog/${post.slug}`,
     title: post.title,
     seo: { title: `${post.title} | Commonwealth Migration Canada`, description: post.description, keywords: post.keywords.split('; ') },
-    meta: { lastModified: post.updated || post.date || '2026-10-06' },
+    meta: { lastModified: post.updated || post.date || null },
     category: { slug: researchCategorySlug(post.category), label: post.category, title: post.category, description: post.description },
     image: getResearchBlogImage(post.slug, post.category),
     research: post,

@@ -280,7 +280,7 @@ function renderTable(rows) {
       <div className="my-8" aria-label="At a glance">
         <div className="mb-3 flex items-center justify-between gap-4 max-[520px]:items-start max-[520px]:flex-col">
           <p className="m-0 flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[.16em] text-[var(--template-primary)]"><Table2 className="h-4 w-4" aria-hidden="true" />Key figures at a glance</p>
-          <span className={cn("text-[11px] font-bold", PREMIUM_DATA_MUTED)}>Source sequence preserved</span>
+          <span className={cn("text-[11px] font-bold", PREMIUM_DATA_MUTED)}>Quick reference</span>
         </div>
         <div className="grid grid-cols-4 gap-3 max-[760px]:grid-cols-2 max-[480px]:grid-cols-1">
           {rows[0].map((cell, index) => {
@@ -365,7 +365,7 @@ function renderTable(rows) {
                       <p className={cn("m-0 mt-1 text-[11px] font-semibold", PREMIUM_DATA_MUTED)}>{presentation.detail}</p>
                     </div>
                   </div>
-                  <span className="rounded-full border border-[color-mix(in_srgb,var(--template-primary)_35%,transparent)] bg-[color-mix(in_srgb,var(--template-primary)_10%,transparent)] px-3 py-1 text-[10px] font-extrabold uppercase tracking-[.1em] text-[var(--template-primary)]">Official data</span>
+                  <span className="rounded-full border border-[color-mix(in_srgb,var(--template-primary)_35%,transparent)] bg-[color-mix(in_srgb,var(--template-primary)_10%,transparent)] px-3 py-1 text-[10px] font-extrabold uppercase tracking-[.1em] text-[var(--template-primary)]">Quick reference</span>
                 </div>
               </th>
             </tr>
@@ -397,11 +397,10 @@ function renderTable(rows) {
         </tbody>
       </table>
       <div className="flex items-center justify-between gap-4 border-t border-[color-mix(in_srgb,var(--template-border)_78%,transparent)] px-4 py-3 max-[620px]:items-start max-[620px]:flex-col max-[620px]:gap-1">
-        <span className={cn("text-[11px] font-semibold", PREMIUM_DATA_MUTED)}>Presented in the supplied source sequence</span>
-        <span className="text-[11px] font-extrabold uppercase tracking-[.1em] text-[var(--template-primary)]">Reviewed 2026</span>
+        <span className={cn("text-[11px] font-semibold", PREMIUM_DATA_MUTED)}>Verify current details in the linked official source.</span>
       </div>
       <div className="hidden items-center justify-center gap-2 border-t border-[color-mix(in_srgb,var(--template-primary)_22%,var(--template-border))] bg-[color-mix(in_srgb,var(--template-primary)_7%,var(--template-surface-alt))] px-4 py-2.5 text-[11px] font-bold text-[var(--template-primary)] max-[620px]:flex">
-        Swipe horizontally to explore all columns <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+        Scroll to view all columns <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
       </div>
     </div>
   );

@@ -2,8 +2,8 @@
  * Search-focused context that appears immediately before data tables.
  *
  * The table rows stay in the supplied order. These paragraphs answer the
- * question a reader usually has before comparing the data, while adding
- * natural long-tail terms, location context and a current official source.
+ * question a reader usually has before comparing the data, while pointing to
+ * the current official source without adding generic marketing copy.
  */
 
 const OFFICIAL_SOURCES = {
@@ -268,20 +268,16 @@ export function getTableSeoContent(page, block, tableIndex = 0) {
   const context = TOPIC_RULES.find((rule) => rule.test(path)) || DEFAULT_CONTEXT;
   const descriptor = getTableDescriptor(block);
   const pageTitle = String(page?.h1 || context.topic).replace(/[|]/g, "").trim();
-  const location = context.location.charAt(0).toLowerCase() + context.location.slice(1);
   const question = tableIndex === 0
-    ? `What does this ${descriptor.label} show on the ${pageTitle} page?`
-    : `How should readers compare ${descriptor.focus} on the ${pageTitle} page?`;
+    ? `What does this ${descriptor.label} show?`
+    : `How should readers compare ${descriptor.focus}?`;
 
   return {
     question,
     eyebrow: descriptor.eyebrow,
     paragraphs: [
-      `This ${descriptor.label} on the ${pageTitle} page puts ${descriptor.focus} in one place for people researching ${context.topic}. Use it to get your bearings, then compare each row with your own status, history, documents and intended application date. The table is a useful starting point, but the final decision depends on the current rules and the evidence in your file.`,
-      tableIndex === 0
-        ? "Commonwealth Migration is based in Brampton, Ontario and works with clients across Canada. If you are comparing a Canada immigration pathway from Brampton or looking for an immigration consultant in Brampton, use these figures to prepare focused questions before you start forms or pay a fee."
-        : `For ${location}, these figures are a planning aid before you start forms or pay a fee.`,
-      `Check the current route instructions, NOC or TEER details, language evidence, family facts and deadline in the ${context.source.label} before relying on a score, timeline or requirement.`,
+      `This ${descriptor.label} summarizes ${descriptor.focus} for ${pageTitle}. Use it as a quick reference, then compare the relevant rows with your status, documents and intended application date.`,
+      `Confirm any score, fee, date or requirement against the ${context.source.label} before relying on it.`,
     ],
     source: context.source,
   };

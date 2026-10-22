@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, GraduationCap, MapPin, Phone, Mail, ArrowUpRight, ShieldCheck, Sparkles, CreditCard } from "lucide-react";
+import { GraduationCap, MapPin, Phone, Mail, ArrowUpRight, ShieldCheck, Sparkles, CreditCard } from "lucide-react";
 import { socialIcons } from "@/components/ui/SocialIcons";
 import { navigation } from "@/config/navigation";
 import { site } from "@/config/site";
@@ -17,33 +17,6 @@ const PAYMENT_LOGOS = [
   { key: "mastercard", label: "Mastercard", src: "/images/payments/mastercard.webp", width: 223, height: 140 },
   { key: "apple-pay", label: "Apple Pay", src: "/images/payments/apple-pay.webp", width: 140, height: 140 },
   { key: "google-pay", label: "Google Pay", src: "/images/payments/google-pay.webp", width: 140, height: 140 },
-];
-
-const REGULATORY_BODIES = [
-  {
-    name: "IRCC",
-    full: "Immigration, Refugees and Citizenship Canada",
-    sub: "Federal Immigration Authority",
-    href: "https://www.canada.ca/en/immigration-refugees-citizenship.html",
-  },
-  {
-    name: "CICC",
-    full: "College of Immigration and Citizenship Consultants",
-    sub: "Regulator of RCIC Consultants",
-    href: site.rcic.registerUrl,
-  },
-  {
-    name: "ESDC",
-    full: "Employment and Social Development Canada",
-    sub: "LMIA & Labour Programs",
-    href: "https://www.canada.ca/en/employment-social-development/services/foreign-workers.html",
-  },
-  {
-    name: "CBSA",
-    full: "Canada Border Services Agency",
-    sub: "Border & Enforcement Authority",
-    href: "https://www.cbsa-asfc.gc.ca/",
-  },
 ];
 
 function LinkColumn({ title, links }) {
@@ -246,32 +219,6 @@ export default function Footer() {
               <LinkColumn key={col.title} title={col.title} links={col.links} />
             ))}
 
-            {/* Regulatory trust bar — placed below link columns */}
-            <div className="site-footer__trust col-span-full mt-2 border-t border-line pt-[1.35rem]">
-              <div className="site-footer__trust-header flex items-center gap-[.85rem] mb-4">
-                <span className="site-footer__trust-line h-px max-w-20 flex-1 bg-[linear-gradient(90deg,transparent,var(--brand-border),transparent)]" aria-hidden />
-                <p className="m-0 whitespace-nowrap text-(--brand-navy-dark) text-[.6875rem] font-extrabold tracking-[.16em] uppercase">Regulated &amp; Recognised By</p>
-                <span className="site-footer__trust-line h-px max-w-20 flex-1 bg-[linear-gradient(90deg,transparent,var(--brand-border),transparent)]" aria-hidden />
-              </div>
-              <div className="site-footer__trust-grid grid grid-cols-4 gap-3 max-[720px]:grid-cols-2 max-[520px]:grid-cols-1">
-                {REGULATORY_BODIES.map((body) => (
-                  <a
-                    key={body.name}
-                    href={body.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="site-footer__trust-card relative flex flex-col items-center gap-2 rounded-2xl border border-line bg-white px-4 pt-5 pb-[1.1rem] text-center no-underline shadow-[0_4px_14px_color-mix(in_srgb,var(--brand-primary)_4%,transparent)] transition-[transform,border-color,box-shadow,background] duration-250 ease-in-out hover:-translate-y-1 hover:border-transparent hover:bg-surface hover:shadow-[0_12px_28px_color-mix(in_srgb,var(--brand-primary)_8%,transparent),0_2px_8px_color-mix(in_srgb,var(--brand-primary)_4%,transparent)]"
-                  >
-                    <span className="site-footer__trust-card-icon inline-flex size-9 items-center justify-center rounded-[.65rem] bg-accent-soft text-primary">
-                      <ExternalLink size={14} aria-hidden />
-                    </span>
-                    <span className="site-footer__trust-card-name text-(--brand-navy-dark) text-[.85rem] font-extrabold tracking-[.04em] leading-[1.15]">{body.name}</span>
-                    <span className="site-footer__trust-card-full text-(--brand-navy-dark) max-w-56 text-[.72rem] font-bold leading-[1.4]">{body.full}</span>
-                    <span className="site-footer__trust-card-sub mt-[.1rem] text-muted text-[.68rem] font-semibold leading-[1.3]">{body.sub}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
 

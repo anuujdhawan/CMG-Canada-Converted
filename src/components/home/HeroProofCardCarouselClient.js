@@ -6,12 +6,17 @@ import HeroProofCard from "./HeroProofCard";
 import PnpDrawCard from "./PnpDrawCard";
 
 const AUTOPLAY_MS = 5000;
-const CARDS = [HeroProofCard, ExpressEntryDrawCard, PnpDrawCard];
-const CARD_LABELS = ["Track record", "Latest Express Entry draw", "PNP highlights"];
 
-export default function HeroProofCardCarouselClient({ ariaLabel = "Commonwealth Migration Group highlights", initialPnpDraws }) {
+export default function HeroProofCardCarouselClient({ ariaLabel = "Commonwealth Migration Group highlights", initialPnpDraws, pagePath = "/" }) {
+  const showExpressEntry = pagePath === "/" || pagePath === "/immigration-draws" || /express-entry/.test(pagePath);
+  const showPnp = pagePath === "/" || pagePath === "/pnp-draws" || /pnp|provincial-nominee/.test(pagePath);
+  const cards = [
+    { Component: HeroProofCard, label: "Track record" },
+    ...(showExpressEntry ? [{ Component: ExpressEntryDrawCard, label: "Latest Express Entry draw" }] : []),
+    ...(showPnp ? [{ Component: PnpDrawCard, label: "PNP highlights" }] : []),
+  ];
   const [activeIndex, setActiveIndex] = useState(0);
-  const slideCount = CARDS.length;
+  const slideCount = cards.length;
 
   useEffect(() => {
     const timer = window.setInterval(() => {
@@ -28,18 +33,18 @@ export default function HeroProofCardCarouselClient({ ariaLabel = "Commonwealth 
       aria-label={ariaLabel}
     >
       <div className="absolute inset-0 max-[880px]:static max-[880px]:grid" aria-live="polite">
-        {CARDS.map((Card, index) => (
+        {cards.map(({ Component: Card, label }, index) => (
           <div
             className={`absolute inset-0 max-[880px]:static max-[880px]:[grid-area:1/1] transition-transform duration-[850ms] ease-[cubic-bezier(.2,.8,.2,1)] ${index === activeIndex ? "z-[1] translate-x-0 opacity-100" : "pointer-events-none translate-x-3 opacity-0"}`}
             inert={index !== activeIndex}
-            key={Card.name}
+            key={label}
           >
             <Card {...(Card === PnpDrawCard ? { initialDraws: initialPnpDraws } : {})} />
           </div>
         ))}
       </div>
       <div className="absolute right-0 bottom-[-27px] z-[2] flex items-center gap-2 max-[880px]:static max-[880px]:justify-end max-[880px]:pt-3" aria-label="Choose hero card">
-        {CARD_LABELS.map((label, index) => (
+        {cards.map(({ label }, index) => (
           <button
             type="button"
             key={label}
