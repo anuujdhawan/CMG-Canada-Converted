@@ -226,10 +226,13 @@ function getResearchRule(page) {
 }
 
 export function getFrameResearchParagraph(page) {
-  return getResearchRule(page).sentences
-    .filter((sentence) => !/^Research for\b/i.test(sentence) && !/^A useful page should\b/i.test(sentence))
-    .slice(0, 3)
-    .join(" ");
+  const title = String(page?.h1 || page?.seo?.title || "this pathway")
+    .replace(/\b20\d{2}\b/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  const focus = page?.contentBlocks?.find((block) => block.type === "heading" && block.level >= 2)?.text;
+  const section = focus ? `the section on ${focus.replace(/[?!.]+$/, "").toLowerCase()}` : "the requirements that control this route";
+  return `For ${title}, start with ${section} and match each important claim to a supporting record and current official instruction.`;
 }
 
 function getFrameSupportTitle(page) {
@@ -771,15 +774,25 @@ function getLocationSupportContext(page) {
 
 export function getFrameSupportContent(page) {
   const path = normalizePath(page?.path);
-  const researchSentences = getResearchRule(page).sentences;
+  const title = String(page?.h1 || page?.seo?.title || "this pathway")
+    .replace(/\b20\d{2}\b/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  const headings = (page?.contentBlocks || [])
+    .filter((block) => block.type === "heading" && block.level >= 2)
+    .map((block) => block.text.replace(/[?!.]+$/, "").toLowerCase())
+    .slice(0, 2);
+  const table = page?.contentBlocks?.find((block) => block.type === "table" && block.rows?.length > 1);
+  const tableFocus = table?.rows?.slice(1, 3).map((row) => row?.[0]).filter(Boolean).join(" and ");
+  const sectionFocus = tableFocus || headings.join(" and ") || "the route requirements and evidence";
   const localContext = getLocationSupportContext(page);
   const content = {
     eyebrow: "CHECK THE NEXT DECISION",
     title: getFrameSupportTitle(page),
     paragraphs: [
-      getFrameSupportParagraph(page),
-      researchSentences.slice(4, 8).join(" "),
-      getFrameSupportClosing(page),
+      `${title}: ${getFrameSupportParagraph(page)}`,
+      `For this page, compare ${sectionFocus} with the applicant's records and the current instructions that control ${title}.`,
+      `${title}: ${getFrameSupportClosing(page)}`,
     ].filter(Boolean),
     checks: [
       "Match the page topic to the exact program or document.",

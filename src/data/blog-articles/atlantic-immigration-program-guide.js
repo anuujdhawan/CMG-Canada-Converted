@@ -172,35 +172,45 @@ const article = {
 
   faqs: [
     {
-      question: "What is the Atlantic Immigration Program?",
-      answer:
-        "It is an employer-driven permanent residence program for four Atlantic provinces: Nova Scotia, New Brunswick, Newfoundland and Labrador, and Prince Edward Island. A designated employer makes a qualifying job offer, the province endorses the job and the settlement plan, and IRCC then decides the permanent residence application.",
+      "question": "How does the Atlantic Immigration Program help workers apply for Atlantic Canada permanent residence (PR)?",
+      "answer": "It is an employer-driven permanent residence program for four Atlantic provinces: Nova Scotia, New Brunswick, Newfoundland and Labrador, and Prince Edward Island. A designated employer makes a qualifying job offer, the province endorses the job and the settlement plan, and IRCC then decides the permanent residence application."
     },
     {
-      question: "Do I need a job offer for AIP Canada?",
-      answer:
-        "Yes. The program is built around a job offer from an employer designated in one of the four provinces, and the offer has to meet the program’s skill level, duration and working-condition rules. Without a designated employer and a qualifying offer, there is no endorsement and no application.",
+      "question": "Do I need a job offer for AIP Canada?",
+      "answer": "Yes. The program is built around a job offer from an employer designated in one of the four provinces, and the offer has to meet the program’s skill level, duration and working-condition rules. Without a designated employer and a qualifying offer, there is no endorsement and no application."
     },
     {
-      question: "Who applies for the endorsement certificate?",
-      answer:
-        "The employer applies for endorsement, not the applicant. The province issues the certificate once it is satisfied that the job offer and the settlement plan meet the program’s requirements. You provide the information and complete the settlement plan, but the application itself is the employer’s step.",
+      "question": "Who applies for an Atlantic Immigration Program endorsement certificate: the employer or worker?",
+      "answer": "The employer applies for endorsement, not the applicant. The province issues the certificate once it is satisfied that the job offer and the settlement plan meet the program’s requirements. You provide the information and complete the settlement plan, but the application itself is the employer’s step."
     },
     {
-      question: "Can I work in Canada while my permanent residence application is processed?",
-      answer:
-        "The program allows a temporary work permit application while the permanent residence application is in progress. That permit is tied to the endorsed employer and role, so it is employer-specific rather than open. If you change jobs before the permanent decision, the endorsement and the permit both have to be addressed.",
+      "question": "Can I work in Canada while my permanent residence application is processed?",
+      "answer": "The program allows a temporary work permit application while the permanent residence application is in progress. That permit is tied to the endorsed employer and role, so it is employer-specific rather than open. If you change jobs before the permanent decision, the endorsement and the permit both have to be addressed."
     },
     {
-      question: "What if my employer is not designated?",
-      answer:
-        "An employer that is not designated cannot start the process. Designation is a real step with its own requirements, and it happens before your application. If the employer is willing to apply, confirm the timing with them, because nothing else in the sequence can begin until designation is in place.",
+      "question": "Can I use an Atlantic Immigration Program job offer if my employer is not designated?",
+      "answer": "An employer that is not designated cannot start the process. Designation is a real step with its own requirements, and it happens before your application. If the employer is willing to apply, confirm the timing with them, because nothing else in the sequence can begin until designation is in place."
     },
     {
-      question: "How long does the program take?",
-      answer:
-        "Timelines depend on the province’s designation and endorsement processing and on IRCC’s assessment of the permanent residence application, and they change over time. Rather than rely on a figure from an older guide, check the current estimates on the official IRCC and provincial pages for each step.",
+      "question": "How long does Atlantic Immigration Program permanent residence processing take in Canada?",
+      "answer": "Timelines depend on the province’s designation and endorsement processing and on IRCC’s assessment of the permanent residence application, and they change over time. Rather than rely on a figure from an older guide, check the current estimates on the official IRCC and provincial pages for each step."
     },
+    {
+      "question": "Which provinces take part in the Atlantic Immigration Program?",
+      "answer": "The Atlantic Immigration Program covers New Brunswick, Nova Scotia, Prince Edward Island, and Newfoundland and Labrador. A candidate needs a qualifying offer from a designated employer in one of those provinces."
+    },
+    {
+      "question": "Does an AIP applicant need a settlement plan?",
+      "answer": "Yes. After receiving a qualifying offer, the candidate obtains a settlement plan from an approved service provider. The employer includes it with the provincial endorsement request, and the candidate includes it with the permanent-residence application."
+    },
+    {
+      "question": "Can an Atlantic Immigration Program candidate bring family members?",
+      "answer": "Eligible accompanying family members can be included in the permanent-residence application. They may need their own forms and supporting documents, and the settlement plan should account for the candidate’s accompanying family."
+    },
+    {
+      "question": "Can an AIP candidate use any job offer in Atlantic Canada?",
+      "answer": "No. The employer must be designated for the program and the offer must meet AIP rules for hours, non-seasonal work, occupation, pay and duration. A job in an Atlantic province alone is not enough."
+    }
   ],
 
   related: [
@@ -211,8 +221,22 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Atlantic Immigration Program", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration.html" },
-    { label: "IRCC — Check processing times", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html" },
+    {
+      "label": "IRCC — Atlantic Immigration Program",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration.html"
+    },
+    {
+      "label": "IRCC — Check processing times",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration/who-can-apply.html",
+      "label": "IRCC Atlantic candidate eligibility"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration/settlement-service-provider-organizations.html",
+      "label": "IRCC Atlantic settlement plans"
+    }
   ],
 };
 

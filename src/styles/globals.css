@@ -153,6 +153,8 @@
 }
 
 .site-header__dropdown-panel {
+  display: flex;
+  flex-direction: column;
   margin-top: 0.65rem !important;
   padding: 1.15rem !important;
   border-radius: 1.35rem !important;
@@ -165,23 +167,28 @@
      based on the full viewport and ignored the space already used by the
      utility strip, nav shell and browser chrome. */
   max-height: min(72dvh, calc(100dvh - 16rem)) !important;
-  overflow-x: hidden !important;
-  overflow-y: auto !important;
+  overflow: hidden !important;
+}
+
+.site-header__dropdown-content {
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-gutter: stable;
   scroll-padding-block: 1rem;
 }
 
-.site-header__dropdown-panel::-webkit-scrollbar { width: 8px; }
-.site-header__dropdown-panel::-webkit-scrollbar-track { background: transparent; }
-.site-header__dropdown-panel::-webkit-scrollbar-thumb {
+.site-header__dropdown-content::-webkit-scrollbar { width: 8px; }
+.site-header__dropdown-content::-webkit-scrollbar-track { background: transparent; }
+.site-header__dropdown-content::-webkit-scrollbar-thumb {
   border: 2px solid transparent;
   border-radius: 999px;
   background: color-mix(in srgb, var(--brand-primary) 55%, transparent);
   background-clip: padding-box;
 }
 
-.site-header__dropdown-panel > div:first-child {
+.site-header__dropdown-accent {
   right: 1.15rem !important;
   left: 1.15rem !important;
   height: 2px !important;
@@ -1784,6 +1791,17 @@ html[data-theme="light"] .cmg-template-home .hero-profile-card__body li span,
 html[data-theme="light"] .cmg-template-home .hero-profile-card__body .mini-badge,
 html[data-theme="light"] .cmg-template-home .hero-profile-card__body > div:last-child { color: var(--cmg-light-ink) !important; }
 @media (max-width: 880px) {
+  /* Keep offscreen homepage sections out of the initial mobile render work.
+     The intrinsic size preserves scroll height while content-visibility skips
+     layout and paint until a section approaches the viewport. */
+  .cmg-template-home > .section,
+  .cmg-template-home > .cmg-blog-marquee,
+  .cmg-template-home > .payment-trust-section,
+  .cmg-template-home > .cta-section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 720px;
+  }
+
   body:has(.cmg-template-home) .site-header > div:first-child { display: block; }
   .cmg-template-home .hero-background-carousel .cmg-hero-carousel__wash { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-template-deep-surface) 52%, transparent) 0%, color-mix(in srgb, var(--cmg-template-deep-surface) 14%, transparent) 48%, color-mix(in srgb, var(--cmg-template-deep-surface) 52%, transparent) 100%); }
   .cmg-template-home .hero-background-image .hero-background-image__wash { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-template-deep-surface) 52%, transparent) 0%, color-mix(in srgb, var(--cmg-template-deep-surface) 14%, transparent) 48%, color-mix(in srgb, var(--cmg-template-deep-surface) 52%, transparent) 100%); }
@@ -1810,12 +1828,11 @@ body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav .
   transform: scaleX(1);
 }
 body:has(.cmg-template-home) .site-header__nav-shell [id$="-dropdown-panel"] {
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   will-change: opacity, transform;
 }
-body:has(.cmg-template-home) .site-header__nav-shell [id$="-dropdown-panel"] > div:first-child {
-  position: sticky !important;
+body:has(.cmg-template-home) .site-header__nav-shell [id$="-dropdown-panel"] .site-header__dropdown-accent {
+  position: absolute !important;
   top: 0 !important;
   z-index: 2;
   pointer-events: none;
@@ -1824,7 +1841,7 @@ body:has(.cmg-template-home) .site-header__nav-shell [id$="-dropdown-panel"] > d
   transform-origin: left;
   transition: transform .4s cubic-bezier(.2, .8, .2, 1);
 }
-body:has(.cmg-template-home) .site-header__nav-shell [id$="-dropdown-panel"]:hover > div:first-child {
+body:has(.cmg-template-home) .site-header__nav-shell [id$="-dropdown-panel"]:hover > .site-header__dropdown-accent {
   transform: scaleX(1);
 }
 body:has(.cmg-template-home) .site-header__nav-shell [id$="-dropdown-panel"] a > .group {

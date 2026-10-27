@@ -21,7 +21,7 @@ const article = {
     "The CRS totals 1,200 points across four groups, and a provincial nomination alone is worth 600 of them.",
     "Language ability is the largest lever you control, because it scores directly and lifts skill transferability.",
     "Age scores highest in the twenties and declines each year, reaching zero at 45.",
-    "Job offer points were removed from the CRS in 2025 and no longer add to a score.",
+    "From November 3, 2026, a qualifying offer in an eligible high-wage occupation may earn CRS points; the new factor compares that offer with eligible Canadian work experience.",
     "French-language results can add points on top of a strong English result, without changing your education or work history.",
     "Every improvement depends on evidence: a valid test result, an assessed credential or documented work hours.",
   ],
@@ -64,7 +64,7 @@ const article = {
       heading: "What raises a CRS score the most?",
       body: [
         "The ranking is not the same as a to-do list. A nomination is the biggest single addition, but it depends on a province or territory choosing you, which is a separate application with its own criteria. Language results are the largest addition you control directly, which is why they come first.",
-        "Notice what is not on the list. A job offer no longer adds points. IRCC removed job offer points from the CRS in 2025, so a valid offer can still matter for program eligibility without changing your score at all.",
+        "The job-offer rule changes again on November 3, 2026. From that date, an eligible high-wage occupation may qualify for job-offer points under the new Labour Market Integration factor. The offer must meet IRCC’s criteria; having an offer alone does not guarantee points or an invitation.",
       ],
       list: {
         title: "Ranked by how much each factor usually moves a score",
@@ -125,7 +125,7 @@ const article = {
       heading: "Which additional points count, and what no longer does?",
       body: [
         "The additional group is where the biggest single swing sits, and it is also where the rules have moved most recently. A provincial nomination is worth 600 points on its own, which is why a nomination can move a candidate from outside the invited range to comfortably inside it.",
-        "Job offer points are gone. IRCC removed them from the CRS in 2025, including the higher value that was previously given to senior management occupations. A valid job offer can still be a requirement for some programs and streams, so keep the details in your profile, but do not expect it to add points.",
+        "From November 3, 2026, qualifying high-wage job offers can earn points under the Labour Market Integration factor. The offer must be valid under Express Entry and match an occupation on IRCC’s eligible list. A job offer can also matter for program eligibility even when it does not qualify for CRS points.",
       ],
       list: {
         title: "Additional points currently available",
@@ -179,7 +179,7 @@ const article = {
       heading: "What should you verify before you rely on your score?",
       body: [
         "Confirm every input against the official CRS criteria page and the IRCC calculator, and check that the documents behind your score are still valid. Test results expire, assessments carry a date, and work experience has to fall within the period the rules require.",
-        "Then check the current rules again before you rely on them. The CRS has changed recently, most visibly on job offers, and it can change again. A guide, a calculator or a forum post written before the last change may still be circulating.",
+        "Check the CRS rules again before relying on an estimate. IRCC’s new Labour Market Integration factor takes effect November 3, 2026 and compares qualifying Canadian work experience with a qualifying high-wage job offer. A guide or calculator written before that date may not reflect the new calculation.",
         "If your profile includes a prior refusal, a status gap or documents that disagree with each other, deal with that before optimising points. A high score does not cure an inconsistency.",
       ],
     },
@@ -191,36 +191,51 @@ const article = {
     { term: "Skill transferability", definition: "The CRS group that rewards combinations of factors, such as a post-secondary credential with strong language results or with work experience." },
     { term: "Additional points", definition: "The CRS group covering a provincial nomination, French-language skills, Canadian post-secondary study and a sibling in Canada." },
     { term: "Educational credential assessment", definition: "An assessment from a designated organisation that states what a foreign credential is equivalent to in Canada, needed before foreign education scores points." },
-    { term: "CLB and NCLC", definition: "The Canadian Language Benchmark for English and its French equivalent, the Niveaux de compétence linguistique canadiens, used to express language test results." },
-    { term: "Provincial nomination", definition: "A decision by a province or territory to nominate you for permanent residence. Linked to Express Entry, it adds 600 CRS points." },
+    { term: "CLB and NCLC", definition: "CLB scores report English proficiency; NCLC scores report French proficiency. IRCC converts approved language-test results to the relevant scale." },
+    { term: "Provincial nomination", definition: "A province or territory's endorsement of a candidate for permanent residence. When linked to Express Entry, it adds 600 CRS points." },
   ],
 
   faqs: [
     {
-      question: "What is a good CRS score for Express Entry?",
-      answer:
-        "There is no fixed good score, because the cut-off in each round depends on the size and strength of the pool. What you control is your own score and the factors you have left to improve. Use the calculator to see which factor has unused room, then decide whether a language retest, a credential assessment or a nomination is the better investment.",
+      "question": "How does a CRS calculator in Canada estimate my Express Entry score, and how can I improve my CRS score?",
+      "answer": "There is no fixed good score, because the cut-off in each round depends on the size and strength of the pool. What you control is your own score and the factors you have left to improve. Use the calculator to see which factor has unused room, then decide whether a language retest, a credential assessment or a nomination is the better investment."
     },
     {
-      question: "Does a job offer improve a CRS score?",
-      answer:
-        "No. IRCC removed job offer points from the CRS in 2025, including the higher value previously given to senior management occupations. A valid job offer can still be required for some programs and provincial streams, so keep the details accurate in your profile, but it will not add to your score.",
+      "question": "Does a job offer improve a CRS score?",
+      "answer": "Through November 2, 2026, a job offer does not add CRS points. From November 3, a qualifying offer in an eligible high-wage occupation may earn 50, 70 or 100 points under IRCC’s new factor. The offer must meet the current criteria, and an offer alone does not guarantee an invitation."
     },
     {
-      question: "How many points does a provincial nomination add to a CRS score?",
-      answer:
-        "A provincial or territorial nomination linked to Express Entry adds 600 points, which is the largest single addition available in the system. That is why a nomination can move a candidate from well outside the invited range to comfortably inside it. The nomination itself is a separate application decided by the province, not by IRCC.",
+      "question": "How many points does a provincial nomination add to a CRS score?",
+      "answer": "A provincial or territorial nomination linked to Express Entry adds 600 points, which is the largest single addition available in the system. That is why a nomination can move a candidate from well outside the invited range to comfortably inside it. The nomination itself is a separate application decided by the province, not by IRCC."
     },
     {
-      question: "Can I improve my CRS score without a job offer?",
-      answer:
-        "Yes, and most improvements do not involve an employer. A higher language test result, an educational credential assessment, additional documented work experience, Canadian post-secondary study and a French-language result all add points. A provincial nomination adds the most, but it depends on a province selecting you.",
+      "question": "Can I improve my CRS score without a job offer?",
+      "answer": "Yes, and most improvements do not involve an employer. A higher language test result, an educational credential assessment, additional documented work experience, Canadian post-secondary study and a French-language result all add points. A provincial nomination adds the most, but it depends on a province selecting you."
     },
     {
-      question: "Do my language test results expire for CRS purposes?",
-      answer:
-        "Language test results are valid for a limited period, so check the current validity rule on the official page before you rely on an older result. An expired result cannot support the points it produced, and it can also affect category eligibility where a language threshold applies. Re-testing is often the single most efficient way to protect a score.",
+      "question": "Do my language test results expire for CRS purposes?",
+      "answer": "Language test results are valid for a limited period, so check the current validity rule on the official page before you rely on an older result. An expired result cannot support the points it produced, and it can also affect category eligibility where a language threshold applies. Re-testing is often the single most efficient way to protect a score."
     },
+    {
+      "question": "Does a high CRS score guarantee an Express Entry invitation?",
+      "answer": "No. IRCC sets the CRS score cutoff and number of invitations for each round. A score that met one round’s cutoff may not meet another, and candidates must remain eligible and keep profile details accurate."
+    },
+    {
+      "question": "Where can I calculate my current Express Entry CRS score?",
+      "answer": "Use IRCC’s official CRS calculator with your current age, education, language results, work experience and family details. The result is an estimate; confirm the profile fields and program eligibility before submitting."
+    },
+    {
+      "question": "Does age affect my Express Entry CRS score?",
+      "answer": "Yes. Age is one of the CRS factors, and the points available change with age and whether you have an accompanying spouse. Use the official calculator rather than relying on a remembered point table."
+    },
+    {
+      "question": "Can my spouse’s education and language results improve my CRS score?",
+      "answer": "They may contribute under the spouse or common-law partner factors when applicable. Enter accurate spouse information and compare the official CRS criteria; points depend on the specific credential and test results."
+    },
+    {
+      "question": "Will Express Entry job-offer points change on November 3, 2026?",
+      "answer": "Yes. IRCC says the CRS job-offer points and assessment rules change on November 3, 2026. The new Labour Market Integration factor treats qualifying Canadian work experience and eligible high-wage job offers differently, so use IRCC’s transition instructions."
+    }
   ],
 
   related: [
@@ -233,9 +248,26 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Comprehensive Ranking System (CRS) criteria", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html" },
-    { label: "IRCC — Express Entry: Who can apply", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply.html" },
-    { label: "IRCC — Category-based selection for Express Entry", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations/category-based-selection.html" },
+    {
+      "label": "IRCC — Comprehensive Ranking System (CRS) criteria",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html"
+    },
+    {
+      "label": "IRCC — Express Entry: Who can apply",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply.html"
+    },
+    {
+      "label": "IRCC — Category-based selection for Express Entry",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations/category-based-selection.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html",
+      "label": "IRCC CRS calculator"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html",
+      "label": "IRCC 2026 CRS and job-offer changes"
+    }
   ],
 };
 

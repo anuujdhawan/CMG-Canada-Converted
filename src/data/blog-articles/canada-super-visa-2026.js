@@ -168,35 +168,45 @@ const article = {
 
   faqs: [
     {
-      question: "Is the Canada super visa a permanent residence program?",
-      answer:
-        "No. The Canada super visa is a temporary resident visa for parents and grandparents, and time spent in Canada on it does not count towards permanent residence or citizenship. Permanent residence for parents and grandparents comes through the Parents and Grandparents Program, which is a separate sponsorship stream with its own invitation process.",
+      "question": "Is the Canada super visa a permanent residence program?",
+      "answer": "No. The Canada super visa is a temporary resident visa for parents and grandparents, and time spent in Canada on it does not count towards permanent residence or citizenship. Permanent residence for parents and grandparents comes through the Parents and Grandparents Program, which is a separate sponsorship stream with its own invitation process."
     },
     {
-      question: "What are the super visa Canada requirements?",
-      answer:
-        "The main requirements are an invitation from your child or grandchild, proof of the relationship, host income at the current minimum necessary income, Canadian medical insurance meeting the specification, a medical exam by a panel physician, and admissibility as a visitor. Several of these are figures that change, so confirm the current position on IRCC’s page.",
+      "question": "What are the Super Visa Canada requirements for parents and grandparents visiting their family in Canada?",
+      "answer": "The main requirements are an invitation from your child or grandchild, proof of the relationship, host income at the current minimum necessary income, Canadian medical insurance meeting the specification, a medical exam by a panel physician, and admissibility as a visitor. Several of these are figures that change, so confirm the current position on IRCC’s page."
     },
     {
-      question: "How much income must the host show for a super visa?",
-      answer:
-        "The host must meet the minimum necessary income, which is published and updated each year and rises with household size. Because the figure changes, check the current threshold on IRCC’s page and the minimum necessary income guide, then evidence it with notices of assessment, tax returns, employment letters or business financials rather than a single deposit.",
+      "question": "How much income must the host show for a super visa?",
+      "answer": "The host must meet the minimum necessary income, which is published and updated each year and rises with household size. Because the figure changes, check the current threshold on IRCC’s page and the minimum necessary income guide, then evidence it with notices of assessment, tax returns, employment letters or business financials rather than a single deposit."
     },
     {
-      question: "What insurance does the super visa require?",
-      answer:
-        "You need Canadian medical insurance that meets the rules, covering health care, hospitalisation and repatriation, valid for the required period, issued by a Canadian insurer or approved provider, and paid for. The coverage amount and validity period are set by IRCC and can change, so check the current specification before you buy a policy.",
+      "question": "What medical insurance does a parent or grandparent need for a Canada Super Visa?",
+      "answer": "You need Canadian medical insurance that meets the rules, covering health care, hospitalisation and repatriation, valid for the required period, issued by a Canadian insurer or approved provider, and paid for. The coverage amount and validity period are set by IRCC and can change, so check the current specification before you buy a policy."
     },
     {
-      question: "Is there a parent visa Canada route to permanent residence?",
-      answer:
-        "Yes, through the Parents and Grandparents Program, which is the sponsorship route to permanent residence for parents and grandparents. It opens through an invitation to apply and is not available on demand. The super visa is the temporary alternative that can be used while a family waits for that route or where sponsorship is not possible.",
+      "question": "Is there a parent visa Canada route to permanent residence?",
+      "answer": "Yes, through the Parents and Grandparents Program, which is the sponsorship route to permanent residence for parents and grandparents. It opens through an invitation to apply and is not available on demand. The super visa is the temporary alternative that can be used while a family waits for that route or where sponsorship is not possible."
     },
     {
-      question: "Can a super visa be extended?",
-      answer:
-        "If you are in Canada and want to stay longer than the period you were granted, you can apply to extend your status before your authorised stay ends. Extensions are decided on their own facts and are not automatic, so apply in time and include evidence of your continued purpose and your plans to leave.",
+      "question": "Can parents extend their stay in Canada after entering with a valid Super Visa?",
+      "answer": "If you are in Canada and want to stay longer than the period you were granted, you can apply to extend your status before your authorised stay ends. Extensions are decided on their own facts and are not automatic, so apply in time and include evidence of your continued purpose and your plans to leave."
     },
+    {
+      "question": "How long can a parent stay in Canada on a Super Visa?",
+      "answer": "A Super Visa can allow a parent or grandparent to stay for up to five years per entry. The visa itself can be valid for multiple entries for up to ten years, subject to the passport and the decision at the border."
+    },
+    {
+      "question": "Can my parent apply for a Super Visa from inside Canada?",
+      "answer": "No. The applicant must apply from outside Canada and receive the visa through a visa office abroad. The parent or grandparent must also meet the medical, insurance, relationship and temporary-visitor requirements."
+    },
+    {
+      "question": "Can a visiting parent’s income help meet the Super Visa host income requirement?",
+      "answer": "Since March 31, 2026, IRCC allows the visiting parent or grandparent’s income to help cover the remaining amount when the host and any eligible co-signer meet the required minimum portion. Provide the income documents listed in IRCC’s current guide."
+    },
+    {
+      "question": "Who can co-sign a Super Visa invitation and income support?",
+      "answer": "The host’s spouse or common-law partner may co-sign if they meet IRCC’s conditions. A sibling or another relative of the host cannot co-sign. Check the live income instructions because the family-size calculation also affects the amount."
+    }
   ],
 
   related: [
@@ -207,10 +217,30 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Super visa for parents and grandparents", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa.html" },
-    { label: "IRCC — Super visa eligibility", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/eligibility.html" },
-    { label: "IRCC — Sponsor your parents and grandparents", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/sponsor-parents-grandparents.html" },
-    { label: "IRCC — Medical exams for temporary residents", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/medical-exams/requirements-temporary-residents.html" },
+    {
+      "label": "IRCC — Super visa for parents and grandparents",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa.html"
+    },
+    {
+      "label": "IRCC — Super visa eligibility",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/eligibility.html"
+    },
+    {
+      "label": "IRCC — Sponsor your parents and grandparents",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/sponsor-parents-grandparents.html"
+    },
+    {
+      "label": "IRCC — Medical exams for temporary residents",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/medical-exams/requirements-temporary-residents.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/changes-parents-grandparents-super-visa-income-requirement-calculated.html",
+      "label": "IRCC 2026 Super Visa income changes"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents.html",
+      "label": "IRCC Super Visa documents and insurance"
+    }
   ],
 };
 

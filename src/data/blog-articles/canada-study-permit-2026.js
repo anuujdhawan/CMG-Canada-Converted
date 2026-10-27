@@ -168,35 +168,45 @@ const article = {
 
   faqs: [
     {
-      question: "What are the main study permit Canada requirements?",
-      answer:
-        "The core requirements are a letter of acceptance from a designated learning institution, a provincial attestation letter where it applies, proof of funds for tuition and living costs, a letter of explanation setting out your purpose of study, and biometrics. Some applicants also need a medical exam. Confirm the current list on IRCC’s page before you file, because the details change.",
+      "question": "What are the main study permit Canada requirements?",
+      "answer": "The core requirements are a letter of acceptance from a designated learning institution, a provincial attestation letter where it applies, proof of funds for tuition and living costs, a letter of explanation setting out your purpose of study, and biometrics. Some applicants also need a medical exam. Confirm the current list on IRCC’s page before you file, because the details change."
     },
     {
-      question: "How much money do I need to show as proof of funds Canada?",
-      answer:
-        "The amount depends on your tuition, your living costs and whether family is coming with you, and the required period is set by IRCC. Rather than rely on a figure from an older guide, check the current requirement on the official page, then show that the money exists, is available to you and has a traceable source.",
+      "question": "How much money do I need to show as proof of funds Canada?",
+      "answer": "The amount depends on your tuition, your living costs and whether family is coming with you, and the required period is set by IRCC. Rather than rely on a figure from an older guide, check the current requirement on the official page, then show that the money exists, is available to you and has a traceable source."
     },
     {
-      question: "Do I always need a provincial attestation letter?",
-      answer:
-        "No. It applies to many applicants, but some levels of study and some situations are exempt, and the position varies by province. Because a missing attestation letter can stop a complete application, check your province’s instructions and IRCC’s page before you file rather than assuming you are covered.",
+      "question": "Do I always need a provincial attestation letter?",
+      "answer": "No. It applies to many applicants, but some levels of study and some situations are exempt, and the position varies by province. Because a missing attestation letter can stop a complete application, check your province’s instructions and IRCC’s page before you file rather than assuming you are covered."
     },
     {
-      question: "Can I work while I study in Canada?",
-      answer:
-        "Study permit holders may be allowed to work under conditions set by IRCC, and the rules have changed over time, so check the current position on the official page. Any work must respect the conditions printed on your permit. Working outside those conditions can affect your status and future applications.",
+      "question": "Can I work while I study in Canada?",
+      "answer": "Study permit holders may be allowed to work under conditions set by IRCC, and the rules have changed over time, so check the current position on the official page. Any work must respect the conditions printed on your permit. Working outside those conditions can affect your status and future applications."
     },
     {
-      question: "What should I do if my study permit is refused?",
-      answer:
-        "Read the refusal letter to identify the ground, then fix that specific weakness rather than re-filing the same file. If the letter is unclear or you believe the decision was wrong, there is a process to respond, and it runs to a deadline. The second application should directly answer the first refusal.",
+      "question": "What should I do if my study permit is refused?",
+      "answer": "Read the refusal letter to identify the ground, then fix that specific weakness rather than re-filing the same file. If the letter is unclear or you believe the decision was wrong, there is a process to respond, and it runs to a deadline. The second application should directly answer the first refusal."
     },
     {
-      question: "Is a medical exam required for a study permit?",
-      answer:
-        "Not always. A medical exam is required if you have lived or travelled in certain countries, if you will study or work in a health-related setting, or if the officer asks for one. It must be done by an IRCC panel physician and is valid for a limited time, so time it against your application.",
+      "question": "Is a medical exam required for a study permit?",
+      "answer": "Not always. A medical exam is required if you have lived or travelled in certain countries, if you will study or work in a health-related setting, or if the officer asks for one. It must be done by an IRCC panel physician and is valid for a limited time, so time it against your application."
     },
+    {
+      "question": "How much money must a student show for a Canada study permit in 2026?",
+      "answer": "For applications made on or after September 1, 2026, IRCC lists $23,448 in living expenses for one applicant studying outside Quebec, separate from tuition and travel costs. The amount rises with family size, so use the current table for your application date."
+    },
+    {
+      "question": "Can international students work more than 24 hours a week off campus?",
+      "answer": "Eligible students may work up to 24 hours per week off campus during regular academic sessions. They may work unlimited hours during scheduled breaks if they meet IRCC’s conditions; track hours across all jobs."
+    },
+    {
+      "question": "Does a letter of acceptance guarantee study permit approval?",
+      "answer": "No. An acceptance letter is one required part of many applications, but an officer also assesses the applicant’s eligibility, funds, study purpose, admissibility and other evidence. A PAL or TAL does not guarantee approval either."
+    },
+    {
+      "question": "What documents should I prepare for a Canadian study permit application?",
+      "answer": "Start with the current IRCC checklist for your country and application type. Common items include a valid letter of acceptance, a PAL or TAL unless exempt, passport, financial evidence, forms and any requested biometrics or medical results."
+    }
   ],
 
   related: [
@@ -207,10 +217,34 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Study permit", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html" },
-    { label: "IRCC — Provincial attestation letter", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/provincial-attestation-letter.html" },
-    { label: "IRCC — Biometrics", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/biometrics.html" },
-    { label: "IRCC — Medical exams for temporary residents", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/medical-exams/requirements-temporary-residents.html" },
+    {
+      "label": "IRCC — Study permit",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html"
+    },
+    {
+      "label": "IRCC — Provincial attestation letter",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/provincial-attestation-letter.html"
+    },
+    {
+      "label": "IRCC — Biometrics",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/biometrics.html"
+    },
+    {
+      "label": "IRCC — Medical exams for temporary residents",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/medical-exams/requirements-temporary-residents.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/financial-support.html",
+      "label": "IRCC study permit proof of funds"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-off-campus.html",
+      "label": "IRCC international student work rules"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/apply.html",
+      "label": "IRCC study permit application steps"
+    }
   ],
 };
 

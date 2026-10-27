@@ -9,6 +9,12 @@ export const BLOG_CATEGORIES = [
     description: "Understand the federal programs, CRS strategy and category-based decisions before you submit a profile.",
   },
   {
+    slug: "brampton-immigration",
+    label: "Brampton Immigration",
+    title: "Local questions. Clear immigration steps.",
+    description: "Practical guides for Brampton and Peel residents, students, families and employers navigating Canadian immigration programs.",
+  },
+  {
     slug: "work-permits",
     label: "Work permits & PR",
     title: "Work in Canada, then plan what comes next",
@@ -83,6 +89,7 @@ const RESEARCH_CATEGORY_SLUG = {
   "Family Sponsorship": "family-sponsorship",
   "Processing Times": "immigration-guides",
   "Citizenship": "immigration-guides",
+  "Brampton Immigration": "brampton-immigration",
 };
 
 /** Resolve a research post's editorial label to a tab slug. */
@@ -361,6 +368,106 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
     src: "/images/blog/canada-immigration-scams-authorized-representative.webp",
     alt: "Immigration documents and verification checklist for choosing an authorised representative",
   },
+  "express-entry-crs-changes-brampton-november-2026": {
+    src: "/images/blog/brampton/express-entry-crs-changes-brampton-november-2026.webp",
+    alt: "Hands sorting paperwork with a calculator and laptop on a desk",
+  },
+  "express-entry-2026-categories-brampton-workers": {
+    src: "/images/blog/brampton/express-entry-2026-categories-brampton-workers.webp",
+    alt: "Colleagues reviewing documents together at an office desk",
+  },
+  "low-crs-score-brampton-express-entry-options": {
+    src: "/images/blog/brampton/low-crs-score-brampton-express-entry-options.webp",
+    alt: "Professionals discussing a plan during a business meeting",
+  },
+  "oinp-workforce-priority-stream-brampton-2026": {
+    src: "/images/blog/brampton/oinp-workforce-priority-stream-brampton-2026.webp",
+    alt: "Toronto skyline across the water, representing Ontario immigration planning",
+  },
+  "oinp-employer-portal-brampton-checklist-2026": {
+    src: "/images/blog/brampton/oinp-employer-portal-brampton-checklist-2026.webp",
+    alt: "Four coworkers discussing documents during a business meeting",
+  },
+  "cec-work-experience-proof-brampton": {
+    src: "/images/blog/brampton/cec-work-experience-proof-brampton.webp",
+    alt: "Two coworkers working together in an office",
+  },
+  "study-permit-pal-tal-brampton-ontario-2026": {
+    src: "/images/blog/brampton/study-permit-pal-tal-brampton-ontario-2026.webp",
+    alt: "Students studying at long tables in a modern library",
+  },
+  "change-dli-brampton-students-2026": {
+    src: "/images/blog/brampton/change-dli-brampton-students-2026.webp",
+    alt: "Graduate in a cap seated among library books",
+  },
+  "pgwp-eligibility-brampton-2026": {
+    src: "/images/blog/brampton/pgwp-eligibility-brampton-2026.webp",
+    alt: "Graduate reading a book between library shelves",
+  },
+  "international-student-work-rules-brampton-2026": {
+    src: "/images/blog/brampton/international-student-work-rules-brampton-2026.webp",
+    alt: "Coworkers reviewing a work schedule on a laptop",
+  },
+  "spouse-open-work-permit-brampton-2026": {
+    src: "/images/blog/brampton/spouse-open-work-permit-brampton-2026.webp",
+    alt: "Couple holding a small wooden house model",
+  },
+  "can-i-apply-for-pr-after-pgwp-brampton": {
+    src: "/images/blog/brampton/can-i-apply-for-pr-after-pgwp-brampton.webp",
+    alt: "Toronto skyline at dusk reflecting over water",
+  },
+  "spousal-sponsorship-inland-outland-brampton": {
+    src: "/images/blog/brampton/spousal-sponsorship-inland-outland-brampton.webp",
+    alt: "A smiling couple together in a modern kitchen",
+  },
+  "common-law-sponsorship-evidence-ontario": {
+    src: "/images/blog/brampton/common-law-sponsorship-evidence-ontario.webp",
+    alt: "Couple seated together in front of their home",
+  },
+  "invitation-letter-canada-brampton-host-checklist": {
+    src: "/images/blog/brampton/invitation-letter-canada-brampton-host-checklist.webp",
+    alt: "Multigenerational family gathered outside their home",
+  },
+  "super-visa-vs-visitor-visa-brampton-parents": {
+    src: "/images/blog/brampton/super-visa-vs-visitor-visa-brampton-parents.webp",
+    alt: "Older couple smiling together on a living-room sofa",
+  },
+  "visitor-visa-refusal-officer-notes-2026-brampton": {
+    src: "/images/blog/brampton/visitor-visa-refusal-officer-notes-2026-brampton.webp",
+    alt: "A hand holding a passport against a plain background",
+  },
+  "work-permit-expiry-maintained-status-restoration-brampton": {
+    src: "/images/blog/brampton/work-permit-expiry-maintained-status-restoration-brampton.webp",
+    alt: "Toronto city street with traffic and tall buildings",
+  },
+  "lmia-for-employers-brampton-checklist-2026": {
+    src: "/images/blog/brampton/lmia-for-employers-brampton-checklist-2026.webp",
+    alt: "Presenter leading a team meeting around a table with laptops",
+  },
+  "immigration-consultant-cost-ontario-brampton": {
+    src: "/images/blog/brampton/immigration-consultant-cost-ontario-brampton.webp",
+    alt: "Older couple reviewing household financial documents",
+  },
+  "rcic-vs-immigration-lawyer-ontario": {
+    src: "/images/blog/brampton/rcic-vs-immigration-lawyer-ontario.webp",
+    alt: "Two people reviewing paperwork at a table",
+  },
+  "pr-card-renewal-brampton-residency-obligation": {
+    src: "/images/blog/brampton/pr-card-renewal-brampton-residency-obligation.webp",
+    alt: "Passport and boarding pass resting on a travel bag",
+  },
+  "citizenship-application-brampton-physical-presence": {
+    src: "/images/blog/brampton/citizenship-application-brampton-physical-presence.webp",
+    alt: "Black-and-white view of downtown Toronto and the CN Tower",
+  },
+  "procedural-fairness-letter-response-brampton": {
+    src: "/images/blog/brampton/procedural-fairness-letter-response-brampton.webp",
+    alt: "Colleague taking notes during an office meeting",
+  },
+  "brampton-international-student-housing-status-checklist": {
+    src: "/images/blog/brampton/brampton-international-student-housing-status-checklist.webp",
+    alt: "Toronto streetcar passing modern city buildings",
+  },
 };
 
 const DEFAULT_BLOG_IMAGE = {
@@ -409,6 +516,7 @@ export function getBlogPosts() {
     meta: { lastModified: post.updated || post.date || null },
     category: { slug: researchCategorySlug(post.category), label: post.category, title: post.category, description: post.description },
     image: getResearchBlogImage(post.slug, post.category),
+    author: post.author,
     research: post,
   }));
   return [...sourcePosts, ...generatedPosts].sort((a, b) => a.title.localeCompare(b.title));

@@ -168,25 +168,45 @@ const article = {
 
   faqs: [
     {
-      question: "Is the published processing time a guarantee?",
-      answer:
-        "No. It is a historical average of how long IRCC took to process a category of applications over a recent period. It is not a promise about your file and it is not a deadline IRCC is obliged to meet. Treat it as an indication of how the category has been performing, not as the date your decision will arrive.",
+      "question": "Are Canada PR processing times or Canada visa processing times guaranteed by IRCC?",
+      "answer": "No. It is a historical average of how long IRCC took to process a category of applications over a recent period. It is not a promise about your file and it is not a deadline IRCC is obliged to meet. Treat it as an indication of how the category has been performing, not as the date your decision will arrive."
     },
     {
-      question: "Why is my application taking longer than the published time?",
-      answer:
-        "The published figure is an average, so some files are faster and some are slower. Extra time usually comes from background verification, an additional document request, a biometrics or medical step, or the workload of the office holding your file. If you have responded to every request, waiting within a reasonable margin is normal.",
+      "question": "Why is my application taking longer than the published time?",
+      "answer": "The published figure is an average, so some files are faster and some are slower. Extra time usually comes from background verification, an additional document request, a biometrics or medical step, or the workload of the office holding your file. If you have responded to every request, waiting within a reasonable margin is normal."
     },
     {
-      question: "Does a returned application count as a refusal?",
-      answer:
-        "No. A returned application was not accepted as complete, so it was sent back and no decision was made on the merits. It is different from a refusal, which is a decision against you. The practical cost of a return is time, because you lose the interval before the return and restart when you refile.",
+      "question": "Does a returned application count as a refusal?",
+      "answer": "No. A returned application was not accepted as complete, so it was sent back and no decision was made on the merits. It is different from a refusal, which is a decision against you. The practical cost of a return is time, because you lose the interval before the return and restart when you refile."
     },
     {
-      question: "Do biometrics and medicals count towards the processing time?",
-      answer:
-        "They sit largely outside the published figure. The published average describes IRCC’s handling of a category, while biometrics appointments, the medical examination and third-party verification run on their own timetables. Your own elapsed time can therefore exceed the published figure without anything being wrong with the file.",
+      "question": "Do biometrics and medicals count towards the processing time?",
+      "answer": "They sit largely outside the published figure. The published average describes IRCC’s handling of a category, while biometrics appointments, the medical examination and third-party verification run on their own timetables. Your own elapsed time can therefore exceed the published figure without anything being wrong with the file."
     },
+    {
+      "question": "How does IRCC calculate Canada immigration processing times, and where can I check the latest estimate?",
+      "answer": "IRCC’s tool uses the program, application inventory, staffing and expected new applications. For many current estimates, the clock starts when a complete application is received and ends when a decision is made; the tool explains the method for each category."
+    },
+    {
+      "question": "Can a webform make my immigration application process faster?",
+      "answer": "A webform does not normally speed up a file. Use it to send information IRCC requested, report a material change or raise an issue the official contact guidance says to report; duplicate status requests do not create a faster queue."
+    },
+    {
+      "question": "Where can I check my immigration application status?",
+      "answer": "Use the online account or IRCC status tracker available for your application type, and review its next-step section for requests. The processing-time tool gives a general estimate, while the account reports information tied to your file."
+    },
+    {
+      "question": "When should I contact IRCC about a delayed application?",
+      "answer": "First compare your file with the current processing-time estimate and check your account for outstanding requests. Contact IRCC through its published channel when the guidance says to do so or when there is a material update, not simply to request a prediction."
+    },
+    {
+      "question": "Can the IRCC processing estimate include postal delivery time?",
+      "answer": "The processing clock generally starts when IRCC receives a complete application. For some paper applications sent from outside Canada or the United States, IRCC says to allow additional mailing time; check the tool’s instructions for your application type."
+    },
+    {
+      "question": "Can IRCC expedite a visa or permanent-residence application?",
+      "answer": "Only limited situations qualify for urgent processing under IRCC’s published rules. A deadline, travel booking or an application taking longer than expected does not by itself establish eligibility for priority processing."
+    }
   ],
 
   related: [
@@ -197,9 +217,30 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Check processing times", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html" },
-    { label: "IRCC — Express Entry", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" },
-    { label: "IRCC — Immigration Levels Plan", url: "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/corporate-initiatives/levels.html" },
+    {
+      "label": "IRCC — Check processing times",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html"
+    },
+    {
+      "label": "IRCC — Express Entry",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
+    },
+    {
+      "label": "IRCC — Immigration Levels Plan",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/corporate-initiatives/levels.html"
+    },
+    {
+      "url": "https://www.ircc.canada.ca/english/helpcentre/answer.asp?qnum=068&top=3",
+      "label": "IRCC how processing times are calculated"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/contact-ircc.html",
+      "label": "IRCC contact and status guidance"
+    },
+    {
+      "url": "https://www.ircc.canada.ca/english/helpcentre/answer.asp?qnum=074&top=3",
+      "label": "IRCC application delay guidance"
+    }
   ],
 };
 

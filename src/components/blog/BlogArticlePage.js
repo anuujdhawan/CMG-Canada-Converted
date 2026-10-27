@@ -353,6 +353,7 @@ export default function BlogArticlePage({ post, article = null }) {
   const cover = getResearchBlogImage(post.slug, post.category);
   const guidance = CATEGORY_GUIDANCE[categorySlug] || CATEGORY_GUIDANCE["immigration-guides"];
   const reviewed = formatMonth(post.updated || post.date || post.meta?.lastModified);
+  const author = post.author || site.rcic.consultant.nameWithCredential;
 
   // Related guides lead with the article's own category, then widen to the rest
   // of the library so a single-post category still shows something useful.
@@ -378,7 +379,7 @@ export default function BlogArticlePage({ post, article = null }) {
     ]
     : [];
 
-  const sources = article?.sources || [];
+  const sources = [...new Map((article?.sources || []).map((source) => [source.url, source])).values()];
   const faqs = (article?.faqs || []).map((faq) => ({ question: faq.question, answer: faq.answer }));
   const hasToc = toc.length > 0 || sources.length > 0;
 
@@ -391,7 +392,7 @@ export default function BlogArticlePage({ post, article = null }) {
         title={post.title}
         lead={post.description}
         chips={[
-          { icon: ShieldCheck, label: `By ${site.rcic.consultant.nameWithCredential}` },
+          { icon: ShieldCheck, label: `By ${author}` },
           reviewed
             ? { icon: CalendarDays, label: `Updated ${reviewed}` }
             : { icon: ExternalLink, label: `Official source: ${sourceLabel(post.source)}` },
@@ -452,7 +453,7 @@ export default function BlogArticlePage({ post, article = null }) {
               <div className="mt-auto flex flex-wrap items-center gap-x-[20px] gap-y-[9px] border-t border-[var(--border)] pt-[18px] max-[980px]:mt-[20px]">
                 <span className="inline-flex items-center gap-[7px]">
                   <ShieldCheck width={14} height={14} aria-hidden="true" className="text-[var(--primary)]" />
-                  <span className="text-[12.5px] font-bold text-[var(--muted)]">By {site.rcic.consultant.nameWithCredential}</span>
+                  <span className="text-[12.5px] font-bold text-[var(--muted)]">By {author}</span>
                 </span>
                 {reviewed && <span className="inline-flex items-center gap-[7px]">
                   <CalendarDays width={14} height={14} aria-hidden="true" className="text-[var(--primary)]" />
@@ -510,7 +511,7 @@ export default function BlogArticlePage({ post, article = null }) {
                           <span>Key terms explained</span>
                         </h2>
                         <p className="!m-0 !mt-[14px] !text-[15px] !leading-[1.8] !text-[var(--muted)]">
-                          Immigration writing is full of acronyms and program names. These are the ones used in this guide, in plain language.
+                          Plain-language definitions for terms used in {post.title}.
                         </p>
                         <dl className="m-0 mt-[20px] grid grid-cols-2 max-[720px]:grid-cols-1 gap-[12px]">
                           {article.glossary.map((entry) => (
@@ -530,7 +531,7 @@ export default function BlogArticlePage({ post, article = null }) {
                           <span>Where to go next</span>
                         </h2>
                         <p className="!m-0 !mt-[14px] !text-[15px] !leading-[1.8] !text-[var(--muted)]">
-                          Use these pages to move from the general position to the program that fits your facts.
+                          Compare these connected pages with the next decision raised by {post.title}.
                         </p>
                         <div className="mt-[20px] grid grid-cols-2 max-[720px]:grid-cols-1 gap-[12px]">
                           {article.related.map((link) => (
@@ -599,7 +600,7 @@ export default function BlogArticlePage({ post, article = null }) {
           faqs={faqs}
           eyebrow="Answered directly"
           title="Questions people ask about this"
-          description="Short, direct answers to the questions this guide is most often asked. Each one is covered in more detail above."
+          description={`Answers about ${post.title}, with facts to verify against current official instructions.`}
         />
       )}
 
@@ -611,7 +612,7 @@ export default function BlogArticlePage({ post, article = null }) {
                 <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] uppercase">Keep reading</p>
                 <h2 id="related-guides-title" className="max-w-[720px]">Guides that sit next to this one</h2>
               </div>
-              <p className="max-w-[430px] text-[var(--muted)] text-[16px] leading-[1.75]">Each guide covers one decision. Read the one that matches your current question, then bring the rest to a consultation.</p>
+              <p className="max-w-[430px] text-[var(--muted)] text-[16px] leading-[1.75]">Compare these guides with the next step connected to {post.title}.</p>
             </header>
             <div className="reference-blog-grid grid grid-cols-3 max-[1100px]:grid-cols-2 max-[620px]:grid-cols-1 gap-[18px]">
               {related.map((item, index) => <BlogCard key={item.path} post={item} index={index} />)}
@@ -624,7 +625,7 @@ export default function BlogArticlePage({ post, article = null }) {
         <div className="cta-shell flex items-center justify-between max-[880px]:items-start max-[880px]:flex-col w-[var(--container)] gap-10 mx-auto p-0 rounded-none bg-transparent">
           <div>
             <h2 className="!text-[clamp(30px,1.8rem+2.2vw,46px)] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-none text-[var(--template-on-primary)]">Ready to make the research personal?</h2>
-            <p className="!mt-[12px] max-w-[650px] !text-[16px] text-[var(--template-on-primary)]">Bring this guide, your questions and your timeline to a focused consultation with a licensed Canadian immigration team.</p>
+            <p className="!mt-[12px] max-w-[650px] !text-[16px] text-[var(--template-on-primary)]">Discuss how {post.title} applies to your status, evidence and timeline.</p>
           </div>
           <TemplateLink path={site.ctas.primary.href} className="btn !flex-none !px-6 !py-[17px] bg-[var(--template-on-primary)] text-[var(--secondary)] hover:bg-[var(--secondary)] hover:text-[var(--template-on-primary)]">
             Book a Consultation

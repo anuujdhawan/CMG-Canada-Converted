@@ -53,14 +53,19 @@ function DropdownPanel({ children, className, id, open }) {
       className={cn(
         "site-header__dropdown-panel absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white rounded-2xl p-4",
         "border border-line shadow-[0_20px_60px_color-mix(in_srgb,var(--brand-navy)_12%,transparent),0_4px_16px_color-mix(in_srgb,var(--brand-navy)_5%,transparent)]",
-        "max-h-[calc(100vh-120px)] overflow-y-auto",
+        "max-h-[calc(100vh-120px)] overflow-hidden",
         "transition-[opacity,transform] duration-180 ease-out",
         open ? "translate-y-0 scale-100 opacity-100" : "-translate-y-1.5 scale-[.97] opacity-0",
         className
       )}
     >
-      <div className="absolute top-0 left-6 right-6 h-0.5 bg-primary rounded-full" />
-      {children}
+      <div
+        className="site-header__dropdown-accent absolute top-0 left-6 right-6 h-0.5 bg-primary rounded-full"
+        aria-hidden="true"
+      />
+      <div className="site-header__dropdown-content min-h-0 overflow-y-auto">
+        {children}
+      </div>
     </div>
   );
 }

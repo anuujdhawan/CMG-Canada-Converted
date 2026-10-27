@@ -177,35 +177,45 @@ const article = {
 
   faqs: [
     {
-      question: "What is an LMIA Canada employers apply for?",
-      answer:
-        "It is a Labour Market Impact Assessment: a decision by ESDC on whether hiring a foreign worker for a specific job would affect the Canadian labour market. The employer applies, and the assessment tests the job and the recruitment, not the worker’s own eligibility for a permit.",
+      "question": "What is a Labour Market Impact Assessment (LMIA) in Canada, and when does an employer need one?",
+      "answer": "It is a Labour Market Impact Assessment: a decision by ESDC on whether hiring a foreign worker for a specific job would affect the Canadian labour market. The employer applies, and the assessment tests the job and the recruitment, not the worker’s own eligibility for a permit."
     },
     {
-      question: "Does a positive LMIA guarantee a work permit?",
-      answer:
-        "No. A positive or neutral decision lets the employer hire, but the worker still has to apply for a work permit and satisfy an officer on admissibility, documents and intent. A positive assessment with an inadmissible worker, or an incomplete permit application, still results in a refusal.",
+      "question": "Does a positive LMIA guarantee a work permit?",
+      "answer": "No. A positive or neutral decision lets the employer hire, but the worker still has to apply for a work permit and satisfy an officer on admissibility, documents and intent. A positive assessment with an inadmissible worker, or an incomplete permit application, still results in a refusal."
     },
     {
-      question: "What is the difference between a positive and a neutral LMIA?",
-      answer:
-        "A positive assessment means ESDC accepts the hire and the employer met the requirements. A neutral assessment also permits the hire, but applies in specific circumstances where the labour market impact is considered acceptable without the same recruitment effort. Neither is a general option you can choose.",
+      "question": "What is the difference between a positive and a neutral LMIA?",
+      "answer": "A positive assessment means ESDC accepts the hire and the employer met the requirements. A neutral assessment also permits the hire, but applies in specific circumstances where the labour market impact is considered acceptable without the same recruitment effort. Neither is a general option you can choose."
     },
     {
-      question: "Can a worker be charged for the LMIA?",
-      answer:
-        "No. The assessment is the employer’s cost, and charging the worker for it, directly or indirectly, breaches the employer’s conditions. If an employer asks you to reimburse the fee or pay it upfront, treat that as a serious warning sign and verify the offer before you rely on it.",
+      "question": "Can a worker be charged for the LMIA?",
+      "answer": "No. The assessment is the employer’s cost, and charging the worker for it, directly or indirectly, breaches the employer’s conditions. If an employer asks you to reimburse the fee or pay it upfront, treat that as a serious warning sign and verify the offer before you rely on it."
     },
     {
-      question: "What happens if the employer fails an inspection?",
-      answer:
-        "ESDC can impose monetary penalties and, in serious or repeated cases, ban the employer from using the program. A ban stops that employer from hiring through the program for its duration, which affects future workers as well as the one involved in the inspection.",
+      "question": "What happens if the employer fails an inspection?",
+      "answer": "ESDC can impose monetary penalties and, in serious or repeated cases, ban the employer from using the program. A ban stops that employer from hiring through the program for its duration, which affects future workers as well as the one involved in the inspection."
     },
     {
-      question: "Is there an alternative to an LMIA?",
-      answer:
-        "Yes, for work covered by an exemption under the International Mobility Program, such as trade agreements, intra-company transfers or French-language mobility. The Global Talent Stream is not an exemption — it is a faster route that still requires an assessment and a Labour Market Benefits Plan.",
+      "question": "Is there an LMIA-exempt work permit option for hiring a temporary foreign worker in Canada?",
+      "answer": "Yes, for work covered by an exemption under the International Mobility Program, such as trade agreements, intra-company transfers or French-language mobility. The Global Talent Stream is not an exemption — it is a faster route that still requires an assessment and a Labour Market Benefits Plan."
     },
+    {
+      "question": "How does the LMIA process in Canada work, and how long can an employer expect it to take?",
+      "answer": "There is no single LMIA processing time. ESDC publishes monthly averages by stream, and the clock starts after it receives a complete application. Advertising that must be completed before filing is extra time, so employers should check the current table and plan recruitment well before the intended start date."
+    },
+    {
+      "question": "How long is a positive Labour Market Impact Assessment valid for a Canadian job offer?",
+      "answer": "For LMIA applications received on or after May 1, 2024, a positive LMIA is valid for up to six months. The worker must submit the work-permit application before the LMIA expiry date. That deadline is separate from the work-permit length IRCC may later authorize."
+    },
+    {
+      "question": "Who applies for an LMIA in Canada: the employer or the worker?",
+      "answer": "The Canadian employer applies to Employment and Social Development Canada for the LMIA. A foreign worker does not apply for an LMIA personally. If the decision is positive and the position requires an LMIA, the worker then uses the employer’s decision letter and job details in a separate work-permit application to IRCC."
+    },
+    {
+      "question": "Do all Canadian work permits need an LMIA?",
+      "answer": "No. Many employer-specific jobs require a positive LMIA, but some work permits are LMIA-exempt under the International Mobility Program or another exemption. The correct route depends on the job, employer, worker and exemption criteria; a job title or employer promise alone does not prove an exemption applies."
+    }
   ],
 
   related: [
@@ -216,8 +226,26 @@ const article = {
   ],
 
   sources: [
-    { label: "ESDC — Hire a temporary foreign worker", url: "https://www.canada.ca/en/employment-social-development/services/foreign-workers.html" },
-    { label: "IRCC — Work in Canada: work permits", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/permit.html" },
+    {
+      "label": "ESDC — Hire a temporary foreign worker",
+      "url": "https://www.canada.ca/en/employment-social-development/services/foreign-workers.html"
+    },
+    {
+      "label": "IRCC — Work in Canada: work permits",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/permit.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/employment-social-development/services/foreign-workers/labour-market-impact-assessment-processing-times.html",
+      "label": "ESDC monthly LMIA processing times"
+    },
+    {
+      "url": "https://www.canada.ca/en/employment-social-development/services/foreign-workers/lmia-expiry.html",
+      "label": "ESDC LMIA validity and expiry rules"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/employer-specific.html",
+      "label": "IRCC employer-specific work permits and LMIA"
+    }
   ],
 };
 

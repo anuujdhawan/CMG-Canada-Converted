@@ -47,7 +47,7 @@
             "1+ yr foreign skilled work, TEER 0–3, within last 10 yrs",
             "CLB 7, all 4 abilities",
             "ECA required; min. 67/100 on FSW grid",
-            "Job offer no longer adds CRS points (Mar 2025 rule change)"
+            "From Nov. 3, qualifying high-wage offers may add CRS points; most offers will not qualify"
           ],
           [
             "Canadian Experience Class (CEC)",
@@ -354,7 +354,7 @@
           ],
           [
             "Job offer CRS impact",
-            "As of March 25, 2025, a valid job offer no longer adds CRS points under IRCC policy"
+            "From November 3, 2026, a qualifying offer in an eligible high-wage occupation may add CRS points under IRCC’s new rules"
           ]
         ]
       },
@@ -441,7 +441,7 @@
       },
       {
         "type": "paragraph",
-        "text": "A: No. A job offer is not required for FSW eligibility, and as of March 2025 it no longer adds CRS points either — though it can still support proof-of-funds exemption and settlement plans."
+        "text": "A: No. An offer is not required for FSW eligibility. From November 3, 2026, an eligible high-wage offer may earn CRS points; an offer may also support a proof-of-funds exemption when IRCC’s rules allow."
       },
       {
         "type": "paragraph",
@@ -775,28 +775,28 @@
   {
     "url": "https://commonwealthmigration.ca/immigrate/provincial-nominee-program-all-provinces-consolidated",
     "path": "/immigrate/provincial-nominee-program-all-provinces-consolidated",
-    "seoTitle": "Provincial Nominee Program (PNP) Canada 2026: All Provinces | CMG",
-    "metaDescription": "Compare PNP streams across all 10 Canadian provinces and territories. A nomination adds 600 CRS points — see which stream fits your profile. Free assessment.",
+    "seoTitle": "Provincial Nominee Program Canada 2026: Compare Provinces & Territories | CMG",
+    "metaDescription": "Compare Canada’s provincial and territorial nominee programs, learn how Express Entry and non-Express Entry routes differ, and check current official stream requirements.",
     "h1": "Provincial Nominee Program (PNP)",
     "hero": {
       "title": "Provincial Nominee Program (PNP)",
-      "lead": "Every Canadian province and territory except Quebec and Nunavut operates at least one Provincial Nominee Program stream. A nomination adds a flat 600 points to a candidate's Express Entry CRS score — enough to place nearly any nominated candidate above recent draw cutoffs — while some provincial streams run entirely outside Express Entry with their own separate process."
+      "lead": "Canada’s Provincial Nominee Program lets participating provinces and territories nominate candidates whose skills, experience or business plans fit local needs and who intend to live there. Each program sets its own streams and selection rules. An accepted nomination through an Express Entry-aligned stream adds 600 CRS points; other nominee streams follow the non-Express Entry process. A nomination is not permanent-residence approval."
     },
-    "title": "Provincial Nominee Program (PNP) Canada 2026: All Provinces | CMG",
-    "description": "Compare PNP streams across all 10 Canadian provinces and territories. A nomination adds 600 CRS points — see which stream fits your profile. Free assessment.",
+    "title": "Provincial Nominee Program Canada 2026: Compare Provinces & Territories | CMG",
+    "description": "Compare Canada’s provincial and territorial nominee programs, learn how Express Entry and non-Express Entry routes differ, and check current official stream requirements.",
     "contentBlocks": [
       {
         "type": "paragraph",
-        "text": "Every Canadian province and territory except Quebec and Nunavut operates at least one Provincial Nominee Program stream. A nomination adds a flat 600 points to a candidate's Express Entry CRS score — enough to place nearly any nominated candidate above recent draw cutoffs — while some provincial streams run entirely outside Express Entry with their own separate process."
+        "text": "Canada’s Provincial Nominee Program lets participating provinces and territories nominate candidates whose skills, experience or business plans fit local needs and who intend to live there. Each program sets its own streams and selection rules. An accepted nomination through an Express Entry-aligned stream adds 600 CRS points; other nominee streams follow the non-Express Entry process. A nomination is not permanent-residence approval."
       },
       {
         "type": "table",
         "rows": [
           [
-            "+600 CRS points from nomination",
-            "10 Provinces/territories with streams",
-            "2 Stream types: aligned & base",
-            "45 days Typical response window"
+            "+600 CRS points for an accepted Express Entry nomination",
+            "11 provinces and territories have nominee programs",
+            "2 federal permanent-residence application routes",
+            "Varies by route and federal process"
           ]
         ]
       },
@@ -809,65 +809,58 @@
         "type": "table",
         "rows": [
           [
-            "Province / Territory",
-            "Typical stream focus",
-            "Express Entry-aligned?"
+            "Province or territory",
+            "Current route notes"
           ],
           [
-            "British Columbia",
-            "Skilled worker, healthcare, tech occupations",
-            "Yes — Skills Immigration Registration System"
+            "[British Columbia](/immigrate/british-columbia-pnp)",
+            "Skills Immigration and Entrepreneur Immigration use different requirements; invitations and intake priorities can change."
           ],
           [
-            "Alberta",
-            "Alberta Opportunity Stream, Express Entry stream",
-            "Yes, plus a non-aligned base stream"
+            "[Alberta](/immigrate/alberta-pnp-aaip)",
+            "Worker pathways include Alberta Opportunity, Alberta Express Entry and designated community options; some use Worker EOI selection."
           ],
           [
-            "Saskatchewan",
-            "Occupation in-demand, employer sponsorship",
-            "Partial — Express Entry sub-category available"
+            "[Saskatchewan](/immigrate/saskatchewan-pnp-sinp)",
+            "SINP includes employer-supported, in-province and International Skilled Worker routes; occupation rules vary by category."
           ],
           [
-            "Manitoba",
-            "Skilled worker in Manitoba, employer direct",
-            "Partial"
+            "[Manitoba](/immigrate/manitoba-pnp-mpnp)",
+            "Skilled Worker, International Education and business pathways have different requirements; the Skilled Worker EOI is a ranked profile."
           ],
           [
-            "Ontario (OINP)",
-            "Employer job offer, Masters/PhD graduate, in-demand skills",
-            "Yes — Human Capital Priorities stream"
+            "[Ontario (OINP)](/immigrate/ontario-pnp-oinp)",
+            "The 2026 Workforce Priority stream covers eligible job-offer candidates and self-employed physicians; check current portal instructions."
           ],
           [
-            "Nova Scotia",
-            "Labour market priorities, physician stream",
-            "Partial"
+            "[Nova Scotia](/immigrate/nova-scotia-pnp-nsnp)",
+            "The NSNP has four current streams; former pathway criteria may appear as sub-criteria under the consolidated structure."
           ],
           [
-            "New Brunswick",
-            "Skilled worker, Express Entry labour market stream",
-            "Partial"
+            "[New Brunswick](/immigrate/new-brunswick-pnp)",
+            "Current streams include Skilled Worker, Express Entry, Strategic Initiative and Business Immigration."
           ],
           [
-            "Prince Edward Island",
-            "Express Entry and labour impact categories",
-            "Partial"
+            "[Prince Edward Island](/immigrate/prince-edward-island-pnp)",
+            "Labour Impact, Express Entry and Business Impact routes use PEI’s EOI selection process."
           ],
           [
-            "Newfoundland and Labrador",
-            "Skilled worker, international graduate, Express Entry",
-            "Partial"
+            "[Newfoundland and Labrador](/immigrate/newfoundland-and-labrador-pnp)",
+            "The EOI model is an initial step toward a full NLPNP or separate Atlantic Immigration Program application."
           ],
           [
-            "Yukon / NWT",
-            "Employer-driven nominee streams",
-            "No — territorial nominee programs"
+            "[Yukon](/immigrate/yukon-nwt-nunavut-nominee-programs)",
+            "The Yukon Nominee Program has Critical Impact Worker, Skilled Worker and Express Entry streams."
+          ],
+          [
+            "[Northwest Territories](/immigrate/yukon-nwt-nunavut-nominee-programs)",
+            "The NTNP has Employer-Driven, Francophone and Business streams; Employer-Driven includes an NWT Express Entry category."
           ]
         ]
       },
       {
         "type": "paragraph",
-        "text": "Note: Quebec runs its own separate immigration system and is not a PNP; Nunavut currently has no active nominee program."
+        "text": "Quebec and Nunavut do not have provincial or territorial nominee programs. Use the [official IRCC nominee-program overview](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html) and the current program guide for the jurisdiction you are considering; stream names, intake rules and nomination spaces can change."
       },
       {
         "type": "heading",
@@ -882,20 +875,20 @@
             "What happens"
           ],
           [
-            "1. Province screening",
-            "Profile checked against all ten provincial streams, not just the applicant's current location"
+            "1. Choose a jurisdiction and stream",
+            "Review the current eligibility rules and choose a place where you genuinely intend to live. Each program has its own criteria."
           ],
           [
-            "2. Expression of interest",
-            "Submitted to the province, or drawn from an existing Express Entry pool depending on the stream"
+            "2. Follow that stream’s intake process",
+            "Some streams require an Expression of Interest, some accept applications directly, and some identify candidates through an Express Entry profile."
           ],
           [
-            "3. Nomination certificate",
-            "Issued once the province approves the application"
+            "3. Apply for a nomination",
+            "If invited or eligible to apply, submit the required forms and evidence. A profile or invitation is not a nomination."
           ],
           [
-            "4. CRS update / application",
-            "600 points applied to an Express Entry profile (aligned streams), or a separate PR application filed (base streams)"
+            "4. Apply to IRCC for permanent residence",
+            "An accepted Express Entry-aligned nomination adds 600 CRS points; a non-Express Entry nomination follows a separate federal application process. IRCC makes the final decision."
           ]
         ]
       },
@@ -910,7 +903,7 @@
       },
       {
         "type": "paragraph",
-        "text": "A: It depends on the stream. Some require a valid job offer from an employer in that province; others, like Ontario's Human Capital Priorities stream, nominate directly from a candidate's Express Entry profile with no offer required."
+        "text": "A: It depends on the stream. Some programs require an eligible job offer, while other routes select candidates based on factors such as work experience, education, occupation, language or a connection to the jurisdiction. Check the exact stream rules before relying on a job offer or assuming one is unnecessary."
       },
       {
         "type": "paragraph",
@@ -918,7 +911,7 @@
       },
       {
         "type": "paragraph",
-        "text": "A: Often yes, though each stream has its own eligibility rules and some require a genuine intention to live specifically in that province — conflicts should be checked before submitting to more than one."
+        "text": "A: Express Entry candidates may receive more than one notification of interest, but can hold only one nomination at a time. Each jurisdiction sets its own application rules, and candidates must genuinely intend to live in the place that nominates them. Review each program’s instructions before submitting more than one application; see IRCC’s [Express Entry nomination guidance](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees/express-entry/get-confirm-nomination.html)."
       },
       {
         "type": "paragraph",
@@ -926,12 +919,16 @@
       },
       {
         "type": "paragraph",
-        "text": "A: An aligned stream adds CRS points to an existing Express Entry profile. A base (non-aligned) stream, like the Atlantic Immigration Program, runs its own separate application process outside Express Entry entirely."
+        "text": "A: An Express Entry-aligned nominee stream is for candidates who also qualify for an Express Entry program. Once the nomination is accepted, IRCC adds 600 CRS points to the profile. A non-Express Entry stream uses a separate permanent-residence application. The Atlantic Immigration Program is a distinct federal pathway, not a base PNP stream."
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Related Pages"
+        "text": "Related Pages",
+        "items": [
+          "Express Entry Overview → /immigrate/express-entry",
+          "Atlantic Immigration Program → /immigrate/atlantic-immigration-program"
+        ]
       },
       {
         "type": "list",
@@ -943,7 +940,7 @@
       },
       {
         "type": "paragraph",
-        "text": "CTA: Book a Free Consultation for a full 10-province PNP eligibility check."
+        "text": "CTA: Book a free consultation to compare your profile with current provincial and territorial nominee-program requirements."
       }
     ]
   },
@@ -1780,6 +1777,22 @@
         "text": "A: Search RCIC R711256 on the [CICC public register](https://register.college-ic.ca/Public-Register-EN/Licensee/Profile.aspx?ID=14725) before engaging any immigration representative — this applies to any consultant, not just ours."
       },
       {
+        "type": "paragraph",
+        "text": "Q: What information makes an initial immigration review more useful?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A: Share your goal, current status, key deadlines, earlier applications or refusal letters, and the pathway you are considering. The right supporting documents depend on the route, so an initial review should first identify the issue and the dates that control it."
+      },
+      {
+        "type": "paragraph",
+        "text": "Q: Can a licensed consultant guarantee an immigration result?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A: No. IRCC and the relevant provincial or territorial authority make the decision. An authorized representative can explain options and assist with a file, but no consultant can promise approval. You can confirm a consultant’s status in the [CICC public register](https://register.college-ic.ca/Public-Register-EN/Licensee/Profile.aspx?ID=14725)."
+      },
+      {
         "type": "heading",
         "level": 2,
         "text": "Related Pages"
@@ -1796,26 +1809,6 @@
       {
         "type": "paragraph",
         "text": "CTA: Book a Free Consultation — start with a free profile review."
-      },
-      {
-        "type": "paragraph",
-        "text": "Commonwealth Migration Canada"
-      },
-      {
-        "type": "paragraph",
-        "text": "Full-Scale Page Content — Developer Upload Pack"
-      },
-      {
-        "type": "paragraph",
-        "text": "SEO title tags, meta descriptions, technical data tables, process packets, and FAQs — ready for CMS upload."
-      },
-      {
-        "type": "paragraph",
-        "text": "Technical data sourced from public IRCC / ESDC / CICC program rules. Marketing copy and structure written fresh for Commonwealth Migration."
-      },
-      {
-        "type": "paragraph",
-        "text": "Batch 2 of 3 — Business, Atlantic, Work/Study & Sponsorship Pathways · Prepared August 2026"
       }
     ]
   },
@@ -3013,6 +3006,22 @@
         "text": "A: Not directly, but qualifying Canadian work experience gained during a Working Holiday can potentially support a later Canadian Experience Class application under Express Entry."
       },
       {
+        "type": "paragraph",
+        "text": "Q: Can I work in Canada while my IEC profile is in a pool?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A: No. A pool profile is not a work permit application or authorization to work. You need an invitation, must submit a complete application, and must receive the required work authorization before beginning work; see [IRCC’s IEC steps](https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/become-candidate.html)."
+      },
+      {
+        "type": "paragraph",
+        "text": "Q: How much time do I have after receiving an IEC invitation?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A: The invitation message gives your deadline. Under IRCC’s current instructions, you have 10 days to accept and 20 days after accepting to submit the work-permit application and required documents. Check the deadline in your account and the [current application instructions](https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/apply-work-permit.html)."
+      },
+      {
         "type": "heading",
         "level": 2,
         "text": "Related Pages"
@@ -3028,26 +3037,6 @@
       {
         "type": "paragraph",
         "text": "CTA: Book a Free Consultation to check your country's current IEC agreement."
-      },
-      {
-        "type": "paragraph",
-        "text": "Commonwealth Migration Canada"
-      },
-      {
-        "type": "paragraph",
-        "text": "Full-Scale Page Content — Developer Upload Pack"
-      },
-      {
-        "type": "paragraph",
-        "text": "SEO title tags, meta descriptions, technical data tables, process packets, and FAQs — ready for CMS upload."
-      },
-      {
-        "type": "paragraph",
-        "text": "Technical data sourced from public IRCC / ESDC / CICC program rules. Marketing copy and structure written fresh for Commonwealth Migration."
-      },
-      {
-        "type": "paragraph",
-        "text": "Batch 3 of 3 — Regional Pilots, Refugee & Protection, Caregiver, Employer Programs · Prepared August 2026"
       }
     ]
   },
@@ -4460,7 +4449,7 @@
           ],
           [
             "Wage compliance",
-            "Pay the wage stated in the LMIA application — not less, regardless of market changes"
+            "Pay wages that are mainly the same as, and not less favourable than, the employment offer and LMIA conditions."
           ],
           [
             "Working conditions",
@@ -4468,7 +4457,7 @@
           ],
           [
             "Recordkeeping",
-            "Retain supporting records for at least 6 years"
+            "Keep relevant LMIA, offer, payroll, and working-condition records for six years from the start of the covered employment period."
           ],
           [
             "Genuine employment",
@@ -4525,7 +4514,23 @@
       },
       {
         "type": "paragraph",
-        "text": "A: Paying a wage that drifted below the amount stated in the original LMIA application over time, often due to not tracking provincial median wage updates — this is one of the most frequently cited violations."
+        "text": "A: ESDC checks whether wages and working conditions are mainly the same as, and not less favourable than, those in the offer and LMIA. Compare payroll and job conditions with the approved documents, and report relevant changes promptly."
+      },
+      {
+        "type": "paragraph",
+        "text": "Q: Which records should an employer keep for a TFWP inspection?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A: Keep the LMIA decision and related documents, the job offer, payroll records, and records showing the worker’s duties, pay, and working conditions. ESDC requires relevant records to be kept for six years from the start of the employment period covered by the work permit; see the [employer compliance requirements](https://www.canada.ca/en/employment-social-development/services/foreign-workers/employer-compliance.html)."
+      },
+      {
+        "type": "paragraph",
+        "text": "Q: What should an employer do if approved LMIA details or working conditions change?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A: Tell ESDC promptly about errors in an approved LMIA or changes to a temporary foreign worker’s conditions, using the Employer Contact Centre details in the [official compliance instructions](https://www.canada.ca/en/employment-social-development/services/foreign-workers/employer-compliance.html). Do not assume the original approval automatically covers a changed arrangement."
       },
       {
         "type": "heading",
@@ -4543,50 +4548,34 @@
       {
         "type": "paragraph",
         "text": "CTA: Book an Employer Consultation for a compliance file review."
-      },
-      {
-        "type": "paragraph",
-        "text": "Commonwealth Migration Canada"
-      },
-      {
-        "type": "paragraph",
-        "text": "Full-Scale Page Content — Developer Upload Pack"
-      },
-      {
-        "type": "paragraph",
-        "text": "Technical data sourced from public IRCC / ESDC / CICC program rules. Marketing copy and structure written fresh for Commonwealth Migration."
-      },
-      {
-        "type": "paragraph",
-        "text": "Batch 4 — PNP-Linked Express Entry, All 10 Provinces, Visitor & Temporary Pages · Prepared August 2026"
       }
     ]
   },
   {
     "url": "https://commonwealthmigration.ca/immigrate/pnp-linked-express-entry",
     "path": "/immigrate/pnp-linked-express-entry",
-    "seoTitle": "PNP-Linked Express Entry Canada 2026 | CMG",
-    "metaDescription": "How a provincial nomination adds 600 CRS points to your Express Entry profile — the aligned-stream process explained. Free eligibility check.",
+    "seoTitle": "Express Entry-Aligned PNP Streams in Canada 2026 | CMG",
+    "metaDescription": "Learn how Express Entry-aligned provincial nominations work, when 600 CRS points apply, and what candidates still need for permanent residence.",
     "h1": "PNP-Linked Express Entry",
     "hero": {
-      "title": "PNP-Linked Express Entry",
-      "lead": "A PNP-linked application is a provincial nomination obtained through a stream specifically aligned with Express Entry — the nomination adds 600 CRS points directly to an existing profile, rather than running as a separate application outside the federal system entirely."
+      "title": "Express Entry-Aligned Provincial Nominee Streams",
+      "lead": "An Express Entry-aligned provincial or territorial nominee stream connects a nomination to a candidate’s federal Express Entry profile. To qualify, a candidate must meet both the stream’s rules and the requirements of one federal Express Entry program. After an eligible nomination is accepted, IRCC adds 600 CRS points; the candidate must still receive an invitation and apply for permanent residence."
     },
-    "title": "PNP-Linked Express Entry Canada 2026 | CMG",
-    "description": "How a provincial nomination adds 600 CRS points to your Express Entry profile — the aligned-stream process explained. Free eligibility check.",
+    "title": "Express Entry-Aligned PNP Streams in Canada 2026 | CMG",
+    "description": "Learn how Express Entry-aligned provincial nominations work, when 600 CRS points apply, and what candidates still need for permanent residence.",
     "contentBlocks": [
       {
         "type": "paragraph",
-        "text": "A PNP-linked application is a provincial nomination obtained through a stream specifically aligned with Express Entry — the nomination adds 600 CRS points directly to an existing profile, rather than running as a separate application outside the federal system entirely."
+        "text": "An Express Entry-aligned provincial or territorial nominee stream connects a nomination to a candidate’s federal Express Entry profile. To qualify, a candidate must meet both the stream’s rules and the requirements of one federal Express Entry program. After an eligible nomination is accepted, IRCC adds 600 CRS points; the candidate must still receive an invitation and apply for permanent residence."
       },
       {
         "type": "table",
         "rows": [
           [
-            "+600 CRS points added",
-            "Faster Vs. non-aligned streams",
-            "Active EE profile Required first",
-            "Province-specific Eligibility criteria"
+            "+600 CRS points after an eligible nomination is accepted",
+            "3 federal Express Entry programs",
+            "1 active nomination at a time",
+            "Invitation and PR approval are separate steps"
           ]
         ]
       },
@@ -4600,28 +4589,28 @@
         "rows": [
           [
             "Feature",
-            "PNP-linked (aligned)",
-            "Base / non-aligned stream"
+            "Express Entry-aligned PNP stream",
+            "Non-Express Entry PNP stream"
           ],
           [
-            "Requires an Express Entry profile",
-            "Yes",
-            "No"
+            "Federal eligibility",
+            "Candidate must also qualify for one of the federal Express Entry programs.",
+            "Candidate follows the non-Express Entry process for the stream."
           ],
           [
-            "CRS impact",
-            "+600 points applied directly",
-            "Not applicable — separate process"
+            "CRS effect",
+            "An accepted, eligible nomination adds 600 CRS points to the Express Entry profile.",
+            "No Express Entry CRS points are added through this route."
           ],
           [
-            "Processing route",
-            "Follows Express Entry's timeline",
-            "Follows the province's own timeline"
+            "Next federal step",
+            "The candidate still needs an invitation to apply and must submit a PR application to IRCC.",
+            "The candidate submits a separate PR application to IRCC after nomination."
           ],
           [
-            "Example",
-            "Ontario Human Capital Priorities",
-            "Atlantic Immigration Program"
+            "Examples",
+            "Yukon Express Entry, the NWT Express Entry category, or an eligible Ontario Workforce Priority application.",
+            "A provincial or territorial nominee stream that is not connected to Express Entry."
           ]
         ]
       },
@@ -4636,7 +4625,7 @@
       },
       {
         "type": "paragraph",
-        "text": "A: Generally yes — most aligned streams either draw candidates directly from the Express Entry pool or require an active profile to attach the nomination to."
+        "text": "A: You need to meet the requirements of one of the three federal Express Entry programs to be nominated through an Express Entry-aligned route. Some jurisdictions let candidates apply for a nomination before creating a federal profile; others identify candidates from the pool. Follow the sequence in the chosen program’s current instructions, then keep a valid profile through nomination and acceptance. See IRCC’s [Express Entry PNP eligibility rules](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees/express-entry/eligibility.html)."
       },
       {
         "type": "paragraph",
@@ -4644,7 +4633,7 @@
       },
       {
         "type": "paragraph",
-        "text": "A: It depends on the specific province's aligned stream — some, like Ontario's Human Capital Priorities stream, nominate directly from profile data with no offer required, while others do require one."
+        "text": "A: It depends on the province or territory and the specific stream. Some selection routes assess eligible candidates without a job offer; others require a qualifying employer and position. Review the exact stream criteria and confirm that you meet the federal Express Entry requirements as well."
       },
       {
         "type": "paragraph",
@@ -4652,7 +4641,7 @@
       },
       {
         "type": "paragraph",
-        "text": "A: It doesn't change Express Entry's own processing target, but the 600-point bonus typically means an invitation follows much sooner than waiting in the general pool."
+        "text": "A: The nomination increases a qualifying Express Entry profile by 600 CRS points, which can materially improve its ranking. It does not guarantee an invitation or shorten IRCC’s processing period. Draw cut-offs and federal processing estimates change, so check current [Express Entry rounds](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html) and [processing times](https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html)."
       },
       {
         "type": "heading",
@@ -4677,18 +4666,18 @@
     "url": "https://commonwealthmigration.ca/immigrate/british-columbia-pnp",
     "path": "/immigrate/british-columbia-pnp",
     "seoTitle": "British Columbia PNP 2026: Streams & Requirements | CMG",
-    "metaDescription": "British Columbia Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "metaDescription": "BC PNP 2026: understand registration, invitations, stream differences and current eligibility. Check official selection updates before applying.",
     "h1": "British Columbia Provincial Nominee Program",
     "hero": {
       "title": "British Columbia Provincial Nominee Program",
-      "lead": "British Columbia's nominee program focuses on Skills Immigration Registration System (SIRS) — tech, healthcare, and skilled worker categories. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+      "lead": "BC PNP candidates use different processes depending on the stream. Some routes draw from a Skills Immigration registration pool, where invitations can reflect current provincial workforce priorities and score cut-offs may change from round to round. Check the current program guide before treating an old invitation score or stream description as current."
     },
     "title": "British Columbia PNP 2026: Streams & Requirements | CMG",
-    "description": "British Columbia Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "description": "Understand how BC PNP registration and invitations work, compare route requirements, and check current selection updates before applying.",
     "contentBlocks": [
       {
         "type": "paragraph",
-        "text": "British Columbia's nominee program focuses on Skills Immigration Registration System (SIRS) — tech, healthcare, and skilled worker categories. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+        "text": "BC PNP draws from a Skills Immigration registration pool and may target candidates according to current provincial economic and labour-market priorities. Stream options and invitation focus can change, so use the current program guide rather than treating an old draw score as a forecast. A nomination through an Express Entry-aligned option adds 600 CRS points; other routes use a separate permanent-residence application process."
       },
       {
         "type": "table",
@@ -4715,15 +4704,15 @@
           ],
           [
             "Primary stream focus",
-            "Skills Immigration Registration System (SIRS) — tech, healthcare, and skilled worker categories"
+            "Skills Immigration registration pool, with invitations shaped by current provincial priorities; other BC PNP routes have separate criteria."
           ],
           [
             "Express Entry alignment",
-            "Yes — most categories align with Express Entry"
+            "Check the current BC PNP guides for any Express Entry-aligned option and its availability."
           ],
           [
             "What's distinct about this province",
-            "Runs frequent, smaller draws rather than large periodic invitations"
+            "BC periodically selects from its registration pool, with selection factors and invitations adjusted to current economic and labour-market needs."
           ]
         ]
       },
@@ -4734,27 +4723,27 @@
       },
       {
         "type": "paragraph",
-        "text": "Q: Do I need a job offer to be nominated under British Columbia's program?"
+        "text": "Q: How does BC PNP choose candidates from its registration pool?"
       },
       {
         "type": "paragraph",
-        "text": "A: It depends on the specific stream — some require a valid job offer from an employer in the province, while others nominate directly based on profile strength or a demonstrated connection to the province."
+        "text": "A: BC periodically invites registrants using the information in their profiles and the province’s current economic and labour-market needs. Selection focus and score cut-offs can vary by round; check the [latest invitation details](https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program/invitations-to-apply)."
       },
       {
         "type": "paragraph",
-        "text": "Q: How does a nomination affect my Express Entry profile?"
+        "text": "Q: Does a BC PNP invitation mean I have already been nominated?"
       },
       {
         "type": "paragraph",
-        "text": "A: For aligned streams, a nomination adds 600 CRS points directly to the existing profile. For non-aligned streams, the nomination instead leads to a separate provincial application process."
+        "text": "A: No. An invitation lets you submit an application under the named stream. The program must assess your application and supporting evidence before it can issue a nomination; a nomination is still separate from IRCC’s permanent-residence decision. Follow the deadline and document instructions in your invitation."
       },
       {
         "type": "paragraph",
-        "text": "Q: What makes British Columbia different from other provinces?"
+        "text": "Q: Do all BC PNP pathways use the same registration process?"
       },
       {
         "type": "paragraph",
-        "text": "A: Runs frequent, smaller draws rather than large periodic invitations."
+        "text": "A: No. The Skills Immigration pool and other program routes have different eligibility and application steps. Confirm which stream fits your circumstances in the [current BC PNP guides](https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program/documents) before creating a profile."
       },
       {
         "type": "heading",
@@ -4779,18 +4768,18 @@
     "url": "https://commonwealthmigration.ca/immigrate/alberta-pnp-aaip",
     "path": "/immigrate/alberta-pnp-aaip",
     "seoTitle": "Alberta PNP 2026: Streams & Requirements | CMG",
-    "metaDescription": "Alberta Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "metaDescription": "Compare AAIP pathways, Worker EOI selection and Alberta Opportunity Stream rules. Verify current stream eligibility and invitations.",
     "h1": "Alberta Provincial Nominee Program",
     "hero": {
       "title": "Alberta Provincial Nominee Program",
-      "lead": "Alberta's nominee program focuses on Alberta Opportunity Stream and an Express Entry-aligned stream. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+      "lead": "AAIP worker routes cover different situations, from eligible workers already employed in Alberta to candidates selected through Alberta Express Entry or designated community pathways. The Worker Expression of Interest process is an invitation-stage profile for applicable streams, so compare your evidence with the exact stream rules before acting."
     },
     "title": "Alberta PNP 2026: Streams & Requirements | CMG",
-    "description": "Alberta Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "description": "Compare AAIP worker pathways, understand Worker EOI selection, and review current Alberta Opportunity Stream requirements.",
     "contentBlocks": [
       {
         "type": "paragraph",
-        "text": "Alberta's nominee program focuses on Alberta Opportunity Stream and an Express Entry-aligned stream. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+        "text": "The Alberta Advantage Immigration Program has worker pathways for different situations, including eligible employment in Alberta, Express Entry candidates, designated communities, and tourism and hospitality workers. The Alberta Opportunity Stream is specifically for eligible temporary foreign workers already working full-time in Alberta with an Alberta job offer. Each stream sets its own criteria, and a Worker Expression of Interest is only an invitation-stage profile."
       },
       {
         "type": "table",
@@ -4817,15 +4806,15 @@
           ],
           [
             "Primary stream focus",
-            "Alberta Opportunity Stream and an Express Entry-aligned stream"
+            "Worker pathways include the Alberta Opportunity, Alberta Express Entry, Rural Renewal, and Tourism and Hospitality streams; entrepreneur routes have separate rules."
           ],
           [
             "Express Entry alignment",
-            "Partially — Opportunity Stream is non-aligned; Express Entry stream is aligned"
+            "Eligible candidates may use an Alberta Express Entry route; each stream has separate criteria."
           ],
           [
             "What's distinct about this province",
-            "Opportunity Stream targets workers already employed in Alberta on a valid work permit"
+            "AAIP invitations reflect Worker EOI scores alongside labour-market priorities, available nominations, and application volumes; draws are not on a fixed schedule."
           ]
         ]
       },
@@ -4836,27 +4825,27 @@
       },
       {
         "type": "paragraph",
-        "text": "Q: Do I need a job offer to be nominated under Alberta's program?"
+        "text": "Q: What is an Alberta Worker Expression of Interest?"
       },
       {
         "type": "paragraph",
-        "text": "A: It depends on the specific stream — some require a valid job offer from an employer in the province, while others nominate directly based on profile strength or a demonstrated connection to the province."
+        "text": "A: A Worker EOI is a scored profile entered into AAIP’s selection pool. You must receive an invitation before applying to a worker stream, and the EOI itself is not a nomination application. See the [current AAIP application steps](https://www.alberta.ca/how-to-apply-to-aaip-worker-streams)."
       },
       {
         "type": "paragraph",
-        "text": "Q: How does a nomination affect my Express Entry profile?"
+        "text": "Q: Does AAIP select candidates by score alone?"
       },
       {
         "type": "paragraph",
-        "text": "A: For aligned streams, a nomination adds 600 CRS points directly to the existing profile. For non-aligned streams, the nomination instead leads to a separate provincial application process."
+        "text": "A: No. Alberta also considers labour-market needs, provincial priorities, available nomination spaces, and application volumes. Draws are held as needed rather than on a guaranteed schedule; check [AAIP processing and draw updates](https://www.alberta.ca/aaip-processing-information)."
       },
       {
         "type": "paragraph",
-        "text": "Q: What makes Alberta different from other provinces?"
+        "text": "Q: Who is the Alberta Opportunity Stream designed for?"
       },
       {
         "type": "paragraph",
-        "text": "A: Opportunity Stream targets workers already employed in Alberta on a valid work permit."
+        "text": "A: It is for eligible temporary foreign workers already living and working full-time in Alberta who have a qualifying job offer from an Alberta employer. Other AAIP streams have different requirements, so compare your situation with the [Opportunity Stream criteria](https://www.alberta.ca/aaip-alberta-opportunity-stream)."
       },
       {
         "type": "heading",
@@ -4881,18 +4870,18 @@
     "url": "https://commonwealthmigration.ca/immigrate/saskatchewan-pnp-sinp",
     "path": "/immigrate/saskatchewan-pnp-sinp",
     "seoTitle": "Saskatchewan PNP 2026: Streams & Requirements | CMG",
-    "metaDescription": "Saskatchewan Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "metaDescription": "Learn how SINP EOI selection, occupation rules and job-offer pathways differ. Verify current Saskatchewan criteria before choosing a stream.",
     "h1": "Saskatchewan Provincial Nominee Program",
     "hero": {
       "title": "Saskatchewan Provincial Nominee Program",
-      "lead": "Saskatchewan's nominee program focuses on Occupation In-Demand and Express Entry sub-category. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+      "lead": "SINP offers employer-supported, Saskatchewan-experience and International Skilled Worker options. Some International Skilled Worker routes use an Expression of Interest pool and occupation requirements, while other categories follow different steps. Confirm your work history, occupation and any licensing requirements against the exact stream before applying."
     },
     "title": "Saskatchewan PNP 2026: Streams & Requirements | CMG",
-    "description": "Saskatchewan Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "description": "Learn how SINP EOI selection, occupation rules and job-offer pathways differ, then verify current Saskatchewan criteria.",
     "contentBlocks": [
       {
         "type": "paragraph",
-        "text": "Saskatchewan's nominee program focuses on Occupation In-Demand and Express Entry sub-category. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+        "text": "SINP has pathways for skilled workers with Saskatchewan job offers, people already working or studying in the province, and international skilled workers applying from elsewhere. Its Occupations In-Demand and Saskatchewan Express Entry options use an Expression of Interest process, with occupation eligibility and licensing requirements that can change. An EOI score is not a substitute for the evidence required in a full application."
       },
       {
         "type": "table",
@@ -4919,15 +4908,15 @@
           ],
           [
             "Primary stream focus",
-            "Occupation In-Demand and Express Entry sub-category"
+            "SINP includes employer-supported, Saskatchewan-experience, and international skilled-worker routes; the Occupations In-Demand and Express Entry options use EOI selection."
           ],
           [
             "Express Entry alignment",
-            "Partially"
+            "Some International Skilled Worker routes are Express Entry-aligned; federal eligibility also applies."
           ],
           [
             "What's distinct about this province",
-            "Runs an in-demand occupations list reviewed periodically"
+            "Some SINP routes do not require a Saskatchewan job offer, but the occupation and work experience must meet the chosen sub-category’s current requirements."
           ]
         ]
       },
@@ -4938,27 +4927,27 @@
       },
       {
         "type": "paragraph",
-        "text": "Q: Do I need a job offer to be nominated under Saskatchewan's program?"
+        "text": "Q: Is an SINP Expression of Interest the same as a nomination application?"
       },
       {
         "type": "paragraph",
-        "text": "A: It depends on the specific stream — some require a valid job offer from an employer in the province, while others nominate directly based on profile strength or a demonstrated connection to the province."
+        "text": "A: No. For the International Skilled Worker EOI system, a profile is a pre-application indication of interest. Not every profile is invited; candidates selected by SINP must then file a full application and support the information they entered. Read the [current EOI instructions](https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/browse-sinp-programs/applicants-international-skilled-workers/international-skilled-worker-eoi-system)."
       },
       {
         "type": "paragraph",
-        "text": "Q: How does a nomination affect my Express Entry profile?"
+        "text": "Q: Can I qualify for an SINP route without a Saskatchewan job offer?"
       },
       {
         "type": "paragraph",
-        "text": "A: For aligned streams, a nomination adds 600 CRS points directly to the existing profile. For non-aligned streams, the nomination instead leads to a separate provincial application process."
+        "text": "A: Some International Skilled Worker options, including Occupations In-Demand and Saskatchewan Express Entry, are designed for eligible skilled workers without a supporting Saskatchewan offer. You still need to meet the points, occupation, work-history, and other rules for that sub-category; check the [current eligibility guide](https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/assess-your-eligibility)."
       },
       {
         "type": "paragraph",
-        "text": "Q: What makes Saskatchewan different from other provinces?"
+        "text": "Q: What should I verify before choosing an occupation for SINP?"
       },
       {
         "type": "paragraph",
-        "text": "A: Runs an in-demand occupations list reviewed periodically."
+        "text": "A: Compare the duties of your actual work with the occupation requirements, then check whether the occupation is eligible and whether Saskatchewan licensing applies. A job title alone does not establish the correct NOC or eligibility; use SINP’s [occupation restrictions and requirements](https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/browse-sinp-programs/applicants-international-skilled-workers/occupation-restrictions-and-requirements)."
       },
       {
         "type": "heading",
@@ -4983,18 +4972,18 @@
     "url": "https://commonwealthmigration.ca/immigrate/manitoba-pnp-mpnp",
     "path": "/immigrate/manitoba-pnp-mpnp",
     "seoTitle": "Manitoba PNP 2026: Streams & Requirements | CMG",
-    "metaDescription": "Manitoba Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "metaDescription": "Explore MPNP Skilled Worker, International Education and business routes, Manitoba connections and EOI ranking. Check current program rules.",
     "h1": "Manitoba Provincial Nominee Program",
     "hero": {
       "title": "Manitoba Provincial Nominee Program",
-      "lead": "Manitoba's nominee program focuses on Skilled Worker in Manitoba and Skilled Worker Overseas categories. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+      "lead": "MPNP eligibility depends on the route: Skilled Worker pathways may assess a candidate’s Manitoba connection through work, family, community or recruitment, while International Education and business pathways have separate criteria. The EOI pool is a ranked profile for Skilled Worker candidates, not a nomination application."
     },
     "title": "Manitoba PNP 2026: Streams & Requirements | CMG",
-    "description": "Manitoba Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "description": "Explore Manitoba Skilled Worker, International Education and business pathways, and understand how MPNP EOI ranking works.",
     "contentBlocks": [
       {
         "type": "paragraph",
-        "text": "Manitoba's nominee program focuses on Skilled Worker in Manitoba and Skilled Worker Overseas categories. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+        "text": "Manitoba’s nominee pathways assess more than a general interest in settling in the province. Some Skilled Worker routes look at a candidate’s Manitoba work, study, family, or community connection, while the International Education Stream has its own eligibility rules. An Expression of Interest is a ranked profile—not a nomination—and candidates should match their evidence to the specific pathway before applying."
       },
       {
         "type": "table",
@@ -5021,15 +5010,15 @@
           ],
           [
             "Primary stream focus",
-            "Skilled Worker in Manitoba and Skilled Worker Overseas categories"
+            "Skilled Worker and International Education pathways use different eligibility rules; the relevant Manitoba connection depends on the route."
           ],
           [
             "Express Entry alignment",
-            "Partially"
+            "Some MPNP pathways can align with Express Entry; confirm the specific stream and federal criteria."
           ],
           [
             "What's distinct about this province",
-            "Strong emphasis on connection to Manitoba — family, prior study, or work ties"
+            "Some MPNP pathways assess a candidate’s connection to Manitoba, but the type of connection and the rest of the eligibility criteria depend on the pathway."
           ]
         ]
       },
@@ -5040,27 +5029,27 @@
       },
       {
         "type": "paragraph",
-        "text": "Q: Do I need a job offer to be nominated under Manitoba's program?"
+        "text": "Q: Is a Manitoba EOI a complete MPNP application?"
       },
       {
         "type": "paragraph",
-        "text": "A: It depends on the specific stream — some require a valid job offer from an employer in the province, while others nominate directly based on profile strength or a demonstrated connection to the province."
+        "text": "A: No. The Expression of Interest is an online profile that is ranked in a pool for relevant Skilled Worker and International Education pathways. Candidates selected from the pool are invited to submit a full application; check the [MPNP EOI instructions](https://immigratemanitoba.com/mpnp/apply/eoi/)."
       },
       {
         "type": "paragraph",
-        "text": "Q: How does a nomination affect my Express Entry profile?"
+        "text": "Q: How does Manitoba use EOI ranking?"
       },
       {
         "type": "paragraph",
-        "text": "A: For aligned streams, a nomination adds 600 CRS points directly to the existing profile. For non-aligned streams, the nomination instead leads to a separate provincial application process."
+        "text": "A: The MPNP assigns ranking points from the information in a profile and periodically invites selected candidates to apply. A high score or an invitation does not replace stream eligibility or proof of the facts claimed in the profile."
       },
       {
         "type": "paragraph",
-        "text": "Q: What makes Manitoba different from other provinces?"
+        "text": "Q: Does having family in Manitoba guarantee an invitation?"
       },
       {
         "type": "paragraph",
-        "text": "A: Strong emphasis on connection to Manitoba — family, prior study, or work ties."
+        "text": "A: No. A Manitoba connection may matter for some pathways, but it does not by itself establish eligibility or guarantee selection. Check the connection rules for the route you intend to use and keep the information in your EOI accurate."
       },
       {
         "type": "heading",
@@ -5085,18 +5074,18 @@
     "url": "https://commonwealthmigration.ca/immigrate/ontario-pnp-oinp",
     "path": "/immigrate/ontario-pnp-oinp",
     "seoTitle": "Ontario (OINP) PNP 2026: Streams & Requirements | CMG",
-    "metaDescription": "Ontario (OINP) Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "metaDescription": "Review Ontario’s 2026 Workforce Priority stream, employer steps, physician route and Express Entry option. Confirm current OINP deadlines.",
     "h1": "Ontario (OINP) Provincial Nominee Program",
     "hero": {
       "title": "Ontario (OINP) Provincial Nominee Program",
-      "lead": "Ontario (OINP)'s nominee program focuses on Human Capital Priorities, Employer Job Offer, Masters/PhD Graduate streams. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+      "lead": "Ontario’s Workforce Priority stream covers eligible skilled foreign workers with qualifying job offers and eligible self-employed physicians. Job-offer candidates begin with an employer portal step before registering an Expression of Interest; some eligible candidates may request an Express Entry nomination. Check current criteria, portal access and deadlines before proceeding."
     },
     "title": "Ontario (OINP) PNP 2026: Streams & Requirements | CMG",
-    "description": "Ontario (OINP) Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "description": "Understand Ontario’s 2026 Workforce Priority stream, its employer-led steps, physician route and Express Entry option.",
     "contentBlocks": [
       {
         "type": "paragraph",
-        "text": "Ontario (OINP)'s nominee program focuses on Human Capital Priorities, Employer Job Offer, Masters/PhD Graduate streams. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+        "text": "Ontario overhauled the OINP in 2026. The Ontario Workforce Priority stream offers a route for eligible skilled foreign workers with qualifying job offers and eligible self-employed physicians, while the previous EOI streams were being replaced. Confirm the current portal, employer steps, and stream criteria before acting. An invitation is not a nomination, and IRCC makes the final permanent-residence decision."
       },
       {
         "type": "table",
@@ -5123,15 +5112,15 @@
           ],
           [
             "Primary stream focus",
-            "Human Capital Priorities, Employer Job Offer, Masters/PhD Graduate streams"
+            "Ontario Workforce Priority serves eligible skilled foreign workers with qualifying job offers and eligible self-employed physicians; check the current OINP portal for available routes."
           ],
           [
             "Express Entry alignment",
-            "Yes — Human Capital Priorities stream draws directly from Express Entry"
+            "Some eligible Workforce Priority candidates may request an Express Entry nomination; federal rules apply."
           ],
           [
             "What's distinct about this province",
-            "Canada's largest PNP by volume of nominations issued annually"
+            "Ontario’s 2026 redesign introduced the Workforce Priority stream and changed how eligible candidates enter the selection process."
           ]
         ]
       },
@@ -5142,27 +5131,27 @@
       },
       {
         "type": "paragraph",
-        "text": "Q: Do I need a job offer to be nominated under Ontario (OINP)'s program?"
+        "text": "Q: What is the Ontario Workforce Priority stream?"
       },
       {
         "type": "paragraph",
-        "text": "A: It depends on the specific stream — some require a valid job offer from an employer in the province, while others nominate directly based on profile strength or a demonstrated connection to the province."
+        "text": "A: It is a 2026 OINP route for eligible skilled foreign workers with qualifying job offers and for certain self-employed physicians. Job-offer applicants and physicians follow different steps, so begin with the [current stream criteria](https://www.ontario.ca/page/ontario-workforce-priority-stream)."
       },
       {
         "type": "paragraph",
-        "text": "Q: How does a nomination affect my Express Entry profile?"
+        "text": "Q: Who starts the job-offer process for Ontario Workforce Priority?"
       },
       {
         "type": "paragraph",
-        "text": "A: For aligned streams, a nomination adds 600 CRS points directly to the existing profile. For non-aligned streams, the nomination instead leads to a separate provincial application process."
+        "text": "A: The employer must submit the position through Ontario’s Employer Portal before the candidate registers an EOI. Under the current instructions, the candidate registers within 30 calendar days of the employer’s submission; verify the [application steps and deadlines](https://www.ontario.ca/page/ontario-workforce-priority-stream) before proceeding."
       },
       {
         "type": "paragraph",
-        "text": "Q: What makes Ontario (OINP) different from other provinces?"
+        "text": "Q: Does an OINP invitation guarantee a nomination?"
       },
       {
         "type": "paragraph",
-        "text": "A: Canada's largest PNP by volume of nominations issued annually."
+        "text": "A: No. An invitation allows the candidate and, where required, the employer to file applications. Ontario checks that the candidate meets the stream criteria and can document the attributes claimed in the EOI; see the [OINP process guidance](https://www.ontario.ca/page/oinp-application-process)."
       },
       {
         "type": "heading",
@@ -5187,18 +5176,18 @@
     "url": "https://commonwealthmigration.ca/immigrate/nova-scotia-pnp-nsnp",
     "path": "/immigrate/nova-scotia-pnp-nsnp",
     "seoTitle": "Nova Scotia PNP 2026: Streams & Requirements | CMG",
-    "metaDescription": "Nova Scotia Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "metaDescription": "Compare the four current NSNP streams, understand EOI selection and review Nova Scotia’s current priorities and eligibility rules.",
     "h1": "Nova Scotia Provincial Nominee Program",
     "hero": {
       "title": "Nova Scotia Provincial Nominee Program",
-      "lead": "Nova Scotia's nominee program focuses on Labour Market Priorities and Physician streams. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+      "lead": "Nova Scotia now presents the NSNP through four streams: Skilled Worker, Nova Scotia Graduate, Entrepreneur and Nova Scotia: Express Entry. Some former pathway criteria continue as sub-criteria. Expressions of Interest are selected in light of program priorities and available spaces, so an EOI alone does not mean an application is approved."
     },
     "title": "Nova Scotia PNP 2026: Streams & Requirements | CMG",
-    "description": "Nova Scotia Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "description": "Compare Nova Scotia’s four current nominee streams, understand EOI selection and review current program priorities.",
     "contentBlocks": [
       {
         "type": "paragraph",
-        "text": "Nova Scotia's nominee program focuses on Labour Market Priorities and Physician streams. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+        "text": "As of February 18, 2026, Nova Scotia consolidated its nominee program into four streams: Nova Scotia Graduate, Skilled Worker, Entrepreneur, and Nova Scotia: Express Entry. Some sub-criteria carry forward from former streams, but applicants should use the current stream names and guides. Nova Scotia selects some EOI submissions based on program priorities and available nomination spaces; selection is not approval."
       },
       {
         "type": "table",
@@ -5225,15 +5214,15 @@
           ],
           [
             "Primary stream focus",
-            "Labour Market Priorities and Physician streams"
+            "The four NSNP streams are Nova Scotia Graduate, Skilled Worker, Entrepreneur, and Nova Scotia: Express Entry, with route-specific sub-criteria."
           ],
           [
             "Express Entry alignment",
-            "Partially"
+            "Nova Scotia: Express Entry is one of the four current streams; other routes have separate steps."
           ],
           [
             "What's distinct about this province",
-            "Labour Market Priorities draws target specific in-demand occupations periodically"
+            "Nova Scotia consolidated its former streams in February 2026; current EOI selection reflects program priorities and available spaces."
           ]
         ]
       },
@@ -5244,27 +5233,27 @@
       },
       {
         "type": "paragraph",
-        "text": "Q: Do I need a job offer to be nominated under Nova Scotia's program?"
+        "text": "Q: Which streams does Nova Scotia currently use?"
       },
       {
         "type": "paragraph",
-        "text": "A: It depends on the specific stream — some require a valid job offer from an employer in the province, while others nominate directly based on profile strength or a demonstrated connection to the province."
+        "text": "A: Since February 18, 2026, the NSNP has four consolidated streams: Nova Scotia Graduate, Skilled Worker, Entrepreneur, and Nova Scotia: Express Entry. Some former stream criteria were carried into sub-criteria under the new structure; see the [official stream update](https://liveinnovascotia.com/resources/nsnp-update-four-consolidated-streams)."
       },
       {
         "type": "paragraph",
-        "text": "Q: How does a nomination affect my Express Entry profile?"
+        "text": "Q: Does submitting an NSNP EOI mean my application is being processed?"
       },
       {
         "type": "paragraph",
-        "text": "A: For aligned streams, a nomination adds 600 CRS points directly to the existing profile. For non-aligned streams, the nomination instead leads to a separate provincial application process."
+        "text": "A: Not necessarily. Nova Scotia selects submissions from the EOI pool based on factors such as current priorities, remaining allocation, pool volume, and program integrity. Selection for processing is not a guarantee of nomination; review the [EOI process](https://liveinnovascotia.com/eoi-process)."
       },
       {
         "type": "paragraph",
-        "text": "Q: What makes Nova Scotia different from other provinces?"
+        "text": "Q: Are Nova Scotia EOI selections made on a fixed schedule?"
       },
       {
         "type": "paragraph",
-        "text": "A: Labour Market Priorities draws target specific in-demand occupations periodically."
+        "text": "A: No fixed monthly volume or invitation date is promised. Nova Scotia says timing and selection volumes may vary with eligibility criteria, labour-market priorities, and available spaces; check the [latest selection updates](https://liveinnovascotia.com/eoi-selection)."
       },
       {
         "type": "heading",
@@ -5289,18 +5278,18 @@
     "url": "https://commonwealthmigration.ca/immigrate/new-brunswick-pnp",
     "path": "/immigrate/new-brunswick-pnp",
     "seoTitle": "New Brunswick PNP 2026: Streams & Requirements | CMG",
-    "metaDescription": "New Brunswick Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "metaDescription": "Review New Brunswick’s current nominee streams, EOI invitations and selection priorities. Use official NBPNP guidance to confirm eligibility.",
     "h1": "New Brunswick Provincial Nominee Program",
     "hero": {
       "title": "New Brunswick Provincial Nominee Program",
-      "lead": "New Brunswick's nominee program focuses on Express Entry Labour Market stream and Skilled Worker stream. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+      "lead": "The NBPNP has Skilled Worker, Express Entry, Strategic Initiative and Business Immigration streams. Selection can reflect New Brunswick’s labour-market needs, available nomination spaces and current priorities. An Expression of Interest or apparent stream fit is only an early step; candidates still need an invitation and a complete application."
     },
     "title": "New Brunswick PNP 2026: Streams & Requirements | CMG",
-    "description": "New Brunswick Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "description": "Review New Brunswick’s nominee streams, EOI invitations and selection priorities before choosing a pathway.",
     "contentBlocks": [
       {
         "type": "paragraph",
-        "text": "New Brunswick's nominee program focuses on Express Entry Labour Market stream and Skilled Worker stream. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+        "text": "The current NBPNP includes Skilled Worker, Express Entry, Strategic Initiative, and Business Immigration streams. Immigration New Brunswick selects candidates in light of provincial labour-market needs, available allocations, and current priorities. An Expression of Interest is only an initial step; even a candidate who appears eligible still needs an invitation and a complete application."
       },
       {
         "type": "table",
@@ -5327,15 +5316,15 @@
           ],
           [
             "Primary stream focus",
-            "Express Entry Labour Market stream and Skilled Worker stream"
+            "Current streams include Skilled Worker, Express Entry, Strategic Initiative, and Business Immigration, each with distinct requirements."
           ],
           [
             "Express Entry alignment",
-            "Partially"
+            "The Express Entry stream is aligned; check its current intake and requirements."
           ],
           [
             "What's distinct about this province",
-            "Strong focus on French-language and bilingual candidates"
+            "New Brunswick’s invitation rounds can target different pathways and occupational groups; French-language priorities apply to specific selections rather than every applicant."
           ]
         ]
       },
@@ -5346,27 +5335,27 @@
       },
       {
         "type": "paragraph",
-        "text": "Q: Do I need a job offer to be nominated under New Brunswick's program?"
+        "text": "Q: Which streams are currently part of the NBPNP?"
       },
       {
         "type": "paragraph",
-        "text": "A: It depends on the specific stream — some require a valid job offer from an employer in the province, while others nominate directly based on profile strength or a demonstrated connection to the province."
+        "text": "A: The province lists Skilled Worker, Express Entry, Strategic Initiative, and Business Immigration streams, with separate pilot programs also announced at times. Start from the [official NBPNP overview](https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program.html) to check current routes."
       },
       {
         "type": "paragraph",
-        "text": "Q: How does a nomination affect my Express Entry profile?"
+        "text": "Q: Is an NBPNP Expression of Interest a full application?"
       },
       {
         "type": "paragraph",
-        "text": "A: For aligned streams, a nomination adds 600 CRS points directly to the existing profile. For non-aligned streams, the nomination instead leads to a separate provincial application process."
+        "text": "A: No. An EOI is an initial indication of interest, not a complete nomination application, and it does not guarantee an invitation. New Brunswick selects candidates according to labour-market needs, available allocation, and current priorities; see the [invitation-round information](https://www.gnb.ca/en/topic/family-home-community/immigration/invitation-selection-rounds.html)."
       },
       {
         "type": "paragraph",
-        "text": "Q: What makes New Brunswick different from other provinces?"
+        "text": "Q: Does speaking French guarantee a New Brunswick invitation?"
       },
       {
         "type": "paragraph",
-        "text": "A: Strong focus on French-language and bilingual candidates."
+        "text": "A: No. Some Strategic Initiative pathways and invitation rounds include Francophone priorities, but candidates still need to meet the requirements of the relevant pathway and selection round. Check the current [New Brunswick invitation updates](https://www.gnb.ca/en/topic/family-home-community/immigration/invitation-selection-rounds.html)."
       },
       {
         "type": "heading",
@@ -5391,18 +5380,18 @@
     "url": "https://commonwealthmigration.ca/immigrate/prince-edward-island-pnp",
     "path": "/immigrate/prince-edward-island-pnp",
     "seoTitle": "Prince Edward Island PNP 2026: Streams & Requirements | CMG",
-    "metaDescription": "Prince Edward Island Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "metaDescription": "Review PEI’s Labour Impact, Express Entry and Business Impact routes, EOI selection and current application deadlines.",
     "h1": "Prince Edward Island Provincial Nominee Program",
     "hero": {
       "title": "Prince Edward Island Provincial Nominee Program",
-      "lead": "Prince Edward Island's nominee program focuses on Express Entry and Labour Impact categories. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+      "lead": "PEI uses an Expression of Interest system for Labour Impact, Express Entry and Business Impact routes. The Office of Immigration selects profiles according to current provincial needs and available spaces; an EOI is not a nomination application or a promise of an invitation. Check the latest selection attributes and the requirements for your route."
     },
     "title": "Prince Edward Island PNP 2026: Streams & Requirements | CMG",
-    "description": "Prince Edward Island Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "description": "Explore PEI Labour Impact, Express Entry and Business Impact routes, and understand how EOI selection works.",
     "contentBlocks": [
       {
         "type": "paragraph",
-        "text": "Prince Edward Island's nominee program focuses on Express Entry and Labour Impact categories. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+        "text": "Prince Edward Island uses an Expression of Interest system for its Labour Impact, Express Entry, and Business Impact routes. The Office of Immigration selects profiles according to provincial labour-market needs and available spaces; submitting an EOI is not a nomination application or a promise of an invitation. Check the current selection attributes before choosing a pathway."
       },
       {
         "type": "table",
@@ -5429,15 +5418,15 @@
           ],
           [
             "Primary stream focus",
-            "Express Entry and Labour Impact categories"
+            "PEI’s EOI system covers Labour Impact, Express Entry, and Business Impact routes, with separate eligibility rules and selection priorities."
           ],
           [
             "Express Entry alignment",
-            "Partially"
+            "PEI has an Express Entry route for candidates who also meet federal criteria."
           ],
           [
             "What's distinct about this province",
-            "Smallest population base — nomination volumes are proportionally limited"
+            "PEI selects from its EOI pool in response to provincial economic and labour-market needs and may limit intake or exclude profiles from a draw."
           ]
         ]
       },
@@ -5448,27 +5437,27 @@
       },
       {
         "type": "paragraph",
-        "text": "Q: Do I need a job offer to be nominated under Prince Edward Island's program?"
+        "text": "Q: Is a PEI Expression of Interest an application for nomination?"
       },
       {
         "type": "paragraph",
-        "text": "A: It depends on the specific stream — some require a valid job offer from an employer in the province, while others nominate directly based on profile strength or a demonstrated connection to the province."
+        "text": "A: No. It records your interest in being considered for an invitation. The Office selects profiles that fit current provincial needs, and only an invited candidate can submit the full application; see the [PEI EOI process](https://www.princeedwardisland.ca/en/topic/expression-of-interest)."
       },
       {
         "type": "paragraph",
-        "text": "Q: How does a nomination affect my Express Entry profile?"
+        "text": "Q: Does meeting a PEI stream’s eligibility rules guarantee an invitation?"
       },
       {
         "type": "paragraph",
-        "text": "A: For aligned streams, a nomination adds 600 CRS points directly to the existing profile. For non-aligned streams, the nomination instead leads to a separate provincial application process."
+        "text": "A: No. PEI may limit intake or exclude profiles from a draw, and selection depends on current economic and labour-market needs. Review the [published selection attributes](https://www.princeedwardisland.ca/en/topic/expression-of-interest) rather than relying on a past draw."
       },
       {
         "type": "paragraph",
-        "text": "Q: What makes Prince Edward Island different from other provinces?"
+        "text": "Q: How soon must I submit an application after a PEI invitation?"
       },
       {
         "type": "paragraph",
-        "text": "A: Smallest population base — nomination volumes are proportionally limited."
+        "text": "A: Under the current instructions, candidates invited through PNP or PEI Express Entry have 30 calendar days to submit a complete application. Use the deadline in your invitation and confirm the [current PEI instructions](https://www.princeedwardisland.ca/en/service/submit-your-expression-of-interest-profile)."
       },
       {
         "type": "heading",
@@ -5493,18 +5482,18 @@
     "url": "https://commonwealthmigration.ca/immigrate/newfoundland-and-labrador-pnp",
     "path": "/immigrate/newfoundland-and-labrador-pnp",
     "seoTitle": "Newfoundland and Labrador PNP 2026: Streams & Requirements | CMG",
-    "metaDescription": "Newfoundland and Labrador Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "metaDescription": "Understand the Newfoundland and Labrador EOI process for NLPNP and AIP applications, invitation deadlines and current priorities.",
     "h1": "Newfoundland and Labrador Provincial Nominee Program",
     "hero": {
       "title": "Newfoundland and Labrador Provincial Nominee Program",
-      "lead": "Newfoundland and Labrador's nominee program focuses on Skilled Worker, International Graduate, and Express Entry categories. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+      "lead": "Newfoundland and Labrador uses an Expression of Interest as the first step in its two-stage economic immigration process. Selected candidates receive an invitation to submit a full NLPNP or Atlantic Immigration Program application; the AIP is a separate federal program. An EOI does not guarantee selection, and current priorities can change."
     },
     "title": "Newfoundland and Labrador PNP 2026: Streams & Requirements | CMG",
-    "description": "Newfoundland and Labrador Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
+    "description": "Understand Newfoundland and Labrador’s EOI process for NLPNP and Atlantic Immigration Program applications, invitations and priorities.",
     "contentBlocks": [
       {
         "type": "paragraph",
-        "text": "Newfoundland and Labrador's nominee program focuses on Skilled Worker, International Graduate, and Express Entry categories. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+        "text": "Newfoundland and Labrador now uses an Expression of Interest model as the first step in its economic immigration selection process. The Office of Immigration and Multiculturalism reviews profiles and issues invitations to selected candidates to submit a full NLPNP or Atlantic Immigration Program application. Priorities may reflect occupation, region, employer history, settlement prospects, and available spaces; an EOI alone is not an invitation."
       },
       {
         "type": "table",
@@ -5531,15 +5520,15 @@
           ],
           [
             "Primary stream focus",
-            "Skilled Worker, International Graduate, and Express Entry categories"
+            "The EOI model is the first step toward an invitation for a full NLPNP or Atlantic Immigration Program application."
           ],
           [
             "Express Entry alignment",
-            "Partially"
+            "The Skilled Worker Express Entry route requires federal Express Entry eligibility."
           ],
           [
             "What's distinct about this province",
-            "International graduate category favours local post-secondary graduates"
+            "Newfoundland and Labrador assesses EOIs against changing provincial priorities; a submission does not guarantee an invitation."
           ]
         ]
       },
@@ -5550,27 +5539,27 @@
       },
       {
         "type": "paragraph",
-        "text": "Q: Do I need a job offer to be nominated under Newfoundland and Labrador's program?"
+        "text": "Q: What happens after I submit an EOI to Newfoundland and Labrador?"
       },
       {
         "type": "paragraph",
-        "text": "A: It depends on the specific stream — some require a valid job offer from an employer in the province, while others nominate directly based on profile strength or a demonstrated connection to the province."
+        "text": "A: The Office of Immigration and Multiculturalism assesses the profile and may issue an Invitation to Apply. Only after receiving an invitation can the candidate or employer submit the full NLPNP or AIP application; read the [current EOI process](https://www.gov.nl.ca/immigration/expression-of-interest-model-overview/)."
       },
       {
         "type": "paragraph",
-        "text": "Q: How does a nomination affect my Express Entry profile?"
+        "text": "Q: How long do I have to file after an NLPNP invitation?"
       },
       {
         "type": "paragraph",
-        "text": "A: For aligned streams, a nomination adds 600 CRS points directly to the existing profile. For non-aligned streams, the nomination instead leads to a separate provincial application process."
+        "text": "A: The deadline is stated in the invitation and can change with provincial intake measures. The current EOI guidance describes a 30-day submission period for invitations under end-of-year measures, so check the message and the [latest program instructions](https://www.gov.nl.ca/immigration/expression-of-interest-model-overview/) as soon as it arrives."
       },
       {
         "type": "paragraph",
-        "text": "Q: What makes Newfoundland and Labrador different from other provinces?"
+        "text": "Q: What factors can affect EOI selection?"
       },
       {
         "type": "paragraph",
-        "text": "A: International graduate category favours local post-secondary graduates."
+        "text": "A: Published criteria include the occupation and region, alignment with provincial priorities, employer history, and signs the candidate is likely to remain in the province. The criteria are non-exhaustive and can change, and meeting one factor does not guarantee an invitation; see the [EOI prioritization criteria](https://www.gov.nl.ca/immigration/expression-of-interest-model-prioritization-criteria/)."
       },
       {
         "type": "heading",
@@ -5594,56 +5583,69 @@
   {
     "url": "https://commonwealthmigration.ca/immigrate/yukon-nwt-nunavut-nominee-programs",
     "path": "/immigrate/yukon-nwt-nunavut-nominee-programs",
-    "seoTitle": "Yukon / NWT (territorial nominee programs) PNP 2026: Streams & Requirements | CMG",
-    "metaDescription": "Yukon / NWT (territorial nominee programs) Provincial Nominee Program streams for 2026: eligibility focus, Express Entry alignment, and what makes this province's PNP distinct.",
-    "h1": "Yukon / NWT (territorial nominee programs) Provincial Nominee Program",
+    "seoTitle": "Yukon and Northwest Territories Nominee Programs 2026 | CMG",
+    "metaDescription": "Compare Yukon and Northwest Territories nominee programs, their Express Entry options, employer steps and current EOI selection processes.",
+    "h1": "Yukon and Northwest Territories Nominee Programs",
     "hero": {
-      "title": "Yukon / NWT (territorial nominee programs) Provincial Nominee Program",
-      "lead": "Yukon / NWT (territorial nominee programs)'s nominee program focuses on Employer-driven territorial nominee streams. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+      "title": "Yukon and Northwest Territories Nominee Programs",
+      "lead": "Yukon and the Northwest Territories run separate nominee programs with different streams and application steps. Yukon’s program has Critical Impact Worker, Skilled Worker and Express Entry streams, with employers submitting applications. The NTNP has Employer-Driven, Francophone and Business streams; its Employer-Driven stream includes an NWT Express Entry category and uses an EOI selection process. Confirm the current intake rules for the route you are considering."
     },
-    "title": "Yukon / NWT (territorial nominee programs) PNP 2026: Streams & Requirements | CMG",
-    "description": "Compare Yukon and northern territorial nominee streams, eligibility focus, Express Entry alignment and distinct requirements for applicants.",
+    "title": "Yukon and Northwest Territories Nominee Programs 2026 | CMG",
+    "description": "Compare Yukon and Northwest Territories nominee programs, their Express Entry options, employer steps and current EOI selection processes.",
     "contentBlocks": [
       {
         "type": "paragraph",
-        "text": "Yukon / NWT (territorial nominee programs)'s nominee program focuses on Employer-driven territorial nominee streams. A nomination under this program can add 600 CRS points to an Express Entry profile where the stream is aligned, or lead to permanent residence through the province's own separate process where it isn't."
+        "text": "Yukon and the Northwest Territories run separate nominee programs with different streams and application steps. Yukon’s program has Critical Impact Worker, Skilled Worker and Express Entry streams, with employers submitting applications. The NTNP has Employer-Driven, Francophone and Business streams; its Employer-Driven stream includes an NWT Express Entry category and uses an EOI selection process. Confirm the current intake rules for the route you are considering."
       },
       {
         "type": "table",
         "rows": [
           [
-            "+600 CRS points if aligned",
-            "Province-specific Occupation & connection rules",
-            "No Express Entry-aligned",
-            "Varies Processing timeline"
+            "+600 CRS points through an accepted Express Entry nomination",
+            "2 separate territorial nominee programs",
+            "3 streams in each program",
+            "Intake and deadlines vary by route"
           ]
         ]
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Yukon / NWT (territorial nominee programs) Stream Overview"
+        "text": "Yukon and Northwest Territories Stream Overview"
       },
       {
         "type": "table",
         "rows": [
           [
-            "Aspect",
-            "Detail"
+            "Comparison",
+            "Yukon Nominee Program",
+            "Northwest Territories Nominee Program"
           ],
           [
-            "Primary stream focus",
-            "Employer-driven territorial nominee streams"
+            "Program streams",
+            "Critical Impact Worker, Skilled Worker and Express Entry.",
+            "Employer-Driven, Francophone and Business; Employer-Driven includes Entry Level/Semi-Skilled, Skilled Worker and NWT Express Entry categories."
           ],
           [
-            "Express Entry alignment",
-            "No — territorial programs run outside Express Entry"
+            "Who starts the process",
+            "The employer submits the application; a foreign national cannot apply directly to the employer-driven worker streams.",
+            "For Employer-Driven, the employer creates a portal account and the nominee applicant completes an EOI profile. Francophone and Business use separate procedures."
           ],
           [
-            "What's distinct about this province",
-            "Nunavut currently has no active nominee program"
+            "Selection process",
+            "The 2026 program uses employer Expressions of Interest and published priority factors; invited employers submit a full application.",
+            "The Employer-Driven stream ranks EOI profiles and invites selected employers to apply. Francophone and Business follow their own intake rules."
+          ],
+          [
+            "Express Entry",
+            "Yukon has a dedicated Express Entry stream for eligible federal Express Entry candidates.",
+            "The Employer-Driven stream includes an NWT Express Entry category for candidates who meet territorial and federal requirements."
           ]
         ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A nomination adds CRS points only when it is issued through an Express Entry-aligned stream or category and accepted in the federal Express Entry system. A nomination through a non-Express Entry route follows a separate permanent-residence application. See the [IRCC Express Entry nomination rules](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees/express-entry/get-confirm-nomination.html)."
       },
       {
         "type": "heading",
@@ -5651,28 +5653,24 @@
         "text": "Frequently Asked Questions"
       },
       {
-        "type": "paragraph",
-        "text": "Q: Do I need a job offer to be nominated under Yukon / NWT (territorial nominee programs)'s program?"
+        "type": "faq",
+        "question": "Do Yukon and the Northwest Territories use the same nominee-program process?",
+        "answer": "No. They have separate program authorities, stream criteria and intake processes. Yukon requires an employer to submit applications for its worker streams. The NTNP Employer-Driven stream uses its own EOI ranking and invitation process, while the Francophone and Business streams follow separate instructions. Review the [Yukon program guide](https://yukon.ca/en/yukon-nominee-program) and [NWT stream guidance](https://www.immigratenwt.ca/employer-driven-stream) for the route you plan to use."
       },
       {
-        "type": "paragraph",
-        "text": "A: It depends on the specific stream — some require a valid job offer from an employer in the province, while others nominate directly based on profile strength or a demonstrated connection to the province."
+        "type": "faq",
+        "question": "Can a candidate submit a territorial nominee application without an employer?",
+        "answer": "It depends on the stream. Yukon’s worker applications are employer-submitted. The NWT Employer-Driven route requires an NWT job offer and an employer who will start the process; the Francophone and Business streams have different eligibility rules. Check the current [NTNP program information](https://www.immigratenwt.ca/) before deciding whether your situation fits."
       },
       {
-        "type": "paragraph",
-        "text": "Q: How does a nomination affect my Express Entry profile?"
+        "type": "faq",
+        "question": "Does every Yukon or NWT nomination add 600 CRS points?",
+        "answer": "No. The 600 points apply to an accepted nomination through an Express Entry-aligned route, such as Yukon Express Entry or the NWT Express Entry category, when the candidate also meets federal Express Entry requirements. A nomination through another stream does not add CRS points; it follows the non-Express Entry process."
       },
       {
-        "type": "paragraph",
-        "text": "A: For aligned streams, a nomination adds 600 CRS points directly to the existing profile. For non-aligned streams, the nomination instead leads to a separate provincial application process."
-      },
-      {
-        "type": "paragraph",
-        "text": "Q: What makes Yukon / NWT (territorial nominee programs) different from other provinces?"
-      },
-      {
-        "type": "paragraph",
-        "text": "A: Nunavut currently has no active nominee program."
+        "type": "faq",
+        "question": "Does Nunavut have a nominee program?",
+        "answer": "No. IRCC confirms that Nunavut does not have a provincial nominee program. See the [official IRCC overview](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html) for current jurisdiction information."
       },
       {
         "type": "heading",
@@ -5683,13 +5681,13 @@
         "type": "list",
         "ordered": true,
         "items": [
-          "Provincial Nominee Program (all provinces) → /immigrate/provincial-nominee-program-all-provinces-consolidated",
+          "Provincial Nominee Program (all provinces and territories) → /immigrate/provincial-nominee-program-all-provinces-consolidated",
           "Express Entry Overview → /immigrate/express-entry"
         ]
       },
       {
         "type": "paragraph",
-        "text": "CTA: Book a Free Consultation to check your fit for Yukon / NWT (territorial nominee programs)'s nominee program."
+        "text": "CTA: Book a free consultation to compare your profile with current Yukon and Northwest Territories nominee-program criteria."
       }
     ]
   },
@@ -6337,6 +6335,22 @@
         "text": "A: No — it only extends visitor status; working or studying requires the appropriate separate work or study permit."
       },
       {
+        "type": "paragraph",
+        "text": "Q: Is a Visitor Record a visa for entering Canada?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A: No. It records the period a person may remain in Canada; it is not an entry visa and does not guarantee re-entry after travel. If you leave Canada, check whether you need a valid TRV or eTA to return; see [IRCC’s visitor record guidance](https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/extend-stay/about.html)."
+      },
+      {
+        "type": "paragraph",
+        "text": "Q: When should I apply to extend my visitor stay?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A: Apply for the Visitor Record before your current authorized stay expires. Check the expiry date on your passport stamp or existing document and use IRCC’s [current extension instructions](https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/extend-stay.html) for the right process."
+      },
+      {
         "type": "heading",
         "level": 2,
         "text": "Related Pages"
@@ -6352,22 +6366,6 @@
       {
         "type": "paragraph",
         "text": "CTA: Book a Free Consultation to extend your visitor status on time."
-      },
-      {
-        "type": "paragraph",
-        "text": "Commonwealth Migration Canada"
-      },
-      {
-        "type": "paragraph",
-        "text": "Full-Scale Page Content — Developer Upload Pack"
-      },
-      {
-        "type": "paragraph",
-        "text": "Technical data sourced from public IRCC / ESDC / CICC program rules. Marketing copy and structure written fresh for Commonwealth Migration."
-      },
-      {
-        "type": "paragraph",
-        "text": "Batch 5 — Spousal Sponsorship Sub-Pages, Family Members, Sponsorship Requirements · Prepared August 2026"
       }
     ]
   },
@@ -7854,7 +7852,7 @@
     "contentBlocks": [
       {
         "type": "paragraph",
-        "text": "Most refused sponsorship applications — spousal sponsorship in particular — can be appealed to the Immigration Appeal Division (IAD), which independently reviews the evidence and can overturn the original refusal."
+        "text": "A sponsor may have a right to appeal an eligible refusal of a permanent-resident visa application for a sponsored family member to the Immigration Appeal Division. The appeal route does not cover every refusal, and the sponsor must meet a strict filing deadline. Check the refusal type and the [IAD’s appeal instructions](https://irb-cisr.gc.ca/en/forms/Pages/notice-of-appeal-sponsorship.aspx) before deciding what to do."
       },
       {
         "type": "table",
@@ -7912,7 +7910,7 @@
       },
       {
         "type": "paragraph",
-        "text": "A: A strict deadline applies from the date of the refusal letter — missing it generally forfeits the right to appeal, so this should be treated as urgent."
+        "text": "A: The IAD must receive the Notice of Appeal and required documents within 30 days after the sponsor receives the refusal decision. Confirm the deadline on the [official appeal page](https://irb-cisr.gc.ca/en/forms/Pages/notice-of-appeal-sponsorship.aspx) and treat it as urgent."
       },
       {
         "type": "paragraph",
@@ -7931,6 +7929,22 @@
         "text": "A: Further options can include an application for leave to the Federal Court, though this is a narrower and more procedural review than the IAD's own hearing."
       },
       {
+        "type": "paragraph",
+        "text": "Q: Who can file a sponsorship appeal?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A: For an eligible refusal of a permanent-resident visa application for a sponsored family member, the sponsor files the appeal; the sponsored person cannot file it. The Immigration Appeal Division explains the [appeal steps and who may appeal](https://irb-cisr.gc.ca/en/making-immigration-appeal/Pages/immapp-a2.aspx)."
+      },
+      {
+        "type": "paragraph",
+        "text": "Q: Can I appeal a refusal of a visitor, study, or work visa for a family member?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A: No. The Immigration Appeal Division’s sponsorship appeal process is for eligible family-class permanent-resident visa refusals, not temporary-resident visa refusals. Confirm the refusal type and the [IAD appeal rules](https://irb-cisr.gc.ca/en/forms/Pages/notice-of-appeal-sponsorship.aspx) immediately because the filing deadline is strict."
+      },
+      {
         "type": "heading",
         "level": 2,
         "text": "Related Pages"
@@ -7946,22 +7960,6 @@
       {
         "type": "paragraph",
         "text": "CTA: Book a Free Consultation urgently if you're within your appeal deadline."
-      },
-      {
-        "type": "paragraph",
-        "text": "Commonwealth Migration Canada"
-      },
-      {
-        "type": "paragraph",
-        "text": "Full-Scale Page Content — Developer Upload Pack"
-      },
-      {
-        "type": "paragraph",
-        "text": "Technical data sourced from public IRCC / ESDC / CICC program rules. Marketing copy and structure written fresh for Commonwealth Migration."
-      },
-      {
-        "type": "paragraph",
-        "text": "Batch 6 — Canadian Citizenship, PR & Travel Documents, Adoption · Prepared August 2026"
       }
     ]
   },
@@ -9138,6 +9136,10 @@
         ]
       },
       {
+        "type": "paragraph",
+        "text": "First decide whether the case is for a direct citizenship application or for sponsoring the adopted child for permanent residence; the records and eligibility checks differ. For a child adopted abroad, citizenship is not automatic, and the current adoption rules include a first-generation limit that took effect for relevant cases on December 15, 2025. Review [IRCC’s citizenship rules for adoption](https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship/act-changes/rules-2009-2015/adoption.html) and speak with the provincial or territorial adoption authority before filing."
+      },
+      {
         "type": "heading",
         "level": 2,
         "text": "Typical Documentation"
@@ -9178,7 +9180,7 @@
       },
       {
         "type": "paragraph",
-        "text": "A: Not always — this depends on the country of adoption and whether it falls under Hague Convention procedures or a non-Convention process, each with different provincial involvement."
+        "text": "A: Provincial and territorial authorities oversee adoption processes, and the documents they require can depend on the jurisdiction and whether the case follows Hague Convention procedures. Contact the appropriate adoption authority before filing; IRCC summarizes the [steps for citizenship by adoption](https://www.canada.ca/en/immigration-refugees-citizenship/services/canadians/adopt-child-abroad/processes/choose-process/citizenship/apply.html)."
       },
       {
         "type": "paragraph",
@@ -9187,6 +9189,22 @@
       {
         "type": "paragraph",
         "text": "A: This can complicate the application significantly and may require additional evidence or legal steps — it should be addressed early with proper guidance rather than left until the application stage."
+      },
+      {
+        "type": "paragraph",
+        "text": "Q: Does a child adopted abroad by a Canadian automatically become a citizen?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A: No. A person born outside Canada and adopted by a Canadian citizen is not automatically a citizen. After the adoption is complete, the family may be able to apply for a direct grant of citizenship or use the permanent-residence route; eligibility depends on the adoption and current citizenship rules, including limits that changed on December 15, 2025. Review [IRCC’s adoption and citizenship guidance](https://www.canada.ca/en/immigration-refugees-citizenship/services/canadians/adopt-child-abroad/citizenship.html)."
+      },
+      {
+        "type": "paragraph",
+        "text": "Q: Are citizenship and permanent-residence applications for an adopted child the same process?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A: No. A direct citizenship application and sponsorship for permanent residence use different eligibility tests and document packages. The PR route includes medical and background checks; compare the [IRCC process options](https://www.ircc.canada.ca/english/helpcentre/answer.asp?qnum=405&top=2) before assembling the record."
       },
       {
         "type": "heading",
@@ -9204,22 +9222,6 @@
       {
         "type": "paragraph",
         "text": "CTA: Book a Free Consultation to confirm your adoption documentation is complete."
-      },
-      {
-        "type": "paragraph",
-        "text": "Commonwealth Migration Canada"
-      },
-      {
-        "type": "paragraph",
-        "text": "Full-Scale Page Content — Developer Upload Pack"
-      },
-      {
-        "type": "paragraph",
-        "text": "Technical data sourced from public IRCC / ESDC / CICC program rules. Marketing copy and structure written fresh for Commonwealth Migration."
-      },
-      {
-        "type": "paragraph",
-        "text": "Batch 7 (Final) — Inadmissibility (Criminal & Other), Enforcement, Appeals & Legal · Prepared August 2026"
       }
     ]
   },

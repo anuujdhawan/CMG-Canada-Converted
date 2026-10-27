@@ -181,36 +181,51 @@ const article = {
     { term: "Base nomination", definition: "A nomination that runs outside Express Entry and leads to a separate, paper-based permanent residence application." },
     { term: "Allocation", definition: "The number of nominations a province or territory may issue in a year. A full allocation can pause a stream even for eligible candidates." },
     { term: "Expression of interest", definition: "A profile some provinces require before they invite candidates to apply, used to rank interested candidates against the province's needs." },
-    { term: "NOC", definition: "The National Occupation Classification, the list of occupations in the Canadian labour market used to describe and match work experience." },
+    { term: "NOC", definition: "Canada's system for grouping occupations by their main duties and responsibilities. Applicants use a NOC code and matching duties to describe relevant work history." },
     { term: "CRS", definition: "The Comprehensive Ranking System, the points system that scores and ranks profiles inside the Express Entry pool." },
   ],
 
   faqs: [
     {
-      question: "Do all provinces use the same PNP criteria?",
-      answer:
-        "No. Each province and territory designs its own streams and sets its own criteria, so requirements differ for occupation, job offer, language level, work experience and connection to the province. That is why the province's own page is the authority, and why a summary that covers every province can only describe the general pattern rather than the exact rule you must meet.",
+      "question": "How does Canada’s Provincial Nominee Program work, and which PNP Canada 2026 streams may fit my profile?",
+      "answer": "No. Each province and territory designs its own streams and sets its own criteria, so requirements differ for occupation, job offer, language level, work experience and connection to the province. That is why the province's own page is the authority, and why a summary that covers every province can only describe the general pattern rather than the exact rule you must meet."
     },
     {
-      question: "Is a provincial nomination enough to get permanent residence?",
-      answer:
-        "No. A nomination is the province's decision that it wants you, not a permanent residence approval. IRCC still assesses admissibility, including criminal, medical and security checks, and you still have to satisfy the program's requirements. A nomination substantially improves your position, but it does not remove the federal stage of the process.",
+      "question": "Is a provincial nomination enough to get permanent residence?",
+      "answer": "No. A nomination is the province's decision that it wants you, not a permanent residence approval. IRCC still assesses admissibility, including criminal, medical and security checks, and you still have to satisfy the program's requirements. A nomination substantially improves your position, but it does not remove the federal stage of the process."
     },
     {
-      question: "How many points does a PNP nomination add?",
-      answer:
-        "An enhanced nomination linked to Express Entry adds 600 points to your CRS score, which is the largest single addition available in the system. A base nomination adds no CRS points, because it is processed outside Express Entry as a separate paper-based application. The province decides which route it will use.",
+      "question": "How many points does a PNP nomination add?",
+      "answer": "An enhanced nomination linked to Express Entry adds 600 points to your CRS score, which is the largest single addition available in the system. A base nomination adds no CRS points, because it is processed outside Express Entry as a separate paper-based application. The province decides which route it will use."
     },
     {
-      question: "Can I apply to more than one province at the same time?",
-      answer:
-        "Provinces generally expect you to intend to settle in their province, and applying to several at once can raise questions about that intent. The practical approach is to identify the province that fits your occupation and circumstances best, apply there, and keep an Express Entry profile current so a federal round remains an option while you wait.",
+      "question": "Can I apply to more than one PNP stream at once?",
+      "answer": "Some people may receive interest from more than one province, and Express Entry lets a profile show interest in one or all provinces and territories. But each provincial stream has its own application rules and requires a genuine plan to settle there. In Express Entry, you can hold only one accepted provincial nomination at a time."
     },
     {
-      question: "Does Quebec have a provincial nominee program?",
-      answer:
-        "No. Quebec selects skilled workers and business applicants under its own immigration program rather than through the provincial nominee framework, so its rules, streams and application process are separate. If Quebec is your destination, work from Quebec's own immigration pages rather than from the federal PNP page.",
+      "question": "Does Quebec have a Provincial Nominee Program, or does it select immigrants separately?",
+      "answer": "No. Quebec selects skilled workers and business applicants under its own immigration program rather than through the provincial nominee framework, so its rules, streams and application process are separate. If Quebec is your destination, work from Quebec's own immigration pages rather than from the federal PNP page."
     },
+    {
+      "question": "Can I get a Provincial Nominee Program nomination without a job offer?",
+      "answer": "Sometimes. Some PNP streams invite candidates based on occupation, education, language, work history or an Express Entry profile without requiring a job offer; other streams require one. The answer depends on the province, stream and intake rules in force when you apply, so check the province’s official eligibility page."
+    },
+    {
+      "question": "Does every Canadian Provincial Nominee Program stream connect to Express Entry?",
+      "answer": "No. Enhanced PNP streams connect a nomination to an eligible Express Entry profile. Base streams use the non-Express Entry permanent-residence process. The stream’s instructions determine how the candidate registers, applies for nomination and later submits the federal application."
+    },
+    {
+      "question": "How long does a provincial nomination application take in Canada, and does timing vary by stream?",
+      "answer": "There is no single Canadian PNP processing time because provinces manage their own registration and nomination stages, and federal permanent-residence processing is separate. Check the province’s current service standard and IRCC’s processing-time page for the federal stage; a published estimate is not a promise for an individual file."
+    },
+    {
+      "question": "Can I apply for a PNP from outside Canada?",
+      "answer": "Many provincial streams accept applications from candidates outside Canada, while others require Canadian work, study or a local job offer. You must meet the specific stream rules and show a genuine intention to live in the nominating province. Being abroad does not by itself rule you out."
+    },
+    {
+      "question": "What happens after I receive a provincial nomination?",
+      "answer": "The next step depends on the stream. For an enhanced nomination, accept it in your Express Entry account within the stated deadline; IRCC then adds 600 CRS points. For a base nomination, follow the non-Express Entry permanent-residence instructions. In both cases, IRCC still assesses the final PR application."
+    }
   ],
 
   related: [
@@ -231,9 +246,26 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Immigrate as a provincial nominee", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html" },
-    { label: "IRCC — Express Entry: Who can apply", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply.html" },
-    { label: "IRCC — Atlantic Immigration Program", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration.html" },
+    {
+      "label": "IRCC — Immigrate as a provincial nominee",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html"
+    },
+    {
+      "label": "IRCC — Express Entry: Who can apply",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply.html"
+    },
+    {
+      "label": "IRCC — Atlantic Immigration Program",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees/express-entry/get-confirm-nomination.html",
+      "label": "IRCC Express Entry nomination steps and 600 CRS points"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees/express-entry/eligibility.html",
+      "label": "IRCC enhanced PNP eligibility"
+    }
   ],
 };
 

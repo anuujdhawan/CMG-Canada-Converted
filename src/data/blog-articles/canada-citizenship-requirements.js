@@ -167,35 +167,45 @@ const article = {
 
   faqs: [
     {
-      question: "What are the main Canada citizenship requirements?",
-      answer:
-        "You must be a permanent resident, meet the physical presence requirement within the qualifying period, have filed your taxes for the required years if the law required you to file, and meet the language and knowledge requirements if you fall within the applicable age range. All of the conditions apply at once, so failing one means the application is refused.",
+      "question": "What are the Canada citizenship requirements for an adult permanent resident applying for a Canadian citizenship grant in 2026?",
+      "answer": "You must be a permanent resident, meet the physical presence requirement within the qualifying period, have filed your taxes for the required years if the law required you to file, and meet the language and knowledge requirements if you fall within the applicable age range. All of the conditions apply at once, so failing one means the application is refused."
     },
     {
-      question: "How many days of physical presence do you need for citizenship?",
-      answer:
-        "The requirement is expressed as a number of days within a defined window, commonly described as 1,095 days over the relevant period, but the figure and the counting rules are set by IRCC and can change. Check the current rule on the official page and run the physical presence calculator with your actual travel dates rather than relying on a remembered number.",
+      "question": "How many days of citizenship physical presence in Canada do adult applicants need?",
+      "answer": "The requirement is expressed as a number of days within a defined window, commonly described as 1,095 days over the relevant period, but the figure and the counting rules are set by IRCC and can change. Check the current rule on the official page and run the physical presence calculator with your actual travel dates rather than relying on a remembered number."
     },
     {
-      question: "Do you have to file taxes to apply for Canadian citizenship?",
-      answer:
-        "Yes, if you were required to file under the Income Tax Act. You must show that you filed personal income taxes for the required number of years within the qualifying period. Filing is about compliance, not about how much tax you owed, so an unfiled return can block an otherwise strong application. File any gaps before you apply.",
+      "question": "Do you have to file taxes to apply for Canadian citizenship?",
+      "answer": "Yes, if you were required to file under the Income Tax Act. You must show that you filed personal income taxes for the required number of years within the qualifying period. Filing is about compliance, not about how much tax you owed, so an unfiled return can block an otherwise strong application. File any gaps before you apply."
     },
     {
-      question: "How is language ability proven for citizenship?",
-      answer:
-        "Through an approved English or French test showing the required level in speaking and listening, or through a qualifying diploma, degree or transcript from a program completed in one of those languages, or through a government-funded language training program. Reading and writing are not assessed. Test results expire, so check the validity date.",
+      "question": "How do I prove English or French language ability for a Canadian citizenship application?",
+      "answer": "Through an approved English or French test showing the required level in speaking and listening, or through a qualifying diploma, degree or transcript from a program completed in one of those languages, or through a government-funded language training program. Reading and writing are not assessed. Test results expire, so check the validity date."
     },
     {
-      question: "What is the difference between a grant of citizenship and a citizenship certificate?",
-      answer:
-        "A grant is the process of becoming a citizen as a permanent resident who meets the requirements. A citizenship certificate is proof of a citizenship you already hold, used by people who are citizens by birth or by descent. Applying for the wrong one wastes the fee, so identify which applies before you start.",
+      "question": "What is the difference between a grant of citizenship and a citizenship certificate?",
+      "answer": "A grant is the process of becoming a citizen as a permanent resident who meets the requirements. A citizenship certificate is proof of a citizenship you already hold, used by people who are citizens by birth or by descent. Applying for the wrong one wastes the fee, so identify which applies before you start."
     },
     {
-      question: "Can you apply for citizenship if your PR card has expired?",
-      answer:
-        "An expired PR card does not by itself stop a citizenship application, because the card is only a travel document and it is your permanent resident status that matters. What does stop an application is a status problem, such as an unresolved residency obligation issue or a removal order. Deal with that first.",
+      "question": "Can you apply for citizenship if your PR card has expired?",
+      "answer": "An expired PR card does not by itself stop a citizenship application, because the card is only a travel document and it is your permanent resident status that matters. What does stop an application is a status problem, such as an unresolved residency obligation issue or a removal order. Deal with that first."
     },
+    {
+      "question": "Can a Canadian citizen’s spouse apply for citizenship with fewer presence days?",
+      "answer": "No. Being married to a Canadian citizen does not reduce the adult physical-presence requirement. Most adult applicants still need 1,095 days in the five-year eligibility period and must meet the other citizenship conditions."
+    },
+    {
+      "question": "Do applicants aged 55 or older need a citizenship language test?",
+      "answer": "Applicants who are 55 or older on the day they sign the application do not have to provide language proof or take the citizenship knowledge test under the ordinary adult requirements. Review IRCC’s rules for your exact application type."
+    },
+    {
+      "question": "Do I need to submit the physical presence calculation with my application?",
+      "answer": "IRCC asks adult applicants to complete the physical-presence calculation and include the required calculator result or form with the application. Reconcile travel dates against passports, tickets and personal records before filing."
+    },
+    {
+      "question": "Can I travel after applying for Canadian citizenship?",
+      "answer": "You may travel while an application is being processed, but keep your contact details current and be ready to attend a test, interview or ceremony when scheduled. Days outside Canada after filing do not add to your eligibility calculation."
+    }
   ],
 
   related: [
@@ -206,9 +216,22 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Apply for Canadian citizenship", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship/become-canadian-citizen.html" },
-    { label: "IRCC — Apply for citizenship: Calculate your physical presence", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship/adult-minor/how/physical-presence.html" },
-    { label: "IRCC — Canadian citizenship", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship.html" },
+    {
+      "label": "IRCC — Apply for Canadian citizenship",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship/become-canadian-citizen.html"
+    },
+    {
+      "label": "IRCC — Apply for citizenship: Calculate your physical presence",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship/adult-minor/how/physical-presence.html"
+    },
+    {
+      "label": "IRCC — Canadian citizenship",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship/adult-minor/who.html",
+      "label": "IRCC citizenship eligibility, language and age rules"
+    }
   ],
 };
 

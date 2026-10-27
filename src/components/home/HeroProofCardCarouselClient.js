@@ -19,6 +19,12 @@ export default function HeroProofCardCarouselClient({ ariaLabel = "Commonwealth 
   const slideCount = cards.length;
 
   useEffect(() => {
+    // Keep the mobile hero stable after first paint. Desktop keeps the
+    // existing autoplay behavior and visual transitions.
+    if (window.matchMedia?.("(max-width: 880px), (prefers-reduced-motion: reduce)").matches) {
+      return undefined;
+    }
+
     const timer = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % slideCount);
     }, AUTOPLAY_MS);
@@ -39,7 +45,10 @@ export default function HeroProofCardCarouselClient({ ariaLabel = "Commonwealth 
             inert={index !== activeIndex}
             key={label}
           >
-            <Card {...(Card === PnpDrawCard ? { initialDraws: initialPnpDraws } : {})} />
+            <Card
+              {...(Card === PnpDrawCard ? { initialDraws: initialPnpDraws } : {})}
+              active={index === activeIndex}
+            />
           </div>
         ))}
       </div>

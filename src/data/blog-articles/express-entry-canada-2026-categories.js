@@ -151,39 +151,54 @@ const article = {
   glossary: [
     { term: "Express Entry", definition: "The online system IRCC uses to manage applications for the Federal Skilled Worker Program, the Federal Skilled Trades Program and the Canadian Experience Class." },
     { term: "Category-based selection", definition: "A type of invitation round that restricts candidates to those who meet a category set by the Minister, then ranks those candidates by CRS score." },
-    { term: "CRS", definition: "The Comprehensive Ranking System, the points system that scores and ranks profiles inside the Express Entry pool." },
-    { term: "NOC", definition: "The National Occupation Classification, the list of occupations in the Canadian labour market used to describe and match work experience." },
+    { term: "CRS", definition: "IRCC's points framework for assessing Express Entry profiles and ordering candidates when it issues invitations." },
+    { term: "NOC", definition: "IRCC uses NOC codes to identify occupations and their TEER levels when checking whether a candidate meets program or category criteria." },
     { term: "TEER", definition: "The training, education, experience and responsibilities category assigned to an occupation in the NOC. Most Express Entry experience must be in TEER 0, 1, 2 or 3." },
     { term: "Ministerial instructions", definition: "The instrument the Minister uses to establish categories and set the requirements that apply to a particular round of invitations." },
-    { term: "CLB and NCLC", definition: "The Canadian Language Benchmark for English and its French equivalent, the Niveaux de compétence linguistique canadiens, used to express language test results." },
+    { term: "CLB and NCLC", definition: "Canada measures English with the CLB scale and French with NCLC. These scales let IRCC compare approved test results with each category's language thresholds." },
   ],
 
   faqs: [
     {
-      question: "Do the Express Entry categories decide how many invitations are issued?",
-      answer:
-        "No. The categories decide who is eligible to be invited in a category round. The number of invitations is a separate decision that IRCC makes for each round, and general and program-specific rounds continue alongside category rounds. A category on the list does not guarantee that a dedicated round will be held for it.",
+      "question": "What are the Express Entry Canada 2026 categories, and how do category rounds affect invitations?",
+      "answer": "No. The categories decide who is eligible to be invited in a category round. The number of invitations is a separate decision that IRCC makes for each round, and general and program-specific rounds continue alongside category rounds. A category on the list does not guarantee that a dedicated round will be held for it."
     },
     {
-      question: "Can the Express Entry category list change during the year?",
-      answer:
-        "Yes. Categories are established by ministerial instructions and are reviewed on a regular basis, using labour market information and input from provinces, territories and stakeholders. IRCC also reports each year on the categories it chose and the invitations issued under them. Always check the current list rather than relying on an older summary.",
+      "question": "Can the Express Entry category list change during the year?",
+      "answer": "Yes. Categories are established by ministerial instructions and are reviewed on a regular basis, using labour market information and input from provinces, territories and stakeholders. IRCC also reports each year on the categories it chose and the invitations issued under them. Always check the current list rather than relying on an older summary."
     },
     {
-      question: "What CRS score do I need for a category-based round?",
-      answer:
-        "There is no fixed score. In a category round, IRCC ranks the eligible candidates in that category by CRS score and invites the highest, so the cut-off is whatever the top of that group happens to be on the day. It changes from round to round and cannot be treated as a target.",
+      "question": "What CRS score in Canada do I need for an Express Entry category-based draw in 2026?",
+      "answer": "There is no fixed score. In a category round, IRCC ranks the eligible candidates in that category by CRS score and invites the highest, so the cut-off is whatever the top of that group happens to be on the day. It changes from round to round and cannot be treated as a target."
     },
     {
-      question: "Do I need a job offer to be invited under a category?",
-      answer:
-        "No. Category eligibility turns on the requirements in the round instructions, which for occupation categories means documented work experience in a named occupation and, for the French-language category, French test results. A job offer is not a general requirement for category eligibility, and it no longer adds CRS points.",
+      "question": "Do I need a job offer to be invited under a category?",
+      "answer": "No. Category eligibility follows the round instructions: occupation rounds require qualifying work experience in a listed occupation, while the French-language category requires the specified test results. A job offer does not create category eligibility. Starting November 3, 2026, a qualifying offer in an eligible high-wage occupation may add CRS points under a separate factor."
     },
     {
-      question: "How do I know whether my occupation is in a category?",
-      answer:
-        "Check the current category list on the official IRCC page and read the round instructions, which name the occupations covered. Then confirm that your experience is documented well enough to prove the occupation. A job title alone is not enough; the duties in your reference letters are what support the match.",
+      "question": "How do I know whether my occupation is in a category?",
+      "answer": "Check the current category list on the official IRCC page and read the round instructions, which name the occupations covered. Then confirm that your experience is documented well enough to prove the occupation. A job title alone is not enough; the duties in your reference letters are what support the match."
     },
+    {
+      "question": "What Express Entry categories is IRCC using in 2026?",
+      "answer": "IRCC’s current list includes French-language proficiency, health care and social services, STEM, trades, education, transport, and Canadian-experience categories for physicians, senior managers, researchers and skilled military recruits. Check the live list before choosing a NOC."
+    },
+    {
+      "question": "Does a category-based Express Entry draw have a fixed CRS cutoff?",
+      "answer": "No. IRCC sets the cutoff for each round based on the eligible pool and the number of invitations. Category eligibility does not guarantee that a candidate will meet the round’s ranking threshold."
+    },
+    {
+      "question": "Can I qualify for more than one Express Entry category?",
+      "answer": "Possibly. A candidate can meet the rules for multiple categories if the profile contains the required occupation, work experience or language results. Qualifying for several categories still does not guarantee an invitation."
+    },
+    {
+      "question": "Do I need a separate Express Entry profile for a category-based draw?",
+      "answer": "No. Category-based rounds select eligible candidates already in the Express Entry pool. Use one accurate profile and make sure it documents the work experience or language results needed for the category."
+    },
+    {
+      "question": "Can category-based selection replace the Express Entry program requirements?",
+      "answer": "No. You must first qualify for at least one Express Entry-managed program, then meet the category and round instructions. A qualifying occupation or French result alone does not create pool eligibility."
+    }
   ],
 
   related: [
@@ -195,10 +210,26 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Canada prioritises top talent in 2026 immigration Express Entry categories", url: "https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/02/canada-prioritizes-top-talent-in-2026-immigration-express-entry-categories.html" },
-    { label: "IRCC — Category-based selection for Express Entry", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations/category-based-selection.html" },
-    { label: "IRCC — Express Entry: Who can apply", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply.html" },
-    { label: "IRCC — Comprehensive Ranking System (CRS) criteria", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html" },
+    {
+      "label": "IRCC — Canada prioritises top talent in 2026 immigration Express Entry categories",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/02/canada-prioritizes-top-talent-in-2026-immigration-express-entry-categories.html"
+    },
+    {
+      "label": "IRCC — Category-based selection for Express Entry",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations/category-based-selection.html"
+    },
+    {
+      "label": "IRCC — Express Entry: Who can apply",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply.html"
+    },
+    {
+      "label": "IRCC — Comprehensive Ranking System (CRS) criteria",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/02/attracting-the-worlds-best-talent-to-fill-canadas-labour-gaps-and-build-our-economy.html",
+      "label": "IRCC 2026 Express Entry priorities"
+    }
   ],
 };
 

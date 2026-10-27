@@ -165,35 +165,45 @@ const article = {
 
   faqs: [
     {
-      question: "Can I get a post-graduation work permit if my program is not in an eligible field?",
-      answer:
-        "If the field-of-study requirement applies to you and your program is not in an eligible field, the application can be refused even when everything else is in order. Check the current eligible fields on IRCC’s page against the specific program you are enrolled in, and consider whether an eligible second program is realistic before your study permit expires.",
+      "question": "Can I get a PGWP if my program is not on the eligible field-of-study list?",
+      "answer": "It depends on when you applied for your study permit and what credential you completed. The field requirement generally applies to affected non-degree college and university programs with study-permit applications from November 1, 2024 onward. Bachelor’s, master’s and doctoral graduates, flight-school graduates and earlier study-permit applicants have specified exemptions."
     },
     {
-      question: "How long is a post-graduation work permit valid?",
-      answer:
-        "The permit is generally aligned to the length of your program, up to a maximum set by IRCC, so a longer program usually produces a longer permit. Because the minimum, the maximum and the calculation are revised from time to time, confirm the current position on IRCC’s page rather than planning around a figure from an older guide.",
+      "question": "What are the post graduation work permit Canada requirements and PGWP eligibility rules for 2026?",
+      "answer": "A PGWP can last from 8 months up to 3 years, depending on credential, program length and passport expiry. A qualifying master’s program of at least 8 months can support a 3-year permit; most other programs under 2 years may receive up to the program length, while programs of 2 years or more may receive up to 3 years."
     },
     {
-      question: "Can I work while my post-graduation work permit application is being processed?",
-      answer:
-        "In many cases you can apply before your study permit expires and continue working under the conditions that apply while the application is processed. Those conditions and the deadline to apply are set by IRCC and can change, so confirm the current rule on the official page as you approach graduation and keep your status valid throughout.",
+      "question": "Can I work while my PGWP application is processing?",
+      "answer": "You may work full-time while IRCC processes your PGWP if, when you applied, your study permit was still valid, you had completed the program and you had been eligible to work off campus during studies without exceeding the permitted hours. If any condition was not met, do not assume filing the application gives you work authorization."
     },
     {
-      question: "Does the post-graduation work permit lead to permanent residence?",
-      answer:
-        "Not by itself. It is a work permit, but the Canadian work experience you build on it can support permanent residence through the Canadian Experience Class and strengthen an Express Entry profile. The experience must be skilled, documented and match the occupation you claim, so keep reference letters that state your duties and hours.",
+      "question": "Does a PGWP automatically give me permanent residence?",
+      "answer": "No. A PGWP is temporary work authorization, not permanent residence. Canadian skilled work you gain may later support a route such as the Canadian Experience Class, but you must separately meet that program’s work, language, admissibility and Express Entry requirements and receive an invitation before applying."
     },
     {
-      question: "What happens if I miss the application window?",
-      answer:
-        "Missing the window can cost you eligibility for the permit, because the rules tie the application to a period measured from when your institution confirmed completion. If you are close to the deadline, apply as soon as your documents are ready rather than waiting for a ceremony, and check the current window on IRCC’s page.",
+      "question": "How long after graduation can I apply for a PGWP?",
+      "answer": "IRCC requires a PGWP application within 180 days after the school confirms you completed the program. The date is tied to written confirmation such as a completion letter, final transcript or credential notice, not the graduation ceremony. Check whether you must apply from inside or outside Canada based on your status."
     },
     {
-      question: "Does the field-of-study requirement apply to every graduate?",
-      answer:
-        "No. It applies to many applicants, but the rules treat different levels and types of study differently, and the position has changed more than once. Rather than assume you are covered or exempt, check the current rules on IRCC’s page against your institution, your credential and your program’s field before you plan around the permit.",
+      "question": "Who is exempt from the PGWP field-of-study requirement?",
+      "answer": "The requirement does not apply to every graduate. IRCC exempts applicants who submitted their study-permit application before November 1, 2024, graduates of eligible flight schools and graduates with a bachelor’s, master’s or doctoral degree. Other applicants should check their credential, study-permit date and the relevant six-digit CIP code."
     },
+    {
+      "question": "What language score do I need for a PGWP?",
+      "answer": "Most PGWP applicants who apply on or after November 1, 2024 must provide an approved English or French test. The minimum is CLB or NCLC 7 in all four abilities for bachelor’s, master’s, doctoral and other university graduates, and CLB or NCLC 5 for college and other non-university graduates. Flight-school and some earlier applicants are exempt."
+    },
+    {
+      "question": "What is the minimum study-program length for a PGWP?",
+      "answer": "The usual minimum is an eligible program of at least 8 months; for Quebec credentials, IRCC generally uses at least 900 hours. You must also satisfy the study-status rules, including full-time status in each semester except that part-time study may be permitted in your final semester."
+    },
+    {
+      "question": "Can I apply for a PGWP from outside Canada?",
+      "answer": "Yes. IRCC allows eligible graduates to apply for a PGWP from inside Canada or from another country. The application still must be filed within the 180-day window, and an applicant who wants to work in Canada while waiting must meet the separate conditions for interim work authorization."
+    },
+    {
+      "question": "Can I extend a PGWP if my passport shortened its validity?",
+      "answer": "Usually a PGWP is a one-time permit, but you can apply on paper to extend it if IRCC issued a shorter permit because your passport was going to expire before the full eligible period. Renew the passport first and follow IRCC’s instructions; a PGWP cannot be extended just to gain more time or because a permanent-residence application is pending."
+    }
   ],
 
   related: [
@@ -204,9 +214,30 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Work in Canada after you graduate", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation.html" },
-    { label: "IRCC — Who can apply for a post-graduation work permit", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html" },
-    { label: "IRCC — Apply for a post-graduation work permit", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/apply.html" },
+    {
+      "label": "IRCC — Work in Canada after you graduate",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation.html"
+    },
+    {
+      "label": "IRCC — Who can apply for a post-graduation work permit",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html"
+    },
+    {
+      "label": "IRCC — Apply for a post-graduation work permit",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/apply.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/about.html",
+      "label": "IRCC PGWP length and passport validity"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/after-you-apply.html",
+      "label": "IRCC work authorization while PGWP is processing"
+    },
+    {
+      "url": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=676&top=",
+      "label": "IRCC PGWP extension rules"
+    }
   ],
 };
 

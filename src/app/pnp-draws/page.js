@@ -1,4 +1,5 @@
 import { buildMetadata, serializeJsonLd } from "@/lib/seo";
+import { attachClientFaqs } from "@/lib/clientFaqs";
 import { pageStructuredData } from "@/components/templates/ContentPage";
 import PnpDrawsPage from "@/components/draws/PnpDrawsPage";
 import { getPnpDrawFeed } from "@/lib/pnpDraws";
@@ -6,7 +7,7 @@ import { getPnpDrawFeed } from "@/lib/pnpDraws";
 export const revalidate = 14_400;
 const INITIAL_DRAW_LIMIT = 15;
 
-const page = {
+const page = attachClientFaqs({
   path: "/pnp-draws",
   h1: "PNP Draw Results Canada: Provincial Invitation Rounds",
   seo: {
@@ -14,7 +15,7 @@ const page = {
   },
   meta: { lastModified: "2026-10-08" },
   jsonLd: [],
-};
+});
 
 export const metadata = buildMetadata({
   title: "PNP Draw Results Canada | Provincial Nominee Tracker",

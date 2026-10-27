@@ -174,35 +174,45 @@ const article = {
 
   faqs: [
     {
-      question: "Can I apply for the Parents and Grandparents Program at any time?",
-      answer:
-        "No. The program is invitation-based, so you can only submit a full application if IRCC invites you after you have completed the interest to sponsor form during an intake window. You cannot file whenever you are ready, and submitting the interest to sponsor form does not itself create an application or a queue position.",
+      "question": "Can I sponsor parents in Canada through the Parents and Grandparents Program (PGP Canada) in 2026?",
+      "answer": "IRCC currently says the Parents and Grandparents Program is paused: it is not accepting new interest-to-sponsor forms or inviting new applicants until further notice. Existing applications continue to be processed. Check IRCC’s program page before making plans because a future intake would have its own dates and instructions."
     },
     {
-      question: "What is the minimum necessary income for the Parents and Grandparents Program?",
-      answer:
-        "It depends on the size of your family unit and is reviewed each year, so there is no single figure to plan around. What matters is that you meet the published threshold for the required number of consecutive tax years, and that you can prove it with Canada Revenue Agency assessments rather than estimates. Check the current figure on the official page.",
+      "question": "How much income do I need to sponsor my parents or grandparents?",
+      "answer": "The required amount depends on the sponsor’s family size and the three tax years IRCC specifies for a particular intake. Because the program is paused and the relevant years can change when an intake opens, use the current IRCC table and CRA Notices of Assessment rather than relying on an older dollar figure."
     },
     {
-      question: "Can I sponsor my parents if I am not invited?",
-      answer:
-        "Not through PGP. Without an invitation there is no application to make, and there is no appeal against not being selected, because selection is an administrative step rather than a decision on a file. The realistic alternatives are the Super Visa, a regular visitor visa, or entering the pool again at the next intake.",
+      "question": "Can I submit a PGP application without an invitation?",
+      "answer": "No. IRCC says it will return a Parents and Grandparents sponsorship application if the sponsor was not invited to apply. At present, no new invitations are being issued while the program is paused. Families may look at a Super Visa as a separate temporary-visit option, but it does not grant permanent residence."
     },
     {
-      question: "Is the Super Visa a substitute for permanent residence?",
-      answer:
-        "No. The Super Visa is a temporary resident visa. It allows long visits and can be extended from inside Canada, but it builds no credit toward permanent residence and does not lead to citizenship. It is a way to be together sooner, not a route to status, and many families use it while they wait for a PGP invitation.",
+      "question": "Is the Super Visa a substitute for permanent residence?",
+      "answer": "No. The Super Visa is a temporary resident visa. It allows long visits and can be extended from inside Canada, but it builds no credit toward permanent residence and does not lead to citizenship. It is a way to be together sooner, not a route to status, and many families use it while they wait for a PGP invitation."
     },
     {
-      question: "Can my spouse or partner co-sign a PGP sponsorship?",
-      answer:
-        "Yes, a spouse or common-law partner can usually co-sign. Their income is added to yours for the minimum necessary income test, and they sign the undertaking alongside you, which makes them equally responsible for the obligation. Both incomes must be documented through CRA assessments for the relevant tax years.",
+      "question": "Can my spouse or partner co-sign a PGP sponsorship?",
+      "answer": "Yes, a spouse or common-law partner can usually co-sign. Their income is added to yours for the minimum necessary income test, and they sign the undertaking alongside you, which makes them equally responsible for the obligation. Both incomes must be documented through CRA assessments for the relevant tax years."
     },
     {
-      question: "How long does the PGP undertaking last?",
-      answer:
-        "The undertaking runs for a fixed period set out in the program instructions, and it is long by design because it reflects the support a parent or grandparent may need. The current length is published by IRCC, and it is not shortened by a change in your circumstances. Confirm the current period on the official page before you sign.",
+      "question": "How long is the Parents and Grandparents sponsorship undertaking?",
+      "answer": "Outside Quebec, a sponsor’s financial undertaking for parents or grandparents lasts 20 years from the day they become permanent residents. Quebec has a different undertaking process and period administered with the provincial government. The commitment continues through changes in the sponsor’s circumstances, so review it before signing."
     },
+    {
+      "question": "Can I submit a new interest-to-sponsor form while the PGP is paused?",
+      "answer": "No. IRCC’s current notice says it will not accept new interest-to-sponsor forms until further notice. A past form does not create an active permanent-residence application; only people who receive an invitation under an intake can submit the sponsorship and permanent-residence applications."
+    },
+    {
+      "question": "Will IRCC keep processing PGP applications already submitted?",
+      "answer": "Yes. IRCC’s notice says existing Parents and Grandparents Program applications will continue through processing even though new forms and invitations are paused. Sponsors should keep contact details current, monitor their account and respond by the deadline if IRCC requests information."
+    },
+    {
+      "question": "Can my brother or sister co-sign a PGP sponsorship?",
+      "answer": "No. IRCC allows the sponsor’s spouse or common-law partner to co-sign the income undertaking; a sibling cannot co-sign simply because they share responsibility for a parent. A co-signer must meet the sponsor conditions, provide the required income records and accept joint financial responsibility."
+    },
+    {
+      "question": "How does IRCC count family size for PGP income?",
+      "answer": "IRCC counts the sponsor, the co-signer if there is one, their dependants and the people being sponsored, with family size assessed for each required tax year. Changes such as a birth, marriage or end of a previous undertaking can alter the calculation, so use the program’s year-specific worksheet."
+    }
   ],
 
   related: [
@@ -213,9 +223,30 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Sponsor your parents and grandparents", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/sponsor-parents-grandparents.html" },
-    { label: "IRCC — Sponsor your parents and grandparents: How to apply", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/sponsor-parents-grandparents/apply.html" },
-    { label: "IRCC — Super visa for parents and grandparents", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa.html" },
+    {
+      "label": "IRCC — Sponsor your parents and grandparents",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/sponsor-parents-grandparents.html"
+    },
+    {
+      "label": "IRCC — Sponsor your parents and grandparents: How to apply",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/sponsor-parents-grandparents/apply.html"
+    },
+    {
+      "label": "IRCC — Super visa for parents and grandparents",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/sponsor-parents-grandparents/eligibility.html",
+      "label": "IRCC PGP sponsor eligibility"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/guide-5772-application-sponsor-parents-grandparents.html",
+      "label": "IRCC PGP income and undertaking guide"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/eligibility.html",
+      "label": "IRCC Super Visa eligibility"
+    }
   ],
 };
 

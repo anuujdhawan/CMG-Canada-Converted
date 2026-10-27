@@ -169,35 +169,45 @@ const article = {
 
   faqs: [
     {
-      question: "What are the visitor visa Canada requirements?",
-      answer:
-        "The core requirements are a valid passport, a completed application with the correct fee, evidence of your purpose of travel, evidence of ties to your home country, proof of funds for the trip and the return, and biometrics where they apply. Requirements vary with your nationality and situation, so confirm the current list on IRCC’s page before you submit.",
+      "question": "What are the visitor visa Canada requirements for a temporary resident visa (TRV) applicant?",
+      "answer": "The core requirements are a valid passport, a completed application with the correct fee, evidence of your purpose of travel, evidence of ties to your home country, proof of funds for the trip and the return, and biometrics where they apply. Requirements vary with your nationality and situation, so confirm the current list on IRCC’s page before you submit."
     },
     {
-      question: "How much money do I need to show for a Canada tourist visa?",
-      answer:
-        "There is no single figure that guarantees approval. The officer checks that your funds are consistent with the trip you described, cover the return, and have a traceable source. Show statements over a period and the origin of any large deposit, rather than a single balance that appears just before you apply.",
+      "question": "How much money do I need to show for a Canada tourist visa?",
+      "answer": "There is no single figure that guarantees approval. The officer checks that your funds are consistent with the trip you described, cover the return, and have a traceable source. Show statements over a period and the origin of any large deposit, rather than a single balance that appears just before you apply."
     },
     {
-      question: "Does an invitation letter guarantee a Canada visitor visa?",
-      answer:
-        "No. An invitation letter supports your file, but it does not replace your own evidence of purpose, ties and funds. The officer is assessing you, not only your host, so the invitation should sit alongside a consistent itinerary, proof of your ties at home and evidence you can afford the trip and the return.",
+      "question": "Does an invitation letter guarantee a Canada visitor visa?",
+      "answer": "No. An invitation letter supports your file, but it does not replace your own evidence of purpose, ties and funds. The officer is assessing you, not only your host, so the invitation should sit alongside a consistent itinerary, proof of your ties at home and evidence you can afford the trip and the return."
     },
     {
-      question: "Can I apply again after a Canada visitor visa refusal?",
-      answer:
-        "Yes, but the new application has to answer the ground of the earlier refusal rather than repeat the old file. Read the refusal letter, identify whether the weakness was purpose, ties, funds or credibility, and fix that specific point with better evidence. Concealing the refusal can lead to a much more serious finding.",
+      "question": "Can I apply again after a Canada visitor visa refusal?",
+      "answer": "Yes, but the new application has to answer the ground of the earlier refusal rather than repeat the old file. Read the refusal letter, identify whether the weakness was purpose, ties, funds or credibility, and fix that specific point with better evidence. Concealing the refusal can lead to a much more serious finding."
     },
     {
-      question: "How long can I stay in Canada on a visitor visa?",
-      answer:
-        "The visa lets you travel to Canada; the length of stay is decided when you arrive, and the border officer records the date by which you must leave. It is not fixed by the visa itself. Check your entry stamp or permit and apply to extend your status before it expires if you need more time.",
+      "question": "How long can I stay in Canada on a visitor visa?",
+      "answer": "The visa lets you travel to Canada; the length of stay is decided when you arrive, and the border officer records the date by which you must leave. It is not fixed by the visa itself. Check your entry stamp or permit and apply to extend your status before it expires if you need more time."
     },
     {
-      question: "Do I need a visitor visa or an eTA?",
-      answer:
-        "It depends on your nationality and how you travel. Visa-exempt visitors arriving by air usually need an electronic travel authorization, while visa-required nationals need a temporary resident visa. Check which applies to you before you apply, because the documents, the fee and the process are different.",
+      "question": "Do I need a visitor visa or an eTA?",
+      "answer": "It depends on your nationality and how you travel. Visa-exempt visitors arriving by air usually need an electronic travel authorization, while visa-required nationals need a temporary resident visa. Check which applies to you before you apply, because the documents, the fee and the process are different."
     },
+    {
+      "question": "Is there a fixed bank balance required for a Canada visitor visa?",
+      "answer": "IRCC does not publish one universal minimum balance for every visitor. Evidence should make sense for the trip’s length, accommodation, who is paying, the applicant’s income and obligations, and the plan to leave Canada."
+    },
+    {
+      "question": "How long may I stay in Canada after entering as a visitor?",
+      "answer": "Many visitors are allowed to stay for up to six months, but the border officer may authorize a different period or issue a visitor record. Follow the date in your passport stamp or status document."
+    },
+    {
+      "question": "Can I extend my stay if my visitor status is about to expire?",
+      "answer": "You can apply for a visitor record from inside Canada before your authorized stay expires. A visitor record is a status document, not a visa for re-entry; explain the requested stay and keep proof of submission."
+    },
+    {
+      "question": "Is an invitation letter required for every Canada visitor visa application?",
+      "answer": "No. An invitation letter can explain the visit and who will provide support, but it is not mandatory for every visitor. The applicant must still satisfy the officer about the temporary purpose, funds, ties and admissibility."
+    }
   ],
 
   related: [
@@ -208,9 +218,30 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Visitor visa (temporary resident visa)", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/visitor-visa.html" },
-    { label: "IRCC — Visit Canada", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada.html" },
-    { label: "IRCC — Electronic travel authorization (eTA)", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta.html" },
+    {
+      "label": "IRCC — Visitor visa (temporary resident visa)",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/visitor-visa.html"
+    },
+    {
+      "label": "IRCC — Visit Canada",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada.html"
+    },
+    {
+      "label": "IRCC — Electronic travel authorization (eTA)",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa.html",
+      "label": "IRCC visitor visa application guide"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/extend-stay.html",
+      "label": "IRCC extend visitor status"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/transparency/officer-decision-notes.html",
+      "label": "IRCC officer decision notes"
+    }
   ],
 };
 

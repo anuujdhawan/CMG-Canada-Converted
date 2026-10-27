@@ -1,6 +1,5 @@
 import { getUniqueSeoContentBlocks } from "./seoUniqueContent";
 import { getLocalSeoExpansion } from "./seoLocalExpansion";
-import { getBalancedSeoContentBlocks } from "./seoBalancedContent";
 import { getRegionalLandingLinks } from "./seoRegionalLinks";
 
 /*
@@ -440,7 +439,28 @@ function defaultConfig(page) {
   }
 
   const family = FAMILY_CONFIGS.find((config) => config.test(path));
-  if (family) return { ...family, topic: cleanTopic(page?.h1) || family.topic };
+  if (family) {
+    const topic = cleanTopic(page?.h1) || family.topic;
+    const routeNote = {
+      "provincial immigration pathway": "A general PNP summary cannot confirm whether a particular stream is open or whether its criteria fit one applicant.",
+      "Canadian work and employer immigration pathway": "Confirm whether this route requires employer action, an LMIA or a specific exemption before work begins.",
+      "Canadian study and post-graduation pathway": "Study authorization, work authorization and permanent residence are separate decisions, each with its own current requirements.",
+      "Canadian family sponsorship pathway": "The relationship category matters because sponsor eligibility, evidence and undertaking duties differ across applications.",
+      "Canadian temporary-visit application": "A visa, visitor record, eTA, transit document and Super Visa each address a different travel or status situation.",
+      "Canadian citizenship or permanent-resident document application": "Citizenship, proof of citizenship, PR cards and travel documents follow different application rules.",
+      "Canadian immigration refusal, inadmissibility or appeal matter": "The available response and deadline depend on the specific notice, decision-maker and case history.",
+      "Canadian business immigration pathway": "Temporary business travel and an entrepreneur immigration application are distinct routes with different evidence.",
+    }[family.topic];
+    const lowercaseFirst = (value) => value.charAt(0).toLowerCase() + value.slice(1);
+
+    return {
+      ...family,
+      topic,
+      answer: `${family.answer} ${routeNote || "Use the exact route named on this page when checking current eligibility and evidence."}`,
+      fit: `For ${topic}, ${lowercaseFirst(family.fit)}`,
+      next: `When planning ${topic}, ${lowercaseFirst(family.next)}`,
+    };
+  }
 
   return {
     topic: cleanTopic(page?.h1) || "Canadian immigration pathway",
@@ -497,7 +517,7 @@ export function getSeoContentBlocks(page) {
     // content, not only from the (client-rendered) navigation and sitemap.
     ...getRegionalLandingLinks(page),
   ];
-  return [...additions, ...getBalancedSeoContentBlocks(page, additions)];
+  return additions;
 }
 
 /** Append to Markdown-backed page objects while preserving their source text. */

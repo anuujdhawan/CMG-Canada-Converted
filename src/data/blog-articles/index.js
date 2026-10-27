@@ -15,6 +15,7 @@
  * as a failure.
  */
 
+import bramptonArticles from "./brampton";
 import canadaImmigrationLevelsPlan2026 from "./canada-immigration-levels-plan-2026";
 import expressEntryCanada2026Categories from "./express-entry-canada-2026-categories";
 import crsScoreCanadaHowToImprove from "./crs-score-canada-how-to-improve";
@@ -58,6 +59,7 @@ import canadaImmigrationScamsAuthorizedRepresentative from "./canada-immigration
 
 /** Article bodies keyed by the slug used in `blog-research.js`. */
 export const BLOG_ARTICLES = {
+  ...bramptonArticles,
   "canada-immigration-levels-plan-2026": canadaImmigrationLevelsPlan2026,
   "express-entry-canada-2026-categories": expressEntryCanada2026Categories,
   "crs-score-canada-how-to-improve": crsScoreCanadaHowToImprove,

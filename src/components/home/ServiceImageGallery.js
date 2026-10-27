@@ -187,7 +187,7 @@ export default function ServiceImageGallery({ page }) {
             <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">A visual route guide</p>
             <h2 id="service-image-heading" className="max-w-[650px] m-0 text-[clamp(31px,1.7rem+2.6vw,50px)] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] font-semibold tracking-[-0.03em] leading-[1.04]">See the pathway in context</h2>
           </div>
-          <p className="max-w-[470px] m-[0_0_3px_auto] text-[var(--muted)] text-[16px] leading-[1.75] max-[880px]:ml-0 max-[620px]:text-[14px]">Every file has a human story behind it. These moments reflect the preparation, decisions and new beginnings that shape this service.</p>
+          <p className="max-w-[470px] m-[0_0_3px_auto] text-[var(--muted)] text-[16px] leading-[1.75] max-[880px]:ml-0 max-[620px]:text-[14px]">Use the visual guide to explore {page?.h1 || "this pathway"}; the written sections explain the requirements and evidence to check.</p>
         </header>
 
         <div className="service-image-gallery grid grid-cols-3 grid-rows-[repeat(3,190px)] gap-[14px] mt-[38px] max-[880px]:grid-cols-2 max-[880px]:grid-rows-none max-[620px]:grid-cols-1 max-[620px]:gap-3 max-[620px]:mt-7" data-gallery-category={category}>

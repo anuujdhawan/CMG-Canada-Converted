@@ -193,35 +193,45 @@ const article = {
 
   faqs: [
     {
-      question: "What is the Canada Immigration Levels Plan?",
-      answer:
-        "It is the federal plan that sets Canada's annual immigration targets. IRCC publishes it each autumn and breaks it down by program and category — economic, family, refugees and protected persons, and humanitarian — with a target and an expected range for each of the next three years.",
+      "question": "What does the Canada Immigration Levels Plan 2026 set for Canada immigration targets and permanent residence?",
+      "answer": "It is the federal plan that sets Canada's annual immigration targets. IRCC publishes it each autumn and breaks it down by program and category — economic, family, refugees and protected persons, and humanitarian — with a target and an expected range for each of the next three years."
     },
     {
-      question: "How many permanent residents will Canada admit in 2026?",
-      answer:
-        "The 2026–2028 plan sets a target of 380,000 permanent resident admissions in 2026, with an expected range of 350,000 to 420,000. The same 380,000 target is held for 2027 and 2028.",
+      "question": "What are the Canada immigration targets for permanent residents in 2026 under IRCC’s Levels Plan?",
+      "answer": "The 2026–2028 plan sets a target of 380,000 permanent resident admissions in 2026, with an expected range of 350,000 to 420,000. The same 380,000 target is held for 2027 and 2028."
     },
     {
-      question: "Is Canada increasing or decreasing immigration under this plan?",
-      answer:
-        "Permanent resident admissions are held flat at 380,000 a year, so the permanent intake is stable rather than rising. New temporary resident arrivals fall to 385,000 in 2026 and 370,000 in 2027 and 2028, and the government has committed to bringing the temporary population below 5% of Canada's total population by the end of 2027.",
+      "question": "Is Canada increasing or decreasing immigration under this plan?",
+      "answer": "Permanent resident admissions are held flat at 380,000 a year, so the permanent intake is stable rather than rising. New temporary resident arrivals fall to 385,000 in 2026 and 370,000 in 2027 and 2028, and the government has committed to bringing the temporary population below 5% of Canada's total population by the end of 2027."
     },
     {
-      question: "Does the levels plan change Express Entry CRS cut-offs?",
-      answer:
-        "Not directly. The plan sets how many Federal High Skilled admissions IRCC intends to process — 109,000 in 2026 rising to 111,000 in 2027 — but invitation rounds, category-based selection and the number of candidates already in the pool decide the cut-off. A stable target does not mean a lower score is enough.",
+      "question": "Does the levels plan change Express Entry CRS cut-offs?",
+      "answer": "Not directly. The plan sets how many Federal High Skilled admissions IRCC intends to process — 109,000 in 2026 rising to 111,000 in 2027 — but invitation rounds, category-based selection and the number of candidates already in the pool decide the cut-off. A stable target does not mean a lower score is enough."
     },
     {
-      question: "Do the 2027 and 2028 targets change?",
-      answer:
-        "Yes. The 2027 and 2028 figures are notional and are confirmed or adjusted by 1 November of each preceding year. Ranges, provincial allocations and program splits can all move, so the current year's numbers carry more weight than the forward years.",
+      "question": "Can Canada’s 2027 and 2028 immigration targets change after the Levels Plan is published?",
+      "answer": "Yes. The 2027 and 2028 figures are notional and are confirmed or adjusted by 1 November of each preceding year. Ranges, provincial allocations and program splits can all move, so the current year's numbers carry more weight than the forward years."
     },
     {
-      question: "Does the plan affect family sponsorship?",
-      answer:
-        "The family class stays broadly steady. Spouses, partners and children are targeted at 69,000 admissions in 2026 and 66,000 in 2027 and 2028, and parents and grandparents hold at 15,000 a year. Individual outcomes still depend on eligibility, evidence and the specific stream.",
+      "question": "Does Canada’s Immigration Levels Plan change family sponsorship or parent and grandparent intake?",
+      "answer": "The family class stays broadly steady. Spouses, partners and children are targeted at 69,000 admissions in 2026 and 66,000 in 2027 and 2028, and parents and grandparents hold at 15,000 a year. Individual outcomes still depend on eligibility, evidence and the specific stream."
     },
+    {
+      "question": "Does the Immigration Levels Plan set the number of visas IRCC approves for each applicant?",
+      "answer": "No. The Levels Plan sets national planning targets for admissions and temporary-resident arrivals. It does not create an individual entitlement, guarantee an application decision or replace the eligibility rules for a program."
+    },
+    {
+      "question": "Does the 2026 Immigration Levels Plan include temporary residents?",
+      "answer": "Yes. The 2026–2028 plan includes targets for new temporary-resident arrivals as well as permanent-resident admissions. The categories and figures are listed on IRCC’s current plan page and can change in a later plan."
+    },
+    {
+      "question": "What does Canada’s less-than-5% temporary resident target mean for study and work permit holders?",
+      "answer": "IRCC describes a goal of reducing temporary residents to less than 5% of Canada’s population by the end of 2027. That national objective is not a cap that decides an individual study or work permit application by itself."
+    },
+    {
+      "question": "Will the Immigration Levels Plan create a new PR pathway for every temporary worker?",
+      "answer": "No. A target or transition initiative is not an open pathway for every worker. Eligibility, occupations, timing and application instructions depend on the specific public policy or program IRCC publishes."
+    }
   ],
 
   related: [
@@ -232,9 +242,22 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Supplementary information for the 2026–2028 Immigration Levels Plan", url: "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/corporate-initiatives/levels/supplementary-immigration-levels-2026-2028.html" },
-    { label: "IRCC — Immigration Levels Plan", url: "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/corporate-initiatives/levels.html" },
-    { label: "IRCC — Check processing times", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html" },
+    {
+      "label": "IRCC — Supplementary information for the 2026–2028 Immigration Levels Plan",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/corporate-initiatives/levels/supplementary-immigration-levels-2026-2028.html"
+    },
+    {
+      "label": "IRCC — Immigration Levels Plan",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/corporate-initiatives/levels.html"
+    },
+    {
+      "label": "IRCC — Check processing times",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/immigration-system/levels/supplementary-immigration-levels-2026-2028.html",
+      "label": "IRCC 2026–2028 Immigration Levels Plan"
+    }
   ],
 };
 

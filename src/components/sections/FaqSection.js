@@ -54,7 +54,21 @@ export default function FaqSection({
                     so importing it breaks the build with "Can't resolve 'fs'".
                     Fixing this properly means making the route map importable
                     without fs, or extracting a dependency-free inline renderer. */}
-                <p className="min-h-0 overflow-hidden !m-0 !pr-[50px] !mb-[22px] !pb-[22px] !text-[var(--muted)] !text-[13px] !leading-[1.75]">{faq.answer}</p>
+                <div className="min-h-0 overflow-hidden !pr-[50px] !mb-[22px] !pb-[22px]">
+                  <p className="!m-0 !text-[var(--muted)] !text-[13px] !leading-[1.75]">{faq.answer}</p>
+                  {faq.sourceLinks?.length > 0 && (
+                    <p className="!m-0 !mt-2 !text-[12px] !leading-[1.5]">
+                      {faq.sourceLinks.map((source, sourceIndex) => (
+                        <span key={`${source.url}-${sourceIndex}`}>
+                          {sourceIndex > 0 ? " · " : "Official source: "}
+                          <a className="text-[var(--primary)] underline underline-offset-2" href={source.url} target="_blank" rel="noreferrer">
+                            {source.label || "Government guidance"}
+                          </a>
+                        </span>
+                      ))}
+                    </p>
+                  )}
+                </div>
               </div>
             </details>
           ))}

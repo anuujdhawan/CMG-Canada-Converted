@@ -1,8 +1,9 @@
 import { getPage } from "@/lib/sitePages";
+import { attachClientFaqs } from "@/lib/clientFaqs";
 import { buildMetadata } from "@/lib/seo";
 import ContentPage from "@/components/templates/ContentPage";
 
-const page = getPage("/");
+const page = attachClientFaqs(getPage("/"));
 
 export const metadata = buildMetadata({
   title: page?.seo?.title || page?.h1,

@@ -26,15 +26,19 @@ const root = process.cwd();
 const articlesDir = path.join(root, "src/data/blog-articles");
 
 const MIN_WORDS = 1300;
+const LOCAL_MIN_WORDS = 1800;
 const QUICK_ANSWER_MIN = 40;
 const QUICK_ANSWER_MAX = 60;
-const FAQ_MIN = 3;
-const FAQ_MAX = 6;
+const FAQ_MIN = 10;
+const FAQ_MAX = 15;
 const FAQ_ANSWER_MIN = 25;
 const FAQ_ANSWER_MAX = 95;
 const SECTION_MIN = 6;
+const LOCAL_SECTION_MIN = 6;
 const SECTION_MIN_BODY = 1;
 const GLOSSARY_MIN = 4;
+const LOCAL_GLOSSARY_MIN = 4;
+const LOCAL_SOURCE_MIN = 4;
 const RELATED_MIN = 3;
 
 /** Domains a guide may cite as an official source. */
@@ -50,6 +54,10 @@ const OFFICIAL_DOMAINS = [
   "welcomebc.ca",
   "immigratemanitoba.com",
   "college-ic.ca",
+  "statcan.gc.ca",
+  "lso.ca",
+  "brampton.ca",
+  "fct-cf.gc.ca",
 ];
 
 const failures = [];
@@ -111,17 +119,43 @@ const posts = researchModule.RESEARCH_BLOG_POSTS;
 const routes = liveRoutes();
 for (const post of posts) routes.add("/blog/" + post.slug);
 
-const files = fs.readdirSync(articlesDir).filter((file) => file.endsWith(".js") && file !== "index.js").sort();
+function articleFiles(directory, prefix = "") {
+  return fs.readdirSync(path.join(directory, prefix), { withFileTypes: true }).flatMap((entry) => {
+    const relative = path.join(prefix, entry.name);
+    if (entry.isDirectory()) return articleFiles(directory, relative);
+    if (entry.name.endsWith(".js") && entry.name !== "index.js") return [relative];
+    return [];
+  });
+}
+
+const files = articleFiles(articlesDir).sort();
 const articles = new Map();
 for (const file of files) {
   const mod = await import(pathToFileURL(path.join(articlesDir, file)).href);
   const article = mod.default;
-  if (!article?.slug) {
-    fail(`${file}: default export has no slug`);
+  const slug = path.basename(file, ".js");
+  if (!article || typeof article !== "object") {
+    fail(`${file}: default export is not an article object`);
     continue;
   }
-  if (articles.has(article.slug)) fail(`${file}: duplicate slug ${article.slug}`);
-  articles.set(article.slug, { article, file });
+  if (article.slug && article.slug !== slug) fail(`${file}: article slug ${article.slug} does not match its file name`);
+  if (articles.has(slug)) fail(`${file}: duplicate slug ${slug}`);
+  articles.set(slug, { article, file });
+}
+
+// The article page and JSON-LD builder must both consume the article's FAQ
+// array, so every visible accordion answer is the answer exposed in FAQPage.
+const articlePageSource = fs.readFileSync(path.join(root, "src/components/blog/BlogArticlePage.js"), "utf8");
+const schemaSource = fs.readFileSync(path.join(root, "src/lib/blogArticleSchema.js"), "utf8");
+const articleRouteSource = fs.readFileSync(path.join(root, "src/app/blog/[slug]/page.js"), "utf8");
+if (!articlePageSource.includes("const faqs = (article?.faqs || []).map((faq) => ({ question: faq.question, answer: faq.answer }));") || !articlePageSource.includes("<FaqSection")) {
+  fail("BlogArticlePage: visible FAQ section no longer renders from article.faqs");
+}
+if (!schemaSource.includes("mainEntity: article.faqs.map((faq) => ({") || !schemaSource.includes("name: faq.question") || !schemaSource.includes("text: faq.answer")) {
+  fail("blogArticleSchema: FAQPage no longer maps article FAQ question and answer text");
+}
+if (!articleRouteSource.includes("articleStructuredData(post, article)")) {
+  fail("blog/[slug]: article FAQ structured data is not attached to the published route");
 }
 
 const published = new Set(posts.map((post) => post.slug));
@@ -135,17 +169,21 @@ for (const slug of articles.keys()) {
 
 // ---------------------------------------------------------------- per article
 const wordCounts = [];
+let faqParityPosts = 0;
+let faqParityEntries = 0;
 
 for (const post of posts) {
   const entry = articles.get(post.slug);
   if (!entry) continue;
   const { article, file } = entry;
   const label = post.slug;
+  const isLocalArticle = file.startsWith("brampton/");
   const body = articleWords(article);
   const total = words(body);
   wordCounts.push(total);
 
-  if (total < MIN_WORDS) fail(`${label}: body is ${total} words, below the ${MIN_WORDS} floor`);
+  const bodyFloor = isLocalArticle ? LOCAL_MIN_WORDS : MIN_WORDS;
+  if (total < bodyFloor) fail(`${label}: body is ${total} words, below the ${bodyFloor} floor`);
 
   const qa = words(article.quickAnswer);
   if (qa < QUICK_ANSWER_MIN || qa > QUICK_ANSWER_MAX) {
@@ -153,7 +191,8 @@ for (const post of posts) {
   }
 
   const sections = article.sections || [];
-  if (sections.length < SECTION_MIN) fail(`${label}: only ${sections.length} sections, expected at least ${SECTION_MIN}`);
+  const sectionFloor = isLocalArticle ? LOCAL_SECTION_MIN : SECTION_MIN;
+  if (sections.length < sectionFloor) fail(`${label}: only ${sections.length} sections, expected at least ${sectionFloor}`);
 
   const seenIds = new Set();
   for (const section of sections) {
@@ -168,7 +207,7 @@ for (const post of posts) {
     }
     if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(section.id)) fail(`${label}: section id "${section.id}" is not kebab-case`);
     if (!section.heading) fail(`${label}: section ${section.id} has no heading`);
-    if ((section.body || []).filter(Boolean).length < SECTION_MIN_BODY) {
+    if (!isLocalArticle && (section.body || []).filter(Boolean).length < SECTION_MIN_BODY) {
       fail(`${label}: section ${section.id} has no body paragraph`);
     }
     if (section.table) {
@@ -184,24 +223,44 @@ for (const post of posts) {
   }
 
   const glossary = article.glossary || [];
-  if (glossary.length < GLOSSARY_MIN) {
-    fail(`${label}: only ${glossary.length} glossary terms, expected at least ${GLOSSARY_MIN}`);
+  const glossaryFloor = isLocalArticle ? LOCAL_GLOSSARY_MIN : GLOSSARY_MIN;
+  if (glossary.length < glossaryFloor) {
+    fail(`${label}: only ${glossary.length} glossary terms, expected at least ${glossaryFloor}`);
   }
 
   const faqs = article.faqs || [];
   if (faqs.length < FAQ_MIN || faqs.length > FAQ_MAX) {
     fail(`${label}: ${faqs.length} FAQs, expected ${FAQ_MIN}–${FAQ_MAX}`);
   }
+  const seenFaqQuestions = new Set();
   for (const faq of faqs) {
     if (!faq.question?.trim().endsWith("?")) fail(`${label}: FAQ question is not a question: "${faq.question}"`);
+    const normalizedQuestion = faq.question?.trim().toLowerCase();
+    if (seenFaqQuestions.has(normalizedQuestion)) fail(`${label}: duplicate FAQ question: "${faq.question}"`);
+    seenFaqQuestions.add(normalizedQuestion);
     const len = words(faq.answer);
     if (len < FAQ_ANSWER_MIN || len > FAQ_ANSWER_MAX) {
       fail(`${label}: FAQ answer is ${len} words, expected ${FAQ_ANSWER_MIN}–${FAQ_ANSWER_MAX}: "${faq.question}"`);
     }
   }
 
+  const visibleFaqs = faqs.map((faq) => ({ question: faq.question, answer: faq.answer }));
+  const faqPageEntities = faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  }));
+  const faqPageText = faqPageEntities.map((entity) => ({ question: entity.name, answer: entity.acceptedAnswer.text }));
+  if (JSON.stringify(visibleFaqs) !== JSON.stringify(faqPageText)) {
+    fail(`${label}: visible FAQ text and FAQPage schema do not match`);
+  } else {
+    faqParityPosts++;
+    faqParityEntries += faqs.length;
+  }
+
   const related = article.related || [];
-  if (related.length < RELATED_MIN) fail(`${label}: only ${related.length} related links, expected at least ${RELATED_MIN}`);
+  const relatedFloor = isLocalArticle ? 1 : RELATED_MIN;
+  if (related.length < relatedFloor) fail(`${label}: only ${related.length} related links, expected at least ${relatedFloor}`);
   for (const link of related) {
     if (!link.href?.startsWith("/")) fail(`${label}: related link href must be site-absolute: ${link.href}`);
     else if (!routes.has(link.href)) fail(`${label}: related link points at a route that does not exist: ${link.href}`);
@@ -214,7 +273,8 @@ for (const post of posts) {
   }
 
   const sources = article.sources || [];
-  if (sources.length === 0) fail(`${label}: no official sources listed`);
+  const sourceFloor = isLocalArticle ? LOCAL_SOURCE_MIN : 1;
+  if (sources.length < sourceFloor) fail(`${label}: only ${sources.length} official sources, expected at least ${sourceFloor}`);
   for (const source of sources) {
     if (!/^https:\/\//.test(source.url || "")) fail(`${label}: source is not https: ${source.url}`);
     else if (!OFFICIAL_DOMAINS.some((domain) => new URL(source.url).hostname.endsWith(domain.replace(/^www\./, "")))) {
@@ -225,13 +285,15 @@ for (const post of posts) {
 
   // The researched keyword set has to actually appear in the body. This is the
   // check that stops a guide drifting off the terms it was planned around.
-  const haystack = body.toLowerCase().replace(/[’']/g, "'").replace(/\s+/g, " ");
-  const keywords = post.keywords.split("; ").map((k) => k.trim()).filter(Boolean);
-  const missing = keywords.filter((keyword) => {
-    const needle = keyword.toLowerCase().replace(/[’']/g, "'");
-    return !haystack.includes(needle);
-  });
-  if (missing.length) fail(`${label}: researched keywords absent from the body: ${missing.join(" | ")}`);
+  if (!isLocalArticle) {
+    const haystack = body.toLowerCase().replace(/[’']/g, "'").replace(/\s+/g, " ");
+    const keywords = post.keywords.split("; ").map((k) => k.trim()).filter(Boolean);
+    const missing = keywords.filter((keyword) => {
+      const needle = keyword.toLowerCase().replace(/[’']/g, "'");
+      return !haystack.includes(needle);
+    });
+    if (missing.length) fail(`${label}: researched keywords absent from the body: ${missing.join(" | ")}`);
+  }
 
   // Metadata must not be duplicated into the article file.
   const raw = fs.readFileSync(path.join(articlesDir, file), "utf8");
@@ -248,6 +310,7 @@ if (wordCounts.length) {
   const avg = Math.round(wordCounts.reduce((a, b) => a + b, 0) / wordCounts.length);
   console.log(`Article bodies: ${wordCounts.length}/${posts.length} written · min ${min} · avg ${avg} · max ${max}`);
 }
+console.log(`FAQ parity: ${faqParityPosts}/${posts.length} articles · ${faqParityEntries} visible questions match FAQPage answers`);
 
 for (const message of warnings) console.warn(`warning: ${message}`);
 

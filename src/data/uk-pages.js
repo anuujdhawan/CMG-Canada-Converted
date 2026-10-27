@@ -21,8 +21,14 @@ const ukUrl = `${site.url.replace(/\/$/, "")}${ukPath}`;
 const OFFICIAL = {
   immigration: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html",
   expressEntry: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html",
+  languageTests: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-test.html",
+  educationAssessment: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessment.html",
+  processingTimes: "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
+  fees: "https://ircc.canada.ca/English/information/fees/fees.asp",
   crs: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html",
   iec: "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec.html",
+  iecEligibility: "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/eligibility.html",
+  iecRounds: "https://ircc.canada.ca/english/work/iec/selections.asp",
   workPermit: "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/permit.html",
   studyPermit: "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html",
   eta: "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta.html",
@@ -31,6 +37,7 @@ const OFFICIAL = {
   panelPhysicians: "https://secure.cic.gc.ca/pp-md/pp-list.aspx",
   wes: "https://www.wes.org/",
   ciccRegister: "https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx",
+  representative: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose.html",
   // This practice's own licensee record on the register (see site.rcic).
   ciccProfile: site.rcic.profileUrl,
 };
@@ -43,35 +50,44 @@ const faq = (question, answer) => [
 
 const ukFaqs = [
   faq(
-    "Do UK citizens need a visa to visit Canada?",    `No. The United Kingdom is a visa-exempt country, so UK passport holders normally need an approved electronic travel authorisation (eTA) rather than a visitor visa to fly to Canada for a short stay. An eTA authorises travel to the port of entry only — a border officer still decides how long you may stay, and work or study generally requires a permit. Check the current [IRCC eTA guidance](${OFFICIAL.eta}) before booking.`,
+    "Do UK citizens need a visitor visa or an eTA to fly to Canada?",
+    `No. A UK passport holder travelling by air for a short visit normally needs an approved electronic travel authorisation (eTA), not a visitor visa. An eTA permits travel to a Canadian port of entry; a border officer decides whether to admit you and how long you may stay. It does not authorize work or study. Check [IRCC’s eTA rules](${OFFICIAL.eta}) before booking.`,
   ),
   faq(
-    "Can UK citizens apply for Canadian permanent residence?",
-    "Yes. UK nationals are assessed on the same economic, family and humanitarian criteria as any other applicant. Most UK applicants start with Express Entry (Federal Skilled Worker), a provincial nomination, a Canadian work or study route that builds eligibility over time, or family sponsorship. Nationality does not create a shortcut, but a UK profile often arrives with strong language, education and skilled work evidence that scores well.",
+    "Can UK citizens apply for Canadian permanent residence through Express Entry or a PNP?",
+    `Yes. UK citizens can assess federal routes such as Express Entry, provincial nomination, family sponsorship and temporary work or study pathways. UK citizenship does not create a separate PR category or guarantee selection; the route depends on eligibility, evidence and current intake rules. Start with [IRCC’s program overview](${OFFICIAL.immigration}) and [Express Entry guide](${OFFICIAL.expressEntry}).`,
   ),
   faq(
-    "Do I need an English test if I am a UK citizen?",
-    "For Express Entry, generally yes. IRCC requires a result from a designated English or French language test, and a UK passport does not exempt you from that requirement. UK applicants most commonly book IELTS General Training or CELPIP-General, and the result must be valid on the date you submit. Test choice, validity windows and score conversions should always be confirmed against the current IRCC language requirements.",
+    "Do UK citizens need IELTS or another approved English test for Canada Express Entry?",
+    `For Express Entry, applicants generally need results from an IRCC-designated English or French test; a UK passport does not replace that test. Choose an accepted test for the program, check how the result converts to CLB or NCLC, and make sure it remains valid when you submit your profile and permanent-residence application. See [IRCC’s approved language tests and rules](${OFFICIAL.languageTests}).`,
   ),
   faq(
-    "Which UK police certificate do I need for Canada?",
+    "Which UK police certificate does IRCC require for Canadian permanent residence applications?",
     `IRCC asks for a police certificate from every country where you lived for six months or more since turning 18. For the UK, that normally means an ACRO Police Certificate covering England and Wales, with separate arrangements for Scotland and Northern Ireland. IRCC publishes a dedicated United Kingdom page, so follow the [IRCC UK police certificate instructions](${OFFICIAL.policeUk}) and the [ACRO application service](${OFFICIAL.acro}) rather than relying on an old checklist.`,
   ),
   faq(
-    "Where do I take the Canadian immigration medical exam in the UK?",
+    "Where can UK applicants book an IRCC panel physician medical exam for Canada?",
     `Only an IRCC-designated panel physician can complete the immigration medical examination. IRCC maintains a live [panel physician list](${OFFICIAL.panelPhysicians}) that includes clinics in the UK, so book from that list rather than through a GP, and check the current fees and required identification before you attend.`,
   ),
   faq(
-    "Do my UK qualifications count in Canada?",
-    "They can. Foreign education usually needs an Educational Credential Assessment (ECA) from a designated body such as WES to show its Canadian equivalency for Express Entry and some work routes. An ECA confirms how a UK qualification compares academically — it does not grant a licence to practise a regulated profession in Canada, which is handled separately by the relevant provincial regulator.",
+    "Can UK citizens use International Experience Canada (IEC) to work in Canada, and what are the age rules?",
+    `UK citizens may be eligible for IEC categories such as Working Holiday, Young Professionals or International Co-op if they meet the current age, participation and category conditions. An invitation is not guaranteed, and pool availability changes by season. Check the [UK-specific IEC eligibility rules](${OFFICIAL.iecEligibility}) and [current invitation rounds](${OFFICIAL.iecRounds}) before making plans.`,
   ),
   faq(
-    "How long does Canada immigration take for UK applicants?",
-    "Processing depends on the route, the visa office workload and how quickly you can produce evidence. UK applicants are not on a separate timetable. Build the plan around the stage you control — language test, ECA, police certificates, medical and document consistency — and treat published processing times as a range to check on the date you file, not a promise.",
+    "Do UK qualifications count for Canadian immigration, or do I need an ECA?",
+    `A UK qualification can support an application, but an Educational Credential Assessment (ECA) may be needed for Express Entry points or program eligibility. Use an organization designated by IRCC and confirm that the assessment covers the credential you are claiming. An ECA is not a professional licence; regulated occupations have separate provincial licensing rules. See [IRCC’s ECA instructions](${OFFICIAL.educationAssessment}).`,
   ),
   faq(
-    "Can a UK-based applicant work with a Canadian immigration consultant remotely?",
-    `Yes. Commonwealth Migration is a CICC-regulated Canadian practice (${site.rcic.number}) and works with UK clients by scheduled video or phone consultation. Because the UK is typically five hours ahead of Brampton, appointments are usually booked for UK afternoon or early evening slots. Confirm the representative's current licence status on the CICC public register (register.college-ic.ca) before you share documents or pay fees.`,
+    "How long does Canadian immigration processing take for UK applicants in each pathway?",
+    `UK applicants do not have one shared processing time. The estimate depends on the pathway, application location, completeness, inventory and checks. Use IRCC’s [current processing-time tool](${OFFICIAL.processingTimes}) for the correct application type, then plan around evidence you control—language results, ECA, police certificate, medical exam and complete forms. An estimate is not a guaranteed decision date.`,
+  ),
+  faq(
+    "Can a UK-based applicant hire an authorized Canadian immigration consultant remotely?",
+    `Yes. Commonwealth Migration is a CICC-regulated Canadian practice (${site.rcic.number}) and can arrange scheduled video or phone consultations with UK clients. Before paying or sharing sensitive records, verify the consultant in the [CICC Public Register](${OFFICIAL.ciccRegister}) and read [Government of Canada guidance on authorized representatives](${OFFICIAL.representative}).`,
+  ),
+  faq(
+    "How much does it cost to immigrate to Canada from the UK?",
+    `There is no single total because costs vary by route and family size. Budget for the applicable IRCC application and biometrics fees, language testing, any ECA, police certificates, medical exams, translations and settlement funds. Consulting fees are separate from government charges. Check [IRCC’s current fee list](${OFFICIAL.fees}) and the checklist for your specific program before applying.`,
   ),
 ];
 

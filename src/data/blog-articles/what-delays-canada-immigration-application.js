@@ -189,25 +189,45 @@ const article = {
 
   faqs: [
     {
-      question: "Why is my Canada visa delayed when my application was complete?",
-      answer:
-        "A complete application can still be slow because completeness is only the first stage. After it, the file goes through eligibility review and background verification, and verification depends on partner agencies and authorities abroad. If you have answered every request, a delay within the normal spread for your category is usually the file waiting rather than something being wrong.",
+      "question": "Why is my Canada visa delayed when my application was complete?",
+      "answer": "A complete application can still be slow because completeness is only the first stage. After it, the file goes through eligibility review and background verification, and verification depends on partner agencies and authorities abroad. If you have answered every request, a delay within the normal spread for your category is usually the file waiting rather than something being wrong."
     },
     {
-      question: "Does a returned application count as a refusal on my record?",
-      answer:
-        "No. A returned application was not accepted as complete, so it was sent back and no decision was made on the merits. It is not a refusal and it does not create a refusal record. The practical cost is time, because you lose the interval before the return and the completeness check restarts when you refile.",
+      "question": "What should I do about an IRCC application delay, and does a returned application count as a refusal?",
+      "answer": "No. A returned application was not accepted as complete, so it was sent back and no decision was made on the merits. It is not a refusal and it does not create a refusal record. The practical cost is time, because you lose the interval before the return and the completeness check restarts when you refile."
     },
     {
-      question: "What should I do if I receive a procedural fairness letter?",
-      answer:
-        "Read it carefully to identify the exact concern, note the deadline, and respond with evidence that addresses that concern rather than a general restatement of your case. A fairness letter means a refusal is being considered. If the concern involves admissibility, misrepresentation or a complex history, take advice before you reply.",
+      "question": "What should I do if I receive a procedural fairness letter?",
+      "answer": "Read it carefully to identify the exact concern, note the deadline, and respond with evidence that addresses that concern rather than a general restatement of your case. A fairness letter means a refusal is being considered. If the concern involves admissibility, misrepresentation or a complex history, take advice before you reply."
     },
     {
-      question: "How long should I wait before sending a webform?",
-      answer:
-        "There is no fixed interval, but the trigger is not time alone. Send a webform when you have a specific question the status cannot answer, or a deadline genuinely at risk, and only after you have confirmed you have responded to every request. An enquiry that simply asks for an update adds to the queue without producing information.",
+      "question": "How long should I wait before sending a webform?",
+      "answer": "There is no fixed interval, but the trigger is not time alone. Send a webform when you have a specific question the status cannot answer, or a deadline genuinely at risk, and only after you have confirmed you have responded to every request. An enquiry that simply asks for an update adds to the queue without producing information."
     },
+    {
+      "question": "How do I check my Canada immigration application status?",
+      "answer": "Use the account or application-status tracker for the application type you submitted, and keep your UCI and application number nearby. IRCC generally requires an acknowledgement of receipt before the file appears. Check the published processing time separately, since status tools and processing estimates answer different questions."
+    },
+    {
+      "question": "Does an application marked in process mean something is wrong?",
+      "answer": "Not by itself. IRCC uses “in process” while work continues, and background or admissibility checks may involve steps that are not visible in the account. Read every message, provide anything requested by the deadline and compare the file with the current processing estimate before deciding that a delay signals a problem."
+    },
+    {
+      "question": "What should I do if my immigration application is past the processing time?",
+      "answer": "First check the account, tracker, published estimate and any pending document requests. If the file is beyond the current estimate or you have a material change to report, use the IRCC web form with your application number and concise supporting facts. A web-form inquiry does not guarantee a faster decision."
+    },
+    {
+      "question": "Can I send more documents to prevent a Canada visa delay?",
+      "answer": "Send documents when IRCC requests them or when an important change must be reported through the correct channel. Unsolicited duplicates can make a file harder to review, and sending the same inquiry repeatedly will not speed processing. Keep proof of delivery and follow the upload instructions for your application type."
+    },
+    {
+      "question": "Can I use the IRCC web form to speed up my application?",
+      "answer": "A routine web-form message does not speed up an application. IRCC says it can answer general questions and report changes, but repeating a status request does not make the file move faster. Use the form for a real update, a specific issue or a qualifying urgent-processing request where that program allows one."
+    },
+    {
+      "question": "How long should I wait before contacting IRCC about a delay?",
+      "answer": "There is no universal number of days that applies to every visa or permanent-residence file. Compare your case with the current estimate for that application type, make sure IRCC has not asked you for something, and contact IRCC when you have a concrete question or required update rather than sending periodic messages without new information."
+    }
   ],
 
   related: [
@@ -218,9 +238,26 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Check processing times", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html" },
-    { label: "IRCC — Immigration Levels Plan", url: "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/corporate-initiatives/levels.html" },
-    { label: "IRCC — Express Entry", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" },
+    {
+      "label": "IRCC — Check processing times",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html"
+    },
+    {
+      "label": "IRCC — Immigration Levels Plan",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/corporate-initiatives/levels.html"
+    },
+    {
+      "label": "IRCC — Express Entry",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-status.html",
+      "label": "IRCC application status methods and AOR"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/contact-ircc/web-form.html",
+      "label": "IRCC web form uses and limits"
+    }
   ],
 };
 

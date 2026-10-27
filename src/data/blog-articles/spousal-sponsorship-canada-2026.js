@@ -20,7 +20,7 @@ const article = {
   keyTakeaways: [
     "A sponsor must be a Canadian citizen or permanent resident, aged 18 or over, with no disqualifying history such as a defaulted undertaking.",
     "Inland sponsorship is for couples living together in Canada; outland sponsorship is processed overseas and suits couples who are apart.",
-    "Inland applicants can apply for a spousal open work permit once the sponsorship is acknowledged; outland applicants cannot rely on that.",
+    "A sponsored spouse or partner who is living in Canada with the sponsor may qualify for an open work permit after the permanent-residence application is acknowledged, including some Family Class applicants.",
     "Outland sponsorship generally preserves the sponsor’s right to appeal a refusal to the Immigration Appeal Division; inland sponsorship does not.",
     "Relationship evidence has to prove a genuine, continuing relationship: a timeline, communication, shared finances, photographs and third-party statements.",
     "Leaving Canada while an inland application is in progress can put both the application and the applicant’s status at risk.",
@@ -71,7 +71,7 @@ const article = {
         rows: [
           ["Where the couple lives", "Sponsor and sponsored partner live together in Canada", "Sponsored partner may live abroad, or in Canada but intending to travel"],
           ["Where the file is processed", "Processed inside Canada", "Processed at an office outside Canada"],
-          ["Work while waiting", "Sponsored partner can apply for a spousal open work permit once the sponsorship is acknowledged", "No work permit flows from the sponsorship; the partner needs separate authorisation"],
+          ["Work while waiting", "An eligible sponsored partner living in Canada with the sponsor may apply for an open work permit after AOR", "A partner living outside Canada cannot work in Canada unless separately authorized; some Family Class applicants who later live in Canada with the sponsor may qualify for the sponsorship open work permit"],
           ["Right of appeal", "No appeal to the Immigration Appeal Division on the sponsorship decision", "Sponsor generally keeps a right of appeal to the Immigration Appeal Division"],
           ["Travel during processing", "Leaving Canada can put the application and the partner’s status at risk", "The sponsored partner can travel and wait abroad while the file is processed"],
           ["If the relationship ends", "The application ends and the partner’s in-Canada status may be affected", "The application ends, but there is no in-Canada status to lose"],
@@ -147,8 +147,8 @@ const article = {
       id: "spousal-open-work-permit",
       heading: "Can the sponsored partner work while waiting?",
       body: [
-        "An inland applicant can apply for a spousal open work permit, which allows the sponsored partner to work for most employers in Canada while the permanent residence file is open. It is not automatic: it has to be applied for, and eligibility depends on the sponsorship having reached the point where IRCC has acknowledged it and on the sponsored partner holding valid temporary status.",
-        "An outland applicant cannot rely on the same permit. If the sponsored partner is outside Canada, they need their own basis to work in Canada, such as a separate work permit application that stands on its own merits. The open work permit is tied to the sponsorship, so if the sponsorship ends, so does the basis for the permit.",
+        "A sponsored spouse or partner who is living in Canada with the sponsor may qualify for an open work permit after IRCC issues an acknowledgement of receipt (AOR) for the complete permanent-residence application. Eligibility is not limited to the in-Canada class: some Family Class applicants also qualify if they are in Canada with the sponsor. The permit is a separate application, and the sponsorship file alone does not authorize work.",
+        "A partner who remains outside Canada cannot use this in-Canada open-work-permit policy until they are living in Canada with the sponsor and meet the other conditions. A visitor visa or permission to enter is a separate decision and is not guaranteed by a sponsorship application. Read the permit issued by IRCC for its validity and conditions before working.",
       ],
     },
     {
@@ -185,35 +185,45 @@ const article = {
 
   faqs: [
     {
-      question: "What is the difference between inland and outland sponsorship?",
-      answer:
-        "Inland sponsorship is filed while the couple lives together in Canada and is processed inside Canada. Outland sponsorship is processed at an office outside Canada and suits couples who live apart. The choice affects whether the sponsored partner can apply for an open work permit, whether the sponsor can appeal a refusal, and how much travel is safe during processing.",
+      "question": "For Canadian spousal sponsorship, how do I choose between the in-Canada class and Family Class (often called inland and outland)?",
+      "answer": "The in-Canada class generally requires the sponsored spouse or common-law partner to live with the sponsor in Canada. Family Class can include applicants inside or outside Canada, and conjugal partners must use that class. The route affects travel and appeal rights; an eligible partner living in Canada with the sponsor may qualify for an open work permit under either class."
     },
     {
-      question: "Can the sponsored partner work in Canada while the application is processed?",
-      answer:
-        "An inland applicant can apply for a spousal open work permit, which allows work for most employers while the file is open. It is not granted automatically, and it depends on the sponsorship having been acknowledged and on the sponsored partner holding valid temporary status. Outland applicants cannot rely on it and need a separate basis to work.",
+      "question": "Can a sponsored spouse get an open work permit in Canada during inland or outland spousal sponsorship processing?",
+      "answer": "A spouse or partner included in a permanent-residence application may qualify if they are living in Canada with the sponsor and meet IRCC’s other conditions. Usually IRCC must issue an AOR first; a limited no-AOR exception applies when status expires within two weeks. A partner outside Canada needs separate authorization to work in Canada."
     },
     {
-      question: "How long does spousal sponsorship take?",
-      answer:
-        "There is no fixed answer, and any single figure you read elsewhere will be out of date. Processing depends on the route, how complete the application is, how quickly IRCC can verify the information and how much of the annual intake is already committed. Check the current estimate for your specific stream on the official IRCC processing-times page.",
+      "question": "How long does Canadian spousal sponsorship take for inland and outland applications?",
+      "answer": "There is no fixed answer, and any single figure you read elsewhere will be out of date. Processing depends on the route, how complete the application is, how quickly IRCC can verify the information and how much of the annual intake is already committed. Check the current estimate for your specific stream on the official IRCC processing-times page."
     },
     {
-      question: "Does spousal sponsorship Canada allow an appeal if it is refused?",
-      answer:
-        "It depends on the route. With outland sponsorship, the sponsor generally has a right of appeal against a refusal to the Immigration Appeal Division. With inland sponsorship that appeal right does not apply to the sponsorship decision, so the available options are narrower and usually involve a fresh application or a different remedy.",
+      "question": "Does spousal sponsorship Canada allow an appeal if it is refused?",
+      "answer": "It depends on the route. With outland sponsorship, the sponsor generally has a right of appeal against a refusal to the Immigration Appeal Division. With inland sponsorship that appeal right does not apply to the sponsorship decision, so the available options are narrower and usually involve a fresh application or a different remedy."
     },
     {
-      question: "Can you travel while an inland sponsorship is being processed?",
-      answer:
-        "You can leave Canada, but re-entry is never guaranteed, and if the sponsored partner cannot return the inland application can fail. That risk is the main reason couples who need to travel choose outland sponsorship instead. If travel is unavoidable, take advice on your specific file before you leave.",
+      "question": "Can you travel while an inland sponsorship is being processed?",
+      "answer": "You can leave Canada, but re-entry is never guaranteed, and if the sponsored partner cannot return the inland application can fail. That risk is the main reason couples who need to travel choose outland sponsorship instead. If travel is unavoidable, take advice on your specific file before you leave."
     },
     {
-      question: "What happens if the relationship ends after permanent residence is granted?",
-      answer:
-        "The permanent residence is not automatically lost, but the sponsor’s undertaking continues for its full term. The sponsor remains financially responsible for the sponsored person even after the relationship ends. The undertaking is a legal commitment that is not cancelled by separation or divorce.",
+      "question": "What happens if the relationship ends after permanent residence is granted?",
+      "answer": "The permanent residence is not automatically lost, but the sponsor’s undertaking continues for its full term. The sponsor remains financially responsible for the sponsored person even after the relationship ends. The undertaking is a legal commitment that is not cancelled by separation or divorce."
     },
+    {
+      "question": "Who can sponsor a spouse or partner for Canadian permanent residence?",
+      "answer": "A sponsor generally must be at least 18 and a Canadian citizen, permanent resident or registered Indian. Permanent residents must live in Canada; a Canadian citizen abroad must show plans to return when the partner becomes a permanent resident. The sponsor must also meet IRCC’s other eligibility and undertaking rules."
+    },
+    {
+      "question": "How long do you have to live together to sponsor a common-law partner?",
+      "answer": "IRCC generally defines a common-law partner as someone who has lived with you in a conjugal relationship for 12 consecutive months, with only short, temporary separations. You need evidence of the shared life and address, such as leases, bills, joint financial records or other documents listed in the official checklist."
+    },
+    {
+      "question": "Is there a minimum income to sponsor a spouse in Canada?",
+      "answer": "In most spouse, partner and dependent-child sponsorships, IRCC does not set a minimum necessary income. The sponsor still must meet the eligibility rules and promise to provide basic needs. Different financial rules can apply in specific cases, including when a sponsored child has a dependent child."
+    },
+    {
+      "question": "How long does a sponsor’s financial undertaking last for a Canadian spouse or partner?",
+      "answer": "Outside Quebec, the sponsor’s undertaking for a spouse, common-law partner or conjugal partner lasts three years from the date the sponsored person becomes a permanent resident. The obligation continues if the relationship ends and can remain relevant if the sponsored person receives social assistance during that period."
+    }
   ],
 
   related: [
@@ -224,9 +234,30 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Sponsor your spouse, partner or child", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children.html" },
-    { label: "IRCC — Check if you are eligible to sponsor your spouse or partner", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/eligibility.html" },
-    { label: "IRCC — Family sponsorship", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship.html" },
+    {
+      "label": "IRCC — Sponsor your spouse, partner or child",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children.html"
+    },
+    {
+      "label": "IRCC — Check if you are eligible to sponsor your spouse or partner",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/eligibility.html"
+    },
+    {
+      "label": "IRCC — Family sponsorship",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/who-you-can-sponsor.html",
+      "label": "IRCC spouse and partner relationship requirements"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/guide-5289-sponsor-your-spouse-common-law-partner-conjugal-partner-dependent-child-complete-guide.html",
+      "label": "IRCC spouse sponsorship eligibility, income and undertaking"
+    },
+    {
+      "label": "IRCC open work permit for sponsored spouses and partners living in Canada",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/spouse-common-law-partner-canada-open-work-permit.html"
+    }
   ],
 };
 

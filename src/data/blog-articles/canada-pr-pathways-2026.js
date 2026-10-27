@@ -174,30 +174,45 @@ const article = {
 
   faqs: [
     {
-      question: "Which Canada PR pathway is fastest?",
-      answer:
-        "There is no single fastest route, because speed depends on the program, how complete your file is and how quickly your information can be verified. What you can control is readiness. The candidates who move quickly are the ones whose language results, credential assessment and reference letters are already in place when an intake or a round opens, rather than being assembled afterwards.",
+      "question": "What are the main Canada PR pathways, and how can I get permanent residence in Canada through Express Entry or PNP?",
+      "answer": "There is no single fastest route, because speed depends on the program, how complete your file is and how quickly your information can be verified. What you can control is readiness. The candidates who move quickly are the ones whose language results, credential assessment and reference letters are already in place when an intake or a round opens, rather than being assembled afterwards."
     },
     {
-      question: "Can I apply for permanent residence without a job offer?",
-      answer:
-        "Yes. Express Entry, the Canadian Experience Class and most provincial streams do not require a job offer, and a job offer no longer adds CRS points. The routes that do require one are the regional and community programs, where a designated employer is central to eligibility. Family sponsorship also does not involve a job offer.",
+      "question": "Can I apply for permanent residence without a job offer?",
+      "answer": "Yes. Express Entry, the Canadian Experience Class and many provincial streams can be pursued without a job offer; some regional and community routes require one from a designated employer. From November 3, 2026, a qualifying offer in an eligible high-wage occupation may add CRS points under IRCC’s new rules. Family sponsorship is based on the relationship and sponsor, not a job offer."
     },
     {
-      question: "Do I have to choose between Express Entry and the Provincial Nominee Program?",
-      answer:
-        "No, and many candidates pursue both. A provincial nomination linked to Express Entry adds 600 points to your score, so the two work together rather than competing. You can hold an Express Entry profile while applying to a province, provided the information in both is consistent and accurate.",
+      "question": "Do I have to choose between Express Entry and the Provincial Nominee Program?",
+      "answer": "No, and many candidates pursue both. A provincial nomination linked to Express Entry adds 600 points to your score, so the two work together rather than competing. You can hold an Express Entry profile while applying to a province, provided the information in both is consistent and accurate."
     },
     {
-      question: "Is there still a temporary resident to permanent resident pathway?",
-      answer:
-        "IRCC lists the broad temporary resident to permanent resident pathway as closed, so there is no standing open route for anyone holding temporary status. In-Canada transitions today run through programs such as the Canadian Experience Class, or through a provincial nomination, both of which have their own eligibility rules. Check the official page for the current position.",
+      "question": "Is there still a temporary resident to permanent resident pathway?",
+      "answer": "IRCC lists the broad temporary resident to permanent resident pathway as closed, so there is no standing open route for anyone holding temporary status. In-Canada transitions today run through programs such as the Canadian Experience Class, or through a provincial nomination, both of which have their own eligibility rules. Check the official page for the current position."
     },
     {
-      question: "How do I decide between sponsorship and an economic program?",
-      answer:
-        "They are not alternatives you weigh against each other in the same way, because they depend on different facts. Sponsorship is available only if you have an eligible sponsor and a qualifying relationship. An economic program depends on your own profile. If you have both options, compare them on timeline and on the documents each one requires.",
+      "question": "How do I decide between sponsorship and an economic program?",
+      "answer": "They are not alternatives you weigh against each other in the same way, because they depend on different facts. Sponsorship is available only if you have an eligible sponsor and a qualifying relationship. An economic program depends on your own profile. If you have both options, compare them on timeline and on the documents each one requires."
     },
+    {
+      "question": "Do I need Express Entry to become a permanent resident of Canada?",
+      "answer": "No. Express Entry is one route, but Canada also has provincial nomination, family sponsorship, Atlantic, rural and other program pathways. Each has separate eligibility, intake and application rules."
+    },
+    {
+      "question": "Can I apply for permanent residence after studying in Canada?",
+      "answer": "Possibly. A graduate may qualify through a work-based or provincial route if they meet that program’s requirements. A study permit, Canadian credential or PGWP alone does not guarantee permanent residence."
+    },
+    {
+      "question": "Can I apply for Canadian PR if my CRS score is too low?",
+      "answer": "A low CRS score does not itself mean you are refused. You can review legitimate ways to improve your profile, consider provincial or regional pathways, or wait for a suitable round, while keeping your temporary status valid."
+    },
+    {
+      "question": "Do I have to live in the province that nominates me?",
+      "answer": "A provincial nominee is expected to intend to live in the nominating province and must comply with the conditions of that stream. An Express Entry nomination also requires you to meet the relevant federal program and PR requirements."
+    },
+    {
+      "question": "Can a Canadian job offer guarantee permanent residence?",
+      "answer": "No. A job offer may support eligibility or ranking in some programs, but it does not guarantee nomination, an invitation or PR. Employers, roles and candidates must meet the specific current rules."
+    }
   ],
 
   related: [
@@ -210,10 +225,22 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Live in Canada permanently", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html" },
-    { label: "IRCC — Immigrate as a provincial nominee", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html" },
-    { label: "IRCC — Atlantic Immigration Program", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration.html" },
-    { label: "IRCC — Sponsor your family members", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship.html" },
+    {
+      "label": "IRCC — Live in Canada permanently",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html"
+    },
+    {
+      "label": "IRCC — Immigrate as a provincial nominee",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html"
+    },
+    {
+      "label": "IRCC — Atlantic Immigration Program",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration.html"
+    },
+    {
+      "label": "IRCC — Sponsor your family members",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship.html"
+    }
   ],
 };
 

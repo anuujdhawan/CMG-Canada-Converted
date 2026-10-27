@@ -170,25 +170,45 @@ const article = {
 
   faqs: [
     {
-      question: "How often does Canada immigration policy change?",
-      answer:
-        "There is no fixed cycle. Some changes are annual, such as the levels plan published each autumn and the fee adjustments that follow a regulatory change. Others arrive without notice when a stream opens or closes, a category list is refreshed or a document requirement is amended. A monthly check of your own program page is more reliable than waiting for news.",
+      "question": "Where can I follow Canada immigration news, IRCC news and the latest Canada visa news from official sources?",
+      "answer": "There is no fixed cycle. Some changes are annual, such as the levels plan published each autumn and the fee adjustments that follow a regulatory change. Others arrive without notice when a stream opens or closes, a category list is refreshed or a document requirement is amended. A monthly check of your own program page is more reliable than waiting for news."
     },
     {
-      question: "Where does IRCC publish its announcements?",
-      answer:
-        "IRCC publishes news releases on its own news page, but the operative documents usually sit elsewhere: the levels plan on the levels page, Express Entry rounds on the rounds page, and program rules in program delivery updates and on each program’s own page. Read the primary document rather than the release that summarises it.",
+      "question": "Where does IRCC publish official Canada immigration announcements, program changes, and fee updates?",
+      "answer": "IRCC publishes news releases on its own news page, but the operative documents usually sit elsewhere: the levels plan on the levels page, Express Entry rounds on the rounds page, and program rules in program delivery updates and on each program’s own page. Read the primary document rather than the release that summarises it."
     },
     {
-      question: "What is the difference between a news release and a rule change?",
-      answer:
-        "A news release describes an intention or a decision. A rule change lives in a regulation, a ministerial instruction or a program delivery update. Until the instrument is issued and the program page reflects it, your obligations are unchanged. Treat the release as a pointer to the document, not as the document itself.",
+      "question": "What is the difference between a news release and a rule change?",
+      "answer": "A news release describes an intention or a decision. A rule change lives in a regulation, a ministerial instruction or a program delivery update. Until the instrument is issued and the program page reflects it, your obligations are unchanged. Treat the release as a pointer to the document, not as the document itself."
     },
     {
-      question: "Which changes should I act on immediately?",
-      answer:
-        "Act on anything that alters eligibility, a required document, a fee, a deadline or the volume of invitations in the stream you are using. Ignore anything that only restates an existing rule or describes a proposal. If a change affects a form you have not yet filed, update the form before you submit rather than after.",
+      "question": "Which Canada immigration rule changes should applicants act on after an IRCC announcement?",
+      "answer": "Act on anything that alters eligibility, a required document, a fee, a deadline or the volume of invitations in the stream you are using. Ignore anything that only restates an existing rule or describes a proposal. If a change affects a form you have not yet filed, update the form before you submit rather than after."
     },
+    {
+      "question": "Where can I check whether an immigration announcement is now in force?",
+      "answer": "Read the linked IRCC program page and look for its effective date, application instructions and any transition rules. A news release can announce an intended change before the detailed operational instructions appear."
+    },
+    {
+      "question": "Does a new immigration rule automatically apply to an application already submitted?",
+      "answer": "Not always. Each change may include its own transition instructions describing which submission dates or applicants are affected. Check the official program page and the account messages connected to your file."
+    },
+    {
+      "question": "Where should I verify a new IRCC application fee?",
+      "answer": "Use the current IRCC fees page for the application type and family members included. Do not rely on an old blog post, social-media graphic or third-party calculator when paying a government fee."
+    },
+    {
+      "question": "How can I tell whether an immigration update affects my case?",
+      "answer": "Compare the official effective date and eligibility conditions with your application type, submission date and current status. If a change does not explain pending cases clearly, use IRCC’s official contact instructions or get advice on the specific file."
+    },
+    {
+      "question": "Can a news article replace the IRCC application guide?",
+      "answer": "No. News coverage can help explain what changed, but the official program page, application guide and checklist control the filing steps. Confirm the current forms, evidence and deadline before submitting anything."
+    },
+    {
+      "question": "How often should I recheck immigration rules while preparing an application?",
+      "answer": "Check the relevant IRCC or provincial page when you begin, shortly before filing and whenever the government issues a change notice. Keep a dated copy of the instructions you relied on for the application."
+    }
   ],
 
   related: [
@@ -199,10 +219,26 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — News releases and announcements", url: "https://www.canada.ca/en/immigration-refugees-citizenship/news.html" },
-    { label: "IRCC — Immigration Levels Plan", url: "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/corporate-initiatives/levels.html" },
-    { label: "IRCC — Check processing times", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html" },
-    { label: "IRCC — Express Entry", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" },
+    {
+      "label": "IRCC — News releases and announcements",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/news.html"
+    },
+    {
+      "label": "IRCC — Immigration Levels Plan",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/corporate-initiatives/levels.html"
+    },
+    {
+      "label": "IRCC — Check processing times",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html"
+    },
+    {
+      "label": "IRCC — Express Entry",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/fees.html",
+      "label": "IRCC application fees"
+    }
   ],
 };
 

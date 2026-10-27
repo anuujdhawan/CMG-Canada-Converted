@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowUpRight, Check, ExternalLink, ShieldCheck } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import HeroCardShell from "./HeroCardShell";
 
 const DRAW_PAGE_PATH = "/immigration-draws";
@@ -50,12 +50,21 @@ function DrawCardLoading() {
   );
 }
 
-export default function ExpressEntryDrawCard() {
+export default function ExpressEntryDrawCard({ active = true }) {
   const [draw, setDraw] = useState(null);
   const [categoryDraws, setCategoryDraws] = useState([]);
   const [error, setError] = useState(false);
+  const requestStartedRef = useRef(false);
 
   useEffect(() => {
+    // The inactive card is still mounted for the desktop cross-fade. Avoid
+    // starting its live request on mobile until the visitor selects it.
+    if (!active && window.matchMedia?.("(max-width: 880px)").matches) {
+      return undefined;
+    }
+    if (requestStartedRef.current) return undefined;
+    requestStartedRef.current = true;
+
     let cancelled = false;
     fetch("/api/express-entry-draws")
       .then((response) => {
@@ -76,7 +85,7 @@ export default function ExpressEntryDrawCard() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [active]);
 
   return (
     <HeroCardShell ariaLabel="Latest official Express Entry draw" className="hero-draw-card -translate-y-[50%] max-[880px]:!translate-y-0">

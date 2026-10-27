@@ -173,35 +173,45 @@ const article = {
 
   faqs: [
     {
-      question: "Is a PR card the same as permanent resident status?",
-      answer:
-        "No. The PR card is a travel document that proves your status to a carrier or a border officer. Permanent resident status is the legal position you hold in Canada, and it continues as long as you meet the residency obligation, whether or not the card is valid. An expired card does not mean you have lost your status.",
+      "question": "Is a PR card the same as permanent resident status?",
+      "answer": "No. The PR card is a travel document that proves your status to a carrier or a border officer. Permanent resident status is the legal position you hold in Canada, and it continues as long as you meet the residency obligation, whether or not the card is valid. An expired card does not mean you have lost your status."
     },
     {
-      question: "How long does PR card renewal Canada take?",
-      answer:
-        "There is no fixed Canada PR card processing time, and any single figure you read will age quickly. It depends on how complete the application is, how many applications are already in the queue, and how easily IRCC can verify your information and your absences. Check the current estimate on the official IRCC page.",
+      "question": "How long does it take IRCC to renew a Canadian PR card, and where can I check PR card processing time?",
+      "answer": "There is no fixed Canada PR card processing time, and any single figure you read will age quickly. It depends on how complete the application is, how many applications are already in the queue, and how easily IRCC can verify your information and your absences. Check the current estimate on the official IRCC page."
     },
     {
-      question: "Can you renew a PR card from outside Canada?",
-      answer:
-        "No. Renewal is applied for from inside Canada, and you must be in Canada when you apply. If your card expires while you are abroad, the route back is a permanent resident travel document, applied for at a Canadian visa office overseas. Once you are back in Canada, you can renew the card normally.",
+      "question": "Can you renew a PR card from outside Canada?",
+      "answer": "No. Renewal is applied for from inside Canada, and you must be in Canada when you apply. If your card expires while you are abroad, the route back is a permanent resident travel document, applied for at a Canadian visa office overseas. Once you are back in Canada, you can renew the card normally."
     },
     {
-      question: "What is the residency obligation for permanent residents?",
-      answer:
-        "It requires physical presence in Canada for at least 730 days in every five-year period, measured over the five years immediately before the date you are assessed. Certain time abroad counts, such as time accompanying a Canadian citizen spouse or partner or working for a qualifying Canadian business. Those exceptions must be documented.",
+      "question": "What is the residency obligation for permanent residents?",
+      "answer": "It requires physical presence in Canada for at least 730 days in every five-year period, measured over the five years immediately before the date you are assessed. Certain time abroad counts, such as time accompanying a Canadian citizen spouse or partner or working for a qualifying Canadian business. Those exceptions must be documented."
     },
     {
-      question: "What is the difference between a PR card renewal and a PRTD?",
-      answer:
-        "Renewal produces a new PR card and is applied for inside Canada. A PRTD is a single-entry travel document issued outside Canada to a permanent resident who does not hold a valid card and needs to return. Both test the residency obligation, but only one is available to you while you are abroad.",
+      "question": "What is the difference between a PR card renewal and a PRTD?",
+      "answer": "Renewal produces a new PR card and is applied for inside Canada. A PRTD is a single-entry travel document issued outside Canada to a permanent resident who does not hold a valid card and needs to return. Both test the residency obligation, but only one is available to you while you are abroad."
     },
     {
-      question: "What happens if you do not meet the residency obligation?",
-      answer:
-        "Your status can be at risk rather than automatically lost. IRCC may refuse the card, and a border officer can report you for non-compliance, which can lead to the loss of permanent residence. Recognised exceptions and humanitarian and compassionate factors may still support keeping your status, and decisions can generally be appealed.",
+      "question": "What happens if you do not meet the residency obligation?",
+      "answer": "Your status can be at risk rather than automatically lost. IRCC may refuse the card, and a border officer can report you for non-compliance, which can lead to the loss of permanent residence. Recognised exceptions and humanitarian and compassionate factors may still support keeping your status, and decisions can generally be appealed."
     },
+    {
+      "question": "How early can I renew my PR card?",
+      "answer": "IRCC allows you to renew when the card will expire in less than 9 months or has already expired. If it is still valid for more than 9 months, IRCC says not to apply for renewal unless your legal name or gender has changed. Submit through the Permanent Residence Portal with the current checklist and supporting evidence."
+    },
+    {
+      "question": "Can I get urgent processing for a PR card renewal?",
+      "answer": "IRCC accepts urgent-processing requests in limited situations, such as a serious illness or death in the family, qualifying work travel, or a crisis. You must provide travel dates, proof of payment, an explanation and evidence of urgency. The minimum processing time is 3 weeks, and approval does not guarantee the card will arrive before travel."
+    },
+    {
+      "question": "How do I check the status of my PR card renewal?",
+      "answer": "Wait for IRCC’s acknowledgement of receipt, then use the Permanent Residence Portal or the status tool listed in the PR-card application instructions. Have your application number and UCI ready. If the file is not yet acknowledged, it may not appear in the tracker even if you submitted it recently."
+    },
+    {
+      "question": "What documents do I need to renew a Canadian PR card?",
+      "answer": "Start with the current IMM 5444 application and document checklist in IRCC’s Permanent Residence Portal. You will generally need identity and status details, a compliant photo, the fee receipt and evidence requested for your circumstances. Make sure travel and address history is complete and consistent with your records."
+    }
   ],
 
   related: [
@@ -213,9 +223,26 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Get, renew or replace a permanent resident card", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/permanent-residents/card/apply.html" },
-    { label: "IRCC — Permanent resident travel document: How to apply", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/permanent-residents/travel-document/apply.html" },
-    { label: "IRCC — Permanent resident cards and status", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/permanent-residents.html" },
+    {
+      "label": "IRCC — Get, renew or replace a permanent resident card",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/permanent-residents/card/apply.html"
+    },
+    {
+      "label": "IRCC — Permanent resident travel document: How to apply",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/permanent-residents/travel-document/apply.html"
+    },
+    {
+      "label": "IRCC — Permanent resident cards and status",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/permanent-residents.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/permanent-residents/card/urgent.html",
+      "label": "IRCC urgent PR card processing"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/permanent-residents.html",
+      "label": "IRCC PR card and travel requirements"
+    }
   ],
 };
 

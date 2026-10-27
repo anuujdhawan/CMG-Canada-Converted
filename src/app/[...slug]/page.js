@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo";
+import { attachClientFaqs } from "@/lib/clientFaqs";
 import { getCmgPage, getCmgRoutePaths, getLegalPage, getLegalRoutePaths } from "@/lib/cmgPages";
 import ContentPage from "@/components/templates/ContentPage";
 
@@ -16,7 +17,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const path = pathFromParams(resolvedParams);
-  const page = getCmgPage(path) || getLegalPage(path);
+  const page = attachClientFaqs(getCmgPage(path) || getLegalPage(path));
   if (!page) return {};
   return buildMetadata({
     title: page.seo?.title || page.h1,
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }) {
 export default async function SourcePageRoute({ params }) {
   const resolvedParams = await params;
   const path = pathFromParams(resolvedParams);
-  const page = getCmgPage(path) || getLegalPage(path);
+  const page = attachClientFaqs(getCmgPage(path) || getLegalPage(path));
   if (!page) notFound();
   return <ContentPage page={page} />;
 }

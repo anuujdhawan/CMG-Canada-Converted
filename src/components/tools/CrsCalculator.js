@@ -141,7 +141,7 @@ export default function CrsCalculator() {
         {/* Intro band */}
         <div className="tool-notice mb-6 rounded-[0.85rem] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-primary)_5%,transparent)] px-4 py-[0.9rem] flex items-center gap-2 text-xs font-semibold">
           <Sparkles className="text-[var(--template-primary)] h-3.5 w-3.5" />
-          <span>Tip: add spouse, language or Canadian education to see live score movement.</span>
+          <span>This estimate uses the CRS rules in effect through November 2, 2026. IRCC changes points for eligible Canadian work experience and high-wage job offers on November 3. Check <a className="font-bold underline underline-offset-2 hover:text-[var(--template-primary)]" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html" target="_blank" rel="noopener noreferrer">IRCC’s change notice</a> before relying on a later score.</span>
         </div>
 
         <div className="crs-calculator__form-grid grid items-start gap-x-8 gap-y-6 sm:grid-cols-2">

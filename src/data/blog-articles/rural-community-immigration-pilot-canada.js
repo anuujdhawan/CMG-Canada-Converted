@@ -171,30 +171,45 @@ const article = {
 
   faqs: [
     {
-      question: "What is the Rural Community Immigration Pilot?",
-      answer:
-        "It is a permanent residence route for foreign workers who accept a genuine job with a designated employer in a participating community. The community’s economic development organisation assesses the employer and the candidate and issues a recommendation, and IRCC then assesses the permanent residence application. It is community-driven rather than purely federal.",
+      "question": "What is the Rural Community Immigration Pilot (RCIP) in Canada, and who qualifies for rural immigration to Canada?",
+      "answer": "It is a permanent residence route for foreign workers who accept a genuine job with a designated employer in a participating community. The community’s economic development organisation assesses the employer and the candidate and issues a recommendation, and IRCC then assesses the permanent residence application. It is community-driven rather than purely federal."
     },
     {
-      question: "Do I need a job offer for RCIP Canada?",
-      answer:
-        "Yes. The pilot is employer-driven, so a genuine, full-time, non-seasonal job offer from an employer designated by a participating community is the foundation of the application. Without an offer the community can support, there is no recommendation, and without a recommendation you cannot apply to IRCC under the pilot.",
+      "question": "Do I need a job offer for RCIP Canada?",
+      "answer": "Yes. The pilot is employer-driven, so a genuine, full-time, non-seasonal job offer from an employer designated by a participating community is the foundation of the application. Without an offer the community can support, there is no recommendation, and without a recommendation you cannot apply to IRCC under the pilot."
     },
     {
-      question: "Is there a minimum language level for the pilot?",
-      answer:
-        "The pilot sets a minimum language level, but the level is stated on the official page and can change. Check the current requirement and the accepted test formats there before you book a test, because a result below the required level cannot be offset by a strong job offer or a supportive community.",
+      "question": "Is there a minimum language level for the pilot?",
+      "answer": "The pilot sets a minimum language level, but the level is stated on the official page and can change. Check the current requirement and the accepted test formats there before you book a test, because a result below the required level cannot be offset by a strong job offer or a supportive community."
     },
     {
-      question: "Can I apply if I am already in Canada?",
-      answer:
-        "Yes, if you meet the pilot’s requirements and can secure a designated employer in a participating community. Being already in Canada can help with the settlement funds question and with continuity of status, but it does not replace the job offer or the community recommendation. Keep your current status valid throughout.",
+      "question": "Can I apply if I am already in Canada?",
+      "answer": "Yes, if you meet the pilot’s requirements and can secure a designated employer in a participating community. Being already in Canada can help with the settlement funds question and with continuity of status, but it does not replace the job offer or the community recommendation. Keep your current status valid throughout."
     },
     {
-      question: "What happens if I want to leave the community later?",
-      answer:
-        "The recommendation and the permanent residence application rest on your intention to live and work in the community. Leaving shortly after landing is inconsistent with that undertaking and can affect later applications. If your plan is to settle elsewhere, a provincial nominee stream or a federal route is likely a better fit.",
+      "question": "Does RCIP Canada require me to settle in the rural community that recommends my permanent residence application?",
+      "answer": "When you apply, RCIP requires a genuine intention to live and work in the community that recommended you. Permanent residents generally have mobility rights after landing, but you should not misrepresent your plans to qualify. If your real goal is to settle elsewhere from the outset, compare another immigration route instead."
     },
+    {
+      "question": "How much work experience do I need for the Rural Community Immigration Pilot?",
+      "answer": "RCIP generally requires at least one year, or 1,560 hours, of related paid work experience in the three years before applying. The experience must match the relevant NOC duties and fit the TEER relationship to the job offer. Some recent graduates of a public post-secondary school in the recommending community may qualify for an exemption."
+    },
+    {
+      "question": "What language test score do I need for the Rural Community Immigration Pilot in Canada?",
+      "answer": "The minimum depends on the job offer’s TEER category: CLB or NCLC 6 for TEER 0 or 1, level 5 for TEER 2 or 3, and level 4 for TEER 4 or 5. You need an approved test, and the results must be less than two years old when you apply."
+    },
+    {
+      "question": "Do I need settlement funds for an RCIP application?",
+      "answer": "Usually you must show enough available funds for yourself and your family, with IRCC setting the amount by family size. However, the current RCIP instructions say you do not need proof of funds if you are already working in Canada with a valid work permit. Check the current amount and document rules before filing."
+    },
+    {
+      "question": "Can an RCIP applicant get a work permit while PR is processing?",
+      "answer": "After submitting the RCIP permanent-residence application, an eligible applicant may also qualify for an optional two-year employer-specific work permit with a recommendation from the participating community. It only authorizes work for the designated employer; an eligible spouse or common-law partner may apply for a related open work permit."
+    },
+    {
+      "question": "Can an international graduate use RCIP without one year of work experience?",
+      "answer": "Some graduates can qualify for the work-experience exemption if they completed an eligible credential at a public post-secondary school in the recommending community and meet the study-duration, timing and in-community residence conditions. The exemption is specific, so compare your program and dates with IRCC’s checklist before relying on it."
+    }
   ],
 
   related: [
@@ -205,8 +220,34 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Rural Community Immigration Pilot", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration.html" },
-    { label: "IRCC — Check processing times", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html" },
+    {
+      "label": "IRCC — Rural Community Immigration Pilot",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration.html"
+    },
+    {
+      "label": "IRCC — Check processing times",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration/eligibility.html",
+      "label": "IRCC RCIP eligibility"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration/eligibility/work-experience.html",
+      "label": "IRCC RCIP work-experience rules and graduate exemption"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration/eligibility/language-test.html",
+      "label": "IRCC RCIP language levels and approved tests"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration/eligibility/proof-funds.html",
+      "label": "IRCC RCIP settlement funds"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration/work-permit.html",
+      "label": "IRCC optional RCIP work permit"
+    }
   ],
 };
 

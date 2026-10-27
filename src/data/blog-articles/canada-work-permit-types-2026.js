@@ -163,30 +163,45 @@ const article = {
 
   faqs: [
     {
-      question: "What is the difference between an open and an employer-specific work permit?",
-      answer:
-        "An open permit names no employer, so you can work for almost any employer and change jobs without a new permit. An employer-specific permit names one employer, and often one role and location, so you may work only for that employer. The evidence and the conditions follow from that difference.",
+      "question": "Which Canada work permit should I apply for: an open work permit or an employer-specific permit?",
+      "answer": "An open permit names no employer, so you can work for almost any employer and change jobs without a new permit. An employer-specific permit names one employer, and often one role and location, so you may work only for that employer. The evidence and the conditions follow from that difference."
     },
     {
-      question: "Can I get an open work permit Canada issues without a job offer?",
-      answer:
-        "Yes, in the categories that qualify. Spouses and partners of certain workers and students, eligible graduates, and some applicants with a permanent residence application in progress can obtain an open permit without a job offer. Eligibility depends on your own circumstances rather than on an employer.",
+      "question": "Can I get an open work permit Canada issues without a job offer?",
+      "answer": "Yes, in the categories that qualify. Spouses and partners of certain workers and students, eligible graduates, and some applicants with a permanent residence application in progress can obtain an open permit without a job offer. Eligibility depends on your own circumstances rather than on an employer."
     },
     {
-      question: "Who applies first for an employer-specific work permit?",
-      answer:
-        "The employer. They either obtain a labour market impact assessment or submit an offer of employment under an exemption in the International Mobility Program. Your permit application depends on the number that step produces, so you cannot file until the employer has completed it.",
+      "question": "Who applies first for an employer-specific work permit?",
+      "answer": "The employer. They either obtain a labour market impact assessment or submit an offer of employment under an exemption in the International Mobility Program. Your permit application depends on the number that step produces, so you cannot file until the employer has completed it."
     },
     {
-      question: "What happens if I change jobs on an employer-specific permit?",
-      answer:
-        "The permit no longer covers the new work. In most cases you need a new permit before you start, which means the new employer must complete their own LMIA or exemption step first. Working outside the permit’s terms can put your status at risk.",
+      "question": "What happens if I change jobs on an employer-specific permit?",
+      "answer": "The permit no longer covers the new work. In most cases you need a new permit before you start, which means the new employer must complete their own LMIA or exemption step first. Working outside the permit’s terms can put your status at risk."
     },
     {
-      question: "Is the Global Talent Stream an LMIA exemption?",
-      answer:
-        "No. The Global Talent Stream sits inside the Temporary Foreign Worker Program and still requires a labour market impact assessment, alongside a Labour Market Benefits Plan. It is a faster and more structured employer-driven route, not an exemption from the labour market test.",
+      "question": "Is the Global Talent Stream an LMIA exemption?",
+      "answer": "No. The Global Talent Stream sits inside the Temporary Foreign Worker Program and still requires a labour market impact assessment, alongside a Labour Market Benefits Plan. It is a faster and more structured employer-driven route, not an exemption from the labour market test."
     },
+    {
+      "question": "Does a positive LMIA guarantee that a Canadian work permit will be approved?",
+      "answer": "No. An LMIA is an employer-side assessment, not the worker’s permit. The applicant must still apply, meet the permit requirements and satisfy an officer about identity, admissibility and the job offer."
+    },
+    {
+      "question": "Can I extend an employer-specific Canadian work permit before it expires, and what is required?",
+      "answer": "You may apply to extend or change its conditions if you remain eligible. Apply before expiry when possible; if you apply in time and stay in Canada, maintained-status work rules may allow you to continue under the original permit conditions."
+    },
+    {
+      "question": "How can I tell whether my work permit is open or employer-specific?",
+      "answer": "Read the conditions printed on the permit. An employer-specific permit names the employer and may limit occupation or location; an open permit generally allows work for most employers, subject to its listed restrictions."
+    },
+    {
+      "question": "Can I work for a second employer on an employer-specific work permit?",
+      "answer": "Usually not unless your authorization covers that employer or IRCC approves a change. An employer-specific permit restricts the work to the named conditions, so check the permit and apply for a change before starting different work."
+    },
+    {
+      "question": "Can a work permit lead directly to permanent residence?",
+      "answer": "A work permit gives temporary authorization to work; it does not itself grant permanent residence. Some work experience may support a separate PR pathway if the applicant meets that program’s requirements and is selected."
+    }
   ],
 
   related: [
@@ -197,8 +212,26 @@ const article = {
   ],
 
   sources: [
-    { label: "IRCC — Work in Canada: work permits", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/permit.html" },
-    { label: "IRCC — Check processing times", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html" },
+    {
+      "label": "IRCC — Work in Canada: work permits",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/permit.html"
+    },
+    {
+      "label": "IRCC — Check processing times",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/employer-specific.html",
+      "label": "IRCC employer-specific work permits"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/extend/change-jobs-employers.html",
+      "label": "IRCC changing employers or jobs"
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/extend/expired-permit.html",
+      "label": "IRCC work permit expiry and maintained status"
+    }
   ],
 };
 
