@@ -84,7 +84,7 @@ export default function Footer() {
             </p>
 
             <p className="site-footer__desc mt-[.65rem] max-w-md text-muted text-[.78rem] leading-[1.65]">
-              <strong className="text-(--brand-navy-dark)">CICC-regulated licensed RCICs</strong> serving clients across Canada — Express Entry, every PNP stream, LMIA (HGT), work & study permits, family sponsorship, and refusals.
+              Pankaj Khanna, a licensed RCIC, advises clients across Canada on Express Entry, PNP streams, LMIA matters, work and study permits, family sponsorship, and refusal responses.
             </p>
 
             {/* Licence badge — links straight to the licensee record on the CICC
@@ -99,14 +99,14 @@ export default function Footer() {
               <span className="site-footer__rcic-icon inline-flex size-6 items-center justify-center rounded-full bg-primary text-white">
                 <GraduationCap size={14} aria-hidden />
               </span>
-              <span>Licensed RCIC {site.rcic.number} · CICC-Regulated</span>
+              <span>Licensed RCIC · Licence No. {site.rcic.number} · CICC-regulated</span>
               <ShieldCheck size={12} className="site-footer__rcic-check text-success" aria-hidden />
               <ArrowUpRight size={12} className="site-footer__rcic-out" aria-hidden />
             </a>
 
             {/* Contact */}
             <div className="site-footer__contact grid gap-[.55rem] mt-[1.15rem]">
-              <p className="site-footer__locations-label m-[0_0_.1rem] text-(--brand-navy-dark) text-[.6875rem] font-extrabold tracking-[.14em] leading-[1.2] uppercase">Our offices</p>
+              <p className="site-footer__locations-label m-[0_0_.1rem] text-(--brand-navy-dark) text-[.6875rem] font-extrabold tracking-[.14em] leading-[1.2] uppercase">Our office</p>
               <div className="site-footer__locations grid gap-2">
                 <a
                   href={site.address.mapsUrl}
@@ -226,11 +226,11 @@ export default function Footer() {
         <div className="site-footer__bottom mt-[1.35rem] border-t border-line pt-[1.15rem] pb-[.35rem]">
           <div className="site-footer__bottom-row flex flex-wrap items-center justify-between gap-x-5 gap-y-[.85rem] max-[720px]:flex-col max-[720px]:items-start">
             <p className="site-footer__copyright m-0 text-(--brand-navy-dark) text-[.76rem] font-bold leading-[1.4]">
-              © {year} {site.name}. All rights reserved.
+              © {year} {site.name} All rights reserved.
               <span className="site-footer__dot mx-[.45rem] text-line" aria-hidden>
                 ·
               </span>
-              <span className="site-footer__regulator text-muted italic font-semibold">Licensed by {site.rcic.regulator}</span>
+              <span className="site-footer__regulator text-muted italic font-semibold">Licensed by the {site.rcic.regulator}</span>
             </p>
             <nav className="site-footer__legal flex flex-wrap items-center gap-[.55rem] text-muted text-[.76rem] font-bold [&_a]:no-underline [&_a]:transition-colors [&_a]:duration-180 [&_a]:ease-in-out [&_a:hover]:text-primary-dark [&_a:hover]:underline [&_a:hover]:underline-offset-[3px]" aria-label="Legal">
               <Link href={site.legal.privacy.href}>{site.legal.privacy.label}</Link>
@@ -250,7 +250,7 @@ export default function Footer() {
           </div>
 
           <p className="site-footer__disclaimer m-[.85rem_0_0] rounded-[.85rem] border border-[color-mix(in_srgb,var(--brand-primary)_8%,var(--brand-border))] bg-[color-mix(in_srgb,var(--brand-accent-soft)_55%,#fff)] text-muted px-4 py-3 text-[.68rem] italic leading-[1.6] text-center">
-            {site.tradingName} is a trading name. Content on this site is general information only and does not constitute
+            {site.tradingName} is a trading name. The content on this site is for general information only and does not constitute
             legal advice. Immigration outcomes depend on individual circumstances and current IRCC requirements. {site.name}{" "}
             <strong className="text-primary-dark font-extrabold not-italic">does not guarantee</strong> visa approval.
           </p>

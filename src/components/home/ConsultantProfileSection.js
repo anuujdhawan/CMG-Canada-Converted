@@ -57,39 +57,39 @@ export const LICENSED_RCIC_PROFILE = {
   // booking option. The left arrow points back at the button, which is what
   // makes the two read as one action.
   booking: {
-    label: "Book With Pankaj",
+    label: "Book with Pankaj",
     href: "https://calendar.app.google/coxwFVa4cXZTbntdA",
   },
-  intro: "Based in Brampton, Ontario, our CICC-regulated practice provides client-focused, compliance-driven guidance for individuals and families navigating Canadian immigration with clarity and confidence.",
+  intro: "Pankaj Khanna, RCIC, advises individuals and families from the Brampton, Ontario office on Canadian immigration options, supporting documents, and next steps.",
   expertise: [
     {
       title: "Economic immigration",
-      detail: "Express Entry, Provincial Nominee Programs and other economic pathways, with eligibility review and profile strategy.",
+      detail: "Assess which Express Entry, provincial nominee, and other economic pathways may align with your work and education history.",
       icon: BriefcaseBusiness,
     },
     {
       title: "Work & study permits",
-      detail: "Work permits, study permits and post-graduation options, with clear planning for temporary status and next steps.",
+      detail: "Review work and study permits, the conditions attached to temporary status, and post-graduation options for which you may qualify.",
       icon: GraduationCap,
     },
     {
       title: "Family sponsorship",
-      detail: "Spousal, partner, parent and dependent-child sponsorship applications, prepared around eligibility and relationship evidence.",
+      detail: "Prepare sponsorship applications for spouses, partners, parents, and dependent children, with evidence tailored to each category.",
       icon: HeartHandshake,
     },
     {
       title: "Case strategy",
-      detail: "Careful eligibility assessment, document planning and application preparation for complex or time-sensitive files.",
+      detail: "Review eligibility, organize documents and prepare applications for complex or time-sensitive matters.",
       icon: ShieldCheck,
     },
     {
       title: "Permanent residence",
-      detail: "Long-term pathway planning across Express Entry, PNPs and other permanent residence options aligned with settlement goals.",
+      detail: "Compare Express Entry, PNP, and other permanent-residence options in light of your eligibility and settlement plans.",
       icon: FileCheck2,
     },
     {
       title: "Temporary residence",
-      detail: "Visitor, study and work permit options shaped around your timeline, eligibility and the evidence needed for a strong application.",
+      detail: "Review visitor, study and work permit options against your timeline, eligibility and supporting evidence.",
       icon: Globe2,
     },
   ],
@@ -162,7 +162,7 @@ export default function ConsultantProfileSection({ profile = LICENSED_RCIC_PROFI
 
                 <a href={profile.profileUrl} target="_blank" rel="noopener noreferrer" className="flex shrink-0 items-center gap-2 rounded-full border border-template-border bg-template-primary-surface-6 px-3 py-2 text-[10px] font-extrabold uppercase tracking-[.08em] no-underline transition-colors hover:border-template-primary">
                   <ShieldCheck className="h-4 w-4 shrink-0 text-template-primary" aria-hidden="true" />
-                  <span className="text-template-muted">CICC regulated · {profile.licence}</span>
+                  <span className="text-template-muted">CICC-regulated · Licence No. {profile.licence}</span>
                 </a>
               </div>
 

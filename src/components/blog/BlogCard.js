@@ -30,7 +30,7 @@ export default function BlogCard({ post, index = 0 }) {
       <div className="reference-blog-card__body flex flex-1 flex-col p-[22px_22px_20px] max-[620px]:p-[20px_18px_18px]">
         <div className="reference-blog-card__meta flex items-center justify-between gap-[14px] mb-4 text-[var(--primary)] font-extrabold text-[11px] leading-[1.2] tracking-[.11em] uppercase max-[620px]:items-start max-[620px]:flex-col max-[620px]:gap-[6px]">
           <span>{post.category.label}</span>
-          <span className="text-[var(--muted)] font-bold tracking-[.04em] normal-case">By {post.author || site.rcic.consultant.nameWithCredential}{post.meta?.lastModified ? ` · Updated ${formatDate(post.meta.lastModified)}` : ""}</span>
+          <span className="text-[var(--muted)] font-bold tracking-[.04em] normal-case">By {post.author || site.rcic.consultant.nameWithCredential}{post.updatedLabel ? ` · ${post.updatedLabel}` : post.meta?.lastModified ? ` · Updated ${formatDate(post.meta.lastModified)}` : ""}</span>
         </div>
         <h3 className="max-w-[470px] text-[clamp(19px,1.1rem+.5vw,22px)] max-[620px]:text-[24px] leading-[1.03] transition-colors duration-200 group-hover:text-[var(--primary)] group-focus-visible:text-[var(--primary)]">{post.title}</h3>
         <p className="mt-[14px] text-[var(--muted)] !text-[12px] leading-[1.7]">{post.seo.description}</p>

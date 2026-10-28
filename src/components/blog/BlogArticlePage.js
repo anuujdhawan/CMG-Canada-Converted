@@ -353,6 +353,7 @@ export default function BlogArticlePage({ post, article = null }) {
   const cover = getResearchBlogImage(post.slug, post.category);
   const guidance = CATEGORY_GUIDANCE[categorySlug] || CATEGORY_GUIDANCE["immigration-guides"];
   const reviewed = formatMonth(post.updated || post.date || post.meta?.lastModified);
+  const updateLabel = post.updatedLabel || (reviewed ? `Updated ${reviewed}` : null);
   const author = post.author || site.rcic.consultant.nameWithCredential;
 
   // Related guides lead with the article's own category, then widen to the rest
@@ -374,7 +375,7 @@ export default function BlogArticlePage({ post, article = null }) {
       ...(article.sections || []).map((section) => ({ id: section.id, heading: section.heading })),
       ...(article.glossary?.length ? [{ id: "glossary", heading: "Key terms explained" }] : []),
       ...(article.related?.length ? [{ id: "where-next", heading: "Where to go next" }] : []),
-      ...(article.sources?.length ? [{ id: "sources", heading: "Sources and further reading" }] : []),
+      ...(article.sources?.length ? [{ id: "sources", heading: article.sourcesHeading || "Sources and further reading" }] : []),
       ...(article.faqs?.length ? [{ id: "faq", heading: "Frequently asked questions" }] : []),
     ]
     : [];
@@ -389,12 +390,12 @@ export default function BlogArticlePage({ post, article = null }) {
 
       <BlogHero
         eyebrow={`Resources · ${post.category}`}
-        title={post.title}
+        title={post.articleTitle || post.title}
         lead={post.description}
         chips={[
           { icon: ShieldCheck, label: `By ${author}` },
-          reviewed
-            ? { icon: CalendarDays, label: `Updated ${reviewed}` }
+          updateLabel
+            ? { icon: CalendarDays, label: updateLabel }
             : { icon: ExternalLink, label: `Official source: ${sourceLabel(post.source)}` },
           wordCount > 0
             ? { icon: Clock, label: `${readingMinutes} min read` }
@@ -441,23 +442,23 @@ export default function BlogArticlePage({ post, article = null }) {
           <div className="section-inner mx-auto w-[var(--container)] max-w-[1080px] grid grid-cols-[1.42fr_.78fr] max-[980px]:grid-cols-1 gap-[18px]">
             <div className="article-quick-answer flex flex-col rounded-[22px] border border-[color-mix(in_srgb,var(--primary)_24%,var(--border))] bg-[var(--surface)] p-[30px_32px] max-[620px]:p-[24px_22px]">
               <Eyebrow>
-                <span id="quick-answer-label">Quick answer</span>
+                <span id="quick-answer-label">{article.quickAnswerHeading || "Quick answer"}</span>
               </Eyebrow>
               <p id="quick-answer" className="!m-0 !mt-[16px] !text-[clamp(17px,1rem+.45vw,20px)] !font-semibold !leading-[1.68] !text-[var(--ink)]">
                 {article.quickAnswer}
               </p>
-              <p className="!m-0 !mt-[18px] flex items-start gap-2 !text-[12.5px] !leading-[1.6] !text-[var(--muted)]">
+              {article.quickAnswerNote !== false && <p className="!m-0 !mt-[18px] flex items-start gap-2 !text-[12.5px] !leading-[1.6] !text-[var(--muted)]">
                 <Info width={14} height={14} aria-hidden="true" className="mt-[3px] flex-none text-[var(--primary)]" />
-                <span>General information, not advice on your file. Confirm current requirements before you act.</span>
-              </p>
+                <span>{article.quickAnswerNote || "General information, not advice on your file. Confirm current requirements before you act."}</span>
+              </p>}
               <div className="mt-auto flex flex-wrap items-center gap-x-[20px] gap-y-[9px] border-t border-[var(--border)] pt-[18px] max-[980px]:mt-[20px]">
                 <span className="inline-flex items-center gap-[7px]">
                   <ShieldCheck width={14} height={14} aria-hidden="true" className="text-[var(--primary)]" />
                   <span className="text-[12.5px] font-bold text-[var(--muted)]">By {author}</span>
                 </span>
-                {reviewed && <span className="inline-flex items-center gap-[7px]">
+                {updateLabel && <span className="inline-flex items-center gap-[7px]">
                   <CalendarDays width={14} height={14} aria-hidden="true" className="text-[var(--primary)]" />
-                  <span className="text-[12.5px] font-bold text-[var(--muted)]">Updated {reviewed}</span>
+                  <span className="text-[12.5px] font-bold text-[var(--muted)]">{updateLabel}</span>
                 </span>}
                 <a href={post.source} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-[7px]">
                   <ExternalLink width={14} height={14} aria-hidden="true" className="text-[var(--primary)]" />
@@ -551,7 +552,7 @@ export default function BlogArticlePage({ post, article = null }) {
                       <section id="sources" className="scroll-mt-[150px] !mt-[52px]">
                         <h2 className="flex items-start gap-3 !text-[clamp(24px,1.35rem+1.15vw,32px)] !leading-[1.15] !tracking-[-.022em] !text-[var(--ink)]">
                           <ExternalLink width={20} height={20} aria-hidden="true" className="mt-[6px] flex-none text-[var(--primary)]" />
-                          <span>Sources and further reading</span>
+                          <span>{article.sourcesHeading || "Sources and further reading"}</span>
                         </h2>
                         <ul className="m-0 mt-[18px] grid list-none gap-[10px] p-0">
                           {sources.map((source) => (
@@ -599,8 +600,8 @@ export default function BlogArticlePage({ post, article = null }) {
         <FaqSection
           faqs={faqs}
           eyebrow="Answered directly"
-          title="Questions people ask about this"
-          description={`Answers about ${post.title}, with facts to verify against current official instructions.`}
+          title={article?.faqHeading || "Questions people ask about this"}
+          description={article?.faqDescription ?? `Answers about ${post.title}, with facts to verify against current official instructions.`}
         />
       )}
 

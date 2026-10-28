@@ -15,9 +15,9 @@ export const site = {
   name: brandName,
   tradingName: "Commonwealth Migration",
   shortName: "CMG",
-  tagline: "Your Canadian Permanent Residence, Planned by a Licensed RCIC",
+  tagline: "Canadian Immigration Guidance from a Licensed RCIC",
   description:
-    "Commonwealth Migration Group Inc. is a CICC-regulated Canadian immigration consultancy based in Brampton, Ontario. Our licensed RCIC team supports Express Entry, PNP, LMIA, work and study permits, family sponsorship and refusal matters across Canada.",
+    "Commonwealth Migration Group Inc. is a Canadian immigration firm based in Brampton, Ontario. Pankaj Khanna, a licensed RCIC, advises clients on Express Entry, provincial nominations, work and study permits, Super Visa applications, family sponsorship, and refusal responses. Online consultations are available across Canada and worldwide.",
 
   // ---- Contact -------------------------------------------------------
   url: "https://commonwealthmigration.ca",
@@ -27,11 +27,11 @@ export const site = {
   phoneHref: `tel:${phone.trim().startsWith("+") ? "+" : ""}${phoneDigits}`,
   address: {
     line1: "615, 2250 Bovaird Dr East",
-    city: "Brampton, Sandringham- Wellington",
+    city: "Brampton, Sandringham-Wellington",
     region: "ON",
     postal: "",
     country: "Canada 🇨🇦",
-    full: "615, 2250 Bovaird Dr East, Brampton, Sandringham- Wellington, ON, Canada 🇨🇦",
+    full: "615, 2250 Bovaird Dr East, Brampton, Sandringham-Wellington, ON, Canada 🇨🇦",
     mapsUrl: "https://www.google.com/maps/place/Commonwealth+Migration+Group+Brampton,+Canada/@43.7508147,-79.7393151,17z/data=!3m1!4b1!4m6!3m5!1s0x882b3d9a6c4122cb:0x2c2dca427aeb83e1!8m2!3d43.7508147!4d-79.7393151!16s%2Fg%2F11nvkrfkzy?hl=en&entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D",
   },
   sisterConcern: {
@@ -41,7 +41,7 @@ export const site = {
     href: "https://www.cwmigrationgroup.com/",
     mapsUrl: "https://www.google.com/maps/place/Commonwealth+Migration+Group/@25.244279,55.3094955,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f43202eff61c7:0x597a52926876d279!8m2!3d25.244279!4d55.3120704!16s%2Fg%2F11nvjs_vq7?entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D",
   },
-  hours: "Monday - Friday, 9:00 am - 6:00 pm - Saturday 10:00 am - 4:00 pm (EST)",
+  hours: "Monday–Friday: 9:00 a.m.–6:00 p.m.; Saturday: 10:00 a.m.–4:00 p.m.",
   timezone: "Eastern Time (ET)",
 
   // ---- Regulated representative --------------------------------------
@@ -52,7 +52,7 @@ export const site = {
   // is a compliance problem, not just a typo.
   //
   // `profileUrl` is the individual licensee record on the CICC public register.
-  // Verified 2026-09-24: Pankaj Khanna · College ID R711256 · Type RCIC ·
+  // Verified 2026-10-28: Pankaj Khanna · College ID R711256 · Type RCIC ·
   // "Eligible to Provide Service" · no revocations, suspensions, restrictions,
   // current proceedings or past decisions.
   //
@@ -103,9 +103,9 @@ export const site = {
   // ---- Default metadata (used by lib/seo.js) --------------------------
   meta: {
     titleTemplate: `%s | ${brandName}`,
-    defaultTitle: "Immigration Consultants in Brampton | Canada Immigration",
+    defaultTitle: "Licensed Immigration Consultant in Brampton, Ontario",
     defaultDescription:
-      "Commonwealth Migration's licensed RCIC team is based in Brampton, Ontario, helping with Express Entry, PNP, work, study and family immigration across Canada.",
+      "Pankaj Khanna, a licensed RCIC in Brampton, advises on Express Entry, PNP, permits, Super Visas, sponsorship and refusals. Online consultations are available worldwide.",
     keywords: [
       "Canadian immigration",
       "immigration consultants in Brampton",
@@ -128,9 +128,9 @@ export const site = {
   // ---- CTA strategy (centralized labels/links) ------------------------
   ctas: {
     primary: { label: "Book a Consultation", href: "/contact/book-immigration-consultation-canada" },
-    urgent: { label: "Book Urgent Consultation", href: "/assessment/free-canada-immigration-assessment" },
+    urgent: { label: "Book an Urgent Consultation", href: "/assessment/free-canada-immigration-assessment" },
     assessment: { label: "Free Assessment", href: "/assessment/free-canada-immigration-assessment" },
-    payment: { label: "Make Payment", href: "/contact/pay-immigration-consultation-canada" },
+    payment: { label: "Make a Payment", href: "/contact/pay-immigration-consultation-canada" },
     tools: { label: "Free Tools", href: "/tools/canada-immigration-calculators" },
   },
 

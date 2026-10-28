@@ -2920,6 +2920,14 @@ html[data-theme="light"] .cmg-template-service .cta-section a.btn:focus-visible 
   line-height: 1.9 !important;
 }
 
+/* The shared guide panel uses the full site container on desktop. Let its
+   paragraphs grow a little wider there while keeping the text measure readable. */
+@media (min-width: 880px) {
+  .cmg-template-home .seo-guide-reading > p {
+    max-width: 84ch;
+  }
+}
+
 .cmg-template-service .service-reading > p:first-of-type,
 .cmg-template-home .seo-guide-reading > p:first-of-type {
   margin-top: 1.45rem !important;

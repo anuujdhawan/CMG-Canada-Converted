@@ -143,7 +143,7 @@ const SEGMENT_LABELS = {
   refusals: "Refusals & Appeals",
   team: "Our Team",
   book: "Book a Consultation",
-  pay: "Make Payment",
+  pay: "Make a Payment",
   privacy: "Privacy Policy",
   terms: "Terms of Use",
   disclaimer: "Disclaimer",

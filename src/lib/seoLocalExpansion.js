@@ -63,20 +63,6 @@ const CONSULTATION_LINK = "/contact/book-immigration-consultation-canada";
 
 const ROUTE_RULES = [
   {
-    test: (path) => path === "/",
-    subject: "Canada immigration planning",
-    keyphrase: "Canada immigration consultant in Brampton",
-    lens: "the immigration goal, status, pathway options, evidence and deadline that shape the next decision",
-    questions: [
-      "How can people in Brampton choose a Canada immigration pathway?",
-      "What should you compare before starting a Canada immigration application?",
-    ],
-    answer: "Choosing a Canada immigration pathway starts with the outcome you need and works backwards through status, eligibility, evidence and timing. People in Brampton may compare Express Entry, PNP, work, study, family, visitor, citizenship and refusal-related routes, but the right option depends on the facts that can be supported.",
-    detail: "Start with one clear decision: permanent residence, temporary entry, work, study, family reunification or help after a refusal. Then record your current status, location, language, education, work, family, funds, travel and deadline. Use the [IRCC immigration programs guide]({SOURCE}) as the official comparison point, and [book a Brampton immigration consultation](" + CONSULTATION_LINK + ") when the facts are complex.",
-    items: ["The outcome and target date", "Current status and personal history", "Education, language, work and family evidence", "The official route and deadline to verify"],
-    source: OFFICIAL_SOURCES.immigration,
-  },
-  {
     test: (path) => path === "/canada-immigration-from-uk",
     subject: "Canada immigration from the United Kingdom",
     keyphrase: "Canada immigration consultant for UK residents",
@@ -378,6 +364,9 @@ function resolveSource(text, source) {
 
 export function getLocalSeoExpansion(page) {
   const path = normalizePath(page?.path);
+  // The homepage already has a focused Brampton Q&A section. Generic local
+  // expansion used to append repetitive, keyword-heavy questions beneath it.
+  if (path === "/") return [];
   const isLocationPage = path === "/locations" || path.startsWith("/locations/");
   if (isLocationPage) {
     const city = path === "/locations"

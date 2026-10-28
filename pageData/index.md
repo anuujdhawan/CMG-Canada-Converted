@@ -1,4 +1,4 @@
-# Licensed Immigration Consultant in Brampton, Ontario
+# Licensed Immigration Consultant (RCIC) in Brampton, Ontario
 
 > **Source URL:** https://commonwealthmigration.ca
 > **Last modified:** 2026-10-28
@@ -8,29 +8,30 @@
 ## SEO Metadata
 
 - **Title tag:** Licensed Immigration Consultant in Brampton, Ontario
-- **Meta description:** Brampton-based licensed RCIC Pankaj Khanna advises on Express Entry, permits, PNP and family sponsorship. Serving clients across Canada. Book a consultation.
-- **Meta keywords:** immigration consultant Brampton, immigration consultants Brampton, licensed immigration consultant Brampton, Brampton immigration consultancy, Brampton immigration office, Express Entry consultant Brampton, PNP consultant Brampton
+- **Meta description:** RCIC Pankaj Khanna advises Brampton clients on Express Entry, PNP, permits, Super Visa, family sponsorship and refusals. Online consultations worldwide.
+- **Meta keywords:** immigration consultant in Brampton, immigration consultants in Brampton, licensed immigration consultant in Brampton, RCIC Brampton, Brampton immigration firm, Express Entry consultant Brampton, PNP consultant Brampton
 - **Canonical URL:** https://commonwealthmigration.ca
 - **OG title:** Licensed Immigration Consultant in Brampton, Ontario
-- **OG description:** Brampton-based licensed RCIC Pankaj Khanna advises on Express Entry, permits, PNP and family sponsorship. Serving clients across Canada. Book a consultation.
+- **OG description:** RCIC Pankaj Khanna advises Brampton clients on Express Entry, PNP, permits, Super Visa, family sponsorship and refusals. Online consultations worldwide.
 - **Robots:** index, follow
 
 ## Heading Outline
 
-- # Licensed Immigration Consultant in Brampton, Ontario
+- # Licensed Immigration Consultant (RCIC) in Brampton, Ontario
 - ## Pankaj Khanna, RCIC
 - ## Immigration pathways from Brampton, Ontario
-- ## Immigration case strategy in Brampton
-- ## Canadian immigration services for every stage
+- ## Canadian immigration case planning in Brampton
+- ## Canadian immigration services for individuals, families and employers
 - ## Explore the guides before you decide
-- ## See which Canadian programs may fit
-- ## Turn a refusal into a clearer next move
-- ## Immigration support for Canadian employers
-- ## A sharper plan changes the outcome
-- ## Secure payments, signatures and file management
-- ## Make your next decision with better numbers
-- ## Not sure which pathway fits your profile?
-- ## Brampton immigration consultant questions
+- ## See which Canadian pathways may be worth exploring
+- ## Understand the refusal and review possible next steps
+- ## Recent Canadian immigration guides and updates
+- ## Canadian immigration support for employers
+- ## A clear process for your next step
+- ## Payments, signatures and case records
+- ## Use free tools to plan your next step
+- ## Not sure which pathway fits?
+- ## Common questions about immigration consultants in Brampton
 - ## What can an immigration consultant in Brampton help you compare?
 - ## Which Canadian immigration details should you prepare first?
 - ## How can Brampton applicants prepare for a useful consultation?
@@ -39,9 +40,9 @@
 
 ## Hero Section
 
-# Licensed Immigration Consultant in Brampton, Ontario
+# Licensed Immigration Consultant (RCIC) in Brampton, Ontario
 
-Commonwealth Migration Group Inc. is based in Brampton, Ontario. Consult licensed RCIC Pankaj Khanna about Express Entry, work and study permits, PNP, family sponsorship and refusal responses. Clients across Canada can meet online.
+Commonwealth Migration Group Inc. is a Canadian immigration firm based in Brampton, Ontario. Our licensed RCIC team helps with Express Entry, PNP, work and study permits, Super Visa applications, family sponsorship, refusal responses, and judicial reviews. Online consultations are available to clients across Canada and worldwide.
 
 - eligibility and admissibility
 - documents and timing
@@ -53,7 +54,7 @@ Commonwealth Migration Group Inc. is based in Brampton, Ontario. Consult license
 
 
 
-Commonwealth Migration Group Inc. is based in Brampton, Ontario, and serves clients across Canada. Consult licensed RCIC Pankaj Khanna about Express Entry, PNP, work and study permits, family sponsorship, visitor visas, citizenship and refusal responses.
+Commonwealth Migration Group Inc. is based in Brampton, Ontario, and offers online consultations to clients across Canada and worldwide. Pankaj Khanna, a licensed RCIC, advises on Express Entry, provincial nominee programs, work and study permits, Super Visa applications, family sponsorship, citizenship, and refusal responses. Federal Court judicial reviews require a lawyer.
 
 
 
@@ -65,7 +66,7 @@ Commonwealth Migration Group Inc. is based in Brampton, Ontario, and serves clie
 
 
 
-A first review starts with your goal, current status and deadline, then identifies which application history and documents matter. The team can explain how those facts relate to a possible route before discussing the service that may fit.
+A first review starts with your goal, current status and deadline, then identifies which application history and documents matter. Pankaj Khanna, a licensed RCIC, can explain how those facts relate to possible routes and clarify which service may fit.
 
 
 
@@ -129,7 +130,7 @@ Seek a file-specific review when the answer depends on a status expiry, refusal,
 
 
 
-If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
+If you are ready to move from general research to a file-specific review, [book a consultation with a licensed RCIC](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada). Bring your current status, key dates, documents and the question you need answered. The consultation can identify options to review, information gaps and official requirements to verify before submission.
 
 ## Links & CTAs on this page
 

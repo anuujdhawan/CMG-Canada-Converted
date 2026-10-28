@@ -33,7 +33,7 @@ export default function FaqSection({
             {eyebrow}
           </p>
           <h2 id={titleId} className="!max-w-[760px] !text-[40px] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-none">{title}</h2>
-          <p className="!m-0 !mt-[15px] !max-w-[380px] !text-[var(--muted)] !text-[14px] !leading-[1.65]">{description}</p>
+          {description && <p className="!m-0 !mt-[15px] !max-w-[380px] !text-[var(--muted)] !text-[14px] !leading-[1.65]">{description}</p>}
         </div>
         <div className="faq-list border-t border-[var(--border)]">
           {items.map((faq, index) => (

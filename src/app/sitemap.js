@@ -89,7 +89,7 @@ const ADDITIONAL_INDEXABLE_PAGES = [
   { path: "/contact/book-immigration-consultation-canada", lastModified: "2026-10-06", changeFrequency: "monthly", priority: 0.8 },
   ...RESEARCH_BLOG_POSTS.map((post) => ({
     path: `/blog/${post.slug}`,
-    lastModified: "2026-10-06",
+    lastModified: post.updated || post.date || "2026-10-06",
     changeFrequency: "monthly",
     priority: 0.7,
   })),

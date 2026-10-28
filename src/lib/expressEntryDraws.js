@@ -40,6 +40,7 @@ export async function getExpressEntryDraws() {
   const response = await fetch(EXPRESS_ENTRY_API_URL, {
     headers: { Accept: "application/json" },
     next: { revalidate: 14_400 },
+    signal: AbortSignal.timeout(10_000),
   });
 
   if (!response.ok) {

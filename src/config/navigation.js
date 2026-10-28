@@ -108,9 +108,9 @@ const ABOUT_MENU_ITEM = {
     {
       category: "Get in touch",
       items: [
-        { label: "Book Consultation", href: site.ctas.primary.href },
-        { label: "Book Urgent Consultation", href: site.ctas.urgent.href, urgent: true },
-        { label: "Make Payment", href: site.ctas.payment.href },
+        { label: "Book a Consultation", href: site.ctas.primary.href },
+        { label: "Book an Urgent Consultation", href: site.ctas.urgent.href, urgent: true },
+        { label: "Make a Payment", href: site.ctas.payment.href },
       ],
     },
   ],
@@ -273,7 +273,7 @@ const rawNavigation = {
     ] },
     { title: "Contact", links: [
       { label: "Brampton immigration office", href: "/about/immigration-office-brampton-ontario" },
-      { label: "Book consultation", href: site.ctas.primary.href },
+      { label: "Book a consultation", href: site.ctas.primary.href },
       { label: site.email, href: site.emailHref },
       { label: site.phone, href: site.phoneHref },
     ] },

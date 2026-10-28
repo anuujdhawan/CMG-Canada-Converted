@@ -10,7 +10,7 @@ const TRUST_PLATFORMS = [
     logoHeight: 288,
     logoDisplayWidth: 176,
     eyebrow: "Secure online payments",
-    description: "Card payments are processed by Stripe, so you can pay your fees online with confidence.",
+    description: "Stripe processes online card payments. Review your invoice and service agreement before paying.",
     logoClassName: "max-w-[176px]",
   },
   {
@@ -32,7 +32,7 @@ const TRUST_PLATFORMS = [
     logoHeight: 102,
     logoDisplayWidth: 190,
     eyebrow: "Organized case management",
-    description: "Your file is managed in Officio, immigration case management software, so nothing gets lost between steps.",
+    description: "The practice uses Officio case-management software to organize file records and tasks.",
     logoClassName: "max-w-[190px]",
   },
 ];
@@ -54,16 +54,16 @@ export default function PaymentTrustSection() {
         <header className="payment-trust-section__intro grid grid-cols-[.9fr_1.1fr] items-end gap-[58px] max-[880px]:grid-cols-1 max-[880px]:gap-6 reveal">
           <div>
             <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">
-              How we protect your case
+              Payments and document handling
             </p>
             <h2 id="payment-security-title" className="max-w-[660px] !text-[clamp(30px,1.7rem+2.4vw,46px)] !leading-[1.05] !text-[var(--ink)]">
-              Secure payments, signatures and file management
+              Payments, signatures and case records
             </h2>
           </div>
 
           <div className="max-w-[590px] justify-self-end max-[880px]:justify-self-start">
             <p className="!m-0 !text-[16px] !leading-[1.7] !text-[var(--muted)]">
-              We use trusted platforms for the steps where your money and documents are involved, so your case is handled safely from first agreement to filing.
+              We use third-party platforms for online payments, electronic signatures and case records. Review your service agreement and confirm how to send documents before sharing sensitive information.
             </p>
             <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2.5" aria-label="Case handling assurances">
               {ASSURANCE_POINTS.map(([Icon, label]) => (

@@ -10,12 +10,12 @@ export default function SeoGuideSection({ page, eyebrow = "Useful context", titl
 
   return (
     <section className="relative z-[1] border-t border-[var(--template-border)] bg-[var(--template-surface-alt)] py-[92px] max-[880px]:py-[72px] max-[620px]:py-14" aria-labelledby="seo-guide-section-title">
-      <div className="mx-auto w-[var(--container)] max-w-[1020px]">
+      <div className="mx-auto w-[var(--container)]">
         <header className="mb-10 max-w-[780px]">
           <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--template-primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">{eyebrow}</p>
           <h2 id="seo-guide-section-title" className="!m-0 !text-[clamp(30px,1.7rem+2vw,46px)] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-[1.08] !text-[var(--template-ink)]">{title}</h2>
         </header>
-        <article className="seo-guide-reading max-w-[900px]">
+        <article className="seo-guide-reading w-full">
           {blocks.map((block, index) => <SeoBlock key={`${block.type}-${index}`} block={block} />)}
         </article>
       </div>

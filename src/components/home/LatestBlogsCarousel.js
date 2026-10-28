@@ -124,12 +124,12 @@ export default function LatestBlogsCarousel() {
               Latest from the CMG blog
             </p>
             <h2 id="latest-guides-title" className="max-w-[760px]">
-              Fresh guidance for the decision in front of you
+              Recent Canadian immigration guides and updates
             </h2>
           </div>
           <p className="text-[16px] leading-[1.65]">
-            New research on Express Entry, provincial pathways, work and study permits, sponsorship
-            and refusals — published to be read before your next step.
+            Read practical guides on Express Entry, provincial programs, work and study permits,
+            family sponsorship and refusal matters.
           </p>
         </header>
       </div>

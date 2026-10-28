@@ -65,26 +65,29 @@ export default function ExpressEntryDrawCard({ active = true }) {
     if (requestStartedRef.current) return undefined;
     requestStartedRef.current = true;
 
-    let cancelled = false;
-    fetch("/api/express-entry-draws")
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 12_000);
+
+    fetch("/api/express-entry-draws", { signal: controller.signal })
       .then((response) => {
         if (!response.ok) throw new Error("Draw feed unavailable");
         return response.json();
       })
       .then((payload) => {
-        if (!cancelled) {
-          const draws = payload.draws || [];
-          setDraw(draws[0] || null);
-          setCategoryDraws(latestByCategory(draws));
-        }
+        const draws = Array.isArray(payload?.draws) ? payload.draws : [];
+        if (draws.length === 0) throw new Error("Draw feed returned no records");
+        setDraw(draws[0]);
+        setCategoryDraws(latestByCategory(draws));
       })
       .catch(() => {
-        if (!cancelled) setError(true);
-      });
+        setError(true);
+      })
+      .finally(() => window.clearTimeout(timeoutId));
 
-    return () => {
-      cancelled = true;
-    };
+    // The request intentionally continues when the carousel changes slides.
+    // Cancelling it on each active-state change could strand this card in its
+    // loading state because requestStartedRef prevents a second request.
+    return undefined;
   }, [active]);
 
   return (

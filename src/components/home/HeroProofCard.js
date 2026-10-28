@@ -15,7 +15,7 @@ const HANDLED_FILES = [
   "Study permit & PGWP refusals",
   "Spousal & family sponsorship refusals",
   "LMIA & work permit refusals",
-  "Judicial review referrals",
+  "Referrals to lawyers for Federal Court judicial reviews",
 ];
 
 export default function HeroProofCard({ ariaLabel = "Track record and files we handle" }) {
@@ -27,8 +27,8 @@ export default function HeroProofCard({ ariaLabel = "Track record and files we h
         </Link>
         <span className="mini-badge inline-flex items-center gap-[7px] rounded-full border border-[color-mix(in_srgb,var(--template-on-primary)_10%,transparent)] bg-[color-mix(in_srgb,var(--template-on-primary)_6%,transparent)] p-[7px_11px_7px_9px] text-[color-mix(in_srgb,var(--template-on-primary)_74%,transparent)] text-[11px] font-bold leading-[1.65] tracking-[.04em] normal-case backdrop-blur-[10px] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_7%,transparent)]"><MapPin className="flex-none text-[var(--cmg-template-primary-bright)] drop-shadow-[0_1px_8px_color-mix(in_srgb,var(--template-primary)_42%,transparent)]" width={15} height={15} aria-hidden="true" /> Canada-wide</span>
       </div>
-      <h2 className="!mt-4 !max-w-none !text-[clamp(25px,2.2vw,31px)] !leading-[1.15] !tracking-[-0.028em] text-[var(--template-on-primary)] [text-wrap:balance] after:block after:mt-3 after:h-0.5 after:w-9 after:rounded-full after:bg-[linear-gradient(90deg,var(--primary),transparent)] after:content-[''] after:opacity-[.95]">Experience behind the file</h2>
-      <p className="!mt-3 !max-w-none !text-[13px] !leading-[1.65] !tracking-[-0.01em] text-[color-mix(in_srgb,var(--template-on-primary)_74%,transparent)] max-[480px]:!mt-[5px] max-[480px]:!text-[12px] max-[480px]:!leading-[1.4]">A broad record across Canadian immigration routes, with attention to the decisions that shape each file.</p>
+      <h2 className="!mt-4 !max-w-none !text-[clamp(25px,2.2vw,31px)] !leading-[1.15] !tracking-[-0.028em] text-[var(--template-on-primary)] [text-wrap:balance] after:block after:mt-3 after:h-0.5 after:w-9 after:rounded-full after:bg-[linear-gradient(90deg,var(--primary),transparent)] after:content-[''] after:opacity-[.95]">Support for key immigration decisions</h2>
+      <p className="!mt-3 !max-w-none !text-[13px] !leading-[1.65] !tracking-[-0.01em] text-[color-mix(in_srgb,var(--template-on-primary)_74%,transparent)] max-[480px]:!mt-[5px] max-[480px]:!text-[12px] max-[480px]:!leading-[1.4]">Guidance on Canadian immigration options and the documents each pathway may require.</p>
       <p className="visual-card__section-label !m-[12px_0_8px] !text-[13px] !font-extrabold !leading-[1.65] !tracking-[.12em] text-[color-mix(in_srgb,var(--template-on-primary)_68%,transparent)] uppercase">What we handle</p>
       <ul className="visual-handles grid gap-[5px] m-0 p-0 list-none max-[480px]:gap-1">
         {HANDLED_FILES.map((item) => <li className="flex items-start gap-[7px] text-[color-mix(in_srgb,var(--template-on-primary)_78%,transparent)] text-[11px] leading-[1.25] max-[880px]:text-[12px] max-[480px]:gap-[6px] max-[480px]:text-[11px]" key={item}><Check className="mt-px flex-none text-[var(--cmg-template-primary-bright)] drop-shadow-[0_1px_8px_color-mix(in_srgb,var(--template-primary)_36%,transparent)] max-[480px]:h-[13px] max-[480px]:w-[13px]" width={15} height={15} aria-hidden="true" />{item}</li>)}

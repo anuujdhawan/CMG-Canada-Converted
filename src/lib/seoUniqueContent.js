@@ -8,13 +8,6 @@
  */
 
 const UNIQUE_PAGE_CONTENT = {
-  "/": {
-    question: "How do you choose the right Canada immigration pathway?",
-    answer: "Choose the pathway by starting with the outcome you need, then work backwards through status, eligibility, evidence and timing. A person seeking permanent residence may compare Express Entry, PNP and regional programs; another may need a work permit, study permit, family sponsorship, visitor document or refusal response first.",
-    heading: "What should you compare before you apply?",
-    detail: "The strongest early comparison is practical: what decision must be made now, what evidence already exists, what deadline cannot move and what later option depends on the first choice. This keeps a calculator result or attractive program name from becoming the whole strategy.",
-    items: ["Permanent residence route and realistic eligibility", "Temporary status, work or study conditions", "Family, travel, admissibility and deadline risks"],
-  },
   "/blog": {
     question: "How can a Canada immigration blog help you research a pathway?",
     answer: "A Canada immigration blog is most useful when it turns a broad search into a precise question. Use an article to learn the vocabulary of a program, identify the documents that may matter and locate the official rule; then test that information against your own status, dates and history.",

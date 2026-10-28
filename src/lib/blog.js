@@ -304,6 +304,10 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
     src: "/images/blog/express-entry-profile-expiry-what-to-do.webp",
     alt: "Calendar and immigration profile documents prepared before an Express Entry profile expires",
   },
+  "express-entry-oinp-changes-2026": {
+    src: "/images/blog/financial-district.webp",
+    alt: "Toronto financial district representing federal and Ontario immigration policy changes",
+  },
   "ontario-pnp-2026-oinp-updates": {
     src: "/images/blog/ontario-pnp-2026-oinp-updates.webp",
     alt: "Toronto skyline representing Ontario PNP planning and OINP updates",
@@ -514,6 +518,7 @@ export function getBlogPosts() {
     title: post.title,
     seo: { title: `${post.title} | Commonwealth Migration Canada`, description: post.description, keywords: post.keywords.split('; ') },
     meta: { lastModified: post.updated || post.date || null },
+    updatedLabel: post.updatedLabel,
     category: { slug: researchCategorySlug(post.category), label: post.category, title: post.category, description: post.description },
     image: getResearchBlogImage(post.slug, post.category),
     author: post.author,

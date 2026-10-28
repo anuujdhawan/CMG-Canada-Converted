@@ -40,6 +40,7 @@ import expressEntryFrenchLanguageCategory2026 from "./express-entry-french-langu
 import canadianExperienceClass2026Requirements from "./canadian-experience-class-2026-requirements";
 import expressEntryProofOfFunds2026 from "./express-entry-proof-of-funds-2026";
 import expressEntryProfileExpiryWhatToDo from "./express-entry-profile-expiry-what-to-do";
+import expressEntryOinpChanges2026 from "./express-entry-oinp-changes-2026";
 import ontarioPnp2026OinpUpdates from "./ontario-pnp-2026-oinp-updates";
 import albertaAdvantageImmigrationProgram2026 from "./alberta-advantage-immigration-program-2026";
 import bcPnp2026StreamsPriorities from "./bc-pnp-2026-streams-priorities";
@@ -84,6 +85,7 @@ export const BLOG_ARTICLES = {
   "canadian-experience-class-2026-requirements": canadianExperienceClass2026Requirements,
   "express-entry-proof-of-funds-2026": expressEntryProofOfFunds2026,
   "express-entry-profile-expiry-what-to-do": expressEntryProfileExpiryWhatToDo,
+  "express-entry-oinp-changes-2026": expressEntryOinpChanges2026,
   "ontario-pnp-2026-oinp-updates": ontarioPnp2026OinpUpdates,
   "alberta-advantage-immigration-program-2026": albertaAdvantageImmigrationProgram2026,
   "bc-pnp-2026-streams-priorities": bcPnp2026StreamsPriorities,

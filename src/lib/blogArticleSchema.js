@@ -23,14 +23,15 @@ const WORDS_PER_MINUTE = 220;
 export function articleStructuredData(post, article) {
   const url = absoluteUrl(`/blog/${post.slug}`);
   const cover = getResearchBlogImage(post.slug, post.category);
-  const reviewed = post.meta?.lastModified || null;
+  const reviewed = post.updated || post.date || post.meta?.lastModified || null;
+  const articleTitle = post.articleTitle || post.title;
   const wordCount = countArticleWords(article);
   const nodes = [
     {
       "@context": "https://schema.org",
       "@type": "Article",
       "@id": `${url}#article`,
-      headline: post.title,
+      headline: articleTitle,
       description: post.description,
       image: [absoluteUrl(cover.src)],
       keywords: post.keywords,
@@ -60,7 +61,7 @@ export function articleStructuredData(post, article) {
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
         { "@type": "ListItem", position: 2, name: "Blog", item: absoluteUrl("/blog") },
-        { "@type": "ListItem", position: 3, name: post.title, item: url },
+        { "@type": "ListItem", position: 3, name: articleTitle, item: url },
       ],
     },
   ];
@@ -99,7 +100,7 @@ export function articleStructuredData(post, article) {
       "@type": "WebPage",
       "@id": `${url}#webpage`,
       url,
-      name: post.title,
+      name: articleTitle,
       inLanguage: "en-CA",
       isPartOf: { "@id": `${site.url}#website` },
       about: { "@id": `${url}#article` },
