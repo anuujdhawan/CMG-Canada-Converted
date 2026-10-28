@@ -2862,7 +2862,9 @@ html[data-theme="light"] .cmg-template-service .cta-section a.btn:focus-visible 
 .cmg-template-service .service-reading,
 .cmg-template-home .seo-guide-reading {
   position: relative;
-  overflow: hidden;
+  /* Clip the decorative surface without creating a scroll container; this
+     keeps the service guide's sticky visual rail attached to the viewport. */
+  overflow: clip;
   border: 1px solid color-mix(in srgb, var(--primary) 25%, var(--border));
   border-radius: 1.6rem;
   padding: clamp(1.5rem, 3.2vw, 2.8rem);
@@ -2897,6 +2899,13 @@ html[data-theme="light"] .cmg-template-service .cta-section a.btn:focus-visible 
 .cmg-template-service .service-reading > h2:first-child,
 .cmg-template-service .service-reading > h3:first-child,
 .cmg-template-home .seo-guide-reading > h3:first-child {
+  margin-top: 0 !important;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.cmg-template-service .service-reading-copy > .content-section-heading:first-child,
+.cmg-template-service .service-reading-copy > .service-content-full-width:first-child > .content-section-heading:first-child {
   margin-top: 0 !important;
   padding-top: 0;
   border-top: 0;

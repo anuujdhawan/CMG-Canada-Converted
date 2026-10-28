@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Calculator, FileCheck2, ShieldCheck, Target } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, ArrowUpRight, Calculator, CheckCircle2, FileCheck2, ShieldCheck, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { currentPagePath } from "@/config/pageRoutes";
 import { site } from "@/config/site";
@@ -11,7 +12,7 @@ import HeroBackground from "./HeroBackground";
 import HeroProofCardCarousel from "./HeroProofCardCarousel";
 import ConsultantProfileSection from "./ConsultantProfileSection";
 import ServiceImageGallery from "./ServiceImageGallery";
-import ServiceContentImageFrame, { getServiceContentImages } from "./ServiceContentImageFrame";
+import { getServiceContentImages } from "./ServiceContentImageFrame";
 import TemplateMotion from "./TemplateMotion";
 // Client Success Gallery — temporarily disabled (not wanted on the site right
 // now). The component file is kept at ./LiveSuccessVideos.js for later reuse:
@@ -22,6 +23,7 @@ import { getSeoContentBlocks } from "@/lib/seoContent";
 import { getKeywordPageExpansionBlocks } from "@/lib/keywordPageExpansions";
 import { getKeywordFrameContent } from "@/lib/keywordFrameContent";
 import { getFrameSupportContent } from "@/lib/seoBalancedContent";
+import { getImageObjectPosition } from "@/lib/imagePresentation";
 
 const href = (path) => currentPagePath(path);
 
@@ -193,13 +195,9 @@ export default function ReferenceServicePage({ page, children, interactivePositi
     .slice(0, 5);
   const showCrsCta = /express-entry|crs-calculator|pnp|provincial-nominee/.test(page.path);
   const contentImages = getServiceContentImages(page);
+  const guideSupport = getFrameSupportContent(page);
   const paragraphImageSection = findFeaturedParagraphSection(sections);
   const tableImageSection = findFeaturedTableSection(sections, paragraphImageSection);
-  const featuredStart = paragraphImageSection >= 0 && tableImageSection >= 0
-    ? Math.min(paragraphImageSection, tableImageSection)
-    : paragraphImageSection >= 0
-      ? paragraphImageSection
-      : tableImageSection;
   const tableCounter = { value: 0 };
 
   const interactiveSection = children && (
@@ -269,24 +267,69 @@ export default function ReferenceServicePage({ page, children, interactivePositi
         <div className="section-inner mx-auto w-[90%] max-[880px]:w-[calc(100%-48px)] max-[620px]:w-[var(--container)] service-reading-shell">
           <ServiceSectionHeading eyebrow="Your service guide" title="The details that move the file forward" lead={`The sections below explain ${title} and point to the details to verify before applying.`} />
           <article className="service-reading w-full max-w-none mx-auto reveal in">
-            {renderContentBlocks(leading, "leading", page, tableCounter)}
-            {sections.map((section, index) => {
-              if (index === featuredStart && paragraphImageSection >= 0 && tableImageSection >= 0) {
-                return (
-                  <div className="service-content-featured-stack" key={`featured-stack-${index}`}>
-                    <ServiceContentImageFrame image={contentImages[0]} side="right">
-                      {renderContentBlocks(sections[paragraphImageSection], "frame-copy", page, tableCounter)}
-                    </ServiceContentImageFrame>
-                    <ServiceContentImageFrame image={contentImages[1]} side="left" supportingContent={getFrameSupportContent(page)}>
-                      {renderContentBlocks(addFrameKeywordCopy(sections[tableImageSection], page), "frame-table", page, tableCounter)}
-                    </ServiceContentImageFrame>
-                  </div>
-                );
-              }
-              if (index === paragraphImageSection || index === tableImageSection) return null;
-              return <div className="service-content-full-width w-full" key={`content-section-${index}`}>{renderContentBlocks(section, `full-${index}`, page, tableCounter)}</div>;
-            })}
-            {paragraphImageSection < 0 && tableImageSection < 0 && <ServiceContentImageFrame image={contentImages[1]} side="left"><p>For {title}, a focused review can connect the evidence with the next decision.</p></ServiceContentImageFrame>}
+            <div className="service-reading-layout grid grid-cols-[minmax(0,1.55fr)_minmax(300px,.9fr)] items-start gap-[42px] max-[1120px]:grid-cols-1 max-[1120px]:gap-9 max-[620px]:gap-7">
+              <div className="service-reading-copy min-w-0">
+                {renderContentBlocks(leading, "leading", page, tableCounter)}
+                {sections.map((section, index) => {
+                  const keepFrameCopy = paragraphImageSection >= 0 && tableImageSection >= 0 && index === tableImageSection;
+                  const blocks = keepFrameCopy ? addFrameKeywordCopy(section, page) : section;
+                  return (
+                    <div className="service-content-full-width w-full" key={`content-section-${index}`}>
+                      {renderContentBlocks(blocks, `full-${index}`, page, tableCounter)}
+                      {keepFrameCopy && (
+                        <div className="service-guide-context mt-7 border-t border-[var(--border)] pt-6">
+                          <span className="block text-[10px] font-extrabold uppercase tracking-[.16em] text-[var(--primary)]">More context for this route</span>
+                          {guideSupport.paragraphs.map((paragraph, paragraphIndex) => (
+                            <p key={`guide-context-${paragraphIndex}`} className="!mt-3 !max-w-[76ch] !text-[14px] !leading-[1.75] !text-[var(--muted)]">{paragraph}</p>
+                          ))}
+                          {guideSupport.localContext && (
+                            <aside className="mt-5 rounded-[16px] border border-[color-mix(in_srgb,var(--primary)_22%,var(--border))] bg-[var(--surface)] p-5">
+                              <span className="block text-[10px] font-extrabold uppercase tracking-[.14em] text-[var(--primary)]">{guideSupport.localContext.eyebrow}</span>
+                              <p className="!mt-3 !max-w-[76ch] !text-[14px] !leading-[1.65] !text-[var(--muted)]">{guideSupport.localContext.intro}</p>
+                              <ul className="m-0 mt-3 grid gap-2 pl-5 text-[13px] leading-[1.55] text-[var(--muted)]">
+                                {guideSupport.localContext.items.map((item) => <li key={item}>{item}</li>)}
+                              </ul>
+                            </aside>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+
+              <aside className="service-reading-rail grid gap-4 self-start min-[1121px]:sticky min-[1121px]:top-[132px]" aria-label={`${title} visual guide and key checks`}>
+                <figure className="service-reading-visual group relative m-0 aspect-[16/10] min-h-[220px] overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--surface)] shadow-[var(--shadow-soft)] isolate">
+                  <Image
+                    src={contentImages[0].src}
+                    alt={contentImages[0].alt}
+                    fill
+                    quality={75}
+                    sizes="(max-width: 1120px) 100vw, (max-width: 1440px) 38vw, 480px"
+                    className="object-cover transition-transform duration-[700ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover:scale-[1.04]"
+                    style={{ objectPosition: contentImages[0].objectPosition || getImageObjectPosition(contentImages[0].src) }}
+                  />
+                  <span aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,transparent_28%,color-mix(in_srgb,var(--cmg-template-deep-surface)_88%,transparent))]" />
+                  <figcaption className="absolute inset-x-5 bottom-5 z-[1] grid gap-2 text-[var(--template-on-primary)]">
+                    <span className="text-[12px] font-extrabold uppercase tracking-[.14em] text-[var(--primary)]">{contentImages[0].label}</span>
+                    <span className="!max-w-none text-[13px] leading-[1.6] text-[color-mix(in_srgb,var(--template-on-primary)_82%,transparent)]">{contentImages[0].caption}</span>
+                  </figcaption>
+                </figure>
+
+                <div className="service-reading-checks rounded-[20px] border border-[color-mix(in_srgb,var(--primary)_25%,var(--border))] bg-[var(--bg)] p-[22px_24px] max-[620px]:p-5">
+                  <span className="block text-[10px] font-extrabold uppercase tracking-[.16em] text-[var(--primary)]">{guideSupport.eyebrow}</span>
+                  <strong className="mt-3 block text-[18px] font-bold leading-[1.3] tracking-[-.015em] text-[var(--ink)]">{guideSupport.title}</strong>
+                  <ul className="m-0 mt-5 grid list-none gap-3 border-t border-[var(--border)] pt-4 p-0">
+                    {guideSupport.checks.slice(0, 4).map((check) => (
+                      <li className="flex items-start gap-2.5" key={check}>
+                        <CheckCircle2 width={16} height={16} aria-hidden="true" className="mt-[2px] flex-none text-[var(--primary)]" />
+                        <span className="text-[13px] leading-[1.55] text-[var(--muted)]">{check}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </aside>
+            </div>
           </article>
         </div>
       </section>

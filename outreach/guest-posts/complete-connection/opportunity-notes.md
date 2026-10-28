@@ -1,0 +1,12 @@
+# Complete Connection
+
+- **Thread:** Pitch: From permit to payroll: a Canadian employer guide to newcomer work authorization
+- **Contact:** Complete Connection, info@completeconnection.ca
+- **Status:** Publisher invites a topic/title for selection and links to its guest-post guidelines. Full thread read. Prepare a topic-selection and clarification reply as an unsent Gmail draft; do not attach an article.
+- **Fit:** Canadian employer guide is relevant to the site's Business category. The original pitch proposed 900–1,200 words, but current published guidelines require at least 2,000 words. A compliant title should be 50–60 characters; proposed working title: “A Canadian Employer Guide to Newcomer Work Permits” (50 characters).
+- **Human-authorship rule:** The publisher states that submissions must be written by a human and rejects AI-generated text. Do not create or submit an article for this publisher. Any eventual article must be independently written by a human author.
+- **Other stated requirements:** 2,000+ words; H1/H2/H3 headings; 100–150-word paragraphs; sentences under 50 words; SEO meta title/description and natural keyword use; readability score 55+; 50-word maximum author bio; private email; headshot (Gravatar preferred); optional social links; email subject “Guest Post Submission”; the page suggests response within 24 hours and says reviews typically take 24–48 hours.
+- **Links and fees:** Guidelines describe a free option with no promotional links, while the FAQ says 1–2 relevant non-promotional backlinks may be included. Sponsored posts allow do-follow links and promotional content, but no price is listed; do not select or agree to a paid option. Ask the editor to clarify whether one non-promotional informational resource link is allowed on the free option.
+- **Proposed URL if allowed:** `https://commonwealthmigration.ca/blog/canada-work-permit-types-2026`, a Canada-wide explainer on open and employer-specific permits. This topic has no honest Brampton-specific angle, so no Brampton page or local anchor is proposed.
+- **Rights term:** The guidelines say an accepted article becomes the site's “sole property” and cannot be removed. Clarify ownership, exclusivity, reuse and removal rights before submission; no terms accepted.
+- **Outstanding:** Topic/title approval, exact free-link rule, rights/license clarification, any authorship/assets details. No article prepared due to the explicit human-only content rule.

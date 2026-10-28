@@ -1,18 +1,15 @@
-# Reply draft for Refugee Research Online
+# Refugee Research Online reply draft
 
-**To:** refugeeresearchonline@gmail.com (submission address listed in the contribution guide; use the original thread when replying)  
-**Subject:** Re: Submission - information gap
+To: Sarah, Refugee Research Online
+Subject: Re: Submission - information gap facing refugee claimants in Canada
 
 Dear Sarah,
 
-Thank you for confirming that the topic is welcome and for sharing the contribution guidance. I have prepared the article as a Microsoft Word document within the requested word range, with links to current IRCC and IRB information. The draft includes an individual byline and a short biography that discloses my affiliation with Commonwealth Migration Group Inc. I will send a profile image separately.
+Thank you for the positive response and for sharing the guidance. I have prepared a 756-word draft and attached it for your editorial review. The article uses hyperlinks to support its claims and discloses my affiliation in the author biography.
 
-Could you confirm whether one relevant link may appear in the author profile? The proposed destination is our guide to the in-Canada refugee claim process: https://commonwealthmigration.ca/immigrate/in-canada-refugee-claim. We have kept organizational promotion out of the article itself and will omit the profile link if it does not fit your policy.
+The bio links the disclosed affiliation “Commonwealth Migration Group Inc.” to the firm’s homepage as an optional profile link. Would that fit your policy? I would be glad to remove the link if you prefer the profile to omit employer links.
 
-The article includes one time-sensitive reference to the IRCC portal update announced for 3 November 2026. We will recheck that detail against the live IRCC page before submission.
+Best wishes,
+Anuj Dhawan
 
-Best wishes,  
-Anuj Dhawan  
-Commonwealth Migration Group
-
-**Author review before sending:** The contributor page says accepted articles and images are published under CC BY-NC-SA 3.0. Please confirm the author is comfortable with those terms before submitting. Attach the Word article and the authorized profile image, and reply in the original email thread.
+Status: saved as an unsent Gmail draft in the original RRO conversation with `refugee-research-online-article-bio-link-candidate.docx` attached. Do not send until the profile-link question and remaining image/licensing dependencies are resolved.
