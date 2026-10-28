@@ -473,7 +473,7 @@ export default function BlogArticlePage({ post, article = null }) {
               <Eyebrow>
                 <span id="key-takeaways-label">Key takeaways</span>
               </Eyebrow>
-              <ul className="m-0 mt-[16px] grid list-none gap-[12px] p-0">
+              <ul id="key-takeaways" className="m-0 mt-[16px] grid list-none gap-[12px] p-0">
                 {(article.keyTakeaways || []).map((item, index) => (
                   <li key={index} className="flex items-start gap-[11px]">
                     <CheckCircle2 width={16} height={16} aria-hidden="true" className="mt-[4px] flex-none text-[var(--primary)]" />
