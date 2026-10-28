@@ -1,38 +1,47 @@
-# Immigration Consultants in Brampton | Commonwealth Migration
+# Licensed Immigration Consultant in Brampton, Ontario
 
 > **Source URL:** https://commonwealthmigration.ca
-> **Last modified:** 2026-10-26
+> **Last modified:** 2026-10-28
 > **Sitemap priority:** 1
-> **Status:** ✅ Fresh English rewrite | SEO/GEO/AEO reviewed
+> **Status:** ✅ Homepage SEO/GEO/AEO revision
 
 ## SEO Metadata
 
-- **Title tag:** Immigration Consultants in Brampton | Canada Immigration
-- **Meta description:** Commonwealth Migration's licensed RCIC team is based in Brampton, Ontario, helping with Express Entry, PNP, work, study and family immigration across Canada.
-- **Meta keywords:** immigration consultants in Brampton, immigration consultant Brampton, Canada immigration consultant Brampton, licensed RCIC Brampton, Express Entry consultant Brampton, PNP consultant Brampton
+- **Title tag:** Licensed Immigration Consultant in Brampton, Ontario
+- **Meta description:** Brampton-based licensed RCIC Pankaj Khanna advises on Express Entry, permits, PNP and family sponsorship. Serving clients across Canada. Book a consultation.
+- **Meta keywords:** immigration consultant Brampton, immigration consultants Brampton, licensed immigration consultant Brampton, Brampton immigration consultancy, Brampton immigration office, Express Entry consultant Brampton, PNP consultant Brampton
 - **Canonical URL:** https://commonwealthmigration.ca
-- **OG title:** Immigration Consultants in Brampton | Canada Immigration
-- **OG description:** Commonwealth Migration's licensed RCIC team is based in Brampton, Ontario, helping with Express Entry, PNP, work, study and family immigration across Canada.
+- **OG title:** Licensed Immigration Consultant in Brampton, Ontario
+- **OG description:** Brampton-based licensed RCIC Pankaj Khanna advises on Express Entry, permits, PNP and family sponsorship. Serving clients across Canada. Book a consultation.
 - **Robots:** index, follow
 
 ## Heading Outline
 
-- # Immigration Consultants in Brampton, Ontario
-- ## Immigration help in Brampton and across Canada
-- ## What a careful review should cover
-- ## Use official information as the final check
-- ## Research before you retain
-- ## Official sources and responsible advice
-- ## Questions people ask
-- ### How do I verify a licensed immigration consultant in Brampton before hiring one?
-- ### Can an immigration calculator or guide guarantee my Canadian visa or permanent residence approval?
-- ### When should I request a file-specific review from a licensed Canadian immigration consultant?
+- # Licensed Immigration Consultant in Brampton, Ontario
+- ## Pankaj Khanna, RCIC
+- ## Immigration pathways from Brampton, Ontario
+- ## Immigration case strategy in Brampton
+- ## Canadian immigration services for every stage
+- ## Explore the guides before you decide
+- ## See which Canadian programs may fit
+- ## Turn a refusal into a clearer next move
+- ## Immigration support for Canadian employers
+- ## A sharper plan changes the outcome
+- ## Secure payments, signatures and file management
+- ## Make your next decision with better numbers
+- ## Not sure which pathway fits your profile?
+- ## Brampton immigration consultant questions
+- ## What can an immigration consultant in Brampton help you compare?
+- ## Which Canadian immigration details should you prepare first?
+- ## How can Brampton applicants prepare for a useful consultation?
+- ## Where can you verify current Canadian immigration requirements?
+- ## Plan your next Canadian immigration step
 
 ## Hero Section
 
-# Immigration Consultants in Brampton, Ontario
+# Licensed Immigration Consultant in Brampton, Ontario
 
-Immigration decisions get easier when the program, evidence, deadline and next step are visible in one plan. Commonwealth Migration's licensed RCIC team is based in Brampton, Ontario, Canada, and serves clients across the country.
+Commonwealth Migration Group Inc. is based in Brampton, Ontario. Consult licensed RCIC Pankaj Khanna about Express Entry, work and study permits, PNP, family sponsorship and refusal responses. Clients across Canada can meet online.
 
 - eligibility and admissibility
 - documents and timing
@@ -40,11 +49,11 @@ Immigration decisions get easier when the program, evidence, deadline and next s
 
 ## Page Content
 
-## Immigration help in Brampton and across Canada
+## Immigration guidance from Brampton, Ontario and across Canada
 
 
 
-Start by connecting your goal, evidence, deadline and next step in one Canadian immigration plan. Our Brampton immigration office is the Canadian base for scheduled in-person, phone and video consultations, while clients across Canada can work with the team remotely.
+Commonwealth Migration Group Inc. is based in Brampton, Ontario, and serves clients across Canada. Consult licensed RCIC Pankaj Khanna about Express Entry, PNP, work and study permits, family sponsorship, visitor visas, citizenship and refusal responses.
 
 
 
@@ -137,72 +146,8 @@ If you are ready to move from general research to a file-specific plan, [book a 
 
 ## Image Alt Texts
 
-- Licensed RCIC Immigration Consultants Canada | Commonwealth Migration Canada | Brampton and Canada-wide
+- Pankaj Khanna, Regulated Canadian Immigration Consultant in Brampton, Ontario
 
 ## Structured Data (JSON-LD)
 
-```json
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://commonwealthmigration.ca#webpage",
-      "url": "https://commonwealthmigration.ca",
-      "name": "Immigration Consultants in Brampton, Ontario | Commonwealth Migration",
-      "description": "Commonwealth Migration's licensed RCIC team is based in Brampton, Ontario, helping with Canadian immigration pathways for clients across Canada.",
-      "inLanguage": "en-CA",
-      "dateModified": "2026-10-26",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "Commonwealth Migration Canada",
-        "url": "https://commonwealthmigration.ca"
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "immigration consultants in Brampton"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://commonwealthmigration.ca"
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How do I verify a licensed immigration consultant in Brampton before hiring one?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Verify that the current program or process is open and that your status, documents, timing and core eligibility fit the official instructions."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can an immigration calculator or guide guarantee my Canadian visa or permanent residence approval?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. An authorized consultant can assess, prepare and represent a case where permitted, but cannot choose the outcome. IRCC, a province, the IRB or a court decides under the process that applies."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When should I request a file-specific review from a licensed Canadian immigration consultant?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Seek a file-specific review when the answer depends on a status expiry, refusal, conflicting records, admissibility concern or a deadline. Bring the full notice and supporting documents so the adviser can address the facts that shape the next step."
-          }
-        }
-      ]
-    }
-  ]
-}
-```
+The root layout and page component generate the live ProfessionalService, Person, WebSite, WebPage, BreadcrumbList and FAQPage data. The FAQPage answers are generated from the visible homepage FAQ set, so the schema stays aligned with what visitors can read.

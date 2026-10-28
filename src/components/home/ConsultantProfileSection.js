@@ -49,7 +49,7 @@ export const LICENSED_RCIC_PROFILE = {
   profileUrl: site.rcic.profileUrl,
   image: {
     src: "/images/team/pankaj-khanna.webp",
-    alt: "Pankaj Khanna, RCIC — Regulated Canadian Immigration Consultant",
+    alt: "Pankaj Khanna, Regulated Canadian Immigration Consultant in Brampton, Ontario",
     width: 900,
     height: 1125,
   },

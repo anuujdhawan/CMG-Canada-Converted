@@ -72,12 +72,18 @@ const EXCLUDED_PATHS = new Set([
 
 const SPECIAL_CONFIGS = {
   "/": {
-    topic: "Canada immigration planning",
+    topic: "Brampton immigration consulting and Canadian immigration pathways",
     source: OFFICIAL_SOURCES.immigration,
-    answer: "Canada immigration planning starts by matching your goal with the route, evidence and deadline that actually apply to your situation. Express Entry, PNP, work, study, family, visitor, citizenship and refusal matters each use different criteria, so a useful plan compares options before forms, fees or promises enter the conversation.",
-    fit: "Write down whether you want permanent residence, temporary entry, work, study, family reunification, citizenship or help after a refusal. Then record your status, location, work and education history, language results, family details, funds, travel and any deadline.",
+    headings: {
+      definition: "What can an immigration consultant in Brampton help you compare?",
+      requirements: "Which Canadian immigration details should you prepare first?",
+      prepare: "How can Brampton applicants prepare for a useful consultation?",
+      source: "Where can you verify current Canadian immigration requirements?",
+    },
+    answer: "Commonwealth Migration Group Inc. is an immigration consultancy based in Brampton, Ontario. Licensed RCIC Pankaj Khanna advises clients on Express Entry, provincial nominations, work and study permits, family sponsorship, visitor visas and refusal responses. The practice also serves clients across Canada online.",
+    fit: "Start with your goal, current immigration status, location, work and education history, language results, family details, funds, travel history and any deadline. Those facts help identify which federal or provincial route deserves closer review; the location alone does not determine eligibility.",
     evidence: ["your goal, location and current immigration status", "education, language and employment history", "family, financial, travel and admissibility records", "the current IRCC or provincial page that controls the route"],
-    next: "Use the pathway guide and free tools to organize the facts, then compare the estimate with the official source. When the history is complex, a licensed representative can help turn the questions into a prioritized, file-specific plan.",
+    next: "Use the pathway guides and free tools to organize your questions, then compare any estimate with the official source. For a file-specific review, bring your records and deadlines to a scheduled consultation with the licensed RCIC in Brampton or meet online from elsewhere in Canada.",
   },
   "/canada-immigration-from-uk": {
     topic: "Canada immigration from the UK",
