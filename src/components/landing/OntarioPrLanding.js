@@ -524,7 +524,7 @@ export default function OntarioPrLanding({ variant = "oinp", bookingUrl = "" }) 
         id="op-hero-title"
         className="op-landing-hero"
         eyebrow={expressEntryVariant ? "Express Entry · Ontario" : "OINP · Ontario Nominee Program"}
-        title={expressEntryVariant ? <>Canada PR <em>without a job offer</em></> : <>Canada PR through <em>Ontario</em></>}
+        title={expressEntryVariant ? <>Canada PR <em>without a job offer</em></> : <>Canada PR through <em>ONIP</em></>}
         lead={expressEntryVariant
           ? "Express Entry scores your age, education, experience and English. Find out where your profile stands in a free 30-minute consultation with a CICC-regulated RCIC."
           : "Ontario rebuilt its nominee programme in 2026. Find out which route still fits your profile in a free 30-minute consultation with a CICC-regulated RCIC."}
