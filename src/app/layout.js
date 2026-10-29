@@ -193,6 +193,16 @@ export default function RootLayout({ children }) {
       className="h-full antialiased"
     >
       <head>
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KWMXWXB7" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            `,
+          }}
+        />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className={`${manrope.className} flex min-h-full flex-col`}>
