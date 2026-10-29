@@ -81,6 +81,7 @@ const ADDITIONAL_INDEXABLE_PAGES = [
   // the page's canonical URL and are intentionally not emitted separately.
   { path: "/pnp-draws", lastModified: "2026-10-08", changeFrequency: "daily", priority: 0.8 },
   { path: "/assessment/free-canada-immigration-assessment", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/ontario-pr", lastModified: "2026-10-29", changeFrequency: "weekly", priority: 0.8 },
   { path: "/tools/canada-immigration-calculators", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.8 },
   { path: "/tools/crs-calculator-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.8 },
   { path: "/tools/pnp-eligibility-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.7 },

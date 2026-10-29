@@ -21,6 +21,7 @@ const TYPES = new Set([
   "contact",
   "newsletter",
   "consultation",
+  "ontario-landing",
   "urgent-consultation",
   "assessment",
 ]);
@@ -29,6 +30,7 @@ const REQUIRED_FIELDS = {
   contact: ["fullName", "email", "phone", "topic", "message"],
   newsletter: ["email"],
   consultation: ["fullName", "email", "phone", "country", "mode", "preferredDate"],
+  "ontario-landing": ["fullName", "email", "phone"],
   "urgent-consultation": ["fullName", "email", "phone", "country", "mode", "preferredDate", "deadline"],
   assessment: ["fullName", "email", "phone", "country", "currentStatus", "goal"],
 };
@@ -61,6 +63,13 @@ function consultationLeadHtml(payload, type) {
     ["Preferred date", clean(payload.preferredDate, 40)],
     ...(urgent ? [["Deadline", clean(payload.deadline, 160)]] : []),
     ["Message", clean(payload.message, 1200) || "Not provided"],
+    ...(type === "ontario-landing" ? [
+      ["Landing page variant", clean(payload.variant, 40) || "oinp"],
+      ["Checker result", clean(payload.resultOutcome, 40) || "Not completed"],
+      ["Checker answers", JSON.stringify(payload.answers || {})],
+      ["Google click ID", clean(payload.gclid, 200) || "Not provided"],
+      ["UTM source / medium / campaign / term / content", ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].map((key) => `${key.replace("utm_", "")}: ${clean(payload[key], 160)}`).join(" | ")],
+    ] : []),
   ]
     .map(([label, value]) => `<tr><td style="padding:6px 12px 6px 0;color:#6b5560;vertical-align:top;">${escapeHtml(label)}</td><td style="padding:6px 0;font-weight:600;white-space:pre-line;">${escapeHtml(value)}</td></tr>`)
     .join("");
@@ -112,7 +121,7 @@ export async function POST(request) {
     origin: request.headers.get("origin") || "",
   };
 
-  const isConsultationLead = type === "consultation" || type === "urgent-consultation";
+  const isConsultationLead = type === "consultation" || type === "urgent-consultation" || type === "ontario-landing";
   const recipient = site.email;
   const resendApiKey = clean(process.env.RESEND_API_KEY, 240);
   const sender = LEAD_EMAIL_SENDER;

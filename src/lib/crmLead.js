@@ -64,6 +64,19 @@ function leadDetails(type, body) {
     ]);
   }
 
+  if (type === "ontario-landing") {
+    const tracking = ["gclid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"]
+      .map((key) => `${key}: ${clean(body[key], 160)}`)
+      .filter((part) => !part.endsWith(": "));
+    return detailText([
+      "Landing page: Ontario PR",
+      `Hero variant: ${clean(body.variant, 40)}`,
+      `Checker result: ${clean(body.resultOutcome, 40)}`,
+      answerSummary ? `Checker answers: ${answerSummary}` : "",
+      tracking.length ? `Attribution: ${tracking.join(", ")}` : "",
+    ]);
+  }
+
   return detailText([
     `Help requested: ${clean(body.interest, 140)}`,
     `Consultation mode: ${clean(body.mode, 80)}`,

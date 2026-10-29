@@ -4,6 +4,7 @@ import { site } from "@/config/site";
 import { whatsappUrl } from "@/config/whatsapp";
 import { theme, themeCssVars, templateThemeCssVars } from "@/config/theme";
 import { absoluteUrl, buildMetadata, serializeJsonLd } from "@/lib/seo";
+import Script from "next/script";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollProgressBar from "@/components/layout/ScrollProgressBar";
@@ -12,6 +13,7 @@ import WhatsAppBubble from "@/components/layout/WhatsAppBubble";
 import CallBubble from "@/components/layout/CallBubble";
 import ConsultationModal from "@/components/layout/ConsultationModal";
 import GuidedChatbotShell from "@/components/chatbot/GuidedChatbotShell";
+import PageChrome from "@/components/layout/PageChrome";
 
 const manrope = localFont({
   src: "../../public/fonts/manrope-latin.woff2",
@@ -193,19 +195,33 @@ export default function RootLayout({ children }) {
       className="h-full antialiased"
     >
       <head>
-        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KWMXWXB7" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            `,
-          }}
+        <Script id="google-tag-manager-bootstrap" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+            window.gtag('js', new Date());
+            window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+          `}
+        </Script>
+        <Script
+          id="google-tag-manager"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-KWMXWXB7"
+          strategy="afterInteractive"
         />
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <Script id="cmg-theme-init" strategy="beforeInteractive">
+          {themeInitScript}
+        </Script>
       </head>
       <body className={`${manrope.className} flex min-h-full flex-col`}>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KWMXWXB7"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: serializeJsonLd(organizationJsonLd) }}
@@ -218,20 +234,37 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: serializeJsonLd(consultantJsonLd) }}
         />
-        <a href="#main-content" className="skip-link absolute left-4 top-4 z-100 -translate-y-24 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white shadow-md transition-transform focus:translate-y-0">
-          Skip to main content
-        </a>
-        <ScrollProgressBar />
-        <Header />
-        <main id="main-content" className="site-theme flex-1 pb-12 min-[1360px]:pb-0">
-          {children}
-        </main>
-        <Footer />
-        <StickyMobileCTA />
-        <WhatsAppBubble />
-        <CallBubble />
-        <ConsultationModal />
-        <GuidedChatbotShell whatsappHref={whatsappUrl} />
+        <PageChrome
+          before={
+            <>
+              <a href="#main-content" className="skip-link absolute left-4 top-4 z-100 -translate-y-24 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white shadow-md transition-transform focus:translate-y-0">
+                Skip to main content
+              </a>
+              <ScrollProgressBar />
+              <Header />
+            </>
+          }
+          after={
+            <>
+              <Footer />
+              <StickyMobileCTA />
+              <WhatsAppBubble />
+              <CallBubble />
+              <ConsultationModal />
+              <GuidedChatbotShell whatsappHref={whatsappUrl} />
+            </>
+          }
+          landingAfter={
+            <WhatsAppBubble
+              landing
+              message="Hi, I'd like to book a free consultation about Canada PR through Ontario."
+            />
+          }
+        >
+          <main id="main-content" className="site-theme flex-1 pb-12 min-[1360px]:pb-0">
+            {children}
+          </main>
+        </PageChrome>
       </body>
     </html>
   );

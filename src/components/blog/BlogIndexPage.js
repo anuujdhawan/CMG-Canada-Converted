@@ -17,7 +17,7 @@ export default function BlogIndexPage({ page, activeCategory = ALL_BLOG_CATEGORY
   const resolvedCategory = groups.some((group) => group.slug === activeCategory) ? activeCategory : ALL_BLOG_CATEGORY;
 
   return (
-    <div className="cmg-template-home cmg-template-blog relative overflow-hidden text-[var(--ink)] text-base leading-[1.65] [--container:min(1220px,calc(100%-40px))] max-[1120px]:[--container:min(1220px,calc(100%-32px))] max-[620px]:[--container:calc(100%-28px)] max-[620px]:text-[15px]" data-concept="nocturne">
+    <div className="cmg-template-home cmg-template-blog relative overflow-x-clip text-[var(--ink)] text-base leading-[1.65] [--container:min(1220px,calc(100%-40px))] max-[1120px]:[--container:min(1220px,calc(100%-32px))] max-[620px]:[--container:calc(100%-28px)] max-[620px]:text-[15px]" data-concept="nocturne">
       <TemplateMotion />
 
       <BlogHero

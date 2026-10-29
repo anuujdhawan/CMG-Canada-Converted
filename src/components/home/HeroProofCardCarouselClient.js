@@ -7,7 +7,7 @@ import PnpDrawCard from "./PnpDrawCard";
 
 const AUTOPLAY_MS = 5000;
 
-export default function HeroProofCardCarouselClient({ ariaLabel = "Commonwealth Migration Group highlights", initialPnpDraws, pagePath = "/" }) {
+export default function HeroProofCardCarouselClient({ ariaLabel = "Commonwealth Migration Group highlights", initialPnpDraws, initialCardIndex = 0, pagePath = "/" }) {
   const showExpressEntry = pagePath === "/" || pagePath === "/immigration-draws" || /express-entry/.test(pagePath);
   const showPnp = pagePath === "/" || pagePath === "/pnp-draws" || /pnp|provincial-nominee/.test(pagePath);
   const cards = [
@@ -15,7 +15,7 @@ export default function HeroProofCardCarouselClient({ ariaLabel = "Commonwealth 
     ...(showExpressEntry ? [{ Component: ExpressEntryDrawCard, label: "Latest Express Entry draw" }] : []),
     ...(showPnp ? [{ Component: PnpDrawCard, label: "PNP highlights" }] : []),
   ];
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(() => Math.max(0, Math.min(initialCardIndex, cards.length - 1)));
   const slideCount = cards.length;
 
   useEffect(() => {

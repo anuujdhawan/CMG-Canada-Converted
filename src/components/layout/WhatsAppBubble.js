@@ -2,16 +2,19 @@ import Image from "next/image";
 import { whatsappUrl } from "@/config/whatsapp";
 
 /** Sitewide WhatsApp handoff bubble. Hidden until a number/URL is configured. */
-export default function WhatsAppBubble() {
+export default function WhatsAppBubble({ landing = false, message = "" } = {}) {
   if (!whatsappUrl) return null;
+  const href = message
+    ? `${whatsappUrl}${whatsappUrl.includes("?") ? "&" : "?"}text=${encodeURIComponent(message)}`
+    : whatsappUrl;
   return (
     <a
-      href={whatsappUrl}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
       title="Chat on WhatsApp"
-      className="cmg-floating-bubble cmg-floating-bubble--whatsapp cmg-whatsapp-bubble fixed right-5 bottom-20 left-auto !z-[1000] inline-flex items-center justify-center w-12 h-12 border-0 rounded-full bg-transparent shadow-[0_16px_40px_color-mix(in_srgb,var(--brand-primary)_22%,transparent),0_2px_8px_color-mix(in_srgb,var(--brand-navy)_7%,transparent)] transition-[transform,box-shadow] duration-[220ms] ease-[cubic-bezier(.16,1,.3,1)] hover:-translate-y-0.5 hover:scale-[1.04] hover:shadow-[0_20px_48px_color-mix(in_srgb,var(--brand-primary)_34%,transparent),0_4px_12px_color-mix(in_srgb,var(--brand-navy)_10%,transparent)]"
+      className={`cmg-floating-bubble cmg-floating-bubble--whatsapp cmg-whatsapp-bubble fixed right-5 bottom-20 left-auto !z-[1000] inline-flex items-center justify-center w-12 h-12 border-0 rounded-full bg-transparent shadow-[0_16px_40px_color-mix(in_srgb,var(--brand-primary)_22%,transparent),0_2px_8px_color-mix(in_srgb,var(--brand-navy)_7%,transparent)] transition-[transform,box-shadow] duration-[220ms] ease-[cubic-bezier(.16,1,.3,1)] hover:-translate-y-0.5 hover:scale-[1.04] hover:shadow-[0_20px_48px_color-mix(in_srgb,var(--brand-primary)_34%,transparent),0_4px_12px_color-mix(in_srgb,var(--brand-navy)_10%,transparent)]${landing ? " cmg-whatsapp-bubble--landing" : ""}`}
     >
       <span className="cmg-whatsapp-bubble-icon inline-flex w-full h-full">
         <Image
