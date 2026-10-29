@@ -255,10 +255,14 @@ export default function RootLayout({ children }) {
             </>
           }
           landingAfter={
-            <WhatsAppBubble
-              landing
-              message="Hi, I'd like to book a free consultation about Canada PR through Ontario."
-            />
+            <>
+              <WhatsAppBubble
+                landing
+                message="Hi, I'd like to book a free consultation about Canada PR through Ontario."
+              />
+              <CallBubble />
+              <GuidedChatbotShell whatsappHref={whatsappUrl} />
+            </>
           }
         >
           <main id="main-content" className="site-theme flex-1 pb-12 min-[1360px]:pb-0">

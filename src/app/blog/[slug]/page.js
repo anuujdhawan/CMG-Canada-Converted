@@ -17,13 +17,16 @@ export async function generateMetadata({ params }) {
   const post = RESEARCH_BLOG_BY_SLUG[slug];
   if (!post) return {};
   const cover = getResearchBlogImage(post.slug, post.category);
+  // Use the JPEG social copy of the on-page WebP cover. Open Graph previews
+  // are fetched by third-party crawlers, some of which still expect JPG/PNG.
+  const shareImageUrl = cover.src.replace(/\.webp$/i, ".jpg");
   return buildMetadata({
     title: post.title,
     description: post.description,
     path: `/blog/${post.slug}`,
     type: "article",
     keywords: post.keywords.split("; "),
-    image: { url: cover.src, alt: cover.alt },
+    image: { url: shareImageUrl, alt: cover.alt, type: "image/jpeg" },
   });
 }
 

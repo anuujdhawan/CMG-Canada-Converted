@@ -79,10 +79,10 @@ export function buildMetadata({
       };
   const imageUrl = absoluteUrl(imageConfig.url);
   const imageAlt = imageConfig?.alt || site.name + " — Canadian immigration guidance";
-  // Page-specific article images predate the square brand preview and do not
-  // carry dimensions here, so preserve their existing 1912x1140 metadata.
-  const imageWidth = imageConfig.width || 1912;
-  const imageHeight = imageConfig.height || 1140;
+  // Only emit dimensions we actually know. Guessing 1912x1140 for every
+  // page-specific image produces incorrect Open Graph tags for the cover art.
+  const imageWidth = imageConfig.width;
+  const imageHeight = imageConfig.height;
 
   return {
     // Omit `title` entirely when no page title is given, so the root layout's
@@ -101,7 +101,13 @@ export function buildMetadata({
       description: resolvedDescription,
       url: url || undefined,
       ...(imageUrl && {
-        images: [{ url: imageUrl, width: imageWidth, height: imageHeight, alt: imageAlt }],
+        images: [{
+          url: imageUrl,
+          ...(imageConfig.type && { type: imageConfig.type }),
+          ...(imageWidth && { width: imageWidth }),
+          ...(imageHeight && { height: imageHeight }),
+          alt: imageAlt,
+        }],
       }),
     },
     twitter: {
