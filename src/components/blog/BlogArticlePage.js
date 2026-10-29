@@ -669,7 +669,7 @@ export default function BlogArticlePage({ post, article = null }) {
 
       {article && (
         <section className="section relative z-[1] border-b border-[var(--border)] bg-[var(--surface-alt)] py-[64px] max-[880px]:py-[52px] max-[620px]:py-11 article-summary" aria-labelledby="quick-answer-label">
-          <div className={`section-inner mx-auto w-[var(--container)] max-w-[1080px] grid ${hasTakeaways ? "grid-cols-[1.42fr_.78fr] max-[980px]:grid-cols-1" : "grid-cols-1"} gap-[18px]`}>
+          <div className="section-inner mx-auto w-[var(--container)] max-w-[1080px] grid grid-cols-1 gap-[18px]">
             <div className="article-quick-answer flex flex-col rounded-[22px] border border-[color-mix(in_srgb,var(--primary)_24%,var(--border))] bg-[var(--surface)] p-[30px_32px] max-[620px]:p-[24px_22px]">
               <Eyebrow>
                 <span id="quick-answer-label">{article.quickAnswerHeading || "Quick answer"}</span>
@@ -681,7 +681,7 @@ export default function BlogArticlePage({ post, article = null }) {
                 <Info width={14} height={14} aria-hidden="true" className="mt-[3px] flex-none text-[var(--primary)]" />
                 <span>{article.quickAnswerNote || "General information, not advice on your file. Confirm current requirements before you act."}</span>
               </p>}
-              <div className="mt-auto flex flex-wrap items-center gap-x-[20px] gap-y-[9px] border-t border-[var(--border)] pt-[18px] max-[980px]:mt-[20px]">
+              <div className="mt-[24px] flex flex-wrap items-center gap-x-[20px] gap-y-[9px] border-t border-[var(--border)] pt-[18px] max-[980px]:mt-[20px]">
                 <span className="inline-flex items-center gap-[7px]">
                   <ShieldCheck width={14} height={14} aria-hidden="true" className="text-[var(--primary)]" />
                   <span className="text-[12.5px] font-bold text-[var(--muted)]">By {author}</span>
@@ -703,7 +703,7 @@ export default function BlogArticlePage({ post, article = null }) {
               <Eyebrow>
                 <span id="key-takeaways-label">Key takeaways</span>
               </Eyebrow>
-              <ul id="key-takeaways" className="m-0 mt-[16px] grid list-none gap-[12px] p-0">
+              <ul id="key-takeaways" className="m-0 mt-[16px] grid grid-cols-2 max-[720px]:grid-cols-1 gap-x-[30px] gap-y-[14px] list-none p-0">
                 {(article.keyTakeaways || []).map((item, index) => (
                   <li key={index} className="flex items-start gap-[11px]">
                     <CheckCircle2 width={16} height={16} aria-hidden="true" className="mt-[4px] flex-none text-[var(--primary)]" />
