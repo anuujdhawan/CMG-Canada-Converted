@@ -372,6 +372,10 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
     src: "/images/blog/canada-immigration-scams-authorized-representative.webp",
     alt: "Immigration documents and verification checklist for choosing an authorised representative",
   },
+  "canada-immigration-consulting-firms": {
+    src: "/images/pages/office-meeting.webp",
+    alt: "Immigration consultation meeting in a professional office",
+  },
   "express-entry-crs-changes-brampton-november-2026": {
     src: "/images/blog/brampton/express-entry-crs-changes-brampton-november-2026.webp",
     alt: "Hands sorting paperwork with a calculator and laptop on a desk",
@@ -453,6 +457,10 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
     alt: "Older couple reviewing household financial documents",
   },
   "rcic-vs-immigration-lawyer-ontario": {
+    src: "/images/blog/brampton/rcic-vs-immigration-lawyer-ontario.webp",
+    alt: "Two people reviewing paperwork at a table",
+  },
+  "immigration-consultant-brampton": {
     src: "/images/blog/brampton/rcic-vs-immigration-lawyer-ontario.webp",
     alt: "Two people reviewing paperwork at a table",
   },

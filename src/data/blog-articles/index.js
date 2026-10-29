@@ -57,6 +57,8 @@ import pgwpFieldOfStudy2026 from "./pgwp-field-of-study-2026";
 import changeDliStudyPermitCanada from "./change-dli-study-permit-canada";
 import visitorRecordVsTrvCanada from "./visitor-record-vs-trv-canada";
 import canadaImmigrationScamsAuthorizedRepresentative from "./canada-immigration-scams-authorized-representative";
+import canadaImmigrationConsultingFirms from "./canada-immigration-consulting-firms";
+import immigrationConsultantBrampton from "./immigration-consultant-brampton";
 
 /** Article bodies keyed by the slug used in `blog-research.js`. */
 export const BLOG_ARTICLES = {
@@ -102,6 +104,8 @@ export const BLOG_ARTICLES = {
   "change-dli-study-permit-canada": changeDliStudyPermitCanada,
   "visitor-record-vs-trv-canada": visitorRecordVsTrvCanada,
   "canada-immigration-scams-authorized-representative": canadaImmigrationScamsAuthorizedRepresentative,
+  "canada-immigration-consulting-firms": canadaImmigrationConsultingFirms,
+  "immigration-consultant-brampton": immigrationConsultantBrampton,
 };
 
 /** The body for a slug, or null when a post has not been expanded yet. */
@@ -123,6 +127,11 @@ export function countArticleWords(article) {
   for (const section of article.sections || []) {
     parts.push(section.heading);
     parts.push(...(section.body || []));
+    for (const subsection of section.subsections || []) {
+      parts.push(subsection.heading, ...(subsection.body || []));
+    }
+    parts.push(...(section.afterListBody || []));
+    if (section.image) parts.push(section.image.alt || "");
     if (section.list) {
       parts.push(section.list.title || "");
       parts.push(...(section.list.items || []));

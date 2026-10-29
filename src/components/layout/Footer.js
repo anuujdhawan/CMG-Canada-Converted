@@ -6,10 +6,10 @@ import { navigation } from "@/config/navigation";
 import { site } from "@/config/site";
 
 const SOCIAL_ITEMS = [
-  { key: "linkedin", label: `${site.name} on LinkedIn` },
-  { key: "facebook", label: `${site.name} on Facebook` },
-  { key: "instagram", label: `${site.name} on Instagram` },
-  { key: "youtube", label: `${site.name} on YouTube` },
+  { key: "linkedin", label: `${site.displayName} on LinkedIn` },
+  { key: "facebook", label: `${site.displayName} on Facebook` },
+  { key: "instagram", label: `${site.displayName} on Instagram` },
+  { key: "youtube", label: `${site.displayName} on YouTube` },
 ];
 
 const PAYMENT_LOGOS = [
@@ -68,10 +68,10 @@ export default function Footer() {
         <div className="site-footer__main grid grid-cols-[minmax(0,1.42fr)_minmax(0,2.1fr)] items-start gap-x-12 gap-y-11 py-12 pb-8 max-[1100px]:grid-cols-1 max-[1100px]:gap-9 max-[720px]:py-[2.25rem_0_1.5rem]">
           {/* Brand */}
           <div className="site-footer__brand min-w-0">
-            <Link href="/" className="site-footer__logo inline-flex items-center rounded-2xl border border-line bg-(--brand-logo-bg) px-3 py-[.55rem] shadow-[0_8px_24px_color-mix(in_srgb,var(--brand-primary)_6%,transparent),0_2px_8px_color-mix(in_srgb,var(--brand-navy)_4%,transparent)] transition-[transform,box-shadow,border-color] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-[color-mix(in_srgb,var(--brand-primary)_22%,var(--brand-border))] hover:shadow-[0_14px_32px_color-mix(in_srgb,var(--brand-primary)_9%,transparent)]" aria-label={`${site.name} home`}>
+            <Link href="/" className="site-footer__logo inline-flex items-center rounded-2xl border border-line bg-(--brand-logo-bg) px-3 py-[.55rem] shadow-[0_8px_24px_color-mix(in_srgb,var(--brand-primary)_6%,transparent),0_2px_8px_color-mix(in_srgb,var(--brand-navy)_4%,transparent)] transition-[transform,box-shadow,border-color] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-[color-mix(in_srgb,var(--brand-primary)_22%,var(--brand-border))] hover:shadow-[0_14px_32px_color-mix(in_srgb,var(--brand-primary)_9%,transparent)]" aria-label={`${site.displayName} home`}>
               <Image
                 src={site.logos.footer}
-                alt={site.name}
+                alt={site.displayName}
                 width={1912}
                 height={1140}
                 sizes="66px"
@@ -119,13 +119,17 @@ export default function Footer() {
                       <MapPin size={13} aria-hidden />
                     </span>
                     <span className="grid gap-[.12rem] text-(--brand-navy-dark)">
-                      <strong className="text-[.72rem] font-extrabold leading-tight">{site.name} </strong>
+                      <strong className="text-[.72rem] font-extrabold leading-tight">{site.displayName} </strong>
                       <small className="text-primary-dark text-[.6rem] font-extrabold tracking-[.08em] leading-[1.2] uppercase">Canada</small>
                     </span>
                   </span>
                   <span className="site-footer__office-address grid gap-[.1rem] pl-[2.2rem]">
                     <span>{site.address.line1}</span>
-                    {[site.address.city, site.address.region, site.address.postal, site.address.country].filter(Boolean).join(", ")}
+                    {[
+                      site.address.city,
+                      [site.address.region, site.address.postal].filter(Boolean).join(" "),
+                      site.address.country,
+                    ].filter(Boolean).join(", ")}
                   </span>
                 </a>
                 {/* <a
@@ -226,7 +230,7 @@ export default function Footer() {
         <div className="site-footer__bottom mt-[1.35rem] border-t border-line pt-[1.15rem] pb-[.35rem]">
           <div className="site-footer__bottom-row flex flex-wrap items-center justify-between gap-x-5 gap-y-[.85rem] max-[720px]:flex-col max-[720px]:items-start">
             <p className="site-footer__copyright m-0 text-(--brand-navy-dark) text-[.76rem] font-bold leading-[1.4]">
-              © {year} {site.name} All rights reserved.
+              © {year} {site.displayName} All rights reserved.
               <span className="site-footer__dot mx-[.45rem] text-line" aria-hidden>
                 ·
               </span>
@@ -251,7 +255,7 @@ export default function Footer() {
 
           <p className="site-footer__disclaimer m-[.85rem_0_0] rounded-[.85rem] border border-[color-mix(in_srgb,var(--brand-primary)_8%,var(--brand-border))] bg-[color-mix(in_srgb,var(--brand-accent-soft)_55%,#fff)] text-muted px-4 py-3 text-[.68rem] italic leading-[1.6] text-center">
             {site.tradingName} is a trading name. The content on this site is for general information only and does not constitute
-            legal advice. Immigration outcomes depend on individual circumstances and current IRCC requirements. {site.name}{" "}
+            legal advice. Immigration outcomes depend on individual circumstances and current IRCC requirements. {site.displayName}{" "}
             <strong className="text-primary-dark font-extrabold not-italic">does not guarantee</strong> visa approval.
           </p>
         </div>

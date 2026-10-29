@@ -13,6 +13,7 @@ const phoneDigits = phone.replace(/[^\d]/g, "");
 export const site = {
   // ---- Identity -------------------------------------------------------
   name: brandName,
+  displayName: "Commonwealth Migration Group",
   tradingName: "Commonwealth Migration",
   shortName: "CMG",
   tagline: "Canadian Immigration Guidance from a Licensed RCIC",
@@ -26,12 +27,12 @@ export const site = {
   phone,
   phoneHref: `tel:${phone.trim().startsWith("+") ? "+" : ""}${phoneDigits}`,
   address: {
-    line1: "615, 2250 Bovaird Dr East",
-    city: "Brampton, Sandringham-Wellington",
+    line1: "2250 Bovaird Dr E #615",
+    city: "Brampton",
     region: "ON",
-    postal: "",
+    postal: "L6R 0W3",
     country: "Canada 🇨🇦",
-    full: "615, 2250 Bovaird Dr East, Brampton, Sandringham-Wellington, ON, Canada 🇨🇦",
+    full: "2250 Bovaird Dr E #615, Brampton, ON L6R 0W3",
     mapsUrl: "https://www.google.com/maps/place/Commonwealth+Migration+Group+Brampton,+Canada/@43.7508147,-79.7393151,17z/data=!3m1!4b1!4m6!3m5!1s0x882b3d9a6c4122cb:0x2c2dca427aeb83e1!8m2!3d43.7508147!4d-79.7393151!16s%2Fg%2F11nvkrfkzy?hl=en&entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D",
   },
   sisterConcern: {

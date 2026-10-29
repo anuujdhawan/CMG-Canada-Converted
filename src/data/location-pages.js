@@ -113,7 +113,7 @@ const SHARED_SERVICES = [
 
 const CITY_DETAILS = {
   brampton: {
-    heroLead: "Brampton is home to our head office, so you can meet the team in person at 2250 Bovaird Dr E. The city's logistics, manufacturing and trucking sectors employ many newcomers and temporary workers. Commonwealth Migration Group helps individuals and families in Brampton with Express Entry, OINP nominations, study and work permits and family sponsorship.",
+    heroLead: "Our head office is at 2250 Bovaird Dr E #615, Brampton, ON L6R 0W3. Brampton's logistics, manufacturing and trucking sectors employ many newcomers and temporary workers. Commonwealth Migration Group helps individuals and families in Brampton with Express Entry, OINP nominations, study and work permits and family sponsorship.",
     serviceIntro: "We help Brampton residents move from visitor, student or work permits to permanent residence, and we support families with spousal sponsorship, parent and grandparent applications and Super Visas.",
     sectors: ["Logistics and warehousing", "Manufacturing", "Trucking and transportation", "Healthcare and retail"],
     studyOptions: "Sheridan College, Algoma University (Brampton campus) and nearby Humber and Seneca campuses",

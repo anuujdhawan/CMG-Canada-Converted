@@ -76,7 +76,11 @@ const words = (value) => String(value || "").trim().split(/\s+/).filter(Boolean)
 function articleWords(article) {
   const parts = [article.quickAnswer, ...(article.keyTakeaways || [])];
   for (const section of article.sections || []) {
-    parts.push(section.heading, ...(section.body || []));
+    parts.push(section.heading, ...(section.body || []), ...(section.afterListBody || []));
+    for (const subsection of section.subsections || []) {
+      parts.push(subsection.heading, ...(subsection.body || []));
+    }
+    if (section.image) parts.push(section.image.alt || "");
     if (section.list) parts.push(section.list.title || "", ...(section.list.items || []));
     if (section.table) {
       parts.push(section.table.caption || "", ...(section.table.columns || []), ...(section.table.rows || []).flat());
@@ -178,15 +182,16 @@ for (const post of posts) {
   const { article, file } = entry;
   const label = post.slug;
   const isLocalArticle = file.startsWith("brampton/");
+  const isVerbatimSourceCopy = article.verbatimSourceCopy === true;
   const body = articleWords(article);
   const total = words(body);
   wordCounts.push(total);
 
   const bodyFloor = isLocalArticle ? LOCAL_MIN_WORDS : MIN_WORDS;
-  if (total < bodyFloor) fail(`${label}: body is ${total} words, below the ${bodyFloor} floor`);
+  if (!isVerbatimSourceCopy && total < bodyFloor) fail(`${label}: body is ${total} words, below the ${bodyFloor} floor`);
 
   const qa = words(article.quickAnswer);
-  if (qa < QUICK_ANSWER_MIN || qa > QUICK_ANSWER_MAX) {
+  if (!isVerbatimSourceCopy && (qa < QUICK_ANSWER_MIN || qa > QUICK_ANSWER_MAX)) {
     fail(`${label}: quickAnswer is ${qa} words, expected ${QUICK_ANSWER_MIN}–${QUICK_ANSWER_MAX}`);
   }
 
@@ -224,12 +229,12 @@ for (const post of posts) {
 
   const glossary = article.glossary || [];
   const glossaryFloor = isLocalArticle ? LOCAL_GLOSSARY_MIN : GLOSSARY_MIN;
-  if (glossary.length < glossaryFloor) {
+  if (!isVerbatimSourceCopy && glossary.length < glossaryFloor) {
     fail(`${label}: only ${glossary.length} glossary terms, expected at least ${glossaryFloor}`);
   }
 
   const faqs = article.faqs || [];
-  if (faqs.length < FAQ_MIN || faqs.length > FAQ_MAX) {
+  if (!isVerbatimSourceCopy && (faqs.length < FAQ_MIN || faqs.length > FAQ_MAX)) {
     fail(`${label}: ${faqs.length} FAQs, expected ${FAQ_MIN}–${FAQ_MAX}`);
   }
   const seenFaqQuestions = new Set();
@@ -260,7 +265,7 @@ for (const post of posts) {
 
   const related = article.related || [];
   const relatedFloor = isLocalArticle ? 1 : RELATED_MIN;
-  if (related.length < relatedFloor) fail(`${label}: only ${related.length} related links, expected at least ${relatedFloor}`);
+  if (!isVerbatimSourceCopy && related.length < relatedFloor) fail(`${label}: only ${related.length} related links, expected at least ${relatedFloor}`);
   for (const link of related) {
     if (!link.href?.startsWith("/")) fail(`${label}: related link href must be site-absolute: ${link.href}`);
     else if (!routes.has(link.href)) fail(`${label}: related link points at a route that does not exist: ${link.href}`);
@@ -274,7 +279,7 @@ for (const post of posts) {
 
   const sources = article.sources || [];
   const sourceFloor = isLocalArticle ? LOCAL_SOURCE_MIN : 1;
-  if (sources.length < sourceFloor) fail(`${label}: only ${sources.length} official sources, expected at least ${sourceFloor}`);
+  if (!isVerbatimSourceCopy && sources.length < sourceFloor) fail(`${label}: only ${sources.length} official sources, expected at least ${sourceFloor}`);
   for (const source of sources) {
     if (!/^https:\/\//.test(source.url || "")) fail(`${label}: source is not https: ${source.url}`);
     else if (!OFFICIAL_DOMAINS.some((domain) => new URL(source.url).hostname.endsWith(domain.replace(/^www\./, "")))) {

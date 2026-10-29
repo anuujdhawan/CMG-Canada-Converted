@@ -126,6 +126,202 @@ function Eyebrow({ children, className = "" }) {
   );
 }
 
+const ARTICLE_LINK_CLASS = "!underline !decoration-white !decoration-2 underline-offset-[3px] transition-opacity hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
+const OFFICIAL_SOURCE_HOSTS = [
+  "canada.ca",
+  "gc.ca",
+  "ontario.ca",
+  "alberta.ca",
+  "gov.bc.ca",
+  "welcomebc.ca",
+  "gov.mb.ca",
+  "immigratemanitoba.com",
+  "saskatchewan.ca",
+  "novascotia.ca",
+  "gnb.ca",
+  "gov.nl.ca",
+  "princeedwardisland.ca",
+  "yukon.ca",
+  "nwt.ca",
+  "gov.nu.ca",
+  "brampton.ca",
+  "college-ic.ca",
+  "lso.ca",
+  "statcan.gc.ca",
+];
+const LINK_LABEL_STOP_WORDS = new Set([
+  "a", "about", "after", "and", "apply", "are", "be", "can", "canada", "check", "current", "do", "does", "for", "from", "government", "guide", "how", "information", "ircc", "is", "of", "official", "page", "program", "the", "to", "what", "when", "where", "which", "who", "why", "with", "you", "your",
+]);
+
+function escapePattern(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/**
+ * Add a small number of contextual outbound citations from the article's
+ * existing sources. It only wraps phrases already present in the article and
+ * links to trusted government or regulator domains.
+ */
+function isOfficialSourceUrl(value) {
+  try {
+    const host = new URL(value).hostname.toLowerCase();
+    return OFFICIAL_SOURCE_HOSTS.some((domain) => host === domain || host.endsWith(`.${domain}`));
+  } catch {
+    return false;
+  }
+}
+
+function sourceAnchorCandidates(source, post) {
+  const candidates = [];
+  const addPhrase = (value) => {
+    const phrase = String(value || "").replace(/\s+/g, " ").trim().replace(/^[\s—–:|]+|[\s—–:|]+$/g, "");
+    const words = phrase.match(/[\p{L}\p{N}’'-]+/gu) || [];
+    if (words.length < 2 || words.length > 5 || words.every((word) => LINK_LABEL_STOP_WORDS.has(word.toLowerCase()))) return;
+    if (!candidates.some((candidate) => candidate.toLowerCase() === phrase.toLowerCase())) candidates.push(phrase);
+  };
+
+  const label = String(source.label || "")
+    .replace(/^(?:IRCC|ESDC|CICC|Government of Canada|Government of Ontario|Government of Alberta|Government of British Columbia|WelcomeBC)\s*[—–:-]?\s*/i, "")
+    .trim();
+  if (label) {
+    addPhrase(label);
+    for (const part of label.split(/[—–:|()]/)) addPhrase(part);
+    for (const match of label.matchAll(/\(([^)]+)\)/g)) addPhrase(match[1]);
+  }
+
+  try {
+    const pathParts = new URL(source.url).pathname.split("/").filter(Boolean);
+    for (const part of pathParts.slice(-2).reverse()) {
+      addPhrase(part.replace(/\.(?:html?|pdf)$/i, "").replace(/[-_]+/g, " "));
+    }
+  } catch {
+    // The source URL is validated before this helper is called.
+  }
+
+  if (post?.source && source.url === post.source) {
+    for (const keyword of String(post.keywords || "").split(";")) addPhrase(keyword);
+    addPhrase(post.articleTitle || post.title);
+  }
+
+  const expanded = [];
+  for (const phrase of candidates) {
+    const words = phrase.match(/[\p{L}\p{N}’'-]+/gu) || [];
+    for (let size = Math.min(5, words.length); size >= 2; size--) {
+      for (let start = 0; start <= words.length - size; start++) {
+        const part = words.slice(start, start + size).join(" ");
+        if (part.length >= 7 && !expanded.some((candidate) => candidate.toLowerCase() === part.toLowerCase())) expanded.push(part);
+      }
+    }
+  }
+  return [...candidates, ...expanded].sort((a, b) => {
+    const wordDifference = b.split(/\s+/).length - a.split(/\s+/).length;
+    return wordDifference || b.length - a.length;
+  });
+}
+
+function phraseAppears(text, phrase) {
+  return String(text || "").toLowerCase().includes(String(phrase || "").toLowerCase());
+}
+
+function buildSourceLinkPlan(article, post) {
+  const plan = { quickAnswer: {}, sections: {} };
+  if (!article || Object.keys(article.inlineLinks || {}).length > 0) return plan;
+
+  const paragraphs = [];
+  if (article.quickAnswer) paragraphs.push({ type: "quickAnswer", key: "quickAnswer", text: article.quickAnswer });
+  for (const section of article.sections || []) {
+    (section.body || []).forEach((text, index) => paragraphs.push({ type: "section", key: `${section.id}:body:${index}`, sectionId: section.id, slot: "body", index, text }));
+    (section.subsections || []).forEach((subsection, subsectionIndex) => {
+      (subsection.body || []).forEach((text, index) => paragraphs.push({ type: "section", key: `${section.id}:subsection:${subsectionIndex}:${index}`, sectionId: section.id, slot: "subsections", subsectionIndex, index, text }));
+    });
+    (section.list?.items || []).forEach((text, index) => paragraphs.push({ type: "section", key: `${section.id}:list:${index}`, sectionId: section.id, slot: "listItems", index, text }));
+    (section.afterListBody || []).forEach((text, index) => paragraphs.push({ type: "section", key: `${section.id}:after:${index}`, sectionId: section.id, slot: "afterListBody", index, text }));
+  }
+
+  const declaredSources = Array.isArray(article.sources) ? article.sources : [];
+  const postSource = post?.source && isOfficialSourceUrl(post.source)
+    ? declaredSources.find((source) => source.url === post.source) || { url: post.source, label: post.articleTitle || post.title }
+    : null;
+  const sourceList = [postSource, ...declaredSources]
+    .filter((source) => source?.url && isOfficialSourceUrl(source.url))
+    .filter((source, index, list) => list.findIndex((candidate) => candidate.url === source.url) === index);
+
+  const usedUrls = new Set();
+  const usedPhrases = new Set();
+  const usedParagraphs = new Set();
+  let added = 0;
+  for (const source of sourceList) {
+    if (added >= 2 || usedUrls.has(source.url)) continue;
+    usedUrls.add(source.url);
+    const phrase = sourceAnchorCandidates(source, post).find((candidate) =>
+      !usedPhrases.has(candidate.toLowerCase()) && paragraphs.some((paragraph) => !usedParagraphs.has(paragraph.key) && phraseAppears(paragraph.text, candidate))
+    );
+    if (!phrase) continue;
+    const target = paragraphs.find((paragraph) => !usedParagraphs.has(paragraph.key) && phraseAppears(paragraph.text, phrase));
+    if (!target) continue;
+
+    if (target.type === "quickAnswer") {
+      plan.quickAnswer[phrase] = source.url;
+    } else {
+      const sectionPlan = plan.sections[target.sectionId] || (plan.sections[target.sectionId] = {});
+      const slotPlan = sectionPlan[target.slot] || (sectionPlan[target.slot] = {});
+      if (target.slot === "subsections") {
+        const subsectionPlan = slotPlan[target.subsectionIndex] || (slotPlan[target.subsectionIndex] = {});
+        subsectionPlan[target.index] = { ...(subsectionPlan[target.index] || {}), [phrase]: source.url };
+      } else {
+        slotPlan[target.index] = { ...(slotPlan[target.index] || {}), [phrase]: source.url };
+      }
+    }
+
+    usedPhrases.add(phrase.toLowerCase());
+    usedParagraphs.add(target.key);
+    added++;
+  }
+
+  return plan;
+}
+
+function paragraphInlineLinks(baseLinks, plannedLinks) {
+  if (!plannedLinks || Object.keys(plannedLinks).length === 0) return baseLinks || {};
+  return { ...(baseLinks || {}), ...plannedLinks };
+}
+
+function ArticleParagraph({ text, citationLinks = {}, inlineLinks = {} }) {
+  const inlineEntries = Object.entries(inlineLinks);
+  const linkPatterns = [
+    ...inlineEntries.map(([label]) => escapePattern(label)),
+    ...Object.keys(citationLinks).map((domain) => `\\(${escapePattern(domain)}\\)`),
+  ].sort((a, b) => b.length - a.length);
+  if (linkPatterns.length === 0) return text;
+
+  const matcher = new RegExp(`(${linkPatterns.join("|")})`, "gi");
+  const parts = text.split(matcher);
+  return (
+    <>
+      {parts.map((part, index) => {
+        const citationDomain = part.startsWith("(") && part.endsWith(")")
+          ? part.slice(1, -1).toLowerCase()
+          : null;
+        const citationUrl = citationDomain ? citationLinks[citationDomain] : null;
+        if (citationUrl) {
+          return (
+            <span key={`citation-${index}`}>
+              (<a href={citationUrl} target="_blank" rel="noopener noreferrer" className={ARTICLE_LINK_CLASS}>{part.slice(1, -1)}</a>)
+            </span>
+          );
+        }
+
+        const inlineLink = inlineEntries.find(([label]) => label.toLowerCase() === part.toLowerCase());
+        if (inlineLink) {
+          return <a key={`inline-${index}`} href={inlineLink[1]} target="_blank" rel="noopener noreferrer" className={ARTICLE_LINK_CLASS}>{part}</a>;
+        }
+
+        return part;
+      })}
+    </>
+  );
+}
+
 /**
  * One H2 section of the article body.
  *
@@ -143,7 +339,7 @@ function Eyebrow({ children, className = "" }) {
  * `querySelector("#2026-targets")` is an invalid selector, which breaks every
  * scripted check of the anchors.
  */
-function ArticleSection({ section, index }) {
+function ArticleSection({ section, index, citationLinks, inlineLinks, sourceLinkAssignments }) {
   return (
     <section id={section.id} className="scroll-mt-[150px] !mt-[52px] first:!mt-0">
       <div className="flex items-start gap-[14px]">
@@ -157,9 +353,20 @@ function ArticleSection({ section, index }) {
 
       <div className="mt-[18px] grid gap-[15px]">
         {(section.body || []).map((paragraph, index) => (
-          <p key={index} className="!m-0 !text-[16px] !leading-[1.85] !text-[var(--muted)]">{paragraph}</p>
+          <p key={index} className="!m-0 !text-[16px] !leading-[1.85] !text-[var(--muted)]"><ArticleParagraph text={paragraph} citationLinks={citationLinks} inlineLinks={paragraphInlineLinks(inlineLinks, sourceLinkAssignments?.body?.[index])} /></p>
         ))}
       </div>
+
+      {section.subsections?.map((subsection, subsectionIndex) => (
+        <div key={subsection.heading} className="mt-[28px] grid gap-[13px]">
+          <h3 className="!m-0 !text-[clamp(19px,1.05rem+.55vw,24px)] !font-bold !leading-[1.25] !tracking-[-.015em] !text-[var(--ink)]">
+            {subsection.heading}
+          </h3>
+          {(subsection.body || []).map((paragraph, paragraphIndex) => (
+            <p key={`${subsectionIndex}-${paragraphIndex}`} className="!m-0 !text-[16px] !leading-[1.85] !text-[var(--muted)]"><ArticleParagraph text={paragraph} citationLinks={citationLinks} inlineLinks={paragraphInlineLinks(inlineLinks, sourceLinkAssignments?.subsections?.[subsectionIndex]?.[paragraphIndex])} /></p>
+          ))}
+        </div>
+      ))}
 
       {section.list && (
         <div className="article-checklist mt-[22px] rounded-[18px] border border-[var(--border)] bg-[var(--surface)] p-[22px_24px]">
@@ -176,7 +383,7 @@ function ArticleSection({ section, index }) {
                   <span className="mt-[2px] flex h-[20px] w-[20px] flex-none items-center justify-center rounded-full bg-[color-mix(in_srgb,var(--primary)_13%,transparent)] text-[10px] font-extrabold leading-none text-[var(--primary)]">
                     {index + 1}
                   </span>
-                  <span className="!text-[15px] !leading-[1.75] !text-[var(--muted)]">{item}</span>
+                  <span className="!text-[15px] !leading-[1.75] !text-[var(--muted)]"><ArticleParagraph text={item} citationLinks={citationLinks} inlineLinks={paragraphInlineLinks(inlineLinks, sourceLinkAssignments?.listItems?.[index])} /></span>
                 </li>
               ))}
             </ol>
@@ -185,7 +392,7 @@ function ArticleSection({ section, index }) {
               {(section.list.items || []).map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <CheckCircle2 width={17} height={17} aria-hidden="true" className="mt-[3px] flex-none text-[var(--primary)]" />
-                  <span className="!text-[15px] !leading-[1.75] !text-[var(--muted)]">{item}</span>
+                  <span className="!text-[15px] !leading-[1.75] !text-[var(--muted)]"><ArticleParagraph text={item} citationLinks={citationLinks} inlineLinks={paragraphInlineLinks(inlineLinks, sourceLinkAssignments?.listItems?.[index])} /></span>
                 </li>
               ))}
             </ul>
@@ -194,6 +401,27 @@ function ArticleSection({ section, index }) {
       )}
 
       {section.table && <ArticleTable table={section.table} />}
+
+      {section.image && (
+        <figure className="article-inline-image m-0 mt-[24px] overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--surface)] p-[12px]">
+          <Image
+            src={section.image.src}
+            alt={section.image.alt}
+            width={section.image.width || 1024}
+            height={section.image.height || 1024}
+            sizes="(max-width: 620px) calc(100vw - 48px), (max-width: 1080px) 80vw, 760px"
+            className="mx-auto h-auto max-h-[640px] w-full max-w-[760px] rounded-[12px] object-contain"
+          />
+        </figure>
+      )}
+
+      {(section.afterListBody || []).length > 0 && (
+        <div className="mt-[18px] grid gap-[15px]">
+          {section.afterListBody.map((paragraph, index) => (
+            <p key={index} className="!m-0 !text-[16px] !leading-[1.85] !text-[var(--muted)]"><ArticleParagraph text={paragraph} citationLinks={citationLinks} inlineLinks={paragraphInlineLinks(inlineLinks, sourceLinkAssignments?.afterListBody?.[index])} /></p>
+          ))}
+        </div>
+      )}
 
       {section.callout && (
         <aside className="mt-[22px] flex items-start gap-[14px] rounded-[18px] border border-[color-mix(in_srgb,var(--primary)_26%,var(--border))] bg-[color-mix(in_srgb,var(--primary)_7%,var(--surface))] p-[20px_22px]">
@@ -355,6 +583,7 @@ export default function BlogArticlePage({ post, article = null }) {
   const reviewed = formatMonth(post.updated || post.date || post.meta?.lastModified);
   const updateLabel = post.updatedLabel || (reviewed ? `Updated ${reviewed}` : null);
   const author = post.author || site.rcic.consultant.nameWithCredential;
+  const sourceLinkPlan = buildSourceLinkPlan(article, post);
 
   // Related guides lead with the article's own category, then widen to the rest
   // of the library so a single-post category still shows something useful.
@@ -379,6 +608,7 @@ export default function BlogArticlePage({ post, article = null }) {
       ...(article.faqs?.length ? [{ id: "faq", heading: "Frequently asked questions" }] : []),
     ]
     : [];
+  const hasTakeaways = (article?.keyTakeaways || []).length > 0;
 
   const sources = [...new Map((article?.sources || []).map((source) => [source.url, source])).values()];
   const faqs = (article?.faqs || []).map((faq) => ({ question: faq.question, answer: faq.answer }));
@@ -439,13 +669,13 @@ export default function BlogArticlePage({ post, article = null }) {
 
       {article && (
         <section className="section relative z-[1] border-b border-[var(--border)] bg-[var(--surface-alt)] py-[64px] max-[880px]:py-[52px] max-[620px]:py-11 article-summary" aria-labelledby="quick-answer-label">
-          <div className="section-inner mx-auto w-[var(--container)] max-w-[1080px] grid grid-cols-[1.42fr_.78fr] max-[980px]:grid-cols-1 gap-[18px]">
+          <div className={`section-inner mx-auto w-[var(--container)] max-w-[1080px] grid ${hasTakeaways ? "grid-cols-[1.42fr_.78fr] max-[980px]:grid-cols-1" : "grid-cols-1"} gap-[18px]`}>
             <div className="article-quick-answer flex flex-col rounded-[22px] border border-[color-mix(in_srgb,var(--primary)_24%,var(--border))] bg-[var(--surface)] p-[30px_32px] max-[620px]:p-[24px_22px]">
               <Eyebrow>
                 <span id="quick-answer-label">{article.quickAnswerHeading || "Quick answer"}</span>
               </Eyebrow>
               <p id="quick-answer" className="!m-0 !mt-[16px] !text-[clamp(17px,1rem+.45vw,20px)] !font-semibold !leading-[1.68] !text-[var(--ink)]">
-                {article.quickAnswer}
+                <ArticleParagraph text={article.quickAnswer} citationLinks={article.citationLinks} inlineLinks={paragraphInlineLinks(article.inlineLinks, sourceLinkPlan.quickAnswer)} />
               </p>
               {article.quickAnswerNote !== false && <p className="!m-0 !mt-[18px] flex items-start gap-2 !text-[12.5px] !leading-[1.6] !text-[var(--muted)]">
                 <Info width={14} height={14} aria-hidden="true" className="mt-[3px] flex-none text-[var(--primary)]" />
@@ -469,7 +699,7 @@ export default function BlogArticlePage({ post, article = null }) {
               </div>
             </div>
 
-            <div className="article-takeaways flex flex-col rounded-[22px] border border-[var(--border)] bg-[var(--surface)] p-[30px_30px] max-[620px]:p-[24px_22px]">
+            {hasTakeaways && <div className="article-takeaways flex flex-col rounded-[22px] border border-[var(--border)] bg-[var(--surface)] p-[30px_30px] max-[620px]:p-[24px_22px]">
               <Eyebrow>
                 <span id="key-takeaways-label">Key takeaways</span>
               </Eyebrow>
@@ -481,7 +711,7 @@ export default function BlogArticlePage({ post, article = null }) {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div>}
           </div>
         </section>
       )}
@@ -502,7 +732,7 @@ export default function BlogArticlePage({ post, article = null }) {
                 {article ? (
                   <>
                     {(article.sections || []).map((section, index) => (
-                      <ArticleSection key={section.id} section={section} index={index} />
+                      <ArticleSection key={section.id} section={section} index={index} citationLinks={article.citationLinks} inlineLinks={article.inlineLinks} sourceLinkAssignments={sourceLinkPlan.sections[section.id]} />
                     ))}
 
                     {article.glossary?.length > 0 && (
