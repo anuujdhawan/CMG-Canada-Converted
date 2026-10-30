@@ -136,51 +136,6 @@ function primaryLinkProps() {
   return { href: "#free-consultation", className: "op-button op-button--primary" };
 }
 
-function LandingHeader({ variant }) {
-  return (
-    <header className="op-header" id="top">
-      <div className="op-header__frame site-header__nav-frame px-1 pt-3 sm:px-1">
-        <div className="op-header__shell site-header__nav-shell relative mx-auto max-w-none backdrop-blur-md rounded-2xl border px-4 transition-shadow duration-300 shadow-[0_4px_24px_color-mix(in_srgb,var(--brand-navy)_8%,transparent),0_1px_4px_color-mix(in_srgb,var(--brand-navy)_4%,transparent)]">
-          <div className="op-header__inner">
-            <a className="op-brand" href="#top" aria-label={`${site.name} — top of page`}>
-              <span className="header-logo-shell flex items-center">
-                <Image
-                  className="op-header__logo op-header__logo--dark h-9 w-auto object-contain sm:h-10"
-                  src={site.logos.white}
-                  alt={site.name}
-                  width={1912}
-                  height={1140}
-                  loading="eager"
-                  fetchPriority="low"
-                  sizes="124px"
-                />
-                <Image
-                  className="op-header__logo op-header__logo--light h-9 w-auto object-contain sm:h-10"
-                  src={site.logos.large}
-                  alt=""
-                  aria-hidden="true"
-                  width={1912}
-                  height={1140}
-                  loading="eager"
-                  fetchPriority="low"
-                  sizes="124px"
-                />
-              </span>
-            </a>
-            <a
-              href="#free-consultation"
-              className="site-header__cta inline-flex items-center justify-center gap-2 rounded-md bg-primary px-3.5 py-2.5 text-[12px] font-bold text-white shadow-md transition-colors whitespace-nowrap"
-            >
-              Book a free consultation <ArrowRight size={16} aria-hidden="true" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <span className="sr-only">Landing page variant: {variant === "ee" ? "Express Entry" : "OINP"}</span>
-    </header>
-  );
-}
-
 function SectionHeading({ eyebrow, children, summary, light = false }) {
   return (
     <div className={`op-section-heading${light ? " op-section-heading--light" : ""}`}>
@@ -493,41 +448,19 @@ function ConsultationForm({ variant, answers, resultOutcome, bookingUrl }) {
 
 export default function OntarioPrLanding({ variant = "oinp", bookingUrl = "" }) {
   const [quizResult, setQuizResult] = useState({ answers: {}, outcome: "" });
-  const [showDesktopCta, setShowDesktopCta] = useState(false);
   const expressEntryVariant = variant === "ee";
-
-  useEffect(() => {
-    const onScroll = () => {
-      const changed = document.getElementById("what-changed");
-      if (!changed) return;
-      const threshold = changed.offsetTop + changed.offsetHeight;
-      setShowDesktopCta(window.scrollY > threshold);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <div className="op-page" id="landing-main">
-      <a className="op-skip-link" href="#main-content">Skip to main content</a>
-      <LandingHeader variant={variant} />
-
-      {showDesktopCta ? (
-        <div className="op-sticky-top" aria-label="Book a free consultation">
-          <span>Ontario OINP and Express Entry guidance</span>
-          <a {...primaryLinkProps()}>Book a free consultation <ArrowRight size={16} aria-hidden="true" /></a>
-        </div>
-      ) : null}
 
       <CmgHero
         id="op-hero-title"
         className="op-landing-hero"
         eyebrow={expressEntryVariant ? "Express Entry · Ontario" : "OINP · Ontario Nominee Program"}
-        title={expressEntryVariant ? <>Canada PR <em>without a job offer</em></> : <>Canada PR through <em>OINP</em></>}
+        title={expressEntryVariant ? <>Canada PR <em>without a job offer</em></> : <>Canada PR Through <em>OINP</em>, Guided by a Licensed RCIC Consultant in Brampton</>}
         lead={expressEntryVariant
           ? "Express Entry scores your age, education, experience and English. Find out where your profile stands in a free 30-minute consultation with a CICC-regulated RCIC."
-          : "Ontario rebuilt its nominee programme in 2026. Find out which route still fits your profile in a free 30-minute consultation with a CICC-regulated RCIC."}
+          : "Ontario closed its eight former OINP streams in 2026. The Ontario Workforce Priority stream is the first to launch under a four-stream redesign. Book a free 30-minute call with a CICC-licensed RCIC to see which route may fit your profile."}
         pagePath="/"
         initialCardIndex={1}
         primaryAction={{
@@ -557,7 +490,7 @@ export default function OntarioPrLanding({ variant = "oinp", bookingUrl = "" }) 
       <section className="op-section op-section--warm" id="what-changed">
         <div className="op-wrap op-change-grid">
           <div>
-            <SectionHeading eyebrow="Ontario in 2026" summary="Ontario replaced eight former OINP streams with a new provincial pathway. The updated route is employer-led for foreign workers, with a separate option for eligible self-employed physicians.">
+            <SectionHeading eyebrow="Ontario in 2026" summary="Ontario closed its eight former OINP streams in 2026. The Ontario Workforce Priority stream launched first under a four-stream redesign, with an employer-led route for foreign workers and a separate pathway for eligible self-employed physicians.">
               What changed for OINP and Express Entry in Ontario?
             </SectionHeading>
             <p className="op-body-copy">Ontario&apos;s 2026 redesign took effect on June 25. The Ontario Workforce Priority stream now covers foreign-worker occupations across NOC TEER categories 0 through 5. Its expression of interest portal opened on August 4, 2026.</p>

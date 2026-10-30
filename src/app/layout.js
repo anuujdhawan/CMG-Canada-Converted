@@ -14,6 +14,7 @@ import CallBubble from "@/components/layout/CallBubble";
 import ConsultationModal from "@/components/layout/ConsultationModal";
 import GuidedChatbotShell from "@/components/chatbot/GuidedChatbotShell";
 import PageChrome from "@/components/layout/PageChrome";
+import OntarioPrLandingHeader from "@/components/landing/OntarioPrLandingHeader";
 
 const manrope = localFont({
   src: "../../public/fonts/manrope-latin.woff2",
@@ -242,6 +243,15 @@ export default function RootLayout({ children }) {
               </a>
               <ScrollProgressBar />
               <Header />
+            </>
+          }
+          landingBefore={
+            <>
+              <a href="#main-content" className="skip-link absolute left-4 top-4 z-100 -translate-y-24 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white shadow-md transition-transform focus:translate-y-0">
+                Skip to main content
+              </a>
+              <ScrollProgressBar />
+              <OntarioPrLandingHeader />
             </>
           }
           after={

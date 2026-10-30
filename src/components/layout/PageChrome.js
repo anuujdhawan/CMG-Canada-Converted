@@ -3,16 +3,16 @@
 import { usePathname } from "next/navigation";
 
 /**
- * Keeps conversion landing pages clear of the main site's global navigation,
- * footer and support widgets while leaving regular routes unchanged.
+ * Lets the Ontario conversion page use its section-link navbar and landing
+ * widgets while regular routes keep the shared site chrome.
  */
-export default function PageChrome({ children, before, after, landingAfter }) {
+export default function PageChrome({ children, before, landingBefore, after, landingAfter }) {
   const pathname = usePathname();
   const isOntarioLanding = pathname === "/ontario-pr";
 
   return (
     <>
-      {!isOntarioLanding && before}
+      {isOntarioLanding ? landingBefore : before}
       {children}
       {isOntarioLanding ? landingAfter : after}
     </>

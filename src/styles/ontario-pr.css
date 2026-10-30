@@ -65,20 +65,6 @@ html[data-theme="light"] .op-page {
 .op-page select { font: inherit; }
 .op-page :focus-visible { outline: 3px solid var(--op-red); outline-offset: 3px; }
 .op-wrap { width: min(1220px, calc(100% - 40px)); margin-inline: auto; }
-.op-skip-link { position: absolute; z-index: 2000; top: 8px; left: 12px; transform: translateY(-150%); border-radius: 10px; background: var(--op-surface); padding: 10px 14px; color: var(--op-ink) !important; box-shadow: var(--op-shadow); }
-.op-skip-link:focus { transform: translateY(0); }
-
-.op-header { position: absolute; z-index: 220; inset: 0 0 auto; background: transparent; border: 0; }
-.op-header__frame { width: 100%; }
-.op-header__inner { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: clamp(8px, 2vw, 22px); }
-.op-header .site-header__cta { transform: none !important; }
-.op-header .site-header__cta:hover,
-.op-header .site-header__cta:focus-visible { transform: translateY(-2px) !important; }
-.op-brand { display: inline-flex; min-width: 0; flex: 0 0 auto; align-items: center; }
-.op-header__logo--light { display: none; }
-html[data-theme="light"] .op-header__logo--dark { display: none; }
-html[data-theme="light"] .op-header__logo--light { display: block; }
-
 .op-button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 10px; border: 1px solid transparent; border-radius: 12px; padding: 0 21px; font-size: 13px; font-weight: 800; line-height: 1.2; transition: transform .18s ease, background .18s ease, box-shadow .18s ease, border-color .18s ease; cursor: pointer; }
 .op-button:hover { transform: translateY(-2px); }
 .op-button--primary { color: #fff !important; background: var(--op-red); box-shadow: 0 12px 28px color-mix(in srgb, var(--op-red) 28%, transparent); }
@@ -89,16 +75,20 @@ html[data-theme="light"] .op-header__logo--light { display: block; }
 .op-button--secondary { border-color: var(--op-line); background: var(--op-surface); color: var(--op-ink) !important; }
 .op-button--secondary:hover { border-color: color-mix(in srgb, var(--op-red) 44%, var(--op-line)); background: var(--op-surface-alt); }
 
-.op-sticky-top { position: fixed; z-index: 900; inset: 0 0 auto; min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 9px max(24px, calc((100vw - 1220px) / 2)); border-bottom: 1px solid var(--op-line); background: color-mix(in srgb, var(--op-surface) 94%, transparent); box-shadow: 0 12px 34px color-mix(in srgb, #000 20%, transparent); backdrop-filter: blur(16px); animation: op-slide-in .22s ease both; }
-.op-sticky-top > span { color: var(--op-muted); font-size: 12px; font-weight: 700; }
-.op-sticky-top .op-button { min-height: 42px; padding-inline: 17px; }
-@keyframes op-slide-in { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-
 .op-eyebrow { margin: 0 0 12px; color: var(--op-red); font-size: 11px; font-weight: 800; letter-spacing: .16em; line-height: 1.4; text-transform: uppercase; }
 .op-landing-hero .op-hero__trust { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 23px; }
 .op-landing-hero .op-hero__trust span { display: inline-flex; min-height: 31px; align-items: center; gap: 7px; border: 1px solid color-mix(in srgb, var(--template-on-primary) 26%, transparent); border-radius: 999px; background: color-mix(in srgb, var(--cmg-template-deep-surface) 18%, transparent); padding: 0 11px; color: var(--template-on-primary); font-size: 10px; font-weight: 700; backdrop-filter: blur(8px); }
 .op-landing-hero .op-hero__trust svg { color: var(--cmg-template-primary-bright); }
-@media (min-width: 881px) { .op-landing-hero .hero-copy { top: -54px; } }
+.op-landing-hero #op-hero-title { font-size: clamp(38px, 3.55vw, 52px) !important; }
+@media (max-width: 620px) { .op-landing-hero #op-hero-title { font-size: clamp(24px, 6.7vw, 28px) !important; } }
+.op-page #what-changed,
+.op-page #eligibility-checker,
+.op-page #routes,
+.op-page #requirements,
+.op-page #how-it-works,
+.op-page #licensed-rcic,
+.op-page #faq,
+.op-page #free-consultation { scroll-margin-top: 9rem; }
 
 .op-credentials { position: relative; z-index: 2; border-bottom: 1px solid var(--op-line); background: var(--op-surface); box-shadow: 0 12px 30px color-mix(in srgb, #000 14%, transparent); }
 .op-credentials__inner { min-height: 78px; display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; gap: 14px; }
@@ -321,8 +311,6 @@ html[data-theme="light"] .op-header__logo--light { display: block; }
 @media (max-width: 700px) {
   .op-page { --container: calc(100% - 28px); }
   .op-wrap { width: min(1220px, calc(100% - 32px)); }
-  .op-header__inner { gap: 8px; }
-  .op-sticky-top { display: none; }
   .op-landing-hero .op-hero__trust { gap: 7px; margin-top: 15px; }
   .op-landing-hero .op-hero__trust span { min-height: 28px; padding-inline: 9px; font-size: 9px; }
   .op-credentials__inner { width: calc(100% - 28px); grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px 8px; padding-block: 15px; }
