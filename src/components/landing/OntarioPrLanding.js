@@ -259,7 +259,14 @@ function ComparisonCards() {
 }
 
 function ConsultationForm({ variant, answers, resultOutcome, bookingUrl }) {
-  const [fields, setFields] = useState({ firstName: "", lastName: "", email: "", phone: "", countryCode: "+1" });
+  const [fields, setFields] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    ageRange: "",
+    education: "",
+    occupation: "",
+  });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -305,10 +312,12 @@ function ConsultationForm({ variant, answers, resultOutcome, bookingUrl }) {
 
   function validate() {
     const nextErrors = {};
-    if (!fields.firstName.trim()) nextErrors.firstName = "Enter your first name.";
-    if (!fields.lastName.trim()) nextErrors.lastName = "Enter your last name.";
+    if (!fields.fullName.trim()) nextErrors.fullName = "Enter your full name.";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email.trim())) nextErrors.email = "Enter a valid email address.";
     if (fields.phone.replace(/\D/g, "").length < 7) nextErrors.phone = "Enter a valid phone number.";
+    if (!fields.ageRange) nextErrors.ageRange = "Choose your age range.";
+    if (!fields.education) nextErrors.education = "Choose your highest qualification.";
+    if (!fields.occupation.trim()) nextErrors.occupation = "Enter your occupation or field of work.";
     setErrors(nextErrors);
     return Object.keys(nextErrors).length === 0;
   }
@@ -320,14 +329,14 @@ function ConsultationForm({ variant, answers, resultOutcome, bookingUrl }) {
     setErrorMessage("");
     const query = new URLSearchParams(window.location.search);
     const attribution = Object.fromEntries(["gclid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].map((key) => [key, query.get(key) || ""]));
-    const fullName = `${fields.firstName.trim()} ${fields.lastName.trim()}`.trim();
     const payload = {
       type: "ontario-landing",
-      fullName,
-      firstName: fields.firstName.trim(),
-      lastName: fields.lastName.trim(),
+      fullName: fields.fullName.trim(),
       email: fields.email.trim(),
-      phone: `${fields.countryCode} ${fields.phone.trim()}`,
+      phone: fields.phone.trim(),
+      ageRange: fields.ageRange,
+      education: fields.education,
+      occupation: fields.occupation.trim(),
       country: "Not specified",
       interest: "OINP and Express Entry consultation",
       mode: "To be confirmed",
@@ -398,46 +407,62 @@ function ConsultationForm({ variant, answers, resultOutcome, bookingUrl }) {
         <span className="op-form__icon"><CalendarCheck size={21} aria-hidden="true" /></span>
         <div>
           <p className="op-eyebrow">Free consultation</p>
-          <h3>Tell us how to reach you</h3>
-          <p>Share four details and our team will be in touch.</p>
+          <h3>Check Your Free Eligibility</h3>
+          <p>We will review your profile and confirm your next best pathway.</p>
         </div>
       </div>
       <div className="op-form__grid">
-        <label className="op-field">
-          <span>First name <b>*</b></span>
-          <input name="firstName" autoComplete="given-name" value={fields.firstName} onChange={updateField("firstName")} aria-invalid={Boolean(errors.firstName)} aria-describedby={errors.firstName ? "ontario-first-error" : undefined} />
-          {errors.firstName ? <small id="ontario-first-error">{errors.firstName}</small> : null}
+        <label className="op-field op-field--wide">
+          <span>Full Name <b>*</b></span>
+          <input name="fullName" autoComplete="name" placeholder="Your full name" value={fields.fullName} onChange={updateField("fullName")} aria-invalid={Boolean(errors.fullName)} aria-describedby={errors.fullName ? "ontario-name-error" : undefined} />
+          {errors.fullName ? <small id="ontario-name-error">{errors.fullName}</small> : null}
         </label>
         <label className="op-field">
-          <span>Last name <b>*</b></span>
-          <input name="lastName" autoComplete="family-name" value={fields.lastName} onChange={updateField("lastName")} aria-invalid={Boolean(errors.lastName)} aria-describedby={errors.lastName ? "ontario-last-error" : undefined} />
-          {errors.lastName ? <small id="ontario-last-error">{errors.lastName}</small> : null}
+          <span>Phone Number <b>*</b></span>
+          <input name="phone" type="tel" autoComplete="tel" placeholder="+1 416 555 0123" value={fields.phone} onChange={updateField("phone")} aria-invalid={Boolean(errors.phone)} aria-describedby={errors.phone ? "ontario-phone-error" : undefined} />
+          {errors.phone ? <small id="ontario-phone-error">{errors.phone}</small> : null}
         </label>
         <label className="op-field">
           <span>Email <b>*</b></span>
-          <input name="email" type="email" autoComplete="email" value={fields.email} onChange={updateField("email")} aria-invalid={Boolean(errors.email)} aria-describedby={errors.email ? "ontario-email-error" : undefined} />
+          <input name="email" type="email" autoComplete="email" placeholder="you@example.com" value={fields.email} onChange={updateField("email")} aria-invalid={Boolean(errors.email)} aria-describedby={errors.email ? "ontario-email-error" : undefined} />
           {errors.email ? <small id="ontario-email-error">{errors.email}</small> : null}
         </label>
         <label className="op-field">
-          <span>Phone <b>*</b></span>
-          <span className="op-phone-field">
-            <select aria-label="Phone country code" value={fields.countryCode} onChange={updateField("countryCode")}>
-              <option value="+1">Canada / US +1</option>
-              <option value="+44">UK +44</option>
-              <option value="+91">India +91</option>
-              <option value="+971">UAE +971</option>
-              <option value="+61">Australia +61</option>
-            </select>
-            <input name="phone" type="tel" autoComplete="tel-national" value={fields.phone} onChange={updateField("phone")} aria-invalid={Boolean(errors.phone)} aria-describedby={errors.phone ? "ontario-phone-error" : undefined} />
-          </span>
-          {errors.phone ? <small id="ontario-phone-error">{errors.phone}</small> : null}
+          <span>Age Range <b>*</b></span>
+          <select name="ageRange" value={fields.ageRange} onChange={updateField("ageRange")} aria-invalid={Boolean(errors.ageRange)} aria-describedby={errors.ageRange ? "ontario-age-error" : undefined}>
+            <option value="">Choose range</option>
+            <option value="18–24">18–24</option>
+            <option value="25–29">25–29</option>
+            <option value="30–34">30–34</option>
+            <option value="35–39">35–39</option>
+            <option value="40–44">40–44</option>
+            <option value="45 or over">45 or over</option>
+          </select>
+          {errors.ageRange ? <small id="ontario-age-error">{errors.ageRange}</small> : null}
+        </label>
+        <label className="op-field">
+          <span>Highest Qualification <b>*</b></span>
+          <select name="education" value={fields.education} onChange={updateField("education")} aria-invalid={Boolean(errors.education)} aria-describedby={errors.education ? "ontario-education-error" : undefined}>
+            <option value="">Choose level</option>
+            <option value="Secondary school">Secondary school</option>
+            <option value="Trade certificate or apprenticeship">Trade certificate or apprenticeship</option>
+            <option value="College diploma">College diploma</option>
+            <option value="Bachelor's degree">Bachelor&apos;s degree</option>
+            <option value="Master's degree">Master&apos;s degree</option>
+            <option value="Doctoral degree">Doctoral degree</option>
+          </select>
+          {errors.education ? <small id="ontario-education-error">{errors.education}</small> : null}
+        </label>
+        <label className="op-field op-field--wide">
+          <span>Occupation / Field of Work <b>*</b></span>
+          <input name="occupation" autoComplete="organization-title" placeholder="e.g. Software Engineer" value={fields.occupation} onChange={updateField("occupation")} aria-invalid={Boolean(errors.occupation)} aria-describedby={errors.occupation ? "ontario-occupation-error" : undefined} />
+          {errors.occupation ? <small id="ontario-occupation-error">{errors.occupation}</small> : null}
         </label>
       </div>
       {errorMessage ? <p className="op-form__error" role="alert">{errorMessage}</p> : null}
       <div className="op-form__submit-row">
         <button type="submit" className="op-button op-button--primary" disabled={status === "loading"}>
-          {status === "loading" ? "Sending…" : "Book a free consultation"}
-          <ArrowRight size={16} aria-hidden="true" />
+          {status === "loading" ? "Sending…" : "Check My Free Eligibility"}
         </button>
         <p>By submitting, you agree to be contacted about your enquiry. We use your information to respond and handle your request. See our <a href={site.legal.privacy.href}>Privacy Policy</a>.</p>
       </div>

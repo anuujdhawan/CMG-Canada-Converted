@@ -30,7 +30,7 @@ const REQUIRED_FIELDS = {
   contact: ["fullName", "email", "phone", "topic", "message"],
   newsletter: ["email"],
   consultation: ["fullName", "email", "phone", "country", "mode", "preferredDate"],
-  "ontario-landing": ["fullName", "email", "phone"],
+  "ontario-landing": ["fullName", "email", "phone", "ageRange", "education", "occupation"],
   "urgent-consultation": ["fullName", "email", "phone", "country", "mode", "preferredDate", "deadline"],
   assessment: ["fullName", "email", "phone", "country", "currentStatus", "goal"],
 };
@@ -57,6 +57,11 @@ function consultationLeadHtml(payload, type) {
     ["Name", clean(payload.fullName, 120)],
     ["Email", clean(payload.email, 160)],
     ["Phone", clean(payload.phone, 80) || "Not provided"],
+    ...(type === "ontario-landing" ? [
+      ["Age range", clean(payload.ageRange, 80)],
+      ["Highest qualification", clean(payload.education, 160)],
+      ["Occupation / field of work", clean(payload.occupation, 160)],
+    ] : []),
     ["Country of residence", clean(payload.country, 120)],
     ["Area of help", clean(payload.interest, 120) || "Not provided"],
     ["Consultation mode", clean(payload.mode, 80)],

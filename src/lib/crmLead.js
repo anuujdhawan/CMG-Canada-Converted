@@ -70,6 +70,7 @@ function leadDetails(type, body) {
       .filter((part) => !part.endsWith(": "));
     return detailText([
       "Landing page: Ontario PR",
+      clean(body.occupation, 160) ? `Occupation / field of work: ${clean(body.occupation, 160)}` : "",
       `Hero variant: ${clean(body.variant, 40)}`,
       `Checker result: ${clean(body.resultOutcome, 40)}`,
       answerSummary ? `Checker answers: ${answerSummary}` : "",
