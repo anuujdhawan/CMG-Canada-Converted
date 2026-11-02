@@ -19,7 +19,7 @@ export default function WhatsAppBubble({ landing = false, message = "" } = {}) {
       <span className="cmg-whatsapp-bubble-icon inline-flex w-full h-full">
         <Image
           className="cmg-whatsapp-bubble-svg block w-full h-full"
-          src="/images/whatsapp-red.svg"
+          src="/images/whatsapp-green.svg"
           alt=""
           width={256}
           height={256}
