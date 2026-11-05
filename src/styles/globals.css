@@ -3160,10 +3160,11 @@ html[data-theme="light"] .cmg-template-service .cta-section a.btn:focus-visible 
 /* -------------------------------------------------------------------------
    Responsive header contract
 
-   Keep the compact menu until the full navigation has enough room, keep the
-   phone shell centred, and keep the desktop CTA inside the shell. These rules
-   intentionally live at the end of the stylesheet because the home template
-   has older, more specific header overrides above them.
+   Keep the compact menu until the full navigation has enough room for a
+   scaled-down laptop viewport, keep the phone shell centred, and keep the
+   desktop CTA inside the shell. These rules intentionally live at the end of
+   the stylesheet because the home template has older, more specific header
+   overrides above them.
 ---------------------------------------------------------------------------- */
 .site-header__utility-inner {
   min-height: 2.75rem;
@@ -3184,7 +3185,7 @@ html[data-theme="light"] .cmg-template-service .cta-section a.btn:focus-visible 
   min-width: 2.75rem !important;
 }
 
-@media (max-width: 1359.98px) {
+@media (max-width: 1199.98px) {
   .site-header__utility-strip,
   .site-header__utility-inner {
     min-height: 2.75rem;
@@ -3285,7 +3286,7 @@ html[data-theme="light"] .cmg-template-service .cta-section a.btn:focus-visible 
   }
 }
 
-@media (min-width: 1360px) {
+@media (min-width: 1200px) {
   .site-header__nav-shell {
     width: min(1340px, calc(100% - 3rem)) !important;
     max-width: 1340px !important;
@@ -3328,7 +3329,7 @@ html[data-theme="light"] .cmg-template-service .cta-section a.btn:focus-visible 
   }
 }
 
-@media (max-width: 1359.98px) {
+@media (max-width: 1199.98px) {
   .cmg-floating-bubble:not(.cmg-chatbot-root--open) {
     right: 0.75rem !important;
     left: auto !important;
@@ -3349,7 +3350,7 @@ html[data-theme="light"] .cmg-template-service .cta-section a.btn:focus-visible 
   }
 }
 
-@media (min-width: 1360px) {
+@media (min-width: 1200px) {
   .cmg-floating-bubble:not(.cmg-chatbot-root--open) {
     right: 1.25rem !important;
     left: auto !important;

@@ -8,7 +8,7 @@ export default function HeaderMobileMenuLauncher() {
       type="button"
       id="site-header-mobile-menu-button"
       onClick={() => window.dispatchEvent(new Event("cmg:open-mobile-menu"))}
-      className="site-header__menu-button min-[1360px]:hidden inline-flex h-11 w-11 items-center justify-center rounded-lg p-2.5 text-primary transition-colors hover:bg-primary/10"
+      className="site-header__menu-button min-[1200px]:hidden inline-flex h-11 w-11 items-center justify-center rounded-lg p-2.5 text-primary transition-colors hover:bg-primary/10"
       aria-label="Open menu"
       aria-controls="cmg-mobile-menu"
       aria-expanded="false"

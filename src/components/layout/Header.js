@@ -289,7 +289,7 @@ export default function Header() {
             <div className="flex items-center justify-between">
               <BrandLogo />
 
-              <nav className="site-header__desktop-nav hidden min-[1360px]:flex items-center gap-1" aria-label="Main">
+              <nav className="site-header__desktop-nav hidden min-[1200px]:flex items-center gap-1" aria-label="Main">
                 {navigation.header.map((item, index) => {
                   const hasPanel = !!item.columns?.length;
                   const standaloneClass = item.standalone ? "text-accent-dark font-bold" : "";
@@ -325,7 +325,7 @@ export default function Header() {
                 })}
               </nav>
 
-              <div className="site-header__desktop-cta hidden min-[1360px]:flex items-center">
+              <div className="site-header__desktop-cta hidden min-[1200px]:flex items-center">
                 <Link href={site.ctas.primary.href} className="site-header__cta rounded-md bg-primary text-white font-bold px-3.5 py-2.5 text-[12px] hover:bg-navy transition-colors shadow-md whitespace-nowrap">
                   {site.ctas.primary.label}
                 </Link>

@@ -25,6 +25,7 @@ import provincialNomineeProgramCanada2026 from "./provincial-nominee-program-can
 import ruralCommunityImmigrationPilotCanada from "./rural-community-immigration-pilot-canada";
 import atlanticImmigrationProgramGuide from "./atlantic-immigration-program-guide";
 import canadaWorkPermitTypes2026 from "./canada-work-permit-types-2026";
+import workPermitJobLossCanada from "./work-permit-job-loss-canada";
 import lmiaCanadaExplained from "./lmia-canada-explained";
 import pgwpCanada2026 from "./pgwp-canada-2026";
 import canadaStudyPermit2026 from "./canada-study-permit-2026";
@@ -72,6 +73,7 @@ export const BLOG_ARTICLES = {
   "rural-community-immigration-pilot-canada": ruralCommunityImmigrationPilotCanada,
   "atlantic-immigration-program-guide": atlanticImmigrationProgramGuide,
   "canada-work-permit-types-2026": canadaWorkPermitTypes2026,
+  "work-permit-job-loss-canada": workPermitJobLossCanada,
   "lmia-canada-explained": lmiaCanadaExplained,
   "pgwp-canada-2026": pgwpCanada2026,
   "canada-study-permit-2026": canadaStudyPermit2026,

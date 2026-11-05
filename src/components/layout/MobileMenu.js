@@ -57,7 +57,7 @@ export default function MobileMenu({ open, onClose }) {
   return (
     <div
       className={cn(
-        "fixed inset-0 z-[1100] min-[1360px]:hidden overflow-hidden",
+        "fixed inset-0 z-[1100] min-[1200px]:hidden overflow-hidden",
         !open && "pointer-events-none"
       )}
       role="dialog"

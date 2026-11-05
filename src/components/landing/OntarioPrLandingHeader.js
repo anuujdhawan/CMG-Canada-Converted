@@ -65,13 +65,13 @@ export default function OntarioPrLandingHeader() {
               </span>
             </Link>
 
-            <nav className="site-header__desktop-nav absolute left-1/2 top-1/2 hidden !w-max !flex-none -translate-x-1/2 -translate-y-1/2 min-[1360px]:flex !items-center !justify-center gap-1" aria-label="Ontario landing sections">
+            <nav className="site-header__desktop-nav absolute left-1/2 top-1/2 hidden !w-max !flex-none -translate-x-1/2 -translate-y-1/2 min-[1200px]:flex !items-center !justify-center gap-1" aria-label="Ontario landing sections">
               {SECTION_LINKS.map(({ href, label }) => (
                 <a key={href} href={href} className={SECTION_LINK_CLASS}>{label}</a>
               ))}
             </nav>
 
-            <div className="site-header__desktop-cta hidden min-[1360px]:flex items-center">
+            <div className="site-header__desktop-cta hidden min-[1200px]:flex items-center">
               <a href="#free-consultation" className="site-header__cta rounded-md bg-primary text-white font-bold px-3.5 py-2.5 text-[12px] shadow-md transition-colors whitespace-nowrap">
                 Book a free consultation
               </a>
@@ -80,7 +80,7 @@ export default function OntarioPrLandingHeader() {
             <button
               ref={menuButtonRef}
               type="button"
-              className="site-header__menu-button inline-flex h-11 w-11 items-center justify-center rounded-lg p-2.5 text-white transition-colors hover:bg-white/10 min-[1360px]:hidden"
+              className="site-header__menu-button inline-flex h-11 w-11 items-center justify-center rounded-lg p-2.5 text-white transition-colors hover:bg-white/10 min-[1200px]:hidden"
               aria-label={menuOpen ? "Close landing page menu" : "Open landing page menu"}
               aria-controls="ontario-pr-section-menu"
               aria-expanded={menuOpen}
@@ -93,7 +93,7 @@ export default function OntarioPrLandingHeader() {
           {menuOpen ? (
             <nav
               id="ontario-pr-section-menu"
-              className="absolute left-0 right-0 top-[calc(100%+10px)] z-[210] grid gap-1 rounded-2xl border border-white/10 bg-[linear-gradient(145deg,rgba(18,25,39,.98),rgba(8,12,21,.98))] p-3 shadow-[0_28px_70px_rgba(0,0,0,.42)] backdrop-blur-xl min-[1360px]:hidden"
+              className="absolute left-0 right-0 top-[calc(100%+10px)] z-[210] grid gap-1 rounded-2xl border border-white/10 bg-[linear-gradient(145deg,rgba(18,25,39,.98),rgba(8,12,21,.98))] p-3 shadow-[0_28px_70px_rgba(0,0,0,.42)] backdrop-blur-xl min-[1200px]:hidden"
               aria-label="Ontario landing sections"
             >
               {SECTION_LINKS.map(({ href, label }) => (

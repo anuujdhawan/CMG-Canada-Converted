@@ -244,6 +244,10 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
     src: "/images/blog/city-walk.webp",
     alt: "People moving through a Canadian city while planning work permit options",
   },
+  "work-permit-job-loss-canada": {
+    src: "/images/blog/maintained-status-work-permit-extension-canada.webp",
+    alt: "Worker reviewing work permit documents while planning a change of employment in Canada",
+  },
   "lmia-canada-explained": {
     src: "/images/blog/calgary-skyline.webp",
     alt: "Canadian business district representing an LMIA employer immigration plan",
