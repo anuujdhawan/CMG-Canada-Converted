@@ -106,9 +106,9 @@ doc.add_paragraph(
     "The question is therefore not simply whether official information exists. It is whether the system makes the next necessary decision visible to a person who may be new to Canada, unfamiliar with Canadian institutions, working in a second language or managing urgent housing and health needs at the same time."
 )
 
-doc.add_paragraph("A Canadian case study", style="Heading 1")
+doc.add_paragraph("A Canadian case study in Brampton", style="Heading 1")
 doc.add_paragraph(
-    "Consider a claimant who makes an inland refugee claim after arriving in Canada and is settling in the Greater Toronto Area. "
+    "Consider a claimant who makes an inland refugee claim after arriving in Canada and is settling in Brampton in the Greater Toronto Area. "
     "The scenario is composite: it brings together the sequence and information demands described in public government and tribunal guidance rather than reconstructing any one person’s file. "
     "Its value is that it shows where a right can become difficult to access even when each institution has published relevant instructions."
 )
@@ -175,7 +175,7 @@ doc.add_paragraph(
 
 doc.add_paragraph("Conclusion", style="Heading 1")
 doc.add_paragraph(
-    "The Canadian case study shows how an information gap can emerge without a single institution providing incorrect guidance. The gap appears at the joins: between IRCC and the IRB, between a status document and a service, between a general referral and a time-sensitive legal need, and between a change of address and the several bodies that must be notified."
+    "The Brampton case study shows how an information gap can emerge without a single institution providing incorrect guidance. The gap appears at the joins: between IRCC and the IRB, between a status document and a service, between a general referral and a time-sensitive legal need, and between a change of address and the several bodies that must be notified."
 )
 doc.add_paragraph(
     "Closing that gap is a practical part of refugee-rights protection. The goal is not to replace legal advice or simplify a process that has legitimate safeguards. It is to make the route through the process more intelligible, especially for people who must act before they have secure housing, stable income, a trusted adviser or confidence in the language of the system. A right is more meaningful when the person entitled to it can identify the next step and reach the institution responsible for it."

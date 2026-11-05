@@ -5,6 +5,7 @@ const FOCAL_POSITIONS = {
   "city-street.webp": "center 24%",
   "couple.webp": "center 44%",
   "engineer.webp": "center 34%",
+  "spouse-open-work-permit-brampton-2026-landscape.webp": "center 24%",
   "toronto-skyline.webp": "center 25%",
 };
 

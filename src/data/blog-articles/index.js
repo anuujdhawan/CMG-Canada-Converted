@@ -60,6 +60,9 @@ import visitorRecordVsTrvCanada from "./visitor-record-vs-trv-canada";
 import canadaImmigrationScamsAuthorizedRepresentative from "./canada-immigration-scams-authorized-representative";
 import canadaImmigrationConsultingFirms from "./canada-immigration-consulting-firms";
 import immigrationConsultantBrampton from "./immigration-consultant-brampton";
+import topImmigrationConsultantsCanada from "./top-immigration-consultants-canada";
+import proceduralFairnessLetterHowToRespond from "./procedural-fairness-letter-how-to-respond";
+import choosingRightImmigrationConsultantMississauga from "./choosing-right-immigration-consultant-mississauga";
 
 /** Article bodies keyed by the slug used in `blog-research.js`. */
 export const BLOG_ARTICLES = {
@@ -108,6 +111,9 @@ export const BLOG_ARTICLES = {
   "canada-immigration-scams-authorized-representative": canadaImmigrationScamsAuthorizedRepresentative,
   "canada-immigration-consulting-firms": canadaImmigrationConsultingFirms,
   "immigration-consultant-brampton": immigrationConsultantBrampton,
+  "top-immigration-consultants-canada": topImmigrationConsultantsCanada,
+  "procedural-fairness-letter-how-to-respond": proceduralFairnessLetterHowToRespond,
+  "choosing-right-immigration-consultant-mississauga": choosingRightImmigrationConsultantMississauga,
 };
 
 /** The body for a slug, or null when a post has not been expanded yet. */

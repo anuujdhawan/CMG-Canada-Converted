@@ -77,6 +77,7 @@ export const ALL_BLOG_CATEGORY = "all";
 const RESEARCH_CATEGORY_SLUG = {
   "Canada Immigration": "immigration-guides",
   "Canada Immigration News": "immigration-guides",
+  "Refusals & Appeals": "refusals",
   "Permanent Residence": "immigration-guides",
   "Express Entry": "express-entry",
   "Provincial Nominee Programs": "provincial-nominee-programs",
@@ -380,6 +381,18 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
     src: "/images/pages/office-meeting.webp",
     alt: "Immigration consultation meeting in a professional office",
   },
+  "top-immigration-consultants-canada": {
+    src: "/images/pages/office-meeting.webp",
+    alt: "Immigration consultation meeting in a professional office",
+  },
+  "procedural-fairness-letter-how-to-respond": {
+    src: "/images/blog/brampton/procedural-fairness-letter-response-brampton.webp",
+    alt: "Applicant reviewing evidence and a procedural fairness letter response",
+  },
+  "choosing-right-immigration-consultant-mississauga": {
+    src: "/images/blog/brampton/rcic-vs-immigration-lawyer-ontario.webp",
+    alt: "Two people comparing immigration advice and service options",
+  },
   "express-entry-crs-changes-brampton-november-2026": {
     src: "/images/blog/brampton/express-entry-crs-changes-brampton-november-2026.webp",
     alt: "Hands sorting paperwork with a calculator and laptop on a desk",
@@ -421,8 +434,8 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
     alt: "Coworkers reviewing a work schedule on a laptop",
   },
   "spouse-open-work-permit-brampton-2026": {
-    src: "/images/blog/brampton/spouse-open-work-permit-brampton-2026.webp",
-    alt: "Couple holding a small wooden house model",
+    src: "/images/blog/brampton/spouse-open-work-permit-brampton-2026-landscape.webp",
+    alt: "Graphic asking whether you met your spouse outside Canada, with a Canadian couple and flag",
   },
   "can-i-apply-for-pr-after-pgwp-brampton": {
     src: "/images/blog/brampton/can-i-apply-for-pr-after-pgwp-brampton.webp",
