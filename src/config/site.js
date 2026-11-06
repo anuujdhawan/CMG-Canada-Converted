@@ -124,7 +124,9 @@ export const site = {
     // image. It is intentionally the full homepage hero rather than the
     // square favicon so WhatsApp and other link-preview crawlers show the
     // site's main visual on every otherwise-unconfigured route.
-    ogImage: "/images/social/homepage-hero.jpg",
+    // Keep a version on the asset URL so social crawlers do not reuse an
+    // incomplete image response cached before the preview was published.
+    ogImage: "/images/social/homepage-hero.jpg?v=2",
     ogImageWidth: 1600,
     ogImageHeight: 839,
     ogImageType: "image/jpeg",
