@@ -56,6 +56,22 @@ export function normalizePageTitle(title) {
   return result ? `${result}…` : withoutParenthetical.slice(0, TITLE_LIMIT);
 }
 
+/**
+ * Read an optional route-specific share image from page data. Routes that do
+ * not provide one continue to use the homepage hero configured in site.meta.
+ */
+export function getPageShareImage(page) {
+  const image = page?.seo?.image
+    || page?.seo?.ogImage
+    || page?.image
+    || page?.heroImage
+    || page?.ogImage
+    || page?.meta?.ogImage;
+
+  if (!image) return undefined;
+  return typeof image === "string" ? { url: image } : image;
+}
+
 export function buildMetadata({
   title,
   description,
@@ -76,8 +92,12 @@ export function buildMetadata({
         url: site.meta.ogImage,
         width: site.meta.ogImageWidth,
         height: site.meta.ogImageHeight,
+        type: site.meta.ogImageType,
+        alt: site.meta.ogImageAlt,
       };
-  const imageUrl = absoluteUrl(imageConfig.url);
+  const imageUrl = /^https?:\/\//i.test(imageConfig.url || "")
+    ? imageConfig.url
+    : absoluteUrl(imageConfig.url);
   const imageAlt = imageConfig?.alt || site.name + " — Canadian immigration guidance";
   // Only emit dimensions we actually know. Guessing 1912x1140 for every
   // page-specific image produces incorrect Open Graph tags for the cover art.

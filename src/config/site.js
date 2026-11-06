@@ -120,9 +120,15 @@ export const site = {
       "LMIA",
       "licensed RCIC",
     ],
-    ogImage: "/icon.png",
-    ogImageWidth: 192,
-    ogImageHeight: 192,
+    // This is the fallback used when a route does not define its own share
+    // image. It is intentionally the full homepage hero rather than the
+    // square favicon so WhatsApp and other link-preview crawlers show the
+    // site's main visual on every otherwise-unconfigured route.
+    ogImage: "/images/social/homepage-hero.jpg",
+    ogImageWidth: 1600,
+    ogImageHeight: 839,
+    ogImageType: "image/jpeg",
+    ogImageAlt: "Commonwealth Migration Group homepage hero",
     locale: "en_CA",
   },
 

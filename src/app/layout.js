@@ -41,7 +41,7 @@ export const metadata = {
   ...sitewideMetadataDefaults,
   // Icons come from Next 16 file conventions in src/app/ (favicon.ico, icon.png
   // and apple-icon.png), not from metadata.icons. The default social preview
-  // intentionally uses the same square bird/chakra mark as the title-bar icon.
+  // is the full homepage hero configured in site.meta.ogImage.
 };
 
 export const viewport = {
@@ -58,7 +58,7 @@ const schemaAssetUrl = (value) => {
   return /^https?:\/\//i.test(value) ? value : absoluteUrl(value);
 };
 const organizationLogoUrl = schemaAssetUrl(site.logos.large);
-const organizationImageUrl = schemaAssetUrl(site.meta.ogImage);
+const organizationImageUrl = schemaAssetUrl(site.logos.og || site.logos.large);
 const organizationSameAs = Object.values(site.social).filter(Boolean);
 const organizationContactPoint = [
   site.email.includes("@") ? { "@type": "ContactPoint", contactType: "customer support", email: site.email, areaServed: "CA", availableLanguage: ["English"] } : null,

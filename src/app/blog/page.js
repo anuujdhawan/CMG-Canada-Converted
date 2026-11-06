@@ -1,5 +1,5 @@
 import { getPage } from "@/lib/sitePages";
-import { buildMetadata, serializeJsonLd } from "@/lib/seo";
+import { buildMetadata, getPageShareImage, serializeJsonLd } from "@/lib/seo";
 import { pageStructuredData } from "@/components/templates/ContentPage";
 import BlogIndexPage from "@/components/blog/BlogIndexPage";
 import { resolveBlogCategory, resolveBlogPage } from "@/lib/blog";
@@ -26,6 +26,7 @@ export async function generateMetadata({ searchParams }) {
     description: DESCRIPTION,
     path: "/blog",
     keywords: ["Canada immigration blog", "Express Entry guides", "Canadian immigration advice"],
+    image: getPageShareImage(getPage("/blog")),
     // A filtered or paginated view is a slice of the same library, so it points
     // its canonical at /blog and stays out of the index rather than competing
     // with it.

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, getPageShareImage } from "@/lib/seo";
 import { attachClientFaqs } from "@/lib/clientFaqs";
 import { getCmgPage, getCmgRoutePaths, getLegalPage, getLegalRoutePaths } from "@/lib/cmgPages";
 import ContentPage from "@/components/templates/ContentPage";
@@ -24,6 +24,7 @@ export async function generateMetadata({ params }) {
     description: page.seo?.description,
     path: page.path,
     keywords: page.seo?.keywords,
+    image: getPageShareImage(page),
   });
 }
 
