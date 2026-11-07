@@ -23,11 +23,6 @@ for (const route of routeMap) {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactCompiler: true,
-  experimental: {
-    // SERP visitors commonly arrive on a cold cache and mobile connection. The
-    // shared Tailwind stylesheet otherwise adds a render-blocking request.
-    inlineCss: true,
-  },
 
   // Keep the shared photo quality at Next Image's standard quality setting.
   images: {
