@@ -2,8 +2,8 @@ import fs from "fs";
 import path from "path";
 import { execFileSync } from "child_process";
 import { getAllPages } from "@/lib/sitePages";
-import { RESEARCH_BLOG_POSTS } from "@/data/blog-research";
 import { site } from "@/config/site";
+import { ADDITIONAL_INDEXABLE_PAGES, EXCLUDED_SITEMAP_PATHS } from "@/lib/seoRoutes";
 
 /**
  * Last resort when a page declares no date and its source file cannot be read.
@@ -64,37 +64,6 @@ function resolveLastModified(page) {
   }
   return sourceFileDate(page.meta?.sourceFile) || FALLBACK_LASTMOD;
 }
-
-// Transactional and confirmation pages must not be advertised as indexable
-// search destinations. Their route metadata still controls the rendered
-// robots directive; this set keeps the sitemap aligned with that decision.
-const EXCLUDED_SITEMAP_PATHS = new Set([
-  "/pay/success",
-]);
-
-const ADDITIONAL_INDEXABLE_PAGES = [
-  // Dedicated app routes do not come from pageData, so keep them explicit.
-  { path: "/canada-immigration-news", lastModified: "2026-10-06", changeFrequency: "daily", priority: 0.8 },
-  { path: "/immigration-draws", lastModified: "2026-10-06", changeFrequency: "daily", priority: 0.8 },
-  // Keep the dedicated PNP results route in the sitemap with the same
-  // freshness signal as its page metadata. Filtered query-string views use
-  // the page's canonical URL and are intentionally not emitted separately.
-  { path: "/pnp-draws", lastModified: "2026-10-08", changeFrequency: "daily", priority: 0.8 },
-  { path: "/assessment/free-canada-immigration-assessment", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.8 },
-  { path: "/ontario-pr", lastModified: "2026-10-29", changeFrequency: "weekly", priority: 0.8 },
-  { path: "/tools/canada-immigration-calculators", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.8 },
-  { path: "/tools/crs-calculator-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.8 },
-  { path: "/tools/pnp-eligibility-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/tools/noc-finder-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/tools/document-checklist-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/contact/book-immigration-consultation-canada", lastModified: "2026-10-06", changeFrequency: "monthly", priority: 0.8 },
-  ...RESEARCH_BLOG_POSTS.map((post) => ({
-    path: `/blog/${post.slug}`,
-    lastModified: post.updated || post.date || "2026-10-06",
-    changeFrequency: "monthly",
-    priority: 0.7,
-  })),
-];
 
 function isIndexable(page) {
   return !EXCLUDED_SITEMAP_PATHS.has(page.path) && !/\bnoindex\b/i.test(page.seo?.robots || "");

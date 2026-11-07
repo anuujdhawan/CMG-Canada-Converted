@@ -13,7 +13,7 @@ const article = {
   sourcesHeading: "Sources",
 
   quickAnswer:
-    "Canada is changing how Express Entry scores high-wage workers, and Ontario has replaced eight OINP streams with one. On November 3, 2026, Express Entry adds up to 150 CRS points for Canadian work experience or a job offer in a high-wage occupation, and an LMIA is no longer needed for a qualifying job offer. In Ontario, the Ontario Workforce Priority (OWP) stream now replaces the former employer job offer, graduate and Express Entry streams, and the province scores applicants through an Expression of Interest (EOI) system. If you live in Brampton, Toronto, Mississauga or Hamilton, check your occupation, wage and job offer now, because some of these changes need action before November 3.",
+    "Express Entry changes 2026 add new high-wage CRS points from November 3, while Ontario's OINP Workforce Priority stream replaces eight former streams. Check your NOC, wage, job offer and CRA records before updating your profile or EOI. The high-wage CRS points and OINP scoring rules are separate, and neither guarantees an invitation or nomination.",
 
   keyTakeaways: [
     "Express Entry: new points for high-wage Canadian work experience (up to 150) or a qualifying job offer (up to 100), starting November 3, 2026.",
@@ -109,6 +109,9 @@ const article = {
     {
       id: "gta-and-hamilton-impact",
       heading: "What this means in the GTA and Hamilton",
+      body: [
+        "The practical impact in Brampton, Toronto, Mississauga and Hamilton depends on the occupation's official classification and wage data, not on a job title alone. Review the evidence before assuming that a new score applies.",
+      ],
       list: {
         items: [
           "Brampton and Mississauga: many applicants work in logistics, manufacturing, health care and trades. Check whether your exact NOC code, based on your actual duties, is on the high-wage list before you assume you will gain points. Job titles can mislead.",
@@ -205,11 +208,16 @@ const article = {
     {
       id: "what-you-should-do-now",
       heading: "Part 3: What you should do now",
-      body: [],
+      body: [
+        "Your next step depends on whether you are already in the Express Entry pool, preparing an Ontario EOI, or supporting an employee. Use the checklist that matches your position and preserve the documents behind every claim.",
+      ],
     },
     {
       id: "express-entry-checklist",
       heading: "If you are in the Express Entry pool",
+      body: [
+        "Candidates in the pool should update only with information they can prove. A correct NOC and complete job-offer record are more useful than a speculative score increase.",
+      ],
       list: {
         ordered: true,
         items: [
@@ -223,6 +231,9 @@ const article = {
     {
       id: "oinp-checklist",
       heading: "If you are considering the OINP",
+      body: [
+        "An Ontario EOI is an evidence exercise as well as a points exercise. Confirm the pathway, employer relationship and tax records before relying on an estimated score.",
+      ],
       list: {
         ordered: true,
         items: [
@@ -236,6 +247,9 @@ const article = {
     {
       id: "ontario-employer-checklist",
       heading: "If you are an employer in Ontario",
+      body: [
+        "Employers should align the job offer, payroll evidence and recruitment records before an invitation arrives. The employer submission is a separate responsibility from the candidate's application.",
+      ],
       list: {
         ordered: true,
         items: [
@@ -259,6 +273,14 @@ const article = {
     { href: "/immigrate/express-entry", label: "Express Entry", note: "Federal Express Entry program and service information." },
     { href: "/immigrate/ontario-pnp-oinp", label: "OINP", note: "Ontario Immigrant Nominee Program pathways and service information." },
     { href: "/contact/book-immigration-consultation-canada", label: "Book a consultation", note: "Discuss how these changes apply to your case." },
+  ],
+
+  glossary: [
+    { term: "CRS", definition: "The Comprehensive Ranking System used to rank eligible Express Entry profiles." },
+    { term: "EOI", definition: "An Expression of Interest profile used by Ontario to score and select eligible applicants." },
+    { term: "OINP", definition: "Ontario's provincial nominee program, which can nominate eligible applicants for permanent residence." },
+    { term: "TEER", definition: "The Training, Education, Experience and Responsibilities category used in Canada's NOC system." },
+    { term: "LMIA", definition: "A Labour Market Impact Assessment that can be required for some employer hiring and work-permit situations." },
   ],
 
   sources: [
@@ -287,7 +309,7 @@ const article = {
   faqs: [
     {
       question: "When do the new Express Entry rules start?",
-      answer: "The new high-wage points and the LMIA change start on November 3, 2026. IRCC announced them on October 16, 2026.",
+      answer: "The new high-wage points and the related LMIA change start on November 3, 2026. IRCC announced the changes on October 16, 2026, and candidates should check their profile before then.",
     },
     {
       question: "How many extra CRS points can I get?",
@@ -299,7 +321,7 @@ const article = {
     },
     {
       question: "Does a higher score guarantee an invitation?",
-      answer: "No. Invitations depend on each round's requirements and cut-off score, and nobody can guarantee one.",
+      answer: "No. Invitations depend on the eligibility rules, category or program used, the number of candidates and that round's cut-off score. Nobody can guarantee an invitation.",
     },
     {
       question: "What replaced the OINP streams?",
@@ -312,6 +334,18 @@ const article = {
     {
       question: "Will more changes follow?",
       answer: "Yes. Ontario has announced a second phase of its redesign without giving details, and IRCC has said it is continuing to refine Express Entry. Check official sources regularly.",
+    },
+    {
+      question: "How should I verify my NOC before claiming high-wage points?",
+      answer: "Compare your actual employment duties with the official NOC description, then check the applicable wage information and retain employer evidence. A matching job title alone is not enough.",
+    },
+    {
+      question: "Do OINP earnings points use my household income?",
+      answer: "The announced earnings factor looks at the registrant's qualifying income in a single year and uses a CRA Notice of Assessment. Household income should not be substituted without checking Ontario's instructions.",
+    },
+    {
+      question: "What should an Ontario employer prepare first?",
+      answer: "An employer should confirm the job, wage, duties, recruitment and business records, then be ready for the employer submission deadline. The candidate's EOI does not replace the employer's evidence.",
     },
   ],
 };

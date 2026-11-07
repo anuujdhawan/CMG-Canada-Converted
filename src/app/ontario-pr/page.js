@@ -4,21 +4,26 @@ import "@/styles/ontario-pr.css";
 
 const pagePath = "/ontario-pr";
 
-const pageMetadata = buildMetadata({
+const pageMetadataConfig = {
   title: "Canada PR through Ontario | OINP & Express Entry | CMG",
   description:
     "Ontario's nominee programme changed in 2026. Find out which route fits your profile in a free 30-minute consultation with a CICC-regulated RCIC in Brampton.",
   path: pagePath,
   keywords: ["Ontario OINP", "Ontario Workforce Priority stream", "Express Entry Ontario", "Canada PR consultation"],
-});
+};
 
 const pageTitle = "Canada PR through Ontario | OINP & Express Entry | CMG";
-export const metadata = {
-  ...pageMetadata,
-  title: { absolute: pageTitle },
-  openGraph: { ...pageMetadata.openGraph, title: pageTitle },
-  twitter: { ...pageMetadata.twitter, title: pageTitle },
-};
+export async function generateMetadata({ searchParams }) {
+  const params = await searchParams;
+  const hasQuery = Object.keys(params || {}).length > 0;
+  const pageMetadata = buildMetadata({ ...pageMetadataConfig, noIndex: hasQuery });
+  return {
+    ...pageMetadata,
+    title: { absolute: pageTitle },
+    openGraph: { ...pageMetadata.openGraph, title: pageTitle },
+    twitter: { ...pageMetadata.twitter, title: pageTitle },
+  };
+}
 
 const bookingUrl = (() => {
   const configured = process.env.NEXT_PUBLIC_CMG_ONTARIO_BOOKING_URL?.trim();

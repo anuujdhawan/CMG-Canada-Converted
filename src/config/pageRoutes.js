@@ -12,6 +12,9 @@ const routeByLegacyPath = Object.fromEntries(
 const extraRoutes = {
   "/tools": "/tools/canada-immigration-calculators",
   "/tools/free-assessment": "/assessment/free-canada-immigration-assessment",
+  "/tools/pnp-eligibility": "/tools/pnp-eligibility-canada",
+  "/tools/noc-finder": "/tools/noc-finder-canada",
+  "/tools/document-checklist": "/tools/document-checklist-canada",
   "/canada-immigration-calculators": "/tools/canada-immigration-calculators",
   "/crs-calculator-canada": "/tools/crs-calculator-canada",
   "/free-canada-immigration-assessment": "/assessment/free-canada-immigration-assessment",

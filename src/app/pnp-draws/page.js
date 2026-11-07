@@ -17,7 +17,7 @@ const page = attachClientFaqs({
   jsonLd: [],
 });
 
-export const metadata = buildMetadata({
+const pageMetadataConfig = {
   title: "PNP Draw Results Canada | Provincial Nominee Tracker",
   description: "Track Canadian PNP draw results by province, stream, date, score or selection signal, and invitations, with official source links for each historical round.",
   path: "/pnp-draws",
@@ -32,7 +32,13 @@ export const metadata = buildMetadata({
     "AAIP draws",
     "OINP draws",
   ],
-});
+};
+
+export async function generateMetadata({ searchParams }) {
+  const params = await searchParams;
+  const hasQuery = Object.keys(params || {}).length > 0;
+  return buildMetadata({ ...pageMetadataConfig, noIndex: hasQuery });
+}
 
 export default function PnpDrawsRoute() {
   const fullFeed = getPnpDrawFeed();

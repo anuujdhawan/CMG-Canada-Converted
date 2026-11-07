@@ -18,6 +18,7 @@ export function serializeJsonLd(value) {
 }
 
 const TITLE_LIMIT = 60;
+const DESCRIPTION_LIMIT = 155;
 
 /**
  * Keep page titles concise without throwing away the page's primary topic.
@@ -57,6 +58,22 @@ export function normalizePageTitle(title) {
 }
 
 /**
+ * Keep search snippets and social descriptions concise without cutting a
+ * sentence in the middle when a source description is unusually long.
+ */
+export function normalizeMetaDescription(description) {
+  const value = String(description || "").replace(/\s+/g, " ").trim();
+  if (value.length <= DESCRIPTION_LIMIT) return value;
+
+  const clipped = value
+    .slice(0, DESCRIPTION_LIMIT - 1)
+    .replace(/\s+\S*$/, "")
+    .replace(/[,:;–—-]\s*$/, "")
+    .trim();
+  return clipped ? `${clipped}…` : `${value.slice(0, DESCRIPTION_LIMIT - 1)}…`;
+}
+
+/**
  * Read an optional route-specific share image from page data. Routes that do
  * not provide one continue to use the homepage hero configured in site.meta.
  */
@@ -82,7 +99,7 @@ export function buildMetadata({
   image,
 } = {}) {
   const resolvedTitle = title || site.meta.defaultTitle;
-  const resolvedDescription = description || site.meta.defaultDescription;
+  const resolvedDescription = normalizeMetaDescription(description || site.meta.defaultDescription);
   const pageTitle = normalizePageTitle(resolvedTitle);
   const url = absoluteUrl(path);
   const requestedImage = typeof image === "string" ? { url: image } : image;
@@ -110,7 +127,12 @@ export function buildMetadata({
     // `title: undefined` would overwrite the layout template on spread).
     ...(title ? { title: { absolute: pageTitle } } : {}),
     description: resolvedDescription,
-    ...(keywords && { keywords: Array.isArray(keywords) ? keywords.join(", ") : keywords }),
+    ...(() => {
+      const value = Array.isArray(keywords)
+        ? keywords.filter(Boolean).join(", ")
+        : String(keywords || "").trim();
+      return value ? { keywords: value } : {};
+    })(),
     robots: { index: !noIndex, follow: true },
     alternates: url ? { canonical: url } : undefined,
     openGraph: {
