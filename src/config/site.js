@@ -126,10 +126,10 @@ export const site = {
     // site's main visual on every otherwise-unconfigured route.
     // Use a fresh, compressed asset so WhatsApp can fetch it reliably and
     // does not reuse the earlier cached preview response.
-    ogImage: "/images/social/homepage-hero-v3.jpg",
+    ogImage: "/images/social/homepage-hero-v4.webp",
     ogImageWidth: 1200,
     ogImageHeight: 629,
-    ogImageType: "image/jpeg",
+    ogImageType: "image/webp",
     ogImageAlt: "Commonwealth Migration Group homepage hero",
     locale: "en_CA",
   },
