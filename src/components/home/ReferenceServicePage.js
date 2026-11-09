@@ -101,6 +101,32 @@ function extractRelatedPages(blocks) {
   return { contentBlocks, relatedBlocks };
 }
 
+function extractOinpCalculatorSection(blocks, isOinpPage) {
+  if (!isOinpPage) return { blocks };
+
+  const calculatorIndex = blocks.findIndex((block) => block.type === "oinpCalculator");
+  if (calculatorIndex < 0) return { blocks };
+
+  const descriptionIndex = calculatorIndex - 1;
+  const headingIndex = calculatorIndex - 2;
+  const hasIntro = blocks[headingIndex]?.type === "heading"
+    && blocks[headingIndex]?.level === 2
+    && blocks[descriptionIndex]?.type === "paragraph";
+  const sectionStart = hasIntro ? headingIndex : calculatorIndex;
+  const nextHeadingIndex = calculatorIndex + 1;
+  const nextHeading = blocks[nextHeadingIndex];
+
+  // The score breakdown follows the calculator in the authored guide. Keep it
+  // as its own article section after moving the interactive tool below the hero.
+  const remainingBlocks = blocks.filter((_, index) => index < sectionStart || index > calculatorIndex);
+  if (nextHeading?.type === "heading" && nextHeading.level === 3) {
+    const retainedIndex = remainingBlocks.indexOf(nextHeading);
+    if (retainedIndex >= 0) remainingBlocks[retainedIndex] = { ...nextHeading, level: 2 };
+  }
+
+  return { blocks: remainingBlocks };
+}
+
 function renderContentBlocks(blocks, prefix, page, tableCounter) {
   let relatedPagesHeading = false;
   return blocks.map((block, index) => {
@@ -173,15 +199,17 @@ function ServiceFaqSection({ faqs, isToolPage }) {
 
 export default function ReferenceServicePage({ page, children, interactivePosition = "bottom", interactiveHeading, interactiveWide = false }) {
   const authoredOnly = page.contentMode === "authored";
+  const isOinpPage = page.path === "/immigrate/ontario-pnp-oinp";
   // Put route-specific keyword sections into the reading flow before the
   // authored route guide. This lets the featured image/text frame use the
   // expanded copy, while the rest of the page still preserves its source
   // content and receives the shared SEO/AEO additions afterward.
-  const blocks = [
+  const sourceBlocks = [
     ...(authoredOnly ? [] : getKeywordPageExpansionBlocks(page)),
     ...(page.contentBlocks || parseBlocks(page.content || "")),
     ...(authoredOnly ? [] : getSeoContentBlocks(page)),
   ];
+  const { blocks } = extractOinpCalculatorSection(sourceBlocks, isOinpPage);
   const isToolPage = page.path.startsWith("/tools/") || page.path === "/assessment/free-canada-immigration-assessment";
   const isAboutOverviewPage = page.path === "/about/about-commonwealth-migration";
   const lead = getLead(page, blocks);
@@ -193,7 +221,6 @@ export default function ReferenceServicePage({ page, children, interactivePositi
   // and prevents the attached section from showing the page's real answers.
   const sections = allSections.filter((section) => !isFaqSection(section));
   const pageFaqs = getPageFaqs(page);
-  const isOinpPage = page.path === "/immigrate/ontario-pnp-oinp";
   const servicePlanCards = isOinpPage
     ? [
         ["Choose the pathway", "Match your NOC TEER category or physician status to the correct Workforce Priority route.", Target],

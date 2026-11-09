@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { AlertTriangle, CheckCircle2, Info, RotateCcw, ShieldCheck } from "lucide-react";
+import { AlertTriangle, Calculator, CheckCircle2, Info, RotateCcw, ShieldCheck } from "lucide-react";
+import { ToolCard, ToolHeader, ToolInput, ToolResetButton, ToolResultCard, ToolSelect } from "./ui/ToolPrimitives";
 
 const LOCATION_GROUPS = [
   {
@@ -103,32 +104,35 @@ const INITIAL_ANSWERS = {
   driverNoc: "no",
 };
 
-const fieldClass = "mt-2 h-12 w-full rounded-xl border border-[var(--template-border)] bg-[var(--template-surface)] px-3 text-sm font-semibold text-[var(--template-ink)] outline-none transition focus:border-[var(--template-primary)] focus:ring-2 focus:ring-[color-mix(in_srgb,var(--template-primary)_18%,transparent)]";
-const labelClass = "grid gap-1 text-[0.78rem] font-bold text-[var(--template-ink)]";
-
 function getLocation(value) {
   return ALL_LOCATIONS.find((location) => location.value === value) || ALL_LOCATIONS.find((location) => location.value === "Peel");
 }
 
 function Field({ label, help, children, className = "" }) {
-  return <label className={`${labelClass} ${className}`}><span>{label}</span>{children}{help && <span className="text-[0.68rem] font-medium leading-[1.5] text-[var(--template-muted)]">{help}</span>}</label>;
+  return <div className={`tool-field grid gap-[0.35rem] ${className}`}>
+    <label className="grid gap-[0.35rem] text-[var(--template-ink)] text-[0.78rem] font-extrabold tracking-[-0.01em]">
+      <span>{label}</span>
+      {children}
+    </label>
+    {help && <p className="tool-field__hint m-0 text-[var(--template-muted)] text-[0.68rem] leading-[1.4]">{help}</p>}
+  </div>;
 }
 
 function SelectField({ label, help, value, onChange, options, className = "" }) {
   return <Field label={label} help={help} className={className}>
-    <select className={fieldClass} value={value || ""} onChange={(event) => onChange(event.target.value)}>
+    <ToolSelect className="mt-2" value={value || ""} onChange={(event) => onChange(event.target.value)}>
       <option value="">Choose an answer</option>
       {options.map((option) => <option value={option.value} key={option.value}>{option.label}</option>)}
-    </select>
+    </ToolSelect>
   </Field>;
 }
 
 function NumberField({ label, help, value, onChange, min = 0, max, step = 1, prefix, suffix, className = "" }) {
   return <Field label={label} help={help} className={className}>
-    <div className="relative">
-      {prefix && <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm font-semibold text-[var(--template-muted)]">{prefix}</span>}
-      <input className={`${fieldClass} ${prefix ? "pl-8" : ""} ${suffix ? "pr-14" : ""}`} type="number" min={min} max={max} step={step} value={value ?? ""} onChange={(event) => onChange(event.target.value)} />
-      {suffix && <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-[var(--template-muted)]">{suffix}</span>}
+    <div className="relative mt-2">
+      {prefix && <span className="pointer-events-none absolute inset-y-0 left-3 z-[1] flex items-center text-sm font-semibold text-[var(--template-muted)]">{prefix}</span>}
+      <ToolInput className={`${prefix ? "pl-8" : ""} ${suffix ? "pr-14" : ""}`} type="number" min={min} max={max} step={step} value={value ?? ""} onChange={(event) => onChange(event.target.value)} />
+      {suffix && <span className="pointer-events-none absolute inset-y-0 right-3 z-[1] flex items-center text-xs font-semibold text-[var(--template-muted)]">{suffix}</span>}
     </div>
   </Field>;
 }
@@ -370,17 +374,17 @@ export default function OinpWorkforceCalculator() {
   }[currentStatus.tone];
   const StatusIcon = currentStatus.Icon;
 
-  return <section id="oinp-calculator" className="scroll-mt-24 rounded-[1.35rem] border border-[var(--template-border)] bg-[var(--template-surface-alt)] p-3 shadow-[0_22px_60px_color-mix(in_srgb,var(--cmg-template-deep-surface)_10%,transparent)] sm:p-5" aria-labelledby="oinp-calculator-title">
-    <div className="grid items-start gap-4 lg:grid-cols-[minmax(0,1.45fr)_minmax(280px,.75fr)]">
+  return <ToolCard id="oinp-calculator" className="oinp-calculator-card scroll-mt-24 overflow-visible" aria-labelledby="oinp-calculator-title">
+    <ToolHeader
+      icon={Calculator}
+      kicker="Ontario Workforce Priority stream"
+      title="OINP points calculator"
+      titleId="oinp-calculator-title"
+      subtitle="Estimate your Expression of Interest (EOI) points and check the main eligibility gates. The initial 47/132 is a sample profile; change the answers to match your own evidence. Your answers stay in this page session and are not saved or sent."
+      action={<ToolResetButton onClick={reset}><RotateCcw className="h-3.5 w-3.5" /> Reset</ToolResetButton>}
+    />
+    <div className="grid items-start gap-5 p-3 sm:p-5 xl:grid-cols-[minmax(0,1.45fr)_minmax(320px,.75fr)]">
       <div className="grid min-w-0 gap-4">
-        <header className="rounded-[1rem] border border-[var(--template-border)] bg-[var(--template-surface)] p-4 sm:p-5">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <div><p className="m-0 text-[0.64rem] font-extrabold uppercase tracking-[0.14em] text-[var(--template-primary)]">Ontario Workforce Priority stream</p><h3 id="oinp-calculator-title" className="mb-0 mt-1 text-xl font-extrabold text-[var(--template-ink)]">OINP points calculator</h3></div>
-            <button type="button" onClick={reset} className="inline-flex min-h-10 items-center gap-2 rounded-full border border-[var(--template-border)] px-3 text-xs font-extrabold text-[var(--template-muted)] transition hover:border-[var(--template-primary)] hover:text-[var(--template-primary)]"><RotateCcw className="h-3.5 w-3.5" /> Reset</button>
-          </div>
-          <p className="mb-0 mt-3 text-[0.76rem] leading-[1.6] text-[var(--template-muted)]">Estimate your Expression of Interest (EOI) points and check the main eligibility gates. The initial 47/132 is a sample profile; change the answers to match your own evidence. Your answers stay in this page session and are not saved or sent.</p>
-        </header>
-
         <FormSection title="1. Choose your pathway" description="Select the route that matches your Ontario job offer or medical practice.">
           <SelectField label="Ontario Workforce Priority pathway" value={answers.pathway} onChange={(value) => update("pathway", value)} options={[
             { value: "teer-0-3", label: "Job offer · TEER 0–3" },
@@ -388,9 +392,9 @@ export default function OinpWorkforceCalculator() {
             { value: "physician", label: "Self-employed physician" },
           ]} />
           <Field label="Ontario work / practice location" help={`Regional points: ${location.points}. Employer revenue tier: ${location.tier}.`} className="sm:col-span-2">
-            <select className={fieldClass} value={answers.location} onChange={(event) => update("location", event.target.value)}>
+            <ToolSelect className="mt-2" value={answers.location} onChange={(event) => update("location", event.target.value)}>
               {LOCATION_GROUPS.map((group) => <optgroup key={group.label} label={group.label}>{group.locations.map((item) => <option key={item.value} value={item.value}>{item.label} · {item.points} regional points · {item.tier}</option>)}</optgroup>)}
-            </select>
+            </ToolSelect>
           </Field>
         </FormSection>
 
@@ -480,9 +484,9 @@ export default function OinpWorkforceCalculator() {
         </FormSection>
       </div>
 
-      <aside className="lg:sticky lg:top-24 lg:self-start" aria-live="polite">
+      <aside className="xl:sticky xl:top-40 xl:self-start" aria-live="polite">
         <div className="overflow-hidden rounded-[1.1rem] border border-[var(--template-border)] bg-[var(--template-surface)] shadow-[0_18px_46px_color-mix(in_srgb,var(--cmg-template-deep-surface)_12%,transparent)]">
-          <div className="relative isolate overflow-hidden border-b border-white/15 border-l-4 border-l-[#ffd2d8] bg-[linear-gradient(135deg,#741026_0%,#a8122c_55%,#85142f_100%)] p-5 text-white shadow-[inset_0_1px_0_rgba(255,255,255,.12)] sm:p-6 before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_88%_8%,rgba(255,255,255,.16),transparent_38%)] before:content-['']">
+          <ToolResultCard className="relative isolate min-h-0 rounded-none border-0 border-b border-white/15 border-l-4 border-l-[#ffd2d8] bg-[linear-gradient(135deg,#741026_0%,#a8122c_55%,#85142f_100%)] p-5 text-white shadow-[inset_0_1px_0_rgba(255,255,255,.12)] before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_88%_8%,rgba(255,255,255,.16),transparent_38%)] before:content-[''] sm:p-6">
             <div className="relative z-[1]">
               <div className="flex items-center justify-between gap-3">
                 <div>
@@ -499,7 +503,7 @@ export default function OinpWorkforceCalculator() {
               </div>
               <p className="mb-0 mt-2 max-w-[34ch] text-xs leading-[1.55] !text-white/90">Updates as you change an answer. This estimate is not an invitation cutoff.</p>
             </div>
-          </div>
+          </ToolResultCard>
           <div className="grid gap-4 p-4 sm:p-5">
             <div className={`flex items-start gap-2.5 rounded-xl border p-3 text-[0.72rem] font-extrabold leading-[1.45] ${statusTone}`}><StatusIcon className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" /><span>{currentStatus.label}</span></div>
             {!hasEnoughInformation && <MissingFields missing={missingFields.slice(0, 7)} />}
@@ -520,5 +524,5 @@ export default function OinpWorkforceCalculator() {
       </aside>
     </div>
     <p className="mb-0 mt-4 flex items-start gap-2 text-[0.65rem] leading-[1.5] text-[var(--template-muted)]"><Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[var(--template-primary)]" />Eligibility rules and EOI points are separate. Ontario verifies each claim and controls invitations; no score guarantees an invitation, nomination or permanent residence.</p>
-  </section>;
+  </ToolCard>;
 }
