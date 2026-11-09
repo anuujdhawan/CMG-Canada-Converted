@@ -22,7 +22,7 @@ export const tools = [
     slug: "noc-finder",
     title: "NOC / Occupation Finder",
     description:
-      "Find your occupation's TEER category and check its role in Express Entry and LMIA programs.",
+      "Search all 516 NOC 2021 unit groups, then confirm actual duties in the official occupation profile.",
     icon: "Search",
     tone: "navy",
   },

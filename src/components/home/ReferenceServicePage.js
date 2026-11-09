@@ -19,6 +19,7 @@ import TemplateMotion from "./TemplateMotion";
 // restore this import and the <LiveSuccessVideos /> call below to bring it back.
 // import LiveSuccessVideos from "./LiveSuccessVideos";
 import FaqSection from "@/components/sections/FaqSection";
+import OinpWorkforceCalculator from "@/components/tools/OinpWorkforceCalculator";
 import { getSeoContentBlocks } from "@/lib/seoContent";
 import { getKeywordPageExpansionBlocks } from "@/lib/keywordPageExpansions";
 import { getKeywordFrameContent } from "@/lib/keywordFrameContent";
@@ -103,6 +104,9 @@ function extractRelatedPages(blocks) {
 function renderContentBlocks(blocks, prefix, page, tableCounter) {
   let relatedPagesHeading = false;
   return blocks.map((block, index) => {
+    if (block.type === "oinpCalculator") {
+      return <OinpWorkforceCalculator key={`${prefix}-${block.type}-${index}`} />;
+    }
     if (block.type === "heading") {
       relatedPagesHeading = /^related pages$/i.test(block.text);
     } else if (relatedPagesHeading && block.type === "list") {
@@ -159,7 +163,7 @@ function findFeaturedTableSection(sections, paragraphSectionIndex) {
 }
 
 function addFrameKeywordCopy(section, page) {
-  const frameBlocks = getKeywordFrameContent(page);
+  const frameBlocks = page.contentMode === "authored" ? [] : getKeywordFrameContent(page);
   return frameBlocks.length > 0 ? [...section, ...frameBlocks] : section;
 }
 
@@ -168,14 +172,15 @@ function ServiceFaqSection({ faqs, isToolPage }) {
 }
 
 export default function ReferenceServicePage({ page, children, interactivePosition = "bottom", interactiveHeading, interactiveWide = false }) {
+  const authoredOnly = page.contentMode === "authored";
   // Put route-specific keyword sections into the reading flow before the
   // authored route guide. This lets the featured image/text frame use the
   // expanded copy, while the rest of the page still preserves its source
   // content and receives the shared SEO/AEO additions afterward.
   const blocks = [
-    ...getKeywordPageExpansionBlocks(page),
+    ...(authoredOnly ? [] : getKeywordPageExpansionBlocks(page)),
     ...(page.contentBlocks || parseBlocks(page.content || "")),
-    ...getSeoContentBlocks(page),
+    ...(authoredOnly ? [] : getSeoContentBlocks(page)),
   ];
   const isToolPage = page.path.startsWith("/tools/") || page.path === "/assessment/free-canada-immigration-assessment";
   const isAboutOverviewPage = page.path === "/about/about-commonwealth-migration";
@@ -188,14 +193,50 @@ export default function ReferenceServicePage({ page, children, interactivePositi
   // and prevents the attached section from showing the page's real answers.
   const sections = allSections.filter((section) => !isFaqSection(section));
   const pageFaqs = getPageFaqs(page);
+  const isOinpPage = page.path === "/immigrate/ontario-pnp-oinp";
+  const servicePlanCards = isOinpPage
+    ? [
+        ["Choose the pathway", "Match your NOC TEER category or physician status to the correct Workforce Priority route.", Target],
+        ["Check the employer", "Review the job offer, regional revenue and staffing rules, and required evidence before registering.", FileCheck2],
+        ["Prepare the EOI", "Compare score factors, track invitation deadlines and keep proof for every point you claim.", ShieldCheck],
+      ]
+    : [
+        ["Diagnose", "Start with the facts, goals, history and deadlines that shape the route.", Target],
+        ["Build", "Organize evidence, explanations and forms around the decision-maker’s concern.", FileCheck2],
+        ["Protect", "Keep ownership, communication and the next deadline visible from start to finish.", ShieldCheck],
+      ];
   const headings = sections
     .flatMap((section) => section
       .filter((block) => block.type === "heading" && block.level >= 2)
       .map((block) => ({ ...block, summary: sectionSummary(section) })))
     .slice(0, 5);
-  const showCrsCta = /express-entry|crs-calculator|pnp|provincial-nominee/.test(page.path);
+  const showCrsCta = !isOinpPage && /express-entry|crs-calculator|pnp|provincial-nominee/.test(page.path);
   const contentImages = getServiceContentImages(page);
-  const guideSupport = getFrameSupportContent(page);
+  const guideSupport = isOinpPage
+    ? {
+        eyebrow: "Ontario PNP eligibility checklist",
+        title: "Verify the route against current OINP rules",
+        paragraphs: [],
+        checks: [
+          "Confirm whether you need a TEER 0–3 or TEER 4–5 job offer, or meet the self-employed physician criteria.",
+          "Match the employer’s work location to Ontario’s revenue and staffing tier.",
+          "Keep evidence for every EOI scoring factor and eligibility requirement.",
+          "Check Ontario’s invitation page and application deadlines before submitting.",
+        ],
+      }
+    : authoredOnly
+    ? {
+        eyebrow: "Regina planning checklist",
+        title: "Verify the route against your situation",
+        paragraphs: [],
+        checks: [
+          "Confirm the exact SINP stream and current intake rules.",
+          "Compare actual job duties with NOC and employer evidence.",
+          "Check work authorization, job offer and licensing details.",
+          "Review current Saskatchewan and federal requirements.",
+        ],
+      }
+    : getFrameSupportContent(page);
   const paragraphImageSection = findFeaturedParagraphSection(sections);
   const tableImageSection = findFeaturedTableSection(sections, paragraphImageSection);
   const tableCounter = { value: 0 };
@@ -227,9 +268,11 @@ export default function ReferenceServicePage({ page, children, interactivePositi
           <div className="hero-copy relative z-[2] min-w-0 max-[880px]:w-full reveal in">
             <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-[''] [text-shadow:0_1px_8px_color-mix(in_srgb,var(--cmg-template-deep-surface)_28%,transparent)]">Licensed Canadian immigration guidance</p>
             <h1 id="service-hero-title" className="max-w-[790px] text-[clamp(42px,2.2rem+3.4vw,66px)] !font-semibold max-[620px]:!font-extrabold !leading-[1.04] !tracking-[-.03em] max-[1120px]:!text-[clamp(36px,4.2vw,48px)] max-[620px]:!text-[clamp(24px,6.7vw,28px)] max-[1023.98px]:text-center max-[1023.98px]:mx-auto text-[var(--template-on-primary)] [text-shadow:0_2px_18px_color-mix(in_srgb,var(--cmg-template-deep-surface)_42%,transparent),0_1px_2px_color-mix(in_srgb,var(--cmg-template-deep-surface)_55%,transparent)]">{title}</h1>
+            {isOinpPage && page.lastUpdatedLabel && <p className="m-0 mt-3 text-xs font-semibold text-[color-mix(in_srgb,var(--template-on-primary)_72%,transparent)] max-[1023.98px]:text-center">{page.lastUpdatedLabel}</p>}
             <p className="lead max-w-[680px] max-[1023.98px]:text-center max-[1023.98px]:mx-auto !mt-6 text-[color-mix(in_srgb,var(--template-on-primary)_82%,transparent)] [text-shadow:0_1px_10px_color-mix(in_srgb,var(--cmg-template-deep-surface)_48%,transparent)] text-[17px] leading-[1.8] max-[620px]:text-[15px]">{lead}</p>
             <div className="hero-actions flex flex-wrap gap-3 mt-[30px] max-[768px]:!flex max-[768px]:!flex-col max-[768px]:!items-center max-[768px]:!gap-3 max-[768px]:!mt-6">
               <TemplateLink path={site.ctas.primary.href} className="btn btn-primary max-[768px]:!w-full max-[768px]:!min-h-[52px] max-[768px]:!px-[22px] max-[768px]:!py-[14px] max-[768px]:!rounded-[14px] max-[768px]:!text-[14px]">Book a Consultation <ArrowRight width={18} height={18} aria-hidden="true" /></TemplateLink>
+              {isOinpPage && <Link href="#oinp-calculator" className="btn btn-secondary inline-flex items-center justify-center gap-[9px] min-h-12 rounded-[12px] border border-[var(--border)] bg-transparent px-5 py-[13px] text-[13px] font-extrabold leading-none text-[var(--ink)] transition hover:border-[var(--primary)] hover:text-[var(--primary)] max-[768px]:!w-auto max-[768px]:!min-h-10 max-[768px]:!px-[18px] max-[768px]:!py-[9px] max-[768px]:!rounded-full max-[768px]:!text-[12.5px]">Estimate my OINP score <Calculator width={18} height={18} aria-hidden="true" /></Link>}
               {showCrsCta && <TemplateLink path="/tools/crs-calculator" className="btn btn-secondary max-[768px]:!w-auto max-[768px]:!min-h-10 max-[768px]:!px-[18px] max-[768px]:!py-[9px] max-[768px]:!rounded-full max-[768px]:!text-[12.5px]">Check your CRS <Calculator width={18} height={18} aria-hidden="true" /></TemplateLink>}
             </div>
           </div>
@@ -243,9 +286,9 @@ export default function ReferenceServicePage({ page, children, interactivePositi
 
       <section className="section relative z-[1] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16">
         <div className="section-inner mx-auto w-[var(--container)]">
-          <ServiceSectionHeading eyebrow="A sharper service plan" title="Built around the decision your file needs" lead={`Use the guide below to review ${title} requirements, evidence and next steps.`} />
+          <ServiceSectionHeading eyebrow={isOinpPage ? "Ontario PNP planning" : "A sharper service plan"} title={isOinpPage ? "The OINP checks to complete before applying" : "Built around the decision your file needs"} lead={`Use the guide below to review ${title} requirements, evidence and next steps.`} />
           <div className="service-grid grid grid-cols-3 max-[1120px]:grid-cols-2 max-[620px]:grid-cols-1 gap-[15px]">
-            {[['Diagnose', 'Start with the facts, goals, history and deadlines that shape the route.', Target], ['Build', 'Organize evidence, explanations and forms around the decision-maker’s concern.', FileCheck2], ['Protect', 'Keep ownership, communication and the next deadline visible from start to finish.', ShieldCheck]].map(([heading, description, Icon], index) => <article className="service-card relative flex min-h-[220px] flex-col overflow-hidden p-[25px] max-[620px]:min-h-0 max-[620px]:p-5 rounded-[20px] reveal before:absolute before:inset-x-0 before:top-0 before:h-[3px] before:rounded-[20px_20px_0_0] before:bg-[linear-gradient(90deg,var(--primary),var(--accent))] before:origin-left before:scale-x-[.28] before:transition-transform before:duration-[400ms] before:ease-[cubic-bezier(.2,.8,.2,1)] before:content-[''] hover:before:scale-x-100" key={heading} style={{ '--delay': `${index * 60}ms` }}><span className="icon-box inline-flex h-[46px] w-[46px] items-center justify-center rounded-[14px] m-0 bg-[color-mix(in_srgb,var(--primary)_12%,transparent)] text-[var(--primary)]"><Icon width={22} height={22} aria-hidden="true" /></span><h3 className="m-[9px_0_8px] text-[var(--ink)] text-[19px] font-extrabold !leading-[1.25] tracking-normal">{heading}</h3><p className="m-0 text-[var(--muted)] text-[14px] leading-[1.65]">{description}</p><ArrowUpRight className="self-end mt-auto" width={18} height={18} aria-hidden="true" /></article>)}
+            {servicePlanCards.map(([heading, description, Icon], index) => <article className="service-card relative flex min-h-[220px] flex-col overflow-hidden p-[25px] max-[620px]:min-h-0 max-[620px]:p-5 rounded-[20px] reveal before:absolute before:inset-x-0 before:top-0 before:h-[3px] before:rounded-[20px_20px_0_0] before:bg-[linear-gradient(90deg,var(--primary),var(--accent))] before:origin-left before:scale-x-[.28] before:transition-transform before:duration-[400ms] before:ease-[cubic-bezier(.2,.8,.2,1)] before:content-[''] hover:before:scale-x-100" key={heading} style={{ '--delay': `${index * 60}ms` }}><span className="icon-box inline-flex h-[46px] w-[46px] items-center justify-center rounded-[14px] m-0 bg-[color-mix(in_srgb,var(--primary)_12%,transparent)] text-[var(--primary)]"><Icon width={22} height={22} aria-hidden="true" /></span><h3 className="m-[9px_0_8px] text-[var(--ink)] text-[19px] font-extrabold !leading-[1.25] tracking-normal">{heading}</h3><p className="m-0 text-[var(--muted)] text-[14px] leading-[1.65]">{description}</p><ArrowUpRight className="self-end mt-auto" width={18} height={18} aria-hidden="true" /></article>)}
           </div>
         </div>
       </section>

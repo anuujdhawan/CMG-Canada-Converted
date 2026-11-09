@@ -49,12 +49,12 @@ const PAGE_EXPANSIONS = [
   route(
     (path) => path === "/immigrate/ontario-pnp-oinp",
     section(
-      "OINP requirements depend on the stream",
-      "The Ontario Immigrant Nominee Program is a group of streams rather than one national checklist. Start by naming the stream and its current intake or invitation method. Then map the occupation, job offer or human-capital factors, language, education, work history, status and settlement plan to the Ontario instructions. A nomination is a provincial decision; it is followed by the applicable federal permanent-residence and admissibility process.",
+      "Ontario Workforce Priority stream eligibility in 2026",
+      "Ontario’s Workforce Priority stream now organizes new OINP candidates into TEER 0–3 job-offer, TEER 4–5 job-offer and self-employed physician pathways. Check the occupation, Ontario work experience, language, education, employer and location rules for the matching pathway. An EOI score is separate from minimum eligibility, and an invitation is not a nomination or permanent-residence approval.",
     ),
     section(
-      "What should you prepare for an OINP application?",
-      "Organize documents around the claim the stream is assessing. An employer-supported file needs an accurate offer, duties, wage and employer record; an Express Entry-linked file also needs a valid federal profile; an entrepreneur route needs business, ownership and investment evidence. Use the official OINP account or contact channel for status questions, and treat processing estimates as planning information rather than a deadline guarantee.",
+      "What should you verify before registering an OINP EOI?",
+      "For a job-offer pathway, confirm the employer has submitted the position through Ontario’s Employer Portal before registering the EOI. Keep the job offer, NOC duties, wage, work history, status, language and education evidence consistent, and check the employer’s revenue, staffing and compliance requirements. Eligible TEER 0–3 candidates and physicians may have an Express Entry nomination option if they also meet federal requirements.",
     ),
   ),
   route(

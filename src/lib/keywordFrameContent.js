@@ -30,8 +30,8 @@ const FRAME_CONTENT = [
   {
     test: (path) => path === "/immigrate/ontario-pnp-oinp",
     blocks: block(
-      "OINP documents should follow the selected stream",
-      "Ontario nominee documents are only meaningful in the context of a specific OINP stream and intake. Match the occupation, job offer or human-capital claim to the current checklist, use the official account for status information and keep the later federal application separate from the provincial decision.",
+      "Make your Ontario PNP evidence match the Workforce Priority pathway",
+      "For an Ontario Workforce Priority EOI, keep the NOC, job offer, wage, work history, education, language and employer details consistent with the pathway you select. Ontario may invite candidates based on score or published priorities, but each applicant and employer must still meet the applicable eligibility rules. Keep the nomination and federal permanent-residence stages separate.",
     ),
   },
   {

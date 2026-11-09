@@ -9,7 +9,8 @@ const AUTOPLAY_MS = 5000;
 
 export default function HeroProofCardCarouselClient({ ariaLabel = "Commonwealth Migration Group highlights", initialPnpDraws, initialCardIndex = 0, pagePath = "/" }) {
   const showExpressEntry = pagePath === "/" || pagePath === "/immigration-draws" || /express-entry/.test(pagePath);
-  const showPnp = pagePath === "/" || pagePath === "/pnp-draws" || /pnp|provincial-nominee/.test(pagePath);
+  const isOinpGuide = pagePath === "/immigrate/ontario-pnp-oinp";
+  const showPnp = !isOinpGuide && (pagePath === "/" || pagePath === "/pnp-draws" || /pnp|provincial-nominee/.test(pagePath));
   const cards = [
     { Component: HeroProofCard, label: "Track record" },
     ...(showExpressEntry ? [{ Component: ExpressEntryDrawCard, label: "Latest Express Entry draw" }] : []),

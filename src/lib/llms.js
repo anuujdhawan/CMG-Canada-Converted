@@ -14,7 +14,7 @@ const dedicatedPageDetails = new Map([
   ["/tools/canada-immigration-calculators", ["Canada Immigration Calculators", "Free calculators and eligibility tools for Canadian immigration planning." ]],
   ["/tools/crs-calculator-canada", ["Canada CRS Calculator", "Estimate a Comprehensive Ranking System score for Express Entry planning." ]],
   ["/tools/pnp-eligibility-canada", ["PNP Eligibility Check", "Explore which provincial nomination routes may fit a profile." ]],
-  ["/tools/noc-finder-canada", ["NOC and Occupation Finder", "Find a Canadian occupation's NOC and TEER classification." ]],
+  ["/tools/noc-finder-canada", ["NOC and Occupation Finder", "Search all 516 NOC 2021 unit groups, then verify actual duties in the official occupation profile." ]],
   ["/tools/document-checklist-canada", ["Canada Immigration Document Checklist", "Review common document requirements for Canadian immigration applications." ]],
   ["/contact/book-immigration-consultation-canada", ["Book an Immigration Consultation", "Book an online consultation with a licensed Canadian immigration consultant." ]],
 ]);

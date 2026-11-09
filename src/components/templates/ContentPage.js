@@ -158,6 +158,22 @@ export function pageStructuredData(page, { includeFaq = true, pageType = "WebPag
       mainEntityOfPage: { "@id": `${url}#webpage` },
     });
   }
+  if (page.path === "/immigrate/ontario-pnp-oinp") {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": `${url}#article`,
+      headline: page.h1,
+      description: page.seo?.description || site.description,
+      url,
+      inLanguage: pageLanguage,
+      ...(page.meta?.lastModified ? { dateModified: page.meta.lastModified } : {}),
+      author: { "@id": organizationId },
+      publisher: { "@id": organizationId },
+      mainEntityOfPage: { "@id": `${url}#webpage` },
+      ...(page.seo?.keywords?.length ? { keywords: page.seo.keywords.join(", ") } : {}),
+    });
+  }
   return schemas;
 }
 

@@ -62,9 +62,11 @@ function sourcePageToPage(page, sourceFile = SOURCE_FILES.source) {
             : block.text || "")
       .join("\n\n"),
     seo: {
-      title: page.title,
-      description: page.description,
+      title: page.seoTitle || page.title,
+      description: page.metaDescription || page.description,
       keywords: page.keywords || [],
+      openGraphTitle: page.openGraphTitle,
+      openGraphDescription: page.openGraphDescription,
       canonical: page.url,
       robots: "index, follow",
     },

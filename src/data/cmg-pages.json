@@ -5073,104 +5073,418 @@
   {
     "url": "https://commonwealthmigration.ca/immigrate/ontario-pnp-oinp",
     "path": "/immigrate/ontario-pnp-oinp",
-    "seoTitle": "Ontario (OINP) PNP 2026: Streams & Requirements | CMG",
-    "metaDescription": "Review Ontario’s 2026 Workforce Priority stream, employer steps, physician route and Express Entry option. Confirm current OINP deadlines.",
-    "h1": "Ontario (OINP) Provincial Nominee Program",
+    "seoTitle": "Ontario PNP (OINP) 2026: Workforce Priority Stream Guide",
+    "metaDescription": "Ontario PNP (OINP) 2026 guide: Workforce Priority eligibility, employer rules, fees, draws and a free OINP points calculator. RCIC-led help.",
+    "h1": "Ontario PNP (OINP) 2026: Workforce Priority Stream",
     "hero": {
-      "title": "Ontario (OINP) Provincial Nominee Program",
-      "lead": "Ontario’s Workforce Priority stream covers eligible skilled foreign workers with qualifying job offers and eligible self-employed physicians. Job-offer candidates begin with an employer portal step before registering an Expression of Interest; some eligible candidates may request an Express Entry nomination. Check current criteria, portal access and deadlines before proceeding."
+      "title": "Ontario PNP (OINP) 2026: Workforce Priority Stream",
+      "lead": "Ontario PNP (OINP), formally the Ontario Immigrant Nominee Program, now uses the Ontario Workforce Priority stream for eligible job-offer candidates in TEER 0–5 and eligible self-employed physicians. Check the current pathway, employer requirements and EOI points before preparing an application."
     },
-    "title": "Ontario (OINP) PNP 2026: Streams & Requirements | CMG",
-    "description": "Understand Ontario’s 2026 Workforce Priority stream, its employer-led steps, physician route and Express Entry option.",
+    "title": "Ontario PNP (OINP) 2026: Workforce Priority Stream Guide",
+    "description": "Ontario PNP (OINP) 2026 guide: Workforce Priority eligibility, employer rules, fees, draws and a free OINP points calculator. RCIC-led help.",
     "contentBlocks": [
       {
         "type": "paragraph",
-        "text": "Ontario overhauled the OINP in 2026. The Ontario Workforce Priority stream offers a route for eligible skilled foreign workers with qualifying job offers and eligible self-employed physicians, while the previous EOI streams were being replaced. Confirm the current portal, employer steps, and stream criteria before acting. An invitation is not a nomination, and IRCC makes the final permanent-residence decision."
+        "text": "The Ontario PNP program, formally the Ontario Immigrant Nominee Program (OINP), is Ontario’s provincial route to permanent residence. New applicants use the Ontario Workforce Priority stream: eligible workers need a qualifying Ontario job offer, while eligible self-employed physicians may apply without one. An invitation is not a nomination, and IRCC makes the final permanent-residence decision."
       },
       {
         "type": "table",
         "rows": [
           [
-            "+600 CRS points if aligned",
-            "Province-specific Occupation & connection rules",
-            "Yes Express Entry-aligned",
-            "Varies Processing timeline"
+            "At a glance",
+            "Current published information"
+          ],
+          [
+            "Current stream",
+            "Ontario Workforce Priority"
+          ],
+          [
+            "Job-offer pathways",
+            "TEER 0–3 and TEER 4–5"
+          ],
+          [
+            "Without a job offer",
+            "Eligible self-employed physicians only"
+          ],
+          [
+            "EOI scoring",
+            "Up to 132 points for job-offer pathways; up to 117 for physicians"
+          ],
+          [
+            "EOI portal",
+            "Opened 4 August 2026; check Ontario’s current portal and announcements"
+          ],
+          [
+            "Current invitation status",
+            "No Workforce Priority round or cutoff listed on Ontario’s invitations page as of 9 November 2026; check for updates"
           ]
         ]
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Ontario (OINP) Stream Overview"
+        "text": "What changed in the Ontario PNP (OINP) in 2026?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ontario’s first redesign phase took effect on 25 June 2026, replacing eight former streams with the Ontario Workforce Priority stream. The new EOI portal opened on 4 August 2026. On 5 October, Ontario updated the earnings-history score: $80,000 or more in one year within the past five years earns 10 points when supported by a CRA Notice of Assessment. Ontario’s invitations page listed no Workforce Priority round or cutoff as of 9 November 2026; confirm current selection activity before relying on this snapshot."
       },
       {
         "type": "table",
         "rows": [
           [
-            "Aspect",
-            "Detail"
+            "Date",
+            "Change"
           ],
           [
-            "Primary stream focus",
-            "Ontario Workforce Priority serves eligible skilled foreign workers with qualifying job offers and eligible self-employed physicians; check the current OINP portal for available routes."
+            "25 June 2026",
+            "The former eight streams closed to new EOIs and the Workforce Priority stream came into effect."
           ],
           [
-            "Express Entry alignment",
-            "Some eligible Workforce Priority candidates may request an Express Entry nomination; federal rules apply."
+            "4 August 2026",
+            "Ontario opened the new Workforce Priority EOI portal."
           ],
           [
-            "What's distinct about this province",
-            "Ontario’s 2026 redesign introduced the Workforce Priority stream and changed how eligible candidates enter the selection process."
+            "5 October 2026",
+            "Ontario introduced a 10-point earnings-history band for $80,000 or more in one year within the past five years."
+          ]
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The closed streams include Employer Job Offer (Foreign Worker, International Student and In-Demand Skills), Master’s Graduate, PhD Graduate, Human Capital Priorities, French-Speaking Skilled Worker and Skilled Trades. Applications already submitted under a former stream are assessed under the rules that applied when filed. Ontario says further changes may follow as the redesign continues, but has not published a launch date; check its updates before registering."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "OINP job offer pathways: TEER 0–5 and the physician route"
+      },
+      {
+        "type": "paragraph",
+        "text": "The Ontario PNP has two job-offer pathways and one route without a job offer for eligible self-employed physicians only. Other self-employed applicants cannot use this stream without an employer. Choose the pathway by the job’s NOC TEER category or the physician criteria, then check every applicant and employer requirement before registering an Expression of Interest (EOI)."
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Pathway",
+            "Job offer",
+            "Key applicant requirements",
+            "Express Entry option"
+          ],
+          [
+            "TEER 0–3 job offer",
+            "Full-time, permanent Ontario offer",
+            "Work experience or licence; CLB 6 (CLB 5 for listed skilled trades); qualifying education; eligible employer",
+            "Possible if federal criteria and profile requirements are met"
+          ],
+          [
+            "TEER 4–5 job offer",
+            "Full-time, permanent Ontario offer",
+            "9 months in the offer position in the past 2 years; CLB 4; secondary school; eligible employer",
+            "Not listed for this pathway"
+          ],
+          [
+            "Self-employed physician",
+            "Not required",
+            "Eligible OHIP billing and CPSO registration in an accepted class; a postgraduate education licence alone does not qualify",
+            "Possible if federal criteria and profile requirements are met"
           ]
         ]
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Frequently Asked Questions"
+        "text": "Ontario PNP eligibility: OINP requirements by pathway"
       },
       {
         "type": "paragraph",
-        "text": "Q: What is the Ontario Workforce Priority stream?"
+        "text": "Eligibility depends on the pathway, not simply on having an Ontario job offer or a high EOI score. Job-offer applicants must meet the relevant work-experience, language, education, status and intention rules, and the employer’s position must be approved. The EOI score ranks attributes; it does not replace the minimum eligibility criteria."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "OINP TEER 4 and 5 requirements: work experience, CLB and education"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "TEER 0–3: normally 6 consecutive months of paid full-time work in the offered position within the last 12 months; a qualifying recent Ontario graduate may use 3 months in that position; or an applicant may qualify through 2 years of cumulative paid full-time work in the same NOC occupation within 5 years, or a mandatory licence/authorization.",
+          "TEER 4–5: at least 9 cumulative months of paid full-time work in the offered position within the last 2 years.",
+          "NOC 73300 transport truck drivers and NOC 73301 bus/transit operators must meet the 6-month in-position rule, even if licensed or a recent Ontario graduate.",
+          "For full-time work, Ontario generally requires at least 30 paid hours per week. Check the detailed rules for eligible related NOCs, part-time equivalents and interruptions."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "OINP language requirements: CLB and IELTS"
       },
       {
         "type": "paragraph",
-        "text": "A: It is a 2026 OINP route for eligible skilled foreign workers with qualifying job offers and for certain self-employed physicians. Job-offer applicants and physicians follow different steps, so begin with the [current stream criteria](https://www.ontario.ca/page/ontario-workforce-priority-stream)."
+        "text": "For TEER 0–3, the usual minimum is CLB 6 in all four abilities, or CLB 5 for a listed skilled trade. TEER 4–5 requires CLB 4. Approved test results must be less than two years old when you apply. A qualifying Ontario graduate may be exempt from the language test for TEER 0–3. The physician pathway has separate criteria."
       },
       {
         "type": "paragraph",
-        "text": "Q: Who starts the job-offer process for Ontario Workforce Priority?"
+        "text": "Approved tests include IELTS General Training, CELPIP-General, PTE Core, TEF Canada and TCF Canada. Confirm accepted test versions and score conversions in the current Ontario instructions before booking or submitting a test."
       },
       {
-        "type": "paragraph",
-        "text": "A: The employer must submit the position through Ontario’s Employer Portal before the candidate registers an EOI. Under the current instructions, the candidate registers within 30 calendar days of the employer’s submission; verify the [application steps and deadlines](https://www.ontario.ca/page/ontario-workforce-priority-stream) before proceeding."
+        "type": "heading",
+        "level": 3,
+        "text": "Education, legal status and intention to live in Ontario"
       },
       {
-        "type": "paragraph",
-        "text": "Q: Does an OINP invitation guarantee a nomination?"
-      },
-      {
-        "type": "paragraph",
-        "text": "A: No. An invitation allows the candidate and, where required, the employer to file applications. Ontario checks that the candidate meets the stream criteria and can document the attributes claimed in the EOI; see the [OINP process guidance](https://www.ontario.ca/page/oinp-application-process)."
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "TEER 0–3 generally requires post-secondary education of at least one year; listed skilled trades may use a high-school credential. TEER 4–5 requires a secondary-school credential or equivalent.",
+          "Use a Canadian credential or the required Educational Credential Assessment (ECA) to establish foreign education and any education points. Check that an ECA meets Ontario’s validity period.",
+          "If you are in Canada, you must have legal status when the rules require it. Every applicant must intend to live and work in Ontario after permanent residence."
+        ]
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Related Pages"
+        "text": "OINP employer requirements for an Ontario job offer"
+      },
+      {
+        "type": "paragraph",
+        "text": "The employer must qualify before an employee can receive an Ontario nomination under a job-offer pathway. The offer must be full-time (at least 30 paid hours a week and 1,560 hours a year), permanent, urgently necessary to the business and not affect a labour dispute. It must meet the regional median wage, except that a qualifying recent Ontario graduate with a TEER 0–3 offer may use the low-wage level. Ontario also checks operating history, premises, compliance, revenue, staffing and, for some candidates, domestic recruitment."
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "At least 3 years in active business before applying.",
+          "A business premises in Ontario where the nominee will work or report to work.",
+          "No outstanding orders under the Employment Standards Act, 2000 or the Occupational Health and Safety Act.",
+          "At least the required number of full-time Canadian citizen or permanent-resident employees at the relevant work/report location.",
+          "The employer must make reasonable domestic recruitment efforts unless the applicant is already authorized to work in Ontario or the employer has a positive LMIA for the same NOC code and position. Ontario may expect at least two recruitment methods and advertisements running for at least four weeks.",
+          "For NOC 73300 or 73301 job offers, the employer also needs a valid CVOR and an Excellent or Satisfactory safety rating.",
+          "The applicant and family may hold equity only when it was obtained as employee remuneration and their combined ownership is less than 10%; otherwise the equity restriction may make the offer ineligible.",
+          "The employee must not pay for a job offer. A non-genuine offer or misrepresentation can lead to refusal and serious immigration consequences."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "OINP employer requirements: revenue and staff thresholds"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Employer work location",
+            "Minimum gross revenue",
+            "Full-time Canadian/PR staff",
+            "Applicant application fee"
+          ],
+          [
+            "GTA: Toronto, Durham, Halton, Peel or York",
+            "$1,000,000 in the most recently completed fiscal year",
+            "5",
+            "$2,000"
+          ],
+          [
+            "Tier 2 census divisions listed in Ontario’s employer guide",
+            "$500,000 in the most recently completed fiscal year",
+            "3",
+            "$1,500"
+          ],
+          [
+            "Other Ontario locations (Tier 3)",
+            "$250,000 in each of the last 2 fiscal years",
+            "3",
+            "$1,500"
+          ]
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Tier 2 includes Ottawa, Frontenac, Hastings, Peterborough, Waterloo, Simcoe, Wellington, Hamilton, Niagara, Middlesex, Essex, Brant, Greater Sudbury and Thunder Bay. Other non-GTA census divisions fall into the lower-revenue Tier 3 group. Ontario also states that lower gross revenue requirements apply to rural communities in census divisions with fewer than 150,000 people. Confirm whether the exact work/report location qualifies for this rural adjustment and which threshold applies in the current employer guide; the calculator flags this for manual review rather than guessing."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Free Ontario PNP points calculator (OINP 2026)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Use this free Ontario PNP points calculator to estimate your score under the Workforce Priority EOI grid. Choose a job-offer pathway or the physician route, enter your profile and employer details, and review the eligibility flags. The estimate cannot verify documents, employer compliance, a Job Bank wage or whether Ontario will invite your EOI."
+      },
+      {
+        "type": "oinpCalculator"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "How does the OINP calculator calculate EOI points?"
+      },
+      {
+        "type": "table",
+        "rows": [
+          [
+            "Scoring factor",
+            "Maximum points"
+          ],
+          [
+            "NOC TEER category",
+            "9"
+          ],
+          [
+            "NOC broad occupational category",
+            "10"
+          ],
+          [
+            "Hourly wage (job-offer pathways)",
+            "15"
+          ],
+          [
+            "Ontario work experience or medical practice",
+            "18"
+          ],
+          [
+            "Canadian earnings history",
+            "10"
+          ],
+          [
+            "Legal status in Canada",
+            "10"
+          ],
+          [
+            "Highest education",
+            "10"
+          ],
+          [
+            "Canadian education credentials",
+            "10"
+          ],
+          [
+            "Official language ability",
+            "15"
+          ],
+          [
+            "Knowledge of both official languages",
+            "10"
+          ],
+          [
+            "Ontario work/practice location",
+            "15"
+          ],
+          [
+            "Maximum",
+            "132 job-offer pathway / 117 physician pathway"
+          ]
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Brampton and Mississauga are in Peel Region, in the GTA: an eligible work location earns 5 regional points, and the employer must meet the GTA revenue and staffing thresholds. A higher score does not guarantee an invitation; Ontario may select EOIs by score, occupation, region or other published priorities."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "How to apply for the Ontario PNP (OINP): steps and deadlines"
+      },
+      {
+        "type": "paragraph",
+        "text": "For a job-offer application, the employer acts first. The candidate registers an EOI only after receiving the employer’s job-offer ID. If Ontario issues an invitation, both parties must meet short, separate deadlines. A self-employed physician follows a separate application route."
       },
       {
         "type": "list",
         "ordered": true,
         "items": [
-          "Provincial Nominee Program (all provinces) → /immigrate/provincial-nominee-program-all-provinces-consolidated",
-          "Express Entry Overview → /immigrate/express-entry"
+          "Confirm the current Workforce Priority pathway and minimum eligibility requirements.",
+          "For a job offer, the employer registers and submits the position through Ontario’s Employer Portal.",
+          "Register the EOI within 30 calendar days of the employer’s job-offer submission. EOI registration is free and remains in the pool for up to 12 months under the current instructions.",
+          "If invited, the employer submits the employment-position approval application within 14 calendar days.",
+          "After the employer submits, the applicant submits the nomination application and pays within 17 calendar days of the invitation.",
+          "If approved, follow the nomination conditions and apply to IRCC for permanent residence within 6 months."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "OINP application fee and Express Entry option"
+      },
+      {
+        "type": "paragraph",
+        "text": "The application fee is $2,000 for a job or physician practice location in the GTA and $1,500 outside the GTA; the EOI is free. Federal permanent-residence fees are separate. Eligible TEER 0–3 job-offer candidates and physicians may request an Express Entry-aligned nomination if they meet federal program requirements. Accept the nomination in your Express Entry profile within 30 days; it adds 600 CRS points. If IRCC then invites you, the federal permanent-residence application is due within 60 days."
+      },
+      {
+        "type": "paragraph",
+        "text": "Check Ontario’s Workforce Priority stream page and OINP updates for current criteria, selection notices and fees. For personal support, Commonwealth Migration Group offers RCIC-led consultations in Brampton and online across Canada. An Ontario immigration consultant in Brampton can review NOC/TEER fit, employer requirements, EOI evidence and deadlines; no consultant can guarantee an invitation, nomination or permanent-residence approval."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Related Ontario PNP resources"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "CRS calculator → /tools/crs-calculator-canada",
+          "Express Entry → /immigrate/express-entry",
+          "NOC / occupation finder → /tools/noc-finder-canada",
+          "PNP eligibility check → /tools/pnp-eligibility-canada",
+          "Document checklist → /tools/document-checklist-canada",
+          "Ontario PNP and all provincial nominee programs → /immigrate/provincial-nominee-program-all-provinces-consolidated"
         ]
       },
       {
         "type": "paragraph",
-        "text": "CTA: Book a Free Consultation to check your fit for Ontario (OINP)'s nominee program."
+        "text": "CTA: Not sure which OINP pathway fits? Book an Ontario PNP eligibility assessment with an RCIC."
+      },
+      {
+        "type": "paragraph",
+        "text": "Sources: [Ontario Workforce Priority stream](https://www.ontario.ca/page/ontario-workforce-priority-stream) · [OINP invitations](https://www.ontario.ca/page/invitations-apply-oinp) · [2026 OINP updates](https://www.ontario.ca/page/2026-ontario-immigrant-nominee-program-updates) · [OINP employer guide](https://www.ontario.ca/page/oinp-employer-guide) · [OINP application process](https://www.ontario.ca/page/oinp-application-process) · [Ontario Regulation 422/17](https://www.ontario.ca/laws/regulation/170422) · [IRCC CRS points for a provincial nomination](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html)."
       }
-    ]
+    ],
+    "keywords": [
+      "Ontario PNP",
+      "OINP",
+      "Ontario Immigrant Nominee Program",
+      "Ontario Workforce Priority stream",
+      "OINP 2026",
+      "Ontario PNP 2026",
+      "latest OINP draw",
+      "OINP calculator",
+      "OINP points",
+      "Ontario PNP points calculator",
+      "OINP requirements",
+      "Ontario PNP eligibility",
+      "OINP employer requirements",
+      "OINP employer revenue requirements by region",
+      "OINP processing time",
+      "OINP application fee",
+      "OINP job offer",
+      "Ontario PNP without job offer",
+      "OINP TEER 4 and 5",
+      "OINP Express Entry",
+      "600 CRS points",
+      "OINP streams closed",
+      "Human Capital Priorities closed",
+      "OINP consultant Brampton",
+      "Ontario immigration consultant",
+      "Ontario PNP points calculator free",
+      "Ontario PNP eligibility check",
+      "OINP Workforce Priority stream employer requirements",
+      "Ontario PNP program",
+      "OINP eligibility",
+      "OINP employer revenue requirements",
+      "OINP TEER 4 5 requirements",
+      "OINP TEER 4 and 5 requirements",
+      "Ontario PNP processing time",
+      "Ontario PNP draw 2026"
+    ],
+    "lastModified": "2026-11-09",
+    "lastUpdatedLabel": "Updated 9 November 2026",
+    "heroImageAlt": "Ontario PNP (OINP) 2026 Workforce Priority stream guide preview",
+    "openGraphTitle": "Ontario PNP (OINP) 2026: Is Workforce Priority for You?",
+    "openGraphDescription": "Ontario replaced its former OINP streams with Workforce Priority. Check eligibility, employer rules and your estimated EOI score.",
+    "contentMode": "authored"
   },
   {
     "url": "https://commonwealthmigration.ca/immigrate/nova-scotia-pnp-nsnp",

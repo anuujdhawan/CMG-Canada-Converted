@@ -111,7 +111,7 @@ export function getPageShareImage(page) {
       width: 1200,
       height: 630,
       type: "image/webp",
-      alt: `${page.h1 || page.seo?.title || site.name} hero`,
+      alt: page?.heroImageAlt || `${page.h1 || page.seo?.title || site.name} hero`,
     };
   }
 
@@ -126,10 +126,14 @@ export function buildMetadata({
   keywords,
   noIndex = false,
   image,
+  openGraphTitle,
+  openGraphDescription,
 } = {}) {
   const resolvedTitle = title || site.meta.defaultTitle;
   const resolvedDescription = normalizeMetaDescription(description || site.meta.defaultDescription);
   const pageTitle = normalizePageTitle(resolvedTitle);
+  const socialTitle = normalizePageTitle(openGraphTitle || resolvedTitle);
+  const socialDescription = normalizeMetaDescription(openGraphDescription || resolvedDescription);
   const url = absoluteUrl(path);
   const requestedImage = typeof image === "string"
     ? { url: image }
@@ -180,8 +184,8 @@ export function buildMetadata({
       type,
       locale: site.meta.locale,
       siteName: site.name,
-      title: pageTitle,
-      description: resolvedDescription,
+      title: socialTitle,
+      description: socialDescription,
       url: url || undefined,
       ...(imageUrl && {
         images: [{
@@ -195,8 +199,8 @@ export function buildMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: pageTitle,
-      description: resolvedDescription,
+      title: socialTitle,
+      description: socialDescription,
       ...(imageUrl && { images: [imageUrl] }),
     },
   };

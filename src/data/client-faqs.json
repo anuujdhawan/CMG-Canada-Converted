@@ -125,64 +125,76 @@
   ],
   "/immigrate/ontario-pnp-oinp": [
     {
-      "question": "What is the OINP, and how can an OINP consultant in Ontario help?",
-      "answer": "The Ontario Immigrant Nominee Program (OINP) lets Ontario nominate people for permanent residence based on skills, experience or a job offer. An OINP consultant in Ontario checks which stream fits your profile, prepares the application, and explains what happens after nomination, when you must apply to IRCC for PR."
+      "question": "What is the Ontario PNP (OINP)?",
+      "answer": "The Ontario PNP, formally the Ontario Immigrant Nominee Program (OINP), currently directs new applicants to the Workforce Priority stream. It has TEER 0–5 job-offer pathways and a separate route for eligible self-employed physicians."
     },
     {
-      "question": "Do I need to live in Brampton or Ontario to apply to the OINP?",
-      "answer": "You must intend to live in Ontario if nominated. Under the current Ontario Workforce Priority stream, most applicants need a qualifying Ontario job offer; eligible self-employed physicians may apply without one. The former Human Capital streams are closed to new applicants. Check Ontario’s current stream criteria and intake before applying."
+      "question": "Is the OINP open in 2026?",
+      "answer": "Yes. Ontario opened the Workforce Priority Expression of Interest (EOI) portal on 4 August 2026. Check Ontario’s stream page and program updates before registering because intake and selection information can change."
     },
     {
-      "question": "Which OINP streams can a Brampton applicant use?",
-      "answer": "Ontario redesigned the OINP in 2026. The current Ontario Workforce Priority stream has pathways for skilled workers with qualifying Ontario job offers and for eligible self-employed physicians. The former Employer Job Offer, Human Capital, Express Entry, graduate, Skilled Trades and Entrepreneur streams are closed to new applicants; applications already submitted are assessed under the rules that applied when filed. Check the official OINP page for current criteria and intake."
+      "question": "What is the latest OINP draw, and when is the next one?",
+      "answer": "As of 9 November 2026, Ontario’s invitations page listed no Workforce Priority round or cutoff, and Ontario does not publish a fixed draw schedule in advance. Check the official invitations page for new selection notices."
     },
     {
-      "question": "What is the difference between Employer Job Offer and Human Capital streams?",
-      "answer": "Those were separate parts of Ontario’s former program structure, and they are closed to new applicants. The current Ontario Workforce Priority stream has a job-offer pathway for eligible skilled workers and a separate pathway for eligible self-employed physicians. Review the current criteria before deciding which route applies."
+      "question": "What is the minimum score for the OINP?",
+      "answer": "Ontario had not published a Workforce Priority cutoff score as of 9 November 2026. The calculator’s maximum of 132 points for job-offer pathways or 117 for physicians is not a minimum score or an invitation guarantee."
     },
     {
-      "question": "Can a job offer from a Brampton employer help me get nominated?",
-      "answer": "A qualifying job offer from an Ontario employer may support an application under the current Ontario Workforce Priority stream. The employer must start the process through Ontario’s Employer Portal, and the candidate must meet the stream’s work experience, language, education and other criteria. Eligible self-employed physicians have a separate route. Employers cannot charge workers for a job offer."
+      "question": "How do I calculate Ontario PNP points with an OINP calculator?",
+      "answer": "Use the Ontario PNP points calculator to estimate EOI points for factors such as NOC/TEER, wage, work experience, earnings, education, language and work location. Ontario verifies the evidence and decides whom to invite; the estimate is not an eligibility decision."
     },
     {
-      "question": "How does the OINP notification process work for Express Entry candidates in Brampton?",
-      "answer": "Ontario’s former Human Capital streams and their Notification of Interest process are closed to new applicants. Under the current Workforce Priority stream, an employer starts the job-offer process and the candidate registers an Expression of Interest; Ontario selects candidates and issues invitations based on current priorities. Eligible TEER 0–3 applicants may opt for an Express Entry nomination if they also meet federal criteria. An eligible invitation is not guaranteed."
+      "question": "Can I apply to the Ontario PNP without a job offer?",
+      "answer": "Eligible self-employed physicians may apply to the Ontario Workforce Priority stream without a job offer if they meet the OHIP billing and CPSO registration requirements. Other applicants need a qualifying Ontario job offer from an eligible employer."
     },
     {
-      "question": "How does an Ontario nomination affect my CRS score?",
-      "answer": "A nomination linked to your Express Entry profile adds 600 CRS points, which in practice places you well above most draw cut-offs. You are then invited to apply for permanent residence to IRCC. This is why many candidates with moderate CRS scores explore an Ontario PNP consultant in Brampton."
+      "question": "Is the OINP Human Capital Priorities stream closed?",
+      "answer": "Yes. Human Capital Priorities and the other former OINP streams closed to new EOIs when Ontario’s redesign took effect in June 2026. Previously submitted applications continue under the rules that applied when they were filed."
     },
     {
-      "question": "Do I need a job offer from a Brampton employer for the OINP?",
-      "answer": "For the current Ontario Workforce Priority stream, most skilled-worker applicants need a qualifying job offer from an Ontario employer. Eligible self-employed physicians may apply through a separate pathway without a job offer. Ontario’s former Employer Job Offer and Human Capital streams are closed to new applicants, so check the current rules before applying."
+      "question": "How many CRS points does an OINP nomination give?",
+      "answer": "An eligible Express Entry-aligned OINP nomination adds 600 CRS points after you accept it in your profile. TEER 0–3 job-offer candidates and eligible self-employed physicians may request this option if they meet federal Express Entry requirements."
     },
     {
-      "question": "Is there a minimum language level for OINP streams?",
-      "answer": "Language requirements depend on the current Ontario Workforce Priority pathway and the occupation’s TEER category. Check Ontario’s current eligibility page for the required Canadian Language Benchmark in each ability before registering an Expression of Interest. A stronger language result can also affect your federal options."
+      "question": "What is the OINP processing time?",
+      "answer": "Ontario has not published a guaranteed processing time for the new Workforce Priority stream. If nominated, you generally have six months to apply to IRCC for permanent residence; federal processing is separate and varies by case."
     },
     {
-      "question": "How long does an OINP application take for Brampton applicants?",
-      "answer": "Processing time varies by stream and volume, so check the OINP website for current times. After nomination, you must apply to IRCC for permanent residence, which has its own processing time, medical exam and background checks. Plan for both stages when you think about work permits and timelines. Where you live in Ontario does not change processing times."
+      "question": "How much is the OINP application fee?",
+      "answer": "The Workforce Priority application fee is $2,000 for a job or physician practice location in the Greater Toronto Area and $1,500 outside it. EOI registration is free, and federal permanent-residence fees are separate."
     },
     {
-      "question": "Can an OINP consultant in Ontario check whether my job offer is genuine?",
-      "answer": "A licensed RCIC can review the offer letter, the employer's documents and the wage against OINP requirements to spot problems. Be cautious of anyone selling job offers or asking you to pay an employer. OINP rules prohibit this, and a fraudulent offer can lead to refusal or a misrepresentation finding."
+      "question": "What are OINP employer requirements and revenue thresholds by region?",
+      "answer": "Employers generally need at least $1 million in gross revenue in the latest fiscal year for a GTA work location, $500,000 for one of 14 designated census divisions, or $250,000 in each of the last two fiscal years elsewhere in Ontario. Ontario also identifies a lower revenue requirement for rural communities in census divisions under 150,000 people, so confirm the exact threshold for the work location in the current employer guide. Staffing, premises, operating history and compliance rules also apply."
     },
     {
-      "question": "What can I do if my Ontario PNP application from Brampton is refused?",
-      "answer": "Review the refusal reasons carefully. You may be able to apply again if you fix the problem, apply under another stream, or build a stronger Express Entry profile. Do not submit a second application with the same weaknesses. A Brampton RCIC can compare options before you spend more time and money."
+      "question": "What OINP job offer requirements apply?",
+      "answer": "The job offer must generally be full-time, permanent, urgently necessary to the employer’s business, unaffected by a labour dispute and paid at the applicable wage level. The employer must submit the position through Ontario’s Employer Portal before the candidate registers an EOI."
     },
     {
-      "question": "What is the difference between the OINP and Express Entry?",
-      "answer": "Express Entry is a federal system that ranks eligible candidates for permanent residence. The OINP is Ontario’s nomination program, and IRCC makes the final PR decision. Under the current Ontario Workforce Priority stream, eligible TEER 0–3 applicants may request an Express Entry-linked nomination if they also meet federal criteria; other nominations use a non-Express Entry process. An Express Entry-linked provincial nomination adds 600 CRS points."
+      "question": "What CLB or IELTS score do I need for the OINP?",
+      "answer": "For job-offer pathways, TEER 0–3 normally requires CLB 6 in all four abilities (CLB 5 for listed skilled trades), and TEER 4–5 requires CLB 4. A qualifying recent Ontario graduate may be exempt from the TEER 0–3 language test; confirm the accepted test and exemption in Ontario’s current rules."
     },
     {
-      "question": "Can a Brampton RCIC help if my occupation is in skilled trades?",
-      "answer": "Ontario’s former Express Entry Skilled Trades stream is closed to new applicants. A tradesperson may still qualify under the current Ontario Workforce Priority stream if they meet its requirements, including a qualifying Ontario job offer, or may consider a federal or other provincial route. A licensed RCIC can review your occupation code, duties and credentials against the current criteria."
+      "question": "Can TEER 4 and 5 workers apply to the OINP?",
+      "answer": "Yes. Under the Ontario Workforce Priority stream, TEER 4–5 workers may qualify with a full-time, permanent Ontario job offer, at least nine months of qualifying work in the offer position within the last two years, CLB 4, high-school education and an eligible employer."
     },
     {
-      "question": "Can an OINP consultant in Ontario guarantee that I will be nominated?",
-      "answer": "No. Ontario decides nominations and can change criteria and intake at any time. A licensed consultant can check your eligibility, prepare a strong application and manage deadlines, but cannot guarantee a nomination or permanent residence. Avoid anyone who promises nomination or asks for payment for a spot."
+      "question": "Can international students apply to the Ontario PNP?",
+      "answer": "International students may qualify for the Workforce Priority stream if they meet a job-offer pathway’s requirements. A qualifying recent Ontario graduate may use the three-month work-experience rule and may be exempt from language testing for TEER 0–3; the former Masters and PhD Graduate streams are closed to new EOIs."
+    },
+    {
+      "question": "Does a job offer in Brampton qualify for the OINP?",
+      "answer": "A Brampton job offer may qualify if the applicant, position and employer meet the current rules. Brampton is in Peel Region in the GTA, which earns five regional EOI points; GTA employer revenue and staffing thresholds apply at the relevant work/report location."
+    },
+    {
+      "question": "How can an OINP consultant in Brampton help?",
+      "answer": "An OINP consultant in Brampton can help review the NOC/TEER match, employer requirements, EOI evidence and application deadlines. Choose an authorized Ontario immigration consultant and verify the licence; no representative can guarantee an invitation, nomination or permanent-residence approval."
+    },
+    {
+      "question": "Can an immigration consultant guarantee an OINP nomination?",
+      "answer": "No. Ontario decides whether to invite or nominate a candidate, and IRCC decides the permanent-residence application. A licensed RCIC can review eligibility and evidence but cannot promise a result. Do not pay anyone for a job offer."
     }
   ],
   "/sponsor/spousal-and-partner-sponsorship-overview": [

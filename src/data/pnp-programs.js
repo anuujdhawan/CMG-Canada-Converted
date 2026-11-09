@@ -129,7 +129,6 @@ const pageToProgram = {
   "/immigrate/alberta-pnp-aaip": "alberta",
   "/immigrate/saskatchewan-pnp-sinp": "saskatchewan",
   "/immigrate/manitoba-pnp-mpnp": "manitoba",
-  "/immigrate/ontario-pnp-oinp": "ontario",
   "/immigrate/nova-scotia-pnp-nsnp": "novaScotia",
   "/immigrate/new-brunswick-pnp": "newBrunswick",
   "/immigrate/prince-edward-island-pnp": "pei",

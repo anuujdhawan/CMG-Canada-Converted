@@ -15,7 +15,7 @@ export const ADDITIONAL_INDEXABLE_PAGES = [
   { path: "/tools/canada-immigration-calculators", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.8 },
   { path: "/tools/crs-calculator-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.8 },
   { path: "/tools/pnp-eligibility-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/tools/noc-finder-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/tools/noc-finder-canada", lastModified: "2026-11-09", changeFrequency: "weekly", priority: 0.7 },
   { path: "/tools/document-checklist-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.7 },
   { path: "/contact/book-immigration-consultation-canada", lastModified: "2026-10-06", changeFrequency: "monthly", priority: 0.8 },
   ...RESEARCH_BLOG_POSTS.map((post) => ({

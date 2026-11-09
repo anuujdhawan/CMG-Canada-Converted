@@ -346,11 +346,11 @@ const UNIQUE_PAGE_CONTENT = {
     items: ["MPNP stream and eligibility factors", "Manitoba connection or job evidence", "Language, funds and settlement intention"],
   },
   "/immigrate/ontario-pnp-oinp": {
-    question: "How should you compare Ontario PNP streams?",
-    answer: "Compare Ontario PNP streams by the exact OINP category, occupation or job-offer rules, employer requirements, language, education, work history and invitation process. Ontario streams can target different profiles, so an applicant should not treat the OINP as one single eligibility test.",
+    question: "How does the Ontario Workforce Priority EOI work?",
+    answer: "A candidate with a qualifying Ontario job offer can register a Workforce Priority EOI after the employer submits the job offer through Ontario’s Employer Portal. Eligible self-employed physicians follow a separate route. Ontario controls invitations, and meeting the requirements or reaching a high score does not guarantee an invitation.",
     heading: "What should an OINP applicant keep consistent?",
-    detail: "Keep the employer, wage, duties, NOC, status, settlement plan and Express Entry details aligned across the provincial and federal records. Note the date of any invitation or registration because the required documents may be tied to that stage.",
-    items: ["OINP stream and invitation or registration stage", "Ontario job, employer and NOC evidence", "Federal profile and settlement consistency"],
+    detail: "Keep the selected TEER pathway, NOC duties, employer offer, wage, work history, status, education, language and Ontario settlement intention aligned across the EOI, nomination file and any later Express Entry profile. Record the invitation date because both employer and applicant filing windows are short.",
+    items: ["Workforce Priority pathway and EOI stage", "Ontario job, employer, NOC and EOI score evidence", "Provincial nomination and federal profile consistency"],
   },
   "/immigrate/nova-scotia-pnp-nsnp": {
     question: "What should you verify in a Nova Scotia Nominee Program application?",

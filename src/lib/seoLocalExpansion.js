@@ -96,20 +96,6 @@ const ROUTE_RULES = [
     source: OFFICIAL_SOURCES.crs,
   },
   {
-    test: (path) => /tools\/noc-finder/.test(path),
-    subject: "a Canada NOC code finder result",
-    keyphrase: "NOC code finder Canada",
-    lens: "the lead statement, main duties, TEER category and employment records that support the occupation selected",
-    questions: [
-      "How should Brampton workers use a NOC code finder Canada result?",
-      "What evidence should support a NOC code chosen for a Canada immigration application?",
-    ],
-    answer: "A NOC code finder Canada result is a starting point for comparing real job duties with the National Occupational Classification. Brampton workers should check the lead statement and main duties against reference letters, dates, hours and employer records; a familiar job title alone does not prove the correct NOC or TEER category.",
-    detail: "The strongest occupation review creates a duty matrix before an Express Entry, LMIA or PNP strategy is selected. Use the [Government of Canada NOC page]({SOURCE}) to confirm the current description, then explain any difference between the workplace role and the closest classification.",
-    items: ["Lead statement and main duties", "Dates, hours, wage and employer information", "Reference-letter wording that reflects the real work", "The immigration program’s treatment of the selected NOC"],
-    source: OFFICIAL_SOURCES.noc,
-  },
-  {
     test: (path) => /tools\/pnp-eligibility/.test(path),
     subject: "a PNP eligibility checker Canada result",
     keyphrase: "PNP eligibility checker Canada",

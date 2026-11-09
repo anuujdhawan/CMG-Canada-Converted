@@ -25,6 +25,8 @@ export async function generateMetadata({ params }) {
     path: page.path,
     keywords: page.seo?.keywords,
     image: getPageShareImage(page),
+    openGraphTitle: page.seo?.openGraphTitle,
+    openGraphDescription: page.seo?.openGraphDescription,
   });
 }
 

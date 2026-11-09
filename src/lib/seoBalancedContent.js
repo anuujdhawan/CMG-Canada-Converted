@@ -295,7 +295,7 @@ function getFrameSupportTitle(page) {
   }
 
   const provinceTitles = [
-    ["ontario-pnp-oinp", "Which Ontario PNP requirements decide whether your stream is a realistic option?"],
+    ["ontario-pnp-oinp", "Which Ontario Workforce Priority requirements should you check before registering an EOI?"],
     ["british-columbia-pnp", "Which British Columbia PNP requirements should you verify before registering?"],
     ["alberta-pnp-aaip", "Which Alberta Advantage Immigration Program requirements should you verify before seeking a nomination?"],
     ["saskatchewan-pnp-sinp", "Which Saskatchewan Immigrant Nominee Program requirements fit your occupation and job offer?"],
