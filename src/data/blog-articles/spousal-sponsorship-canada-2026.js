@@ -194,7 +194,7 @@ const article = {
     },
     {
       "question": "How long does Canadian spousal sponsorship take for inland and outland applications?",
-      "answer": "There is no fixed answer, and any single figure you read elsewhere will be out of date. Processing depends on the route, how complete the application is, how quickly IRCC can verify the information and how much of the annual intake is already committed. Check the current estimate for your specific stream on the official IRCC processing-times page."
+      "answer": "There is no fixed answer, and any single figure you read elsewhere will be out of date. Processing depends on the route, how complete the application is, how quickly IRCC can verify the information and IRCC's current workload. Check the live estimate for your specific stream and location on the official processing-times page."
     },
     {
       "question": "Does spousal sponsorship Canada allow an appeal if it is refused?",

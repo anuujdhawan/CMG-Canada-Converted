@@ -24,7 +24,7 @@ export default function BlogIndexPage({ page, activeCategory = ALL_BLOG_CATEGORY
         eyebrow="CMG insights · Canada immigration"
         title={
           <>
-            Research the route.
+            Canadian immigration guides.
             <br />{" "}
             Then decide.
           </>

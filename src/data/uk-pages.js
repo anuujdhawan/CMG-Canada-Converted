@@ -133,8 +133,11 @@ export const ukPages = [
       "Canada study permit for UK students",
       "UK police certificate for Canada",
       "immigration to Canada from Britain",
+      "Canada work permit for UK citizens",
+      "Canada PR pathways from the UK",
+      "UK police certificate for Canadian immigration application",
     ],
-    lastModified: "2026-09-21",
+    lastModified: "2026-11-11",
     priority: 0.9,
     status: "Content Ready",
     contentBlocks: [
@@ -146,7 +149,7 @@ export const ukPages = [
         type: "table",
         rows: [
           [
-            "1,200 CRS points available",
+            "1,270 CRS points available",
             "3 Express Entry programs",
             "5 hours UK ahead of Brampton",
             "6 months residence triggers a police check",

@@ -7,9 +7,19 @@ const pagePath = "/ontario-pr";
 const pageMetadataConfig = {
   title: "Canada PR through Ontario | OINP & Express Entry | CMG",
   description:
-    "Ontario's nominee programme changed in 2026. Find out which route fits your profile in a free 30-minute consultation with a CICC-regulated RCIC in Brampton.",
+    "Compare Ontario PR pathways, including the OINP Workforce Priority stream and Express Entry. Review job-offer rules, eligibility and next steps with a licensed RCIC.",
   path: pagePath,
-  keywords: ["Ontario OINP", "Ontario Workforce Priority stream", "Express Entry Ontario", "Canada PR consultation"],
+  keywords: [
+    "Ontario OINP",
+    "Ontario Workforce Priority stream",
+    "Ontario OINP EOI points calculator",
+    "Ontario Workforce Priority TEER 0 to 3 pathway",
+    "Ontario Workforce Priority TEER 4 and 5 pathway",
+    "Ontario PNP eligibility with a job offer",
+    "Ontario PR pathways for foreign workers",
+    "Express Entry Ontario",
+    "Canada PR consultation",
+  ],
 };
 
 const pageTitle = "Canada PR through Ontario | OINP & Express Entry | CMG";

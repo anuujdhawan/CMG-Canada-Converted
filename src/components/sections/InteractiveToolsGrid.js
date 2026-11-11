@@ -12,7 +12,7 @@ export default function InteractiveToolsGrid() {
           <div>
             <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] uppercase"><Sparkles className="h-3.5 w-3.5" /> Try them now</p>
             <h2>Free interactive tools</h2>
-            <p className="reference-index-grid__lead !mt-[1.3rem] max-w-[42rem] !text-[var(--template-muted)] !text-[clamp(0.95rem,0.9rem+0.35vw,1.1875rem)] !leading-[1.65]">Answer a few questions and get an instant read on where you stand — no sign-up required.</p>
+            <p className="reference-index-grid__lead !mt-[1.3rem] max-w-[42rem] !text-[var(--template-muted)] !text-[clamp(0.95rem,0.9rem+0.35vw,1.1875rem)] !leading-[1.65]">Use a quick estimate or checklist to organize your profile. Each result has limits, so confirm requirements with the official program guide. No sign-up is required.</p>
           </div>
         </div>
 

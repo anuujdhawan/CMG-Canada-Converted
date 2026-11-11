@@ -7,7 +7,7 @@ const page = {
   path: "/canada-immigration-news",
   h1: "Canada immigration news and IRCC updates",
   seo: { description: "Current Canada immigration news, IRCC updates and policy changes explained for applicants, families, students and employers." },
-  meta: { lastModified: "2026-09-21" },
+  meta: { lastModified: "2026-11-11" },
   jsonLd: [],
 };
 
@@ -15,7 +15,14 @@ export const metadata = buildMetadata({
   title: "Canada Immigration News | IRCC Updates",
   description: "Current Canada immigration news, IRCC updates and policy changes explained for applicants, families, students and employers.",
   path: "/canada-immigration-news",
-  keywords: ["Canada immigration news", "IRCC news", "Canada visa news", "Canada PR news"],
+  keywords: [
+    "Canada immigration news",
+    "IRCC news",
+    "Canada visa news",
+    "Canada PR news",
+    "Canada immigration policy changes explained",
+    "latest IRCC immigration updates for applicants",
+  ],
 });
 
 export default function CanadaImmigrationNewsPage() {

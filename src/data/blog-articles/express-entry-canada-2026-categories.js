@@ -173,7 +173,7 @@ const article = {
     },
     {
       "question": "Do I need a job offer to be invited under a category?",
-      "answer": "No. Category eligibility follows the round instructions: occupation rounds require qualifying work experience in a listed occupation, while the French-language category requires the specified test results. A job offer does not create category eligibility. Starting November 3, 2026, a qualifying offer in an eligible high-wage occupation may add CRS points under a separate factor."
+      "answer": "No. Category eligibility follows the round instructions: occupation rounds require qualifying work experience in a listed occupation, while the French-language category requires the specified test results. A job offer does not create category eligibility. Since November 3, 2026, a qualifying high-wage offer may add CRS points under the separate Labour Market Integration factor."
     },
     {
       "question": "How do I know whether my occupation is in a category?",

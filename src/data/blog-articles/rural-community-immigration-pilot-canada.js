@@ -14,7 +14,7 @@ const article = {
   slug: "rural-community-immigration-pilot-canada",
 
   quickAnswer:
-    "The Rural Community Immigration Pilot lets a designated employer in a participating community hire you for a genuine job, then asks that community to recommend you for permanent residence. Three parties must line up: the employer, the community’s economic development organisation and you. The community list and criteria change, so verify them on the official page.",
+    "As of November 2026, the Rural Community Immigration Pilot is scheduled to close on January 1, 2027, while IRCC prepares a permanent Rural Community Immigration Program. Until the transition, an RCIP application still depends on a designated employer, a participating community, a recommendation and the pilot's current criteria. Verify dates and intake details with IRCC before you plan.",
 
   keyTakeaways: [
     "The pilot needs a designated employer, a genuine job offer in a participating community, and a recommendation from that community.",
@@ -23,6 +23,7 @@ const article = {
     "You must show settlement funds for yourself and your family unless the pilot exempts you because you already work in the community.",
     "The recommendation is not a permanent residence approval; it is the community’s endorsement that lets you apply to IRCC.",
     "Rural immigration Canada rewards commitment — the application includes a promise to live and work in the community.",
+    "IRCC announced a permanent Rural Community Immigration Program on November 9, 2026. Check its published implementation details separately from the pilot's rules.",
   ],
 
   sections: [
@@ -31,6 +32,7 @@ const article = {
       heading: "What is the Rural Community Immigration Pilot?",
       body: [
         "The Rural Community Immigration Pilot is a permanent residence route for foreign workers who take a genuine job in a smaller Canadian community. It exists because many rural employers cannot fill skilled and essential roles locally, and because a newcomer who arrives with a job and a community behind them is more likely to stay.",
+        "There is an upcoming transition to keep in view: IRCC says the pilot will close on January 1, 2027, and announced a permanent Rural Community Immigration Program on November 9, 2026. The announcement does not make the new program's application rules interchangeable with the current pilot. Check IRCC's latest instructions for the program and dates that apply to you.",
         "The pilot is not run by IRCC alone. A community has to opt in, and its economic development organisation has to be willing to assess employers and candidates. That local filter is the defining feature: the federal department assesses the permanent residence application, but the community decides first whether your job and your profile are worth recommending.",
         "Because the participating communities and their criteria are set locally, the pilot looks different from one place to another. Some communities prioritise healthcare roles, others trades, transport or food processing. The current list of communities and the priorities each one publishes are the starting point for any plan, and that list changes.",
       ],
@@ -151,11 +153,11 @@ const article = {
       heading: "How does RCIP compare with other regional and community routes?",
       body: [
         "The Rural Community Immigration Pilot builds on the model of the earlier Rural and Northern Immigration Pilot, which used a similar community-recommendation structure. If you have read about the older pilot, the logic is familiar: a designated employer, a community recommendation, then a permanent residence application. The community list and the criteria are the parts that differ, so always work from the current pilot’s own page.",
-        "Two comparisons are worth making. A provincial nominee program nomination is province-wide rather than community-specific, and it can rest on a stream that is not employer-driven at all. The municipal nominee route is another attempt to give smaller places a say in who settles there. If your goal is a specific town, the community route is the closer fit; if your goal is a specific province, a provincial stream may give you more options.",
+        "Two comparisons are worth making. A provincial nominee program nomination is province-wide rather than community-specific, and it can rest on a stream that is not employer-driven at all. Older federal policy documents also discussed a Municipal Nominee Program, but IRCC's current program directory does not list an active MNP application route. If your goal is a specific town, check current community programs; if your goal is a specific province, compare its live nominee streams.",
       ],
       related: [
         { href: "/immigrate/rural-and-northern-immigration-pilot", label: "Rural and Northern Immigration Pilot" },
-        { href: "/immigrate/municipal-nominee-program", label: "Municipal nominee program" },
+        { href: "/immigrate/municipal-nominee-program", label: "Municipal Nominee Program status" },
       ],
     },
   ],
@@ -214,7 +216,7 @@ const article = {
 
   related: [
     { href: "/immigrate/rural-and-northern-immigration-pilot", label: "Rural and Northern Immigration Pilot", note: "The earlier community-recommendation pilot this program builds on." },
-    { href: "/immigrate/municipal-nominee-program", label: "Municipal nominee program", note: "Another route that gives smaller places a direct say in settlement." },
+    { href: "/immigrate/municipal-nominee-program", label: "Municipal Nominee Program status", note: "Older policy proposal; IRCC does not currently list an active application pathway." },
     { href: "/immigrate/provincial-nominee-program-all-provinces-consolidated", label: "Provincial nominee programs", note: "Compare province-wide streams against a community-specific route." },
     { href: "/assessment/free-canada-immigration-assessment", label: "Free assessment", note: "Check whether a community route or a provincial stream fits your profile." },
   ],
@@ -223,6 +225,10 @@ const article = {
     {
       "label": "IRCC — Rural Community Immigration Pilot",
       "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/rural-franco-pilots/rural-immigration.html"
+    },
+    {
+      "label": "IRCC — Permanent Rural Community Immigration Program announcement",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/11/canada-creates-a-permanent-immigration-pathway-to-help-rural-communities-attract-and-retain-talent0.html"
     },
     {
       "label": "IRCC — Check processing times",

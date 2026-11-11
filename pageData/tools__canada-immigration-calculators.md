@@ -1,126 +1,126 @@
-# Free Canada immigration calculators: make the next question easier to answer
+# Free Canadian immigration calculators and eligibility tools
 
 > **Source URL:** https://commonwealthmigration.ca/tools/canada-immigration-calculators
-> **Last modified:** 2026-10-26
+> **Last modified:** 2026-11-11
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Fresh English rewrite | SEO/GEO/AEO reviewed
 
 ## SEO Metadata
 
-- **Title tag:** Canada Immigration Calculators | CRS & PNP
-- **Meta description:** Use free Canada immigration calculators for CRS, PNP, CLB and FSW planning. Compare your estimate with current IRCC criteria before you apply.
-- **Meta keywords:** Canada immigration calculators, CRS calculator, PNP eligibility checker
+- **Title tag:** Canada Immigration Calculators & Eligibility Tools
+- **Meta description:** Estimate a CRS score, screen PNP options, find an occupation code or organize documents with free Canadian immigration tools.
+- **Meta keywords:** Canada immigration calculators, free Canadian immigration tools, CRS calculator Canada with spouse, PNP eligibility checker Canada online, NOC finder Canada by job duties, Canadian immigration document checklist by application type, free Canada immigration assessment
 - **Canonical URL:** https://commonwealthmigration.ca/tools/canada-immigration-calculators
-- **OG title:** Canada Immigration Calculators | CRS & PNP
-- **OG description:** Use free Canada immigration calculators for CRS, CLB, FSW, PNP and RCIP screening, then verify the estimate against current official rules.
+- **OG title:** Canada Immigration Calculators & Eligibility Tools
+- **OG description:** Estimate a CRS score, screen PNP options, find an occupation code or organize documents with free Canadian immigration tools.
 - **Robots:** index, follow
 
 ## Heading Outline
 
-- # Free Canada immigration calculators: make the next question easier to answer
-- ## Use the Canada immigration calculators in three passes
-- ## What the estimate can reveal
-- ## What the tool cannot decide
-- ## Turn the estimate into an action list
-- ## Read the linked source alongside the result
+- # Free Canadian immigration calculators and eligibility tools
+- ## Choose the tool that matches your question
+- ## What each Canadian immigration tool can help you check
+- ## What an online eligibility result cannot confirm
+- ## Turn a screening result into a research plan
+- ## Verify the rule with an official source
 - ## Questions people ask
-- ### How do Canadian immigration calculators estimate eligibility or Express Entry scores?
-- ### Can a Canada immigration calculator guarantee permanent residence or visa approval?
-- ### When should I request a file-specific review after using an immigration calculator?
+- ### Which free Canadian immigration calculators and tools are available here?
+- ### Is a Canada CRS calculator or PNP checker an official eligibility decision?
+- ### How do I use a Canadian immigration tool when my profile has a refusal or deadline?
 
 ## Hero Section
 
-# Free Canada immigration calculators: make the next question easier to answer
+# Free Canadian immigration calculators and eligibility tools
 
-Use this free tool to turn crs, clb, fsw, pnp and rcip screening tools into a planning conversation. It is a starting estimate, not a legal determination or a promise of an invitation.
+Use these free Canadian immigration tools to estimate a CRS score, screen for provincial nominee streams, search NOC occupations, organize common application documents or request a written profile assessment. Each tool answers a different planning question. Check its limits and compare the result with current official instructions before making a decision.
 
-- eligibility and admissibility
-- documents and timing
-- a clear next step
+- CRS score estimate for Express Entry planning
+- PNP, NOC and document preparation tools
+- Free written assessment for a profile-specific question
 
 ## Page Content
 
-## Use the Canada immigration calculators in three passes
+## Choose the tool that matches your question
 
 
 
-Choose the calculator that matches your question—CRS, CLB, Federal Skilled Worker, PNP or RCIP. Enter facts you can verify, then use the estimate to identify which eligibility point to check against the current program rules.
+Start with the tool that addresses the decision in front of you. Use the CRS calculator to organize ranking factors, the PNP checker to identify streams for further research, the NOC finder to compare duties with occupation descriptions, or the document checklist to prepare for a common application type. The free assessment form is available when your question depends on your personal history.
 
 
 
-- use supportable inputs
-- check test and document dates
-- save the questions it creates
+- Select the tool that fits your application goal
+- Enter facts you can support with records
+- Note any issue the tool cannot account for
 
-## What the estimate can reveal
-
-
-
-These tools can highlight inputs that affect a screening result, such as language, education, work, age, employer, province or family details. They cannot confirm that a document will be accepted or forecast when invitations will be issued.
+## What each Canadian immigration tool can help you check
 
 
 
-- find the strongest lever
-- spot a missing document
-- compare a backup route
-
-## What the tool cannot decide
+The CRS tool estimates selected Express Entry ranking factors. The PNP checker suggests provincial streams to research based on your answers. The NOC finder helps you compare your duties with NOC 2021 occupation profiles, and the document checklist helps organize common records. These tools can highlight questions; they do not review every exception or verify your supporting evidence.
 
 
 
-A screening result does not establish program eligibility, create an invitation or grant immigration status. A refusal, inadmissibility concern or conflicting record needs a file-specific review of the underlying evidence and available options.
+- See which profile details need verification
+- Identify a document or eligibility question to research
+- Decide whether another pathway deserves comparison
+
+## What an online eligibility result cannot confirm
 
 
 
-- read the official source
-- do not rely on historical cutoffs
-- ask a licensed RCIC when facts are complex
-
-## Turn the estimate into an action list
+An online result does not establish eligibility, create an invitation, identify the final NOC code for a job or grant immigration status. Program rules can include exceptions, deadlines and document standards that a short questionnaire cannot assess. A past refusal, inadmissibility issue or conflicting record may need a review of the complete file.
 
 
 
-Turn the estimate into a short action list: verify the input with the biggest effect, obtain or renew its supporting record, and decide whether another route deserves comparison. Recheck official rules before making a major work, study or settlement decision.
+- Confirm every answer against the program guide
+- Match occupation codes to actual duties
+- Get a file-specific review if a decision or deadline is involved
+
+## Turn a screening result into a research plan
 
 
 
-- verify the input
-- rank the available levers
-- recalculate after a real change
-
-## Read the linked source alongside the result
+Write down the result, the assumptions behind it and the next facts to confirm. For CRS, check your language results, education assessment, work history and current scoring criteria. For a PNP or NOC result, follow the linked provincial or official occupation information. For an application checklist, compare each item with the personalized document instructions in your application account.
 
 
 
-For the current rule, review the [official IRCC immigration hub](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html) and compare it with the [IRCC: check processing times](https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html). The source explains the legal test; the tool only helps you decide what to read next.
+- Check the evidence behind each answer
+- Follow the official link for the matching program
+- Update your estimate only when a fact changes
+
+## Verify the rule with an official source
 
 
 
-- check current scoring
-- review exceptions
-- ask for a profile-specific assessment
+Use the current [IRCC immigration program pages](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html) for federal routes and the relevant provincial or territorial site for nomination streams. The guide and your application-specific instructions control; the tool is there to help you decide what to check next.
+
+
+
+- Confirm eligibility, intake status and required evidence
+- Check the effective date of a policy or form
+- Request a personal review when your facts are unusual
 
 ## Questions people ask
 
 
 
-### How do Canadian immigration calculators estimate eligibility or Express Entry scores?
+### Which free Canadian immigration calculators and tools are available here?
 
-Each calculator uses different inputs. Read the result alongside the matching program guide and confirm that the route is open, your status fits, and the documents support the answers entered.
+The page includes a CRS score calculator, PNP eligibility checker, NOC and occupation finder, document checklist and free written assessment form. Each has a different purpose, so read the tool’s explanation and limits before using its result.
 
-### Can a Canada immigration calculator guarantee permanent residence or visa approval?
+### Is a Canada CRS calculator or PNP checker an official eligibility decision?
 
-No. A calculator can help with planning, but it cannot award a nomination or visa. The responsible government or tribunal makes that decision after reviewing the applicable rules and evidence.
+No. The CRS result is an estimate, and the PNP checker is an initial screen. IRCC or the relevant province assesses eligibility and makes the decision under its current rules and the evidence submitted.
 
-### When should I request a file-specific review after using an immigration calculator?
+### How do I use a Canadian immigration tool when my profile has a refusal or deadline?
 
-Ask for a file review before a deadline or major fee if your result depends on a refusal, lost status, inadmissibility, employer-compliance issue, complex family facts or records that do not match.
+Treat the tool result as background. If you have a refusal, status expiry, procedural fairness letter or upcoming response date, check the notice and applicable instructions promptly and seek advice based on the complete record.
 
 ## A practical next step
 
 
 
-If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
+Choose a tool from the list above, or [request a free immigration assessment](https://commonwealthmigration.ca/assessment/free-canada-immigration-assessment) if you want a written review of your profile. Have your status, key dates and supporting records available so you can check each result against the facts.
 
 ## Links & CTAs on this page
 

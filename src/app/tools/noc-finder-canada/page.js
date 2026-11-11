@@ -16,7 +16,14 @@ export const metadata = buildMetadata({
   title: "NOC Finder Canada | Search 516 Occupations",
   description: pageDescription,
   path: pagePath,
-  keywords: ["NOC finder Canada", "NOC code search", "TEER category Canada"],
+  keywords: [
+    "NOC finder Canada",
+    "NOC code search",
+    "TEER category Canada",
+    "find Canadian NOC code by job duties",
+    "NOC 2021 TEER code finder",
+    "search NOC code by occupation title Canada",
+  ],
 });
 
 export default function NocFinderPage() {

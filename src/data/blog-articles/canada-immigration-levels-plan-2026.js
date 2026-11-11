@@ -128,7 +128,7 @@ const article = {
       id: "what-it-means-pnp",
       heading: "What does the plan mean for provincial nominee and regional applicants?",
       body: [
-        "The Provincial Nominee Program holds 91,500 places in 2026 and 92,500 in each of the following two years, making it the second-largest permanent residence channel in the country. The Atlantic Immigration Program is steady at 4,000 a year, and the federal economic pilots — which include the community immigration pilots and the caregivers and agri-food pilots — rise from 8,175 to 8,775.",
+        "The Provincial Nominee Program holds 91,500 places in 2026 and 92,500 in each of the following two years, making it the second-largest permanent residence channel in the country. The Atlantic Immigration Program is steady at 4,000 a year, and the federal economic pilots allocation rises from 8,175 to 8,775. These are admissions targets, not promises that every pilot is accepting new files: the Agri-Food Pilot is closed to new applications, and intake for the Home Care Worker Immigration pilots is paused. Check each program's current IRCC notice before planning around a target.",
         "The national figure is only the envelope. Each province and territory receives an allocation, then decides how to distribute it across its own streams, which is why one province can pause an intake while another opens one in the same month. A nomination also changes an Express Entry candidate's position materially, because a provincial nomination is the single largest points addition available in the CRS.",
         "For a regional route such as the Atlantic Immigration Program or a community immigration pilot, the binding constraint is usually the employer rather than the target. These programs need a designated or approved employer with a genuine job offer, so the number of available places is rarely the reason a file stalls.",
       ],
@@ -253,6 +253,14 @@ const article = {
     {
       "label": "IRCC — Check processing times",
       "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html"
+    },
+    {
+      "label": "IRCC — Agri-Food Pilot closure and processing of existing applications",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/agri-food-pilot.html"
+    },
+    {
+      "label": "IRCC — Home Care Worker Immigration Pilot intake pause",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/pausing-home-care-worker-immigration-pilots-application-intake.html"
     },
     {
       "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/immigration-system/levels/supplementary-immigration-levels-2026-2028.html",

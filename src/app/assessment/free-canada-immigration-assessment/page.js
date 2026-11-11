@@ -9,9 +9,17 @@ const page = getPage(pagePath);
 
 export const metadata = buildMetadata({
   title: "Free Canada Immigration Assessment | Brampton RCIC",
-  description: "Get a free Canada immigration assessment in Brampton. Share your goal, status and timeline to identify possible pathways, document gaps and next steps.",
+  description: "Request a free Canada immigration assessment. Share your goal, status and timeline to identify routes to review, evidence gaps and next steps.",
   path: pagePath,
-  keywords: ["free Canada immigration assessment", "immigration consultant Brampton", "Canada immigration eligibility"],
+  keywords: [
+    "free Canada immigration assessment",
+    "Canada immigration eligibility assessment",
+    "free PR pathway assessment Canada",
+    "immigration consultant Brampton",
+    "documents for an immigration assessment",
+    "licensed RCIC profile review",
+    "Canadian immigration options by status",
+  ],
 });
 
 export default function FreeCanadaImmigrationAssessmentPage() {

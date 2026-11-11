@@ -179,7 +179,7 @@ const article = {
     },
     {
       "question": "Can I apply for permanent residence without a job offer?",
-      "answer": "Yes. Express Entry, the Canadian Experience Class and many provincial streams can be pursued without a job offer; some regional and community routes require one from a designated employer. From November 3, 2026, a qualifying offer in an eligible high-wage occupation may add CRS points under IRCC’s new rules. Family sponsorship is based on the relationship and sponsor, not a job offer."
+      "answer": "Yes. Express Entry, the Canadian Experience Class and many provincial streams can be pursued without a job offer; some regional and community routes require one from a designated employer. Since November 3, 2026, a qualifying high-wage offer may add CRS points through the Labour Market Integration factor, subject to IRCC's criteria. Family sponsorship is based on the relationship and sponsor, not a job offer."
     },
     {
       "question": "Do I have to choose between Express Entry and the Provincial Nominee Program?",

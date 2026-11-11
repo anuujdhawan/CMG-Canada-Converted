@@ -14,7 +14,7 @@ const article = {
   slug: "canada-super-visa-2026",
 
   quickAnswer:
-    "The Canada super visa is a visitor stream for parents and grandparents of Canadian citizens and permanent residents; it is not permanent residence. It needs an invitation from your child or grandchild, their income at the published minimum, Canadian medical insurance and a medical exam, and it permits longer visits than a standard visitor visa.",
+    "The Canada Super Visa is temporary visitor status for eligible parents and grandparents; it does not lead to permanent residence. Check the host income, medical insurance, medical exam and visitor requirements. The Parents and Grandparents Program is paused to new forms and invitations, and the Super Visa is assessed separately.",
 
   keyTakeaways: [
     "The Canada super visa is a temporary visitor stream, not a route to permanent residence.",
@@ -22,7 +22,7 @@ const article = {
     "You need Canadian medical insurance that meets the coverage and validity rules for the whole period.",
     "A medical exam is required for the super visa, and you must be admissible to Canada as a visitor.",
     "The super visa allows longer visits per entry than a standard visitor visa, at the officer’s discretion.",
-    "The Parents and Grandparents Program is the permanent residence route; the super visa is the alternative while you wait.",
+    "IRCC has paused new Parents and Grandparents Program forms and invitations. A Super Visa is a separate temporary-visit option, not a replacement PR route.",
   ],
 
   sections: [
@@ -31,12 +31,12 @@ const article = {
       heading: "Is the Canada super visa a path to permanent residence?",
       body: [
         "No. The Canada super visa is a temporary resident visa with special conditions for parents and grandparents. It lets you visit for longer than a standard visitor visa, but it does not give you permanent residence, and time spent in Canada on it does not count towards permanent residence or citizenship.",
-        "This is the most common misunderstanding about the program, and it causes real problems. Families sometimes treat the super visa as a substitute for sponsorship and are surprised when it does not lead anywhere. It is a visitor stream that sits alongside the Parents and Grandparents Program, not a stage of it.",
-        "The super visa is useful precisely because it is temporary and does not depend on a sponsorship invitation. When a family cannot sponsor a parent in a given year, the super visa can keep the family together for longer visits in the meantime. Used that way, it is a planning tool rather than a permanent solution.",
+        "This is the most common misunderstanding about the program, and it can lead to the wrong plan. A Super Visa is a visitor stream, not a step toward permanent residence. IRCC has paused new Parents and Grandparents Program forms and invitations, but that does not change the Super Visa's temporary purpose or requirements.",
+        "The Super Visa is a temporary option for families who want longer visits and meet the host and visitor requirements. It can be considered while PGP intake is paused or an existing application is processed, but it is assessed separately and does not provide a path to permanent status.",
       ],
       callout: {
         label: "What this means for you",
-        text: "If your goal is for your parents to live in Canada permanently, the super visa is not the route. It buys time while the sponsorship stream remains the real objective.",
+        text: "If your goal is permanent residence, the Super Visa will not provide it. IRCC has paused new PGP forms and invitations; check its current notices before planning around sponsorship.",
       },
     },
     {
@@ -109,7 +109,7 @@ const article = {
       heading: "How does the super visa compare with the Parents and Grandparents Program?",
       body: [
         "The two are often confused because they serve the same family. The Parents and Grandparents Program is a sponsorship route to permanent residence. The super visa is a temporary visitor stream. One ends in status in Canada; the other ends when the visit ends.",
-        "The PGP depends on an invitation to apply and an annual intake process, so it is not available on demand. The super visa has no such invitation step and can be used while a family waits for the sponsorship route, or where sponsorship is not possible.",
+        "IRCC has paused new PGP interest-to-sponsor forms and invitations until further notice. A Super Visa application does not require a PGP invitation and can be considered for an extended visit if the host and visitor meet its requirements. It remains temporary and is assessed separately from any existing PGP file.",
         "The requirements differ too. Sponsorship tests the sponsor’s income over a defined period and requires an undertaking, while the super visa tests the host’s income against the minimum necessary income, the applicant’s insurance and medical fitness, and admissibility as a visitor. Choose the route that matches the goal.",
       ],
       table: {
@@ -118,7 +118,7 @@ const article = {
         rows: [
           ["Status it gives", "Temporary visitor status", "Permanent residence"],
           ["Who applies", "The parent or grandparent", "The child or grandchild sponsors the parent"],
-          ["Invitation needed", "No invitation to apply required", "An invitation to apply is required when the intake opens"],
+          ["Invitation needed", "No PGP invitation required", "Required for PGP; new forms and invitations are currently paused"],
           ["Income test", "Host must meet the minimum necessary income", "Sponsor must meet the income requirement and sign an undertaking"],
           ["Insurance", "Canadian medical insurance meeting the rules", "Not a program requirement"],
           ["Medical exam", "Required", "Required"],
@@ -160,7 +160,7 @@ const article = {
   glossary: [
     { term: "Super visa", definition: "A temporary resident visa for parents and grandparents of Canadian citizens and permanent residents, allowing longer visits than a standard visitor visa." },
     { term: "Minimum necessary income (MNI)", definition: "The published income threshold a host must meet for a super visa, set by household size and updated each year." },
-    { term: "Parents and Grandparents Program (PGP)", definition: "The family sponsorship stream that leads to permanent residence for parents and grandparents, opened through an invitation to apply." },
+    { term: "Parents and Grandparents Program (PGP)", definition: "The family sponsorship stream that can lead to permanent residence for parents and grandparents. IRCC has paused new forms and invitations until further notice." },
     { term: "Medical insurance", definition: "Canadian coverage a super visa applicant must hold, meeting the required coverage and validity rules, paid and valid for entry." },
     { term: "Panel physician", definition: "A doctor approved by IRCC to carry out immigration medical exams, whose results are valid for a limited period." },
     { term: "Permanent residence", definition: "The status that allows a person to live and work in Canada indefinitely. The super visa does not confer it." },
@@ -169,7 +169,7 @@ const article = {
   faqs: [
     {
       "question": "Is the Canada super visa a permanent residence program?",
-      "answer": "No. The Canada super visa is a temporary resident visa for parents and grandparents, and time spent in Canada on it does not count towards permanent residence or citizenship. Permanent residence for parents and grandparents comes through the Parents and Grandparents Program, which is a separate sponsorship stream with its own invitation process."
+      "answer": "No. The Canada Super Visa is temporary visitor status for parents and grandparents, and time spent in Canada on it does not count toward permanent residence or citizenship. The PGP is a separate route to permanent residence, but IRCC has paused new forms and invitations until further notice."
     },
     {
       "question": "What are the Super Visa Canada requirements for parents and grandparents visiting their family in Canada?",
@@ -185,7 +185,7 @@ const article = {
     },
     {
       "question": "Is there a parent visa Canada route to permanent residence?",
-      "answer": "Yes, through the Parents and Grandparents Program, which is the sponsorship route to permanent residence for parents and grandparents. It opens through an invitation to apply and is not available on demand. The super visa is the temporary alternative that can be used while a family waits for that route or where sponsorship is not possible."
+      "answer": "The Parents and Grandparents Program is the family sponsorship route to permanent residence for parents and grandparents, but IRCC is not accepting new forms or issuing invitations at this time. A Super Visa may support an extended visit, but it is temporary and assessed separately."
     },
     {
       "question": "Can parents extend their stay in Canada after entering with a valid Super Visa?",
@@ -211,8 +211,8 @@ const article = {
 
   related: [
     { href: "/visit/super-visa-standalone-page", label: "Super visa", note: "The program page: eligibility, documents and how to apply." },
-    { href: "/sponsor/super-visa-for-parents", label: "Super visa for parents", note: "How the visitor stream supports families waiting to sponsor." },
-    { href: "/sponsor/parents-and-grandparents-program-pgp", label: "Parents and Grandparents Program (PGP)", note: "The permanent residence route for parents and grandparents." },
+    { href: "/sponsor/super-visa-for-parents", label: "Super visa for parents", note: "Extended-visit requirements while PGP intake is paused." },
+    { href: "/sponsor/parents-and-grandparents-program-pgp", label: "Parents and Grandparents Program (PGP)", note: "Current pause status, 2025 intake and permanent-residence guidance." },
     { href: "/sponsor/minimum-necessary-income", label: "Minimum necessary income", note: "What the income test measures and how the threshold is set." },
   ],
 
@@ -227,7 +227,7 @@ const article = {
     },
     {
       "label": "IRCC — Sponsor your parents and grandparents",
-      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/sponsor-parents-grandparents.html"
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/sponsor-parents-grandparents/apply.html"
     },
     {
       "label": "IRCC — Medical exams for temporary residents",

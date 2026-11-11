@@ -4,8 +4,8 @@ import { pageStructuredData } from "@/components/templates/ContentPage";
 import BlogIndexPage from "@/components/blog/BlogIndexPage";
 import { resolveBlogCategory, resolveBlogPage } from "@/lib/blog";
 
-const TITLE = "Canada Immigration Blog | Express Entry & Work";
-const DESCRIPTION = "Read practical Canada immigration guides on Express Entry, PNP, work and study permits, family sponsorship, visitor visas and refusals. Verify current rules.";
+const TITLE = "Canadian Immigration Guides | Express Entry, PNP & More";
+const DESCRIPTION = "Browse Canadian immigration guides on Express Entry, PNP, permits, sponsorship and refusals. Check each topic against current official instructions.";
 
 /**
  * The category and page come from the URL rather than component state, so every
@@ -25,7 +25,16 @@ export async function generateMetadata({ searchParams }) {
     title: TITLE,
     description: DESCRIPTION,
     path: "/blog",
-    keywords: ["Canada immigration blog", "Express Entry guides", "Canadian immigration advice"],
+    keywords: [
+      "Canada immigration blog",
+      "Canadian immigration guides",
+      "Express Entry guide for applicants",
+      "PNP program guides Canada",
+      "Canadian work permit application guide",
+      "study permit guidance Canada",
+      "spouse sponsorship Canada guide",
+      "current IRCC program updates",
+    ],
     image: getPageShareImage(getPage("/blog")),
     // A filtered or paginated view is a slice of the same library, so it points
     // its canonical at /blog and stays out of the index rather than competing

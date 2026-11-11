@@ -13,10 +13,10 @@ const article = {
   sourcesHeading: "Sources",
 
   quickAnswer:
-    "Express Entry changes 2026 add new high-wage CRS points from November 3, while Ontario's OINP Workforce Priority stream replaces eight former streams. Check your NOC, wage, job offer and CRA records before updating your profile or EOI. The high-wage CRS points and OINP scoring rules are separate, and neither guarantees an invitation or nomination.",
+    "Since November 3, 2026, Express Entry has awarded points through a Labour Market Integration factor for eligible Canadian work experience or a qualifying high-wage job offer. Ontario's Workforce Priority stream has also replaced eight former OINP streams. Check your NOC, job offer, wage and CRA records against the current federal and Ontario rules; neither score guarantees an invitation or nomination.",
 
   keyTakeaways: [
-    "Express Entry: new points for high-wage Canadian work experience (up to 150) or a qualifying job offer (up to 100), starting November 3, 2026.",
+    "The Labour Market Integration factor has been in effect since November 3, 2026. It uses eligible Canadian work experience or a qualifying high-wage job offer, not both.",
     "No LMIA needed for a qualifying job offer to earn these points, or for job offers used under the Federal Skilled Worker and Federal Skilled Trades programs, if you meet IRCC's conditions.",
     "Pool scores will be recalculated. IRCC says this may take up to two weeks, and invitation rounds will pause during that time.",
     "OINP: eight streams were removed and replaced by the Ontario Workforce Priority stream. Selection is now by EOI score, not by stream.",
@@ -29,7 +29,7 @@ const article = {
       id: "express-entry-changes",
       heading: "Part 1: What is changing in Express Entry",
       body: [
-        "On October 16, 2026, Immigration Minister Lena Metlege Diab announced changes that start on November 3, 2026. IRCC's stated aim is to focus Express Entry on high-wage skilled workers.",
+        "IRCC's Labour Market Integration changes took effect on November 3, 2026. The factor recognizes eligible Canadian work experience or a qualifying high-wage job offer, subject to the current criteria.",
       ],
     },
     {
@@ -95,7 +95,7 @@ const article = {
       id: "lmia-change",
       heading: "The LMIA change",
       body: [
-        "From November 3, 2026, an LMIA is not required for a qualifying job offer to earn these points. A temporary public policy also exempts candidates invited on or after that date from the LMIA and LMIA-exemption requirement for job offers used to meet Federal Skilled Worker or Federal Skilled Trades eligibility, if they meet its conditions.",
+        "Since November 3, 2026, an LMIA is not required for an Express Entry job offer to qualify for these CRS points. A temporary public policy also exempts some candidates invited on or after that date from LMIA-related requirements for offers used to meet Federal Skilled Worker or Federal Skilled Trades eligibility, if they meet the policy conditions.",
         "This does not mean any job offer will do. IRCC officers still check that the offer is genuine: the employer must be actively in business, the job must reflect a real hiring need, the employer must be able to meet the terms, you must be qualified, and the employer must follow federal and provincial employment and recruitment laws. A revoked job offer no longer counts.",
       ],
     },
@@ -103,7 +103,7 @@ const article = {
       id: "existing-express-entry-profiles",
       heading: "What happens to profiles already in the pool",
       body: [
-        "IRCC says it will recalculate existing scores automatically, including points for eligible Canadian work experience. The recalculation may take up to two weeks, and invitation rounds will be paused while it happens. Candidates who want job offer points should update their profile before November 3 with all the required job offer details.",
+        "IRCC says it will recalculate existing scores automatically, including points for eligible Canadian work experience. The recalculation may take up to two weeks, and invitation rounds will be paused while it happens. If you have a qualifying job offer, check that its details are included in your profile and follow IRCC's current instructions; the online form may still ask for LMIA information.",
       ],
     },
     {
@@ -222,8 +222,8 @@ const article = {
         ordered: true,
         items: [
           "Find your NOC code from your real job duties, then check whether it appears on IRCC's high-wage list and at which tier.",
-          "If you have or expect a job offer, confirm it is full-time, continuous and for at least one year after PR, then update your profile before November 3.",
-          "Expect your score to change after November 3 and a short pause in draws.",
+          "If you have a job offer, confirm it is full-time, continuous and for at least one year after PR, then make sure your profile includes the required details.",
+          "Check your profile for the recalculated score; IRCC says the process may take up to two weeks and rounds will pause during recalculation.",
           "Do not rely on a higher score alone. Language, education and age still matter.",
         ],
       },
@@ -308,8 +308,8 @@ const article = {
 
   faqs: [
     {
-      question: "When do the new Express Entry rules start?",
-      answer: "The new high-wage points and the related LMIA change start on November 3, 2026. IRCC announced the changes on October 16, 2026, and candidates should check their profile before then.",
+      question: "When did the new Express Entry job-offer rules take effect?",
+      answer: "The Labour Market Integration factor and related LMIA change took effect on November 3, 2026. Check your Express Entry profile and IRCC's current instructions for the updated scoring and job-offer fields.",
     },
     {
       question: "How many extra CRS points can I get?",

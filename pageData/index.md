@@ -1,7 +1,7 @@
 # Licensed Immigration Consultant (RCIC) in Brampton, Ontario
 
 > **Source URL:** https://commonwealthmigration.ca
-> **Last modified:** 2026-10-28
+> **Last modified:** 2026-11-11
 > **Sitemap priority:** 1
 > **Status:** ✅ Homepage SEO/GEO/AEO revision
 
@@ -9,7 +9,7 @@
 
 - **Title tag:** Licensed Immigration Consultant in Brampton, Ontario
 - **Meta description:** RCIC Pankaj Khanna advises Brampton clients on Express Entry, PNP, permits, Super Visa, family sponsorship and refusals. Online consultations worldwide.
-- **Meta keywords:** immigration consultant in Brampton, immigration consultants in Brampton, licensed immigration consultant in Brampton, RCIC Brampton, Brampton immigration firm, Express Entry consultant Brampton, PNP consultant Brampton
+- **Meta keywords:** immigration consultant in Brampton, immigration consultants in Brampton, licensed immigration consultant in Brampton, RCIC Brampton, Brampton immigration firm, Express Entry consultant Brampton, PNP consultant Brampton, online immigration consultant Canada, verify an RCIC licence in Canada, immigration help for Brampton families
 - **Canonical URL:** https://commonwealthmigration.ca
 - **OG title:** Licensed Immigration Consultant in Brampton, Ontario
 - **OG description:** RCIC Pankaj Khanna advises Brampton clients on Express Entry, PNP, permits, Super Visa, family sponsorship and refusals. Online consultations worldwide.
@@ -20,23 +20,19 @@
 - # Licensed Immigration Consultant (RCIC) in Brampton, Ontario
 - ## Pankaj Khanna, RCIC
 - ## Immigration pathways from Brampton, Ontario
-- ## Canadian immigration case planning in Brampton
+- ## How an immigration case review works
 - ## Canadian immigration services for individuals, families and employers
-- ## Explore the guides before you decide
-- ## See which Canadian pathways may be worth exploring
-- ## Understand the refusal and review possible next steps
-- ## Recent Canadian immigration guides and updates
-- ## Canadian immigration support for employers
-- ## A clear process for your next step
-- ## Payments, signatures and case records
-- ## Use free tools to plan your next step
-- ## Not sure which pathway fits?
-- ## Common questions about immigration consultants in Brampton
-- ## What can an immigration consultant in Brampton help you compare?
-- ## Which Canadian immigration details should you prepare first?
-- ## How can Brampton applicants prepare for a useful consultation?
-- ## Where can you verify current Canadian immigration requirements?
-- ## Plan your next Canadian immigration step
+- ## Compare Canadian immigration pathways
+- ## Get help with a refusal or procedural fairness letter
+- ## Read current Canadian immigration guides
+- ## Immigration support for Canadian employers
+- ## What to prepare before a consultation
+- ## Use immigration calculators as planning tools
+- ## Questions about hiring an immigration consultant in Brampton
+- ## How do I verify a Canadian immigration consultant?
+- ## Can an immigration calculator predict an application decision?
+- ## When should I get advice about a refusal or deadline?
+- ## Prepare for a focused immigration consultation
 
 ## Hero Section
 
@@ -44,93 +40,113 @@
 
 Commonwealth Migration Group Inc. is a Canadian immigration firm based in Brampton, Ontario. Our licensed RCIC team helps with Express Entry, PNP, work and study permits, Super Visa applications, family sponsorship, refusal responses, and judicial reviews. Online consultations are available to clients across Canada and worldwide.
 
-- eligibility and admissibility
-- documents and timing
-- a clear next step
+- Express Entry, PNP and temporary-resident options
+- Family sponsorship, citizenship and employer support
+- Refusal and deadline reviews, with lawyer referral for Federal Court matters
 
 ## Page Content
 
-## Immigration guidance from Brampton, Ontario and across Canada
+## Immigration guidance from Brampton for clients across Canada
 
 
 
-Commonwealth Migration Group Inc. is based in Brampton, Ontario, and offers online consultations to clients across Canada and worldwide. Pankaj Khanna, a licensed RCIC, advises on Express Entry, provincial nominee programs, work and study permits, Super Visa applications, family sponsorship, citizenship, and refusal responses. Federal Court judicial reviews require a lawyer.
+Commonwealth Migration Group Inc. is based in Brampton and provides online immigration consultations across Canada and internationally. The team helps individuals, families and employers understand the process that may fit their circumstances, what evidence is needed and which official instructions control the next step. Federal Court judicial reviews must be handled by a lawyer.
 
 
 
-- name the goal
-- collect the relevant dates
-- identify the official source
+- Permanent residence and provincial nomination
+- Work, study and visitor applications
+- Sponsorship, citizenship and refusal support
 
-## What a careful review should cover
-
-
-
-A first review starts with your goal, current status and deadline, then identifies which application history and documents matter. Pankaj Khanna, a licensed RCIC, can explain how those facts relate to possible routes and clarify which service may fit.
+## How an immigration case review works
 
 
 
-- keep facts consistent
-- ask about the service scope
-- protect deadlines
-
-## Use official information as the final check
+A useful review starts with the decision you want to make and the facts that could change the answer: current status, application history, work or study record, family details and any deadline. Pankaj Khanna, a licensed RCIC, can compare those facts with the relevant program criteria and explain the scope of any recommended service.
 
 
 
-Use current instructions from IRCC, the relevant province or the decision-maker handling the matter. Recheck eligibility, fees, forms and deadlines close to filing because a general summary may lag behind an official update.
+- Identify the issue and applicable deadline
+- Check the evidence against current program instructions
+- Agree on the work and next step before proceeding
+
+## Compare Canadian immigration pathways
 
 
 
-- verify the source date
-- keep a copy of your record
-- seek specialist help when needed
-
-## Research before you retain
+Express Entry, provincial nominee programs, work permits, study permits and family sponsorship each use different tests. A route that suits one applicant may not suit another, even when their job title, CRS estimate or family relationship looks similar. Compare eligibility, timing, evidence and current intake status before choosing where to invest effort.
 
 
 
-Use the official source, regulator or decision-maker link before paying fees or sending sensitive documents. A careful intake starts with verification.
+- Check program eligibility before comparing scores
+- Review the documents that support each claimed fact
+- Recheck intake status, fees and forms before filing
+
+## Get help with a refusal or procedural fairness letter
 
 
 
-- name the decision
-- collect the dates
-- protect the deadline
-
-## Official sources and responsible advice
+If you receive a refusal, procedural fairness letter or request to respond, read the notice closely and record the date it was received. The response period and available options depend on the type of decision. Bring the full notice and application record for a focused review; Federal Court judicial review requires a lawyer.
 
 
 
-For the current rule, review the [official IRCC immigration hub](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html) and compare it with the [official IRCC Express Entry guide](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html). When the issue is personal, urgent or legally complex, ask an authorized representative or lawyer to review the complete record.
+- Keep the complete decision letter
+- Record when and how you received it
+- Confirm the deadline and who is authorized to advise
+
+## Read current Canadian immigration guides
 
 
 
-- verify current requirements
-- keep a complete file copy
-- ask who is authorized to help
-
-## Questions people ask
+Browse the [Canadian immigration guides](/blog) for plain-language explainers on Express Entry, provincial nomination, permits, sponsorship and other topics. Articles help you frame the question; use the linked government or tribunal source to verify current eligibility, forms, fees and deadlines.
 
 
 
-### How do I verify a licensed immigration consultant in Brampton before hiring one?
+- Compare the article date with the current official instructions
+- Follow source links to IRCC, a province or the tribunal
+- Use a file-specific review when your history changes the answer
 
-Verify the representative's current authorization, the service scope and whether your status, documents, timing and core eligibility fit the official instructions.
-
-### Can an immigration calculator or guide guarantee my Canadian visa or permanent residence approval?
-
-No. An authorized consultant can assess, prepare and represent a case where permitted, but cannot choose the outcome. IRCC, a province, the IRB or a court decides under the process that applies.
-
-### When should I request a file-specific review from a licensed Canadian immigration consultant?
-
-Seek a file-specific review when the answer depends on a status expiry, refusal, conflicting records, admissibility concern or a deadline. Bring the full notice and supporting documents so the adviser can address the facts that shape the next step.
-
-## A practical next step
+## Immigration support for Canadian employers
 
 
 
-If you are ready to move from general research to a file-specific review, [book a consultation with a licensed RCIC](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada). Bring your current status, key dates, documents and the question you need answered. The consultation can identify options to review, information gaps and official requirements to verify before submission.
+Employers can get help understanding LMIA requirements, work-permit pathways, Global Talent Stream applications and compliance responsibilities. The right process depends on the role, work location, wage, recruitment and the worker’s circumstances. Confirm current requirements before making an offer or setting a start date.
+
+- Review the position and intended start date
+- Check recruitment, wage and employer obligations
+- Keep a record of the advice and documents used
+
+## What to prepare before a consultation
+
+Bring your current immigration status, key dates, passport and travel history, education and language records, work history, family details and any prior applications or decisions. You do not need a perfect file to ask a question; a clear timeline and the complete notice or document that concerns you are a useful start.
+
+- Current status and expiry date, if applicable
+- Copies of refusals, requests or previous submissions
+- The decision you need help making
+
+## Use immigration calculators as planning tools
+
+The [CRS calculator](/tools/crs-calculator-canada), [PNP eligibility checker](/tools/pnp-eligibility-canada) and other free tools can help you organize a profile or identify a question to research. They do not confirm eligibility, create an invitation or predict a decision. Verify the result with current official criteria and the documents that support your answers.
+
+
+
+## Questions about hiring an immigration consultant in Brampton
+
+### How do I verify a Canadian immigration consultant?
+
+Search the consultant’s name in the [College of Immigration and Citizenship Consultants public register](https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx). Check that the listing matches the person you plan to hire, then confirm the service, fee and responsibilities in a written agreement.
+
+### Can an immigration calculator predict an application decision?
+
+No. A calculator can estimate selected points or screen broad criteria. IRCC, a province, the Immigration and Refugee Board or a court makes decisions under the rules that apply to the case and the evidence on file.
+
+### When should I get advice about a refusal or deadline?
+
+Get advice promptly when a refusal, status expiry, procedural fairness letter or document request has a response date. The available options and time limits depend on the decision, so bring the complete notice and proof of when you received it.
+
+## Prepare for a focused immigration consultation
+
+To discuss a specific case, [book an immigration consultation](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada). Share your goal, status, dates and the documents tied to your question. The review can help you understand which requirements apply, what information is missing and what work is included if you choose to proceed.
 
 ## Links & CTAs on this page
 

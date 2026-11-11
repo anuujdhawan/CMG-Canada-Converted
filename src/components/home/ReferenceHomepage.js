@@ -54,7 +54,7 @@ const SERVICES = [
   ["Plan your application around your school and program, any applicable attestation requirements, your study purpose, and post-graduation options that may be available.", "Study permits", "/work-and-study/canada-study-permit", GraduationCap],
   ["Prepare sponsorship applications for spouses, partners, parents, and dependent children, with evidence tailored to each category.", "Family sponsorship", "/sponsor/family-sponsorship-overview-all-categories", HeartHandshake],
   ["Review visitor visa, eTA, business-travel and Super Visa requirements for the purpose of your trip.", "Visitor visas & Super Visa", "/visit/visitor-visa-trv-and-super-visa-combined", MapPin],
-  ["Compare Start-Up Visa and provincial entrepreneur options with current program rules.", "Business immigration", "/immigrate/business-immigration-and-start-up-visa", BadgeDollarSign],
+  ["The federal Start-Up Visa intake is paused. Review the published transition guidance and check current intake status for provincial entrepreneur options.", "Business immigration", "/immigrate/business-immigration-and-start-up-visa", BadgeDollarSign],
   ["Learn when restoration may be available and which rules can apply while IRCC reviews a request.", "Status restoration", "/blog/restore-status-canada-worker-student", ShieldCheck],
   ["Review refusal reasons and procedural fairness letters, then consider possible next steps. Federal Court judicial reviews require a lawyer.", "Refusals & PFL responses", "/inadmissibility-and-appeals/refusal-and-pfl-response", BookOpenCheck],
   ["Review requirements for permanent resident cards, travel documents, and citizenship applications.", "PR cards & citizenship", "/citizenship/pr-card-renewal-and-citizenship-combined-overview", BadgeCheck]];

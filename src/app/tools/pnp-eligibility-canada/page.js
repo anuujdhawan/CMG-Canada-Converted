@@ -10,7 +10,14 @@ export const metadata = buildMetadata({
   title: "PNP Eligibility Check Canada | Provincial Nominee",
   description: "Check which Canadian provincial nominee categories may fit your profile, then verify province-specific criteria, intake and documents before applying.",
   path: pagePath,
-  keywords: ["PNP eligibility check", "provincial nominee program Canada", "PNP calculator"],
+  keywords: [
+    "PNP eligibility check",
+    "provincial nominee program Canada",
+    "PNP calculator",
+    "which PNP may fit my profile Canada",
+    "provincial nominee eligibility by province",
+    "free Canadian PNP eligibility checker",
+  ],
 });
 
 export default function PnpEligibilityPage() {

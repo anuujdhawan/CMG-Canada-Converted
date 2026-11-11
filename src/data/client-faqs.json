@@ -310,7 +310,7 @@
     },
     {
       "question": "Should my parents apply for a Super Visa or the Parents and Grandparents Program?",
-      "answer": "They are different. The Super Visa is a temporary visa for extended visits. The Parents and Grandparents Program (PGP) can lead to permanent residence but has limited intake and a selection process. Many Brampton families use the Super Visa while waiting or deciding whether to sponsor. See our PGP page for details."
+      "answer": "They serve different purposes. The Super Visa allows eligible parents and grandparents to visit for an extended stay, while the PGP can lead to permanent residence. IRCC has paused new PGP interest forms and invitations until further notice but continues processing existing applications. A Super Visa application is assessed separately and does not lead to PR."
     },
     {
       "question": "Can my parents apply from outside Canada while I live in Brampton?",
@@ -504,7 +504,7 @@
     },
     {
       "question": "Does a positive LMIA still add CRS points for Express Entry?",
-      "answer": "A positive LMIA does not currently add CRS points. IRCC removed job-offer CRS points on March 25, 2025. Starting November 3, 2026, IRCC plans to award points for qualifying high-wage job offers under a new formula; an LMIA alone will not provide points. A job offer may still matter for Federal Skilled Worker eligibility, a work permit or a provincial stream, so check the rule in effect when you apply."
+      "answer": "A positive LMIA does not by itself add CRS points. Since November 3, 2026, a qualifying high-wage job offer may earn points under the Labour Market Integration factor; a job offer must meet IRCC's criteria, and an LMIA is no longer required for Express Entry job offers. An offer may still matter for Federal Skilled Worker eligibility, a work permit or a provincial stream, so check the rules for that route."
     }
   ],
   "/visit/visitor-visa-trv-standalone-page": [
@@ -766,7 +766,7 @@
     },
     {
       "question": "Can I apply under the Federal Skilled Worker Program with a job offer from a Brampton employer?",
-      "answer": "A valid job offer may help meet Federal Skilled Worker eligibility and can affect whether proof of settlement funds is required, depending on your circumstances. From March 25, 2025 through November 2, 2026, a job offer does not add CRS points. Starting November 3, 2026, IRCC plans to award CRS points for qualifying high-wage job offers under a new formula. A job offer may also be relevant to a provincial stream, but check that stream’s current rules."
+      "answer": "A valid job offer may help meet Federal Skilled Worker eligibility and can affect whether proof of settlement funds is required, depending on your circumstances. Since November 3, 2026, a qualifying high-wage job offer may earn CRS points under the Labour Market Integration factor. An offer may also matter to a provincial stream, but check that stream's current rules."
     },
     {
       "question": "How long does a Federal Skilled Worker application take after an invitation?",
@@ -960,7 +960,7 @@
     },
     {
       "question": "Do I need a job offer for PNP-linked Express Entry?",
-      "answer": "It depends on the province and stream. Some provincial nomination routes require a job offer, while others select candidates without one. Ontario’s current Workforce Priority stream generally requires an Ontario job offer, with a separate pathway for eligible self-employed physicians. From March 25, 2025 through November 2, 2026, job offers do not add CRS points; starting November 3, 2026, IRCC plans to award points for qualifying high-wage job offers under a new formula. Verify the rule in effect when you apply."
+      "answer": "It depends on the province and stream. Some nomination routes require a job offer, while others select candidates without one. Ontario's current Workforce Priority stream generally requires an Ontario job offer, with a separate pathway for eligible self-employed physicians. Since November 3, 2026, IRCC has awarded CRS points under the Labour Market Integration factor for eligible Canadian work experience or a qualifying high-wage offer, using the higher result rather than both. Check IRCC's current criteria and your province's rules before applying."
     },
     {
       "question": "What happens if my nomination is refused or my profile expires?",
@@ -1850,35 +1850,35 @@
   "/immigrate/municipal-nominee-program": [
     {
       "question": "What is the Municipal Nominee Program?",
-      "answer": "The Municipal Nominee Program is a proposed Canadian immigration approach that would let cities or municipalities help select immigrants, similar to how provinces nominate. Check IRCC's site for its current status before treating it as an open program."
+      "answer": "The Municipal Nominee Program (MNP) appeared in earlier federal policy discussions as a way to involve municipalities in immigration selection. IRCC's current program directory does not list an active MNP application pathway, so older descriptions should not be treated as instructions to apply."
     },
     {
       "question": "Is the Municipal Nominee Program open for applications?",
-      "answer": "We could not confirm an open application stream when this guide was written. Do not pay anyone who claims to offer a nomination. Check IRCC's website and your municipality's announcements for the current status."
+      "answer": "IRCC's current program directory does not list an active Municipal Nominee Program application pathway. Check the live IRCC directory for updates, and be cautious of anyone selling a municipal nomination or a guaranteed place."
     },
     {
       "question": "How is a municipal nominee different from a provincial nominee?",
-      "answer": "A provincial nominee is selected by a province or territory under an agreement with the federal government. A municipal nominee would be selected by a city, which gives local governments a role. Check how any final program defines selection. If you live in Brampton or Peel, a licensed RCIC can check how this applies to your municipal nominee case."
+      "answer": "A provincial nomination is issued under an established provincial or territorial program with its own streams and rules. A municipality cannot issue a provincial nomination, and IRCC does not currently list an active MNP application pathway."
     },
     {
       "question": "Could Brampton take part in a Municipal Nominee Program?",
-      "answer": "It would depend on whether the program launches and which municipalities participate. Nothing should be assumed. Watch for official announcements from IRCC and the City of Brampton."
+      "answer": "There is no active MNP application pathway in IRCC's current program directory, so there is no current list of participating municipalities to apply through. Follow official IRCC or City of Brampton announcements for any future change."
     },
     {
       "question": "Who might be eligible for a municipal nomination?",
-      "answer": "Eligibility depends on the final design. Earlier proposals focused on workers who meet local labour needs. Check official sources and ignore claims that guarantee eligibility."
+      "answer": "IRCC has not published eligibility criteria for an active MNP application pathway. Earlier policy discussions are not program rules. For an open route, check current provincial nominee programs or IRCC's community-based program guidance."
     },
     {
       "question": "Why do some websites list the Municipal Nominee Program as an immigration pathway?",
-      "answer": "Some sites list it because the idea has been discussed publicly. A program that is discussed is not necessarily open. Always confirm program status on IRCC's website. Brampton applicants can book a consultation to review this point against their own documents."
+      "answer": "Some websites repeat older policy proposals or plans to develop a municipal pathway. A proposal is not an open immigration stream. Check IRCC's current program directory before you make plans or pay for help."
     },
     {
       "question": "What should I do while I wait for a municipal program?",
-      "answer": "Review programs that are open now, such as Express Entry, provincial nominee streams, community pilots and employer routes. Improve your language scores and credentials. A Brampton RCIC can help you build a plan that does not depend on a program that is not live."
+      "answer": "You do not need to wait for a proposed program before checking other options. Compare current Express Entry, provincial nominee, employer-led and community-based routes against your status, work history, language results and settlement plans. Each route has separate requirements and intake dates."
     },
     {
       "question": "Can a consultant apply for a municipal nomination for me?",
-      "answer": "Only if the program exists, and only a licensed representative can charge to do so. Be cautious of anyone who says they can get you a municipal nomination or a spot in advance."
+      "answer": "There is no active MNP application pathway listed by IRCC. A consultant cannot secure a nomination or a place in a program that is not accepting applications. Be cautious of anyone who promises either."
     },
     {
       "question": "How would a municipal nomination affect Express Entry?",

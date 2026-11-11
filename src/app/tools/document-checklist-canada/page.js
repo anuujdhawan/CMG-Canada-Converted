@@ -10,7 +10,14 @@ export const metadata = buildMetadata({
   title: "Canada Immigration Document Checklist | Express Entry",
   description: "Use a Canada immigration document checklist for Express Entry, study permits, work permits and sponsorship. Organize your file, then verify the IRCC guide.",
   path: pagePath,
-  keywords: ["Canada immigration document checklist", "Express Entry document checklist", "immigration documents Canada"],
+  keywords: [
+    "Canada immigration document checklist",
+    "Express Entry document checklist",
+    "immigration documents Canada",
+    "documents checklist for Express Entry invitation",
+    "study permit supporting documents checklist Canada",
+    "spousal sponsorship documents checklist Canada",
+  ],
 });
 
 export default function DocumentChecklistPage() {

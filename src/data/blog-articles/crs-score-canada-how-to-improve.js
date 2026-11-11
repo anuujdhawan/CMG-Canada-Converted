@@ -18,10 +18,10 @@ const article = {
     "A CRS score Canada is built from four groups of factors: core human capital, spouse or common-law partner factors, skill transferability, and additional points. Language ability, education and Canadian work experience carry the most weight, and a provincial nomination adds the single largest block of points available.",
 
   keyTakeaways: [
-    "The CRS totals 1,200 points across four groups, and a provincial nomination alone is worth 600 of them.",
+    "The CRS totals 1,270 points across four groups, and a provincial nomination alone is worth 600 of them.",
     "Language ability is the largest lever you control, because it scores directly and lifts skill transferability.",
     "Age scores highest in the twenties and declines each year, reaching zero at 45.",
-    "From November 3, 2026, a qualifying offer in an eligible high-wage occupation may earn CRS points; the new factor compares that offer with eligible Canadian work experience.",
+    "Since November 3, 2026, the Labour Market Integration factor compares points for eligible Canadian work experience with points for a qualifying high-wage job offer; only the higher result applies.",
     "French-language results can add points on top of a strong English result, without changing your education or work history.",
     "Every improvement depends on evidence: a valid test result, an assessed credential or documented work hours.",
   ],
@@ -32,7 +32,7 @@ const article = {
       heading: "What does a CRS score Canada actually measure?",
       body: [
         "A CRS score Canada measures how competitive your profile is inside the Express Entry pool, not whether you are eligible for a program. Eligibility is decided by the program you apply under. The score then ranks you against everyone else in the pool, and it is the ranking rather than the eligibility that decides who is invited in a round.",
-        "The score is built from four groups of factors: core human capital, spouse or common-law partner factors, skill transferability, and additional points. The maximum is 1,200. Most candidates cannot change all four groups equally, so the useful exercise is to see which group still has unused room in your own profile.",
+        "The score is built from four groups of factors: core human capital, spouse or common-law partner factors, skill transferability, and additional points. The maximum is 1,270. Most candidates cannot change all four groups equally, so the useful exercise is to see which group still has unused room in your own profile.",
         "What the score does not do is measure your value as an applicant. It measures a specific set of facts, and those facts can be improved, documented differently or, in the case of age, not improved at all. Knowing which is which is the point.",
       ],
     },
@@ -47,11 +47,11 @@ const article = {
         caption: "CRS factor groups and the maximum points available in each",
         columns: ["Factor group", "Maximum points", "What it covers"],
         rows: [
-          ["Core human capital", "460 with a spouse; 500 without", "Age, education, official language proficiency and Canadian work experience."],
+          ["Core human capital", "530 with a spouse; 570 without", "Age, education, official language proficiency and the Labour Market Integration factor."],
           ["Spouse or common-law partner", "40", "The partner's education, official language proficiency and Canadian work experience."],
           ["Skill transferability", "100", "Combinations of education, language results, work experience and a certificate of qualification."],
           ["Additional points", "600", "Provincial nomination, French skills, Canadian post-secondary study and a sibling in Canada."],
-          ["Total", "1,200", "The maximum CRS a profile can reach."],
+          ["Total", "1,270", "The maximum CRS a profile can reach."],
         ],
       },
       callout: {
@@ -64,7 +64,7 @@ const article = {
       heading: "What raises a CRS score the most?",
       body: [
         "The ranking is not the same as a to-do list. A nomination is the biggest single addition, but it depends on a province or territory choosing you, which is a separate application with its own criteria. Language results are the largest addition you control directly, which is why they come first.",
-        "The job-offer rule changes again on November 3, 2026. From that date, an eligible high-wage occupation may qualify for job-offer points under the new Labour Market Integration factor. The offer must meet IRCC’s criteria; having an offer alone does not guarantee points or an invitation.",
+        "The job-offer rules changed on November 3, 2026. The Labour Market Integration factor now compares points for eligible Canadian work experience with points for a qualifying high-wage job offer; IRCC assigns the higher result, not both. A job offer must meet the current criteria, and having one alone does not guarantee points or an invitation.",
       ],
       list: {
         title: "Ranked by how much each factor usually moves a score",
@@ -73,7 +73,7 @@ const article = {
           "A provincial or territorial nomination, worth 600 additional points and by far the largest single addition.",
           "Official language proficiency, which scores directly and also unlocks skill transferability points.",
           "French-language results, worth up to 50 additional points on top of your English result.",
-          "Canadian work experience, which scores directly and combines with education and foreign experience.",
+          "The Labour Market Integration factor, which scores eligible Canadian work experience or a qualifying high-wage job offer.",
           "Education, which scores directly and again through skill transferability.",
           "Canadian post-secondary study, worth up to 30 additional points for a credential of three years or longer.",
           "A brother or sister in Canada, worth 15 additional points.",
@@ -106,7 +106,7 @@ const article = {
       id: "work-experience-and-age",
       heading: "How do work experience and age change your score?",
       body: [
-        "Canadian work experience scores directly and rises with each additional year, up to a maximum at five years or more. Foreign work experience does not score directly, but it feeds skill transferability when it is combined with strong language results or with Canadian work experience. That is the key difference between the two.",
+        "Canadian work experience now sits within the Labour Market Integration factor. Points depend on the length of eligible Canadian work and, for qualifying high-wage occupations, the work's wage level. A valid high-wage job offer can also count under this factor, but IRCC uses the higher result rather than adding offer points to Canadian-work-experience points. Foreign work experience does not score directly; it can contribute through skill transferability when combined with strong language results or Canadian work experience.",
         "Age is the factor you cannot improve. Points are highest in the twenties, hold near the top until age 29, then decline year by year, and reach zero at 45. It is the reason two candidates with identical education, language and experience can end up with different scores, and the reason timing matters for some applicants.",
         "Because age cannot be changed, look harder at the factors that can. A candidate losing age points may gain more from a nomination, a French result or a Canadian credential than from waiting.",
       ],
@@ -124,8 +124,8 @@ const article = {
       id: "additional-points-and-what-changed",
       heading: "Which additional points count, and what no longer does?",
       body: [
-        "The additional group is where the biggest single swing sits, and it is also where the rules have moved most recently. A provincial nomination is worth 600 points on its own, which is why a nomination can move a candidate from outside the invited range to comfortably inside it.",
-        "From November 3, 2026, qualifying high-wage job offers can earn points under the Labour Market Integration factor. The offer must be valid under Express Entry and match an occupation on IRCC’s eligible list. A job offer can also matter for program eligibility even when it does not qualify for CRS points.",
+        "The additional-points group contains the largest single CRS increase: a provincial nomination is worth 600 points. A nomination can change a candidate's ranking substantially, but the province or territory makes that decision under its own rules.",
+        "Job-offer and Canadian-work-experience points sit in the separate Labour Market Integration factor within core human capital, not in the additional-points group. A job offer may still matter for program eligibility even when it does not qualify for CRS points.",
       ],
       list: {
         title: "Additional points currently available",
@@ -179,14 +179,14 @@ const article = {
       heading: "What should you verify before you rely on your score?",
       body: [
         "Confirm every input against the official CRS criteria page and the IRCC calculator, and check that the documents behind your score are still valid. Test results expire, assessments carry a date, and work experience has to fall within the period the rules require.",
-        "Check the CRS rules again before relying on an estimate. IRCC’s new Labour Market Integration factor takes effect November 3, 2026 and compares qualifying Canadian work experience with a qualifying high-wage job offer. A guide or calculator written before that date may not reflect the new calculation.",
+        "Check the CRS rules again before relying on an estimate. Since November 3, 2026, IRCC has used the Labour Market Integration factor to compare eligible Canadian work experience with a qualifying high-wage job offer. IRCC says existing profiles may take up to two weeks to recalculate and invitation rounds will pause during that work; check your live profile and IRCC's rounds page for current status.",
         "If your profile includes a prior refusal, a status gap or documents that disagree with each other, deal with that before optimising points. A high score does not cure an inconsistency.",
       ],
     },
   ],
 
   glossary: [
-    { term: "CRS", definition: "The Comprehensive Ranking System, the points system that scores and ranks profiles inside the Express Entry pool out of a maximum of 1,200 points." },
+    { term: "CRS", definition: "The Comprehensive Ranking System, the points system that scores and ranks profiles inside the Express Entry pool out of a maximum of 1,270 points." },
     { term: "Core human capital", definition: "The CRS group covering age, education, official language proficiency and Canadian work experience. It has the largest maximum of any group." },
     { term: "Skill transferability", definition: "The CRS group that rewards combinations of factors, such as a post-secondary credential with strong language results or with work experience." },
     { term: "Additional points", definition: "The CRS group covering a provincial nomination, French-language skills, Canadian post-secondary study and a sibling in Canada." },
@@ -202,7 +202,7 @@ const article = {
     },
     {
       "question": "Does a job offer improve a CRS score?",
-      "answer": "Through November 2, 2026, a job offer does not add CRS points. From November 3, a qualifying offer in an eligible high-wage occupation may earn 50, 70 or 100 points under IRCC’s new factor. The offer must meet the current criteria, and an offer alone does not guarantee an invitation."
+      "answer": "Since November 3, 2026, a qualifying high-wage job offer may earn 50, 70 or 100 points, depending on the occupation's wage level. The Labour Market Integration factor uses either the points for eligible Canadian work experience or the points for a qualifying offer, whichever is higher. A job offer alone does not guarantee points or an invitation."
     },
     {
       "question": "How many points does a provincial nomination add to a CRS score?",
@@ -233,8 +233,8 @@ const article = {
       "answer": "They may contribute under the spouse or common-law partner factors when applicable. Enter accurate spouse information and compare the official CRS criteria; points depend on the specific credential and test results."
     },
     {
-      "question": "Will Express Entry job-offer points change on November 3, 2026?",
-      "answer": "Yes. IRCC says the CRS job-offer points and assessment rules change on November 3, 2026. The new Labour Market Integration factor treats qualifying Canadian work experience and eligible high-wage job offers differently, so use IRCC’s transition instructions."
+      "question": "How did Express Entry job-offer points change on November 3, 2026?",
+      "answer": "IRCC introduced the Labour Market Integration factor and removed the LMIA requirement for Express Entry job offers. The factor assigns the higher of the points for eligible Canadian work experience or a qualifying high-wage job offer; it does not add both amounts together. Follow IRCC's current profile instructions and confirm the result in your live account."
     }
   ],
 

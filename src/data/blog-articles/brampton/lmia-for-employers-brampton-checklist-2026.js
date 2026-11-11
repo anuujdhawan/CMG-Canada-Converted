@@ -21,7 +21,7 @@ export default {
       "body": [
         "Before submitting, prepare documents that show the business is operating and can meet the employment terms. Keep the job description, wage, work location, payroll structure, recruitment records, interview results, reasons candidates were not selected, and signed employment agreement. Make sure whoever controls the work and pays the employee is correctly identified as the employer.",
         "Employers must not charge or recover recruitment fees from temporary foreign workers, directly or indirectly. Do not let a recruiter promise that an LMIA will be approved or require a worker to pay for a job offer.",
-        "As of 3 November 2026, IRCC’s Express Entry job-offer scoring rules are changing. That does not eliminate an LMIA requirement where an employer is using the Temporary Foreign Worker Program to hire a worker. Express Entry scoring and LMIA-based work authorization are separate systems."
+        "As of 3 November 2026, IRCC’s Express Entry job-offer scoring rules have changed. That does not eliminate an LMIA requirement where an employer is using the Temporary Foreign Worker Program to hire a worker. Express Entry scoring and LMIA-based work authorization are separate systems."
       ]
     },
     {

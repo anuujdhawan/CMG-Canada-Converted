@@ -16,6 +16,7 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = RESEARCH_BLOG_BY_SLUG[slug];
   if (!post) return {};
+  const article = getBlogArticle(slug);
   const cover = getResearchBlogImage(post.slug, post.category);
   // Use the JPEG social copy of the on-page WebP cover. Open Graph previews
   // are fetched by third-party crawlers, some of which still expect JPG/PNG.
@@ -25,7 +26,12 @@ export async function generateMetadata({ params }) {
     description: post.description,
     path: `/blog/${post.slug}`,
     type: "article",
-    keywords: post.keywords.split("; "),
+    // FAQ questions are already visible on the page; include their narrower,
+    // question-shaped search intents alongside the article's existing topics.
+    keywords: [
+      ...post.keywords.split(";").map((keyword) => keyword.trim()).filter(Boolean),
+      ...(article?.faqs || []).slice(0, 2).map((faq) => faq.question),
+    ],
     image: { url: shareImageUrl, alt: cover.alt, type: "image/jpeg" },
   });
 }

@@ -1,126 +1,126 @@
 # Free Canada Immigration Assessment
 
 > **Source URL:** https://commonwealthmigration.ca/assessment/free-canada-immigration-assessment
-> **Last modified:** 2026-10-26
+> **Last modified:** 2026-11-11
 > **Sitemap priority:** 0.9
 > **Status:** ✅ Fresh English rewrite | SEO/GEO/AEO reviewed
 
 ## SEO Metadata
 
 - **Title tag:** Free Canada Immigration Assessment | Brampton RCIC
-- **Meta description:** Get a free Canada immigration assessment in Brampton. Share your goal, status and timeline to identify possible pathways, document gaps and next steps.
-- **Meta keywords:** free Canada immigration assessment, immigration consultant Brampton, Canada immigration eligibility
+- **Meta description:** Request a free Canada immigration assessment. Share your goal, status and timeline to identify routes to review, evidence gaps and next steps.
+- **Meta keywords:** free Canada immigration assessment, Canada immigration eligibility assessment, free PR pathway assessment Canada, immigration consultant Brampton, documents for an immigration assessment, licensed RCIC profile review, Canadian immigration options by status
 - **Canonical URL:** https://commonwealthmigration.ca/assessment/free-canada-immigration-assessment
 - **OG title:** Free Canada Immigration Assessment | Commonwealth Migration Canada
-- **OG description:** Find the strongest next question before paying application fees. Canada-wide support from a licensed RCIC practice. See official rules before applying.
+- **OG description:** Share your goal, status and timeline for a free written review of possible Canadian immigration pathways and the questions to resolve next.
 - **Robots:** index, follow
 
 ## Heading Outline
 
 - # Free Canada Immigration Assessment
-- ## Start with the free Canada immigration assessment decision
-- ## What a careful review should cover
-- ## Use official information as the final check
-- ## Research before you retain
-- ## Official sources and responsible advice
+- ## Request a free Canada immigration assessment
+- ## What information helps us review your profile
+- ## What the written assessment can and cannot tell you
+- ## Check current rules before choosing a route
+- ## Prepare your documents and key dates
 - ## Questions people ask
-- ### What happens during a free Canada immigration assessment with a licensed RCIC?
-- ### Can an immigration calculator or guide guarantee my Canadian visa or permanent residence approval?
-- ### When should I request a file-specific Canada immigration assessment before submitting?
+- ### What do I need to share for a free Canadian immigration eligibility assessment?
+- ### What will I receive after submitting the free immigration assessment form?
+- ### Does a free immigration assessment guarantee a visa or permanent residence?
 
 ## Hero Section
 
 # Free Canada Immigration Assessment
 
-A useful assessment narrows the search: which programs fit, what evidence is missing, what deadline matters and what improvement could change the result.
+A free Canadian immigration assessment is a place to start if you are unsure which route to research. Share your main goal, current status, country of residence and a short account of your circumstances. The team can review the profile and send a written response with possible pathways and questions to resolve.
 
-- eligibility and admissibility
-- documents and timing
-- a clear next step
+- Permanent residence, work, study and family goals
+- Your current status, location and timeline
+- A written review with practical follow-up questions
 
 ## Page Content
 
-## Start with the free Canada immigration assessment decision
+## Request a free Canada immigration assessment
 
 
 
-A useful assessment narrows the search: which programs fit, what evidence is missing, what deadline matters and what improvement could change the result.
+Use the form to tell us what you hope to do in Canada and where you are in the process. You can submit an initial profile without uploading a complete application file. Give enough detail for the reviewer to understand your status, relevant dates and the main question you want answered.
 
 
 
-- name the goal
-- collect the relevant dates
-- identify the official source
+- Choose the goal closest to your situation
+- Include status and dates that affect your options
+- Mention a refusal, deadline or prior application
 
-## What a careful review should cover
-
-
-
-An assessment compares your goal and history with the requirements that control a possible route. It can identify missing records, important dates and questions to resolve; a full recommendation depends on your documents and the official criteria for your case.
+## What information helps us review your profile
 
 
 
-- keep facts consistent
-- ask about the service scope
-- protect deadlines
-
-## Use official information as the final check
+The form asks for your current status, country of residence, main immigration goal and a short description of your circumstances. Education, work experience, language results, family details and prior applications can help explain the profile. If any of these details are important, include them in the message so the reviewer can identify what may need closer examination.
 
 
 
-Check the current IRCC or provincial guide for the detail that could change your assessment, such as eligibility, intake status, fees, deadlines or processing estimates. Confirm the source date before relying on a summary.
+- Share an accurate timeline
+- Identify records that are missing or expired
+- Flag an upcoming status or response deadline
+
+## What the written assessment can and cannot tell you
 
 
 
-- verify the source date
-- keep a copy of your record
-- seek specialist help when needed
-
-## Research before you retain
+The response can outline possible routes to research, point out information gaps and suggest questions for a fuller review. It is based on the details you submit and does not guarantee eligibility, an invitation, a permit or permanent residence. A complete application plan may require supporting documents and a separate service agreement.
 
 
 
-Use the official source, regulator or decision-maker link before paying fees or sending sensitive documents. A careful intake starts with verification.
+- Read the response alongside the current official criteria
+- Keep the submitted profile and written reply
+- Ask what work is included before retaining a representative
+
+## Check current rules before choosing a route
 
 
 
-- name the decision
-- collect the dates
-- protect the deadline
-
-## Official sources and responsible advice
+Program status, eligibility, forms, fees and processing estimates can change. Before committing to an application, review the current instructions from [IRCC](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html) or the relevant province. If you receive a refusal or request with a deadline, follow the decision notice and get advice promptly.
 
 
 
-For the current rule, review the [official IRCC immigration hub](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html) and compare it with the [official IRCC Express Entry guide](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html). When the issue is personal, urgent or legally complex, ask an authorized representative or lawyer to review the complete record.
+- Confirm that the program is accepting applications
+- Check official forms, fees and instructions
+- Record any deadline shown in your notice
+
+## Prepare your documents and key dates
 
 
 
-- verify current requirements
-- keep a complete file copy
-- ask who is authorized to help
+You do not need to gather every document before submitting the form. For a more useful review, have your status document, passport details, education and work history, language results, family information and copies of any prior decisions nearby. Do not send original documents unless they are requested through an agreed, secure process.
+
+
+
+- List dates and application numbers accurately
+- Keep copies of notices and past submissions
+- Verify a consultant in the [CICC public register](https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx)
 
 ## Questions people ask
 
 
 
-### What happens during a free Canada immigration assessment with a licensed RCIC?
+### What do I need to share for a free Canadian immigration eligibility assessment?
 
-The reviewer starts with your goal, status and key dates, then checks possible routes and evidence gaps. You leave with the next documents and questions to resolve; the free assessment does not promise an immigration decision.
+Start with your goal, current status, country of residence and the dates that affect your situation. A short summary of your education, work, family details or prior application can help the reviewer understand what needs to be checked.
 
-### Can an immigration calculator or guide guarantee my Canadian visa or permanent residence approval?
+### What will I receive after submitting the free immigration assessment form?
 
-No. A calculator can estimate a score and a guide can explain a process, but only the responsible authority decides eligibility and the application outcome from the full record.
+The form confirmation says a consultant will review your profile and email a written assessment within two business days. The response is based on the information submitted and does not replace a full review of supporting documents or guarantee an immigration result.
 
-### When should I request a file-specific Canada immigration assessment before submitting?
+### Does a free immigration assessment guarantee a visa or permanent residence?
 
-Request a file-specific assessment before filing when a refusal, status expiry, tight deadline, unusual family history or missing record could change the route. Bring the original notice and timeline so the issue can be assessed directly.
+No. It can help identify routes to research and the questions that need an answer, but IRCC or the responsible province makes the decision under the rules and evidence that apply to your case.
 
 ## A practical next step
 
 
 
-If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
+Submit the [free assessment form](https://commonwealthmigration.ca/assessment/free-canada-immigration-assessment) with accurate contact details and a concise profile. If you already have a refusal, response deadline or status expiry, include the date so it can be considered when identifying the next question.
 
 ## Links & CTAs on this page
 

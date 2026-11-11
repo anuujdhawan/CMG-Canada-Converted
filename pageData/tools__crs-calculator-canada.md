@@ -1,126 +1,126 @@
-# Free CRS calculator Canada: make the next question easier to answer
+# CRS calculator Canada: simplified Express Entry score estimate
 
 > **Source URL:** https://commonwealthmigration.ca/tools/crs-calculator-canada
-> **Last modified:** 2026-10-26
+> **Last modified:** 2026-11-11
 > **Sitemap priority:** 0.8
 > **Status:** ✅ Fresh English rewrite | SEO/GEO/AEO reviewed
 
 ## SEO Metadata
 
-- **Title tag:** CRS Calculator Canada | Express Entry Score
-- **Meta description:** Use a free CRS calculator Canada to estimate your Express Entry score, review key factors and compare the result with current IRCC criteria.
-- **Meta keywords:** CRS calculator Canada, Express Entry score calculator, Canada CRS score
+- **Title tag:** CRS Calculator Canada | Express Entry Score Estimate
+- **Meta description:** Estimate your Express Entry CRS score with this simplified Canada calculator. It omits IRCC's 2026 Labour Market Integration factor.
+- **Meta keywords:** CRS calculator Canada, Express Entry score calculator, Canada CRS score estimate, free CRS calculator Canada with spouse, simplified Express Entry CRS estimate, how to calculate CRS score with a spouse, why a CRS calculator differs from IRCC score, official IRCC CRS calculator
 - **Canonical URL:** https://commonwealthmigration.ca/tools/crs-calculator-canada
 - **OG title:** CRS Calculator Canada | Express Entry Score
-- **OG description:** Use a free CRS calculator Canada for Express Entry score planning, then verify the estimate against current official rules with a licensed RCIC.
+- **OG description:** Estimate your Express Entry CRS score with this simplified Canada calculator. It omits IRCC's 2026 Labour Market Integration factor.
 - **Robots:** index, follow
 
 ## Heading Outline
 
-- # Free CRS calculator Canada: make the next question easier to answer
-- ## Use the CRS calculator Canada in three passes
-- ## What the estimate can reveal
-- ## What the tool cannot decide
-- ## Turn the estimate into an action list
-- ## Read the linked source alongside the result
+- # CRS calculator Canada: simplified Express Entry score estimate
+- ## Estimate CRS points from your profile details
+- ## Understand what this CRS estimate includes
+- ## Why the result may differ from IRCC's calculator
+- ## Check your score against supporting documents
+- ## Use the current official CRS calculator
 - ## Questions people ask
-- ### How does a Canada CRS calculator estimate my Express Entry score from profile details?
-- ### Can a CRS calculator guarantee an Express Entry invitation or permanent residence approval?
-- ### When should I request an Express Entry CRS profile review before submitting?
+- ### How do I use a Canada CRS calculator with a spouse?
+- ### Why can this CRS calculator show a different score from IRCC?
+- ### Does a CRS score guarantee an Express Entry invitation?
 
 ## Hero Section
 
-# Free CRS calculator Canada: make the next question easier to answer
+# CRS calculator Canada: simplified Express Entry score estimate
 
-Use this free tool to turn express entry score planning into a planning conversation. It is a starting estimate, not a legal determination or a promise of an invitation.
+Use this free CRS calculator Canada tool to estimate common Express Entry factors, including age, education, language, Canadian and foreign work, spouse factors and additional points. It does not include IRCC’s Labour Market Integration factor, effective November 3, 2026, so it is a simplified estimate and may differ from your current score. Check your profile with IRCC’s official calculator before acting.
 
-- eligibility and admissibility
-- documents and timing
-- a clear next step
+- Estimate common Express Entry ranking factors
+- Review individual or spouse-related profile details
+- Compare the estimate with IRCC's current calculator
 
 ## Page Content
 
-## Use the CRS calculator Canada in three passes
+## Estimate CRS points from your profile details
 
 
 
-Enter verified age, education, language, work, spouse and additional-factor details to estimate your CRS score. Review the breakdown against IRCC’s current CRS grid; the total can change when your profile or the applicable rules change.
+Select the answers that match your circumstances for age, education, language results, work experience, spouse factors and other listed credentials. Use valid test results and completed education assessments where relevant. If you are calculating with a spouse, answer the spouse questions using their supported education, language and Canadian work details.
 
 
 
-- use supportable inputs
-- check test and document dates
-- save the questions it creates
+- Use current language and education records
+- Choose the spouse or no-spouse profile that applies
+- Save the score breakdown for comparison
 
-## What the estimate can reveal
-
-
-
-A CRS total estimates ranking points; it does not prove eligibility for an Express Entry program or a category-based round. Your results and any invitation also depend on the round type, cutoff and tie-break rules.
+## Understand what this CRS estimate includes
 
 
 
-- find the strongest lever
-- spot a missing document
-- compare a backup route
-
-## What the tool cannot decide
+The tool adds points from the factors it supports so you can see which details affect a simplified total. A CRS score is only one part of Express Entry: program eligibility is separate, and category-based rounds use additional criteria. Each invitation round has its own selection rules and published results.
 
 
 
-The calculator cannot validate your documents or decide how IRCC will assess them. Confirm that your work history, education assessment, language results and any spouse or nomination factors meet the relevant requirements before relying on the score.
+- See which supported factors affect your estimate
+- Identify a result that needs document review
+- Prepare questions about score-improvement options
+
+## Why the result may differ from IRCC's calculator
 
 
 
-- read the official source
-- do not rely on historical cutoffs
-- ask a licensed RCIC when facts are complex
-
-## Turn the estimate into an action list
+This calculator does not include IRCC’s Labour Market Integration factor, effective November 3, 2026, and it cannot validate your documents or determine how IRCC will assess them. Differences can also arise from an incorrect answer, an expired language result, a credential assessment, work-history details or a spouse factor. Use the official IRCC tool for the current score.
 
 
 
-Review the factors that may still change, such as language results or eligible Canadian work experience, and estimate the impact before committing to a course, job or application. Check the official criteria and current draw information before acting.
+- Compare the calculation with IRCC's current tool
+- Verify every point against its supporting document
+- Check separate program eligibility and draw criteria
+
+## Check your score against supporting documents
 
 
 
-- verify the input
-- rank the available levers
-- recalculate after a real change
-
-## Read the linked source alongside the result
+Use the score breakdown to check language-test validity, education assessments, work dates and any spouse or nomination points. Before making a decision about work, study or an application, verify the current criteria and confirm that every point can be documented. Do not treat an earlier draw cutoff as a forecast of the next round.
 
 
 
-For the current rule, review the [IRCC: rounds of invitations](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html) and compare it with the [official IRCC immigration hub](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html). The source explains the legal test; the tool only helps you decide what to read next.
+- Match each claimed point to current evidence
+- Confirm the profile qualifies for an Express Entry program
+- Recheck IRCC's calculator after a relevant change
+
+## Use the current official CRS calculator
 
 
 
-- check current scoring
-- review exceptions
-- ask for a profile-specific assessment
+For a current CRS estimate, use the [official IRCC CRS calculator](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html). Then review [IRCC's CRS criteria](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html), confirm the Express Entry program requirements and check the current [rounds of invitations](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html).
+
+
+
+- Recalculate through IRCC's current tool
+- Confirm the program and round category separately
+- Get advice if your work or education evidence is unclear
 
 ## Questions people ask
 
 
 
-### How does a Canada CRS calculator estimate my Express Entry score from profile details?
+### How do I use a Canada CRS calculator with a spouse?
 
-The CRS calculator measures one part of Express Entry planning. Check federal program eligibility separately, then compare each claimed point with the document that supports it and the current IRCC criteria.
+Choose the spouse profile if your spouse or common-law partner will accompany you, then enter only the spouse details requested by the calculator. Compare each result with the current IRCC criteria and your supporting records; the official IRCC calculator should be used for a current estimate.
 
-### Can a CRS calculator guarantee an Express Entry invitation or permanent residence approval?
+### Why can this CRS calculator show a different score from IRCC?
 
-No. A CRS score can affect ranking, but it does not guarantee an invitation or permanent residence. IRCC sets the rules for each round and makes the final decision on an application.
+This tool omits the Labour Market Integration factor that IRCC introduced on November 3, 2026. Differences can also come from profile answers, spouse factors or documents that do not support the points entered. Check the current official CRS calculator and criteria.
 
-### When should I request an Express Entry CRS profile review before submitting?
+### Does a CRS score guarantee an Express Entry invitation?
 
-Consider a CRS profile review if your calculation depends on a disputed NOC, education assessment, spouse factor, provincial nomination or tight deadline. Bring the score breakdown and supporting documents so the facts can be checked against the relevant rules.
+No. Invitations depend on the round type, selection criteria, number of invitations and tie-break rule. A past cutoff is historical information, not a promise of a future invitation or permanent residence.
 
 ## A practical next step
 
 
 
-If you are ready to move from general research to a file-specific plan, [book a consultation with a licensed RCIC](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada). Bring your current status, dates, documents and the question you need answered. We will tell you what fits, what needs work and what should be verified before submission.
+Use the [official IRCC CRS calculator](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html) to check a current estimate. If your score depends on a disputed occupation, education assessment or work period, [book a profile review](https://commonwealthmigration.ca/contact/book-immigration-consultation-canada) with the score breakdown and supporting documents.
 
 ## Links & CTAs on this page
 
@@ -150,7 +150,7 @@ If you are ready to move from general research to a file-specific plan, [book a 
       "name": "Free CRS calculator Canada 2026 | Canada Immigration Tool",
       "description": "Use a free CRS calculator Canada for Express Entry score planning, then verify the estimate against current official rules with a licensed RCIC.",
       "inLanguage": "en-CA",
-      "dateModified": "2026-10-26",
+      "dateModified": "2026-11-11",
       "isPartOf": {
         "@type": "WebSite",
         "name": "Commonwealth Migration Canada",

@@ -141,7 +141,7 @@ export default function CrsCalculator() {
         {/* Intro band */}
         <div className="tool-notice mb-6 rounded-[0.85rem] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-primary)_5%,transparent)] px-4 py-[0.9rem] flex items-center gap-2 text-xs font-semibold">
           <Sparkles className="text-[var(--template-primary)] h-3.5 w-3.5" />
-          <span>This estimate uses the CRS rules in effect through November 2, 2026. IRCC changes points for eligible Canadian work experience and high-wage job offers on November 3. Check <a className="font-bold underline underline-offset-2 hover:text-[var(--template-primary)]" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html" target="_blank" rel="noopener noreferrer">IRCC’s change notice</a> before relying on a later score.</span>
+          <span>This simplified estimate uses an older CRS grid and does not include the Labour Market Integration factor that took effect on November 3, 2026. Use <a className="font-bold underline underline-offset-2 hover:text-[var(--template-primary)]" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC’s official CRS calculator</a> for a current score.</span>
         </div>
 
         <div className="crs-calculator__form-grid grid items-start gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -239,11 +239,11 @@ export default function CrsCalculator() {
               <div
                 className="tool-result__score-gauge relative mt-3 grid size-[170px] place-items-center rounded-full bg-[conic-gradient(var(--template-on-primary)_var(--score-progress),color-mix(in_srgb,var(--template-on-primary)_18%,transparent)_0)] shadow-[0_12px_28px_color-mix(in_srgb,var(--cmg-template-deep-surface)_20%,transparent)] before:absolute before:inset-2.5 before:rounded-full before:bg-[color-mix(in_srgb,var(--template-primary)_82%,var(--template-accent))] before:content-['']"
                 style={{ "--score-progress": `${Math.min(100, Math.round((score / 1200) * 100))}%` }}
-                aria-label={`Planning CRS estimate ${score} out of 1200`}
+                aria-label={`Simplified historical CRS estimate ${score} out of 1200 under the previous scoring grid`}
               >
                 <div className="tool-result__score-gauge-content relative z-[1] flex flex-col items-center text-[var(--template-on-primary)]">
                   <strong className="tool-result__score font-extrabold !text-[var(--template-on-primary)] !text-[clamp(2.5rem,1.6rem+3vw,3.75rem)] !leading-[1.02] tracking-[-0.028em]">{score}</strong>
-                  <span className="mt-[9px] text-[color-mix(in_srgb,var(--template-on-primary)_70%,transparent)] text-[11px] font-extrabold leading-none tracking-[.08em] uppercase">/ 1200 CRS</span>
+                  <span className="mt-[9px] text-[color-mix(in_srgb,var(--template-on-primary)_70%,transparent)] text-[11px] font-extrabold leading-none tracking-[.08em] uppercase">/ 1200 previous max</span>
                 </div>
               </div>
               <p className="tool-result__copy mt-2 max-w-md text-sm leading-relaxed !text-[var(--template-on-primary)] max-[620px]:max-w-[32rem]">
@@ -259,7 +259,7 @@ export default function CrsCalculator() {
 
         <p className="text-[var(--template-muted)] mt-4 flex items-start gap-2 text-xs leading-relaxed">
           <Info className="text-[var(--template-primary)] mt-0.5 h-4 w-4 shrink-0" />
-          Simplified CRS grid (one CLB across all abilities, skill-transferability approximated). Compare the result with the <a className="font-bold underline underline-offset-2 hover:text-[var(--template-primary)]" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html" target="_blank" rel="noopener noreferrer">current IRCC CRS criteria</a> before relying on it.
+          This historical estimate also simplifies language and skill-transferability scoring. Compare any planning questions with the <a className="font-bold underline underline-offset-2 hover:text-[var(--template-primary)]" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html" target="_blank" rel="noopener noreferrer">current IRCC CRS criteria</a> and verify your score in the official calculator.
         </p>
       </div>
     </ToolCard>

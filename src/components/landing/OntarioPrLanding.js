@@ -204,7 +204,7 @@ function EligibilityChecker({ onComplete }) {
           <span className="op-result__badge">Your starting point</span>
           <h3>{OUTCOMES[result].title}</h3>
           <p>{OUTCOMES[result].body}</p>
-          <p className="op-result__disclaimer">This is an indicative guide, not an eligibility assessment. Only a licensed representative can assess eligibility. Outcomes are determined by IRCC and the Government of Ontario.</p>
+          <p className="op-result__disclaimer">This quick guide is only a starting screen. Check the current Ontario and federal criteria against your documents; Ontario and IRCC make the program and application decisions.</p>
           <a {...primaryLinkProps()}>Book a free consultation <ArrowRight size={16} aria-hidden="true" /></a>
         </div>
       ) : (

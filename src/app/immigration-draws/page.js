@@ -16,7 +16,13 @@ export const metadata = buildMetadata({
   title: "Express Entry Draws Canada | CRS Cutoffs",
   description: "Track Canada Express Entry draws with official IRCC dates, CRS cutoffs, invitation counts, draw types and tie-break details for immigration planning.",
   path: "/immigration-draws",
-  keywords: ["Express Entry draws Canada", "CRS cutoff", "IRCC invitation rounds"],
+  keywords: [
+    "Express Entry draws Canada",
+    "Express Entry draw history by CRS cutoff",
+    "latest Express Entry invitation round results",
+    "Canadian Express Entry draws by category",
+    "IRCC invitation rounds",
+  ],
 });
 
 export default function ImmigrationDrawsRoute() {

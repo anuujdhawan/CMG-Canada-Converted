@@ -12,8 +12,14 @@ const page = {
   seo: {
     title: "Book an Immigration Consultation in Brampton",
     description: "Book a focused Canadian immigration consultation in Brampton to discuss your pathway, documents, timeline and next steps.",
+    keywords: [
+      "book an immigration consultation in Brampton",
+      "Canadian immigration consultation online",
+      "licensed RCIC consultation in Brampton",
+      "what to bring to an immigration consultation",
+    ],
   },
-  meta: { lastModified: "2026-09-07", priority: 0.8, status: "Content Ready" },
+  meta: { lastModified: "2026-11-11", priority: 0.8, status: "Content Ready" },
   hero: "# Book an Immigration Consultation in Brampton\n\nShare your Canadian immigration goal, current status and timeline so the team can prepare the right next step.",
   contentBlocks: [
     { type: "heading", level: 2, text: "Prepare for a focused immigration consultation" },
@@ -32,6 +38,7 @@ export const metadata = buildMetadata({
   title: page.seo.title,
   description: page.seo.description,
   path: pagePath,
+  keywords: page.seo.keywords,
 });
 
 export default function BookImmigrationConsultationPage() {

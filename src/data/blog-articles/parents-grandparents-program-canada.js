@@ -15,11 +15,11 @@ const article = {
   slug: "parents-grandparents-program-canada",
 
   quickAnswer:
-    "The parents and grandparents program Canada is invitation-based: you cannot apply on demand. IRCC opens an interest to sponsor form, then invites a subset of interested sponsors to submit a full application. If no invitation comes, the Super Visa is the main alternative, allowing long visits without leading to permanent residence.",
+    "The Parents and Grandparents Program is paused. IRCC is not accepting new interest-to-sponsor forms or issuing invitations until further notice, but it continues processing existing applications. The last intake closed in 2025. Eligible families can consider a Super Visa for extended visits; it does not lead to permanent residence.",
 
   keyTakeaways: [
-    "You cannot apply for the Parents and Grandparents Program at will — IRCC decides when to open the interest to sponsor form.",
-    "Submitting the interest to sponsor form does not create an application; only an invitation does.",
+    "IRCC has paused new PGP interest forms and invitations until further notice.",
+    "The last intake invited people from the 2020 interest-form pool, and its application deadline passed on October 9, 2025.",
     "The sponsor must meet a minimum necessary income, evidenced through CRA assessments for consecutive tax years.",
     "A co-signer, usually a spouse or common-law partner, can add their income and signs the undertaking alongside you.",
     "The undertaking binds the sponsor and co-signer to support the parents and to repay certain social assistance they receive.",
@@ -29,32 +29,31 @@ const article = {
   sections: [
     {
       id: "why-pgp-is-invitation-only",
-      heading: "Why can’t you apply for the Parents and Grandparents Program at will?",
+      heading: "Is the Parents and Grandparents Program open right now?",
       body: [
-        "You cannot apply for the parents and grandparents program Canada at will because demand has exceeded the number of places every year the program has run, and IRCC manages that demand by controlling who may file. PGP Canada is not an open application stream: it opens only when IRCC announces an intake, and only invited sponsors may submit a full application.",
-        "That structure is the single most important fact about planning for PGP Canada. You cannot build a timeline around it, you cannot prepare a file and file it when you are ready, and no amount of documentation creates a right to apply. If you want to sponsor parents Canada, the part you control is your own eligibility, your income history and how complete the file will be if an invitation arrives.",
+        "No. IRCC says it is not accepting new PGP applications, interest-to-sponsor forms or invitations until further notice. It will continue processing applications already received. The last intake invited potential sponsors who had submitted a form in 2020; the application deadline for that round was October 9, 2025.",
+        "If you submitted an application from the last intake, follow the messages and deadlines in your IRCC account. If you did not receive an invitation, there is no current form to submit and no new intake date announced. You can still prepare income records for a future round and compare temporary options if your family wants to visit sooner.",
       ],
       callout: {
-        label: "What this means for you",
-        text: "Treat PGP as a lottery with an eligibility test attached, not as an application you can schedule. Plan the year around the Super Visa and treat an invitation as upside.",
+        label: "Current status",
+        text: "Do not rely on an older page or assume another PGP intake is scheduled. Check IRCC's current notice before making plans.",
       },
     },
     {
       id: "interest-to-sponsor-form",
       heading: "What is the interest to sponsor form?",
       body: [
-        "The interest to sponsor form is the free online form IRCC opens during an intake window to collect the names of people who want to sponsor their parents or grandparents. It is not an application. It records your intention, and it is the only way to enter the pool from which invitations are drawn.",
-        "Because the window can be short and is announced with little notice, the real work happens beforehand. Confirm you meet the sponsor requirements, decide which parents and grandparents you would name, and have your personal details and status documents to hand before the form opens.",
-        "IRCC has used different selection methods across intakes, so the mechanics of any given round must be read from that year’s instructions rather than assumed from the last one. What was true of the previous round — how the form was opened, who was eligible to enter it and how invitations were issued — is not a promise about the next one.",
+        "The interest-to-sponsor form is an online registration used when IRCC opens a PGP intake. It is not a permanent-residence application. IRCC is not accepting new forms now; the last invitations went to people in the pool created by forms submitted in 2020.",
+        "There is no new intake date to plan around. If you may want to apply in a future round, keep your contact details current and organize your family information and tax records. Then check the official instructions when IRCC announces a new process; do not assume it will use the same form or selection method as before.",
       ],
     },
     {
       id: "pgp-invitation-to-apply",
       heading: "What happens when you receive an invitation to apply?",
       body: [
-        "An invitation is what converts your interest into an application. Once invited, you have a limited window to submit a complete sponsorship application together with the permanent residence application for your parents or grandparents. The invitation is tied to the person invited and to the parents or grandparents named, so it cannot be transferred to anyone else.",
+        "The 2025 intake was the latest round. If you received an invitation in that round and submitted the application by the deadline, IRCC continues to process it. An invitation is not approval: the sponsor must still meet the requirements, and the sponsored parents or grandparents must satisfy admissibility checks.",
         "From that point the file looks like any other family sponsorship. You must show that you meet the sponsor requirements, that your income meets the minimum necessary income, and that the parents or grandparents are admissible, which includes a medical examination and police certificates.",
-        "Missing the deadline or filing an incomplete application ends the opportunity for that round, and there is no queue to fall back on. That is why the preparation happens before the invitation rather than after it.",
+        "If the 2025 deadline passed before you filed, IRCC will not accept a new application under that invitation. The department has not announced another intake date. Use the current IRCC page for any status update rather than relying on an old invitation timeline.",
       ],
       related: [
         { href: "/sponsor/pgp-invitation-to-apply-canada", label: "PGP invitation to apply" },
@@ -96,8 +95,8 @@ const article = {
       heading: "How does the Parents and Grandparents Program compare with the Super Visa?",
       body: [
         "The two routes answer different questions. PGP is the route to permanent residence, and it is available only to invited sponsors. The Super Visa is a temporary resident visa for parents and grandparents that allows long visits and can be applied for at any time, but it does not lead to permanent residence.",
-        "If your goal is reunion rather than status, the Super Visa usually delivers it sooner, because it does not depend on an invitation. If your goal is permanent residence, only PGP does that, and the invitation is the gate that decides whether you get there.",
-        "The timing difference is the one families feel most. The Super Visa can be applied for as soon as the host meets the income threshold and the insurance is in place, while PGP waits on an invitation that may not come in a given year. If the family needs a decision they can act on, the Super Visa is the route with a process you can start today.",
+        "If your goal is time together, the Super Visa may be worth checking while PGP intake is paused. It has its own eligibility, host-income, insurance and medical requirements, and it remains temporary status. It does not replace an invitation or lead to permanent residence.",
+        "Before applying, compare the visit you have in mind with the Super Visa's conditions and the parent's ability to meet visitor requirements. Check current processing times and IRCC guidance; no visitor application is guaranteed to be approved.",
       ],
       table: {
         caption: "Parents and Grandparents Program compared with the Super Visa",
@@ -118,7 +117,7 @@ const article = {
       heading: "When is the Super Visa the better plan?",
       body: [
         "The Super Visa is the better plan when the priority is time together rather than permanent status, when the parents are not ready to move permanently, or when several years may pass before an invitation. It requires the host child or grandchild in Canada to meet an income threshold, and the applicant to hold Canadian medical insurance covering the period of stay and to pass a medical examination.",
-        "Because it is a temporary resident visa, a stay can be extended from inside Canada, subject to the rules in force at the time. What it does not do is build any credit toward permanent residence. Many families run the two in parallel: apply for the Super Visa so visits can begin, and enter the PGP pool separately.",
+        "Because it is a temporary resident visa, a stay can be extended from inside Canada, subject to the rules in force at the time. What it does not do is build any credit toward permanent residence. Families with an existing PGP application can consider a Super Visa separately, but the current pause means there is no new PGP pool to enter.",
       ],
       related: [
         { href: "/sponsor/super-visa-for-parents", label: "Super Visa for parents and grandparents" },
@@ -129,16 +128,16 @@ const article = {
       id: "if-you-are-not-invited",
       heading: "What can you do if you are not invited?",
       body: [
-        "If no invitation comes, the practical options are the Super Visa, a regular visitor visa, or waiting for a future intake and entering the pool again. There is no appeal against not being selected, because selection is not a decision on an application — it is an administrative step that creates no right.",
+        "If you were not invited in the last round, you cannot submit a new form while the program is paused. You can check whether a Super Visa or regular visitor visa fits your family's plans, and watch for an official announcement if IRCC changes the intake status. There is no appeal against not being selected because the invitation step is not a decision on a permanent-residence application.",
         "Some families ask about humanitarian and compassionate grounds, but that is a separate, evidence-heavy route and not a substitute for PGP. It is also worth checking whether another relative in Canada can sponsor, or whether the parents fit a different program on their own facts.",
-        "Waiting is not passive. Each intake has its own instructions, and the details you need to enter the pool are worth keeping current in case a window opens with little notice. Keep your tax filings and status documents in order so that an invitation, if it comes, is something you can act on quickly.",
+        "While there is no new intake date, keep your tax filings and contact details current. If IRCC opens another round, follow that round's instructions rather than assuming the old process will return unchanged.",
       ],
       list: {
         title: "Realistic options when no invitation arrives",
         items: [
-          "Apply for a Super Visa so the parents can make long visits while the pool stays open.",
+          "Consider a Super Visa for extended visits if the parents and host meet its current requirements.",
           "Use a regular visitor visa for shorter or less frequent visits.",
-          "Wait for the next intake and submit the interest to sponsor form again.",
+          "Monitor IRCC for a new PGP intake announcement; no date is currently published.",
           "Check whether another family member in Canada is eligible to sponsor.",
           "Ask whether humanitarian and compassionate grounds genuinely apply to your facts.",
         ],
@@ -152,19 +151,19 @@ const article = {
       id: "what-to-verify-before-you-plan",
       heading: "What should you verify before you plan around PGP?",
       body: [
-        "PGP rules are among the least stable in the immigration system, because the intake, the selection method and the number of invitations are set round by round. Anything you read about the program, including this guide, should be checked against IRCC’s current page for the round you are actually in.",
-        "Two habits protect you. Keep your tax filings current and your income evidence clean, because that is the part you control and the part that is hardest to repair late. And do not let PGP block the reunion itself — start the Super Visa process while you wait for an invitation that may never come.",
+        "PGP intake is currently paused, and IRCC has not announced when it may reopen. Any new round could set different dates, selection steps, income years and document requirements. Check the live IRCC page before you rely on information from a previous intake.",
+        "You can still keep the parts you control in order: file taxes, save CRA notices of assessment and update your contact details. If the family wants to visit before a new PGP intake, assess the Super Visa or visitor visa on its own merits.",
       ],
       callout: {
         label: "What this means for you",
-        text: "Budget for the Super Visa as the plan and treat PGP as the upside. That way a missed invitation costs you nothing but the wait.",
+        text: "Treat PGP as unavailable until IRCC announces otherwise. A Super Visa may support extended visits, but it is temporary and has separate requirements.",
       },
     },
   ],
 
   glossary: [
     { term: "Parents and Grandparents Program", definition: "The family class program through which Canadian citizens and permanent residents sponsor their parents or grandparents for permanent residence, by invitation only." },
-    { term: "Interest to sponsor form", definition: "The online form IRCC opens during an intake window to collect the names of people who want to sponsor their parents or grandparents. It is not an application." },
+    { term: "Interest to sponsor form", definition: "The online registration IRCC may open for a PGP intake. IRCC is not accepting new forms while the program is paused." },
     { term: "Minimum necessary income", definition: "The income threshold a sponsor must meet, based on family unit size, evidenced through Canada Revenue Agency notices of assessment." },
     { term: "Undertaking", definition: "A binding promise by the sponsor and any co-signer to support the sponsored parents or grandparents and to repay certain social assistance for a fixed period." },
     { term: "Co-signer", definition: "A spouse or common-law partner who adds their income to the sponsorship and signs the undertaking alongside the sponsor." },
@@ -187,7 +186,7 @@ const article = {
     },
     {
       "question": "Is the Super Visa a substitute for permanent residence?",
-      "answer": "No. The Super Visa is a temporary resident visa. It allows long visits and can be extended from inside Canada, but it builds no credit toward permanent residence and does not lead to citizenship. It is a way to be together sooner, not a route to status, and many families use it while they wait for a PGP invitation."
+      "answer": "No. The Super Visa is a temporary resident visa. It allows long visits and can be extended from inside Canada, but it builds no credit toward permanent residence and does not lead to citizenship. Families may consider it while PGP intake is paused or while an existing application is processed, but it is assessed separately."
     },
     {
       "question": "Can my spouse or partner co-sign a PGP sponsorship?",
@@ -216,10 +215,10 @@ const article = {
   ],
 
   related: [
-    { href: "/sponsor/parents-and-grandparents-program-pgp", label: "Parents and Grandparents Program", note: "The program itself, its eligibility rules and its intake." },
+    { href: "/sponsor/parents-and-grandparents-program-pgp", label: "Parents and Grandparents Program", note: "Current pause status, 2025 intake and official guidance." },
     { href: "/sponsor/pgp-invitation-to-apply-canada", label: "PGP invitation to apply", note: "What an invitation is, what it covers and what to do with it." },
     { href: "/sponsor/minimum-necessary-income", label: "Minimum necessary income", note: "How the income test is calculated and evidenced." },
-    { href: "/sponsor/super-visa-for-parents", label: "Super Visa for parents", note: "The alternative that works while you wait for an invitation." },
+    { href: "/sponsor/super-visa-for-parents", label: "Super Visa for parents", note: "A separate temporary-visit option while PGP intake is paused." },
   ],
 
   sources: [

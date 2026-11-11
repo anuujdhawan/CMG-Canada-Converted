@@ -7,10 +7,20 @@ const pagePath = "/tools/crs-calculator-canada";
 const crsPage = getPage(pagePath);
 
 export const metadata = buildMetadata({
-  title: "CRS Calculator Canada | Express Entry Score",
-  description: "Use a free CRS calculator Canada to estimate your Express Entry score, review key factors and compare the result with current IRCC criteria.",
+  title: "CRS Calculator Canada | Express Entry Score Estimate",
+  description: "Estimate your Express Entry CRS score with this simplified Canada calculator. It omits IRCC's 2026 Labour Market Integration factor.",
   path: pagePath,
-  keywords: ["CRS calculator Canada", "Express Entry score calculator", "Canada CRS score"],
+  keywords: [
+    "CRS calculator Canada",
+    "Express Entry score calculator",
+    "Canada CRS score estimate",
+    "free CRS calculator Canada with spouse",
+    "how to calculate CRS score with a spouse",
+    "simplified Express Entry CRS estimate",
+    "CRS calculator Canada with spouse",
+    "why a CRS calculator differs from IRCC score",
+    "official IRCC CRS calculator",
+  ],
 });
 
 export default function CrsCalculatorPage() {
