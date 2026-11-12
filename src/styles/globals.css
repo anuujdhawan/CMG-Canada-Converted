@@ -3407,3 +3407,33 @@ html[data-theme="light"] .cmg-template-home .hero-copy .btn-secondary {
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
 }
+
+@media (max-width: 880px) {
+  html[data-theme="light"] .cmg-template-home .hero-background-image .hero-background-image__wash,
+  html[data-theme="light"] .cmg-template-home .hero-background-carousel .cmg-hero-carousel__wash {
+    background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 88%, transparent) 0%, color-mix(in srgb, var(--cmg-light-secondary) 84%, transparent) 60%, color-mix(in srgb, var(--cmg-light-bg) 72%, transparent) 100%);
+  }
+
+  html[data-theme="light"] .cmg-template-home .hero-copy h1,
+  html[data-theme="light"] .cmg-template-home .hero-copy .lead,
+  html[data-theme="light"] .cmg-template-home .hero-copy .eyebrow {
+    color: var(--cmg-light-ink) !important;
+    -webkit-text-fill-color: var(--cmg-light-ink) !important;
+    text-shadow: none !important;
+  }
+
+  html[data-theme="light"] .cmg-template-home .hero-copy .btn-secondary {
+    background: var(--cmg-light-secondary) !important;
+    border-color: var(--cmg-light-ink) !important;
+    color: var(--cmg-light-ink) !important;
+    -webkit-text-fill-color: var(--cmg-light-ink) !important;
+  }
+
+  html[data-theme="light"] .cmg-template-home .hero-copy .btn-secondary:hover,
+  html[data-theme="light"] .cmg-template-home .hero-copy .btn-secondary:focus-visible {
+    background: var(--cmg-light-ink) !important;
+    border-color: var(--cmg-light-ink) !important;
+    color: var(--cmg-light-on-primary) !important;
+    -webkit-text-fill-color: var(--cmg-light-on-primary) !important;
+  }
+}
