@@ -278,8 +278,8 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
     alt: "Family planning a parents and grandparents sponsorship pathway",
   },
   "canada-immigration-processing-times": {
-    src: "/images/blog/shipping-containers.webp",
-    alt: "Shipping containers representing the stages and movement of an immigration application",
+    src: "/images/blog/ircc-processing-times-planner.webp",
+    alt: "A hand marks a date on a desk calendar",
   },
   "canada-citizenship-requirements": {
     src: "/images/blog/canada-flag-office.webp",
@@ -354,8 +354,8 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
     alt: "Worker reviewing a Canadian work permit extension and maintained-status dates",
   },
   "restore-status-canada-worker-student": {
-    src: "/images/blog/restore-status-canada-worker-student.webp",
-    alt: "Immigration consultation documents prepared to restore worker or student status in Canada",
+    src: "/images/blog/canada-status-restoration-paperwork.webp",
+    alt: "Man working beside a laptop at a desk",
   },
   "study-permit-pal-tal-exemption-2026": {
     src: "/images/blog/study-permit-pal-tal-exemption-2026.webp",
@@ -370,16 +370,16 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
     alt: "Canadian university campus representing a designated learning institution change",
   },
   "visitor-record-vs-trv-canada": {
-    src: "/images/blog/visitor-record-vs-trv-canada.webp",
-    alt: "Passport and travel documents comparing a Canadian visitor record and TRV",
+    src: "/images/blog/canada-visitor-record-airport-waiting.webp",
+    alt: "Traveler waits in an airport terminal and looks toward an aircraft",
   },
   "canada-immigration-scams-authorized-representative": {
     src: "/images/blog/canada-immigration-scams-authorized-representative.webp",
     alt: "Immigration documents and verification checklist for choosing an authorised representative",
   },
   "canada-immigration-consulting-firms": {
-    src: "/images/pages/office-meeting.webp",
-    alt: "Immigration consultation meeting in a professional office",
+    src: "/images/blog/immigration-consultant-agreement-review.webp",
+    alt: "Two people review and sign a document at a desk",
   },
   "top-immigration-consultants-canada": {
     src: "/images/pages/office-meeting.webp",
@@ -454,8 +454,12 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
     alt: "Multigenerational family gathered outside their home",
   },
   "super-visa-vs-visitor-visa-brampton-parents": {
-    src: "/images/blog/brampton/super-visa-vs-visitor-visa-brampton-parents.webp",
-    alt: "Older couple smiling together on a living-room sofa",
+    src: "/images/blog/super-visa-parents-grandparents-review.webp",
+    alt: "Older couple reviews paperwork with a professional during a meeting",
+  },
+  "temporary-resident-permit-canada": {
+    src: "/images/blog/temporary-resident-permit-document-review.webp",
+    alt: "Businesswoman studies papers at an office desk",
   },
   "visitor-visa-refusal-officer-notes-2026-brampton": {
     src: "/images/blog/brampton/visitor-visa-refusal-officer-notes-2026-brampton.webp",

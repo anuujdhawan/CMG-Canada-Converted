@@ -59,6 +59,7 @@ import changeDliStudyPermitCanada from "./change-dli-study-permit-canada";
 import visitorRecordVsTrvCanada from "./visitor-record-vs-trv-canada";
 import canadaImmigrationScamsAuthorizedRepresentative from "./canada-immigration-scams-authorized-representative";
 import canadaImmigrationConsultingFirms from "./canada-immigration-consulting-firms";
+import temporaryResidentPermitCanada from "./temporary-resident-permit-canada";
 import immigrationConsultantBrampton from "./immigration-consultant-brampton";
 import topImmigrationConsultantsCanada from "./top-immigration-consultants-canada";
 import proceduralFairnessLetterHowToRespond from "./procedural-fairness-letter-how-to-respond";
@@ -110,6 +111,7 @@ export const BLOG_ARTICLES = {
   "visitor-record-vs-trv-canada": visitorRecordVsTrvCanada,
   "canada-immigration-scams-authorized-representative": canadaImmigrationScamsAuthorizedRepresentative,
   "canada-immigration-consulting-firms": canadaImmigrationConsultingFirms,
+  "temporary-resident-permit-canada": temporaryResidentPermitCanada,
   "immigration-consultant-brampton": immigrationConsultantBrampton,
   "top-immigration-consultants-canada": topImmigrationConsultantsCanada,
   "procedural-fairness-letter-how-to-respond": proceduralFairnessLetterHowToRespond,

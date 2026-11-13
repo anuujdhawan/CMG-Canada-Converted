@@ -23,7 +23,7 @@ export default {
       id: "what-to-look-for",
       heading: "What should you look for in immigration consultants in Brampton?",
       body: [
-        "Look for an authorized representative who can explain their experience with your type of application, identify the information needed to assess your situation, and describe their services and fees in writing. Immigration, Refugees and Citizenship Canada (IRCC) recommends checking authorization, asking about training and experience, and reading a written contract before signing. Those are useful starting points for your shortlist. (canada.ca)",
+        "Look for an authorized representative who can explain their experience with your type of application, identify the information needed to assess your situation, and describe their services and fees in writing. This guide explains how to choose an immigration consultant in Brampton by checking the individual, the proposed service, and the written terms. Immigration, Refugees and Citizenship Canada (IRCC) recommends checking authorization, asking about training and experience, and reading a written contract before signing. Those are useful starting points for your shortlist. (canada.ca)",
         "Start with your goal rather than a package name. A student considering their next step needs a different conversation from someone preparing a family sponsorship application. Tell the representative what you want to achieve, what documents you have, and whether you have received any previous immigration decisions.",
         "Use the first conversation to assess how the representative communicates. Ask them to distinguish what they can assess now from what requires further review. You should leave knowing the proposed scope of work, the missing information, and the next step—not simply feeling pressured to pay.",
         "When comparing the best immigration consultants in Brampton, treat “best” as a question of suitability, not an unsupported ranking. Prioritize a representative whose explanation you understand and whose proposed service addresses your actual situation.",
@@ -33,7 +33,7 @@ export default {
       id: "verify-person-behind-agency",
       heading: "Verify the person behind the agency",
       body: [
-        "An agency name is not enough to verify the individual who will advise you. Paid immigration consultants must be members in good standing of the College of Immigration and Citizenship Consultants. The College’s Public Register allows you to check a consultant’s status; lawyers can be checked through their provincial or territorial law society. (canada.ca)",
+        "An agency name is not enough to verify the individual who will advise you. To verify an RCIC in Brampton, check the individual consultant in the College of Immigration and Citizenship Consultants’ Public Register and review their current status. Lawyers can be checked through their provincial or territorial law society. Confirm that the person you meet is the person responsible for the advice and work. (canada.ca)",
       ],
       list: {
         title: "Before paying for advice, complete these checks:",
@@ -78,7 +78,7 @@ export default {
       id: "compare-scope-fees-responsibilities",
       heading: "Compare written scope, fees, and responsibilities",
       body: [
-        "Request a written proposal that makes the work easy to understand. IRCC advises clients to obtain a contract listing the services and clearly stating the agreed fee. The College’s service agreement guidance also identifies the client, consultant, and terms of the engagement as core agreement details. (canada.ca)",
+        "Request a written proposal that makes the work easy to understand. IRCC advises clients to obtain a contract listing the services and clearly stating the agreed fee. The College’s service agreement guidance also identifies the client, consultant, and terms of the engagement as core agreement details. When comparing immigration consultant fees in Brampton, compare the same tasks, follow-up work, and payment terms. (canada.ca)",
       ],
       list: {
         title: "Use the proposal to clarify the following before you sign:",
@@ -101,7 +101,7 @@ export default {
         "When comparing immigration consultants in Brampton and Mississauga, include practical access in your decision. Ask whether appointments are in person, remote, or a combination of both. Confirm the meeting location before travelling and discuss how documents will be exchanged before sending sensitive information.",
         "Build the arrangement around your routine. If you work shifts, ask about appointment availability before paying for an ongoing service. If a family member will participate from another location, explain that early and ask how joint discussions can be arranged. Where language support matters, confirm who will provide it rather than assuming it is available.",
         "Also agree on who receives updates and how you will review documents. For a couple preparing an application together, that might mean deciding who gathers records and how both people will check the information before submission. These practical details deserve attention alongside credentials and fees.",
-        "If you began with a search for “immigration agency Brampton,” use the resulting shortlist as a starting point—not a substitute for checking the representative and discussing the service.",
+        "If you began with a search for “immigration agency in Brampton,” use the resulting shortlist as a starting point—not a substitute for checking the representative and discussing the service.",
       ],
     },
     {
