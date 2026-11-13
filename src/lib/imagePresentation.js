@@ -1,6 +1,7 @@
 const FOCAL_POSITIONS = {
   "businessman.webp": "center 14%",
   "businesswoman.webp": "center 18%",
+  "canada-status-restoration-application-documents.webp": "center 0%",
   "city-skyline.webp": "center 24%",
   "city-street.webp": "center 24%",
   "couple.webp": "center 44%",
