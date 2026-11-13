@@ -355,7 +355,7 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
   },
   "restore-status-canada-worker-student": {
     src: "/images/blog/canada-status-restoration-paperwork.webp",
-    alt: "Man working beside a laptop at a desk",
+    alt: "Person reviewing immigration application documents at a desk",
   },
   "study-permit-pal-tal-exemption-2026": {
     src: "/images/blog/study-permit-pal-tal-exemption-2026.webp",
