@@ -25,6 +25,7 @@ export const LATEST_BLOG_LIMIT = 10;
  * service areas so the strip never shows the same cover art twice in a row.
  */
 const FEATURED_BLOG_SLUGS = [
+  "temporary-resident-permit-canada",
   "express-entry-oinp-changes-2026",
   "canada-immigration-levels-plan-2026",
   "express-entry-canada-2026-categories",
@@ -98,6 +99,13 @@ const BLOG_COVER_BY_CATEGORY = {
   },
 };
 
+const BLOG_COVER_BY_SLUG = {
+  "temporary-resident-permit-canada": {
+    src: "/images/blog/temporary-resident-permit-document-review.webp",
+    alt: "Businesswoman studies papers at an office desk",
+  },
+};
+
 const FALLBACK_COVER = {
   src: "/images/pages/documents.webp",
   alt: "Canadian immigration documents prepared for review",
@@ -119,6 +127,6 @@ export function getLatestBlogPosts(limit = LATEST_BLOG_LIMIT) {
       title: post.title,
       category: post.category,
       description: post.description,
-      cover: BLOG_COVER_BY_CATEGORY[post.category] || FALLBACK_COVER,
+      cover: BLOG_COVER_BY_SLUG[post.slug] || BLOG_COVER_BY_CATEGORY[post.category] || FALLBACK_COVER,
     }));
 }
