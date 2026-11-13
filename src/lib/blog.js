@@ -354,7 +354,7 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
     alt: "Worker reviewing a Canadian work permit extension and maintained-status dates",
   },
   "restore-status-canada-worker-student": {
-    src: "/images/blog/canada-status-restoration-paperwork.webp",
+    src: "/images/blog/canada-status-restoration-application-documents.webp",
     alt: "Person reviewing immigration application documents at a desk",
   },
   "study-permit-pal-tal-exemption-2026": {
