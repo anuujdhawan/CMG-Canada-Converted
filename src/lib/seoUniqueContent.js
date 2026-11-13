@@ -746,10 +746,10 @@ const UNIQUE_PAGE_CONTENT = {
   },
   "/about/canada-immigration-consulting-process": {
     question: "How does a Canada immigration consulting process work from Brampton?",
-    answer: "A Canada immigration consulting process should move from facts to pathway, evidence, forms, submission and follow-up in a clear sequence. From Brampton, Commonwealth Migration’s process is designed to make the decision in front of the client visible first, then connect the recommended route with the records and deadlines that support it.",
+    answer: "A Canada immigration consulting process should move from facts to route, written service scope, evidence, client review, submission and follow-up in a clear sequence. From Brampton, Commonwealth Migration’s process makes the decision in front of the client visible first, then connects the proposed work with the records, responsibilities and deadlines that support it.",
     heading: "What should happen before an immigration retainer is signed?",
-    detail: "Before a retainer is signed, the client should understand the possible route, known risks, expected evidence, service scope, professional fees, government costs, responsibilities and next deadline. A careful process leaves room to say that more facts or official verification are needed before a filing decision is made.",
-    items: ["A fact-specific pathway assessment", "A prioritized evidence and document plan", "Written scope, fees and responsibilities", "A timeline for the next action and deadline"],
+    detail: "Before a retainer is signed, the client should understand which application and family members are covered, the work and deliverables included, known risks, expected evidence, professional fees, separate government or third-party costs, communication expectations, responsibilities and the next deadline. If facts are missing, confirm what must be verified before deciding to file.",
+    items: ["A fact-specific pathway assessment", "A dated timeline and prioritized evidence plan", "Written scope, fees, communication and responsibilities", "Client review of names, dates and declarations before filing", "A clear owner and deadline for each next action"],
   },
   "/about/immigration-office-brampton-ontario": {
     question: "What can you expect from an immigration office in Brampton, Ontario?",
