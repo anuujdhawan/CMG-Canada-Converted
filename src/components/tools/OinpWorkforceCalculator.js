@@ -83,25 +83,25 @@ const LOCATION_GROUPS = [
 
 const ALL_LOCATIONS = LOCATION_GROUPS.flatMap((group) => group.locations);
 const INITIAL_ANSWERS = {
-  pathway: "teer-0-3",
-  location: "Peel",
-  teer: "teer-0-1",
-  nocCategory: "0",
+  pathway: "",
+  location: "",
+  teer: "",
+  nocCategory: "",
   hourlyWage: "",
   positionMonths: "",
   otherOntarioMonths: "",
-  earnings: "under30",
-  status: "workPermit",
-  education: "bachelor",
-  educationOrigin: "canada",
-  canadianCredentials: "none",
-  languageLevel: "clb7",
-  languageTestValid: "yes",
-  bothLanguages: "no",
-  canadaStatus: "outside",
-  ontarioIntent: "yes",
-  skilledTrade: "no",
-  driverNoc: "no",
+  earnings: "",
+  status: "",
+  education: "",
+  educationOrigin: "",
+  canadianCredentials: "",
+  languageLevel: "",
+  languageTestValid: "",
+  bothLanguages: "",
+  canadaStatus: "",
+  ontarioIntent: "",
+  skilledTrade: "",
+  driverNoc: "",
 };
 
 function getLocation(value) {
@@ -336,9 +336,9 @@ export default function OinpWorkforceCalculator() {
   const score = useMemo(() => scoreAnswers(answers, location), [answers, location]);
   const result = useMemo(() => getResult(answers, location), [answers, location]);
   const minimumFields = physician
-    ? ["practiceMonths", "selfEmployed", "ohipBilling", "cpsoClass", "postgraduateOnly"]
+    ? ["pathway", "location", "practiceMonths", "selfEmployed", "ohipBilling", "cpsoClass", "postgraduateOnly"]
     : [
-        "teer", "nocCategory", "hourlyWage", "positionMonths", "fullTimePermanent", "wageThreshold", "urgent", "labourDispute",
+        "pathway", "location", "teer", "nocCategory", "hourlyWage", "positionMonths", "fullTimePermanent", "wageThreshold", "urgent", "labourDispute",
         "driverNoc", "applicantLocation", "employerYears", "revenueMostRecent", "staffAtLocation", "premisesOntario", "compliance",
         ...(answers.pathway === "teer-0-3" ? ["experienceMethod", "skilledTrade", "recentGraduate"] : []),
         ...(location.tier !== "GTA" ? ["ruralLocation"] : []),

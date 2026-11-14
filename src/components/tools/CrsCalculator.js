@@ -1,309 +1,344 @@
 "use client";
 
-import { useState } from "react";
-import { Calculator, Info, RefreshCw, Sparkles, TrendingUp } from "lucide-react";
+import { useMemo, useState } from "react";
+import { Calculator, Info, RefreshCw, TrendingUp } from "lucide-react";
 import {
   ToolCard,
-  ToolHeader,
-  ToolField,
-  ToolSelect,
-  ToolInput,
   ToolCheckboxCard,
+  ToolField,
+  ToolHeader,
+  ToolInput,
   ToolResultCard,
-  ToolStat,
   ToolResetButton,
+  ToolSelect,
+  ToolStat,
 } from "./ui/ToolPrimitives";
 
-const AGE_POINTS_WITH_SPOUSE = { 18: 100, 19: 100, 20: 100, 21: 100, 22: 100, 23: 100, 24: 100, 25: 100, 26: 100, 27: 100, 28: 100, 29: 100, 30: 100, 31: 100, 32: 100, 33: 100, 34: 100, 35: 100, 36: 95, 37: 90, 38: 85, 39: 80, 40: 75, 41: 70, 42: 65, 43: 60, 44: 55, 45: 50, 46: 45, 47: 40, 48: 35, 49: 30, 50: 25 };
-const AGE_POINTS_NO_SPOUSE = { 18: 110, 19: 110, 20: 110, 21: 110, 22: 110, 23: 110, 24: 110, 25: 110, 26: 110, 27: 110, 28: 110, 29: 110, 30: 110, 31: 110, 32: 110, 33: 110, 34: 110, 35: 110, 36: 105, 37: 100, 38: 95, 39: 90, 40: 85, 41: 80, 42: 75, 43: 70, 44: 65, 45: 60, 46: 55, 47: 50, 48: 45, 49: 40, 50: 35 };
-
-const EDUCATION = [
-  { value: "none", label: "Less than high school", single: 0, withSpouse: 0 },
-  { value: "hs", label: "High school", single: 30, withSpouse: 28 },
-  { value: "one-year", label: "One-year post-secondary", single: 90, withSpouse: 84 },
-  { value: "two-year", label: "Two-year program", single: 98, withSpouse: 91 },
-  { value: "bachelor", label: "Bachelor's degree", single: 120, withSpouse: 112 },
-  { value: "two-plus", label: "Two or more (one 3+ year)", single: 128, withSpouse: 119 },
-  { value: "master", label: "Master's degree", single: 135, withSpouse: 126 },
-  { value: "phd", label: "PhD", single: 150, withSpouse: 140 },
+const ABILITIES = [
+  { key: "speaking", label: "Speaking" },
+  { key: "listening", label: "Listening" },
+  { key: "reading", label: "Reading" },
+  { key: "writing", label: "Writing" },
 ];
-const LANGUAGE = [
-  { value: "none", label: "Below CLB 4", single: 0, withSpouse: 0 },
-  { value: "clb4", label: "CLB 4", single: 24, withSpouse: 24 },
-  { value: "clb5", label: "CLB 5", single: 24, withSpouse: 24 },
-  { value: "clb6", label: "CLB 6", single: 36, withSpouse: 32 },
-  { value: "clb7", label: "CLB 7", single: 68, withSpouse: 64 },
-  { value: "clb8", label: "CLB 8", single: 92, withSpouse: 88 },
-  { value: "clb9", label: "CLB 9", single: 124, withSpouse: 116 },
-  { value: "clb10", label: "CLB 10+", single: 136, withSpouse: 128 },
-];
-const SECOND_LANGUAGE = [
-  { value: "none", label: "No second language", single: 0, withSpouse: 0 },
-  { value: "clb5", label: "CLB 5–6", single: 4, withSpouse: 4 },
-  { value: "clb7", label: "CLB 7–8", single: 12, withSpouse: 12 },
-  { value: "clb9", label: "CLB 9+", single: 24, withSpouse: 22 },
-];
-const CANADIAN_EXPERIENCE = [
-  { value: "none", label: "None", single: 0, withSpouse: 0 },
-  { value: "1", label: "1 year", single: 40, withSpouse: 35 },
-  { value: "2", label: "2 years", single: 53, withSpouse: 46 },
-  { value: "3", label: "3 years", single: 64, withSpouse: 56 },
-  { value: "4", label: "4 years", single: 72, withSpouse: 63 },
-  { value: "5", label: "5+ years", single: 80, withSpouse: 70 },
-];
-const FOREIGN_EXPERIENCE = [
-  { value: "none", label: "None", years: 0 },
-  { value: "1", label: "1–2 years", years: 1 },
-  { value: "3", label: "3+ years", years: 3 },
-];
-const SPOUSE_EDUCATION = [
-  { value: "none", label: "No post-secondary", points: 0 },
-  { value: "one-year", label: "One-year program", points: 6 },
-  { value: "two-year", label: "Two-year program", points: 7 },
-  { value: "bachelor", label: "Bachelor's degree", points: 8 },
-  { value: "two-plus", label: "Two or more credentials", points: 9 },
-  { value: "master", label: "Master's or PhD", points: 10 },
-];
-const SPOUSE_LANGUAGE = [
-  { value: "none", label: "Below CLB 4", points: 0 },
-  { value: "clb4", label: "CLB 4–5", points: 4 },
-  { value: "clb6", label: "CLB 6–7", points: 12 },
-  { value: "clb8", label: "CLB 8–9", points: 20 },
-  { value: "clb10", label: "CLB 10+", points: 20 },
-];
-const SPOUSE_EXPERIENCE = [
-  { value: "none", label: "None", points: 0 },
-  { value: "1", label: "1–2 years in Canada", points: 5 },
-  { value: "3", label: "3–4 years in Canada", points: 7 },
-  { value: "5", label: "5+ years in Canada", points: 10 },
-];
-const CANADIAN_EDUCATION = [
-  { value: "none", label: "None", points: 0 },
-  { value: "1", label: "One- or two-year credential", points: 15 },
-  { value: "3", label: "Three or more years", points: 30 },
-];
-const FRENCH = [
-  { value: "none", label: "No French", points: 0 },
-  { value: "partial", label: "CLB 7+ French + CLB 4–5 English", points: 25 },
-  { value: "strong", label: "CLB 7+ in both French and English", points: 50 },
-];
-
-const initialState = {
-  age: "", hasSpouse: false, education: "none", language: "none", secondLanguage: "none",
-  canadianExperience: "none", foreignExperience: "none", spouseEducation: "none", spouseLanguage: "none",
-  spouseExperience: "none", provincialNomination: false, canadianEducation: "none", french: "none", sibling: false,
+const EMPTY_SKILLS = { speaking: "", listening: "", reading: "", writing: "" };
+const ZERO_SKILLS = { speaking: "0", listening: "0", reading: "0", writing: "0" };
+const INITIAL = {
+  age: "",
+  education: "",
+  primaryLanguage: "english",
+  firstLanguage: EMPTY_SKILLS,
+  hasSecondLanguage: false,
+  secondLanguage: ZERO_SKILLS,
+  canadianExperience: "",
+  foreignExperience: "",
+  hasSpouse: false,
+  spouseEducation: "",
+  spouseLanguage: EMPTY_SKILLS,
+  spouseExperience: "",
+  lmiType: "none",
+  lmiWorkWage: "",
+  lmiJobWage: "",
+  certificateOfQualification: false,
+  canadianEducation: "none",
+  sibling: false,
+  provincialNomination: false,
 };
 
-const CRS_INPUT_CLASS = "!h-[3.25rem] !min-h-[3.25rem] !rounded-[0.95rem] !px-4 !bg-[color-mix(in_srgb,var(--template-surface-alt)_95%,var(--template-primary)_5%)] !text-[var(--template-ink)] !font-bold !text-[0.82rem] !leading-[1.2] !shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_5%,transparent),0_4px_12px_color-mix(in_srgb,var(--template-bg)_14%,transparent)] hover:!border-[color-mix(in_srgb,var(--template-primary)_45%,var(--template-border))] hover:!bg-[var(--template-surface)] focus:!border-[var(--template-primary)] focus:!shadow-[0_0_0_4px_color-mix(in_srgb,var(--template-primary)_15%,transparent),inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_5%,transparent)]";
-const CRS_LABEL_CLASS = "flex min-h-[1.05rem] items-center !text-[var(--template-ink)] !font-extrabold !text-[0.76rem] !leading-[1.25] tracking-[0.01em]";
-const CRS_CHECK_LABEL_CLASS = "!font-extrabold !text-[0.78rem] !leading-[1.3]";
-const CRS_CHECK_HINT_CLASS = "!font-semibold !text-[0.68rem] !leading-[1.35]";
+const EDUCATION = [
+  { value: "none", label: "Less than secondary school", spouse: 0, single: 0 },
+  { value: "hs", label: "Secondary diploma / high school", spouse: 28, single: 30 },
+  { value: "one-year", label: "One-year post-secondary credential", spouse: 84, single: 90 },
+  { value: "two-year", label: "Two-year post-secondary credential", spouse: 91, single: 98 },
+  { value: "bachelor", label: "Bachelor’s / three or more year credential", spouse: 112, single: 120 },
+  { value: "two-plus", label: "Two or more credentials, one 3+ years", spouse: 119, single: 128 },
+  { value: "master", label: "Master’s or eligible professional degree", spouse: 126, single: 135 },
+  { value: "phd", label: "Doctoral degree", spouse: 140, single: 150 },
+];
+const SPOUSE_EDUCATION = [
+  { value: "none", label: "Less than secondary school", points: 0 },
+  { value: "hs", label: "Secondary school", points: 2 },
+  { value: "one-year", label: "One-year post-secondary", points: 6 },
+  { value: "two-year", label: "Two-year post-secondary", points: 7 },
+  { value: "bachelor", label: "Bachelor’s / 3+ year credential", points: 8 },
+  { value: "two-plus", label: "Two or more credentials, one 3+ years", points: 9 },
+  { value: "master", label: "Master’s or eligible professional degree", points: 10 },
+  { value: "phd", label: "Doctoral degree", points: 10 },
+];
+const LANGUAGE_LEVELS = [
+  { value: "0", label: "Below CLB/NCLC 4" },
+  ...Array.from({ length: 7 }, (_, index) => ({ value: String(index + 4), label: index === 6 ? "CLB/NCLC 10 or higher" : "CLB/NCLC " + (index + 4) })),
+];
+const EXPERIENCE = [
+  { value: "0", label: "None or less than 1 year" },
+  { value: "1", label: "1 year" },
+  { value: "2", label: "2 years" },
+  { value: "3", label: "3 years" },
+  { value: "4", label: "4 years" },
+  { value: "5", label: "5 years or more" },
+];
+const CANADIAN_EXPERIENCE_POINTS = { "0": [0, 0], "1": [35, 40], "2": [46, 53], "3": [56, 64], "4": [63, 72], "5": [70, 80] };
+const SPOUSE_EXPERIENCE_POINTS = { "0": 0, "1": 5, "2": 7, "3": 8, "4": 9, "5": 10 };
+const SELECT_CLASS = "h-[3.15rem] w-full rounded-[0.75rem] border border-[var(--template-border)] bg-[var(--template-surface-alt)] px-3 text-[0.83rem] font-semibold text-[var(--template-ink)] outline-none focus:border-[var(--template-primary)] focus:shadow-[0_0_0_3px_color-mix(in_srgb,var(--template-primary)_14%,transparent)]";
+
+function numeric(value) { return Number(value) || 0; }
+function minLevel(levels) { return Math.min(...levels.map(numeric)); }
+function agePoints(ageValue, spouse) {
+  const age = Number(ageValue);
+  const points = spouse
+    ? { 18: 90, 19: 95, 20: 100, 21: 100, 22: 100, 23: 100, 24: 100, 25: 100, 26: 100, 27: 100, 28: 100, 29: 100, 30: 95, 31: 90, 32: 85, 33: 80, 34: 75, 35: 70, 36: 65, 37: 60, 38: 55, 39: 50, 40: 45, 41: 35, 42: 25, 43: 15, 44: 5 }
+    : { 18: 99, 19: 105, 20: 110, 21: 110, 22: 110, 23: 110, 24: 110, 25: 110, 26: 110, 27: 110, 28: 110, 29: 110, 30: 105, 31: 99, 32: 94, 33: 88, 34: 83, 35: 77, 36: 72, 37: 66, 38: 61, 39: 55, 40: 50, 41: 39, 42: 28, 43: 17, 44: 6 };
+  return points[age] || 0;
+}
+function firstLanguagePoints(levels, spouse) {
+  const map = spouse ? { 0: 0, 1: 0, 2: 0, 3: 0, 4: 6, 5: 6, 6: 8, 7: 16, 8: 22, 9: 29, 10: 32 } : { 0: 0, 1: 0, 2: 0, 3: 0, 4: 6, 5: 6, 6: 9, 7: 17, 8: 23, 9: 31, 10: 34 };
+  return levels.reduce((sum, level) => sum + (map[numeric(level)] || 0), 0);
+}
+function secondLanguagePoints(levels, spouse) {
+  const valueMap = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 1, 6: 1, 7: 3, 8: 3, 9: 6, 10: 6 };
+  const maximum = spouse ? 22 : 24;
+  return Math.min(maximum, levels.reduce((sum, level) => sum + (valueMap[numeric(level)] || 0), 0));
+}
+function spouseLanguagePoints(levels) {
+  const map = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 1, 6: 1, 7: 3, 8: 3, 9: 5, 10: 5 };
+  return Math.min(20, levels.reduce((sum, level) => sum + (map[numeric(level)] || 0), 0));
+}
+function isAdvancedEducation(value) {
+  return ["two-plus", "master", "phd"].includes(value);
+}
+function getLanguageTransferability(levels) {
+  const minimum = minLevel(levels);
+  if (minimum >= 9) return "strong";
+  if (minimum >= 7) return "good";
+  return "below";
+}
+function calcTransferability(form) {
+  const first = ABILITIES.map(({ key }) => form.firstLanguage[key]);
+  const minimum = minLevel(first);
+  const postSecondary = !["", "none", "hs"].includes(form.education);
+  const advanced = isAdvancedEducation(form.education);
+  const canadianYears = numeric(form.canadianExperience);
+  const foreignYears = numeric(form.foreignExperience);
+  const languageBand = getLanguageTransferability(first);
+
+  let educationLanguage = 0;
+  if (postSecondary && languageBand !== "below") {
+    educationLanguage = advanced
+      ? (languageBand === "strong" ? 50 : 25)
+      : (languageBand === "strong" ? 25 : 13);
+  }
+  let educationCanada = 0;
+  if (postSecondary && canadianYears >= 1) {
+    educationCanada = advanced
+      ? (canadianYears >= 2 ? 50 : 25)
+      : (canadianYears >= 2 ? 25 : 13);
+  }
+  const educationSection = Math.min(50, educationLanguage + educationCanada);
+
+  let foreignLanguage = 0;
+  if (foreignYears > 0 && languageBand !== "below") {
+    foreignLanguage = foreignYears >= 3
+      ? (languageBand === "strong" ? 50 : 25)
+      : (languageBand === "strong" ? 25 : 13);
+  }
+  let foreignCanada = 0;
+  if (foreignYears > 0 && canadianYears >= 1) {
+    foreignCanada = foreignYears >= 3
+      ? (canadianYears >= 2 ? 50 : 25)
+      : (canadianYears >= 2 ? 25 : 13);
+  }
+  const foreignSection = Math.min(50, foreignLanguage + foreignCanada);
+  const trade = form.certificateOfQualification
+    ? (minimum >= 7 ? 50 : minimum >= 5 ? 25 : 0)
+    : 0;
+  return {
+    education: educationSection,
+    foreignWork: foreignSection,
+    trade,
+    total: Math.min(100, educationSection + foreignSection + trade),
+  };
+}
+
+function getLmiPoints(form, spouse) {
+  if (form.lmiType === "work") {
+    const years = numeric(form.canadianExperience);
+    const workLength = (CANADIAN_EXPERIENCE_POINTS[String(Math.min(5, years))] || [0, 0])[spouse ? 0 : 1];
+    const highWageWork = years >= 1 ? numeric(form.lmiWorkWage) : 0;
+    return workLength + highWageWork;
+  }
+  if (form.lmiType === "job") return numeric(form.lmiJobWage);
+  return 0;
+}
+
+function getFrenchAdditional(form) {
+  const first = ABILITIES.map(({ key }) => numeric(form.firstLanguage[key]));
+  const second = ABILITIES.map(({ key }) => numeric(form.secondLanguage[key]));
+  const french = form.primaryLanguage === "french" ? first : (form.hasSecondLanguage ? second : [0, 0, 0, 0]);
+  const english = form.primaryLanguage === "english" ? first : (form.hasSecondLanguage ? second : [0, 0, 0, 0]);
+  if (Math.min(...french) < 7) return 0;
+  return Math.min(...english) >= 5 ? 50 : Math.max(...english) <= 4 ? 25 : 0;
+}
+
+function calculate(form) {
+  const spouse = form.hasSpouse;
+  const first = ABILITIES.map(({ key }) => form.firstLanguage[key]);
+  const second = ABILITIES.map(({ key }) => form.secondLanguage[key]);
+  const spouseLanguage = ABILITIES.map(({ key }) => form.spouseLanguage[key]);
+  const education = EDUCATION.find((item) => item.value === form.education);
+  const spouseEducation = SPOUSE_EDUCATION.find((item) => item.value === form.spouseEducation);
+  const transferability = calcTransferability(form);
+  const spouseFirstLanguage = spouse ? spouseLanguagePoints(spouseLanguage) : 0;
+  const spouseWork = spouse ? SPOUSE_EXPERIENCE_POINTS[form.spouseExperience] || 0 : 0;
+  const spouseFactors = spouse ? ((spouseEducation?.points || 0) + spouseFirstLanguage + spouseWork) : 0;
+  const lmi = getLmiPoints(form, spouse);
+  const french = getFrenchAdditional(form);
+  const canadianEducation = form.canadianEducation === "1" ? 15 : form.canadianEducation === "3" ? 30 : 0;
+  const additionalRaw = (form.sibling ? 15 : 0) + french + canadianEducation + (form.provincialNomination ? 600 : 0);
+  const additional = Math.min(600, additionalRaw);
+  const firstLanguage = firstLanguagePoints(first, spouse);
+  const secondOfficialLanguage = form.hasSecondLanguage ? secondLanguagePoints(second, spouse) : 0;
+  const canadianExp = form.canadianExperience === "" ? 0 : (CANADIAN_EXPERIENCE_POINTS[form.canadianExperience] || [0, 0])[spouse ? 0 : 1];
+  const rows = [
+    { label: "Age", points: agePoints(form.age, spouse) },
+    { label: "Education", points: spouse ? (education?.spouse || 0) : (education?.single || 0) },
+    { label: "First official language", points: firstLanguage },
+    { label: "Second official language", points: secondOfficialLanguage },
+    { label: "Labour Market Integration", points: lmi },
+    { label: "Spouse factors", points: spouseFactors },
+    { label: "Skill transferability", points: transferability.total },
+    { label: "Additional points", points: additional },
+  ];
+  const complete = form.age !== "" && form.education !== "" && first.every((level) => level !== "")
+    && form.canadianExperience !== "" && form.foreignExperience !== ""
+    && (!form.hasSecondLanguage || second.every((level) => level !== ""))
+    && (!spouse || (form.spouseEducation !== "" && spouseLanguage.every((level) => level !== "") && form.spouseExperience !== ""))
+    && (form.lmiType === "none" || (form.lmiType === "work" ? form.lmiWorkWage !== "" : form.lmiJobWage !== ""));
+  const score = rows.reduce((sum, row) => sum + row.points, 0);
+  return {
+    score,
+    rows,
+    complete,
+    transferability,
+    canadianExp,
+    french,
+    additional,
+    lmi,
+  };
+}
+
+function Field({ label, id, hint, children }) {
+  return <ToolField label={label} htmlFor={id} hint={hint}>{children}</ToolField>;
+}
+function LevelFields({ title, prefix, values, onChange, languageLabel = "CLB/NCLC" }) {
+  return (
+    <section className="grid gap-4 rounded-[1rem] border border-[var(--template-border)] bg-[var(--template-surface)] p-4">
+      <h3 className="m-0 text-sm font-extrabold text-[var(--template-ink)]">{title}</h3>
+      <div className="grid gap-4 sm:grid-cols-2">
+        {ABILITIES.map(({ key, label }) => {
+          const id = prefix + "-" + key;
+          return <Field key={id} label={label + " " + languageLabel} id={id}><ToolSelect className={SELECT_CLASS} id={id} value={values[key]} onChange={onChange(key)}><option value="">Choose level</option>{LANGUAGE_LEVELS.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}</ToolSelect></Field>;
+        })}
+      </div>
+    </section>
+  );
+}
 
 export default function CrsCalculator() {
-  const [form, setForm] = useState(initialState);
-  const set = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
-  const setBool = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.checked }));
-  const handleAgeChange = (e) => {
-    const { value } = e.target;
-    if (value === "") {
-      setForm((f) => ({ ...f, age: "" }));
-      return;
-    }
-
-    const numericValue = Number(value);
-    if (Number.isFinite(numericValue)) {
-      setForm((f) => ({ ...f, age: numericValue }));
-    }
-  };
-  const handleAgeBlur = () => setForm((f) => {
-    const rawValue = String(f.age).trim();
-    if (rawValue === "") return { ...f, age: 30 };
-
-    const numericValue = Number(rawValue);
-    return { ...f, age: Number.isFinite(numericValue) ? clamp(numericValue) : 30 };
-  });
-  const reset = () => setForm(initialState);
-  const score = computeScore(form);
-  const breakdown = computeBreakdown(form);
-  const hasMinimumInputs = form.age !== "" && form.education !== "none" && form.language !== "none";
+  const [form, setForm] = useState(INITIAL);
+  const result = useMemo(() => calculate(form), [form]);
+  const update = (key) => (event) => setForm((current) => ({ ...current, [key]: event.target.value }));
+  const setCheck = (key) => (event) => setForm((current) => ({ ...current, [key]: event.target.checked }));
+  const updateSkills = (group) => (key) => (event) => setForm((current) => ({ ...current, [group]: { ...current[group], [key]: event.target.value } }));
+  const reset = () => setForm(INITIAL);
 
   return (
-    <ToolCard className="crs-calculator rounded-[1.35rem]">
+    <ToolCard className="crs-calculator rounded-[1.35rem]" aria-labelledby="crs-calculator-title">
       <ToolHeader
         icon={Calculator}
-        kicker="Free · Instant · No sign-up"
-        title="Rough CRS score estimate"
-        subtitle="A simplified planning tool — compare the result with the current IRCC criteria before relying on it."
+        kicker="Express Entry · updated for November 2026"
+        title="Comprehensive Ranking System (CRS) calculator"
+        titleId="crs-calculator-title"
+        subtitle="Estimate your current CRS score using individual language abilities, spouse factors, skill transferability and the new Labour Market Integration factor."
         action={<ToolResetButton onClick={reset}><RefreshCw className="h-3.5 w-3.5" /> Reset</ToolResetButton>}
       />
-
-      <div className="tool-card__body flex flex-col gap-[1.1rem] p-[1.35rem_1.5rem_1.5rem] sm:p-[1.6rem_1.75rem_1.75rem]">
-        {/* Intro band */}
-        <div className="tool-notice mb-6 rounded-[0.85rem] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-primary)_5%,transparent)] px-4 py-[0.9rem] flex items-center gap-2 text-xs font-semibold">
-          <Sparkles className="text-[var(--template-primary)] h-3.5 w-3.5" />
-          <span>This simplified estimate uses an older CRS grid and does not include the Labour Market Integration factor that took effect on November 3, 2026. Use <a className="font-bold underline underline-offset-2 hover:text-[var(--template-primary)]" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC’s official CRS calculator</a> for a current score.</span>
+      <div className="tool-card__body grid gap-5 p-[1.35rem_1.5rem_1.5rem] sm:p-[1.6rem_1.75rem_1.75rem]">
+        <p className="m-0 rounded-[0.9rem] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-primary)_5%,var(--template-surface-alt))] px-4 py-3 text-[0.72rem] leading-[1.5] text-[var(--template-muted)]">Your score depends on the accompanying-spouse rule. Select “with spouse” only if your spouse or partner is accompanying you and is not a Canadian citizen or permanent resident. Use the CLB converter to map approved language test results.</p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <Field label="Age" id="crs-age"><ToolInput id="crs-age" type="number" min="0" max="100" step="1" placeholder="Age" value={form.age} onChange={update("age")} /></Field>
+          <Field label="Education" id="crs-education"><ToolSelect className={SELECT_CLASS} id="crs-education" value={form.education} onChange={update("education")}><option value="">Choose education</option>{EDUCATION.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}</ToolSelect></Field>
+          <Field label="First official language test" id="crs-primary-language"><ToolSelect className={SELECT_CLASS} id="crs-primary-language" value={form.primaryLanguage} onChange={update("primaryLanguage")}><option value="english">English</option><option value="french">French</option></ToolSelect></Field>
+          <Field label="Canadian work experience" id="crs-canadian-experience"><ToolSelect className={SELECT_CLASS} id="crs-canadian-experience" value={form.canadianExperience} onChange={update("canadianExperience")}><option value="">Choose years</option>{EXPERIENCE.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}</ToolSelect></Field>
+          <Field label="Foreign skilled work experience" id="crs-foreign-experience"><ToolSelect className={SELECT_CLASS} id="crs-foreign-experience" value={form.foreignExperience} onChange={update("foreignExperience")}><option value="">Choose years</option><option value="0">None</option><option value="1">1–2 years</option><option value="3">3 years or more</option></ToolSelect></Field>
         </div>
-
-        <div className="crs-calculator__form-grid grid items-start gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div className="crs-calculator__column flex min-w-0 flex-col gap-[0.85rem]">
-            <div className="crs-calculator__column-heading flex min-h-[3.4rem] max-[639px]:min-h-12 items-center gap-3 mb-[0.15rem] border-b border-[color-mix(in_srgb,var(--template-primary)_24%,var(--template-border))] pb-3">
-              <span className="crs-calculator__column-index inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-[0.75rem] border border-[color-mix(in_srgb,var(--template-primary)_42%,transparent)] bg-[color-mix(in_srgb,var(--template-primary)_11%,var(--template-surface-alt))] text-[var(--template-primary)] text-[0.7rem] font-extrabold leading-none">01</span>
-              <span className="grid min-w-0 gap-[0.18rem]">
-                <strong className="!text-[var(--template-ink)] text-[0.85rem] font-extrabold leading-[1.2] tracking-[0.04em] uppercase">Core profile</strong>
-                <small className="!text-[var(--template-muted)] text-[0.72rem] font-semibold leading-[1.35]">Your main CRS factors</small>
-              </span>
-            </div>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Age" htmlFor="crs-age">
-              <ToolInput className={CRS_INPUT_CLASS} id="crs-age" type="number" inputMode="numeric" step={1} min={18} max={50} value={form.age} onChange={handleAgeChange} onBlur={handleAgeBlur} />
-            </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Education" htmlFor="crs-education">
-              <ToolSelect className={CRS_INPUT_CLASS} id="crs-education" value={form.education} onChange={set("education")}>
-                {EDUCATION.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-              </ToolSelect>
-            </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="First official language" htmlFor="crs-language">
-              <ToolSelect className={CRS_INPUT_CLASS} id="crs-language" value={form.language} onChange={set("language")}>
-                {LANGUAGE.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-              </ToolSelect>
-            </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Second official language (optional)" htmlFor="crs-second-language">
-              <ToolSelect className={CRS_INPUT_CLASS} id="crs-second-language" value={form.secondLanguage} onChange={set("secondLanguage")}>
-                {SECOND_LANGUAGE.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-              </ToolSelect>
-            </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Canadian work experience" htmlFor="crs-canadian-experience">
-              <ToolSelect className={CRS_INPUT_CLASS} id="crs-canadian-experience" value={form.canadianExperience} onChange={set("canadianExperience")}>
-                {CANADIAN_EXPERIENCE.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-              </ToolSelect>
-            </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Foreign work experience" htmlFor="crs-foreign-experience">
-              <ToolSelect className={CRS_INPUT_CLASS} id="crs-foreign-experience" value={form.foreignExperience} onChange={set("foreignExperience")}>
-                {FOREIGN_EXPERIENCE.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-              </ToolSelect>
-            </ToolField>
+        <ToolCheckboxCard
+          label="I am applying with an accompanying spouse or common-law partner"
+          hint="Select no if they are not accompanying you or are a Canadian citizen or permanent resident."
+          checked={form.hasSpouse}
+          onChange={(event) => setForm((current) => ({
+            ...current,
+            hasSpouse: event.target.checked,
+            spouseEducation: event.target.checked ? "" : "",
+            spouseExperience: event.target.checked ? "" : "",
+            spouseLanguage: event.target.checked ? EMPTY_SKILLS : EMPTY_SKILLS,
+          }))}
+        />
+        <LevelFields title="Your first official language" prefix="crs-first" values={form.firstLanguage} onChange={updateSkills("firstLanguage")} />
+        <ToolCheckboxCard label="I have a second official language result to include" hint="Second-language points are calculated for each ability. Leave unchecked if you are not claiming a second language." checked={form.hasSecondLanguage} onChange={(event) => setForm((current) => ({ ...current, hasSecondLanguage: event.target.checked, secondLanguage: event.target.checked ? EMPTY_SKILLS : ZERO_SKILLS }))} />
+        {form.hasSecondLanguage && <LevelFields title="Your second official language" prefix="crs-second" values={form.secondLanguage} onChange={updateSkills("secondLanguage")} />}
+        <section className="grid gap-4 rounded-[1rem] border border-[var(--template-border)] bg-[var(--template-surface-alt)] p-4">
+          <div>
+            <h3 className="m-0 text-sm font-extrabold text-[var(--template-ink)]">Labour Market Integration factor</h3>
+            <p className="mb-0 mt-1 text-[0.7rem] leading-[1.5] text-[var(--template-muted)]">Claim either Canadian-work-experience points plus any qualifying high-wage work bonus, or a high-wage job-offer score. These routes do not combine.</p>
           </div>
-
-          <div className="crs-calculator__column flex min-w-0 flex-col gap-[0.85rem]">
-            <div className="crs-calculator__column-heading flex min-h-[3.4rem] max-[639px]:min-h-12 items-center gap-3 mb-[0.15rem] border-b border-[color-mix(in_srgb,var(--template-primary)_24%,var(--template-border))] pb-3">
-              <span className="crs-calculator__column-index inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-[0.75rem] border border-[color-mix(in_srgb,var(--template-primary)_42%,transparent)] bg-[color-mix(in_srgb,var(--template-primary)_11%,var(--template-surface-alt))] text-[var(--template-primary)] text-[0.7rem] font-extrabold leading-none">02</span>
-              <span className="grid min-w-0 gap-[0.18rem]">
-                <strong className="!text-[var(--template-ink)] text-[0.85rem] font-extrabold leading-[1.2] tracking-[0.04em] uppercase">Additional factors</strong>
-                <small className="!text-[var(--template-muted)] text-[0.72rem] font-semibold leading-[1.35]">Bonus points and family factors</small>
-              </span>
+          <Field label="Which Labour Market Integration route are you claiming?" id="crs-lmi-type">
+            <ToolSelect className={SELECT_CLASS} id="crs-lmi-type" value={form.lmiType} onChange={update("lmiType")}><option value="none">No Labour Market Integration points</option><option value="work">Canadian work experience</option><option value="job">Qualifying high-wage job offer</option></ToolSelect>
+          </Field>
+          {form.lmiType === "work" && <Field label="High-wage occupation work of at least 12 months" id="crs-lmi-work-wage" hint="Choose the highest eligible wage multiple for your Canadian work. The calculator adds this to the work-length points above."><ToolSelect className={SELECT_CLASS} id="crs-lmi-work-wage" value={form.lmiWorkWage} onChange={update("lmiWorkWage")}><option value="">Choose a wage category</option><option value="0">No qualifying high-wage work</option><option value="20">At least 1.3× the occupation median</option><option value="40">At least 1.5× the occupation median</option><option value="70">At least 2× the occupation median</option></ToolSelect></Field>}
+          {form.lmiType === "job" && <Field label="Qualifying high-wage job offer category" id="crs-lmi-job-wage" hint="Use the occupation’s wage multiple in the current IRCC rules. LMIA points are no longer part of CRS."><ToolSelect className={SELECT_CLASS} id="crs-lmi-job-wage" onChange={update("lmiJobWage")} value={form.lmiJobWage}><option value="">Choose a wage category</option><option value="0">Below 1.3× the occupation median · 0</option><option value="50">At least 1.3× · 50 points</option><option value="70">At least 1.5× · 70 points</option><option value="100">At least 2× · 100 points</option></ToolSelect></Field>}
+        </section>
+        <ToolCheckboxCard label="I hold a trade certificate of qualification" hint="Used only in the CRS skill-transferability factor for eligible trade occupations." checked={form.certificateOfQualification} onChange={setCheck("certificateOfQualification")} />
+        {form.hasSpouse && (
+          <section className="grid gap-4 rounded-[1rem] border border-[var(--template-border)] bg-[var(--template-surface-alt)] p-4">
+            <h3 className="m-0 text-sm font-extrabold text-[var(--template-ink)]">Accompanying spouse or partner factors</h3>
+            <Field label="Spouse/partner education" id="crs-spouse-education"><ToolSelect className={SELECT_CLASS} id="crs-spouse-education" value={form.spouseEducation} onChange={update("spouseEducation")}><option value="">Choose education</option>{SPOUSE_EDUCATION.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}</ToolSelect></Field>
+            <LevelFields title="Spouse/partner first official language" prefix="crs-spouse" values={form.spouseLanguage} onChange={updateSkills("spouseLanguage")} />
+            <Field label="Spouse/partner Canadian work experience" id="crs-spouse-experience"><ToolSelect className={SELECT_CLASS} id="crs-spouse-experience" value={form.spouseExperience} onChange={update("spouseExperience")}><option value="">Choose years</option>{EXPERIENCE.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}</ToolSelect></Field>
+          </section>
+        )}
+        <section className="grid gap-3 rounded-[1rem] border border-[var(--template-border)] bg-[var(--template-surface-alt)] p-4 sm:grid-cols-2">
+          <h3 className="m-0 text-sm font-extrabold text-[var(--template-ink)] sm:col-span-2">Additional CRS factors</h3>
+          <Field label="Canadian post-secondary education" id="crs-canadian-education"><ToolSelect className={SELECT_CLASS} id="crs-canadian-education" value={form.canadianEducation} onChange={update("canadianEducation")}><option value="none">None</option><option value="1">Credential of 1 or 2 years</option><option value="3">Credential of 3 or more years</option></ToolSelect></Field>
+          <ToolCheckboxCard label="Sibling in Canada who is a citizen or permanent resident" checked={form.sibling} onChange={setCheck("sibling")} />
+          <ToolCheckboxCard label="Provincial or territorial nomination" hint="Adds 600 CRS points." checked={form.provincialNomination} onChange={setCheck("provincialNomination")} />
+          <FrenchPreview points={result.french} />
+        </section>
+        <ToolResultCard className="min-h-0" aria-live="polite">
+          <div className="grid gap-5 sm:grid-cols-[1fr_auto] sm:items-center">
+            <div>
+              <p className="m-0 flex items-center gap-2 text-xs font-bold uppercase tracking-widest"><TrendingUp className="h-3.5 w-3.5" /> Current CRS estimate</p>
+              <p className="mb-0 mt-2 text-[clamp(2rem,1.4rem+3vw,3.25rem)] font-extrabold leading-none">{result.complete ? result.score : "—"} <span className="text-base font-bold opacity-75">/ 1,270</span></p>
+              <p className="mb-0 mt-2 text-sm leading-[1.5]">{result.complete ? "This is an estimate based on the values you entered. Verify each factor against your documents and IRCC’s live tool." : "Complete the required profile and test scores to calculate a current CRS estimate."}</p>
             </div>
-            <ToolCheckboxCard labelClassName={CRS_CHECK_LABEL_CLASS} hintClassName={CRS_CHECK_HINT_CLASS} className="crs-calculator__toggle h-[3.25rem] min-h-[3.25rem] box-border items-center rounded-[.95rem] px-4 py-[.55rem] bg-[color-mix(in_srgb,var(--template-surface-alt)_95%,var(--template-primary)_5%)] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_5%,transparent),0_4px_12px_color-mix(in_srgb,var(--template-bg)_14%,transparent)] crs-calculator__toggle--spouse mt-[calc(1.05rem+0.38rem)] max-[639px]:mt-0 max-[639px]:h-auto max-[639px]:min-h-[3.25rem] max-[639px]:py-[0.7rem]" label="Applying with a spouse / partner" hint="Toggle to include spouse factors" checked={form.hasSpouse} onChange={setBool("hasSpouse")} />
-            {form.hasSpouse && (
-              <div className="tool-group rounded-[0.95rem] border border-[var(--template-border)] bg-[var(--template-surface)] grid gap-4 p-3">
-                <ToolField labelClassName={CRS_LABEL_CLASS} label="Spouse education" htmlFor="crs-spouse-education">
-                  <ToolSelect className={CRS_INPUT_CLASS} id="crs-spouse-education" value={form.spouseEducation} onChange={set("spouseEducation")}>
-                    {SPOUSE_EDUCATION.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-                  </ToolSelect>
-                </ToolField>
-                <ToolField labelClassName={CRS_LABEL_CLASS} label="Spouse language (CLB)" htmlFor="crs-spouse-language">
-                  <ToolSelect className={CRS_INPUT_CLASS} id="crs-spouse-language" value={form.spouseLanguage} onChange={set("spouseLanguage")}>
-                    {SPOUSE_LANGUAGE.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-                  </ToolSelect>
-                </ToolField>
-                <ToolField labelClassName={CRS_LABEL_CLASS} label="Spouse Canadian work experience" htmlFor="crs-spouse-experience">
-                  <ToolSelect className={CRS_INPUT_CLASS} id="crs-spouse-experience" value={form.spouseExperience} onChange={set("spouseExperience")}>
-                    {SPOUSE_EXPERIENCE.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-                  </ToolSelect>
-                </ToolField>
-              </div>
-            )}
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Provincial nomination (adds 600 points)" htmlFor="crs-provincial-nomination">
-              <ToolSelect className={CRS_INPUT_CLASS} id="crs-provincial-nomination" value={form.provincialNomination ? "yes" : "no"} onChange={(e) => setForm((f) => ({ ...f, provincialNomination: e.target.value === "yes" }))}>
-                <option value="no">No</option>
-                <option value="yes">Yes — nominated</option>
-              </ToolSelect>
-            </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="Canadian education" htmlFor="crs-canadian-education">
-              <ToolSelect className={CRS_INPUT_CLASS} id="crs-canadian-education" value={form.canadianEducation} onChange={set("canadianEducation")}>
-                {CANADIAN_EDUCATION.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-              </ToolSelect>
-            </ToolField>
-            <ToolField labelClassName={CRS_LABEL_CLASS} label="French ability" htmlFor="crs-french">
-              <ToolSelect className={CRS_INPUT_CLASS} id="crs-french" value={form.french} onChange={set("french")}>
-                {FRENCH.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-              </ToolSelect>
-            </ToolField>
-            <ToolCheckboxCard labelClassName={CRS_CHECK_LABEL_CLASS} hintClassName={CRS_CHECK_HINT_CLASS} className="crs-calculator__toggle h-[3.25rem] min-h-[3.25rem] box-border items-center rounded-[.95rem] px-4 py-[.55rem] bg-[color-mix(in_srgb,var(--template-surface-alt)_95%,var(--template-primary)_5%)] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_5%,transparent),0_4px_12px_color-mix(in_srgb,var(--template-bg)_14%,transparent)] crs-calculator__toggle--sibling mt-[calc(1.05rem+0.38rem)] max-[639px]:mt-0 max-[639px]:h-auto max-[639px]:min-h-[3.25rem] max-[639px]:py-[0.7rem]" label="Sibling living in Canada (citizen/PR)" checked={form.sibling} onChange={setBool("sibling")} />
-          </div>
-        </div>
-
-        {/* Result */}
-        <ToolResultCard className="mt-7">
-          <div className="tool-result__layout flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-            <div className="tool-result__summary flex min-w-[230px] flex-col items-start max-[620px]:items-center max-[620px]:text-center">
-              <p className="tool-result__label flex items-center gap-2 text-xs font-bold uppercase tracking-widest !text-[var(--template-on-primary)]"><TrendingUp className="h-3.5 w-3.5" /> Planning estimate</p>
-              <div
-                className="tool-result__score-gauge relative mt-3 grid size-[170px] place-items-center rounded-full bg-[conic-gradient(var(--template-on-primary)_var(--score-progress),color-mix(in_srgb,var(--template-on-primary)_18%,transparent)_0)] shadow-[0_12px_28px_color-mix(in_srgb,var(--cmg-template-deep-surface)_20%,transparent)] before:absolute before:inset-2.5 before:rounded-full before:bg-[color-mix(in_srgb,var(--template-primary)_82%,var(--template-accent))] before:content-['']"
-                style={{ "--score-progress": `${Math.min(100, Math.round((score / 1200) * 100))}%` }}
-                aria-label={`Simplified historical CRS estimate ${score} out of 1200 under the previous scoring grid`}
-              >
-                <div className="tool-result__score-gauge-content relative z-[1] flex flex-col items-center text-[var(--template-on-primary)]">
-                  <strong className="tool-result__score font-extrabold !text-[var(--template-on-primary)] !text-[clamp(2.5rem,1.6rem+3vw,3.75rem)] !leading-[1.02] tracking-[-0.028em]">{score}</strong>
-                  <span className="mt-[9px] text-[color-mix(in_srgb,var(--template-on-primary)_70%,transparent)] text-[11px] font-extrabold leading-none tracking-[.08em] uppercase">/ 1200 previous max</span>
-                </div>
-              </div>
-              <p className="tool-result__copy mt-2 max-w-md text-sm leading-relaxed !text-[var(--template-on-primary)] max-[620px]:max-w-[32rem]">
-                {hasMinimumInputs ? "This simplified result is a planning signal, not an invitation prediction or eligibility decision." : "Enter your age, education and language details to see a planning estimate."}
-              </p>
-            </div>
-            <div className="w-full max-w-xs space-y-2">
-              {breakdown.map((row) => <ToolStat key={row.label} label={row.label} value={`+${row.points}`} />)}
-              {breakdown.length === 0 && <p className="tool-result__empty rounded-xl border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-surface-alt)_88%,var(--template-secondary))] px-3.5 py-3 text-sm !text-[var(--template-muted)]">Adjust inputs to see scoring.</p>}
+            <div className="grid gap-2 sm:min-w-[15rem]">
+              {result.rows.map((row) => <ToolStat key={row.label} label={row.label} value={row.points + " points"} />)}
             </div>
           </div>
         </ToolResultCard>
-
-        <p className="text-[var(--template-muted)] mt-4 flex items-start gap-2 text-xs leading-relaxed">
-          <Info className="text-[var(--template-primary)] mt-0.5 h-4 w-4 shrink-0" />
-          This historical estimate also simplifies language and skill-transferability scoring. Compare any planning questions with the <a className="font-bold underline underline-offset-2 hover:text-[var(--template-primary)]" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html" target="_blank" rel="noopener noreferrer">current IRCC CRS criteria</a> and verify your score in the official calculator.
-        </p>
+        <p className="m-0 flex items-start gap-2 text-[0.68rem] leading-[1.5] text-[var(--template-muted)]"><Info className="mt-0.5 h-4 w-4 shrink-0 text-[var(--template-primary)]" />The Labour Market Integration factor is applied only through one route at a time. For Canadian-work points, the high-wage component requires at least 12 months in qualifying occupations. A qualifying job offer must satisfy IRCC’s current criteria; an LMIA is no longer required for CRS points.</p>
+        <div className="flex flex-wrap gap-x-5 gap-y-2 text-[0.72rem] font-extrabold text-[var(--template-primary)]">
+          <a className="underline underline-offset-4" href="/tools/clb-converter-canada">Convert language scores</a>
+          <a className="underline underline-offset-4" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html" target="_blank" rel="noreferrer">Current IRCC CRS criteria</a>
+          <a className="underline underline-offset-4" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noreferrer">Official CRS calculator</a>
+        </div>
       </div>
     </ToolCard>
   );
 }
 
-function clamp(n) { if (Number.isNaN(n)) return 30; return Math.min(50, Math.max(18, n)); }
-function computeScore(form) { return computeBreakdown(form).reduce((s, r) => s + r.points, 0); }
-function computeBreakdown(form) {
-  const spouse = form.hasSpouse;
-  const agePoints = (spouse ? AGE_POINTS_WITH_SPOUSE : AGE_POINTS_NO_SPOUSE)[form.age] || 0;
-  const edu = EDUCATION.find((o) => o.value === form.education);
-  const lang = LANGUAGE.find((o) => o.value === form.language);
-  const secondLang = SECOND_LANGUAGE.find((o) => o.value === form.secondLanguage);
-  const canExp = CANADIAN_EXPERIENCE.find((o) => o.value === form.canadianExperience);
-  const foreignYears = (FOREIGN_EXPERIENCE.find((o) => o.value === form.foreignExperience) || {}).years || 0;
-  let transferability = 0;
-  const clb9plus = form.language === "clb9" || form.language === "clb10";
-  const postSecondary = form.education !== "none" && form.education !== "hs";
-  const canYears = Number(form.canadianExperience) || 0;
-  if (postSecondary && clb9plus) transferability += 50; else if (postSecondary) transferability += 25;
-  if (postSecondary && canYears >= 2) transferability += 50; else if (postSecondary && canYears >= 1) transferability += 25;
-  if (clb9plus && foreignYears >= 3) transferability += 50; else if (foreignYears >= 3) transferability += 25;
-  if (canYears >= 2 && foreignYears >= 3) transferability += 50; else if (canYears >= 1 && foreignYears >= 3) transferability += 25;
-  const rows = [
-    { label: "Age", points: agePoints },
-    { label: "Education", points: spouse ? edu.withSpouse : edu.single },
-    { label: "Language (first)", points: spouse ? lang.withSpouse : lang.single },
-    { label: "Language (second)", points: spouse ? secondLang.withSpouse : secondLang.single },
-    { label: "Canadian experience", points: spouse ? canExp.withSpouse : canExp.single },
-    { label: "Skill transferability", points: transferability },
-  ];
-  if (spouse) {
-    const sEdu = SPOUSE_EDUCATION.find((o) => o.value === form.spouseEducation);
-    const sLang = SPOUSE_LANGUAGE.find((o) => o.value === form.spouseLanguage);
-    const sExp = SPOUSE_EXPERIENCE.find((o) => o.value === form.spouseExperience);
-    rows.push({ label: "Spouse factors", points: sEdu.points + sLang.points + sExp.points });
-  }
-  const additional = [];
-  if (form.provincialNomination) additional.push({ label: "Provincial nomination", points: 600 });
-  const canEdu = CANADIAN_EDUCATION.find((o) => o.value === form.canadianEducation);
-  if (canEdu.points > 0) additional.push({ label: "Canadian education", points: canEdu.points });
-  const french = FRENCH.find((o) => o.value === form.french);
-  if (french.points > 0) additional.push({ label: "French ability", points: french.points });
-  if (form.sibling) additional.push({ label: "Sibling in Canada", points: 15 });
-  return [...rows, ...additional].filter((r) => r.points > 0);
+function FrenchPreview({ points }) {
+  return (
+    <div className="rounded-[0.85rem] border border-[var(--template-border)] bg-[var(--template-surface)] p-3 text-[0.7rem] leading-[1.5] text-[var(--template-muted)]">
+      <strong className="block text-[var(--template-ink)]">French additional points: {points}</strong>
+      <span>Calculated from the English/French combination in your first and second official language scores.</span>
+    </div>
+  );
 }

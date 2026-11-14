@@ -7,8 +7,8 @@ const pagePath = "/tools/crs-calculator-canada";
 const crsPage = getPage(pagePath);
 
 export const metadata = buildMetadata({
-  title: "CRS Calculator Canada | Express Entry Score Estimate",
-  description: "Estimate your Express Entry CRS score with this simplified Canada calculator. It omits IRCC's 2026 Labour Market Integration factor.",
+  title: "CRS Calculator Canada | Current Express Entry Score",
+  description: "Estimate your Express Entry CRS score using individual language abilities, spouse factors, skill transferability and the November 2026 Labour Market Integration factor.",
   path: pagePath,
   keywords: [
     "CRS calculator Canada",
@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
     "Canada CRS score estimate",
     "free CRS calculator Canada with spouse",
     "how to calculate CRS score with a spouse",
-    "simplified Express Entry CRS estimate",
+    "current Express Entry CRS calculator",
     "CRS calculator Canada with spouse",
     "why a CRS calculator differs from IRCC score",
     "official IRCC CRS calculator",

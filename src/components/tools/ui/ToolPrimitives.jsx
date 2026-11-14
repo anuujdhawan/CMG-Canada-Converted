@@ -113,8 +113,8 @@ export function ToolPill({ children, active, className, ...props }) {
   );
 }
 
-export function ToolResultCard({ children, variant = "primary", className }) {
-  return <div className={cn("tool-result relative min-h-[286px] overflow-hidden rounded-[1.25rem] border border-[color-mix(in_srgb,var(--template-primary)_20%,var(--template-border))] bg-[linear-gradient(135deg,var(--template-primary)_0%,var(--template-accent)_100%)] p-[1.5rem_1.75rem] text-[var(--template-on-primary)] shadow-[0_18px_40px_color-mix(in_srgb,var(--template-primary)_18%,transparent)] max-[620px]:p-5", `tool-result--${variant}`, className)}>{children}</div>;
+export function ToolResultCard({ children, variant = "primary", className, ...props }) {
+  return <div className={cn("tool-result relative min-h-[286px] overflow-hidden rounded-[1.25rem] border border-[color-mix(in_srgb,var(--template-primary)_20%,var(--template-border))] bg-[linear-gradient(135deg,var(--template-primary)_0%,var(--template-accent)_100%)] p-[1.5rem_1.75rem] text-[var(--template-on-primary)] shadow-[0_18px_40px_color-mix(in_srgb,var(--template-primary)_18%,transparent)] max-[620px]:p-5", `tool-result--${variant}`, className)} {...props}>{children}</div>;
 }
 
 export function ToolDivider({ className }) {

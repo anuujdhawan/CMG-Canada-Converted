@@ -106,7 +106,8 @@ export function evaluatePnpStream(stream, answers = {}) {
   else if (failures.length) status = "not-eligible";
   else if (unknowns.length) status = "needs-review";
   else if (stream.mode === "official-grid" && Number.isFinite(stream.minimumScore) && score < stream.minimumScore) status = "below-minimum";
-  else status = "likely-eligible";
+  else if (stream.mode === "official-grid") status = "score-only";
+  else status = "planner-complete";
 
   return {
     status,
@@ -125,14 +126,15 @@ export function evaluatePnpStream(stream, answers = {}) {
 
 export function getModeLabel(mode) {
   if (mode === "official-grid") return "Official scoring grid";
-  if (mode === "eligibility-planner") return "Official eligibility planner";
+  if (mode === "eligibility-planner") return "Eligibility and priority planner";
   return "No public calculator";
 }
 
 export function getStatusLabel(status) {
-  if (status === "likely-eligible") return "Likely eligible based on your answers";
+  if (status === "score-only") return "Score estimate only · no eligibility verdict";
+  if (status === "planner-complete") return "Planner complete · verify the pathway rules";
   if (status === "below-minimum") return "Below the published minimum score";
-  if (status === "not-eligible") return "A required rule is not met";
+  if (status === "not-eligible") return "A listed minimum requirement is not met";
   if (status === "incomplete") return "Complete the remaining questions";
   if (status === "not-applicable") return "Use the official program guide";
   return "Needs document and rule verification";

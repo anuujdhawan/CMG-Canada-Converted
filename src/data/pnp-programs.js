@@ -1,3 +1,5 @@
+import { AAIP_WORKER_GRID, MPNP_EOI_GRID, PEI_WORKFORCE_GRIDS, SINP_OCCUPATIONS_IN_DEMAND_GRID } from "@/data/pnp-score-grids";
+
 export const PNP_REFRESH_INTERVAL_SECONDS = 14_400;
 
 const VERIFIED_AT = "2026-10-06T00:00:00+05:30";
@@ -164,6 +166,46 @@ const programs = {
     noCalculator({ key: "nunavut", label: "Nunavut — no comparable PNP pathway", guideVersion: "IRCC Provincial Nominee Program overview", sourceUrl: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html", focus: "Nunavut is displayed for clarity but does not currently operate a comparable provincial nominee program. No points calculator is offered." }),
   ], draws: [{ date: "August 3–7, 2026", streamKey: "yukon", stream: "Yukon Nominee Program · intake 2", minimum: "Not published", invitations: "Not published", detail: "Second-round employer invitations", selectionType: "intake" }, { date: "February 9–13, 2026", streamKey: "yukon", stream: "Yukon Nominee Program · intake 1", minimum: "Not published", invitations: "Not published", detail: "First-round employer invitations", selectionType: "intake" }, { date: "September 25, 2026", streamKey: "nwt", stream: "Northwest Territories Nominee Program", minimum: "Score ranges published", invitations: "See official round", detail: "Employer-driven EOI selection", selectionType: "score-plus-priority" }] },
 };
+
+// Use published point grids where the government provides enough
+// information to reproduce a score. Keep draw and priority context separate.
+programs.alberta.streams = [AAIP_WORKER_GRID];
+programs.bc.streams[0].rules = [];
+programs.saskatchewan.streams = [
+  programs.saskatchewan.streams[0],
+  SINP_OCCUPATIONS_IN_DEMAND_GRID,
+];
+programs.saskatchewan.streams[0].rules = [];
+programs.manitoba.streams = [MPNP_EOI_GRID];
+programs.pei.streams = PEI_WORKFORCE_GRIDS;
+programs.pei.source = source({
+  url: "https://www.princeedwardisland.ca/en/information/office-of-immigration/workforce-program-selector-tool",
+  label: "PEI Office of Immigration program selector and EOI guide",
+  dataAsOf: "January 13, 2026",
+  guideVersion: "PEI Workforce Application Guide — Appendix A and B",
+});
+const nbExpressEntry = programs.newBrunswick.streams[0];
+nbExpressEntry.questions[0].options = [
+  option("under19", "Under 19"),
+  option("19to35", "19–35", 12),
+  ...[36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46].map((age) => option(String(age), String(age), 47 - age)),
+  option("47to55", "47–55"),
+  option("56plus", "56 or older"),
+];
+nbExpressEntry.questions.unshift(
+  choice("activeExpressEntry", "Do you have a valid profile in the federal Express Entry pool?", [option("yes", "Yes"), option("no", "No"), option("unknown", "I need to verify", 0, { unknown: true })]),
+  choice("continuousSkilledWork", "Do you have at least 1 year of continuous work in one eligible NOC TEER 0–3 occupation within the past 10 years?", [option("yes", "Yes"), option("no", "No"), option("unknown", "I need to check dates and duties", 0, { unknown: true })]),
+  choice("nbEmployment", "For the Employment in New Brunswick pathway, have you lived and worked full-time in a non-seasonal TEER 0–3 job in New Brunswick for 12 months, with authorization and an eligible employer?", [option("yes", "Yes"), option("no", "No"), option("unknown", "I need to verify my work and employer history", 0, { unknown: true })]),
+);
+nbExpressEntry.questions[6].options.unshift(option("belowHighSchool", "Below Canadian high school or equivalent"));
+nbExpressEntry.rules = [
+  { key: "age", values: ["under19", "56plus"], message: "The New Brunswick Express Entry stream requires applicants to be 19–55 years old.", hard: true },
+  { key: "activeExpressEntry", values: ["no"], message: "A valid federal Express Entry profile is required.", hard: true },
+  { key: "continuousSkilledWork", values: ["no"], message: "The stream requires at least one year of continuous eligible skilled work in the past 10 years.", hard: true },
+  { key: "nbEmployment", values: ["no"], message: "The selected Employment in New Brunswick pathway requires the listed 12-month employment and authorization history.", hard: true },
+  { key: "education", values: ["belowHighSchool"], message: "The stream requires at least a Canadian high-school diploma or foreign equivalent.", hard: true },
+  { key: "firstLanguage", values: ["below7"], message: "The stream requires CLB/NCLC 7 in each of the four language abilities.", hard: true },
+];
 
 const overview = {
   key: "overview", shortName: "Canada PNP", regionLabel: "Canada", h1Label: "Canada", focus: "Compare official selection activity by province or territory.",

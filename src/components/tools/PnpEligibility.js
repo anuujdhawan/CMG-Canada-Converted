@@ -1,19 +1,31 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, CheckCircle2, MapPin, RefreshCw, Sparkles } from "lucide-react";
+import { ArrowRight, MapPin, RefreshCw } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { site } from "@/config/site";
-import { currentPagePath } from "@/config/pageRoutes";
 import { ToolCard, ToolHeader, ToolResetButton, ToolProgress, ToolOptionButton, ToolResultCard } from "./ui/ToolPrimitives";
 
+const PROVINCES = [
+  { value: "all", label: "I’m comparing all provinces and territories", path: "/immigrate/provincial-nominee-program-all-provinces-consolidated" },
+  { value: "bc", label: "British Columbia", path: "/immigrate/british-columbia-pnp" },
+  { value: "ontario", label: "Ontario", path: "/immigrate/ontario-pnp-oinp" },
+  { value: "alberta", label: "Alberta", path: "/immigrate/alberta-pnp-aaip" },
+  { value: "saskatchewan", label: "Saskatchewan", path: "/immigrate/saskatchewan-pnp-sinp" },
+  { value: "manitoba", label: "Manitoba", path: "/immigrate/manitoba-pnp-mpnp" },
+  { value: "nova-scotia", label: "Nova Scotia", path: "/immigrate/nova-scotia-pnp-nsnp" },
+  { value: "new-brunswick", label: "New Brunswick", path: "/immigrate/new-brunswick-pnp" },
+  { value: "pei", label: "Prince Edward Island", path: "/immigrate/prince-edward-island-pnp" },
+  { value: "newfoundland", label: "Newfoundland and Labrador", path: "/immigrate/newfoundland-and-labrador-pnp" },
+  { value: "north", label: "Yukon / Northwest Territories", path: "/immigrate/yukon-nwt-nunavut-nominee-programs" },
+];
+
 const QUESTIONS = [
-  { key: "status", label: "What is your current immigration status?", options: [{ value: "outside", label: "Living outside Canada" }, { value: "worker", label: "Working in Canada on a permit" }, { value: "student", label: "Studying in Canada" }, { value: "visitor", label: "Visiting Canada" }] },
-  { key: "experience", label: "How many years of skilled work experience do you have?", options: [{ value: "0", label: "Less than 1 year" }, { value: "1", label: "1–2 years" }, { value: "3", label: "3+ years" }] },
-  { key: "language", label: "Your best language level (CLB)", options: [{ value: "low", label: "Below CLB 6" }, { value: "mid", label: "CLB 6–7" }, { value: "high", label: "CLB 8 or higher" }] },
-  { key: "education", label: "Highest level of education", options: [{ value: "hs", label: "High school or less" }, { value: "diploma", label: "College diploma or trade certificate" }, { value: "degree", label: "Bachelor's degree or higher" }] },
-  { key: "jobOffer", label: "Do you have a job offer from a Canadian employer?", options: [{ value: "yes", label: "Yes" }, { value: "no", label: "No" }] },
-  { key: "connection", label: "Do you have a connection to a specific province?", options: [{ value: "job", label: "Job offer or employer there" }, { value: "study", label: "Graduated from a school there" }, { value: "work", label: "Worked there before" }, { value: "family", label: "Family member there" }, { value: "none", label: "No particular connection" }] },
+  { key: "province", label: "Which province or territory are you considering?", options: PROVINCES.map(({ value, label }) => ({ value, label })) },
+  { key: "status", label: "Where are you in your Canada plan?", options: [{ value: "outside", label: "Outside Canada" }, { value: "worker", label: "Working in Canada" }, { value: "student", label: "Studying in Canada" }, { value: "visitor", label: "In Canada as a visitor" }] },
+  { key: "expressEntry", label: "Do you have an active Express Entry profile?", options: [{ value: "yes", label: "Yes" }, { value: "no", label: "No" }, { value: "unsure", label: "I need to check" }] },
+  { key: "jobOffer", label: "Do you have a job offer from an employer in that province or territory?", options: [{ value: "yes", label: "Yes" }, { value: "no", label: "No" }, { value: "unsure", label: "I need to check employer/offer rules" }] },
+  { key: "connection", label: "What other connection do you have to that province or territory?", options: [{ value: "work", label: "Prior local work experience" }, { value: "study", label: "Local education or graduation" }, { value: "family", label: "Close family connection" }, { value: "community", label: "Community or regional connection" }, { value: "none", label: "None of these" }] },
 ];
 
 export default function PnpEligibility() {
@@ -21,73 +33,81 @@ export default function PnpEligibility() {
   const [step, setStep] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const question = QUESTIONS[step];
-  const answered = answers[question.key] != null;
-  function choose(value) { setAnswers((a) => ({ ...a, [question.key]: value })); if (step < QUESTIONS.length - 1) setStep(step + 1); else setShowResult(true); }
+  const answered = answers[question.key] !== undefined;
+  function choose(value) {
+    setAnswers((current) => ({ ...current, [question.key]: value }));
+    if (step < QUESTIONS.length - 1) setStep((current) => current + 1);
+    else setShowResult(true);
+  }
   function restart() { setAnswers({}); setStep(0); setShowResult(false); }
   if (showResult) return <Result answers={answers} onRestart={restart} />;
+
   return (
     <ToolCard>
-      <ToolHeader icon={MapPin} kicker="6 quick questions · 60 seconds" title="PNP Eligibility Check" subtitle="Map your profile to provincial nomination stream categories — private, instant, no email required." action={<ToolResetButton onClick={restart}><RefreshCw className="h-3.5 w-3.5" /> Restart</ToolResetButton>} />
+      <ToolHeader icon={MapPin} kicker="5 questions · private · no sign-up" title="PNP Pathway Research Planner" subtitle="Choose a target region and identify the published program guides and pathway types to review next." action={<ToolResetButton onClick={restart}><RefreshCw className="h-3.5 w-3.5" /> Restart</ToolResetButton>} />
       <div className="tool-card__body flex flex-col gap-5 p-[1.35rem_1.5rem_1.5rem] sm:p-[1.6rem_1.75rem_1.75rem]">
-        <ToolProgress value={step} max={QUESTIONS.length} labelLeft={`Question ${step + 1} of ${QUESTIONS.length}`} labelRight={`${Math.round((step / QUESTIONS.length) * 100)}%`} />
-        <div className="mt-7">
-          <h3 className="text-[var(--template-ink)] text-[1.15rem] font-extrabold leading-tight"><span className="text-[var(--template-primary)]">{String(step + 1).padStart(2,"0")}.</span> {question.label}</h3>
+        <ToolProgress value={step} max={QUESTIONS.length} labelLeft={"Question " + (step + 1) + " of " + QUESTIONS.length} labelRight={Math.round((step / QUESTIONS.length) * 100) + "%"} />
+        <div className="mt-2">
+          <h3 className="text-[var(--template-ink)] text-[1.15rem] font-extrabold leading-tight"><span className="text-[var(--template-primary)]">{String(step + 1).padStart(2, "0")}.</span> {question.label}</h3>
           <div className="mt-5 grid gap-3">
             {question.options.map((option) => (
               <ToolOptionButton key={option.value} onClick={() => choose(option.value)}>
-                <span>{option.label}</span>
-                <ArrowRight className="text-[var(--template-primary)] h-4 w-4 shrink-0" />
+                <span>{option.label}</span><ArrowRight className="h-4 w-4 shrink-0 text-[var(--template-primary)]" />
               </ToolOptionButton>
             ))}
           </div>
         </div>
-        {answered && <div className="mt-6 flex justify-end"><button type="button" onClick={() => { if (step < QUESTIONS.length - 1) setStep(step + 1); else setShowResult(true); }} className="text-[var(--template-primary)] text-sm font-bold hover:underline">Skip to result →</button></div>}
-        <p className="text-[var(--template-muted)] mt-6 flex items-center gap-2 text-xs"><Sparkles className="text-[var(--template-primary)] h-3.5 w-3.5" /> Demo logic — provinces update streams frequently. Use this to prioritize research.</p>
+        {answered && <div className="flex justify-end"><button type="button" onClick={() => { if (step < QUESTIONS.length - 1) setStep((current) => current + 1); else setShowResult(true); }} className="text-sm font-bold text-[var(--template-primary)] hover:underline">Continue with this answer →</button></div>}
+        <p className="m-0 text-xs leading-[1.5] text-[var(--template-muted)]">This planner does not score eligibility or estimate invitation chances. PNP rules, stream openings and selection priorities are province-specific.</p>
       </div>
     </ToolCard>
   );
 }
 
 function Result({ answers, onRestart }) {
-  const findings = analyze(answers);
-  const likelyCount = findings.filter((f) => f.level === "likely").length;
+  const province = PROVINCES.find((item) => item.value === answers.province) || PROVINCES[0];
+  const targetedProvince = answers.province !== "all";
+  const categories = [
+    {
+      label: "Employer-linked provincial streams",
+      detail: answers.jobOffer === "yes"
+        ? "Review the selected region’s employer, job-offer, occupation and work-permit rules. A job offer alone does not establish eligibility."
+        : "No regional job offer was selected. Check the selected program guide for pathways that do not require a job offer, and confirm current intake priorities.",
+    },
+    {
+      label: "Express Entry-linked provincial streams",
+      detail: answers.expressEntry === "yes"
+        ? "Review whether the province has an enhanced stream that accepts your active Express Entry profile and whether your occupation or CRS profile matches current selection criteria."
+        : "An active Express Entry profile was not selected. Check whether a base provincial stream fits, or confirm the federal program requirements before creating a profile.",
+    },
+    {
+      label: "Local work, education or family connections",
+      detail: answers.connection === "none"
+        ? "No prior local connection was selected. Some pathways may still exist, but do not assume a general connection requirement is waived."
+        : "Check whether this exact connection is accepted by an open stream, how long it must have existed and what evidence the province requires.",
+    },
+  ];
   return (
     <ToolCard>
-      <ToolHeader icon={CheckCircle2} kicker="Demo overview" title="Your PNP overview" subtitle="Based on your answers — rough read on stream categories worth researching next." action={<ToolResetButton onClick={onRestart}><RefreshCw className="h-3.5 w-3.5" /> Restart</ToolResetButton>} />
-      <div className="tool-card__body flex flex-col gap-5 p-[1.35rem_1.5rem_1.5rem] sm:p-[1.6rem_1.75rem_1.75rem]">
-        <div className="tool-notice rounded-[0.85rem] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-primary)_5%,transparent)] px-4 py-[0.9rem]">
-          <p className="tool-field__hint m-0 text-[var(--template-muted)]">
-            Based on your profile, you look like a candidate for <strong>{likelyCount > 0 ? "provincial nomination streams" : "improving your core profile first"}</strong>. Below is a rough read on common stream categories.
-          </p>
+      <ToolHeader icon={MapPin} kicker="Your research plan" title={targetedProvince ? "Start with " + province.label : "Compare provincial program guides"} subtitle="Use the profile details you selected to prioritize research. The government program guide remains the source for eligibility." action={<ToolResetButton onClick={onRestart}><RefreshCw className="h-3.5 w-3.5" /> Start again</ToolResetButton>} />
+      <div className="tool-card__body grid gap-5 p-[1.35rem_1.5rem_1.5rem] sm:p-[1.6rem_1.75rem_1.75rem]">
+        <div className="rounded-[0.9rem] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-primary)_5%,var(--template-surface-alt))] p-4 text-[0.75rem] leading-[1.55] text-[var(--template-muted)]">
+          <strong className="text-[var(--template-ink)]">No eligibility verdict or score is generated.</strong> PNP streams can require a specific NOC, language level, employer, connection, license, funds or invitation. Check the selected region’s published calculator and official criteria.
         </div>
-        <ul className="mt-6 space-y-3">
-          {findings.map((f) => (
-            <li key={f.label} className="tool-group rounded-[0.95rem] border border-[var(--template-border)] bg-[var(--template-surface)] flex items-start gap-3 px-4 py-3.5">
-              <span className={`tool-level-dot tool-level-dot--${f.level} mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full`} />
-              <div><p className="text-sm font-bold">{f.label}</p><p className="tool-field__hint mt-1">{f.note}</p></div>
-            </li>
-          ))}
+        <ul className="grid gap-3">
+          {categories.map((item) => <li key={item.label} className="rounded-[0.9rem] border border-[var(--template-border)] bg-[var(--template-surface)] p-4"><p className="m-0 text-sm font-extrabold text-[var(--template-ink)]">{item.label}</p><p className="tool-field__hint mb-0 mt-1">{item.detail}</p></li>)}
         </ul>
-        <ToolResultCard className="mt-7">
-          <h3 className="text-base font-bold text-white">Turn this into a real strategy</h3>
-          <p className="mt-2 text-sm leading-relaxed text-white/85">Provinces have specific streams, NOCs and intake rounds. A free assessment gets you a written shortlist of the streams that actually fit.</p>
-          <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-            <Button href={currentPagePath("/tools/free-assessment")} variant="light">Free assessment</Button>
+        <ToolResultCard className="min-h-0">
+          <h3 className="m-0 text-base font-bold text-white">Next step</h3>
+          <p className="mt-2 text-sm leading-relaxed text-white/85">Open the program guide and use its stream-specific score grid or eligibility planner. If you are considering a rural community offer, use the separate Rural Community Immigration Program checker.</p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Button href={province.path} variant="light">Open {targetedProvince ? province.label + " program guide" : "all PNP overview"}</Button>
+            <Button href="/tools/rural-community-immigration-program-canada" variant="lightOutline">Rural pathway checker</Button>
             <Button href={site.ctas.primary.href} variant="lightOutline">{site.ctas.primary.label}</Button>
           </div>
         </ToolResultCard>
-        <div className="mt-6 text-center"><button type="button" onClick={onRestart} className="text-[var(--template-primary)] text-sm font-bold hover:underline">Restart the check</button></div>
+        <button type="button" onClick={onRestart} className="mx-auto text-sm font-bold text-[var(--template-primary)] hover:underline">Start a new research plan</button>
       </div>
     </ToolCard>
   );
-}
-
-function analyze(a) {
-  const findings = []; const exp = Number(a.experience) || 0; const outside = a.status === "outside"; const strongLang = a.language === "high"; const degree = a.education === "degree"; const offer = a.jobOffer === "yes"; const connection = a.connection !== "none";
-  findings.push({ label: "Employer-driven streams", level: offer ? "likely" : "possible", note: offer ? "With a job offer, employer-driven provincial streams are a strong fit." : "Without a job offer, check employer-driven streams once you secure one." });
-  findings.push({ label: "Express Entry-linked (enhanced) PNP", level: degree && strongLang && exp >= 1 ? "likely" : "possible", note: degree && strongLang && exp >= 1 ? "Your education and language could support an enhanced nomination worth 600 CRS points." : "Consider raising language scores or gaining experience before targeting enhanced streams." });
-  findings.push({ label: "Graduate / student streams", level: a.status === "student" ? "likely" : "unlikely", note: a.status === "student" ? "As a student, graduate streams in provinces like Ontario, BC and Alberta may apply." : "Graduate streams generally require study in the province." });
-  findings.push({ label: "Base (non-Express Entry) PNP streams", level: outside && exp >= 3 && offer ? "likely" : "possible", note: outside && exp >= 3 && offer ? "Work-experience + offer combinations fit several base streams." : "Base streams often need strong provincial connection or an offer." });
-  findings.push({ label: "Regional / rural community streams", level: connection && exp >= 1 ? "possible" : "unlikely", note: "Community-based programs value genuine connection to the region." });
-  return findings;
 }

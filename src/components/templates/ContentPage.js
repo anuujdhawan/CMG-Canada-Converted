@@ -9,6 +9,7 @@ import ReferenceHomepage from "@/components/home/ReferenceHomepage";
 import ReferenceServicePage from "@/components/home/ReferenceServicePage";
 import LegalPage from "@/components/templates/LegalPage";
 import PnpProgramExperienceGate from "@/components/tools/PnpProgramExperienceGate";
+import Fsw67Calculator from "@/components/tools/Fsw67Calculator";
 import { getPnpProgramForPath, PNP_PROGRAMS, PNP_PROGRAM_OPTIONS } from "@/data/pnp-programs";
 
 const SITE_HOSTS = new Set([
@@ -222,15 +223,22 @@ export default function ContentPage({ page, children }) {
 
   // Explicit service and tool pages share the service visual system.
   const pnpProgram = getPnpProgramForPath(page.path);
+  const isToolPage = page.path.startsWith("/tools/");
+  const isFswPage = page.path === "/immigrate/federal-skilled-worker";
+  const interactiveContent = pnpProgram
+    ? <PnpProgramExperienceGate program={pnpProgram} programs={pnpProgram.isOverview ? PNP_PROGRAMS : undefined} programOptions={pnpProgram.isOverview ? PNP_PROGRAM_OPTIONS : undefined} />
+    : isFswPage
+      ? <Fsw67Calculator />
+      : children;
   return (
     <>
       <ReferenceServicePage
         page={page}
-        interactivePosition={pnpProgram ? "top" : "bottom"}
+        interactivePosition={pnpProgram || isToolPage || isFswPage ? "top" : "bottom"}
         interactiveWide={Boolean(pnpProgram)}
         interactiveHeading={pnpProgram ? { hide: true } : undefined}
       >
-        {pnpProgram ? <PnpProgramExperienceGate program={pnpProgram} programs={pnpProgram.isOverview ? PNP_PROGRAMS : undefined} programOptions={pnpProgram.isOverview ? PNP_PROGRAM_OPTIONS : undefined} /> : children}
+        {interactiveContent}
       </ReferenceServicePage>
       {pageStructuredData(page).map((obj, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: rebrand(serializeJsonLd(obj)) }} />

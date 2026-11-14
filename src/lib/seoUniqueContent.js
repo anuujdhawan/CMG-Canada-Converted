@@ -59,10 +59,10 @@ const UNIQUE_PAGE_CONTENT = {
     items: ["Lead statement and core duties", "Dates, hours, wage and work location", "Reference-letter evidence for the claimed occupation"],
   },
   "/tools/pnp-eligibility-canada": {
-    question: "What does a PNP eligibility check Canada result actually mean?",
-    answer: "A PNP eligibility check Canada result means a provincial or territorial stream may deserve research based on the inputs provided. It is not a nomination, invitation or federal approval. The province still applies its own stream rules, intake limits, document standards and intention-to-settle assessment.",
-    heading: "What should you verify after a possible PNP match?",
-    detail: "Open the exact stream page and record the current intake status, invitation method, NOC rules, job-offer conditions, language level, settlement criteria and application route. A broad match is useful only when the profile can support the province-specific details.",
+    question: "What does the PNP Pathway Planner result tell you?",
+    answer: "The PNP Pathway Planner points you to official provincial or territorial guidance based on the region and profile details you select. It does not score eligibility or estimate invitation chances. The province or territory applies its own stream rules and selection priorities.",
+    heading: "What should you check in the official PNP guide?",
+    detail: "Open the exact program page and record the current intake status, invitation method, NOC rules, job-offer conditions, language level, settlement criteria and application route. Confirm that you can support each requirement with documents.",
     items: ["The stream’s current opening and invitation process", "The job, NOC and employer requirements", "Your evidence of settlement intention and eligibility"],
   },
   "/tools/document-checklist-canada": {

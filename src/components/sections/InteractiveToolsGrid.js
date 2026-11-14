@@ -22,7 +22,7 @@ export default function InteractiveToolsGrid() {
             return (
               <Link
                 key={tool.slug}
-                href={currentPagePath(`/tools/${tool.slug}`)}
+                href={currentPagePath(tool.href || ("/tools/" + tool.slug))}
                 className="reference-tool-tile group relative flex min-h-[15rem] max-[640px]:min-h-[13rem] before:absolute before:inset-x-0 before:top-0 before:h-[3px] before:bg-[linear-gradient(90deg,var(--template-primary),var(--template-accent))] before:origin-left before:scale-x-[.2] before:transition-transform before:duration-[260ms] before:ease-[ease] before:content-[''] hover:before:scale-x-100 focus-visible:before:scale-x-100 flex-col justify-between overflow-hidden rounded-[1.1rem] border border-[var(--template-border)] bg-[var(--template-surface)] text-[var(--template-ink)] no-underline transition-[border-color,background,transform,box-shadow] duration-[220ms] ease-[ease] hover:border-[color-mix(in_srgb,var(--template-primary)_55%,var(--template-border))] hover:bg-[var(--template-surface-alt)] hover:translate-y-[-5px] hover:shadow-[0_1.2rem_3rem_color-mix(in_srgb,var(--template-secondary)_20%,transparent)] focus-visible:border-[color-mix(in_srgb,var(--template-primary)_55%,var(--template-border))] focus-visible:bg-[var(--template-surface-alt)] focus-visible:translate-y-[-5px] focus-visible:shadow-[0_1.2rem_3rem_color-mix(in_srgb,var(--template-secondary)_20%,transparent)]"
               >
                 <div className="reference-tool-tile__body flex flex-1 flex-col gap-[0.7rem] p-[clamp(1.25rem,2.5vw,2rem)]">

@@ -270,10 +270,10 @@ const SPECIAL_CONFIGS = {
   "/tools/pnp-eligibility-canada": {
     topic: "PNP eligibility check Canada",
     source: OFFICIAL_SOURCES.pnp,
-    answer: "A PNP eligibility check Canada tool screens profile details against broad provincial nominee categories; it does not issue a nomination. Each province or territory controls its own streams, intakes, invitations and document rules, so a suggested match must be verified on the current official program page.",
-    fit: "Use the result to choose which province and stream to research first. The useful inputs are usually occupation, NOC, language, education, work experience, job offer, status, settlement funds and genuine connection or intention to settle.",
+    answer: "The PNP Pathway Planner uses a chosen province and a few profile details to point users toward official program guidance. It does not calculate eligibility, award a score or estimate invitation chances. Each province or territory controls its own streams, intakes, invitations and evidence requirements.",
+    fit: "Use the planner as a starting point, then review the exact stream’s current rules. Important details can include occupation, NOC, language, education, work experience, job offer, status, settlement funds and intention to settle.",
     evidence: ["the province and stream’s current eligibility page", "language, education and work records", "job-offer, employer and settlement documents where required", "proof of connection or a credible intention to live in the nominating province"],
-    next: "Record the stream name, intake date, invitation method and evidence assumptions behind the result. Recheck the official page before submitting because provincial criteria and available spaces can change without matching another province’s rules.",
+    next: "Record the stream name, intake date, invitation method and evidence requirements from the official guide. Recheck the provincial page before submitting because criteria and available spaces can change.",
   },
   "/tools/document-checklist-canada": {
     topic: "Canada immigration document checklist",
