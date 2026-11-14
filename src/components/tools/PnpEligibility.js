@@ -99,10 +99,9 @@ function Result({ answers, onRestart }) {
         </ul>
         <ToolResultCard className="min-h-0">
           <h3 className="m-0 text-base font-bold text-white">Next step</h3>
-          <p className="mt-2 text-sm leading-relaxed text-white/85">Open the program guide and use its stream-specific score grid or eligibility planner. If you are considering a rural community offer, use the separate Rural Community Immigration Program checker.</p>
+          <p className="mt-2 text-sm leading-relaxed text-white/85">Open the program guide and use its stream-specific score grid or eligibility planner. For a rural or regional pathway, confirm the community and employer requirements in the applicable official program guidance.</p>
           <div className="mt-5 flex flex-wrap gap-3">
             <Button href={province.path} variant="light">Open {targetedProvince ? province.label + " program guide" : "all PNP overview"}</Button>
-            <Button href="/tools/rural-community-immigration-program-canada" variant="lightOutline">Rural pathway checker</Button>
             <Button href={site.ctas.primary.href} variant="lightOutline">{site.ctas.primary.label}</Button>
           </div>
         </ToolResultCard>

@@ -325,7 +325,6 @@ export default function CrsCalculator() {
         </ToolResultCard>
         <p className="m-0 flex items-start gap-2 text-[0.68rem] leading-[1.5] text-[var(--template-muted)]"><Info className="mt-0.5 h-4 w-4 shrink-0 text-[var(--template-primary)]" />The Labour Market Integration factor is applied only through one route at a time. For Canadian-work points, the high-wage component requires at least 12 months in qualifying occupations. A qualifying job offer must satisfy IRCC’s current criteria; an LMIA is no longer required for CRS points.</p>
         <div className="flex flex-wrap gap-x-5 gap-y-2 text-[0.72rem] font-extrabold text-[var(--template-primary)]">
-          <a className="underline underline-offset-4" href="/tools/clb-converter-canada">Convert language scores</a>
           <a className="underline underline-offset-4" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score/crs-criteria.html" target="_blank" rel="noreferrer">Current IRCC CRS criteria</a>
           <a className="underline underline-offset-4" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noreferrer">Official CRS calculator</a>
         </div>

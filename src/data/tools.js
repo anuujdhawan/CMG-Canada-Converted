@@ -47,30 +47,6 @@ export const tools = [
     icon: "FileSearch",
     tone: "red",
   },
-  {
-    slug: "clb-converter-canada",
-    href: "/tools/clb-converter-canada",
-    title: "CLB / NCLC Converter",
-    description: "Convert CELPIP, IELTS, PTE Core, TEF Canada and TCF Canada scores by ability.",
-    icon: "Calculator",
-    tone: "blue",
-  },
-  {
-    slug: "fsw-67-point-calculator-canada",
-    href: "/tools/fsw-67-point-calculator-canada",
-    title: "FSW 67-point Calculator",
-    description: "Calculate Federal Skilled Worker selection points and review key program requirements.",
-    icon: "GraduationCap",
-    tone: "navy",
-  },
-  {
-    slug: "rural-community-immigration-program-canada",
-    href: "/tools/rural-community-immigration-program-canada",
-    title: "Rural Community Immigration Checker",
-    description: "Review the permanent program’s community, job, work, language, education and settlement-fund requirements.",
-    icon: "MapPin",
-    tone: "red",
-  },
 ];
 
 export default tools;
