@@ -3,6 +3,7 @@ import ContentPage from "@/components/templates/ContentPage";
 import InteractiveToolsGrid from "@/components/sections/InteractiveToolsGrid";
 import PageIndexGrid from "@/components/sections/PageIndexGrid";
 import { buildMetadata } from "@/lib/seo";
+import { calculatorTools } from "@/data/calculatorTools";
 
 const pagePath = "/tools/canada-immigration-calculators";
 const toolsPage = getPage(pagePath);
@@ -26,7 +27,12 @@ export default function ToolsPage() {
   if (!toolsPage) return null;
   return (
     <ContentPage page={toolsPage}>
-      <InteractiveToolsGrid />
+      <InteractiveToolsGrid
+        items={calculatorTools}
+        eyebrow="15 focused calculators"
+        title="Canadian immigration calculators"
+        lead="Open a dedicated calculator for language scores, Express Entry points, provincial pathways or regional programs. Each tool shares the CMG interface and links to the official source behind its estimate."
+      />
       <PageIndexGrid pathname={pagePath} />
     </ContentPage>
   );

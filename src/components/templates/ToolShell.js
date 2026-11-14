@@ -3,7 +3,7 @@ import { serializeJsonLd } from "@/lib/seo";
 import ReferenceServicePage from "@/components/home/ReferenceServicePage";
 import { pageStructuredData } from "@/components/templates/ContentPage";
 
-export default function ToolShell({ eyebrow, title, lead, currentSlug, pagePath: explicitPagePath, children, interactivePosition = "top" }) {
+export default function ToolShell({ eyebrow, title, lead, currentSlug, pagePath: explicitPagePath, children, interactivePosition = "top", interactiveWide = false, interactiveHeading }) {
   const pagePath = explicitPagePath || `/tools/${currentSlug}`;
   const page = getPage(pagePath) || {
     path: pagePath,
@@ -18,7 +18,7 @@ export default function ToolShell({ eyebrow, title, lead, currentSlug, pagePath:
   const resolvedPage = { ...page, h1: page.h1 || title };
   return (
     <>
-      <ReferenceServicePage page={resolvedPage} interactivePosition={interactivePosition}>{children}</ReferenceServicePage>
+      <ReferenceServicePage page={resolvedPage} interactivePosition={interactivePosition} interactiveWide={interactiveWide} interactiveHeading={interactiveHeading}>{children}</ReferenceServicePage>
       {pageStructuredData(resolvedPage).map((obj, index) => (
         <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(obj) }} />
       ))}

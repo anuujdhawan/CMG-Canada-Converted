@@ -2,6 +2,7 @@ import { site } from "@/config/site";
 import { RESEARCH_BLOG_POSTS } from "@/data/blog-research";
 import { getAllPages } from "@/lib/sitePages";
 import { ADDITIONAL_INDEXABLE_PAGES, EXCLUDED_SITEMAP_PATHS } from "@/lib/seoRoutes";
+import { calculatorTools } from "@/data/calculatorTools";
 
 const baseUrl = site.url.replace(/\/$/, "");
 
@@ -12,10 +13,7 @@ const dedicatedPageDetails = new Map([
   ["/assessment/free-canada-immigration-assessment", ["Free Canada Immigration Assessment", "A free profile assessment for people exploring Canadian immigration routes." ]],
   ["/ontario-pr", ["Canada PR through Ontario", "Ontario OINP and Express Entry route guidance for permanent residence planning." ]],
   ["/tools/canada-immigration-calculators", ["Canada Immigration Calculators", "Free calculators and eligibility tools for Canadian immigration planning." ]],
-  ["/tools/crs-calculator-canada", ["Canada CRS Calculator", "Estimate a current Comprehensive Ranking System score, including Labour Market Integration points." ]],
-  ["/tools/clb-converter-canada", ["CLB and NCLC Converter", "Convert CELPIP, IELTS General Training, PTE Core, TEF Canada and TCF Canada results by ability." ]],
-  ["/tools/fsw-67-point-calculator-canada", ["Federal Skilled Worker 67-point Calculator", "Calculate selection-factor points out of 100 and review key Federal Skilled Worker requirements." ]],
-  ["/tools/rural-community-immigration-program-canada", ["Rural Community Immigration Program Checker", "Review the permanent rural community pathway’s recommendation, offer, work, language, education and funds requirements." ]],
+  ...calculatorTools.map((tool) => [`/tools/${tool.slug}`, [tool.metaTitle || tool.title, tool.description]]),
   ["/tools/pnp-eligibility-canada", ["PNP Pathway Planner", "Choose a region and locate the official provincial program guidance relevant to your profile." ]],
   ["/tools/noc-finder-canada", ["NOC and Occupation Finder", "Search all 516 NOC 2021 unit groups, then verify actual duties in the official occupation profile." ]],
   ["/tools/document-checklist-canada", ["Canada Immigration Document Checklist", "Review common document requirements for Canadian immigration applications." ]],
@@ -110,10 +108,7 @@ export function renderLlms({ full = false } = {}) {
   ];
   const tools = [
     "/tools/canada-immigration-calculators",
-    "/tools/crs-calculator-canada",
-    "/tools/clb-converter-canada",
-    "/tools/fsw-67-point-calculator-canada",
-    "/tools/rural-community-immigration-program-canada",
+    ...calculatorTools.map(({ slug }) => `/tools/${slug}`),
     "/tools/pnp-eligibility-canada",
     "/tools/noc-finder-canada",
     "/tools/document-checklist-canada",

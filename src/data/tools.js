@@ -4,7 +4,7 @@
 export const tools = [
   {
     slug: "crs-calculator",
-    href: "/tools/crs-calculator-canada",
+    href: "/tools/crs-calculator",
     title: "Free CRS Calculator",
     description:
       "Estimate your Comprehensive Ranking System score for Express Entry — including spouse and adaptability factors.",
@@ -49,7 +49,7 @@ export const tools = [
   },
   {
     slug: "clb-converter-canada",
-    href: "/tools/clb-converter-canada",
+    href: "/tools/clb-calculator",
     title: "CLB / NCLC Converter",
     description: "Convert CELPIP, IELTS, PTE Core, TEF Canada and TCF Canada scores by ability.",
     icon: "Calculator",
@@ -57,7 +57,7 @@ export const tools = [
   },
   {
     slug: "fsw-67-point-calculator-canada",
-    href: "/tools/fsw-67-point-calculator-canada",
+    href: "/tools/fsw-67-point-calculator",
     title: "FSW 67-point Calculator",
     description: "Calculate Federal Skilled Worker selection points and review key program requirements.",
     icon: "GraduationCap",
@@ -65,7 +65,7 @@ export const tools = [
   },
   {
     slug: "rural-community-immigration-program-canada",
-    href: "/tools/rural-community-immigration-program-canada",
+    href: "/tools/rcip-calculator",
     title: "Rural Community Immigration Checker",
     description: "Review the permanent program’s community, job, work, language, education and settlement-fund requirements.",
     icon: "MapPin",

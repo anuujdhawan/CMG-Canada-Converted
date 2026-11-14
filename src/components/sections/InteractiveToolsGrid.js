@@ -4,20 +4,20 @@ import { tools } from "@/data/tools";
 import iconMap, { fallbackIcon } from "@/lib/icons";
 import { currentPagePath } from "@/config/pageRoutes";
 
-export default function InteractiveToolsGrid() {
+export default function InteractiveToolsGrid({ items = tools, eyebrow = "Try them now", title = "Free interactive tools", lead = "Use a quick estimate or checklist to organize your profile. Each result has limits, so confirm requirements with the official program guide. No sign-up is required." }) {
   return (
     <section aria-label="Free interactive tools" className="reference-index-grid reference-index-grid--tools border-t border-[var(--template-border)] bg-[var(--template-bg)] text-[var(--template-ink)]">
       <div className="reference-index-grid__inner mx-auto w-[min(100%-2rem,var(--container,1220px))] py-[clamp(4rem,8vw,8rem)]">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
-            <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] uppercase"><Sparkles className="h-3.5 w-3.5" /> Try them now</p>
-            <h2>Free interactive tools</h2>
-            <p className="reference-index-grid__lead !mt-[1.3rem] max-w-[42rem] !text-[var(--template-muted)] !text-[clamp(0.95rem,0.9rem+0.35vw,1.1875rem)] !leading-[1.65]">Use a quick estimate or checklist to organize your profile. Each result has limits, so confirm requirements with the official program guide. No sign-up is required.</p>
+            <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] uppercase"><Sparkles className="h-3.5 w-3.5" /> {eyebrow}</p>
+            <h2>{title}</h2>
+            <p className="reference-index-grid__lead !mt-[1.3rem] max-w-[42rem] !text-[var(--template-muted)] !text-[clamp(0.95rem,0.9rem+0.35vw,1.1875rem)] !leading-[1.65]">{lead}</p>
           </div>
         </div>
 
         <div className="reference-tool-grid mt-[clamp(2.4rem,5vw,4.5rem)] grid grid-cols-2 max-[640px]:grid-cols-1 max-[640px]:gap-[.8rem] gap-4">
-          {tools.map((tool, index) => {
+          {items.map((tool, index) => {
             const Icon = iconMap[tool.icon] || fallbackIcon;
             return (
               <Link
@@ -32,6 +32,7 @@ export default function InteractiveToolsGrid() {
                     </span>
                     <span className="reference-tool-tile__number text-[var(--template-primary)] text-[0.72rem] font-extrabold tracking-[0.12em]">0{index + 1}</span>
                   </div>
+                  {tool.category && <span className="w-fit rounded-full border border-[var(--template-border)] px-2.5 py-1 text-[0.62rem] font-extrabold uppercase tracking-[0.08em] text-[var(--template-primary)]">{tool.category}</span>}
                   <h3 className="!text-[var(--template-ink)] !m-[auto_0_0] !text-[clamp(1.375rem,1rem+1.3vw,2rem)] !font-semibold !leading-[1.04] !tracking-[-0.028em]">{tool.title}</h3>
                   <p className="!text-[var(--template-muted)] !text-[0.9rem] !leading-[1.55]">{tool.description}</p>
                   <span className="reference-tool-tile__action inline-flex items-center justify-between gap-4 border-t border-[var(--template-border)] px-[clamp(1.25rem,2.5vw,2rem)] py-[0.9rem] text-[var(--template-primary)] text-[0.78rem] font-extrabold">
