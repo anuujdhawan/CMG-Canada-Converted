@@ -35,6 +35,22 @@ const nextConfig = {
     qualities: [60, 75],
   },
 
+  async headers() {
+    return [
+      // These hashed build resources are implementation files, not search
+      // landing pages. Keep them crawlable for rendering, but do not index
+      // them as standalone results.
+      {
+        source: "/_next/static/css/:filename(.*\\.css)",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
+      {
+        source: "/_next/static/media/:filename(.*\\.woff2?)",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
+    ];
+  },
+
   async redirects() {
     return [
       // Rewritten pageData routes — preserve the old paths as permanent SEO redirects.
