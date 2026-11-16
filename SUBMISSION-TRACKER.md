@@ -62,3 +62,15 @@ already in the mailbox.
 - `scripts/telegraph-post.js` — first article publisher (kept as a working example)
 - `scripts/telegraph-publish.js` — batch publisher for the other two articles
 - `scripts/build-submission-guides.py` — regenerates all three PDFs
+
+## Editorial follow-up sent — Pankaj Khanna author photo + bio (16 Nov 2026)
+
+| Prospect | Thread reply | Asset supplied | Status |
+|---|---|---|---|
+| Law360 Canada / LexisNexis Canada (Richard Skinulis) | `1a1e3feb598b0943` in thread `1a15debe5090078f` | Live JPEG URL + short bio + CICC profile + website | Reply sent; contributor agreement still pending Pankaj's review/signature. No publication or byline claim asserted as approved. |
+| Vantage Magazine (Victor) | `1a1e3feb83b5af3b` in thread `1a15db634ca3cb9f` | Live JPEG URL + short bio + website | Reply sent; clarified this is the Canada-based consultant image and that the original byline stands unless editors request otherwise. |
+
+Asset: `public/images/team/pankaj-khanna.jpg` — converted from the homepage WebP, 900 x 1125,
+131,003 bytes, committed as `7ff8fb1` and pushed to `main`. Verified in local Chrome before push
+(HTTP 200, 900 x 1125), then verified on production (`image/jpeg`, HTTP 200, SHA-256 identical to
+the local file): https://commonwealthmigration.ca/images/team/pankaj-khanna.jpg
