@@ -11,8 +11,17 @@
  * fixed figures.
  */
 
+const ATTORNEYS_MAGAZINE_ARTICLE = "https://attorneysmag.com/can-foreign-workers-in-canada-be-fired/";
+
 const article = {
   slug: "canada-work-permit-types-2026",
+
+  // Editorial exchange: one contextual reference to the related employment-rights
+  // article, placed on its own label in the Global Talent Stream section. The
+  // renderer links whole labels, never markdown inside a paragraph string.
+  inlineLinks: {
+    "Temporary Foreign Worker Program": ATTORNEYS_MAGAZINE_ARTICLE,
+  },
 
   quickAnswer:
     "A Canada work permit is either open or employer-specific. An open permit lets you work for almost any employer without a job offer; an employer-specific permit ties you to one employer and usually requires that employer to act first, through a labour market impact assessment or an exemption. The evidence and the conditions differ accordingly.",
