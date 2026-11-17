@@ -8,6 +8,10 @@ import { sortBlogPostsByDate } from "./blogDates";
  * authoritative publishedAt value on the post itself when one is available.
  */
 const BLOG_PUBLISHED_AT_BY_SLUG = {
+  "canada-immigration-levels-plan-2027-2029": "2026-11-17",
+  "express-entry-high-wage-crs-points-november-2026": "2026-11-17",
+  "canada-asylum-process-changes-november-2026": "2026-11-17",
+  "canada-pr-transition-measures-2027-in-canada-workers": "2026-11-17",
   "canada-immigration-levels-plan-2026": "2026-09-22",
   "express-entry-canada-2026-categories": "2026-09-22",
   "crs-score-canada-how-to-improve": "2026-09-22",
@@ -91,6 +95,24 @@ export const BLOG_CATEGORIES = [
     description: "Understand the federal programs, CRS strategy and category-based decisions before you submit a profile.",
   },
   {
+    slug: "canada-immigration-news",
+    label: "Canada Immigration News",
+    title: "Recent changes, explained for applicants",
+    description: "Follow the latest federal immigration announcements with clear explanations of what changed, who may be affected and what to check next.",
+  },
+  {
+    slug: "permanent-residence",
+    label: "Permanent residence",
+    title: "Choose a permanent residence route that fits",
+    description: "Understand Canada’s permanent residence pathways, current measures and the evidence each route requires.",
+  },
+  {
+    slug: "regional-immigration",
+    label: "Regional immigration",
+    title: "Build a plan around the community you choose",
+    description: "Explore community-led and regional pathways, local employer requirements and the settlement commitment behind each route.",
+  },
+  {
     slug: "brampton-immigration",
     label: "Brampton Immigration",
     title: "Local questions. Clear immigration steps.",
@@ -161,12 +183,12 @@ export const DEFAULT_BLOG_SORT = BLOG_SORT_NEWEST;
  */
 const RESEARCH_CATEGORY_SLUG = {
   "Canada Immigration": "immigration-guides",
-  "Canada Immigration News": "immigration-guides",
+  "Canada Immigration News": "canada-immigration-news",
   "Refusals & Appeals": "refusals",
-  "Permanent Residence": "immigration-guides",
+  "Permanent Residence": "permanent-residence",
+  "Regional Immigration": "regional-immigration",
   "Express Entry": "express-entry",
   "Provincial Nominee Programs": "provincial-nominee-programs",
-  "Regional Immigration": "provincial-nominee-programs",
   "Work Permits": "work-permits",
   "Employer Immigration": "employer-immigration",
   "Study to Work": "study-permits",
@@ -248,6 +270,18 @@ const BLOG_IMAGE_BY_FILE = {
 };
 
 const BLOG_IMAGE_BY_CATEGORY = {
+  "canada-immigration-news": {
+    src: "/images/blog/canada-visitor-record-airport-waiting.webp",
+    alt: "Canadian immigration documents being reviewed as policy updates are considered",
+  },
+  "permanent-residence": {
+    src: "/images/blog/toronto-newcomer.webp",
+    alt: "Newcomer in Toronto planning a route to Canadian permanent residence",
+  },
+  "regional-immigration": {
+    src: "/images/blog/small-town.webp",
+    alt: "Small Canadian town representing regional immigration pathways",
+  },
   "express-entry": {
     src: "/images/pages/documents.webp",
     alt: "Organized immigration documents prepared for an Express Entry review",
@@ -290,10 +324,26 @@ const BLOG_IMAGE_BY_CATEGORY = {
  * Research posts need a slug-level cover rather than the category fallback:
  * several current posts share a category, and using one category image made
  * the blog grid look like the same article repeated across every card.
- * All covers are local WebP assets so the listing does not depend on remote
+ * All covers are local image assets so the listing does not depend on remote
  * image hosts or runtime downloads.
  */
 const BLOG_IMAGE_BY_RESEARCH_SLUG = {
+  "canada-immigration-levels-plan-2027-2029": {
+    src: "/images/blog/financial-district.webp",
+    alt: "Canadian city district representing the national immigration plan",
+  },
+  "express-entry-high-wage-crs-points-november-2026": {
+    src: "/images/blog/canadian-experience-class-2026-requirements.jpg",
+    alt: "Canadian work experience documents for an Express Entry profile",
+  },
+  "canada-asylum-process-changes-november-2026": {
+    src: "/images/blog/canada-status-restoration-application-documents.webp",
+    alt: "Immigration application documents arranged for careful review",
+  },
+  "canada-pr-transition-measures-2027-in-canada-workers": {
+    src: "/images/blog/toronto-newcomer.webp",
+    alt: "Newcomer in Toronto representing people already building a life in Canada",
+  },
   "canada-immigration-levels-plan-2026": {
     src: "/images/blog/canada-flag-office.webp",
     alt: "Canadian flag representing the national immigration levels plan",

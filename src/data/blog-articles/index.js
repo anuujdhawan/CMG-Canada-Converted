@@ -16,6 +16,10 @@
  */
 
 import bramptonArticles from "./brampton";
+import canadaImmigrationLevelsPlan2027To2029 from "./canada-immigration-levels-plan-2027-2029";
+import expressEntryHighWageCrsPointsNovember2026 from "./express-entry-high-wage-crs-points-november-2026";
+import canadaAsylumProcessChangesNovember2026 from "./canada-asylum-process-changes-november-2026";
+import canadaPrTransitionMeasures2027InCanadaWorkers from "./canada-pr-transition-measures-2027-in-canada-workers";
 import canadaImmigrationLevelsPlan2026 from "./canada-immigration-levels-plan-2026";
 import expressEntryCanada2026Categories from "./express-entry-canada-2026-categories";
 import crsScoreCanadaHowToImprove from "./crs-score-canada-how-to-improve";
@@ -68,6 +72,10 @@ import choosingRightImmigrationConsultantMississauga from "./choosing-right-immi
 /** Article bodies keyed by the slug used in `blog-research.js`. */
 export const BLOG_ARTICLES = {
   ...bramptonArticles,
+  "canada-immigration-levels-plan-2027-2029": canadaImmigrationLevelsPlan2027To2029,
+  "express-entry-high-wage-crs-points-november-2026": expressEntryHighWageCrsPointsNovember2026,
+  "canada-asylum-process-changes-november-2026": canadaAsylumProcessChangesNovember2026,
+  "canada-pr-transition-measures-2027-in-canada-workers": canadaPrTransitionMeasures2027InCanadaWorkers,
   "canada-immigration-levels-plan-2026": canadaImmigrationLevelsPlan2026,
   "express-entry-canada-2026-categories": expressEntryCanada2026Categories,
   "crs-score-canada-how-to-improve": crsScoreCanadaHowToImprove,
