@@ -1,5 +1,87 @@
 import { getAllPages } from "./sitePages";
 import { RESEARCH_BLOG_POSTS } from "@/data/blog-research";
+import { sortBlogPostsByDate } from "./blogDates";
+
+/**
+ * The blog source predates publication-date fields. These dates are backfilled
+ * from each article's first addition to the content registry; use an
+ * authoritative publishedAt value on the post itself when one is available.
+ */
+const BLOG_PUBLISHED_AT_BY_SLUG = {
+  "canada-immigration-levels-plan-2026": "2026-09-22",
+  "express-entry-canada-2026-categories": "2026-09-22",
+  "crs-score-canada-how-to-improve": "2026-09-22",
+  "canada-immigration-news-monthly-ircc-update": "2026-09-22",
+  "canada-pr-pathways-2026": "2026-09-22",
+  "provincial-nominee-program-canada-2026": "2026-09-22",
+  "rural-community-immigration-pilot-canada": "2026-09-22",
+  "atlantic-immigration-program-guide": "2026-09-22",
+  "canada-work-permit-types-2026": "2026-09-22",
+  "work-permit-job-loss-canada": "2026-11-05",
+  "lmia-canada-explained": "2026-09-22",
+  "pgwp-canada-2026": "2026-09-22",
+  "canada-study-permit-2026": "2026-09-22",
+  "canada-visitor-visa-documents-refusal": "2026-09-22",
+  "canada-super-visa-2026": "2026-09-22",
+  "spousal-sponsorship-canada-2026": "2026-09-22",
+  "parents-grandparents-program-canada": "2026-09-22",
+  "canada-immigration-processing-times": "2026-09-22",
+  "canada-citizenship-requirements": "2026-09-22",
+  "pr-card-renewal-canada": "2026-09-22",
+  "what-delays-canada-immigration-application": "2026-09-22",
+  "express-entry-french-language-category-2026": "2026-10-07",
+  "canadian-experience-class-2026-requirements": "2026-10-07",
+  "express-entry-proof-of-funds-2026": "2026-10-07",
+  "express-entry-profile-expiry-what-to-do": "2026-10-07",
+  "express-entry-oinp-changes-2026": "2026-10-28",
+  "ontario-pnp-2026-oinp-updates": "2026-10-07",
+  "alberta-advantage-immigration-program-2026": "2026-10-07",
+  "bc-pnp-2026-streams-priorities": "2026-10-07",
+  "manitoba-pnp-2026-skilled-worker-guide": "2026-10-07",
+  "atlantic-immigration-program-employer-checklist": "2026-10-07",
+  "francophone-community-immigration-pilot-canada": "2026-10-07",
+  "lmia-wage-thresholds-2026": "2026-10-07",
+  "rural-lmia-temporary-measures-2026": "2026-10-07",
+  "spouse-open-work-permit-2026": "2026-10-07",
+  "maintained-status-work-permit-extension-canada": "2026-10-07",
+  "restore-status-canada-worker-student": "2026-10-07",
+  "study-permit-pal-tal-exemption-2026": "2026-10-07",
+  "pgwp-field-of-study-2026": "2026-10-07",
+  "change-dli-study-permit-canada": "2026-10-07",
+  "visitor-record-vs-trv-canada": "2026-10-07",
+  "temporary-resident-permit-canada": "2026-11-13",
+  "canada-immigration-scams-authorized-representative": "2026-10-07",
+  "top-immigration-consultants-canada": "2026-11-05",
+  "procedural-fairness-letter-how-to-respond": "2026-11-05",
+  "choosing-right-immigration-consultant-mississauga": "2026-11-05",
+  "express-entry-crs-changes-brampton-november-2026": "2026-10-27",
+  "express-entry-2026-categories-brampton-workers": "2026-10-27",
+  "low-crs-score-brampton-express-entry-options": "2026-10-27",
+  "oinp-workforce-priority-stream-brampton-2026": "2026-10-27",
+  "oinp-employer-portal-brampton-checklist-2026": "2026-10-27",
+  "cec-work-experience-proof-brampton": "2026-10-27",
+  "study-permit-pal-tal-brampton-ontario-2026": "2026-10-27",
+  "change-dli-brampton-students-2026": "2026-10-27",
+  "pgwp-eligibility-brampton-2026": "2026-10-27",
+  "international-student-work-rules-brampton-2026": "2026-10-27",
+  "spouse-open-work-permit-brampton-2026": "2026-10-27",
+  "can-i-apply-for-pr-after-pgwp-brampton": "2026-10-27",
+  "spousal-sponsorship-inland-outland-brampton": "2026-10-27",
+  "common-law-sponsorship-evidence-ontario": "2026-10-27",
+  "invitation-letter-canada-brampton-host-checklist": "2026-10-27",
+  "super-visa-vs-visitor-visa-brampton-parents": "2026-10-27",
+  "visitor-visa-refusal-officer-notes-2026-brampton": "2026-10-27",
+  "work-permit-expiry-maintained-status-restoration-brampton": "2026-10-27",
+  "lmia-for-employers-brampton-checklist-2026": "2026-10-27",
+  "immigration-consultant-cost-ontario-brampton": "2026-10-27",
+  "rcic-vs-immigration-lawyer-ontario": "2026-10-27",
+  "pr-card-renewal-brampton-residency-obligation": "2026-10-27",
+  "citizenship-application-brampton-physical-presence": "2026-10-27",
+  "procedural-fairness-letter-response-brampton": "2026-10-27",
+  "brampton-international-student-housing-status-checklist": "2026-10-27",
+  "canada-immigration-consulting-firms": "2026-10-29",
+  "immigration-consultant-brampton": "2026-10-29",
+};
 
 export const BLOG_CATEGORIES = [
   {
@@ -68,6 +150,9 @@ const CATEGORY_BY_SLUG = Object.fromEntries(BLOG_CATEGORIES.map((category) => [c
 
 /** Category slug used when no category is requested, or an unknown one is. */
 export const ALL_BLOG_CATEGORY = "all";
+export const BLOG_SORT_NEWEST = "newest";
+export const BLOG_SORT_OLDEST = "oldest";
+export const DEFAULT_BLOG_SORT = BLOG_SORT_NEWEST;
 
 /**
  * The research posts in `src/data/blog-research.js` carry their own editorial
@@ -546,6 +631,7 @@ export function getBlogPosts() {
     path: `/blog/${post.slug}`,
     title: post.title,
     seo: { title: `${post.title} | Commonwealth Migration Canada`, description: post.description, keywords: post.keywords.split('; ') },
+    publishedAt: post.publishedAt || post.date || BLOG_PUBLISHED_AT_BY_SLUG[post.slug] || null,
     meta: { lastModified: post.updated || post.date || null },
     updatedLabel: post.updatedLabel,
     category: { slug: researchCategorySlug(post.category), label: post.category, title: post.category, description: post.description },
@@ -588,16 +674,23 @@ export function resolveBlogPage(value) {
   return Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
 }
 
+/** Normalise the sort order for the "all" blog library. */
+export function resolveBlogSort(value) {
+  const sort = String(Array.isArray(value) ? value[0] ?? "" : value ?? "").trim().toLowerCase();
+  return sort === BLOG_SORT_OLDEST ? BLOG_SORT_OLDEST : DEFAULT_BLOG_SORT;
+}
+
 /**
  * Shareable, crawlable href for a blog view.
  *
  * The default view stays at the bare `/blog` so the canonical list URL is not
  * duplicated by a `?category=all` twin.
  */
-export function blogHref({ category, page } = {}) {
+export function blogHref({ category, page, sort } = {}) {
   const params = new URLSearchParams();
   if (category && category !== ALL_BLOG_CATEGORY) params.set("category", category);
   if (Number(page) > 1) params.set("page", String(page));
+  if (sort === BLOG_SORT_OLDEST) params.set("sort", sort);
   const query = params.toString();
   return query ? `/blog?${query}` : "/blog";
 }
@@ -630,6 +723,11 @@ export function getBlogGroups() {
       posts: posts.filter((post) => post.category.slug === category.slug),
     }))
     .filter((group) => group.posts.length > 0);
+}
+
+/** Sort a blog list by publication date, leaving un-dated posts last. */
+export function sortBlogPosts(posts, direction = DEFAULT_BLOG_SORT) {
+  return sortBlogPostsByDate(posts, direction);
 }
 
 /**

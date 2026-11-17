@@ -2,25 +2,25 @@ import { getPage } from "@/lib/sitePages";
 import { buildMetadata, getPageShareImage, serializeJsonLd } from "@/lib/seo";
 import { pageStructuredData } from "@/components/templates/ContentPage";
 import BlogIndexPage from "@/components/blog/BlogIndexPage";
-import { resolveBlogCategory, resolveBlogPage } from "@/lib/blog";
+import { resolveBlogCategory, resolveBlogPage, resolveBlogSort } from "@/lib/blog";
 
 const TITLE = "Canadian Immigration Guides | Express Entry, PNP & More";
 const DESCRIPTION = "Browse Canadian immigration guides on Express Entry, PNP, permits, sponsorship and refusals. Check each topic against current official instructions.";
 
 /**
- * The category and page come from the URL rather than component state, so every
- * view is shareable, crawlable and works without JavaScript — and so the
- * `/blog?category=…` links in the Resources menu actually land on the category
- * they name. Both values are normalised in `lib/blog`, so an unknown category
- * falls back to "all" and `?page=99` clamps to the last page instead of
- * rendering an empty grid.
+ * The category, page and sort come from the URL rather than component
+ * state, so every view is shareable, crawlable and works without JavaScript.
+ * This also makes `/blog?category=…` links in the Resources menu land on the
+ * category they name. The values are normalised in `lib/blog`, so an unknown category
+ * falls back to "all", an unknown sort uses newest-first, and `?page=99`
+ * clamps to the last page instead of rendering an empty grid.
  *
  * Reading `searchParams` makes this route dynamically rendered, which is the
  * trade for that behaviour.
  */
 export async function generateMetadata({ searchParams }) {
   const params = await searchParams;
-  const isFiltered = Boolean(params?.category || params?.page);
+  const isFiltered = Boolean(params?.category || params?.page || params?.sort);
   return buildMetadata({
     title: TITLE,
     description: DESCRIPTION,
@@ -36,9 +36,9 @@ export async function generateMetadata({ searchParams }) {
       "current IRCC program updates",
     ],
     image: getPageShareImage(getPage("/blog")),
-    // A filtered or paginated view is a slice of the same library, so it points
-    // its canonical at /blog and stays out of the index rather than competing
-    // with it.
+    // A filtered, sorted or paginated view is a slice of the same library, so
+    // it points its canonical at /blog and stays out of the index rather than
+    // competing with it.
     ...(isFiltered ? { noIndex: true } : {}),
   });
 }
@@ -48,9 +48,10 @@ export default async function BlogPage({ searchParams }) {
   const page = getPage("/blog");
   const activeCategory = resolveBlogCategory(params?.category);
   const activePage = resolveBlogPage(params?.page);
+  const activeSort = resolveBlogSort(params?.sort);
   return (
     <>
-      <BlogIndexPage page={page} activeCategory={activeCategory} activePage={activePage} />
+      <BlogIndexPage page={page} activeCategory={activeCategory} activePage={activePage} activeSort={activeSort} />
       {pageStructuredData(page).map((obj, index) => (
         <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(obj) }} />
       ))}

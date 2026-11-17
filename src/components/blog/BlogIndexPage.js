@@ -1,6 +1,6 @@
 import { ArrowUpRight, BookOpen, ShieldCheck, Sparkles } from "lucide-react";
 import { site } from "@/config/site";
-import { getBlogGroups, ALL_BLOG_CATEGORY } from "@/lib/blog";
+import { getBlogGroups, ALL_BLOG_CATEGORY, DEFAULT_BLOG_SORT } from "@/lib/blog";
 import BlogCategoryTabs from "./BlogCategoryTabs";
 import BlogHero, { TemplateLink } from "./BlogHero";
 import TemplateMotion from "@/components/home/TemplateMotion";
@@ -8,13 +8,14 @@ import FaqSection from "@/components/sections/FaqSection";
 import { getPageFaqs } from "@/lib/faqs";
 import SeoGuideSection from "@/components/sections/SeoGuideSection";
 
-export default function BlogIndexPage({ page, activeCategory = ALL_BLOG_CATEGORY, activePage = 1 }) {
+export default function BlogIndexPage({ page, activeCategory = ALL_BLOG_CATEGORY, activePage = 1, activeSort = DEFAULT_BLOG_SORT }) {
   const groups = getBlogGroups();
   const postCount = groups.reduce((total, group) => total + group.posts.length, 0);
   const description = page?.seo?.description || "Clear, current Canadian immigration guidance for the decision in front of you.";
   // A slug can be valid and still have no posts (the Refusals tab has none yet),
   // so fall back to "all" whenever the requested category is not rendered.
   const resolvedCategory = groups.some((group) => group.slug === activeCategory) ? activeCategory : ALL_BLOG_CATEGORY;
+  const resolvedSort = activeSort;
 
   return (
     <div className="cmg-template-home cmg-template-blog relative overflow-x-clip text-[var(--ink)] text-base leading-[1.65] [--container:min(1220px,calc(100%-40px))] max-[1120px]:[--container:min(1220px,calc(100%-32px))] max-[620px]:[--container:calc(100%-28px)] max-[620px]:text-[15px]" data-concept="nocturne">
@@ -47,7 +48,7 @@ export default function BlogIndexPage({ page, activeCategory = ALL_BLOG_CATEGORY
             <p className="max-w-[430px] text-[var(--muted)] text-[16px] leading-[1.75]">Follow the category that fits your current question, then use the article as a starting point for a more focused review.</p>
           </header>
 
-          <BlogCategoryTabs groups={groups} activeCategory={resolvedCategory} activePage={activePage} />
+          <BlogCategoryTabs groups={groups} activeCategory={resolvedCategory} activePage={activePage} activeSort={resolvedSort} />
         </div>
       </section>
 
