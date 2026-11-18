@@ -199,6 +199,7 @@ function ServiceFaqSection({ faqs, isToolPage }) {
 
 export default function ReferenceServicePage({ page, children, interactivePosition = "bottom", interactiveHeading, interactiveWide = false }) {
   const authoredOnly = page.contentMode === "authored";
+  const isBramptonLocation = page.path === "/locations/brampton";
   const isOinpPage = page.path === "/immigrate/ontario-pnp-oinp";
   // Put route-specific keyword sections into the reading flow before the
   // authored route guide. This lets the featured image/text frame use the
@@ -251,6 +252,18 @@ export default function ReferenceServicePage({ page, children, interactivePositi
           "Check Ontario’s invitation page and application deadlines before submitting.",
         ],
       }
+    : isBramptonLocation
+    ? {
+        eyebrow: "Before you retain immigration help",
+        title: "Confirm the person, written scope and fees",
+        paragraphs: [],
+        checks: [
+          "Match the representative’s name and current status with the regulator’s register.",
+          "Read the written agreement and confirm which services and fees it covers.",
+          "Keep your payment receipts, application number and copies of filed documents.",
+          "Treat approval guarantees as a warning sign; the decision-maker controls the result.",
+        ],
+      }
     : authoredOnly
     ? {
         eyebrow: "Regina planning checklist",
@@ -298,29 +311,29 @@ export default function ReferenceServicePage({ page, children, interactivePositi
             {isOinpPage && page.lastUpdatedLabel && <p className="m-0 mt-3 text-xs font-semibold text-[color-mix(in_srgb,var(--template-on-primary)_72%,transparent)] max-[1023.98px]:text-center">{page.lastUpdatedLabel}</p>}
             <p className="lead max-w-[680px] max-[1023.98px]:text-center max-[1023.98px]:mx-auto !mt-6 text-[color-mix(in_srgb,var(--template-on-primary)_82%,transparent)] [text-shadow:0_1px_10px_color-mix(in_srgb,var(--cmg-template-deep-surface)_48%,transparent)] text-[17px] leading-[1.8] max-[620px]:text-[15px]">{lead}</p>
             <div className="hero-actions flex flex-wrap gap-3 mt-[30px] max-[768px]:!flex max-[768px]:!flex-col max-[768px]:!items-center max-[768px]:!gap-3 max-[768px]:!mt-6">
-              <TemplateLink path={site.ctas.primary.href} className="btn btn-primary max-[768px]:!w-full max-[768px]:!min-h-[52px] max-[768px]:!px-[22px] max-[768px]:!py-[14px] max-[768px]:!rounded-[14px] max-[768px]:!text-[14px]">Book a Consultation <ArrowRight width={18} height={18} aria-hidden="true" /></TemplateLink>
+              <TemplateLink path={site.ctas.primary.href} className="btn btn-primary max-[768px]:!w-full max-[768px]:!min-h-[52px] max-[768px]:!px-[22px] max-[768px]:!py-[14px] max-[768px]:!rounded-[14px] max-[768px]:!text-[14px]">{isBramptonLocation ? "Book a free consultation" : "Book a Consultation"} <ArrowRight width={18} height={18} aria-hidden="true" /></TemplateLink>
               {isOinpPage && <Link href="#oinp-calculator" className="btn btn-secondary inline-flex items-center justify-center gap-[9px] min-h-12 rounded-[12px] border border-[var(--border)] bg-transparent px-5 py-[13px] text-[13px] font-extrabold leading-none text-[var(--ink)] transition hover:border-[var(--primary)] hover:text-[var(--primary)] max-[768px]:!w-auto max-[768px]:!min-h-10 max-[768px]:!px-[18px] max-[768px]:!py-[9px] max-[768px]:!rounded-full max-[768px]:!text-[12.5px]">Estimate my OINP score <Calculator width={18} height={18} aria-hidden="true" /></Link>}
               {showCrsCta && <TemplateLink path="/tools/crs-calculator" className="btn btn-secondary max-[768px]:!w-auto max-[768px]:!min-h-10 max-[768px]:!px-[18px] max-[768px]:!py-[9px] max-[768px]:!rounded-full max-[768px]:!text-[12.5px]">Check your CRS <Calculator width={18} height={18} aria-hidden="true" /></TemplateLink>}
             </div>
           </div>
           <div className="hero-visual self-start relative w-full min-h-[530px] max-[880px]:static max-[880px]:min-h-0 max-[880px]:transform-none max-[880px]:mt-[26px] reveal in">
-            <HeroProofCardCarousel pagePath={page.path} />
+            <HeroProofCardCarousel pagePath={page.path} ariaLabel={isBramptonLocation ? "Brampton immigration services and CICC credentials" : undefined} />
           </div>
         </div>
       </section>
 
       {interactivePosition === "top" && interactiveSection}
 
-      <section className="section relative z-[1] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16">
+      {!isBramptonLocation && <section className="section relative z-[1] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16">
         <div className="section-inner mx-auto w-[var(--container)]">
           <ServiceSectionHeading eyebrow={isOinpPage ? "Ontario PNP planning" : "A sharper service plan"} title={isOinpPage ? "The OINP checks to complete before applying" : "Built around the decision your file needs"} lead={`Use the guide below to review ${title} requirements, evidence and next steps.`} />
           <div className="service-grid grid grid-cols-3 max-[1120px]:grid-cols-2 max-[620px]:grid-cols-1 gap-[15px]">
             {servicePlanCards.map(([heading, description, Icon], index) => <article className="service-card relative flex min-h-[220px] flex-col overflow-hidden p-[25px] max-[620px]:min-h-0 max-[620px]:p-5 rounded-[20px] reveal before:absolute before:inset-x-0 before:top-0 before:h-[3px] before:rounded-[20px_20px_0_0] before:bg-[linear-gradient(90deg,var(--primary),var(--accent))] before:origin-left before:scale-x-[.28] before:transition-transform before:duration-[400ms] before:ease-[cubic-bezier(.2,.8,.2,1)] before:content-[''] hover:before:scale-x-100" key={heading} style={{ '--delay': `${index * 60}ms` }}><span className="icon-box inline-flex h-[46px] w-[46px] items-center justify-center rounded-[14px] m-0 bg-[color-mix(in_srgb,var(--primary)_12%,transparent)] text-[var(--primary)]"><Icon width={22} height={22} aria-hidden="true" /></span><h3 className="m-[9px_0_8px] text-[var(--ink)] text-[19px] font-extrabold !leading-[1.25] tracking-normal">{heading}</h3><p className="m-0 text-[var(--muted)] text-[14px] leading-[1.65]">{description}</p><ArrowUpRight className="self-end mt-auto" width={18} height={18} aria-hidden="true" /></article>)}
           </div>
         </div>
-      </section>
+      </section>}
 
-      <ServiceImageGallery page={page} />
+      {!isBramptonLocation && <ServiceImageGallery page={page} />}
 
       {/* Keep the page's primary interaction close to the visual route guide.
           Supporting explanation and related content follow below it. */}
@@ -328,14 +341,18 @@ export default function ReferenceServicePage({ page, children, interactivePositi
 
       <section className="section relative z-[1] bg-[var(--surface-alt)] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16 alt">
         <div className="section-inner mx-auto w-[var(--container)] service-route-layout grid grid-cols-[.82fr_1.18fr] items-center gap-[46px] max-[880px]:grid-cols-1 max-[880px]:gap-[35px]">
-          <div className="service-route-copy reveal"><p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">What this service covers</p><h2 className="max-w-[590px]">Map the requirements to your next move</h2><p className="!max-w-[520px] !m-[18px_0_0] !text-[var(--muted)] !text-[15px] !leading-[1.8]">Jump to the section that matches your current question about {title}.</p><TemplateLink path={site.ctas.primary.href} className="btn btn-primary !mt-[25px]">Talk through your file <ArrowUpRight width={18} height={18} aria-hidden="true" /></TemplateLink></div>
+          <div className="service-route-copy reveal"><p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">{isBramptonLocation ? "Brampton office and services" : "What this service covers"}</p><h2 className="max-w-[590px]">{isBramptonLocation ? "Plan the next step with clear local details" : "Map the requirements to your next move"}</h2><p className="!max-w-[520px] !m-[18px_0_0] !text-[var(--muted)] !text-[15px] !leading-[1.8]">{isBramptonLocation ? "Jump to office information, service options, the consultation process and questions from Brampton clients." : `Jump to the section that matches your current question about ${title}.`}</p><TemplateLink path={site.ctas.primary.href} className="btn btn-primary !mt-[25px]">{isBramptonLocation ? "Book a free consultation" : "Talk through your file"} <ArrowUpRight width={18} height={18} aria-hidden="true" /></TemplateLink></div>
           <ol className="guide-list service-route-list block m-0 p-0 list-none border-t border-[var(--border)]">{headings.map((heading, index) => <li className="reveal grid grid-cols-[46px_1fr_24px] items-center gap-4 border-b border-[var(--border)] py-[18px]" key={`${heading.text}-${index}`} style={{ '--delay': `${index * 50}ms` }}><span className="text-[var(--primary)] text-[11px] font-extrabold leading-none">0{index + 1}</span><div><strong className="!text-[var(--ink)] !text-[15px] !font-bold !leading-normal">{rebrand(heading.text)}</strong>{heading.summary && <p className="!m-[3px_0_0] !text-[var(--muted)] !text-[13px] !leading-[1.65]">{heading.summary}</p>}</div><ArrowUpRight className="text-[var(--primary)]" width={18} height={18} aria-hidden="true" /></li>)}</ol>
         </div>
       </section>
 
       <section className="section relative z-[1] py-[104px] max-[1120px]:py-[88px] max-[880px]:py-[76px] max-[620px]:py-16 service-reading-section">
         <div className="section-inner mx-auto w-[90%] max-[880px]:w-[calc(100%-48px)] max-[620px]:w-[var(--container)] service-reading-shell">
-          <ServiceSectionHeading eyebrow="Your service guide" title="The details that move the file forward" lead={`The sections below explain ${title} and point to the details to verify before applying.`} />
+          <ServiceSectionHeading
+            eyebrow={isBramptonLocation ? "Brampton immigration support" : "Your service guide"}
+            title={isBramptonLocation ? "Office details, services and what to expect" : "The details that move the file forward"}
+            lead={isBramptonLocation ? "Review the services, office information and practical checks that help you decide what to do next." : `The sections below explain ${title} and point to the details to verify before applying.`}
+          />
           <article className="service-reading w-full max-w-none mx-auto reveal in">
             <div className="service-reading-layout grid grid-cols-[minmax(0,1.55fr)_minmax(300px,.9fr)] items-start gap-[42px] max-[1120px]:grid-cols-1 max-[1120px]:gap-9 max-[620px]:gap-7">
               <div className="service-reading-copy min-w-0">
@@ -368,8 +385,8 @@ export default function ReferenceServicePage({ page, children, interactivePositi
                 })}
               </div>
 
-              <aside className="service-reading-rail grid gap-4 self-start min-[1121px]:sticky min-[1121px]:top-[132px]" aria-label={`${title} visual guide and key checks`}>
-                <figure className="service-reading-visual group relative m-0 aspect-[16/10] min-h-[220px] overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--surface)] shadow-[var(--shadow-soft)] isolate">
+              <aside className="service-reading-rail grid gap-4 self-start min-[1121px]:sticky min-[1121px]:top-[132px]" aria-label={isBramptonLocation ? "Checks before retaining immigration help" : `${title} visual guide and key checks`}>
+                {!isBramptonLocation && <figure className="service-reading-visual group relative m-0 aspect-[16/10] min-h-[220px] overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--surface)] shadow-[var(--shadow-soft)] isolate">
                   <Image
                     src={contentImages[0].src}
                     alt={contentImages[0].alt}
@@ -384,7 +401,7 @@ export default function ReferenceServicePage({ page, children, interactivePositi
                     <span className="text-[12px] font-extrabold uppercase tracking-[.14em] text-[var(--primary)]">{contentImages[0].label}</span>
                     <span className="!max-w-none text-[13px] leading-[1.6] text-[color-mix(in_srgb,var(--template-on-primary)_82%,transparent)]">{contentImages[0].caption}</span>
                   </figcaption>
-                </figure>
+                </figure>}
 
                 <div className="service-reading-checks rounded-[20px] border border-[color-mix(in_srgb,var(--primary)_25%,var(--border))] bg-[var(--bg)] p-[22px_24px] max-[620px]:p-5">
                   <span className="block text-[10px] font-extrabold uppercase tracking-[.16em] text-[var(--primary)]">{guideSupport.eyebrow}</span>
@@ -418,22 +435,22 @@ export default function ReferenceServicePage({ page, children, interactivePositi
 
       {pageFaqs.length > 0 && <ServiceFaqSection faqs={pageFaqs} isToolPage={isToolPage} />}
 
-      <section className="cta-section py-[72px]"><div className="cta-shell flex items-center justify-between max-[880px]:items-start max-[880px]:flex-col !w-[var(--container)] !gap-10 mx-auto !p-0 !rounded-none !bg-transparent"><div><h2 className="!text-[clamp(30px,1.8rem+2.2vw,46px)] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-none !text-[var(--template-on-primary)]">Ready to make the next step clearer?</h2><p className="!mt-3 !max-w-[650px] !text-[16px] !text-[color-mix(in_srgb,var(--template-on-primary)_80%,transparent)]">Bring the key dates and records behind your question to a focused review.</p></div><TemplateLink path={site.ctas.primary.href} className="btn !flex-none !px-6 !py-[17px] !bg-[var(--template-on-primary)] !text-[var(--cmg-dark-secondary)]">Book a Consultation <ArrowUpRight width={19} height={19} aria-hidden="true" /></TemplateLink></div></section>
+      <section className="cta-section py-[72px]"><div className="cta-shell flex items-center justify-between max-[880px]:items-start max-[880px]:flex-col !w-[var(--container)] !gap-10 mx-auto !p-0 !rounded-none !bg-transparent"><div><h2 className="!text-[clamp(30px,1.8rem+2.2vw,46px)] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-none !text-[var(--template-on-primary)]">{isBramptonLocation ? "Book a free consultation in Brampton" : "Ready to make the next step clearer?"}</h2><p className="!mt-3 !max-w-[650px] !text-[16px] !text-[color-mix(in_srgb,var(--template-on-primary)_80%,transparent)]">{isBramptonLocation ? "Bring your key dates and records. Meet with us at the Brampton office or online." : "Bring the key dates and records behind your question to a focused review."}</p></div><TemplateLink path={site.ctas.primary.href} className="btn !flex-none !px-6 !py-[17px] !bg-[var(--template-on-primary)] !text-[var(--cmg-dark-secondary)]">{isBramptonLocation ? "Book a free consultation" : "Book a Consultation"} <ArrowRight width={19} height={19} aria-hidden="true" /></TemplateLink></div></section>
 
       <section className="service-transition-section border-t border-b border-[var(--template-border)] bg-[var(--template-secondary)] text-[var(--template-ink)] py-[58px] max-[620px]:py-11" aria-labelledby="service-transition-title">
         <div className="service-transition-shell grid grid-cols-[minmax(0,1.08fr)_minmax(360px,.92fr)] items-center gap-12 w-[var(--container)] mx-auto max-[880px]:grid-cols-1 max-[880px]:gap-7 max-[620px]:gap-6">
           <div className="service-transition-copy">
-            <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">Keep exploring your pathway</p>
-            <h2 id="service-transition-title" className="!max-w-[620px] !text-[var(--template-ink)] !text-[clamp(27px,1.55rem+1.7vw,40px)] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-[1.08]">Make the next decision with better context</h2>
-            <p className="!max-w-[590px] !m-[13px_0_0] !text-[var(--template-muted)] !text-[14px] !leading-[1.75]">Compare {title} with the related tools and pathways linked below.</p>
+            <p className="eyebrow m-0 !mb-[18px] flex items-start gap-3 text-[var(--primary)] !font-extrabold !text-xs !leading-[1.65] tracking-[.18em] max-[480px]:tracking-[.09em] uppercase before:w-[38px] before:h-0.5 before:mt-1.5 before:flex-none before:bg-current before:content-['']">{isBramptonLocation ? "Brampton immigration resources" : "Keep exploring your pathway"}</p>
+            <h2 id="service-transition-title" className="!max-w-[620px] !text-[var(--template-ink)] !text-[clamp(27px,1.55rem+1.7vw,40px)] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-[1.08]">{isBramptonLocation ? "Explore services and practical guides" : "Make the next decision with better context"}</h2>
+            <p className="!max-w-[590px] !m-[13px_0_0] !text-[var(--template-muted)] !text-[14px] !leading-[1.75]">{isBramptonLocation ? "Start with the pathway that matches your goal, then confirm current eligibility and timelines." : `Compare ${title} with the related tools and pathways linked below.`}</p>
           </div>
           <nav className="service-transition-links grid gap-[10px]" aria-label="Continue exploring">
             <TemplateLink path={site.ctas.tools.href} className="service-transition-link flex items-center justify-between gap-5 rounded-[14px] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-ink)_4%,var(--template-secondary))] p-[16px_18px] text-[var(--template-ink)] transition-[border-color,background,transform] duration-[250ms] ease-in-out hover:border-[var(--template-primary)] hover:bg-[color-mix(in_srgb,var(--template-primary)_10%,var(--template-secondary))] hover:translate-x-1">
-              <span className="grid gap-1"><strong className="text-[14px] leading-[1.25]">Explore free tools</strong><small className="text-[var(--template-muted)] text-[11px] leading-[1.4]">Start with practical numbers and checklists.</small></span>
+              <span className="grid gap-1"><strong className="text-[14px] leading-[1.25]">{isBramptonLocation ? "Use free immigration tools" : "Explore free tools"}</strong><small className="text-[var(--template-muted)] text-[11px] leading-[1.4]">{isBramptonLocation ? "Organize your documents and review preliminary options." : "Start with practical numbers and checklists."}</small></span>
               <ArrowUpRight className="text-[var(--template-primary)] flex-none" width={18} height={18} aria-hidden="true" />
             </TemplateLink>
             <TemplateLink path="/" className="service-transition-link flex items-center justify-between gap-5 rounded-[14px] border border-[var(--template-border)] bg-[color-mix(in_srgb,var(--template-ink)_4%,var(--template-secondary))] p-[16px_18px] text-[var(--template-ink)] transition-[border-color,background,transform] duration-[250ms] ease-in-out hover:border-[var(--template-primary)] hover:bg-[color-mix(in_srgb,var(--template-primary)_10%,var(--template-secondary))] hover:translate-x-1">
-              <span className="grid gap-1"><strong className="text-[14px] leading-[1.25]">View all pathways</strong><small className="text-[var(--template-muted)] text-[11px] leading-[1.4]">Compare immigration routes and services.</small></span>
+              <span className="grid gap-1"><strong className="text-[14px] leading-[1.25]">{isBramptonLocation ? "Browse immigration services" : "View all pathways"}</strong><small className="text-[var(--template-muted)] text-[11px] leading-[1.4]">{isBramptonLocation ? "Compare family, study, work, visit and permanent residence options." : "Compare immigration routes and services."}</small></span>
               <ArrowUpRight className="text-[var(--template-primary)] flex-none" width={18} height={18} aria-hidden="true" />
             </TemplateLink>
           </nav>

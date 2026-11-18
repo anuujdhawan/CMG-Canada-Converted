@@ -1,64 +1,100 @@
 {
   "/locations/brampton": [
     {
-      "question": "Where can I find a licensed immigration consultant in Brampton?",
-      "answer": "Commonwealth Migration Group (CMG) has an office at 2250 Bovaird Dr E #615, Brampton, ON L6R 0W3, with a licensed Regulated Canadian Immigration Consultant (RCIC). If you are searching for an immigration consultant near me in Brampton, you can book a consultation to discuss Express Entry, sponsorship, study and work permits, visas and refusals."
+      "question": "Where is the Brampton office, and what are the office hours and parking arrangements?",
+      "answer": "Commonwealth Migration Group is at 2250 Bovaird Dr E #615, Brampton, ON L6R 0W3. The office is open Monday to Saturday, 9:30 a.m. to 6:30 p.m., and closed Sunday. Free parking is available in front of the building. Please book before visiting."
     },
     {
-      "question": "How do I check that an immigration consultant in Brampton is licensed?",
-      "answer": "Search the public register of the College of Immigration and Citizenship Consultants (CICC) by name or licence number. A licensed RCIC will appear with an active status. Ask any Brampton immigration consultant for their licence number before you pay or sign anything, and never accept a consultant who cannot give one."
+      "question": "Is the first immigration consultation free?",
+      "answer": "Yes. The first consultation is free, in person at the Brampton office or online. If you choose to proceed with representation, the services and professional fees are set out separately in a written agreement before work begins."
     },
     {
-      "question": "What is the difference between a Brampton RCIC and an immigration lawyer?",
-      "answer": "An RCIC is regulated by the CICC and focuses on immigration and citizenship applications. A lawyer is regulated by the Law Society of Ontario and can also represent you in Federal Court. For most applications, such as Express Entry, sponsorship or permits, a licensed RCIC in Brampton is qualified to advise and represent you before IRCC."
+      "question": "Which languages can I use for a consultation with the Brampton team?",
+      "answer": "The team can consult in English, Hindi, Punjabi, Marathi, Gujarati, French and Arabic. Tell us your preferred language when booking. Official IRCC applications are completed in English or French."
     },
     {
-      "question": "What immigration services does CMG offer at 2250 Bovaird Dr E #615, Brampton, ON L6R 0W3?",
-      "answer": "CMG supports Express Entry and Canada PR, Ontario nominee applications, spousal sponsorship, Super Visa and parent sponsorship, study permits and PGWP, work permits and LMIA, visitor visas, citizenship, PR card renewal, and refusal responses. These immigration services in Brampton are delivered under the supervision of a licensed RCIC."
+      "question": "What does a parent or grandparent need for a Super Visa?",
+      "answer": "Requirements depend on the applicant and host. They generally include an invitation, proof of the family relationship, evidence that the host meets the minimum necessary income, an immigration medical exam and qualifying private health insurance. IRCC currently requires at least $100,000 in emergency coverage for at least one year from entry. Since March 31, 2026, hosts may qualify using income from either of the two tax years before applying; in some cases, the visiting parent’s or grandparent’s income can help cover a shortfall if the host and co-signer meet IRCC’s minimum percentage. Check the current rules before applying.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Super Visa forms and documents",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents.html"
+        },
+        {
+          "label": "IRCC host income requirements",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents/host-financial-support.html"
+        },
+        {
+          "label": "IRCC Super Visa income calculation update",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/changes-parents-grandparents-super-visa-income-requirement-calculated.html"
+        }
+      ]
     },
     {
-      "question": "Do you help clients in Mississauga, Caledon and the rest of Peel Region?",
-      "answer": "Yes. Many people searching for an immigration consultant in Peel Region or Mississauga and Brampton work with us. CMG advises clients across Brampton, Bramalea, Mississauga, Caledon and the wider GTA, and can also assist people who are still outside Canada."
+      "question": "Should I compare Express Entry with an Ontario nomination?",
+      "answer": "Compare your eligibility for an Express Entry program with the current requirements of any Ontario Immigrant Nominee Program stream that may fit. Your occupation, work history, language results, education, job offer and plan to live in Ontario can matter. A nomination is a separate step and does not guarantee permanent residence.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility.html"
+        },
+        {
+          "label": "Ontario Immigrant Nominee Program",
+          "url": "https://www.ontario.ca/page/ontario-immigrant-nominee-program-oinp"
+        }
+      ]
     },
     {
-      "question": "How do I book an appointment with an immigration consultant near me in Brampton?",
-      "answer": "Submit a consultation request through the booking page on this website or contact CMG directly; the team will confirm an available time. Tell us your country, your current status in Canada and the program you are considering. This helps the RCIC prepare so that your first meeting focuses on your actual options rather than general information."
+      "question": "Can my spouse get an open work permit while I work or study in Canada?",
+      "answer": "Possibly, but eligibility depends on the principal applicant’s work permit or study program, occupation or other current criteria, and the spouse’s circumstances. Check the current IRCC requirements before applying; a relationship or sponsorship application alone does not guarantee a work permit.",
+      "sourceLinks": [
+        {
+          "label": "IRCC eligibility for spouses and dependent children",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/special-instructions/spouses-dependent-children/eligibility.html"
+        }
+      ]
     },
     {
-      "question": "What should I bring to my first immigration consultation in Brampton?",
-      "answer": "Bring your passport, any current Canadian permits or visas, past IRCC letters or refusals, education and work history, language test results and details of family members. For a refusal, bring the full refusal letter. The more complete your documents, the more precisely a Brampton RCIC can assess your options."
+      "question": "When should I apply for a post-graduation work permit?",
+      "answer": "Prepare your documents before you finish, but the application timing is based on confirmation that you completed your program. IRCC generally allows up to 180 days after confirmation to apply. Your school, program, study history, study permit validity and current language or field-of-study rules can affect eligibility, so confirm the rules for your case.",
+      "sourceLinks": [
+        {
+          "label": "IRCC PGWP eligibility and timing",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html"
+        }
+      ]
     },
     {
-      "question": "How much does an immigration consultant cost in Brampton, Ontario?",
-      "answer": "Professional fees depend on the program and the complexity of your file, so there is no single price. A licensed consultant must give you a written service agreement that sets out the fee and services before work begins. Government fees are separate and are paid to IRCC. Ask for the full cost in writing before you commit."
+      "question": "What should I do after an immigration refusal?",
+      "answer": "Keep the complete refusal letter and note when you received the decision. Review the reasons and available options before reapplying. If you are considering judicial review, get legal advice promptly: an application for leave is generally due within 15 days for a matter arising in Canada or 60 days for one arising outside Canada. The correct remedy and deadline depend on the decision.",
+      "sourceLinks": [
+        {
+          "label": "Federal Court guide to immigration judicial review",
+          "url": "https://www.fct-cf.gc.ca/en/pages/representing-yourself/practice-guides/how-to-file-an-application-for-leave-and-for-judicial-review-immigration"
+        }
+      ]
     },
     {
-      "question": "Can an immigration consultant in Brampton guarantee my visa or PR?",
-      "answer": "No. Only IRCC decides applications, and no licensed consultant can guarantee a visa, permit or permanent residence. Be cautious of anyone who promises a result or claims a special relationship with officers. A good RCIC will explain your chances honestly, including the risks, and prepare the strongest application the facts allow."
+      "question": "How can I verify that a paid immigration representative is authorized?",
+      "answer": "Check the representative through the regulator that applies to them. For an immigration consultant, search the CICC Public Register by name or licence number and match the current status and contact details. Lawyers, Quebec notaries and Ontario paralegals have their own regulator records. Ask for the written service agreement before paying.",
+      "sourceLinks": [
+        {
+          "label": "Government of Canada: find out if your representative is authorized",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose/authorized.html"
+        },
+        {
+          "label": "CICC Public Register",
+          "url": "https://register.college-ic.ca/Public-Register-EN/Licensee/Profile.aspx?ID=14725"
+        }
+      ]
     },
     {
-      "question": "Do I need an immigration consultant, or can I apply to IRCC myself?",
-      "answer": "You can apply on your own because IRCC does not require you to hire a representative. Many people hire a licensed RCIC in Brampton when the case is complex, such as prior refusals, gaps in work history, inadmissibility or tight deadlines. If you use one, they must be named on your application through the Use of Representative form."
+      "question": "How much does an immigration consultant cost in Brampton?",
+      "answer": "The first consultation is free. Fees for any further work depend on the service and the complexity of the file. Before you sign, the written agreement explains the work included, professional fees, government charges and applicable taxes."
     },
     {
-      "question": "What are the warning signs of an immigration scam in Brampton and Ontario?",
-      "answer": "Warning signs include guaranteed results, requests for cash with no receipt, selling job offers, fake LMIAs, and consultants who cannot show a CICC licence. Only licensed RCICs, lawyers, paralegals and Quebec notaries may charge for immigration advice in Canada. Check the CICC register and report suspected fraud to the Canadian Anti-Fraud Centre."
-    },
-    {
-      "question": "Can I get help from a Brampton immigration consultant if I am still outside Canada?",
-      "answer": "Yes. Many CMG clients apply from abroad for visitor visas, study permits, work permits, Super Visas and Express Entry. A Brampton immigration consultant can review your profile, prepare your documents and communicate with you online, so you do not need to be in Ontario to start."
-    },
-    {
-      "question": "Which immigration programs do Brampton families ask about most?",
-      "answer": "Brampton and Peel Region residents commonly ask about spousal sponsorship, Super Visas for parents, study permits and PGWP for students, work permits, Express Entry and the Ontario Immigrant Nominee Program. Each has its own page on this site with eligibility, documents and common refusal reasons."
-    },
-    {
-      "question": "Can a licensed immigration consultant represent me before IRCC and CBSA?",
-      "answer": "Yes. A licensed RCIC can represent you before IRCC, the Canada Border Services Agency and the Immigration and Refugee Board. An RCIC cannot represent you in Federal Court. If your case needs judicial review, a consultant should refer you to an immigration lawyer promptly because the deadlines are short."
-    },
-    {
-      "question": "What happens after my consultation with CMG in Brampton?",
-      "answer": "If you decide to proceed, you receive a written service agreement, a document checklist and a timeline. Your RCIC then prepares the forms and supporting evidence, reviews them with you and submits the application. You keep your own IRCC account, and we update you when IRCC responds."
+      "question": "Can I work with the Brampton team if I live elsewhere?",
+      "answer": "Yes. Consultations are available by video, phone or WhatsApp for clients across the Greater Toronto Area, elsewhere in Canada and abroad, where the requested service is within the representative’s authorization."
     }
   ],
   "/immigrate/express-entry": [

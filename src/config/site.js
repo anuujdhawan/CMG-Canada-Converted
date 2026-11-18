@@ -42,7 +42,7 @@ export const site = {
     href: "https://www.cwmigrationgroup.com/",
     mapsUrl: "https://www.google.com/maps/place/Commonwealth+Migration+Group/@25.244279,55.3094955,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f43202eff61c7:0x597a52926876d279!8m2!3d25.244279!4d55.3120704!16s%2Fg%2F11nvjs_vq7?entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D",
   },
-  hours: "Monday–Friday: 9:00 a.m.–6:00 p.m.; Saturday: 10:00 a.m.–4:00 p.m.",
+  hours: "Monday–Saturday: 9:30 a.m.–6:30 p.m.; Sunday: closed.",
   timezone: "Eastern Time (ET)",
 
   // ---- Regulated representative --------------------------------------

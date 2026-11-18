@@ -113,11 +113,11 @@ const SHARED_SERVICES = [
 
 const CITY_DETAILS = {
   brampton: {
-    heroLead: "Looking for a Brampton immigration consultant? Start by matching your goal—permanent residence, a permit, family sponsorship or an employer hire—with the rules that apply to your case. Commonwealth Migration Group is based here and also meets clients across Canada by video, phone or WhatsApp.",
-    serviceIntro: "We help Brampton residents move from visitor, student or work permits to permanent residence, and we support families with spousal sponsorship, parent and grandparent applications and Super Visas.",
+    heroLead: `Meet ${site.rcic.consultant.name}, CICC-licensed RCIC (${site.rcic.number}), at our Brampton office or online. Get help comparing family, study, work and permanent residence pathways against your circumstances and current requirements.`,
+    serviceIntro: "Commonwealth Migration Group helps Brampton families, students, workers and employers understand Canadian immigration options, prepare supporting documents and plan the next step for their case.",
     sectors: ["Logistics and warehousing", "Manufacturing", "Trucking and transportation", "Healthcare and retail"],
     studyOptions: "Sheridan College, Algoma University (Brampton campus) and nearby Humber and Seneca campuses",
-    serviceAreaNote: "Visit our head office in Brampton or meet us online. The team works with clients in the city, across the Greater Toronto Area, throughout Canada and from abroad where the requested service is within the representative's authorization.",
+    serviceAreaNote: "Visit our Brampton office by appointment, or meet online by video, phone or WhatsApp. We work with clients in Brampton, across the Greater Toronto Area, elsewhere in Canada and abroad where the requested service is within the representative's authorization.",
   },
   calgary: {
     heroLead: "Calgary's energy, technology and logistics sectors bring different work histories and job offers into the Alberta immigration conversation. This guide helps local workers and families compare Express Entry, AAIP, study, work and sponsorship options using their actual facts.",
@@ -312,11 +312,12 @@ function cityFaqs(city, province, acronym) {
 }
 
 function locationSchema(city, province, path) {
+  const isBramptonOffice = city === "Brampton";
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": `${absoluteUrl(path)}#professional-service`,
-    name: `${site.name} - ${cityLabel(city)}`,
+    name: isBramptonOffice ? site.name : `${site.name} - ${cityLabel(city)}`,
     url: absoluteUrl(path),
     parentOrganization: { "@id": `${site.url}#organization` },
     telephone: site.phone,
@@ -333,7 +334,23 @@ function locationSchema(city, province, path) {
       addressRegion: "ON",
       addressCountry: "CA",
     },
-    availableLanguage: "English",
+    ...(isBramptonOffice ? {
+      hasMap: site.address.mapsUrl,
+      openingHoursSpecification: [{
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "https://schema.org/Monday",
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday",
+          "https://schema.org/Saturday",
+        ],
+        opens: "09:30",
+        closes: "18:30",
+      }],
+      availableLanguage: ["English", "Hindi", "Punjabi", "Marathi", "Gujarati", "French", "Arabic"],
+    } : { availableLanguage: "English" }),
   };
 }
 
@@ -360,21 +377,73 @@ function locationPage(cityEntry) {
   const detail = CITY_DETAILS[cityEntry.slug];
   const province = PROVINCE_PROFILES[cityEntry.province];
   const path = cityPath(cityEntry.slug);
-  const faqs = cityFaqs(cityEntry.city, cityEntry.province, province.acronym);
+  const isBrampton = cityEntry.slug === "brampton";
+  const faqs = isBrampton ? [] : cityFaqs(cityEntry.city, cityEntry.province, province.acronym);
   const workParagraph = `Sectors that regularly hire in and around ${cityEntry.city} include ${detail.sectors.join(", ")}. Study options include ${detail.studyOptions}. If you study here, we plan your post-graduation work permit and your path to permanent residence before your permit runs out.`;
   const serviceAreaNote = detail.serviceAreaNote || `We serve ${cityEntry.city} clients online from our Brampton, Ontario office. Meetings happen by video call, phone and WhatsApp. Commonwealth Migration Group Inc. is based at 2250 Bovaird Dr E #615, Brampton, ON L6R 0W3.`;
+  const bramptonContentBlocks = [
+    { type: "heading", level: 2, text: "Immigration help for Brampton families, students and workers" },
+    { type: "paragraph", text: `${site.rcic.consultant.name}, RCIC (${site.rcic.number}), provides immigration consulting through ${site.name}. You can [check the CICC Public Register profile](${site.rcic.profileUrl}) and confirm who will advise you before you share documents or pay for a service. The Government of Canada's [authorized representative guide](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose/authorized.html) explains which professionals may provide paid immigration advice or representation.` },
+    { type: "paragraph", text: "We help clients compare a route with their immigration goal, current status, education, work history, family situation and deadlines. You may apply on your own; a representative is optional. If you choose paid assistance, get the service scope, professional fees, government charges and applicable taxes in a written agreement before work begins." },
+    { type: "heading", level: 2, text: "Immigration services in Brampton" },
+    { type: "list", ordered: false, items: [
+      "**Super Visa for parents and grandparents:** assess the host's income and household size, prepare the invitation and supporting records, and review the applicant's medical exam and health insurance requirements. [Super Visa guide](/visit/super-visa-standalone-page).",
+      "**Spousal and family sponsorship:** compare the available sponsorship route, sponsor and applicant requirements, relationship evidence, status and travel plans. [Spousal sponsorship guide](/sponsor/spousal-common-law-sponsorship).",
+      "**Express Entry and Ontario immigration:** review federal eligibility, CRS factors, work and education evidence, and whether a current Ontario Immigrant Nominee Program stream may fit. [Express Entry](/immigrate/express-entry) · [Ontario PNP (OINP)](/immigrate/ontario-pnp-oinp).",
+      "**Study permits and post-graduation work permits:** assess the school, program, study permit conditions and current PGWP requirements before choosing a timeline. [Study permits](/work-and-study/canada-study-permit) · [PGWP guide](/work-and-study/post-graduation-work-permit-pgwp).",
+      "**Work permits and employer services:** review the worker's status, permit route and employer requirements, including where an LMIA may be relevant. [Work permit guide](/work-and-study/canada-work-permit-overview) · [LMIA and employer services](/work-and-study/lmia-and-employer-services-overview).",
+      "**Visitor visas, refusals and temporary resident permits:** review the decision, evidence and deadlines before considering a new application or another available step. [Visitor visa guide](/visit/visitor-visa-trv-standalone-page) · [Refusal response guide](/inadmissibility-and-appeals/refusal-and-pfl-response).",
+    ] },
+    { type: "heading", level: 2, text: "Super Visa support for Brampton families" },
+    { type: "paragraph", text: "Statistics Canada's [analysis of the 2021 Census](https://www.statcan.gc.ca/o1/en/plus/8470-living-under-one-roof-what-data-say-about-multigenerational-households-canada) found that 14.3% of Brampton households were multigenerational, the highest share among Canadian cities. This is local context, not an eligibility test. Each Super Visa application must meet the current requirements for the host and the parent or grandparent applying." },
+    { type: "paragraph", text: "We help families review the invitation, proof of the relationship, the host's minimum necessary income and family size, the applicant's immigration medical exam, and qualifying private health insurance. IRCC currently requires insurance with at least $100,000 in emergency coverage that is valid for at least one year from entry. Since March 31, 2026, hosts may meet the income requirement using either of the two tax years before applying; in some cases, the visiting parent's or grandparent's income can help cover a shortfall if the host and co-signer meet IRCC's minimum percentage. Rules and acceptable insurance policies can change, so use IRCC's current [Super Visa document checklist](https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents.html), [host income requirements](https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents/host-financial-support.html) and [income calculation update](https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/changes-parents-grandparents-super-visa-income-requirement-calculated.html) when preparing the application." },
+    { type: "heading", level: 2, text: "What to check before choosing immigration help" },
+    { type: "paragraph", text: "If you pay for immigration advice or representation, verify that the person is authorized through the regulator that applies to them. For an RCIC, search the CICC Public Register and match the name, current eligibility and contact details. Keep a signed copy of the written agreement, fee details, receipts and your application records. Be cautious of anyone who promises a result; immigration decisions are made by the relevant government decision-maker, and no representative can guarantee approval." },
+    { type: "heading", level: 2, text: "Meet with us in Brampton or online" },
+    { type: "paragraph", text: `Our office is at ${site.address.line1}, Brampton, ON ${site.address.postal}. Free parking is available in front of the building. Office hours are ${site.hours} Please book before visiting.` },
+    { type: "paragraph", text: `The first consultation is free, in person or online. Our team can consult in English, Hindi, Punjabi, Marathi, Gujarati, French and Arabic. Tell us your preferred language when booking; official IRCC applications are completed in English or French. Call or WhatsApp [${site.phone}](${site.phoneHref}), email [${site.email}](${site.emailHref}), or [book a free consultation](/contact/book-immigration-consultation-canada).` },
+    { type: "heading", level: 2, text: "A clear process from consultation to filing" },
+    { type: "list", ordered: true, items: [
+      "**Free consultation:** discuss your goal, status, history and any deadline, in person or online.",
+      "**Written plan and fees:** if you choose to proceed, review the work included, responsibilities and fees in a written service agreement before signing.",
+      "**Document review:** receive a checklist, provide records securely and resolve gaps or inconsistencies before filing.",
+      "**Filing and updates:** the team prepares and submits the agreed application and updates you when a response or next step is received.",
+    ] },
+    { type: "heading", level: 2, text: "Serving Brampton and nearby communities" },
+    { type: "paragraph", text: "We work with clients in Bramalea, Springdale, Heart Lake, Mount Pleasant, Castlemore, Sandalwood Heights, Credit Valley, Downtown Brampton and Gore Meadows. Consultations are also available remotely for clients elsewhere in the Greater Toronto Area, across Canada and abroad where the service is within the representative's authorization." },
+    { type: "heading", level: 2, text: "Read client reviews" },
+    { type: "paragraph", text: `Read the [Google reviews and check the current profile](${site.address.mapsUrl}). Individual reviews describe personal experiences and do not guarantee an immigration outcome.` },
+    { type: "heading", level: 2, text: "Important information" },
+    { type: "paragraph", text: "Commonwealth Migration Group is not a government agency and is not affiliated with IRCC. This page provides general information, not legal advice for your circumstances. Eligibility, fees and processing times can change; confirm current requirements with IRCC or the relevant province. No immigration outcome is guaranteed." },
+  ];
 
   return {
     path,
-    h1: cityLabel(cityEntry.city),
-    title: `${cityLabel(cityEntry.city)} | CMG`,
-    description: `Compare ${province.acronym}, Express Entry, work and study permits, and family sponsorship with a licensed RCIC team serving ${cityEntry.city}. Remote consultations are available.`,
-    keywords: cityKeywords(cityEntry.city, cityEntry.province, province.acronym),
+    h1: isBrampton ? "Immigration consultant in Brampton, Ontario" : cityLabel(cityEntry.city),
+    title: isBrampton ? `Immigration Consultant in Brampton, ON | RCIC ${site.rcic.number} | CMG` : `${cityLabel(cityEntry.city)} | CMG`,
+    description: isBrampton
+      ? `Meet ${site.rcic.consultant.name}, CICC-licensed RCIC ${site.rcic.number} in Brampton. Super Visa, sponsorship, PR, work and study permits. Free first consultation and free parking.`
+      : `Compare ${province.acronym}, Express Entry, work and study permits, and family sponsorship with a licensed RCIC team serving ${cityEntry.city}. Remote consultations are available.`,
+    ...(isBrampton ? {
+      metaDescription: `Meet ${site.rcic.consultant.name}, CICC-licensed RCIC ${site.rcic.number} in Brampton. Super Visa, sponsorship, PR, work and study permits. Free first consultation and free parking.`,
+      openGraphTitle: "Immigration consultant in Brampton | Commonwealth Migration Group",
+      openGraphDescription: "Visit our Brampton office or meet online. Check RCIC credentials, office hours, free parking, consultation languages and immigration services.",
+      url: absoluteUrl(path),
+    } : {}),
+    keywords: isBrampton ? [
+      "immigration consultant in Brampton",
+      "Brampton immigration services",
+      "Super Visa Brampton",
+      "spousal sponsorship Brampton",
+      "Express Entry and OINP Brampton",
+      "study permit and PGWP Brampton",
+      "work permit and LMIA services Brampton",
+    ] : cityKeywords(cityEntry.city, cityEntry.province, province.acronym),
     priority: cityEntry.slug === "brampton" ? 0.96 : 0.85,
-    lastModified: "2026-11-11",
-    ...(cityEntry.slug === "regina" ? { contentMode: "authored" } : {}),
+    lastModified: isBrampton ? "2026-11-18" : "2026-11-11",
+    ...(isBrampton || cityEntry.slug === "regina" ? { contentMode: "authored" } : {}),
     hero: { lead: detail.heroLead },
-    contentBlocks: [
+    contentBlocks: isBrampton ? bramptonContentBlocks : [
       { type: "heading", level: 2, text: `Immigration services for ${cityEntry.city} residents` },
       { type: "paragraph", text: detail.serviceIntro },
       { type: "table", rows: [["Service", "How we help"], ...SHARED_SERVICES] },

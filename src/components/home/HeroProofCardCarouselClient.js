@@ -48,6 +48,7 @@ export default function HeroProofCardCarouselClient({ ariaLabel = "Commonwealth 
           >
             <Card
               {...(Card === PnpDrawCard ? { initialDraws: initialPnpDraws } : {})}
+              {...(Card === HeroProofCard ? { pagePath } : {})}
               active={index === activeIndex}
             />
           </div>
