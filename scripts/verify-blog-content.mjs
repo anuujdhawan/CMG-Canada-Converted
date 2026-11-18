@@ -47,6 +47,8 @@ const OFFICIAL_DOMAINS = [
   "cic.gc.ca",
   "laws-lois.justice.gc.ca",
   "justice.gc.ca",
+  "immigratenwt.ca",
+  "oecd.org",
   "canada.ca/en/immigration-refugees-citizenship",
   "www.canada.ca",
   "ontario.ca",

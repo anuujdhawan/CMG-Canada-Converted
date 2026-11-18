@@ -130,6 +130,8 @@ const ARTICLE_LINK_CLASS = "!underline !decoration-white !decoration-2 underline
 const OFFICIAL_SOURCE_HOSTS = [
   "canada.ca",
   "gc.ca",
+  "immigratenwt.ca",
+  "oecd.org",
   "ontario.ca",
   "alberta.ca",
   "gov.bc.ca",

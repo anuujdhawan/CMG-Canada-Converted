@@ -68,10 +68,18 @@ import immigrationConsultantBrampton from "./immigration-consultant-brampton";
 import topImmigrationConsultantsCanada from "./top-immigration-consultants-canada";
 import proceduralFairnessLetterHowToRespond from "./procedural-fairness-letter-how-to-respond";
 import choosingRightImmigrationConsultantMississauga from "./choosing-right-immigration-consultant-mississauga";
+import northwestTerritoriesPnp350NominationsNovember2026 from "./northwest-territories-pnp-350-nominations-november-2026";
+import canadaTemporaryForeignWorkerReformsNovember2026 from "./canada-temporary-foreign-worker-reforms-november-2026";
+import irccSeptember2026ApplicationInventoryGuide from "./ircc-september-2026-application-inventory-guide";
+import oecdCanadaPermanentMigration2025WhatItMeans from "./oecd-canada-permanent-migration-2025-what-it-means";
 
 /** Article bodies keyed by the slug used in `blog-research.js`. */
 export const BLOG_ARTICLES = {
   ...bramptonArticles,
+  "northwest-territories-pnp-350-nominations-november-2026": northwestTerritoriesPnp350NominationsNovember2026,
+  "canada-temporary-foreign-worker-reforms-november-2026": canadaTemporaryForeignWorkerReformsNovember2026,
+  "ircc-september-2026-application-inventory-guide": irccSeptember2026ApplicationInventoryGuide,
+  "oecd-canada-permanent-migration-2025-what-it-means": oecdCanadaPermanentMigration2025WhatItMeans,
   "canada-immigration-levels-plan-2027-2029": canadaImmigrationLevelsPlan2027To2029,
   "express-entry-high-wage-crs-points-november-2026": expressEntryHighWageCrsPointsNovember2026,
   "canada-asylum-process-changes-november-2026": canadaAsylumProcessChangesNovember2026,
