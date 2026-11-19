@@ -343,9 +343,9 @@ function ArticleParagraph({ text, citationLinks = {}, inlineLinks = {} }) {
  */
 function ArticleSection({ section, index, citationLinks, inlineLinks, sourceLinkAssignments }) {
   return (
-    <section id={section.id} className="scroll-mt-[150px] !mt-[52px] first:!mt-0">
+    <section id={section.id} className="article-body-section group relative scroll-mt-[150px] !mt-[52px] first:!mt-0 before:absolute before:inset-x-0 before:top-[-27px] before:h-px before:bg-[linear-gradient(90deg,var(--border),color-mix(in_srgb,var(--primary)_34%,transparent),var(--border))] before:content-[''] first:before:hidden">
       <div className="flex items-start gap-[14px]">
-        <span aria-hidden="true" className="mt-[4px] flex h-[30px] w-[30px] flex-none items-center justify-center rounded-[10px] bg-[color-mix(in_srgb,var(--primary)_12%,transparent)] text-[12px] font-extrabold leading-none text-[var(--primary)]">
+        <span aria-hidden="true" className="mt-[2px] flex h-[34px] w-[34px] flex-none items-center justify-center rounded-[11px] bg-[linear-gradient(135deg,var(--primary),var(--accent))] text-[11px] font-extrabold leading-none text-[var(--template-on-primary)] shadow-[0_8px_18px_color-mix(in_srgb,var(--primary)_24%,transparent)] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-105">
           {String(index + 1).padStart(2, "0")}
         </span>
         <h2 className="!text-[clamp(24px,1.35rem+1.15vw,32px)] !leading-[1.15] !tracking-[-.022em] !text-[var(--ink)]">
@@ -404,6 +404,16 @@ function ArticleSection({ section, index, citationLinks, inlineLinks, sourceLink
 
       {section.table && <ArticleTable table={section.table} />}
 
+      {section.cta && (
+        <div className="mt-[20px] flex flex-wrap items-center gap-3">
+          <Link href={section.cta.href} className="inline-flex items-center gap-2 rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[var(--secondary)]">
+            {section.cta.label}
+            <ArrowUpRight width={16} height={16} aria-hidden="true" />
+          </Link>
+          {section.cta.note && <span className="text-[13px] leading-[1.6] text-[var(--muted)]">{section.cta.note}</span>}
+        </div>
+      )}
+
       {section.image && (
         <figure className="article-inline-image m-0 mt-[24px] overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--surface)] p-[12px]">
           <Image
@@ -414,6 +424,23 @@ function ArticleSection({ section, index, citationLinks, inlineLinks, sourceLink
             sizes="(max-width: 620px) calc(100vw - 48px), (max-width: 1080px) 80vw, 760px"
             className="mx-auto h-auto max-h-[640px] w-full max-w-[760px] rounded-[12px] object-contain"
           />
+        </figure>
+      )}
+
+      {section.map && (
+        <figure className="mt-[24px] m-0 overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--surface)]">
+          <iframe
+            title={section.map.title || "Map to the Brampton immigration office"}
+            src={section.map.src}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+            className="block h-[330px] w-full border-0 max-[620px]:h-[260px]"
+          />
+          {section.map.caption && <figcaption className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 text-[13px] leading-[1.6] text-[var(--muted)]">
+            <span>{section.map.caption}</span>
+            {section.map.href && <a href={section.map.href} target="_blank" rel="noopener noreferrer" className={ARTICLE_LINK_CLASS}>Open in Google Maps</a>}
+          </figcaption>}
         </figure>
       )}
 
@@ -670,9 +697,11 @@ export default function BlogArticlePage({ post, article = null }) {
       </section>
 
       {article && (
-        <section className="section relative z-[1] border-b border-[var(--border)] bg-[var(--surface-alt)] py-[64px] max-[880px]:py-[52px] max-[620px]:py-11 article-summary" aria-labelledby="quick-answer-label">
-          <div className="section-inner mx-auto w-[var(--container)] max-w-[1080px] grid grid-cols-1 gap-[18px]">
-            <div className="article-quick-answer flex flex-col rounded-[22px] border border-[color-mix(in_srgb,var(--primary)_24%,var(--border))] bg-[var(--surface)] p-[30px_32px] max-[620px]:p-[24px_22px]">
+        <section className="section article-summary relative z-[1] isolate overflow-hidden border-y border-[var(--border)] bg-[linear-gradient(125deg,color-mix(in_srgb,var(--primary)_7%,var(--surface-alt)),var(--surface-alt)_48%,color-mix(in_srgb,var(--accent)_6%,var(--surface-alt)))] py-[64px] max-[880px]:py-[52px] max-[620px]:py-11" aria-labelledby="quick-answer-label">
+          <span aria-hidden="true" className="pointer-events-none absolute right-[6%] top-[-180px] z-0 h-[360px] w-[360px] rounded-full bg-[color-mix(in_srgb,var(--primary)_16%,transparent)] blur-[90px] animate-[cmg-template-ambient_10s_ease-in-out_infinite_alternate]" />
+          <span aria-hidden="true" className="pointer-events-none absolute bottom-[-230px] left-[8%] z-0 h-[360px] w-[360px] rounded-full bg-[color-mix(in_srgb,var(--accent)_12%,transparent)] blur-[90px] animate-[cmg-template-ambient_10s_ease-in-out_infinite_alternate] [animation-delay:-4s]" />
+          <div className="section-inner relative z-[1] mx-auto grid w-[var(--container)] max-w-[1080px] grid-cols-1 gap-[18px]">
+            <div className="article-quick-answer visual-card relative isolate flex flex-col overflow-hidden rounded-[22px] border border-[color-mix(in_srgb,var(--primary)_34%,var(--border))] bg-[radial-gradient(ellipse_at_top_right,color-mix(in_srgb,var(--primary)_10%,transparent),transparent_40%),linear-gradient(145deg,color-mix(in_srgb,var(--surface)_92%,var(--primary)_8%),var(--surface))] p-[30px_32px] shadow-[var(--shadow-soft)] max-[620px]:p-[24px_22px]">
               <Eyebrow>
                 <span id="quick-answer-label">{article.quickAnswerHeading || "Quick answer"}</span>
               </Eyebrow>
@@ -683,6 +712,10 @@ export default function BlogArticlePage({ post, article = null }) {
                 <Info width={14} height={14} aria-hidden="true" className="mt-[3px] flex-none text-[var(--primary)]" />
                 <span>{article.quickAnswerNote || "General information, not advice on your file. Confirm current requirements before you act."}</span>
               </p>}
+              {article.quickAnswerCta && <Link href={article.quickAnswerCta.href} className="mt-[22px] inline-flex self-start items-center gap-2 rounded-full bg-[linear-gradient(125deg,var(--primary),color-mix(in_srgb,var(--primary)_44%,var(--accent)),var(--accent))] px-5 py-3 text-sm font-bold text-[var(--template-on-primary)] shadow-[0_12px_28px_color-mix(in_srgb,var(--primary)_26%,transparent)] transition-[transform,filter,box-shadow] duration-300 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_16px_36px_color-mix(in_srgb,var(--primary)_32%,transparent)]">
+                {article.quickAnswerCta.label}
+                <ArrowUpRight width={16} height={16} aria-hidden="true" />
+              </Link>}
               <div className="mt-[24px] flex flex-wrap items-center gap-x-[20px] gap-y-[9px] border-t border-[var(--border)] pt-[18px] max-[980px]:mt-[20px]">
                 <span className="inline-flex items-center gap-[7px]">
                   <ShieldCheck width={14} height={14} aria-hidden="true" className="text-[var(--primary)]" />
@@ -701,7 +734,7 @@ export default function BlogArticlePage({ post, article = null }) {
               </div>
             </div>
 
-            {hasTakeaways && <div className="article-takeaways flex flex-col rounded-[22px] border border-[var(--border)] bg-[var(--surface)] p-[30px_30px] max-[620px]:p-[24px_22px]">
+            {hasTakeaways && <div className="article-takeaways visual-card relative isolate flex flex-col overflow-hidden rounded-[22px] border border-[var(--border)] bg-[radial-gradient(ellipse_at_top_right,color-mix(in_srgb,var(--accent)_8%,transparent),transparent_42%),linear-gradient(145deg,var(--surface),color-mix(in_srgb,var(--surface)_94%,var(--primary)_6%))] p-[30px_30px] shadow-[var(--shadow-soft)] max-[620px]:p-[24px_22px]">
               <Eyebrow>
                 <span id="key-takeaways-label">Key takeaways</span>
               </Eyebrow>
@@ -730,7 +763,7 @@ export default function BlogArticlePage({ post, article = null }) {
             <div className="min-w-0">
               <ArticleTocInline toc={toc} />
 
-              <article className="service-reading article-reading border-t border-[var(--border)] pt-[30px] reveal in">
+              <article className="service-reading article-reading relative isolate overflow-hidden rounded-[26px] border border-[color-mix(in_srgb,var(--primary)_28%,var(--border))] bg-[radial-gradient(ellipse_at_top_right,color-mix(in_srgb,var(--primary)_8%,transparent),transparent_34%),linear-gradient(145deg,color-mix(in_srgb,var(--surface)_94%,var(--primary)_6%),var(--surface)_58%,color-mix(in_srgb,var(--surface)_97%,var(--accent)_3%))] p-[clamp(24px,3.4vw,42px)] shadow-[0_24px_58px_color-mix(in_srgb,var(--ink)_9%,transparent),0_4px_18px_color-mix(in_srgb,var(--primary)_8%,transparent)] before:absolute before:inset-x-0 before:top-0 before:z-[2] before:h-[4px] before:bg-[linear-gradient(90deg,var(--primary),var(--accent),transparent_86%)] before:content-[''] reveal in">
                 {article ? (
                   <>
                     {(article.sections || []).map((section, index) => (
@@ -854,8 +887,10 @@ export default function BlogArticlePage({ post, article = null }) {
         </section>
       )}
 
-      <section className="cta-section reference-blog-cta !bg-[linear-gradient(120deg,var(--primary),color-mix(in_srgb,var(--primary)_56%,var(--accent)),var(--accent))] py-[72px]">
-        <div className="cta-shell flex items-center justify-between max-[880px]:items-start max-[880px]:flex-col w-[var(--container)] gap-10 mx-auto p-0 rounded-none bg-transparent">
+      <section className="cta-section reference-blog-cta relative isolate overflow-hidden !bg-[linear-gradient(120deg,var(--primary),color-mix(in_srgb,var(--primary)_56%,var(--accent)),var(--accent))] py-[72px]">
+        <span aria-hidden="true" className="pointer-events-none absolute right-[8%] top-[-180px] h-[360px] w-[360px] rounded-full bg-white/15 blur-[80px] animate-[cmg-template-ambient_9s_ease-in-out_infinite_alternate]" />
+        <span aria-hidden="true" className="pointer-events-none absolute bottom-[-220px] left-[10%] h-[340px] w-[340px] rounded-full bg-black/10 blur-[80px] animate-[cmg-template-ambient_9s_ease-in-out_infinite_alternate] [animation-delay:-4s]" />
+        <div className="cta-shell relative z-[1] flex w-[var(--container)] items-center justify-between gap-10 mx-auto p-0 rounded-none bg-transparent max-[880px]:items-start max-[880px]:flex-col">
           <div>
             <h2 className="!text-[clamp(30px,1.8rem+2.2vw,46px)] max-[880px]:!text-[clamp(30px,5.2vw,40px)] max-[620px]:!text-[clamp(29px,8.6vw,35px)] !leading-none text-[var(--template-on-primary)]">Ready to make the research personal?</h2>
             <p className="!mt-[12px] max-w-[650px] !text-[16px] text-[var(--template-on-primary)]">Discuss how {post.title} applies to your status, evidence and timeline.</p>

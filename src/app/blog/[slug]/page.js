@@ -22,8 +22,8 @@ export async function generateMetadata({ params }) {
   // are fetched by third-party crawlers, some of which still expect JPG/PNG.
   const shareImageUrl = cover.src.replace(/\.webp$/i, ".jpg");
   return buildMetadata({
-    title: post.title,
-    description: post.description,
+    title: post.metaTitle || post.title,
+    description: post.metaDescription || post.description,
     path: `/blog/${post.slug}`,
     type: "article",
     // FAQ questions are already visible on the page; include their narrower,

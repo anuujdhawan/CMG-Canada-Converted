@@ -8,6 +8,7 @@ import { sortBlogPostsByDate } from "./blogDates";
  * authoritative publishedAt value on the post itself when one is available.
  */
 const BLOG_PUBLISHED_AT_BY_SLUG = {
+  "best-immigration-consultant-brampton": "2026-11-18",
   "canada-immigration-levels-plan-2027-2029": "2026-11-17",
   "express-entry-high-wage-crs-points-november-2026": "2026-11-17",
   "canada-asylum-process-changes-november-2026": "2026-11-17",
@@ -332,6 +333,10 @@ const BLOG_IMAGE_BY_CATEGORY = {
  * image hosts or runtime downloads.
  */
 const BLOG_IMAGE_BY_RESEARCH_SLUG = {
+  "best-immigration-consultant-brampton": {
+    src: "/images/blog/immigration-consultant-agreement-review.webp",
+    alt: "Immigration consultant reviewing a written Canadian immigration service agreement",
+  },
   "canada-immigration-levels-plan-2027-2029": {
     src: "/images/blog/financial-district.webp",
     alt: "Canadian city district representing the national immigration plan",

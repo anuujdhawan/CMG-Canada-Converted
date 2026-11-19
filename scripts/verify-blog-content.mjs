@@ -116,6 +116,14 @@ function liveRoutes() {
   addAll(readJson("pageData/route-map.json"));
   addAll(list(readJson("src/data/cmg-pages.json")));
   addAll(list(readJson("src/data/cmg-legal.json")));
+  // City pages are generated from CITY_LINKS in this JS data module rather
+  // than listed in cmg-pages.json, so include their canonical routes here.
+  routes.add("/locations");
+  const locationSource = fs.readFileSync(path.join(root, "src/data/location-pages.js"), "utf8");
+  const cityLinks = locationSource.match(/const CITY_LINKS = \[([\s\S]*?)\n\];/)?.[1] || "";
+  for (const [, citySlug] of cityLinks.matchAll(/\{ slug: "([a-z0-9-]+)", city:/g)) {
+    routes.add(`/locations/${citySlug}`);
+  }
   return routes;
 }
 
