@@ -30,75 +30,75 @@ const PROVINCE_PROFILES = {
   Ontario: {
     acronym: "OINP",
     program: "Ontario Immigrant Nominee Program (OINP)",
-    intro: (city) => `Living in ${city} means you can use Ontario's own nomination program alongside the federal system. These are the main streams we review for ${city} clients.`,
     pathways: [
-      "Ontario Workforce Priority. The current route covers eligible skilled foreign workers with qualifying job offers and eligible self-employed physicians.",
-      "Employer-led steps. For job-offer applicants, the employer starts in Ontario’s portal before the candidate registers an Expression of Interest.",
-      "Express Entry option. Some eligible Workforce Priority candidates may request an Express Entry nomination if they also meet federal requirements.",
-      "Permanent residence. Ontario nomination is a separate step from IRCC’s final decision on permanent residence.",
+      ["Ontario Workforce Priority", "The current route covers eligible skilled foreign workers with qualifying job offers and eligible self-employed physicians."],
+      ["Employer-led steps", "For job-offer applicants, the employer starts in Ontario’s portal before the candidate registers an Expression of Interest."],
+      ["Express Entry option", "Some eligible Workforce Priority candidates may request an Express Entry nomination if they also meet federal requirements."],
+      ["Permanent residence", "Ontario nomination is a separate step from IRCC’s final decision on permanent residence."],
     ],
     guide: "/immigrate/ontario-pnp-oinp",
+    officialUrl: "https://www.ontario.ca/page/ontario-workforce-priority-stream",
   },
   "British Columbia": {
     acronym: "BC PNP",
     program: "BC Provincial Nominee Program (BC PNP)",
-    intro: (city) => `Living in ${city} means you can use British Columbia's own nomination program alongside the federal system. These are the main streams we review for ${city} clients.`,
     pathways: [
-      "Skills Immigration. Eligibility and intake steps depend on the selected category; some candidates enter a registration pool before they can be invited.",
-      "Express Entry BC. The program guide lists Express Entry BC options for eligible federal candidates; confirm current stream availability before applying.",
-      "Entrepreneur Immigration. Business routes use separate eligibility and application requirements from worker pathways.",
-      "Selection. BC may target registrations to current provincial priorities, so a score from an earlier invitation round is not a forecast.",
+      ["Skills Immigration", "Eligibility and intake steps depend on the selected category; some candidates enter a registration pool before they can be invited."],
+      ["Express Entry BC", "The program guide lists Express Entry BC options for eligible federal candidates; confirm current stream availability before applying."],
+      ["Entrepreneur Immigration", "Business routes use separate eligibility and application requirements from worker pathways."],
+      ["Selection", "BC may target registrations to current provincial priorities, so a score from an earlier invitation round is not a forecast."],
     ],
     guide: "/immigrate/british-columbia-pnp",
+    officialUrl: "https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program",
   },
   Alberta: {
     acronym: "AAIP",
     program: "Alberta Advantage Immigration Program (AAIP)",
-    intro: (city) => `Living in ${city} means you can use Alberta's own nomination program alongside the federal system. These are the main streams we review for ${city} clients.`,
     pathways: [
-      "Alberta Opportunity Stream. For eligible temporary foreign workers already working full-time in Alberta with a qualifying Alberta job offer.",
-      "Alberta Express Entry. A separate route for eligible federal Express Entry candidates who meet Alberta’s current selection requirements.",
-      "Community and sector pathways. Rural Renewal and Tourism and Hospitality routes have their own employer, community and occupation rules.",
-      "Worker EOI. Some worker routes use a scored profile and invitations; an EOI is not a nomination application.",
+      ["Alberta Opportunity Stream", "For eligible temporary foreign workers already working full-time in Alberta with a qualifying Alberta job offer."],
+      ["Alberta Express Entry", "A separate route for eligible federal Express Entry candidates who meet Alberta’s current selection requirements."],
+      ["Community and sector pathways", "Rural Renewal and Tourism and Hospitality routes have their own employer, community and occupation rules."],
+      ["Worker EOI", "Some worker routes use a scored profile and invitations; an EOI is not a nomination application."],
     ],
     guide: "/immigrate/alberta-pnp-aaip",
+    officialUrl: "https://www.alberta.ca/alberta-advantage-immigration-program",
   },
   Manitoba: {
     acronym: "MPNP",
     program: "Manitoba Provincial Nominee Program (MPNP)",
-    intro: (city) => `Living in ${city} means you can use Manitoba's own nomination program alongside the federal system. These are the main streams we review for ${city} clients.`,
     pathways: [
-      "Skilled Worker Stream. Manitoba assesses candidates through its in-province and overseas pathways, including the connection or recruitment criteria that fit each route.",
-      "International Education Stream. Manitoba graduates may qualify under separate career, internship or student-entrepreneur criteria.",
-      "Business Investor Stream. Entrepreneur routes have their own eligibility and submission process.",
-      "EOI selection. The MPNP ranks eligible profiles for relevant pathways; an EOI is not a complete application or a promise of invitation.",
+      ["Skilled Worker Stream", "Manitoba assesses candidates through its in-province and overseas pathways, including the connection or recruitment criteria that fit each route."],
+      ["International Education Stream", "Manitoba graduates may qualify under separate career, internship or student-entrepreneur criteria."],
+      ["Business Investor Stream", "Entrepreneur routes have their own eligibility and submission process."],
+      ["EOI selection", "The MPNP ranks eligible profiles for relevant pathways; an EOI is not a complete application or a promise of invitation."],
     ],
     guide: "/immigrate/manitoba-pnp-mpnp",
+    officialUrl: "https://immigratemanitoba.com/immigrate-to-manitoba/",
   },
   Saskatchewan: {
     acronym: "SINP",
     program: "Saskatchewan Immigrant Nominee Program (SINP)",
-    intro: (city) => `Living in ${city} means you can use Saskatchewan's own nomination program alongside the federal system. These are the main streams we review for ${city} clients.`,
     pathways: [
-      "International Skilled Worker. Includes different routes for eligible job-offer holders and candidates assessed through occupation or Express Entry criteria.",
-      "Saskatchewan Experience. Categories serve eligible workers and graduates already living or working in the province; requirements vary by category.",
-      "EOI and occupation rules. Some routes use a ranked profile, and occupation eligibility or licensing requirements can change.",
-      "Business pathways. Entrepreneur and farm-related routes have separate criteria and intake status; check current SINP notices before planning an application.",
+      ["International Skilled Worker", "Includes different routes for eligible job-offer holders and candidates assessed through occupation or Express Entry criteria."],
+      ["Saskatchewan Experience", "Categories serve eligible workers and graduates already living or working in the province; requirements vary by category."],
+      ["EOI and occupation rules", "Some routes use a ranked profile, and occupation eligibility or licensing requirements can change."],
+      ["Current intake", "Check the current provincial intake instructions for your category and confirm any steps your employer must complete."],
     ],
     guide: "/immigrate/saskatchewan-pnp-sinp",
+    officialUrl: "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/assess-your-eligibility",
   },
   "Nova Scotia": {
     acronym: "NSNP",
     program: "Nova Scotia Nominee Program (NSNP)",
-    intro: (city) => `Living in ${city} means you can use Nova Scotia's own nomination program alongside the federal system. These are the main streams we review for ${city} clients.`,
     pathways: [
-      "Skilled Worker. Employer-supported cases and several former pathway criteria now sit within this stream’s sub-criteria.",
-      "Nova Scotia Graduate. A route for eligible graduates under the stream’s current education and job requirements.",
-      "Entrepreneur. A separate business pathway with its own selection and application rules.",
-      "Nova Scotia: Express Entry. An Express Entry-linked stream that includes route-specific criteria carried forward from former streams.",
-      "Separate federal option. The Atlantic Immigration Program is not an NSNP stream and has its own designated-employer process.",
+      ["Skilled Worker", "Employer-supported cases and several former pathway criteria now sit within this stream’s sub-criteria."],
+      ["Nova Scotia Graduate", "A route for eligible graduates under the stream’s current education and job requirements."],
+      ["Entrepreneur", "A separate business pathway with its own selection and application rules."],
+      ["Nova Scotia: Express Entry", "An Express Entry-linked stream that includes route-specific criteria carried forward from former streams."],
+      ["Separate federal option", "The Atlantic Immigration Program is not an NSNP stream and has its own designated-employer process."],
     ],
     guide: "/immigrate/nova-scotia-pnp-nsnp",
+    officialUrl: "https://liveinnovascotia.com/nova-scotia-nominee-program",
   },
 };
 
@@ -120,60 +120,70 @@ const CITY_DETAILS = {
     serviceAreaNote: "Visit our Brampton office by appointment, or meet online by video, phone or WhatsApp. We work with clients in Brampton, across the Greater Toronto Area, elsewhere in Canada and abroad where the requested service is within the representative's authorization.",
   },
   calgary: {
+    planningNote: "If you work for an energy or engineering contractor, bring the employment records showing your duties and employer. If your job involves project sites in more than one province, flag where you actually work when comparing AAIP and federal options.",
     heroLead: "Calgary's energy, technology and logistics sectors bring different work histories and job offers into the Alberta immigration conversation. This guide helps local workers and families compare Express Entry, AAIP, study, work and sponsorship options using their actual facts.",
     serviceIntro: "We assess your eligibility for the Alberta Opportunity Stream, the Alberta Express Entry Pathway and the health care pathway, and we compare them with the federal Express Entry route.",
     sectors: ["Energy and engineering", "Technology and fintech", "Construction and skilled trades", "Healthcare and logistics"],
     studyOptions: "University of Calgary, Mount Royal University and SAIT",
   },
   edmonton: {
+    planningNote: "If you are pursuing a regulated health profession, gather your Alberta licensing progress along with your offer and job duties. We can compare the requirements of the occupation with those of any relevant AAIP pathway.",
     heroLead: "From healthcare and research to construction and energy services, Edmonton's job mix can point to different federal or Alberta pathways. Check your occupation, work authorization and employer details before choosing an AAIP or Express Entry route.",
     serviceIntro: "We help Edmonton clients use the AAIP and Express Entry together, advise on work permit options and prepare applications for workers, graduates and families.",
     sectors: ["Healthcare and research", "Construction and skilled trades", "Energy, petrochemicals and manufacturing", "Government and education"],
     studyOptions: "University of Alberta, NAIT, MacEwan University and Concordia University of Edmonton",
   },
   halifax: {
+    planningNote: "For an Atlantic Immigration Program assessment, start by confirming whether the employer is designated and can support the endorsement process. Bring the job offer so we can compare this option with current Nova Scotia nomination streams.",
     heroLead: "In Halifax, a job offer and employer designation may shape whether a Nova Scotia route or the Atlantic Immigration Program is worth exploring. This guide outlines the questions workers, graduates and families should check first.",
     serviceIntro: "We assess whether the Nova Scotia Nominee Program, Express Entry or the Atlantic Immigration Program fits your profile best, and prepare the employer and applicant documents.",
     sectors: ["Ocean technology and shipbuilding", "Healthcare and life sciences", "Defence and public sector", "Education and technology"],
     studyOptions: "Dalhousie University, Saint Mary's University and Nova Scotia Community College",
   },
   hamilton: {
+    planningNote: "For a job in Hamilton's manufacturing or health sectors, bring a letter describing your actual duties, hours and work location. These details help when comparing an Ontario employer-supported application with federal options based on work experience.",
     heroLead: "Hamilton's healthcare, education, manufacturing and trades employers draw workers and students with different immigration plans. Compare Ontario options with the federal route against your work history, permit, education and the job you intend to do.",
     serviceIntro: "We help Hamilton graduates and workers compare Express Entry with Ontario's current Workforce Priority stream when its job-offer or physician pathway fits, then organize the records for the next step.",
     sectors: ["Healthcare and life sciences", "Steel and advanced manufacturing", "Education", "Skilled trades"],
     studyOptions: "McMaster University and Mohawk College",
   },
   kelowna: {
+    planningNote: "If you work seasonally in the Okanagan, bring the terms of each contract and your work permit dates. We can check which experience counts for federal programs and whether the current job satisfies any relevant B.C. employer requirements.",
     heroLead: "Kelowna's agriculture, tourism, construction and technology employers bring a mix of seasonal and longer-term work plans. If you are considering a work permit or B.C. nomination, check the exact job, employer and stream rules before relying on a local opportunity.",
     serviceIntro: "We help workers and employers in the Okanagan with work permit extensions and BC PNP nominations, and explain which options suit your occupation and employer.",
     sectors: ["Agriculture, wine and food processing", "Tourism and hospitality", "Construction and trades", "Technology and healthcare"],
     studyOptions: "UBC Okanagan and Okanagan College",
   },
   "kitchener-waterloo": {
+    planningNote: "If your record includes a co-op placement and work after graduation, list them separately with dates and hours. We can review which experience may count and check how your permit expiry fits your plan.",
     heroLead: "Students, engineers and technology workers in Kitchener-Waterloo often want to understand what comes after a study or work permit. This guide compares federal routes with Ontario options and highlights which parts of your record may change the answer.",
     serviceIntro: "We help technology workers and graduates compare Express Entry with Ontario's current nomination options and plan around permit expiry dates, work records and the stream criteria in effect.",
     sectors: ["Software and technology", "Advanced manufacturing", "Insurance", "Startups and research"],
     studyOptions: "University of Waterloo, Wilfrid Laurier University and Conestoga College",
   },
   london: {
+    planningNote: "If you are approaching graduation from a London-area institution, gather your program completion details, study history and permit expiry date. These help identify whether a PGWP is available and which dates matter for applying.",
     heroLead: "London's universities, health sector and agri-food employers bring students and workers to southwestern Ontario. If you want to remain in Canada, map your study program, work authorization and occupation to the current PGWP, OINP and Express Entry requirements.",
     serviceIntro: "We guide students through study permit extensions, post-graduation work permits and the move to permanent residence, and we help employers and workers with job-offer-based routes.",
     sectors: ["Healthcare and education", "Manufacturing and agri-food", "Insurance and financial services", "Skilled trades"],
     studyOptions: "Western University and Fanshawe College",
   },
   mississauga: {
+    planningNote: "If you work near Pearson or through a staffing firm, confirm who employs you and where you perform the work. Bring an offer and records that identify that employer before considering an Ontario job-offer route.",
     heroLead: "Mississauga's airport, logistics, corporate and manufacturing employers support a large newcomer community. This guide helps local students, workers and families compare Ontario and federal immigration routes based on their status, work history and plans.",
     serviceIntro: "We assess your Express Entry score and OINP options, advise on work permit extensions and post-graduation work permits, and help families apply together.",
     sectors: ["Aviation and logistics", "Finance and corporate head offices", "Pharmaceuticals and manufacturing", "Information technology"],
     studyOptions: "University of Toronto Mississauga, Sheridan College and Humber College",
   },
   ottawa: {
+    planningNote: "If you plan to use French for Express Entry, bring valid test results from an IRCC-approved provider along with your language results in English if available. If you live or work across the river in Gatineau, explain your settlement plan so we can compare options for the province where you intend to live.",
     heroLead: "Ottawa's public service, research and technology employers create a range of immigration questions for workers and graduates. Start with your work experience, language results and current permit, then compare federal options with Ontario pathways.",
     serviceIntro: "We help you plan your path from study permit to post-graduation work permit to permanent residence, and we explain how French language results can raise your Express Entry score.",
     sectors: ["Federal public service and defence", "Technology and telecommunications", "Healthcare", "Education and research"],
     studyOptions: "Carleton University, University of Ottawa, Algonquin College and La Cité",
   },
   regina: {
+    planningNote: "Start with your Saskatchewan job offer, work authorization, study history and plan to settle in the province. Use the current stream requirements to check your situation before relying on a past intake or invitation result.",
     heroLead: "For Regina residents planning permanent residence, the main question is which Saskatchewan stream—if any—fits your job, permit, study history and settlement plans. Compare the SINP with federal Express Entry, and verify current intake rules before acting.",
     serviceIntro: "For Regina workers and graduates, we compare Saskatchewan and federal pathways against the actual job duties, employer, work-permit dates, education and language evidence. We also help families plan sponsorship and temporary-resident applications.",
     routePlanning: "A Regina address, job title or TEER label alone does not establish SINP eligibility. Compare your work, study, employer and status facts with the exact stream and its current intake rules. Criteria can change, so check the [Government of Saskatchewan's SINP eligibility guide](https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/assess-your-eligibility) before relying on an older summary or invitation result.",
@@ -188,42 +198,49 @@ const CITY_DETAILS = {
     studyOptions: "University of Regina and Saskatchewan Polytechnic",
   },
   saskatoon: {
+    planningNote: "If your offer is in agriculture, mining, health care or the trades, bring the job duties and any licensing, certification or employer support details. We can check them against the current SINP criteria for that occupation.",
     heroLead: "Agriculture, mining, healthcare and technology are central to Saskatoon's job market. If one of these sectors is part of your plan, compare Saskatchewan nominee streams with federal routes using your actual job duties, work authorization and settlement goals.",
     serviceIntro: "We assess your eligibility for the SINP International Skilled Worker and Saskatchewan Experience categories and help you choose the sub-category that fits your occupation.",
     sectors: ["Agriculture and agri-tech", "Mining and potash", "Healthcare", "Construction and trades"],
     studyOptions: "University of Saskatchewan and Saskatchewan Polytechnic",
   },
   surrey: {
+    planningNote: "If you work in construction or trucking across Metro Vancouver, bring the details of your employer, duties, work locations and any trade or driving credentials. We can compare them with the requirements of the exact federal or B.C. pathway.",
     heroLead: "Surrey's construction, transport and healthcare employers are part of a large and diverse newcomer community. This guide helps workers, students and families compare B.C. nomination options with Express Entry and temporary permit routes.",
     serviceIntro: "We help Surrey workers and graduates plan their route to permanent residence through BC PNP Skills Immigration, Express Entry BC and federal programs, and we support families with sponsorship.",
     sectors: ["Construction and skilled trades", "Trucking and logistics", "Healthcare", "Retail and services"],
     studyOptions: "Simon Fraser University (Surrey), Kwantlen Polytechnic University and Douglas College",
   },
   toronto: {
+    planningNote: "If you’ve held multiple jobs or moved from study into work, put your dates, hours and duties in order. That record helps us assess which work experience may count for Express Entry and whether a current Ontario stream fits your situation.",
     heroLead: "Toronto workers, graduates and families may be weighing an OINP route, Express Entry, a permit or sponsorship. Start with your current status, job duties and language results; this guide helps you compare the options that fit your circumstances.",
     serviceIntro: "Many Toronto clients are international students, workers on employer-specific permits and Express Entry candidates. We compare federal options with Ontario's current nomination route when its criteria fit, then help organize the supporting records.",
     sectors: ["Finance and fintech", "Technology and AI", "Healthcare", "Skilled trades and construction"],
     studyOptions: "University of Toronto, Toronto Metropolitan University, York University, Seneca and George Brown",
   },
   vancouver: {
+    planningNote: "If your role involves remote work or clients across Canada, confirm the employer address, work location and arrangement in your contract. These details can matter when checking current B.C. nomination requirements.",
     heroLead: "Vancouver workers and graduates can compare B.C. nominee streams with Express Entry and temporary permit options. Because provincial priorities and intake rules change, check your occupation, work history and settlement plan against current guidance.",
     serviceIntro: "The BC PNP scores candidates on a points system and runs targeted invitation rounds. We assess where your profile sits, help you build the right registration and prepare your application for BC and for IRCC.",
     sectors: ["Technology and software", "Film and digital media", "Trade, ports and logistics", "Healthcare"],
     studyOptions: "University of British Columbia, Simon Fraser University, BCIT and Langara College",
   },
   victoria: {
+    planningNote: "If you studied on Vancouver Island, bring the exact program and your completion date so we can check federal PGWP eligibility. A Victoria-area job offer can be assessed separately under the current B.C. worker criteria.",
     heroLead: "Victoria's public sector, technology, tourism and education employers bring different pathways into view. This guide helps graduates, workers and families sort out whether a B.C. program, Express Entry or another route matches their current situation.",
-    serviceIntro: "We advise on post-graduation work permits and the BC PNP International Graduate and Skills Immigration streams, and we prepare complete files for nomination and permanent residence.",
+    serviceIntro: "We advise on post-graduation work permits and current B.C. Skills Immigration criteria, and help prepare eligible applications.",
     sectors: ["Provincial government and public service", "Technology and ocean sciences", "Tourism and hospitality", "Healthcare and education"],
     studyOptions: "University of Victoria and Camosun College",
   },
   windsor: {
+    planningNote: "If your work spans both sides of the Canada–U.S. border, record where you performed it, when and with what authorization. We can review Canadian and foreign work history under the rules for your specific pathway.",
     heroLead: "Windsor's automotive, logistics, health and education sectors attract workers and international students. If you are planning to stay in Canada, check your work authorization and job duties against current Ontario and federal rules before choosing a route.",
     serviceIntro: "We support Windsor students and workers with post-graduation work permits, employer-supported applications and current Ontario nomination options. The right route depends on your job offer, status and the stream rules in effect.",
     sectors: ["Automotive manufacturing", "Cross-border logistics", "Healthcare", "Skilled trades"],
     studyOptions: "University of Windsor and St. Clair College",
   },
   winnipeg: {
+    planningNote: "List your work, study and any eligible connections in Manitoba, alongside your plan to live and work there. We can compare those facts with the requirements for in-province workers, eligible graduates or applicants overseas.",
     heroLead: "Winnipeg workers and graduates can compare Manitoba's nominee streams with federal Express Entry and other options. Your connection to Manitoba, current status and plan to live and work there can all affect which route deserves a closer look.",
     serviceIntro: "We help clients work out whether they qualify for Skilled Worker in Manitoba, Skilled Worker Overseas or the International Education Stream, and we prepare the full application.",
     sectors: ["Manufacturing and agri-food", "Trucking and transportation", "Healthcare", "Aerospace and technology"],
@@ -235,8 +252,8 @@ function cityPath(slug) {
   return `${LOCATION_PATH}/${slug}`;
 }
 
-function cityLabel(city) {
-  return `Immigration consultants in ${city}`;
+function cityLabel({ city, slug }) {
+  return slug === "brampton" ? "Immigration consultant in Brampton" : `Immigration consultant serving ${city}`;
 }
 
 function cityKeywords(city, province, acronym) {
@@ -254,24 +271,14 @@ function cityKeywords(city, province, acronym) {
   ];
 }
 
-function cityFaqs(city, province, acronym) {
-  const provinceUrls = {
-    Ontario: "https://www.ontario.ca/page/ontario-immigrant-nominee-program-oinp",
-    "British Columbia": "https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program",
-    Alberta: "https://www.alberta.ca/aaip",
-    Manitoba: "https://immigratemanitoba.com/immigrate-to-manitoba/",
-    Saskatchewan: "https://www.saskatchewan.ca/sinp",
-    "Nova Scotia": "https://liveinnovascotia.com/skilled-worker",
-  };
+function cityFaqs(city, province, { acronym, officialUrl: pnpUrl }) {
   const repGuide = "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose.html";
-  const ciccRegister = "https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx";
-  const pnpUrl = provinceUrls[province];
+  const ciccRegister = site.rcic.registerUrl;
   const source = (label, url) => ({ label, url });
   return [
     {
-      question: `How do I find a licensed immigration consultant in ${city} for a Canada PR or visa application?`,
-      answer: `Hiring a representative is optional. If you choose paid help, confirm the person is authorized, ask for a written agreement that identifies the work and fees, and keep control of your IRCC account and documents. Commonwealth Migration serves ${city} clients remotely by scheduled video, phone and WhatsApp appointments.`,
-      sourceLinks: [source("Government of Canada: choose an authorized representative", repGuide)],
+      question: `Can I meet with a CMG immigration consultant from ${city}?`,
+      answer: `Yes. Book a free first consultation by video or phone from ${city}. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange a meeting.`,
     },
     {
       question: `Which Canada PR pathway should ${city} residents compare: Express Entry or the ${acronym}?`,
@@ -294,7 +301,7 @@ function cityFaqs(city, province, acronym) {
       sourceLinks: [source("CICC Public Register", ciccRegister)],
     },
     {
-      question: `How much does an immigration consultant in ${city} charge for Express Entry or a Canada PR application?`,
+      question: `How much does an immigration consultant serving ${city} charge for Express Entry or a Canada PR application?`,
       answer: `Government does not set one consulting fee for ${city} clients. The total depends on the application, family members and the services in the retainer. Ask for the scope, fee breakdown, payment schedule, extra charges and refund terms in writing, and keep the signed agreement.`,
       sourceLinks: [source("Government of Canada: working with an immigration representative", repGuide)],
     },
@@ -311,46 +318,44 @@ function cityFaqs(city, province, acronym) {
   ];
 }
 
-function locationSchema(city, province, path) {
-  const isBramptonOffice = city === "Brampton";
+function bramptonOfficeSchema(path) {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": `${absoluteUrl(path)}#professional-service`,
-    name: isBramptonOffice ? site.name : `${site.name} - ${cityLabel(city)}`,
+    name: site.name,
     url: absoluteUrl(path),
     parentOrganization: { "@id": `${site.url}#organization` },
     telephone: site.phone,
     email: site.email,
     serviceType: "Canadian immigration consulting",
     areaServed: [
-      { "@type": "City", name: city },
-      { "@type": "AdministrativeArea", name: province },
+      { "@type": "City", name: "Brampton" },
+      { "@type": "AdministrativeArea", name: "Ontario" },
     ],
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.line1,
       addressLocality: "Brampton",
-      addressRegion: "ON",
+      addressRegion: site.address.region,
+      postalCode: site.address.postal,
       addressCountry: "CA",
     },
-    ...(isBramptonOffice ? {
-      hasMap: site.address.mapsUrl,
-      openingHoursSpecification: [{
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "https://schema.org/Monday",
-          "https://schema.org/Tuesday",
-          "https://schema.org/Wednesday",
-          "https://schema.org/Thursday",
-          "https://schema.org/Friday",
-          "https://schema.org/Saturday",
-        ],
-        opens: "09:30",
-        closes: "18:30",
-      }],
-      availableLanguage: ["English", "Hindi", "Punjabi", "Marathi", "Gujarati", "French", "Arabic"],
-    } : { availableLanguage: "English" }),
+    hasMap: site.address.mapsUrl,
+    openingHoursSpecification: [{
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday",
+        "https://schema.org/Saturday",
+      ],
+      opens: "09:30",
+      closes: "18:30",
+    }],
+    availableLanguage: ["English", "Hindi", "Punjabi", "Marathi", "Gujarati", "French", "Arabic"],
   };
 }
 
@@ -378,9 +383,23 @@ function locationPage(cityEntry) {
   const province = PROVINCE_PROFILES[cityEntry.province];
   const path = cityPath(cityEntry.slug);
   const isBrampton = cityEntry.slug === "brampton";
-  const faqs = isBrampton ? [] : cityFaqs(cityEntry.city, cityEntry.province, province.acronym);
-  const workParagraph = `Sectors that regularly hire in and around ${cityEntry.city} include ${detail.sectors.join(", ")}. Study options include ${detail.studyOptions}. If you study here, we plan your post-graduation work permit and your path to permanent residence before your permit runs out.`;
-  const serviceAreaNote = detail.serviceAreaNote || `We serve ${cityEntry.city} clients online from our Brampton, Ontario office. Meetings happen by video call, phone and WhatsApp. Commonwealth Migration Group Inc. is based at 2250 Bovaird Dr E #615, Brampton, ON L6R 0W3.`;
+  const faqs = isBrampton ? [] : cityFaqs(cityEntry.city, cityEntry.province, province);
+  const workParagraph = `Local work sectors include ${detail.sectors.join(", ")}. Study options include ${detail.studyOptions}. If you are planning for a PGWP, check the exact institution and program against current IRCC eligibility rules.`;
+  const serviceAreaNote = detail.serviceAreaNote || `Meet with our Brampton-based team by video or phone from ${cityEntry.city}. Contact us on WhatsApp to arrange an appointment.`;
+  const related = CITY_LINKS
+    .filter((city) => city.slug !== cityEntry.slug && city.province === cityEntry.province)
+    .map(({ city, slug }) => ({ city, href: cityPath(slug) }));
+  const location = {
+    kind: isBrampton ? "office" : "online",
+    city: cityEntry.city,
+    province: cityEntry.province,
+    titleLead: isBrampton ? "Immigration consultant in" : "Immigration consultant serving",
+    titlePlace: isBrampton ? "Brampton, Ontario" : cityEntry.city,
+    program: province,
+    detail,
+    related,
+    serviceAreaNote,
+  };
   const bramptonContentBlocks = [
     { type: "heading", level: 2, text: "Immigration help for Brampton families, students and workers" },
     { type: "paragraph", text: `${site.rcic.consultant.name}, RCIC (${site.rcic.number}), provides immigration consulting through ${site.name}. You can [check the CICC Public Register profile](${site.rcic.profileUrl}) and confirm who will advise you before you share documents or pay for a service. The Government of Canada's [authorized representative guide](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose/authorized.html) explains which professionals may provide paid immigration advice or representation.` },
@@ -419,11 +438,12 @@ function locationPage(cityEntry) {
 
   return {
     path,
-    h1: isBrampton ? "Immigration consultant in Brampton, Ontario" : cityLabel(cityEntry.city),
-    title: isBrampton ? `Immigration Consultant in Brampton, ON | RCIC ${site.rcic.number} | CMG` : `${cityLabel(cityEntry.city)} | CMG`,
+    h1: `${location.titleLead} ${location.titlePlace}`,
+    location,
+    title: isBrampton ? `Immigration Consultant in Brampton, ON | RCIC ${site.rcic.number} | CMG` : `${cityLabel(cityEntry)} | CMG`,
     description: isBrampton
       ? `Meet ${site.rcic.consultant.name}, CICC-licensed RCIC ${site.rcic.number} in Brampton. Super Visa, sponsorship, PR, work and study permits. Free first consultation and free parking.`
-      : `Compare ${province.acronym}, Express Entry, work and study permits, and family sponsorship with a licensed RCIC team serving ${cityEntry.city}. Remote consultations are available.`,
+      : `Meet with a licensed RCIC serving ${cityEntry.city} by video or phone. Compare ${province.acronym}, Express Entry, permits and sponsorship. Free first consultation.`,
     ...(isBrampton ? {
       metaDescription: `Meet ${site.rcic.consultant.name}, CICC-licensed RCIC ${site.rcic.number} in Brampton. Super Visa, sponsorship, PR, work and study permits. Free first consultation and free parking.`,
       openGraphTitle: "Immigration consultant in Brampton | Commonwealth Migration Group",
@@ -440,17 +460,17 @@ function locationPage(cityEntry) {
       "work permit and LMIA services Brampton",
     ] : cityKeywords(cityEntry.city, cityEntry.province, province.acronym),
     priority: cityEntry.slug === "brampton" ? 0.96 : 0.85,
-    lastModified: isBrampton ? "2026-11-18" : "2026-11-11",
-    ...(isBrampton || cityEntry.slug === "regina" ? { contentMode: "authored" } : {}),
+    lastModified: isBrampton ? "2026-11-18" : "2026-11-19",
+    contentMode: "authored",
     hero: { lead: detail.heroLead },
     contentBlocks: isBrampton ? bramptonContentBlocks : [
       { type: "heading", level: 2, text: `Immigration services for ${cityEntry.city} residents` },
       { type: "paragraph", text: detail.serviceIntro },
       { type: "table", rows: [["Service", "How we help"], ...SHARED_SERVICES] },
       { type: "heading", level: 2, text: `${cityEntry.province} pathways for ${cityEntry.city} newcomers` },
-      { type: "paragraph", text: province.intro(cityEntry.city) },
+      { type: "paragraph", text: detail.planningNote },
       localPlanningTable(cityEntry, detail),
-      { type: "list", ordered: false, items: province.pathways },
+      { type: "list", ordered: false, items: province.pathways.map(([label, text]) => `${label}. ${text}`) },
       ...(detail.routeChecks ? [
         { type: "heading", level: 3, text: `Compare Saskatchewan options for your Regina situation` },
         { type: "table", rows: detail.routeChecks },
@@ -478,7 +498,7 @@ function locationPage(cityEntry) {
         "Book a free Canada immigration assessment → /assessment/free-canada-immigration-assessment",
       ] },
     ],
-    jsonLd: [locationSchema(cityEntry.city, cityEntry.province, path)],
+    jsonLd: isBrampton ? [bramptonOfficeSchema(path)] : [],
   };
 }
 
@@ -487,18 +507,32 @@ const PROVINCE_ORDER = ["Ontario", "British Columbia", "Alberta", "Manitoba", "S
 function locationIndexPage() {
   const rowsForProvince = (province) => CITY_LINKS
     .filter((city) => city.province === province)
-    .map((city) => [`[${cityLabel(city.city)}](${cityPath(city.slug)})`, city.focus]);
+    .map((city) => [`[${cityLabel(city)}](${cityPath(city.slug)})`, city.focus]);
 
-  const cityItems = CITY_LINKS.map((city) => `${cityLabel(city.city)} → ${cityPath(city.slug)}`);
+  const cityItems = CITY_LINKS.map((city) => `${cityLabel(city)} → ${cityPath(city.slug)}`);
   const itemList = CITY_LINKS.map((city, index) => ({
     "@type": "ListItem",
     position: index + 1,
-    name: cityLabel(city.city),
+    name: cityLabel(city),
     url: absoluteUrl(cityPath(city.slug)),
   }));
 
+  const groups = PROVINCE_ORDER.map((province) => ({
+    province,
+    acronym: PROVINCE_PROFILES[province].acronym,
+    cities: CITY_LINKS.filter((entry) => entry.province === province)
+      .map(({ city, slug }) => ({ city, href: cityPath(slug), office: slug === "brampton" })),
+  }));
   return {
     path: LOCATION_PATH,
+    location: {
+      kind: "directory",
+      titleLead: "Immigration consultants",
+      titlePlace: "across Canada",
+      groups,
+      serviceAreaNote: "Choose a city to compare local immigration pathways. Meet our licensed RCIC by video or phone across Canada, or book an appointment at our Brampton office.",
+    },
+    contentMode: "authored",
     h1: "Immigration consultants across Canada",
     title: "Immigration Consultants Across Canada | CMG",
     description: "Find Commonwealth Migration's city-specific Canadian immigration guidance for Express Entry, PNP, work permits, study permits and family sponsorship across Canada.",
@@ -511,7 +545,7 @@ function locationIndexPage() {
       "study permit consultant Canada",
     ],
     priority: 0.98,
-    lastModified: "2026-11-11",
+    lastModified: "2026-11-19",
     hero: { lead: "Commonwealth Migration Group serves clients in every major Canadian city by video, phone and WhatsApp, from our head office in Brampton, Ontario. Choose your city to see the provincial programs and services that apply to you." },
     contentBlocks: [
       { type: "heading", level: 2, text: "Find immigration consultants by city" },
@@ -529,8 +563,8 @@ function locationIndexPage() {
         "Confirm current rules with IRCC or the relevant province before paying a fee or filing.",
       ] },
       { type: "heading", level: 2, text: "Immigration consultants across Canada: common questions" },
-      { type: "faq", question: "How can I find a licensed immigration consultant near me in Toronto, Brampton, Calgary or another Canadian city?", answer: "Start by checking the representative’s name or licence number in the CICC Public Register and confirm the result matches the person advising you. Commonwealth Migration is based in Brampton and serves clients in the cities listed here remotely; the city guides explain local pathway context, not separate office locations.", sourceLinks: [{ label: "CICC Public Register", url: "https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx" }, { label: "Government of Canada: authorized representatives", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose.html" }] },
-      { type: "faq", question: "Does Commonwealth Migration have an immigration office in every Canadian city listed, or are consultations remote?", answer: "Commonwealth Migration Group is based in Brampton, Ontario. Clients in the other listed cities can arrange consultations by video, phone or WhatsApp; the city pages do not imply that CMG has a separate office in each location." },
+      { type: "faq", question: "How can I find a licensed immigration consultant near me in Toronto, Brampton, Calgary or another Canadian city?", answer: "Start by checking the representative’s name or licence number in the CICC Public Register and confirm the result matches the person advising you. Commonwealth Migration is based in Brampton and serves clients in the cities listed here remotely; each city guide explains provincial and federal options for its area.", sourceLinks: [{ label: "CICC Public Register", url: "https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx" }, { label: "Government of Canada: authorized representatives", url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose.html" }] },
+      { type: "faq", question: "Does Commonwealth Migration have an immigration office in every Canadian city listed, or are consultations remote?", answer: "The CMG office is in Brampton, Ontario. From the other cities listed, book a meeting by video or phone. You can also reach us on WhatsApp to arrange the appointment." },
       { type: "faq", question: "Are Canadian immigration rules different in Brampton, Toronto, Vancouver, Calgary and other cities?", answer: "Federal rules for Express Entry, work permits, study permits and family sponsorship generally apply across Canada, while provincial nominee streams and local labour-market priorities differ by province. Your city can affect which provincial options are relevant, but it does not change the federal eligibility rules." },
       { type: "faq", question: "How should I choose a Canadian city or province for a Provincial Nominee Program (PNP) application?", answer: "Start with where you genuinely plan to live and work, then compare the current province-specific stream criteria, occupation priorities, job-offer rules and any required connection. A past draw or a city page does not create eligibility or replace the province’s official instructions." },
       { type: "faq", question: "What documents should I prepare before a Canada immigration consultation about PR, work or study permits?", answer: "Bring your passport, current status and expiry date, education and language records, work history, family information, funds, prior applications and any refusal or procedural fairness letter. Include the exact response deadline if the matter is time-sensitive." },

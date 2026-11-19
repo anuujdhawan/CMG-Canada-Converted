@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight, CircleParking, Clock3, Mail, MapPin, MessageCircle, Navigation, Phone } from "lucide-react";
 import { site } from "@/config/site";
 import { whatsappUrl } from "@/config/whatsapp";
-import styles from "./BramptonLocationPage.module.css";
+import styles from "./LocationPage.module.css";
 
 const { address } = site;
 const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address.full)}`;
