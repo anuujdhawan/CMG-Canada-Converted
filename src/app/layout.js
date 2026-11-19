@@ -196,6 +196,7 @@ export default function RootLayout({ children }) {
       className="h-full antialiased"
     >
       <head>
+        <script id="cmg-theme-init" dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <Script id="google-tag-manager-bootstrap" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -209,9 +210,6 @@ export default function RootLayout({ children }) {
           src="https://www.googletagmanager.com/gtm.js?id=GTM-KWMXWXB7"
           strategy="afterInteractive"
         />
-        <Script id="cmg-theme-init" strategy="beforeInteractive">
-          {themeInitScript}
-        </Script>
       </head>
       <body className={`${manrope.className} flex min-h-full flex-col`}>
         <noscript>
