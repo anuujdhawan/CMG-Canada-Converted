@@ -1,5 +1,5 @@
 /**
- * Build the brand icon set from the CMG pinwheel logo.
+ * Build the brand icon set from the CMG maple-door mark.
  *
  *   node scripts/build-brand-icons.mjs [source-image]
  *
@@ -9,15 +9,15 @@
  *   src/app/favicon.ico     128 / 64 / 48 / 32 / 16   browser tab + bookmarks
  *   src/app/icon.png        192x192                   the link Google uses for SERP
  *   src/app/apple-icon.png  180x180                   iOS home screen
+ *   public/images/maple-door-watermark.png 512x512    hero-card watermark
  *
- * Nothing else is written. In particular no extra "master" copy is parked in
- * `public/`: the source artwork (`public/images/favicon_LG.webp`) is already
- * committed, so this script is the reproducible path to any other size.
+ * The source artwork (`public/images/favicon_LG.webp`) remains the master copy,
+ * so this script is the reproducible path to every generated size.
  *
  * Why this exists rather than a one-off export:
  *
- *  - The artwork is flat #D02818 on white. Recovering an antialiased alpha
- *    mask from the green channel (white g=255, mark g=40 — by far the widest
+ *  - The artwork is flat #D52B1E on white. Recovering an antialiased alpha
+ *    mask from the green channel (white g=255, mark g=43 — by far the widest
  *    separation) and then forcing every pixel to the logo's own red removes
  *    the JPEG/WebP compression noise that a plain "make white transparent"
  *    would keep, and leaves the edge antialiasing intact.
@@ -25,14 +25,10 @@
  *    transparent touch icons onto black, so a transparent apple-icon turns
  *    the tile into a black square on the home screen.
  *  - The mark is trimmed to its own bounding box and re-padded to 88% of the
- *    tile. The supplied artwork sits at 70.9%, which at 16px leaves the mark
- *    about 11px across. 88% is still clear of the tile edge and is visibly
- *    more legible in a tab.
+ *    tile, keeping the maple-and-door shape legible in browser tabs and search.
  *
- * The default source is `public/images/favicon_LG.webp` (1280px). The
- * WhatsApp/JPEG copies of this logo that get supplied by hand are the same
- * artwork at 640px — verified pixel-equivalent apart from compression noise —
- * so the larger repo copy is used to avoid upscaling. Pass a path to override.
+ * The default source is `public/images/favicon_LG.webp`, a lossless WebP copy
+ * of the supplied 2000px-square artwork. Pass a path to override.
  */
 
 import fs from "node:fs";
@@ -55,12 +51,10 @@ const SOURCE = process.argv[2]
   ? path.resolve(process.argv[2])
   : path.join(ROOT, "public/images/favicon_LG.webp");
 
-/** The logo's own red — sampled from the artwork, not the CSS `--brand-primary`
- *  (#D80621). The mark, the header wordmark and the footer bird all use
- *  #D02818, so the icon must not drift to the UI token. */
-const MARK = { r: 0xd0, g: 0x28, b: 0x18 };
+/** The supplied maple-door mark's red, sampled from the source artwork. */
+const MARK = { r: 0xd5, g: 0x2b, b: 0x1e };
 const G_WHITE = 255;
-const G_MARK = 40;
+const G_MARK = 43;
 
 /** Fraction of the tile the trimmed mark occupies. */
 const FILL = 0.88;
@@ -84,6 +78,7 @@ const FILL = 0.88;
 const ICO_SIZES = [16, 32, 48, 64, 128];
 const PNG_SIZE = 192;
 const APPLE_SIZE = 180;
+const WATERMARK_SIZE = 512;
 
 // ---------------------------------------------------------------- master --
 
@@ -204,6 +199,10 @@ async function buildIco(sizes) {
 const writes = [
   [path.join(ROOT, "src/app/favicon.ico"), await buildIco(ICO_SIZES)],
   [path.join(ROOT, "src/app/icon.png"), await renderTile(PNG_SIZE)],
+  [
+    path.join(ROOT, "public/images/maple-door-watermark.png"),
+    await renderTile(WATERMARK_SIZE),
+  ],
   [
     path.join(ROOT, "src/app/apple-icon.png"),
     // Opaque on white: iOS composites transparent touch icons onto black.

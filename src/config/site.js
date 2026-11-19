@@ -82,10 +82,9 @@ export const site = {
     large: "/images/logo-large.png",
     white: "/images/CMG-LOGO.webp",
     footer: "/images/CMG-LOGO-FOOTER.webp",
-    // Next serves the generated square bird/chakra mark from src/app/icon.png.
-    // Keep this path canonical so browser icons and shared-link previews use
-    // the same brand asset.
-    favicon: "/icon.png",
+    // Next's app-file conventions emit the stable /favicon.ico URL and the
+    // 192px /icon.png variant from the same maple-door source artwork.
+    favicon: "/favicon.ico",
     og: "/icon.png",
   },
 

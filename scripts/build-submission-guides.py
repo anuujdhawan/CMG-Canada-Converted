@@ -64,15 +64,23 @@ def footer(canvas, doc):
     canvas.restoreState()
 
 
-def build(filename, title, subtitle, blocks):
+def build(filename, title, subtitle, blocks, keywords="", subject=None):
+    """Build a guide. keywords/subject feed PDF metadata so document hosts and
+    search engines can read the topic without relying on the visible text alone."""
     path = OUT / filename
     doc = SimpleDocTemplate(
         str(path), pagesize=A4,
         leftMargin=18 * mm, rightMargin=18 * mm,
         topMargin=18 * mm, bottomMargin=20 * mm,
         title=title, author="Commonwealth Migration Group Inc.",
-        subject=subtitle,
+        subject=subject or subtitle,
+        creator="Commonwealth Migration Group Inc. — Brampton, Ontario",
     )
+
+    def seo_meta(canvas, document):
+        canvas.setKeywords(keywords)
+        footer(canvas, document)
+
     story = [
         Paragraph(title, styles["title"]),
         Paragraph(subtitle, styles["sub"]),
@@ -88,7 +96,7 @@ def build(filename, title, subtitle, blocks):
             story.append(Spacer(1, 6))
         elif kind == "space":
             story.append(Spacer(1, value))
-    doc.build(story, onFirstPage=footer, onLaterPages=footer)
+    doc.build(story, onFirstPage=seo_meta, onLaterPages=seo_meta)
     print(f"built {path}")
 
 
@@ -97,9 +105,10 @@ def build(filename, title, subtitle, blocks):
 # ---------------------------------------------------------------------------
 build(
     "Choosing-a-Licensed-Immigration-Consultant-in-Brampton.pdf",
-    "Choosing a Licensed Immigration Consultant in Brampton",
+    "Choosing a Licensed Immigration Consultant in Brampton, Ontario",
     "A practical checklist for comparing authorized representatives in Ontario · November 2026",
     [
+
         ("h2", "Why authorization comes first"),
         ("p", "In Canada, only a small set of people may represent you for a fee in immigration matters: "
               "regulated Canadian immigration consultants (RCICs), licensed immigration lawyers, and "
@@ -137,6 +146,10 @@ build(
               "client relationship. Requirements change — always confirm with current IRCC instructions."),
         ("p", LINK.format(u=SITE, t="commonwealthmigration.ca")),
     ],
+    keywords="immigration consultant Brampton, licensed immigration consultant Brampton Ontario, "
+             "RCIC Brampton, CICC registered consultant, authorized representative Brampton, "
+             "immigration lawyer Brampton, immigration services Brampton, Commonwealth Migration Group",
+    subject="How to choose a licensed immigration consultant in Brampton, Ontario — RCIC and CICC checklist",
 )
 
 # ---------------------------------------------------------------------------
@@ -188,6 +201,10 @@ build(
         ("p", LINK.format(u=f"{SITE}/work-and-study/tfwp-employer-compliance", t="Employer compliance guidance") +
               " · " + LINK.format(u=SITE, t="commonwealthmigration.ca")),
     ],
+    keywords="work permit Canada 2026, open work permit, employer specific work permit, LMIA, "
+             "Global Talent Stream, Temporary Foreign Worker Program, immigration consultant Brampton, "
+             "work permit Brampton Ontario, Commonwealth Migration Group",
+    subject="Open vs employer-specific work permits in Canada — a Brampton immigration consultant's guide",
 )
 
 # ---------------------------------------------------------------------------
@@ -235,6 +252,10 @@ build(
               "information only — not legal advice. Confirm current requirements with IRCC."),
         ("p", LINK.format(u=SITE, t="commonwealthmigration.ca")),
     ],
+    keywords="newcomer checklist Canada, arriving in Canada, settlement services Brampton, "
+             "immigration documents Canada, RCIC Brampton, immigration consultant Brampton Ontario, "
+             "IRCC updates, Commonwealth Migration Group",
+    subject="A newcomer's information checklist for Canada — verifying advice after arrival",
 )
 
 print("done")

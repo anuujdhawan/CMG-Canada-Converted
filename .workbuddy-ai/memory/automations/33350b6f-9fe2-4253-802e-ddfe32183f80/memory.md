@@ -1,0 +1,9 @@
+# Automation: CMG backlink prospect Gmail triage (33350b6f-9fe2-4253-802e-ddfe32183f80)
+
+## 2026-11-17 (first logged run)
+- No prior automation memory existed before this run.
+- BLOCKED: Gmail connector is bound+enabled at account level (`connector-states.json`: gmail bound=true, enabled=true; valid OAuth grant with gmail.readonly/send/compose scope) and the `mcp__gmail__*` tools exist in `~/.workbuddy-ai/mcp-tool-list.json`, but they are NOT exposed in this automation session's deferred tool index.
+- Tried and failed: ToolSearch by exact name / description / bare name; direct DeferExecuteTool ("not found in deferred tools index"); list_installed_plugins ("No connectors installed"); reconnect_plugin ("plugin must be installed"); connect_open_platform (404); no gog/himalaya CLI; no usable direct-API fallback (access token expired 2026-11-16, no client_id/secret stored).
+- Action taken: NONE on the mailbox — no messages read, no replies sent, no drafts created. Did not fabricate any prospect activity. No project files modified.
+- User-facing report delivered: Gmail access unavailable; needs the user to open a normal session with the Gmail connector attached (or re-enable/trust it) and re-run, then this session can establish the "last run" watermark.
+- NEXT RUN: first re-check whether `mcp__gmail__gmail_search_messages` is callable. If still unavailable, repeat the blocked report. If available, search inbound replies newer than 2026-11-16 (last known manual Gmail work), apply standing rules: free editorial only, never agree to fees, never claim a link is live before verification, never attribute authorship, draft (do not send) all judgment calls, skip off-topic niches, signature "Anuj Dhawan, Content and Outreach Manager, Commonwealth Migration Group Inc., https://commonwealthmigration.ca". Once a run succeeds, record the newest processed message id/date here as the watermark.

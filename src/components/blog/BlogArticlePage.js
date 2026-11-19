@@ -404,6 +404,16 @@ function ArticleSection({ section, index, citationLinks, inlineLinks, sourceLink
 
       {section.table && <ArticleTable table={section.table} />}
 
+      {section.cta && (
+        <div className="mt-[20px] flex flex-wrap items-center gap-3">
+          <Link href={section.cta.href} className="inline-flex items-center gap-2 rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[var(--secondary)]">
+            {section.cta.label}
+            <ArrowUpRight width={16} height={16} aria-hidden="true" />
+          </Link>
+          {section.cta.note && <span className="text-[13px] leading-[1.6] text-[var(--muted)]">{section.cta.note}</span>}
+        </div>
+      )}
+
       {section.image && (
         <figure className="article-inline-image m-0 mt-[24px] overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--surface)] p-[12px]">
           <Image
@@ -414,6 +424,23 @@ function ArticleSection({ section, index, citationLinks, inlineLinks, sourceLink
             sizes="(max-width: 620px) calc(100vw - 48px), (max-width: 1080px) 80vw, 760px"
             className="mx-auto h-auto max-h-[640px] w-full max-w-[760px] rounded-[12px] object-contain"
           />
+        </figure>
+      )}
+
+      {section.map && (
+        <figure className="mt-[24px] m-0 overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--surface)]">
+          <iframe
+            title={section.map.title || "Map to the Brampton immigration office"}
+            src={section.map.src}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+            className="block h-[330px] w-full border-0 max-[620px]:h-[260px]"
+          />
+          {section.map.caption && <figcaption className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 text-[13px] leading-[1.6] text-[var(--muted)]">
+            <span>{section.map.caption}</span>
+            {section.map.href && <a href={section.map.href} target="_blank" rel="noopener noreferrer" className={ARTICLE_LINK_CLASS}>Open in Google Maps</a>}
+          </figcaption>}
         </figure>
       )}
 
@@ -683,6 +710,10 @@ export default function BlogArticlePage({ post, article = null }) {
                 <Info width={14} height={14} aria-hidden="true" className="mt-[3px] flex-none text-[var(--primary)]" />
                 <span>{article.quickAnswerNote || "General information, not advice on your file. Confirm current requirements before you act."}</span>
               </p>}
+              {article.quickAnswerCta && <Link href={article.quickAnswerCta.href} className="mt-[22px] inline-flex self-start items-center gap-2 rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[var(--secondary)]">
+                {article.quickAnswerCta.label}
+                <ArrowUpRight width={16} height={16} aria-hidden="true" />
+              </Link>}
               <div className="mt-[24px] flex flex-wrap items-center gap-x-[20px] gap-y-[9px] border-t border-[var(--border)] pt-[18px] max-[980px]:mt-[20px]">
                 <span className="inline-flex items-center gap-[7px]">
                   <ShieldCheck width={14} height={14} aria-hidden="true" className="text-[var(--primary)]" />

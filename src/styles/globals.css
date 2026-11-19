@@ -1011,6 +1011,8 @@ html[data-theme="light"] .cmg-template-home {
   --shadow-soft: 0 14px 38px color-mix(in srgb, var(--cmg-light-ink) 6%, transparent);
 }
 .cmg-template-home a { color: inherit; text-decoration: none; }
+.hero-card-shell__watermark { opacity: 0.3; }
+html[data-theme="light"] .hero-card-shell__watermark { opacity: 0.2; }
 .cmg-template-home .cta-section a.btn {
   color: var(--cmg-dark-secondary);
   -webkit-text-fill-color: var(--cmg-dark-secondary);
@@ -1659,8 +1661,10 @@ html[data-theme="dark"] .cmg-template-home .hero-copy .lead {
   color: var(--cmg-dark-on-primary) !important;
   -webkit-text-fill-color: var(--cmg-dark-on-primary) !important;
 }
-html[data-theme="light"] .cmg-template-home .hero::before { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 4%, transparent), color-mix(in srgb, var(--cmg-light-bg) 58%, transparent) 145%); }
-html[data-theme="light"] .cmg-template-home .hero-background-carousel .cmg-hero-carousel__wash { background: linear-gradient(90deg, color-mix(in srgb, var(--cmg-light-secondary) 60%, transparent) 0%, color-mix(in srgb, var(--cmg-light-secondary) 38%, transparent) 42%, color-mix(in srgb, var(--cmg-light-secondary) 14%, transparent) 68%, color-mix(in srgb, var(--cmg-light-secondary) 3%, transparent) 100%), linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 9%, transparent) 0%, transparent 62%, color-mix(in srgb, var(--cmg-light-bg) 18%, transparent) 100%); }
+/* The image wash already provides the homepage treatment. Clear the extra
+   full-size pseudo-element layer used by other hero variants. */
+html[data-theme="light"] .hero:has(> .hero-background-image, > .hero-background-carousel)::before { background: transparent; }
+html[data-theme="light"] .hero-background-carousel .cmg-hero-carousel__wash { background: linear-gradient(90deg, color-mix(in srgb, var(--cmg-light-secondary) 60%, transparent) 0%, color-mix(in srgb, var(--cmg-light-secondary) 38%, transparent) 42%, color-mix(in srgb, var(--cmg-light-secondary) 14%, transparent) 68%, color-mix(in srgb, var(--cmg-light-secondary) 3%, transparent) 100%), linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 9%, transparent) 0%, transparent 62%, color-mix(in srgb, var(--cmg-light-bg) 18%, transparent) 100%); }
 html[data-theme="light"] .cmg-template-home .hero-copy h1 {
   color: var(--cmg-light-ink) !important;
   -webkit-text-fill-color: var(--cmg-light-ink) !important;
@@ -1805,8 +1809,8 @@ html[data-theme="light"] .cmg-template-home .hero-profile-card__body > div:last-
   body:has(.cmg-template-home) .site-header > div:first-child { display: block; }
   .cmg-template-home .hero-background-carousel .cmg-hero-carousel__wash { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-template-deep-surface) 52%, transparent) 0%, color-mix(in srgb, var(--cmg-template-deep-surface) 14%, transparent) 48%, color-mix(in srgb, var(--cmg-template-deep-surface) 52%, transparent) 100%); }
   .cmg-template-home .hero-background-image .hero-background-image__wash { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-template-deep-surface) 52%, transparent) 0%, color-mix(in srgb, var(--cmg-template-deep-surface) 14%, transparent) 48%, color-mix(in srgb, var(--cmg-template-deep-surface) 52%, transparent) 100%); }
-  html[data-theme="light"] .cmg-template-home .hero-background-carousel .cmg-hero-carousel__wash { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 54%, transparent) 0%, color-mix(in srgb, var(--cmg-light-secondary) 18%, transparent) 48%, color-mix(in srgb, var(--cmg-light-bg) 36%, transparent) 100%); }
-  html[data-theme="light"] .cmg-template-home .hero-background-image .hero-background-image__wash { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 54%, transparent) 0%, color-mix(in srgb, var(--cmg-light-secondary) 18%, transparent) 48%, color-mix(in srgb, var(--cmg-light-bg) 36%, transparent) 100%); }
+  html[data-theme="light"] .hero-background-carousel .cmg-hero-carousel__wash { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 54%, transparent) 0%, color-mix(in srgb, var(--cmg-light-secondary) 18%, transparent) 48%, color-mix(in srgb, var(--cmg-light-bg) 36%, transparent) 100%); }
+  html[data-theme="light"] .hero-background-image .hero-background-image__wash { background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 54%, transparent) 0%, color-mix(in srgb, var(--cmg-light-secondary) 18%, transparent) 48%, color-mix(in srgb, var(--cmg-light-bg) 36%, transparent) 100%); }
 }
 body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav a:not(.site-header__cta)::after,
 body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav button::after {
@@ -3409,8 +3413,8 @@ html[data-theme="light"] .cmg-template-home .hero-copy .btn-secondary {
 }
 
 @media (max-width: 880px) {
-  html[data-theme="light"] .cmg-template-home .hero-background-image .hero-background-image__wash,
-  html[data-theme="light"] .cmg-template-home .hero-background-carousel .cmg-hero-carousel__wash {
+  html[data-theme="light"] .hero-background-image .hero-background-image__wash,
+  html[data-theme="light"] .hero-background-carousel .cmg-hero-carousel__wash {
     background: linear-gradient(180deg, color-mix(in srgb, var(--cmg-light-secondary) 88%, transparent) 0%, color-mix(in srgb, var(--cmg-light-secondary) 84%, transparent) 60%, color-mix(in srgb, var(--cmg-light-bg) 72%, transparent) 100%);
   }
 

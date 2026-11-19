@@ -19,6 +19,7 @@ import visitorVisaRefusalOfficerNotes2026Brampton from "./visitor-visa-refusal-o
 import workPermitExpiryMaintainedStatusRestorationBrampton from "./work-permit-expiry-maintained-status-restoration-brampton";
 import lmiaForEmployersBramptonChecklist2026 from "./lmia-for-employers-brampton-checklist-2026";
 import immigrationConsultantCostOntarioBrampton from "./immigration-consultant-cost-ontario-brampton";
+import bestImmigrationConsultantBrampton from "./best-immigration-consultant-brampton";
 import rcicVsImmigrationLawyerOntario from "./rcic-vs-immigration-lawyer-ontario";
 import prCardRenewalBramptonResidencyObligation from "./pr-card-renewal-brampton-residency-obligation";
 import citizenshipApplicationBramptonPhysicalPresence from "./citizenship-application-brampton-physical-presence";
@@ -46,6 +47,7 @@ export default {
   "work-permit-expiry-maintained-status-restoration-brampton": workPermitExpiryMaintainedStatusRestorationBrampton,
   "lmia-for-employers-brampton-checklist-2026": lmiaForEmployersBramptonChecklist2026,
   "immigration-consultant-cost-ontario-brampton": immigrationConsultantCostOntarioBrampton,
+  "best-immigration-consultant-brampton": bestImmigrationConsultantBrampton,
   "rcic-vs-immigration-lawyer-ontario": rcicVsImmigrationLawyerOntario,
   "pr-card-renewal-brampton-residency-obligation": prCardRenewalBramptonResidencyObligation,
   "citizenship-application-brampton-physical-presence": citizenshipApplicationBramptonPhysicalPresence,
