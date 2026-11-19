@@ -38,7 +38,7 @@ export default function BramptonOfficeSection() {
   return (
     <section className={`${styles.section} ${styles.officeSection}`} id="brampton-office" aria-labelledby="brampton-office-title">
       <div className={styles.container}>
-        <div className={styles.officeHeading}>
+        <div className={`${styles.officeHeading} reveal`}>
           <div>
             <p className={styles.sectionEyebrow}><MapPin size={15} aria-hidden="true" /> Brampton · Ontario</p>
             <h2 id="brampton-office-title">See where we’ll meet you</h2>
@@ -49,8 +49,8 @@ export default function BramptonOfficeSection() {
 
         <div className={styles.officeLayout}>
           <div className={styles.officePhotos} role="group" aria-label="Photos of the Brampton office building and entrance">
-            {photos.map(({ file, alt, caption, width, height, className }) => (
-              <figure className={styles[className]} key={file}>
+            {photos.map(({ file, alt, caption, width, height, className }, index) => (
+              <figure className={`${styles[className]} reveal`} style={{ "--delay": `${index * 55}ms` }} key={file}>
                 <Image
                   src={`/images/locations/brampton/${file}`}
                   alt={alt}
@@ -64,7 +64,7 @@ export default function BramptonOfficeSection() {
             ))}
           </div>
 
-          <div className={styles.officeInfo}>
+          <div className={`${styles.officeInfo} reveal`} style={{ "--delay": "90ms" }}>
             <div className={styles.officeAddress}>
               <p className={styles.officeInfoLabel}>Visit by appointment</p>
               <address>
@@ -105,7 +105,7 @@ export default function BramptonOfficeSection() {
           </div>
         </div>
 
-        <div className={styles.officeBottomNote}>
+        <div className={`${styles.officeBottomNote} reveal`} style={{ "--delay": "120ms" }}>
           <span><MapPin size={17} aria-hidden="true" /> 2250 Bovaird Drive East, Suite 615</span>
           <span><CircleParking size={17} aria-hidden="true" /> Free parking in front</span>
           <span><Video size={17} aria-hidden="true" /> Video and phone consultations also available</span>
