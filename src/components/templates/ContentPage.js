@@ -6,6 +6,7 @@ import { absoluteUrl, serializeJsonLd } from "@/lib/seo";
 import { getPageFaqs } from "@/lib/faqs";
 import { HERO_TRUST_BADGES } from "@/lib/hero";
 import ReferenceHomepage from "@/components/home/ReferenceHomepage";
+import BramptonLocationPage from "@/components/home/BramptonLocationPage";
 import ReferenceServicePage from "@/components/home/ReferenceServicePage";
 import LegalPage from "@/components/templates/LegalPage";
 import PnpProgramExperienceGate from "@/components/tools/PnpProgramExperienceGate";
@@ -213,6 +214,17 @@ export default function ContentPage({ page, children }) {
     return (
       <>
         <LegalPage page={page} />
+        {pageStructuredData(page).map((obj, i) => (
+          <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: rebrand(serializeJsonLd(obj)) }} />
+        ))}
+      </>
+    );
+  }
+
+  if (page.path === "/locations/brampton") {
+    return (
+      <>
+        <BramptonLocationPage page={page} />
         {pageStructuredData(page).map((obj, i) => (
           <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: rebrand(serializeJsonLd(obj)) }} />
         ))}
