@@ -330,23 +330,23 @@
 }
 
 html[data-theme="light"] .site-header__nav-shell {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(246, 248, 252, 0.96)) !important;
-  border-color: rgba(24, 32, 48, 0.14) !important;
-  box-shadow: 0 22px 48px rgba(24, 32, 48, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+  background: linear-gradient(135deg, rgba(5, 8, 14, 0.97), rgba(14, 19, 30, 0.94) 58%, rgba(5, 8, 14, 0.97)) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 24px 52px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
 }
 
 html[data-theme="light"] .site-header__desktop-nav > a,
 html[data-theme="light"] .site-header__desktop-nav > div > button {
-  color: #172033 !important;
+  color: #f7f8fb !important;
 }
 
 html[data-theme="light"] .site-header__desktop-nav > a:hover,
 html[data-theme="light"] .site-header__desktop-nav > a:focus-visible,
 html[data-theme="light"] .site-header__desktop-nav > div > button:hover,
 html[data-theme="light"] .site-header__desktop-nav > div > button:focus-visible {
-  border-color: rgba(24, 32, 48, 0.1);
-  background: rgba(24, 32, 48, 0.06) !important;
-  color: #101827 !important;
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #fff !important;
 }
 
 html[data-theme="light"] .site-header__dropdown-panel {
@@ -2442,6 +2442,238 @@ body:has(.cmg-template-home) .cmg-mobile-menu {
   z-index: 1;
   background: var(--cmg-template-nav-surface) !important;
   color: var(--cmg-template-nav-ink);
+}
+
+/* Keep the shared mega menu legible in both saved themes. */
+.site-header__dropdown-panel .text-ink {
+  color: #f7f8fb !important;
+}
+
+.site-header__dropdown-panel .text-muted {
+  color: #aeb8c5 !important;
+}
+
+html[data-theme="light"] .site-header__dropdown-panel .text-ink {
+  color: var(--cmg-light-ink) !important;
+}
+
+html[data-theme="light"] .site-header__dropdown-panel .text-muted {
+  color: var(--cmg-light-muted) !important;
+}
+
+html[data-theme="light"] .site-header__dropdown-panel .dropdown-category-title {
+  color: #b3122a !important;
+}
+
+html[data-theme="light"] .site-header__nav-shell [id$="-dropdown-panel"] a.dropdown-view-all {
+  color: #a20b28 !important;
+}
+
+/* A branded, theme-aware 404 replaces Next's OS-themed default error UI. */
+.cmg-not-found {
+  --not-found-ink: #f7f8fb;
+  --not-found-muted: #aeb8c5;
+  --not-found-surface: #111925;
+  --not-found-border: rgba(255, 255, 255, 0.14);
+  display: grid;
+  min-height: 100svh;
+  box-sizing: border-box;
+  align-items: center;
+  justify-items: center;
+  padding: clamp(11rem, 24vh, 16rem) 1.25rem 5rem;
+  color: var(--not-found-ink);
+  background:
+    radial-gradient(ellipse at 50% 25%, rgba(200, 16, 46, 0.18), transparent 42%),
+    linear-gradient(145deg, #070d16, #0b121d 58%, #070d16);
+}
+
+.cmg-not-found__card {
+  position: relative;
+  width: min(100%, 48rem);
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 4rem);
+  border: 1px solid var(--not-found-border);
+  border-radius: 1.5rem;
+  background: var(--not-found-surface);
+  box-shadow: 0 28px 76px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  text-align: center;
+}
+
+.cmg-not-found__card::before {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  left: 1.5rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #d80621, #ff7184);
+  content: "";
+}
+
+.cmg-not-found__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 1.25rem;
+  color: #ff7184;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.cmg-not-found__eyebrow span {
+  width: 1.25rem;
+  height: 3px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.cmg-not-found h1 {
+  max-width: 13ch;
+  margin: 0 auto 1rem;
+  color: var(--not-found-ink) !important;
+  font-size: clamp(2.1rem, 5vw, 3.65rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.cmg-not-found__message {
+  max-width: 39rem;
+  margin: 0 auto;
+  color: var(--not-found-muted);
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
+  line-height: 1.7;
+}
+
+.cmg-not-found__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.cmg-not-found__home,
+.cmg-not-found__guides {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid transparent;
+  border-radius: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-decoration: none;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.cmg-not-found__home {
+  border-color: #d80621;
+  background: #d80621;
+  color: #fff;
+}
+
+.cmg-not-found__home:hover,
+.cmg-not-found__home:focus-visible {
+  border-color: #b3122a;
+  background: #b3122a;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.cmg-not-found__guides {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--not-found-ink);
+}
+
+.cmg-not-found__guides:hover,
+.cmg-not-found__guides:focus-visible {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.09);
+  color: var(--not-found-ink);
+  transform: translateY(-1px);
+}
+
+.cmg-not-found__home svg,
+.cmg-not-found__guides svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+}
+
+.cmg-not-found__help {
+  margin: 1.75rem 0 0;
+  color: var(--not-found-muted);
+  font-size: 0.875rem;
+}
+
+.cmg-not-found__help a {
+  color: #ff7184;
+  font-weight: 700;
+  text-underline-offset: 0.2em;
+}
+
+.cmg-not-found__help a:hover,
+.cmg-not-found__help a:focus-visible {
+  color: var(--not-found-ink);
+}
+
+html[data-theme="light"] .cmg-not-found {
+  --not-found-ink: #10151d;
+  --not-found-muted: #4c5968;
+  --not-found-surface: #fff;
+  --not-found-border: rgba(7, 13, 22, 0.13);
+  background:
+    radial-gradient(ellipse at 50% 25%, rgba(216, 6, 33, 0.1), transparent 42%),
+    linear-gradient(145deg, #f6f7f9, #fff 58%, #fff8f8);
+}
+
+html[data-theme="light"] .cmg-not-found__card {
+  box-shadow: 0 24px 64px rgba(16, 21, 29, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+html[data-theme="light"] .cmg-not-found__guides {
+  border-color: rgba(16, 21, 29, 0.2);
+  background: #fff;
+  color: var(--not-found-ink);
+}
+
+html[data-theme="light"] .cmg-not-found__guides:hover,
+html[data-theme="light"] .cmg-not-found__guides:focus-visible {
+  border-color: rgba(16, 21, 29, 0.42);
+  background: #f6f7f9;
+  color: var(--not-found-ink);
+}
+
+html[data-theme="light"] .cmg-not-found__help a {
+  color: #a20b28;
+}
+
+html[data-theme="light"] .cmg-not-found__help a:hover,
+html[data-theme="light"] .cmg-not-found__help a:focus-visible {
+  color: var(--not-found-ink);
+}
+
+@media (max-width: 640px) {
+  .cmg-not-found {
+    padding: 9rem 1rem 4rem;
+  }
+
+  .cmg-not-found__card {
+    padding: 2rem 1.25rem;
+    border-radius: 1.15rem;
+  }
+
+  .cmg-not-found__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
 }
 body:has(.cmg-template-home) .cmg-mobile-menu__backdrop {
   background: color-mix(in srgb, var(--cmg-template-nav-surface) 72%, transparent) !important;

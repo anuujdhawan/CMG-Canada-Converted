@@ -15,7 +15,7 @@ function BrandLogo() {
       <div className="header-logo-shell flex items-center">
         <Image
           src={site.logos.white}
-          alt={site.name}
+          alt=""
           width={1912}
           height={1140}
           loading="eager"
