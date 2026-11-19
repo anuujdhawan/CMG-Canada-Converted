@@ -126,7 +126,7 @@ function Eyebrow({ children, className = "" }) {
   );
 }
 
-const ARTICLE_LINK_CLASS = "!underline !decoration-white !decoration-2 underline-offset-[3px] transition-opacity hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
+const ARTICLE_LINK_CLASS = "!underline !decoration-[var(--primary)] !decoration-2 underline-offset-4 transition-opacity hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary)]";
 const OFFICIAL_SOURCE_HOSTS = [
   "canada.ca",
   "gc.ca",
