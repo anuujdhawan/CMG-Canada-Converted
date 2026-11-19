@@ -6,7 +6,7 @@ import { absoluteUrl, serializeJsonLd } from "@/lib/seo";
 import { getPageFaqs } from "@/lib/faqs";
 import { HERO_TRUST_BADGES } from "@/lib/hero";
 import ReferenceHomepage from "@/components/home/ReferenceHomepage";
-import BramptonLocationPage from "@/components/home/BramptonLocationPage";
+import LocationPage from "@/components/home/LocationPage";
 import ReferenceServicePage from "@/components/home/ReferenceServicePage";
 import LegalPage from "@/components/templates/LegalPage";
 import PnpProgramExperienceGate from "@/components/tools/PnpProgramExperienceGate";
@@ -108,21 +108,30 @@ export function pageStructuredData(page, { includeFaq = true, pageType = "WebPag
     },
   ];
 
-  const servicePath = isUkLandingPage || /^\/(immigrate|work-and-study|visit|sponsor|citizenship|inadmissibility-and-appeals)(\/|$)/.test(page.path);
+  const onlineLocation = page.location?.kind === "online" ? page.location : null;
+  const servicePath = onlineLocation || isUkLandingPage || /^\/(immigrate|work-and-study|visit|sponsor|citizenship|inadmissibility-and-appeals)(\/|$)/.test(page.path);
   if (servicePath) {
+    let areaServed = { "@type": "Country", name: "Canada" };
+    if (onlineLocation) {
+      areaServed = {
+        "@type": "City",
+        name: onlineLocation.city,
+        containedInPlace: { "@type": "AdministrativeArea", name: onlineLocation.province },
+      };
+    } else if (isUkLandingPage) {
+      areaServed = [
+        { "@type": "Country", name: "United Kingdom" },
+        { "@type": "Country", name: "Canada" },
+      ];
+    }
     schemas.push({
       "@context": "https://schema.org",
       "@type": "Service",
       name: page.h1,
-      serviceType: page.h1,
+      serviceType: onlineLocation ? "Canadian immigration consulting" : page.h1,
       description: page.seo?.description || site.description,
       provider: { "@id": organizationId },
-      areaServed: isUkLandingPage
-        ? [
-            { "@type": "Country", name: "United Kingdom" },
-            { "@type": "Country", name: "Canada" },
-          ]
-        : { "@type": "Country", name: "Canada" },
+      areaServed,
       url,
     });
   }
@@ -221,11 +230,12 @@ export default function ContentPage({ page, children }) {
     );
   }
 
-  if (page.path === "/locations/brampton") {
+  if (page.location) {
+    const pageType = page.location.kind === "directory" ? "CollectionPage" : "WebPage";
     return (
       <>
-        <BramptonLocationPage page={page} />
-        {pageStructuredData(page).map((obj, i) => (
+        <LocationPage page={page} />
+        {pageStructuredData(page, { pageType }).map((obj, i) => (
           <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: rebrand(serializeJsonLd(obj)) }} />
         ))}
       </>

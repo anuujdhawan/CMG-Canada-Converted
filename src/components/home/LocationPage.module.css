@@ -1,15 +1,15 @@
 .page {
   --container: min(1220px, calc(100% - clamp(32px, 7vw, 100px)));
   --section-space: clamp(3.25rem, 6vw, 5.75rem);
-  --brampton-accent: var(--cmg-template-primary-highlight);
-  --brampton-button: var(--cmg-template-nav-cta);
-  --brampton-tint: color-mix(in srgb, var(--primary) 9%, var(--surface));
+  --location-accent: var(--cmg-template-primary-highlight);
+  --location-button: var(--cmg-template-nav-cta);
+  --location-tint: color-mix(in srgb, var(--primary) 9%, var(--surface));
   background: var(--bg);
   color: var(--ink);
 }
 
 :global(html[data-theme="light"]) .page {
-  --brampton-accent: var(--brand-primary-dark);
+  --location-accent: var(--brand-primary-dark);
 }
 
 .page :where([id]) {
@@ -17,7 +17,7 @@
 }
 
 .page :where(a, summary):focus-visible {
-  outline: 2px solid var(--brampton-accent);
+  outline: 2px solid var(--location-accent);
   outline-offset: 4px;
 }
 
@@ -95,7 +95,7 @@
   display: flex;
   align-items: center;
   gap: 0.55rem;
-  color: var(--brampton-accent);
+  color: var(--location-accent);
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.09em;
@@ -121,7 +121,7 @@
 
 .heroCopy h1 span {
   display: block;
-  color: var(--brampton-accent);
+  color: var(--location-accent);
 }
 
 .page .heroLead {
@@ -157,7 +157,7 @@
 }
 
 .page .primaryButton {
-  background: var(--brampton-button);
+  background: var(--location-button);
   color: var(--cmg-dark-on-primary);
 }
 
@@ -172,8 +172,8 @@
 }
 
 .page .secondaryButton:hover {
-  border-color: var(--brampton-accent);
-  color: var(--brampton-accent);
+  border-color: var(--location-accent);
+  color: var(--location-accent);
 }
 
 .page .heroHighlights {
@@ -185,7 +185,7 @@
 }
 
 .heroHighlights svg {
-  color: var(--brampton-accent);
+  color: var(--location-accent);
 }
 
 .snapshot {
@@ -202,7 +202,7 @@
   align-items: center;
   gap: 0.65rem;
   padding: 1rem clamp(0.95rem, 2vw, 1.5rem);
-  background: linear-gradient(118deg, var(--brand-primary), var(--brampton-button));
+  background: linear-gradient(118deg, var(--brand-primary), var(--location-button));
   color: white;
 }
 
@@ -258,12 +258,12 @@
   min-height: 28px;
   align-items: center;
   gap: 0.33rem;
-  color: var(--brampton-accent);
+  color: var(--location-accent);
   font-size: 0.875rem;
   font-weight: 800;
   line-height: 1.45;
   text-decoration-line: underline;
-  text-decoration-color: color-mix(in srgb, var(--brampton-accent) 52%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--location-accent) 52%, transparent);
   text-underline-offset: 0.2em;
   overflow-wrap: anywhere;
 }
@@ -291,7 +291,7 @@
   padding: 0.25rem 0.55rem;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: var(--brampton-tint);
+  background: var(--location-tint);
   color: var(--ink);
   font-size: 0.75rem;
   font-weight: 720;
@@ -321,8 +321,8 @@
 }
 
 .jumpLinks a:hover {
-  border-color: var(--brampton-accent);
-  color: var(--brampton-accent);
+  border-color: var(--location-accent);
+  color: var(--location-accent);
 }
 
 .section {
@@ -417,10 +417,10 @@
   flex: none;
   place-items: center;
   margin-block-end: 0.8rem;
-  border: 1px solid color-mix(in srgb, var(--brampton-accent) 17%, var(--border));
+  border: 1px solid color-mix(in srgb, var(--location-accent) 17%, var(--border));
   border-radius: 0.8rem;
-  background: var(--brampton-tint);
-  color: var(--brampton-accent);
+  background: var(--location-tint);
+  color: var(--location-accent);
 }
 
 .checkCard {
@@ -445,10 +445,10 @@
   gap: 1.1rem 1.65rem;
   margin-block: clamp(1.6rem, 3vw, 2.5rem) 1rem;
   padding: clamp(1.15rem, 2.8vw, 2rem);
-  border: 1px solid color-mix(in srgb, var(--brampton-accent) 26%, var(--border));
-  border-inline-start: 4px solid var(--brampton-accent);
+  border: 1px solid color-mix(in srgb, var(--location-accent) 26%, var(--border));
+  border-inline-start: 4px solid var(--location-accent);
   border-radius: 1.125rem;
-  background: var(--brampton-tint);
+  background: var(--location-tint);
 }
 
 .page .verification h2,
@@ -463,13 +463,13 @@
 }
 
 .page .profile {
-  --primary: var(--brampton-accent);
+  --primary: var(--location-accent);
   padding-block: 0;
   background: transparent;
 }
 
 .page .profile :global(.bg-template-primary) {
-  background: var(--brampton-button);
+  background: var(--location-button);
   color: var(--cmg-dark-on-primary);
 }
 
@@ -481,7 +481,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-block-start: 3px solid var(--brampton-accent);
+  border-block-start: 3px solid var(--location-accent);
 }
 
 .serviceLinks {
@@ -499,7 +499,7 @@
   gap: 1.4rem 2rem;
   margin-block-start: 1.25rem;
   padding: clamp(1.2rem, 3vw, 2.2rem);
-  background: var(--brampton-tint);
+  background: var(--location-tint);
 }
 
 .statistic {
@@ -513,7 +513,7 @@
 }
 
 .statistic strong {
-  color: var(--brampton-accent);
+  color: var(--location-accent);
   font-size: clamp(2.6rem, 5.2vw, 4.2rem);
   font-weight: 800;
   letter-spacing: -0.055em;
@@ -541,7 +541,7 @@
 }
 
 .page .neighbourhoods a {
-  color: var(--brampton-accent);
+  color: var(--location-accent);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -550,7 +550,7 @@
 .closing {
   --ink: var(--cmg-dark-ink);
   --muted: var(--cmg-dark-muted);
-  --brampton-accent: var(--cmg-template-primary-highlight);
+  --location-accent: var(--cmg-template-primary-highlight);
   border-block: 1px solid color-mix(in srgb, var(--cmg-dark-ink) 15%, transparent);
   background: linear-gradient(140deg, var(--cmg-dark-surface), var(--cmg-dark-secondary));
   color: var(--ink);
@@ -648,7 +648,7 @@
 .officeAddress {
   padding: clamp(1.15rem, 2.85vw, 2rem);
   border-block-end: 1px solid var(--border);
-  background: var(--brampton-tint);
+  background: var(--location-tint);
 }
 
 .officeAddress address {
@@ -687,7 +687,7 @@
 }
 
 .officeDetails dt svg {
-  color: var(--brampton-accent);
+  color: var(--location-accent);
 }
 
 .officeDetails dd {
@@ -739,7 +739,7 @@
 .page .faqs {
   /* The shared FAQ uses on-primary text on its dark open state.
      Brampton keeps its tinted surface in both themes. */
-  --primary: var(--brampton-accent);
+  --primary: var(--location-accent);
   --template-on-primary: var(--ink);
   --cmg-light-on-primary: var(--muted);
   padding-block: var(--section-space);
@@ -755,8 +755,8 @@
 }
 
 .page .faqs :global(.faq-item[open]) {
-  background: var(--brampton-tint);
-  border-color: color-mix(in srgb, var(--brampton-accent) 45%, var(--border));
+  background: var(--location-tint);
+  border-color: color-mix(in srgb, var(--location-accent) 45%, var(--border));
 }
 
 .page .faqs :global(.faq-item__summary) {
@@ -771,7 +771,7 @@
 .page .faqs :global(.faq-item[open] .faq-item__toggle) {
   width: 2rem;
   height: 2rem;
-  color: var(--brampton-accent);
+  color: var(--location-accent);
   background: var(--surface);
   box-shadow: none;
 }
@@ -792,7 +792,7 @@
 }
 
 .page .faqs :global(.faq-item__answer) a {
-  color: var(--brampton-accent);
+  color: var(--location-accent);
   -webkit-text-fill-color: currentColor;
   text-decoration: underline;
 }
@@ -941,7 +941,201 @@
   .page .button,
   .page .faqs :global(.faq-item),
   .page .faqs :global(.faq-item__toggle),
-.page .faqs :global(.faq-item[open] .faq-item__toggle) {
+  .page .faqs :global(.faq-item[open] .faq-item__toggle) {
     transition: none;
+  }
+}
+
+.page .sectionJump {
+  scroll-margin-top: calc(10rem - var(--section-space));
+}
+
+.pathwayGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.75rem, 1.5vw, 1.2rem);
+}
+
+.pathwayGrid .actions {
+  margin-block-start: 1.1rem;
+}
+
+.localFacts,
+.pathwayList,
+.preparationList {
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.pathwayList,
+.preparationList,
+.directoryCities,
+.relatedPlaces ul {
+  list-style: none;
+}
+
+.localFacts > div,
+.pathwayList li {
+  padding-block: 0.8rem;
+  border-block-start: 1px solid var(--border);
+}
+
+.localFacts dt,
+.pathwayList strong {
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.localFacts dd,
+.page .pathwayList li p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.preparationList {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.preparationList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.preparationList svg {
+  flex: none;
+  margin-block-start: 0.22rem;
+  color: var(--location-accent);
+}
+
+.routeChecks {
+  margin-block-start: 1.2rem;
+}
+
+.routeChecks .localFacts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.4rem 1.3rem;
+}
+
+.relatedPlaces ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+}
+
+.relatedPlaces a,
+.cityLink {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.relatedPlaces a {
+  min-height: 44px;
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 750;
+}
+
+.directory {
+  overflow: clip;
+  border: 1px solid var(--border);
+  border-radius: 1.125rem;
+  background: var(--surface-alt);
+}
+
+.directoryGroup {
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.22fr) minmax(0, 1fr);
+  gap: clamp(0.8rem, 2vw, 1.6rem);
+  padding: clamp(1rem, 2.6vw, 1.75rem);
+}
+
+.directoryGroup + .directoryGroup {
+  border-block-start: 1px solid var(--border);
+}
+
+.page .directoryProvince h3 {
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.directoryProvince span {
+  display: block;
+  margin-block-start: 0.25rem;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-weight: 750;
+}
+
+.directoryCities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 11.5rem), 1fr));
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.cityLink {
+  min-height: 100%;
+  padding: 0.8rem 0.9rem;
+  border-radius: 0.8rem;
+  line-height: 1.35;
+}
+
+.cityLink strong,
+.cityLink small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.cityLink strong {
+  font-weight: 800;
+}
+
+.cityLink small {
+  margin-block-start: 0.25rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.cityLink svg,
+.relatedPlaces svg {
+  flex: none;
+  color: var(--location-accent);
+}
+
+.cityLink:hover,
+.relatedPlaces a:hover {
+  border-color: var(--location-accent);
+  background: var(--location-tint);
+}
+
+@media (max-width: 719px) {
+  .directoryGroup,
+  .pathwayGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 535px) {
+  .routeChecks .localFacts {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

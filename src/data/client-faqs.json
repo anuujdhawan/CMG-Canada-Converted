@@ -2587,12 +2587,12 @@
   ],
   "/locations/toronto": [
     {
-      "question": "Is my immigration consultant in Toronto really licensed?",
-      "answer": "Verify it yourself. The CICC register lists every licensed RCIC and shows whether the licence is active. Lawyers appear in the law society directory for Ontario. Never rely on a business card or social media page."
+      "question": "Can I book an immigration consultation from Toronto?",
+      "answer": "Yes. Book a free first consultation by video or phone from Toronto. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Can I get help from CMG without visiting an office in Toronto?",
-      "answer": "You can. Consultations take place by video or phone, documents are shared securely online and Pankaj Khanna, RCIC (R711256), files your application. Your location in Toronto does not change who handles your case."
+      "question": "Is my immigration consultant in Toronto really licensed?",
+      "answer": "Verify it yourself. The CICC register lists every licensed RCIC and shows whether the licence is active. Lawyers appear in the law society directory for Ontario. Never rely on a business card or social media page."
     },
     {
       "question": "Where should I start with immigration if I live in Toronto?",
@@ -2604,11 +2604,23 @@
     },
     {
       "question": "How can someone in Toronto improve their CRS score?",
-      "answer": "Retake language tests for higher bands, add Canadian work experience, finish a credential or earn a nomination from Ontario. Each change has a different value, so a consultant can model the options before you spend money."
+      "answer": "Check whether stronger language results, recognized education, qualifying work or a provincial nomination could improve your score. IRCC’s current Labour Market Integration factor compares qualifying Canadian work experience with an eligible high-wage job offer and uses the higher scoring option.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "Can graduates of the University of Toronto, Toronto Metropolitan University, York University, Seneca, George Brown and Humber get a post-graduation work permit?",
-      "answer": "Often, but not automatically. The program, school status and your language results all matter, and you must apply on time after receiving your final marks. Confirm eligibility before you commit to a course in Toronto."
+      "answer": "Graduates may qualify if their school, exact program, study history and timing meet IRCC’s requirements. Language and field-of-study criteria depend on the program and circumstances. Check eligibility before enrolling.",
+      "sourceLinks": [
+        {
+          "label": "IRCC post-graduation work permit eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html"
+        }
+      ]
     },
     {
       "question": "What do couples in Toronto need for spousal sponsorship?",
@@ -2616,7 +2628,13 @@
     },
     {
       "question": "Can my parents come to visit me in Toronto on a Super Visa?",
-      "answer": "Yes, if you meet the minimum income for your family size and buy Canadian private medical insurance for them. They can then stay with you in Toronto for long visits. Prepare an invitation letter and proof of income."
+      "answer": "A Super Visa application normally needs an invitation, proof of relationship and that the host meets the income requirement, an immigration medical exam and qualifying health insurance. The insurer may be Canadian or an eligible insurer outside Canada. Check IRCC’s current policy requirements before buying coverage.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Super Visa documents and insurance",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents.html"
+        }
+      ]
     },
     {
       "question": "How can a Toronto business hire without an LMIA?",
@@ -2635,8 +2653,8 @@
       "answer": "Absences reduce the days you can count, so track every trip. Time abroad can delay your eligibility date. Keep passports and travel records, since officers may ask for them."
     },
     {
-      "question": "Can I book an online meeting from Toronto?",
-      "answer": "Yes. Meetings are held online, so you can book from Toronto without travelling. Your consultant explains the fees, the tax for Ontario and the next steps in writing before you commit."
+      "question": "What should I prepare for my first consultation from Toronto?",
+      "answer": "Start with your goal, current status, permit expiry date and any response deadline. Have work and education dates, language results, and relevant job offers or decisions handy for the call. CMG will explain the proposed work and fees in writing if you decide to proceed."
     },
     {
       "question": "How can I avoid immigration scams in Toronto?",
@@ -2649,12 +2667,12 @@
   ],
   "/locations/mississauga": [
     {
-      "question": "How do I find a licensed immigration consultant in Mississauga?",
-      "answer": "Check the CICC public register for an active Regulated Canadian Immigration Consultant licence, or confirm a lawyer's standing with the law society. Do this before paying anyone for immigration services in Mississauga, because unlicensed agents cannot legally represent you."
+      "question": "Can I book an immigration consultation from Mississauga?",
+      "answer": "Yes. Book a free first consultation by video or phone from Mississauga. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Does Commonwealth Migration Group serve clients in Mississauga?",
-      "answer": "Yes. Meetings with CMG are held online, so people in Mississauga and across Ontario get the same service as clients anywhere else. Pankaj Khanna, RCIC, files every case with IRCC and the provinces, whatever your location."
+      "question": "How do I find a licensed immigration consultant in Mississauga?",
+      "answer": "Check the CICC public register for an active Regulated Canadian Immigration Consultant licence, or confirm a lawyer's standing with the law society. Do this before paying anyone for immigration services in Mississauga, because unlicensed agents cannot legally represent you."
     },
     {
       "question": "What are the main routes to PR for workers in Mississauga?",
@@ -2666,15 +2684,33 @@
     },
     {
       "question": "Does being in Mississauga, Ontario, affect my Express Entry chances?",
-      "answer": "Not directly. Invitations depend on your score and the draw type. Category-based draws can favour some occupations or French, so check them against your profile instead of your location."
+      "answer": "Your city does not directly change your Express Entry score. IRCC scores your profile using federal criteria, including language results, education, eligible work or job offers and other factors such as an Express Entry-linked nomination. Review the current rules for your profile and draw type.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "Can graduates of the University of Toronto Mississauga and Sheridan College get a post-graduation work permit?",
-      "answer": "Often, but not automatically. The program, school status and your language results all matter, and you must apply on time after receiving your final marks. Confirm eligibility before you commit to a course in Mississauga."
+      "answer": "Graduates may qualify if their school, exact program, study history and timing meet IRCC’s requirements. Language and field-of-study criteria depend on the program and circumstances. Check eligibility before enrolling.",
+      "sourceLinks": [
+        {
+          "label": "IRCC post-graduation work permit eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html"
+        }
+      ]
     },
     {
       "question": "Can I sponsor my spouse if I live in Mississauga?",
-      "answer": "Yes, if you are a citizen or permanent resident living in Canada and meet the income and relationship rules. The process is federal, so it works the same in Mississauga as it does in the rest of Canada outside Quebec."
+      "answer": "Yes, if you meet IRCC’s sponsor, relationship and undertaking requirements. Most spouse or partner sponsorships have no minimum income threshold. Some cases involving dependent children have a financial test, and Quebec has additional rules.",
+      "sourceLinks": [
+        {
+          "label": "IRCC sponsorship eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/eligibility.html"
+        }
+      ]
     },
     {
       "question": "How long can my parents stay with me in Mississauga?",
@@ -2711,12 +2747,12 @@
   ],
   "/locations/ottawa": [
     {
-      "question": "How do I find a licensed immigration consultant in Ottawa?",
-      "answer": "Check the CICC public register for an active Regulated Canadian Immigration Consultant licence, or confirm a lawyer's standing with the law society. Do this before paying anyone for immigration services in Ottawa, because unlicensed agents cannot legally represent you."
+      "question": "Can I book an immigration consultation from Ottawa?",
+      "answer": "Yes. Book a free first consultation by video or phone from Ottawa. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Does Commonwealth Migration Group serve clients in Ottawa?",
-      "answer": "Yes. Meetings with CMG are held online, so people in Ottawa and across Ontario get the same service as clients anywhere else. Pankaj Khanna, RCIC, files every case with IRCC and the provinces, whatever your location."
+      "question": "How do I find a licensed immigration consultant in Ottawa?",
+      "answer": "Check the CICC public register for an active Regulated Canadian Immigration Consultant licence, or confirm a lawyer's standing with the law society. Do this before paying anyone for immigration services in Ottawa, because unlicensed agents cannot legally represent you."
     },
     {
       "question": "Which pathway gives people in Ottawa the strongest chance at permanent residence?",
@@ -2728,7 +2764,13 @@
     },
     {
       "question": "Will my CRS score differ if I live in Ottawa?",
-      "answer": "It will not. Express Entry scores everyone with the same federal formula. A Ontario nomination adds points, and so can some Canadian study or work, but your postal code never does."
+      "answer": "Your city does not directly change your Express Entry score. IRCC scores your profile using federal criteria, including language results, education, eligible work or job offers and other factors such as an Express Entry-linked nomination. Review the current rules for your profile and draw type.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "What should international students in Ottawa know about study permits and the PGWP?",
@@ -2759,8 +2801,8 @@
       "answer": "Proof of physical presence, language results where required, identity documents and a clean eligibility record. After approval you attend a ceremony. Applicants in Ottawa follow the same federal process as everyone."
     },
     {
-      "question": "Can I book an online meeting from Ottawa?",
-      "answer": "Yes. Meetings are held online, so you can book from Ottawa without travelling. Your consultant explains the fees, the tax for Ontario and the next steps in writing before you commit."
+      "question": "What should I prepare for my first consultation from Ottawa?",
+      "answer": "Start with your goal, current status, permit expiry date and any response deadline. Have work and education dates, language results, and relevant job offers or decisions handy for the call. CMG will explain the proposed work and fees in writing if you decide to proceed."
     },
     {
       "question": "What are common immigration fraud tactics in Ottawa?",
@@ -2773,12 +2815,12 @@
   ],
   "/locations/hamilton": [
     {
-      "question": "What should I check before hiring an RCIC in Hamilton?",
-      "answer": "Ask for the licence number and search it on the CICC register. A real RCIC will give you a written agreement and a receipt. If someone in Hamilton avoids those basics, look elsewhere."
+      "question": "Can I book an immigration consultation from Hamilton?",
+      "answer": "Yes. Book a free first consultation by video or phone from Hamilton. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Who handles my file if I live in Hamilton?",
-      "answer": "Pankaj Khanna, a licensed RCIC, files cases for CMG clients regardless of where they live. For clients in Hamilton that means online meetings, a written fee agreement and updates by email or phone."
+      "question": "What should I check before hiring an RCIC in Hamilton?",
+      "answer": "Ask for the licence number and search it on the CICC register. A real RCIC will give you a written agreement and a receipt. If someone in Hamilton avoids those basics, look elsewhere."
     },
     {
       "question": "Where should I start with immigration if I live in Hamilton?",
@@ -2790,11 +2832,23 @@
     },
     {
       "question": "Will my CRS score differ if I live in Hamilton?",
-      "answer": "It will not. Express Entry scores everyone with the same federal formula. A Ontario nomination adds points, and so can some Canadian study or work, but your postal code never does."
+      "answer": "Your city does not directly change your Express Entry score. IRCC scores your profile using federal criteria, including language results, education, eligible work or job offers and other factors such as an Express Entry-linked nomination. Review the current rules for your profile and draw type.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "Can graduates of McMaster University and Mohawk College get a post-graduation work permit?",
-      "answer": "Often, but not automatically. The program, school status and your language results all matter, and you must apply on time after receiving your final marks. Confirm eligibility before you commit to a course in Hamilton."
+      "answer": "Graduates may qualify if their school, exact program, study history and timing meet IRCC’s requirements. Language and field-of-study criteria depend on the program and circumstances. Check eligibility before enrolling.",
+      "sourceLinks": [
+        {
+          "label": "IRCC post-graduation work permit eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html"
+        }
+      ]
     },
     {
       "question": "How long does spousal sponsorship take for applicants in Hamilton?",
@@ -2802,7 +2856,13 @@
     },
     {
       "question": "What do I need for a Super Visa so my parents can stay in Hamilton?",
-      "answer": "An invitation letter, proof that your household income meets the threshold and a valid Canadian insurance policy for your parents. They should also show ties to home. The rules are federal, so they match those in other cities."
+      "answer": "A Super Visa application normally needs an invitation, proof of relationship and that the host meets the income requirement, an immigration medical exam and qualifying health insurance. The insurer may be Canadian or an eligible insurer outside Canada. Check IRCC’s current policy requirements before buying coverage.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Super Visa documents and insurance",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents.html"
+        }
+      ]
     },
     {
       "question": "What does an employer in Hamilton need for an LMIA?",
@@ -2835,12 +2895,12 @@
   ],
   "/locations/london": [
     {
-      "question": "How do I find a licensed immigration consultant in London?",
-      "answer": "Check the CICC public register for an active Regulated Canadian Immigration Consultant licence, or confirm a lawyer's standing with the law society. Do this before paying anyone for immigration services in London, because unlicensed agents cannot legally represent you."
+      "question": "Can I book an immigration consultation from London?",
+      "answer": "Yes. Book a free first consultation by video or phone from London. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Can I get help from CMG without visiting an office in London?",
-      "answer": "You can. Consultations take place by video or phone, documents are shared securely online and Pankaj Khanna, RCIC (R711256), files your application. Your location in London does not change who handles your case."
+      "question": "How do I find a licensed immigration consultant in London?",
+      "answer": "Check the CICC public register for an active Regulated Canadian Immigration Consultant licence, or confirm a lawyer's standing with the law society. Do this before paying anyone for immigration services in London, because unlicensed agents cannot legally represent you."
     },
     {
       "question": "Which immigration programs suit people living in London?",
@@ -2852,7 +2912,13 @@
     },
     {
       "question": "How can someone in London improve their CRS score?",
-      "answer": "Retake language tests for higher bands, add Canadian work experience, finish a credential or earn a nomination from Ontario. Each change has a different value, so a consultant can model the options before you spend money."
+      "answer": "Check whether stronger language results, recognized education, qualifying work or a provincial nomination could improve your score. IRCC’s current Labour Market Integration factor compares qualifying Canadian work experience with an eligible high-wage job offer and uses the higher scoring option.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "How do I extend my study permit while living in London?",
@@ -2864,7 +2930,13 @@
     },
     {
       "question": "Can my parents come to visit me in London on a Super Visa?",
-      "answer": "Yes, if you meet the minimum income for your family size and buy Canadian private medical insurance for them. They can then stay with you in London for long visits. Prepare an invitation letter and proof of income."
+      "answer": "A Super Visa application normally needs an invitation, proof of relationship and that the host meets the income requirement, an immigration medical exam and qualifying health insurance. The insurer may be Canadian or an eligible insurer outside Canada. Check IRCC’s current policy requirements before buying coverage.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Super Visa documents and insurance",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents.html"
+        }
+      ]
     },
     {
       "question": "How can a London business hire without an LMIA?",
@@ -2897,12 +2969,12 @@
   ],
   "/locations/kitchener-waterloo": [
     {
-      "question": "Is my immigration consultant in Kitchener-Waterloo really licensed?",
-      "answer": "Verify it yourself. The CICC register lists every licensed RCIC and shows whether the licence is active. Lawyers appear in the law society directory for Ontario. Never rely on a business card or social media page."
+      "question": "Can I book an immigration consultation from Kitchener-Waterloo?",
+      "answer": "Yes. Book a free first consultation by video or phone from Kitchener-Waterloo. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Can I get help from CMG without visiting an office in Kitchener-Waterloo?",
-      "answer": "You can. Consultations take place by video or phone, documents are shared securely online and Pankaj Khanna, RCIC (R711256), files your application. Your location in Kitchener-Waterloo does not change who handles your case."
+      "question": "Is my immigration consultant in Kitchener-Waterloo really licensed?",
+      "answer": "Verify it yourself. The CICC register lists every licensed RCIC and shows whether the licence is active. Lawyers appear in the law society directory for Ontario. Never rely on a business card or social media page."
     },
     {
       "question": "What are the main routes to PR for workers in Kitchener-Waterloo?",
@@ -2914,7 +2986,13 @@
     },
     {
       "question": "How can someone in Kitchener-Waterloo improve their CRS score?",
-      "answer": "Retake language tests for higher bands, add Canadian work experience, finish a credential or earn a nomination from Ontario. Each change has a different value, so a consultant can model the options before you spend money."
+      "answer": "Check whether stronger language results, recognized education, qualifying work or a provincial nomination could improve your score. IRCC’s current Labour Market Integration factor compares qualifying Canadian work experience with an eligible high-wage job offer and uses the higher scoring option.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "How do I extend my study permit while living in Kitchener-Waterloo?",
@@ -2922,7 +3000,13 @@
     },
     {
       "question": "Can I sponsor my spouse if I live in Kitchener-Waterloo?",
-      "answer": "Yes, if you are a citizen or permanent resident living in Canada and meet the income and relationship rules. The process is federal, so it works the same in Kitchener-Waterloo as it does in the rest of Canada outside Quebec."
+      "answer": "Yes, if you meet IRCC’s sponsor, relationship and undertaking requirements. Most spouse or partner sponsorships have no minimum income threshold. Some cases involving dependent children have a financial test, and Quebec has additional rules.",
+      "sourceLinks": [
+        {
+          "label": "IRCC sponsorship eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/eligibility.html"
+        }
+      ]
     },
     {
       "question": "Is a Super Visa better than a visitor visa for relatives in Kitchener-Waterloo?",
@@ -2959,12 +3043,12 @@
   ],
   "/locations/windsor": [
     {
-      "question": "What should I check before hiring an RCIC in Windsor?",
-      "answer": "Ask for the licence number and search it on the CICC register. A real RCIC will give you a written agreement and a receipt. If someone in Windsor avoids those basics, look elsewhere."
+      "question": "Can I book an immigration consultation from Windsor?",
+      "answer": "Yes. Book a free first consultation by video or phone from Windsor. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Do I need to travel to Brampton if I live in Windsor?",
-      "answer": "No. CMG is based in Brampton, Ontario, but everything can be done online. People in Windsor meet by video, sign electronically and receive updates without travelling."
+      "question": "What should I check before hiring an RCIC in Windsor?",
+      "answer": "Ask for the licence number and search it on the CICC register. A real RCIC will give you a written agreement and a receipt. If someone in Windsor avoids those basics, look elsewhere."
     },
     {
       "question": "Which pathway gives people in Windsor the strongest chance at permanent residence?",
@@ -2976,11 +3060,23 @@
     },
     {
       "question": "Does being in Windsor, Ontario, affect my Express Entry chances?",
-      "answer": "Not directly. Invitations depend on your score and the draw type. Category-based draws can favour some occupations or French, so check them against your profile instead of your location."
+      "answer": "Your city does not directly change your Express Entry score. IRCC scores your profile using federal criteria, including language results, education, eligible work or job offers and other factors such as an Express Entry-linked nomination. Review the current rules for your profile and draw type.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "I study in Windsor. How do I plan for PR after graduation?",
-      "answer": "Think about it before you finish. A PGWP gives you time to gain skilled work experience, which can lead to Express Entry or the OINP. Students in Windsor should keep records of work and language scores."
+      "answer": "Check your specific program, study history, permit dates and IRCC’s current PGWP requirements before you graduate. Eligible graduates may use the permit to gain qualifying work experience. Permanent residence requires a separate eligibility check.",
+      "sourceLinks": [
+        {
+          "label": "IRCC post-graduation work permit eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html"
+        }
+      ]
     },
     {
       "question": "Can my partner work while I sponsor them from Windsor?",
@@ -2988,7 +3084,13 @@
     },
     {
       "question": "What do I need for a Super Visa so my parents can stay in Windsor?",
-      "answer": "An invitation letter, proof that your household income meets the threshold and a valid Canadian insurance policy for your parents. They should also show ties to home. The rules are federal, so they match those in other cities."
+      "answer": "A Super Visa application normally needs an invitation, proof of relationship and that the host meets the income requirement, an immigration medical exam and qualifying health insurance. The insurer may be Canadian or an eligible insurer outside Canada. Check IRCC’s current policy requirements before buying coverage.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Super Visa documents and insurance",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents.html"
+        }
+      ]
     },
     {
       "question": "How can a Windsor business hire without an LMIA?",
@@ -3007,8 +3109,8 @@
       "answer": "Eligibility rests on your time as a permanent resident in Canada, not on the city. You must also meet language, tax and no-prohibition rules. Check your travel history first."
     },
     {
-      "question": "Can I book an online meeting from Windsor?",
-      "answer": "Yes. Meetings are held online, so you can book from Windsor without travelling. Your consultant explains the fees, the tax for Ontario and the next steps in writing before you commit."
+      "question": "What should I prepare for my first consultation from Windsor?",
+      "answer": "Start with your goal, current status, permit expiry date and any response deadline. Have work and education dates, language results, and relevant job offers or decisions handy for the call. CMG will explain the proposed work and fees in writing if you decide to proceed."
     },
     {
       "question": "Someone offered a job in Windsor in exchange for money. Is that legal?",
@@ -3021,12 +3123,18 @@
   ],
   "/locations/vancouver": [
     {
-      "question": "Who can legally give immigration advice to people in Vancouver?",
-      "answer": "Only licensed RCICs, lawyers and paralegals in good standing, and Quebec notaries, can charge for immigration advice or representation. Friends, travel agents and recruiters in Vancouver cannot, even if they say they have experience."
+      "question": "Can I book an immigration consultation from Vancouver?",
+      "answer": "Yes. Book a free first consultation by video or phone from Vancouver. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Does Commonwealth Migration Group serve clients in Vancouver?",
-      "answer": "Yes. Meetings with CMG are held online, so people in Vancouver and across British Columbia get the same service as clients anywhere else. Pankaj Khanna, RCIC, files every case with IRCC and the provinces, whatever your location."
+      "question": "Who can legally give immigration advice to people in Vancouver?",
+      "answer": "Verify paid immigration advisers with their regulator. This includes immigration consultants in good standing with the CICC, lawyers authorized by a Canadian law society, Quebec notaries in good standing and eligible Ontario paralegals. Check the adviser's current authorization before paying for advice.",
+      "sourceLinks": [
+        {
+          "label": "IRCC guide to authorized representatives",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose/authorized.html"
+        }
+      ]
     },
     {
       "question": "Which immigration programs suit people living in Vancouver?",
@@ -3038,11 +3146,23 @@
     },
     {
       "question": "How can someone in Vancouver improve their CRS score?",
-      "answer": "Retake language tests for higher bands, add Canadian work experience, finish a credential or earn a nomination from British Columbia. Each change has a different value, so a consultant can model the options before you spend money."
+      "answer": "Check whether stronger language results, recognized education, qualifying work or a provincial nomination could improve your score. IRCC’s current Labour Market Integration factor compares qualifying Canadian work experience with an eligible high-wage job offer and uses the higher scoring option.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "Can graduates of the University of British Columbia, Simon Fraser University, BCIT and Langara College get a post-graduation work permit?",
-      "answer": "Often, but not automatically. The program, school status and your language results all matter, and you must apply on time after receiving your final marks. Confirm eligibility before you commit to a course in Vancouver."
+      "answer": "Graduates may qualify if their school, exact program, study history and timing meet IRCC’s requirements. Language and field-of-study criteria depend on the program and circumstances. Check eligibility before enrolling.",
+      "sourceLinks": [
+        {
+          "label": "IRCC post-graduation work permit eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html"
+        }
+      ]
     },
     {
       "question": "Can my partner work while I sponsor them from Vancouver?",
@@ -3050,7 +3170,13 @@
     },
     {
       "question": "Can my parents come to visit me in Vancouver on a Super Visa?",
-      "answer": "Yes, if you meet the minimum income for your family size and buy Canadian private medical insurance for them. They can then stay with you in Vancouver for long visits. Prepare an invitation letter and proof of income."
+      "answer": "A Super Visa application normally needs an invitation, proof of relationship and that the host meets the income requirement, an immigration medical exam and qualifying health insurance. The insurer may be Canadian or an eligible insurer outside Canada. Check IRCC’s current policy requirements before buying coverage.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Super Visa documents and insurance",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents.html"
+        }
+      ]
     },
     {
       "question": "What does an employer in Vancouver need for an LMIA?",
@@ -3083,12 +3209,12 @@
   ],
   "/locations/surrey": [
     {
-      "question": "How do I find a licensed immigration consultant in Surrey?",
-      "answer": "Check the CICC public register for an active Regulated Canadian Immigration Consultant licence, or confirm a lawyer's standing with the law society. Do this before paying anyone for immigration services in Surrey, because unlicensed agents cannot legally represent you."
+      "question": "Can I book an immigration consultation from Surrey?",
+      "answer": "Yes. Book a free first consultation by video or phone from Surrey. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Do I need to travel to Brampton if I live in Surrey?",
-      "answer": "No. CMG is based in Brampton, Ontario, but everything can be done online. People in Surrey meet by video, sign electronically and receive updates without travelling."
+      "question": "How do I find a licensed immigration consultant in Surrey?",
+      "answer": "Check the CICC public register for an active Regulated Canadian Immigration Consultant licence, or confirm a lawyer's standing with the law society. Do this before paying anyone for immigration services in Surrey, because unlicensed agents cannot legally represent you."
     },
     {
       "question": "What are the main routes to PR for workers in Surrey?",
@@ -3100,15 +3226,33 @@
     },
     {
       "question": "Does living in Surrey change my Express Entry score?",
-      "answer": "No. The CRS is federal and ignores your city. What changes it is your language level, education, work experience, a job offer or a provincial nomination. Living in Surrey can help you build Canadian experience."
+      "answer": "Your city does not directly change your Express Entry score. IRCC scores your profile using federal criteria, including language results, education, eligible work or job offers and other factors such as an Express Entry-linked nomination. Review the current rules for your profile and draw type.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "I study in Surrey. How do I plan for PR after graduation?",
-      "answer": "Think about it before you finish. A PGWP gives you time to gain skilled work experience, which can lead to Express Entry or the BC PNP. Students in Surrey should keep records of work and language scores."
+      "answer": "Check your specific program, study history, permit dates and IRCC’s current PGWP requirements before you graduate. Eligible graduates may use the permit to gain qualifying work experience. Permanent residence requires a separate eligibility check.",
+      "sourceLinks": [
+        {
+          "label": "IRCC post-graduation work permit eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html"
+        }
+      ]
     },
     {
       "question": "Can I sponsor my spouse if I live in Surrey?",
-      "answer": "Yes, if you are a citizen or permanent resident living in Canada and meet the income and relationship rules. The process is federal, so it works the same in Surrey as it does in the rest of Canada outside Quebec."
+      "answer": "Yes, if you meet IRCC’s sponsor, relationship and undertaking requirements. Most spouse or partner sponsorships have no minimum income threshold. Some cases involving dependent children have a financial test, and Quebec has additional rules.",
+      "sourceLinks": [
+        {
+          "label": "IRCC sponsorship eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/eligibility.html"
+        }
+      ]
     },
     {
       "question": "How long can my parents stay with me in Surrey?",
@@ -3145,12 +3289,12 @@
   ],
   "/locations/victoria": [
     {
-      "question": "What should I check before hiring an RCIC in Victoria?",
-      "answer": "Ask for the licence number and search it on the CICC register. A real RCIC will give you a written agreement and a receipt. If someone in Victoria avoids those basics, look elsewhere."
+      "question": "Can I book an immigration consultation from Victoria?",
+      "answer": "Yes. Book a free first consultation by video or phone from Victoria. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Can I get help from CMG without visiting an office in Victoria?",
-      "answer": "You can. Consultations take place by video or phone, documents are shared securely online and Pankaj Khanna, RCIC (R711256), files your application. Your location in Victoria does not change who handles your case."
+      "question": "What should I check before hiring an RCIC in Victoria?",
+      "answer": "Ask for the licence number and search it on the CICC register. A real RCIC will give you a written agreement and a receipt. If someone in Victoria avoids those basics, look elsewhere."
     },
     {
       "question": "Which pathway gives people in Victoria the strongest chance at permanent residence?",
@@ -3162,11 +3306,23 @@
     },
     {
       "question": "Does living in Victoria change my Express Entry score?",
-      "answer": "No. The CRS is federal and ignores your city. What changes it is your language level, education, work experience, a job offer or a provincial nomination. Living in Victoria can help you build Canadian experience."
+      "answer": "Your city does not directly change your Express Entry score. IRCC scores your profile using federal criteria, including language results, education, eligible work or job offers and other factors such as an Express Entry-linked nomination. Review the current rules for your profile and draw type.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "I study in Victoria. How do I plan for PR after graduation?",
-      "answer": "Think about it before you finish. A PGWP gives you time to gain skilled work experience, which can lead to Express Entry or the BC PNP. Students in Victoria should keep records of work and language scores."
+      "answer": "Check your specific program, study history, permit dates and IRCC’s current PGWP requirements before you graduate. Eligible graduates may use the permit to gain qualifying work experience. Permanent residence requires a separate eligibility check.",
+      "sourceLinks": [
+        {
+          "label": "IRCC post-graduation work permit eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html"
+        }
+      ]
     },
     {
       "question": "How long does spousal sponsorship take for applicants in Victoria?",
@@ -3174,7 +3330,13 @@
     },
     {
       "question": "Can my parents come to visit me in Victoria on a Super Visa?",
-      "answer": "Yes, if you meet the minimum income for your family size and buy Canadian private medical insurance for them. They can then stay with you in Victoria for long visits. Prepare an invitation letter and proof of income."
+      "answer": "A Super Visa application normally needs an invitation, proof of relationship and that the host meets the income requirement, an immigration medical exam and qualifying health insurance. The insurer may be Canadian or an eligible insurer outside Canada. Check IRCC’s current policy requirements before buying coverage.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Super Visa documents and insurance",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents.html"
+        }
+      ]
     },
     {
       "question": "Can workers in provincial government, tourism, technology and health care in Victoria get employer-supported permits?",
@@ -3207,12 +3369,18 @@
   ],
   "/locations/kelowna": [
     {
-      "question": "Who can legally give immigration advice to people in Kelowna?",
-      "answer": "Only licensed RCICs, lawyers and paralegals in good standing, and Quebec notaries, can charge for immigration advice or representation. Friends, travel agents and recruiters in Kelowna cannot, even if they say they have experience."
+      "question": "Can I book an immigration consultation from Kelowna?",
+      "answer": "Yes. Book a free first consultation by video or phone from Kelowna. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Who handles my file if I live in Kelowna?",
-      "answer": "Pankaj Khanna, a licensed RCIC, files cases for CMG clients regardless of where they live. For clients in Kelowna that means online meetings, a written fee agreement and updates by email or phone."
+      "question": "Who can legally give immigration advice to people in Kelowna?",
+      "answer": "Verify paid immigration advisers with their regulator. This includes immigration consultants in good standing with the CICC, lawyers authorized by a Canadian law society, Quebec notaries in good standing and eligible Ontario paralegals. Check the adviser's current authorization before paying for advice.",
+      "sourceLinks": [
+        {
+          "label": "IRCC guide to authorized representatives",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose/authorized.html"
+        }
+      ]
     },
     {
       "question": "Where should I start with immigration if I live in Kelowna?",
@@ -3224,7 +3392,13 @@
     },
     {
       "question": "How can someone in Kelowna improve their CRS score?",
-      "answer": "Retake language tests for higher bands, add Canadian work experience, finish a credential or earn a nomination from British Columbia. Each change has a different value, so a consultant can model the options before you spend money."
+      "answer": "Check whether stronger language results, recognized education, qualifying work or a provincial nomination could improve your score. IRCC’s current Labour Market Integration factor compares qualifying Canadian work experience with an eligible high-wage job offer and uses the higher scoring option.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "What should international students in Kelowna know about study permits and the PGWP?",
@@ -3269,12 +3443,12 @@
   ],
   "/locations/calgary": [
     {
-      "question": "Is my immigration consultant in Calgary really licensed?",
-      "answer": "Verify it yourself. The CICC register lists every licensed RCIC and shows whether the licence is active. Lawyers appear in the law society directory for Alberta. Never rely on a business card or social media page."
+      "question": "Can I book an immigration consultation from Calgary?",
+      "answer": "Yes. Book a free first consultation by video or phone from Calgary. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Can I get help from CMG without visiting an office in Calgary?",
-      "answer": "You can. Consultations take place by video or phone, documents are shared securely online and Pankaj Khanna, RCIC (R711256), files your application. Your location in Calgary does not change who handles your case."
+      "question": "Is my immigration consultant in Calgary really licensed?",
+      "answer": "Verify it yourself. The CICC register lists every licensed RCIC and shows whether the licence is active. Lawyers appear in the law society directory for Alberta. Never rely on a business card or social media page."
     },
     {
       "question": "Which immigration programs suit people living in Calgary?",
@@ -3286,11 +3460,23 @@
     },
     {
       "question": "Will my CRS score differ if I live in Calgary?",
-      "answer": "It will not. Express Entry scores everyone with the same federal formula. A Alberta nomination adds points, and so can some Canadian study or work, but your postal code never does."
+      "answer": "Your city does not directly change your Express Entry score. IRCC scores your profile using federal criteria, including language results, education, eligible work or job offers and other factors such as an Express Entry-linked nomination. Review the current rules for your profile and draw type.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "Can graduates of the University of Calgary, SAIT and Mount Royal University get a post-graduation work permit?",
-      "answer": "Often, but not automatically. The program, school status and your language results all matter, and you must apply on time after receiving your final marks. Confirm eligibility before you commit to a course in Calgary."
+      "answer": "Graduates may qualify if their school, exact program, study history and timing meet IRCC’s requirements. Language and field-of-study criteria depend on the program and circumstances. Check eligibility before enrolling.",
+      "sourceLinks": [
+        {
+          "label": "IRCC post-graduation work permit eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html"
+        }
+      ]
     },
     {
       "question": "Can my partner work while I sponsor them from Calgary?",
@@ -3298,7 +3484,13 @@
     },
     {
       "question": "What do I need for a Super Visa so my parents can stay in Calgary?",
-      "answer": "An invitation letter, proof that your household income meets the threshold and a valid Canadian insurance policy for your parents. They should also show ties to home. The rules are federal, so they match those in other cities."
+      "answer": "A Super Visa application normally needs an invitation, proof of relationship and that the host meets the income requirement, an immigration medical exam and qualifying health insurance. The insurer may be Canadian or an eligible insurer outside Canada. Check IRCC’s current policy requirements before buying coverage.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Super Visa documents and insurance",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents.html"
+        }
+      ]
     },
     {
       "question": "Can workers in energy, finance, technology and construction in Calgary get employer-supported permits?",
@@ -3317,8 +3509,8 @@
       "answer": "Proof of physical presence, language results where required, identity documents and a clean eligibility record. After approval you attend a ceremony. Applicants in Calgary follow the same federal process as everyone."
     },
     {
-      "question": "Can I book an online meeting from Calgary?",
-      "answer": "Yes. Meetings are held online, so you can book from Calgary without travelling. Your consultant explains the fees, the tax for Alberta and the next steps in writing before you commit."
+      "question": "What should I prepare for my first consultation from Calgary?",
+      "answer": "Start with your goal, current status, permit expiry date and any response deadline. Have work and education dates, language results, and relevant job offers or decisions handy for the call. CMG will explain the proposed work and fees in writing if you decide to proceed."
     },
     {
       "question": "How can I avoid immigration scams in Calgary?",
@@ -3331,12 +3523,12 @@
   ],
   "/locations/edmonton": [
     {
-      "question": "What should I check before hiring an RCIC in Edmonton?",
-      "answer": "Ask for the licence number and search it on the CICC register. A real RCIC will give you a written agreement and a receipt. If someone in Edmonton avoids those basics, look elsewhere."
+      "question": "Can I book an immigration consultation from Edmonton?",
+      "answer": "Yes. Book a free first consultation by video or phone from Edmonton. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Who handles my file if I live in Edmonton?",
-      "answer": "Pankaj Khanna, a licensed RCIC, files cases for CMG clients regardless of where they live. For clients in Edmonton that means online meetings, a written fee agreement and updates by email or phone."
+      "question": "What should I check before hiring an RCIC in Edmonton?",
+      "answer": "Ask for the licence number and search it on the CICC register. A real RCIC will give you a written agreement and a receipt. If someone in Edmonton avoids those basics, look elsewhere."
     },
     {
       "question": "Where should I start with immigration if I live in Edmonton?",
@@ -3348,7 +3540,13 @@
     },
     {
       "question": "Does being in Edmonton, Alberta, affect my Express Entry chances?",
-      "answer": "Not directly. Invitations depend on your score and the draw type. Category-based draws can favour some occupations or French, so check them against your profile instead of your location."
+      "answer": "Your city does not directly change your Express Entry score. IRCC scores your profile using federal criteria, including language results, education, eligible work or job offers and other factors such as an Express Entry-linked nomination. Review the current rules for your profile and draw type.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "How do I extend my study permit while living in Edmonton?",
@@ -3379,8 +3577,8 @@
       "answer": "Proof of physical presence, language results where required, identity documents and a clean eligibility record. After approval you attend a ceremony. Applicants in Edmonton follow the same federal process as everyone."
     },
     {
-      "question": "Can I book an online meeting from Edmonton?",
-      "answer": "Yes. Meetings are held online, so you can book from Edmonton without travelling. Your consultant explains the fees, the tax for Alberta and the next steps in writing before you commit."
+      "question": "What should I prepare for my first consultation from Edmonton?",
+      "answer": "Start with your goal, current status, permit expiry date and any response deadline. Have work and education dates, language results, and relevant job offers or decisions handy for the call. CMG will explain the proposed work and fees in writing if you decide to proceed."
     },
     {
       "question": "What are common immigration fraud tactics in Edmonton?",
@@ -3393,12 +3591,12 @@
   ],
   "/locations/winnipeg": [
     {
-      "question": "How do I find a licensed immigration consultant in Winnipeg?",
-      "answer": "Check the CICC public register for an active Regulated Canadian Immigration Consultant licence, or confirm a lawyer's standing with the law society. Do this before paying anyone for immigration services in Winnipeg, because unlicensed agents cannot legally represent you."
+      "question": "Can I book an immigration consultation from Winnipeg?",
+      "answer": "Yes. Book a free first consultation by video or phone from Winnipeg. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Does Commonwealth Migration Group serve clients in Winnipeg?",
-      "answer": "Yes. Meetings with CMG are held online, so people in Winnipeg and across Manitoba get the same service as clients anywhere else. Pankaj Khanna, RCIC, files every case with IRCC and the provinces, whatever your location."
+      "question": "How do I find a licensed immigration consultant in Winnipeg?",
+      "answer": "Check the CICC public register for an active Regulated Canadian Immigration Consultant licence, or confirm a lawyer's standing with the law society. Do this before paying anyone for immigration services in Winnipeg, because unlicensed agents cannot legally represent you."
     },
     {
       "question": "Which pathway gives people in Winnipeg the strongest chance at permanent residence?",
@@ -3410,11 +3608,23 @@
     },
     {
       "question": "How can someone in Winnipeg improve their CRS score?",
-      "answer": "Retake language tests for higher bands, add Canadian work experience, finish a credential or earn a nomination from Manitoba. Each change has a different value, so a consultant can model the options before you spend money."
+      "answer": "Check whether stronger language results, recognized education, qualifying work or a provincial nomination could improve your score. IRCC’s current Labour Market Integration factor compares qualifying Canadian work experience with an eligible high-wage job offer and uses the higher scoring option.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "Can graduates of the University of Manitoba, the University of Winnipeg and Red River College Polytechnic get a post-graduation work permit?",
-      "answer": "Often, but not automatically. The program, school status and your language results all matter, and you must apply on time after receiving your final marks. Confirm eligibility before you commit to a course in Winnipeg."
+      "answer": "Graduates may qualify if their school, exact program, study history and timing meet IRCC’s requirements. Language and field-of-study criteria depend on the program and circumstances. Check eligibility before enrolling.",
+      "sourceLinks": [
+        {
+          "label": "IRCC post-graduation work permit eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html"
+        }
+      ]
     },
     {
       "question": "Can my partner work while I sponsor them from Winnipeg?",
@@ -3422,7 +3632,13 @@
     },
     {
       "question": "What do I need for a Super Visa so my parents can stay in Winnipeg?",
-      "answer": "An invitation letter, proof that your household income meets the threshold and a valid Canadian insurance policy for your parents. They should also show ties to home. The rules are federal, so they match those in other cities."
+      "answer": "A Super Visa application normally needs an invitation, proof of relationship and that the host meets the income requirement, an immigration medical exam and qualifying health insurance. The insurer may be Canadian or an eligible insurer outside Canada. Check IRCC’s current policy requirements before buying coverage.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Super Visa documents and insurance",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents.html"
+        }
+      ]
     },
     {
       "question": "How can a Winnipeg business hire without an LMIA?",
@@ -3455,12 +3671,12 @@
   ],
   "/locations/saskatoon": [
     {
-      "question": "What should I check before hiring an RCIC in Saskatoon?",
-      "answer": "Ask for the licence number and search it on the CICC register. A real RCIC will give you a written agreement and a receipt. If someone in Saskatoon avoids those basics, look elsewhere."
+      "question": "Can I book an immigration consultation from Saskatoon?",
+      "answer": "Yes. Book a free first consultation by video or phone from Saskatoon. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Does Commonwealth Migration Group serve clients in Saskatoon?",
-      "answer": "Yes. Meetings with CMG are held online, so people in Saskatoon and across Saskatchewan get the same service as clients anywhere else. Pankaj Khanna, RCIC, files every case with IRCC and the provinces, whatever your location."
+      "question": "What should I check before hiring an RCIC in Saskatoon?",
+      "answer": "Ask for the licence number and search it on the CICC register. A real RCIC will give you a written agreement and a receipt. If someone in Saskatoon avoids those basics, look elsewhere."
     },
     {
       "question": "What are the main routes to PR for workers in Saskatoon?",
@@ -3472,7 +3688,13 @@
     },
     {
       "question": "Does living in Saskatoon change my Express Entry score?",
-      "answer": "No. The CRS is federal and ignores your city. What changes it is your language level, education, work experience, a job offer or a provincial nomination. Living in Saskatoon can help you build Canadian experience."
+      "answer": "Your city does not directly change your Express Entry score. IRCC scores your profile using federal criteria, including language results, education, eligible work or job offers and other factors such as an Express Entry-linked nomination. Review the current rules for your profile and draw type.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "How do I extend my study permit while living in Saskatoon?",
@@ -3484,7 +3706,13 @@
     },
     {
       "question": "What do I need for a Super Visa so my parents can stay in Saskatoon?",
-      "answer": "An invitation letter, proof that your household income meets the threshold and a valid Canadian insurance policy for your parents. They should also show ties to home. The rules are federal, so they match those in other cities."
+      "answer": "A Super Visa application normally needs an invitation, proof of relationship and that the host meets the income requirement, an immigration medical exam and qualifying health insurance. The insurer may be Canadian or an eligible insurer outside Canada. Check IRCC’s current policy requirements before buying coverage.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Super Visa documents and insurance",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents.html"
+        }
+      ]
     },
     {
       "question": "How can a Saskatoon business hire without an LMIA?",
@@ -3517,12 +3745,18 @@
   ],
   "/locations/regina": [
     {
-      "question": "Who can legally give immigration advice to people in Regina?",
-      "answer": "Only licensed RCICs, lawyers and paralegals in good standing, and Quebec notaries, can charge for immigration advice or representation. Friends, travel agents and recruiters in Regina cannot, even if they say they have experience."
+      "question": "Can I book an immigration consultation from Regina?",
+      "answer": "Yes. Book a free first consultation by video or phone from Regina. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Do I need to travel to Brampton if I live in Regina?",
-      "answer": "No. CMG is based in Brampton, Ontario, but everything can be done online. People in Regina meet by video, sign electronically and receive updates without travelling."
+      "question": "Who can legally give immigration advice to people in Regina?",
+      "answer": "Verify paid immigration advisers with their regulator. This includes immigration consultants in good standing with the CICC, lawyers authorized by a Canadian law society, Quebec notaries in good standing and eligible Ontario paralegals. Check the adviser's current authorization before paying for advice.",
+      "sourceLinks": [
+        {
+          "label": "IRCC guide to authorized representatives",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose/authorized.html"
+        }
+      ]
     },
     {
       "question": "Which immigration programs suit people living in Regina?",
@@ -3534,19 +3768,43 @@
     },
     {
       "question": "Does being in Regina, Saskatchewan, affect my Express Entry chances?",
-      "answer": "Not directly. Invitations depend on your score and the draw type. Category-based draws can favour some occupations or French, so check them against your profile instead of your location."
+      "answer": "Your city does not directly change your Express Entry score. IRCC scores your profile using federal criteria, including language results, education, eligible work or job offers and other factors such as an Express Entry-linked nomination. Review the current rules for your profile and draw type.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "I study in Regina. How do I plan for PR after graduation?",
-      "answer": "Think about it before you finish. A PGWP gives you time to gain skilled work experience, which can lead to Express Entry or the SINP. Students in Regina should keep records of work and language scores."
+      "answer": "Check your specific program, study history, permit dates and IRCC’s current PGWP requirements before you graduate. Eligible graduates may use the permit to gain qualifying work experience. Permanent residence requires a separate eligibility check.",
+      "sourceLinks": [
+        {
+          "label": "IRCC post-graduation work permit eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility.html"
+        }
+      ]
     },
     {
       "question": "Can I sponsor my spouse if I live in Regina?",
-      "answer": "Yes, if you are a citizen or permanent resident living in Canada and meet the income and relationship rules. The process is federal, so it works the same in Regina as it does in the rest of Canada outside Quebec."
+      "answer": "Yes, if you meet IRCC’s sponsor, relationship and undertaking requirements. Most spouse or partner sponsorships have no minimum income threshold. Some cases involving dependent children have a financial test, and Quebec has additional rules.",
+      "sourceLinks": [
+        {
+          "label": "IRCC sponsorship eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/eligibility.html"
+        }
+      ]
     },
     {
       "question": "Can my parents come to visit me in Regina on a Super Visa?",
-      "answer": "Yes, if you meet the minimum income for your family size and buy Canadian private medical insurance for them. They can then stay with you in Regina for long visits. Prepare an invitation letter and proof of income."
+      "answer": "A Super Visa application normally needs an invitation, proof of relationship and that the host meets the income requirement, an immigration medical exam and qualifying health insurance. The insurer may be Canadian or an eligible insurer outside Canada. Check IRCC’s current policy requirements before buying coverage.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Super Visa documents and insurance",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents.html"
+        }
+      ]
     },
     {
       "question": "What does an employer in Regina need for an LMIA?",
@@ -3565,8 +3823,8 @@
       "answer": "You generally need enough days as a permanent resident, tax filings where required, and language and knowledge requirements. The same federal rules apply in Regina. Count your days carefully before applying."
     },
     {
-      "question": "Can I book an online meeting from Regina?",
-      "answer": "Yes. Meetings are held online, so you can book from Regina without travelling. Your consultant explains the fees, the tax for Saskatchewan and the next steps in writing before you commit."
+      "question": "What should I prepare for my first consultation from Regina?",
+      "answer": "Start with your goal, current status, permit expiry date and any response deadline. Have work and education dates, language results, and relevant job offers or decisions handy for the call. CMG will explain the proposed work and fees in writing if you decide to proceed."
     },
     {
       "question": "What are common immigration fraud tactics in Regina?",
@@ -3579,12 +3837,18 @@
   ],
   "/locations/halifax": [
     {
-      "question": "Who can legally give immigration advice to people in Halifax?",
-      "answer": "Only licensed RCICs, lawyers and paralegals in good standing, and Quebec notaries, can charge for immigration advice or representation. Friends, travel agents and recruiters in Halifax cannot, even if they say they have experience."
+      "question": "Can I book an immigration consultation from Halifax?",
+      "answer": "Yes. Book a free first consultation by video or phone from Halifax. Commonwealth Migration Group’s office is in Brampton, Ontario. You can also contact us on WhatsApp to arrange your meeting."
     },
     {
-      "question": "Does Commonwealth Migration Group serve clients in Halifax?",
-      "answer": "Yes. Meetings with CMG are held online, so people in Halifax and across Nova Scotia get the same service as clients anywhere else. Pankaj Khanna, RCIC, files every case with IRCC and the provinces, whatever your location."
+      "question": "Who can legally give immigration advice to people in Halifax?",
+      "answer": "Verify paid immigration advisers with their regulator. This includes immigration consultants in good standing with the CICC, lawyers authorized by a Canadian law society, Quebec notaries in good standing and eligible Ontario paralegals. Check the adviser's current authorization before paying for advice.",
+      "sourceLinks": [
+        {
+          "label": "IRCC guide to authorized representatives",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose/authorized.html"
+        }
+      ]
     },
     {
       "question": "Which immigration programs suit people living in Halifax?",
@@ -3596,7 +3860,13 @@
     },
     {
       "question": "Will my CRS score differ if I live in Halifax?",
-      "answer": "It will not. Express Entry scores everyone with the same federal formula. A Nova Scotia nomination adds points, and so can some Canadian study or work, but your postal code never does."
+      "answer": "Your city does not directly change your Express Entry score. IRCC scores your profile using federal criteria, including language results, education, eligible work or job offers and other factors such as an Express Entry-linked nomination. Review the current rules for your profile and draw type.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "What should international students in Halifax know about study permits and the PGWP?",
@@ -3604,11 +3874,23 @@
     },
     {
       "question": "Can I sponsor my spouse if I live in Halifax?",
-      "answer": "Yes, if you are a citizen or permanent resident living in Canada and meet the income and relationship rules. The process is federal, so it works the same in Halifax as it does in the rest of Canada outside Quebec."
+      "answer": "Yes, if you meet IRCC’s sponsor, relationship and undertaking requirements. Most spouse or partner sponsorships have no minimum income threshold. Some cases involving dependent children have a financial test, and Quebec has additional rules.",
+      "sourceLinks": [
+        {
+          "label": "IRCC sponsorship eligibility",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship/spouse-partner-children/eligibility.html"
+        }
+      ]
     },
     {
       "question": "Can my parents come to visit me in Halifax on a Super Visa?",
-      "answer": "Yes, if you meet the minimum income for your family size and buy Canadian private medical insurance for them. They can then stay with you in Halifax for long visits. Prepare an invitation letter and proof of income."
+      "answer": "A Super Visa application normally needs an invitation, proof of relationship and that the host meets the income requirement, an immigration medical exam and qualifying health insurance. The insurer may be Canadian or an eligible insurer outside Canada. Check IRCC’s current policy requirements before buying coverage.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Super Visa documents and insurance",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa/forms-documents.html"
+        }
+      ]
     },
     {
       "question": "How can a Halifax business hire without an LMIA?",
@@ -3627,8 +3909,8 @@
       "answer": "Proof of physical presence, language results where required, identity documents and a clean eligibility record. After approval you attend a ceremony. Applicants in Halifax follow the same federal process as everyone."
     },
     {
-      "question": "Can I book an online meeting from Halifax?",
-      "answer": "Yes. Meetings are held online, so you can book from Halifax without travelling. Your consultant explains the fees, the tax for Nova Scotia and the next steps in writing before you commit."
+      "question": "What should I prepare for my first consultation from Halifax?",
+      "answer": "Start with your goal, current status, permit expiry date and any response deadline. Have work and education dates, language results, and relevant job offers or decisions handy for the call. CMG will explain the proposed work and fees in writing if you decide to proceed."
     },
     {
       "question": "How can I avoid immigration scams in Halifax?",
@@ -3642,11 +3924,11 @@
   "/locations": [
     {
       "question": "Where does Commonwealth Migration Group help clients with immigration?",
-      "answer": "CMG is based in Brampton, Ontario, and serves clients across Canada, including Toronto, Mississauga, Ottawa, Hamilton, London, Kitchener-Waterloo, Windsor, Vancouver, Surrey, Victoria, Kelowna, Calgary, Edmonton, Winnipeg, Saskatoon, Regina and Halifax. Meetings are online, and Pankaj Khanna, RCIC, files every case, so location does not limit what we can do."
+      "answer": "Meet with Commonwealth Migration Group by video or phone from the cities listed on this page. In-person appointments are available at our Brampton, Ontario office. The first consultation is free."
     },
     {
       "question": "Can I use an immigration consultant in Canada if I live in a different city?",
-      "answer": "Yes. A licensed RCIC can represent you anywhere in Canada because federal applications are filed online and handled by IRCC. Provincial programs may add their own steps. Choose a consultant for their licence and experience, not their postal code."
+      "answer": "Yes. You can meet with our Brampton-based team by video or phone, and an authorized representative can handle the work you agree to remotely when the pathway permits. Check the person’s credentials and ask how they will handle your application."
     },
     {
       "question": "How do I find a licensed immigration consultant in Canada?",
@@ -3662,7 +3944,13 @@
     },
     {
       "question": "Does my city in Canada affect my Express Entry score?",
-      "answer": "No. Express Entry is a federal system and scores everyone with the same formula. A provincial nomination, a job offer or Canadian experience can add points. Where you live does not change the score directly."
+      "answer": "Your city does not directly change your score. Check IRCC’s current rules for language, education, work and other points. Under the Labour Market Integration factor, IRCC compares points for qualifying Canadian work experience and an eligible high-wage job offer.",
+      "sourceLinks": [
+        {
+          "label": "IRCC Express Entry scoring changes",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/changes.html"
+        }
+      ]
     },
     {
       "question": "Do immigration rules differ between Ontario, British Columbia and Alberta?",
@@ -3686,11 +3974,11 @@
     },
     {
       "question": "How do online consultations work?",
-      "answer": "You book a time by phone or video, share your documents securely and receive written advice. Pankaj Khanna, RCIC, then prepares and files your application online, wherever you live. You get a written fee agreement first."
+      "answer": "Book a time by video or phone and bring key dates and questions for the first consultation. If you want us to help with an application, we’ll review the proposed work and fees with you in writing before you decide."
     },
     {
       "question": "How much does an immigration consultation cost?",
-      "answer": "CMG charges the same fee in every location. Only sales tax changes by province, and government fees are paid separately to IRCC or the province. You will get a written fee agreement before you pay."
+      "answer": "Your first consultation with CMG is free. For further work, we explain the service scope, professional fees, applicable tax and government charges in writing before you sign."
     },
     {
       "question": "How can I avoid immigration scams anywhere in Canada?",
