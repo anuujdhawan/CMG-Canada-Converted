@@ -2005,6 +2005,184 @@
   }
 }
 
+/* Carry the homepage's quiet line-and-ring motif through the location system. */
+.page .sectionEyebrow::before {
+  width: 25px;
+  height: 2px;
+  flex: 0 0 auto;
+  align-self: center;
+  border-radius: 999px;
+  background: currentColor;
+  content: "";
+}
+
+.page .overviewSection,
+.page .alternate,
+.page .languageSection,
+.page .pathwaysSection,
+.page .onlineSection,
+.page .officeSection {
+  background-image: radial-gradient(ellipse at 50% 0, color-mix(in srgb, var(--primary) 4%, transparent), transparent 62%);
+}
+
+.page .overviewFact,
+.page .reasonCard,
+.page .checkCard,
+.page .serviceCard,
+.page .pathwayFeature,
+.page .directoryGroup {
+  overflow: hidden;
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--ink) 4%, transparent);
+  transition: transform .35s cubic-bezier(.2, .8, .2, 1), border-color .35s ease, box-shadow .35s ease, background-color .35s ease;
+}
+
+.page .reasonCard,
+.page .checkCard,
+.page .serviceCard,
+.page .pathwayFeature,
+.page .directoryGroup,
+.page .overviewFact {
+  position: relative;
+}
+
+.page .reasonCard::before,
+.page .checkCard::before,
+.page .serviceCard::before,
+.page .pathwayFeature::before,
+.page .directoryGroup::before,
+.page .overviewFact::before {
+  height: 3px;
+  transform: scaleX(.24);
+  transform-origin: left;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transition: transform .45s cubic-bezier(.2, .8, .2, 1);
+}
+
+.page .reasonCard::after,
+.page .checkCard::after,
+.page .serviceCard::after,
+.page .pathwayFeature::after,
+.page .directoryGroup::after,
+.page .overviewFact::after {
+  position: absolute;
+  top: -118px;
+  right: -118px;
+  width: 164px;
+  height: 164px;
+  border: 1px solid color-mix(in srgb, var(--primary) 17%, transparent);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  transition: transform .45s ease, border-color .35s ease;
+}
+
+.page .reasonCard:global(.reveal):hover,
+.page .reasonCard:global(.reveal):focus-within,
+.page .checkCard:global(.reveal):hover,
+.page .checkCard:global(.reveal):focus-within,
+.page .serviceCard:global(.reveal):hover,
+.page .serviceCard:global(.reveal):focus-within,
+.page .pathwayFeature:global(.reveal):hover,
+.page .pathwayFeature:global(.reveal):focus-within,
+.page .directoryGroup:global(.reveal):hover,
+.page .directoryGroup:global(.reveal):focus-within,
+.page .overviewFact:global(.reveal):hover,
+.page .overviewFact:global(.reveal):focus-within {
+  transform: translateY(-5px);
+  border-color: color-mix(in srgb, var(--primary) 42%, var(--border));
+  box-shadow: 0 18px 38px color-mix(in srgb, var(--ink) 10%, transparent);
+}
+
+.page .reasonCard:hover::before,
+.page .reasonCard:focus-within::before,
+.page .checkCard:hover::before,
+.page .checkCard:focus-within::before,
+.page .serviceCard:hover::before,
+.page .serviceCard:focus-within::before,
+.page .pathwayFeature:hover::before,
+.page .pathwayFeature:focus-within::before,
+.page .directoryGroup:hover::before,
+.page .directoryGroup:focus-within::before,
+.page .overviewFact:hover::before,
+.page .overviewFact:focus-within::before {
+  transform: scaleX(1);
+}
+
+.page .reasonCard:hover::after,
+.page .reasonCard:focus-within::after,
+.page .checkCard:hover::after,
+.page .checkCard:focus-within::after,
+.page .serviceCard:hover::after,
+.page .serviceCard:focus-within::after,
+.page .pathwayFeature:hover::after,
+.page .pathwayFeature:focus-within::after,
+.page .directoryGroup:hover::after,
+.page .directoryGroup:focus-within::after,
+.page .overviewFact:hover::after,
+.page .overviewFact:focus-within::after {
+  transform: translate(-8px, 8px);
+  border-color: color-mix(in srgb, var(--primary) 35%, transparent);
+}
+
+.page .readerNote,
+.page .verification,
+.page .localFocus,
+.page .reviewPanel,
+.page .preparationPanel,
+.page .appointmentPanel,
+.page .officeInfo {
+  box-shadow: 0 14px 34px color-mix(in srgb, var(--ink) 6%, transparent);
+}
+
+.page .processGrid li {
+  padding: 23px 18px 19px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--ink) 4%, transparent);
+  transition: transform .35s cubic-bezier(.2, .8, .2, 1), border-color .35s ease, box-shadow .35s ease;
+}
+
+.page .processGrid li:global(.reveal):hover,
+.page .processGrid li:global(.reveal):focus-within {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--primary) 38%, var(--border));
+  box-shadow: 0 16px 32px color-mix(in srgb, var(--ink) 8%, transparent);
+}
+
+.page .processGrid li:hover .processLine,
+.page .processGrid li:focus-within .processLine {
+  width: calc(100% - 36px);
+  transition: width .4s cubic-bezier(.2, .8, .2, 1);
+}
+
+.page .processLine {
+  transition: width .4s cubic-bezier(.2, .8, .2, 1);
+}
+
+.page .officePhotos figure:global(.reveal) {
+  transition: transform .45s cubic-bezier(.2, .8, .2, 1), border-color .3s ease, box-shadow .3s ease, opacity .75s ease var(--delay, 0ms);
+}
+
+.page .officePhotos figure:global(.reveal):hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--primary) 38%, var(--border));
+  box-shadow: 0 16px 34px color-mix(in srgb, var(--ink) 12%, transparent);
+}
+
+.page .languageGrid li:global(.reveal) {
+  border-radius: 14px;
+  box-shadow: 0 7px 17px color-mix(in srgb, var(--ink) 4%, transparent);
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease, opacity .75s ease var(--delay, 0ms);
+}
+
+.page .languageGrid li:global(.reveal.in):hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--primary) 32%, var(--border));
+  box-shadow: 0 12px 24px color-mix(in srgb, var(--ink) 7%, transparent);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .page *,
   .page *::before,

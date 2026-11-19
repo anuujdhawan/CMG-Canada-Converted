@@ -119,7 +119,7 @@ const processSteps = [
 
 function SectionHeading({ id, eyebrow, title, description }) {
   return (
-    <div className={styles.sectionHeading}>
+    <div className={`${styles.sectionHeading} reveal`}>
       {eyebrow && <p className={styles.sectionEyebrow}>{eyebrow}</p>}
       <h2 id={id}>{title}</h2>
       {description && <p className={styles.sectionDescription}>{description}</p>}
@@ -235,12 +235,12 @@ function LocationOverview({ location }) {
     <section className={`${styles.overviewSection} ${directory ? styles.directoryOverview : ""}`} id="location-overview" aria-labelledby="location-overview-title">
       <div className={styles.container}>
         <div className={styles.overviewLead}>
-          <div className={styles.overviewTitle}>
+          <div className={`${styles.overviewTitle} reveal`}>
             <p className={styles.sectionEyebrow}>{introEyebrow}</p>
             <h2 id="location-overview-title">{heading}</h2>
             <p>{description}</p>
           </div>
-          <aside className={styles.overviewNote} aria-label="Free first consultation">
+          <aside className={`${styles.overviewNote} reveal`} style={{ "--delay": "90ms" }} aria-label="Free first consultation">
             <span className={styles.overviewNoteIcon}><CalendarDays size={20} aria-hidden="true" /></span>
             <div>
               <strong>Begin with a free first consultation</strong>
@@ -250,8 +250,8 @@ function LocationOverview({ location }) {
         </div>
 
         <dl className={styles.overviewFacts}>
-          {facts.map(({ label, value, icon: Icon, href, linkLabel, external }) => (
-            <div className={styles.overviewFact} key={label}>
+          {facts.map(({ label, value, icon: Icon, href, linkLabel, external }, index) => (
+            <div className={`${styles.overviewFact} reveal`} style={{ "--delay": `${index * 45}ms` }} key={label}>
               <dt><Icon size={19} aria-hidden="true" />{label}</dt>
               <dd>{value}</dd>
               <dd><TextLink href={href} external={external}>{linkLabel}</TextLink></dd>
@@ -259,7 +259,7 @@ function LocationOverview({ location }) {
           ))}
         </dl>
 
-        <div className={styles.languageRibbon}>
+        <div className={`${styles.languageRibbon} reveal`} style={{ "--delay": "100ms" }}>
           <div><Languages size={18} aria-hidden="true" /><strong>Consultations in seven languages</strong></div>
           <ul aria-label="Consultation languages">
             {languages.map(({ name }) => <li key={name}>{name}</li>)}
@@ -309,7 +309,7 @@ function WhyCmg({ location }) {
         />
         <ul className={styles.reasonGrid}>
           {reasons.map(({ title, text, icon: Icon, link }, index) => (
-            <li key={title} className={styles.reasonCard}>
+            <li key={title} className={`${styles.reasonCard} reveal`} style={{ "--delay": `${index * 45}ms` }}>
               <span className={styles.reasonNumber}>0{index + 1}</span>
               <span className={styles.iconBadge}><Icon size={21} aria-hidden="true" /></span>
               <h3>{title}</h3>
@@ -336,7 +336,7 @@ function RepresentativeSection() {
               description="You can apply on your own. If you choose paid immigration advice, take a moment to confirm that the person is authorized before sharing documents or sending money. Unauthorized paid advisers are often called ghost consultants."
             />
           </div>
-          <div className={styles.readerNote}>
+          <div className={`${styles.readerNote} reveal`} style={{ "--delay": "100ms" }}>
             <span className={styles.readerNoteIcon}><ShieldCheck size={22} aria-hidden="true" /></span>
             <p>These simple checks help you make an informed choice and keep control of your application records.</p>
           </div>
@@ -344,7 +344,7 @@ function RepresentativeSection() {
 
         <ul className={styles.checkGrid}>
           {representativeChecks.map(({ title, text, icon: Icon }, index) => (
-            <li key={title} className={styles.checkCard}>
+            <li key={title} className={`${styles.checkCard} reveal`} style={{ "--delay": `${index * 45}ms` }}>
               <span className={styles.checkIndex}>0{index + 1}</span>
               <span className={styles.iconBadge}><Icon size={20} aria-hidden="true" /></span>
               <div><h3>{title}</h3><p>{text}</p></div>
@@ -353,7 +353,7 @@ function RepresentativeSection() {
         </ul>
         <TextLink className={styles.checkSource} href={irccRepresentativeGuide} external>Read the Government of Canada guide to choosing a representative</TextLink>
 
-        <div className={styles.verification} id="verify-licence">
+        <div className={`${styles.verification} reveal`} style={{ "--delay": "80ms" }} id="verify-licence">
           <div className={styles.verificationCopy}>
             <p className={styles.sectionEyebrow}>An independent check</p>
             <h2>Verify your consultant through the CICC Public Register</h2>
@@ -367,7 +367,7 @@ function RepresentativeSection() {
           </a>
         </div>
       </div>
-      <ConsultantProfileSection className={styles.profile} id="licensed-rcic" />
+      <ConsultantProfileSection className={`${styles.profile} reveal`} id="licensed-rcic" />
     </section>
   );
 }
@@ -388,7 +388,7 @@ function ServicesSection({ location }) {
         />
         <ul className={styles.serviceGrid}>
           {serviceCards.map(({ title, text, icon: Icon, links }, index) => (
-            <li className={styles.serviceCard} key={title}>
+            <li className={`${styles.serviceCard} reveal`} style={{ "--delay": `${index % 3 * 45}ms` }} key={title}>
               <div className={styles.serviceCardTop}>
                 <span className={styles.iconBadge}><Icon size={21} aria-hidden="true" /></span>
                 <span className={styles.serviceNumber}>0{index + 1}</span>
@@ -404,7 +404,7 @@ function ServicesSection({ location }) {
 
         {office && (
           <>
-            <aside className={styles.localFocus} aria-labelledby="super-visa-title">
+            <aside className={`${styles.localFocus} reveal`} style={{ "--delay": "80ms" }} aria-labelledby="super-visa-title">
               <div className={styles.statistic}>
                 <p className={styles.sectionEyebrow}>Local context · 2021 Census</p>
                 <strong>14.3%</strong>
@@ -418,7 +418,7 @@ function ServicesSection({ location }) {
                 <TextLink href={irccSuperVisa} external>Check IRCC’s current Super Visa requirements</TextLink>
               </div>
             </aside>
-            <p className={styles.neighbourhoods}>
+            <p className={`${styles.neighbourhoods} reveal`} style={{ "--delay": "100ms" }}>
               <strong>Neighbourhoods we serve</strong>
               <span>Bramalea, Springdale, Heart Lake, Mount Pleasant, Castlemore, Sandalwood Heights, Credit Valley, Downtown Brampton and Gore Meadows.</span>
               <span>We also meet online with clients in <Link href="/locations/mississauga">Mississauga</Link>, <Link href="/locations/toronto">Toronto</Link> and across the GTA.</span>
@@ -443,15 +443,15 @@ function LanguagesAndReviews({ office }) {
               description="Tell us which language you’d like to use when you book. Official IRCC applications are completed in English or French."
             />
             <ul className={styles.languageGrid}>
-              {languages.map(({ name, native, code, direction }) => (
-                <li key={code}>
+              {languages.map(({ name, native, code, direction }, index) => (
+                <li className="reveal" style={{ "--delay": `${index * 35}ms` }} key={code}>
                   <strong lang={code} dir={direction}>{native}</strong>
                   {native !== name && <span>{name}</span>}
                 </li>
               ))}
             </ul>
           </div>
-          <aside className={styles.reviewPanel} id="client-reviews">
+          <aside className={`${styles.reviewPanel} reveal`} style={{ "--delay": "90ms" }} id="client-reviews">
             <span className={styles.reviewMark}><MessageCircle size={23} aria-hidden="true" /></span>
             <p className={styles.sectionEyebrow}>Client experiences</p>
             <h2>{office ? "Hear from Brampton clients" : "Hear from CMG clients"}</h2>
@@ -478,7 +478,7 @@ function ProcessSection({ office }) {
         />
         <ol className={styles.processGrid}>
           {processSteps.map(([title, text], index) => (
-            <li key={title}>
+            <li className="reveal" style={{ "--delay": `${index * 60}ms` }} key={title}>
               <span className={styles.processIndex} aria-hidden="true">0{index + 1}</span>
               <div className={styles.processLine} aria-hidden="true" />
               <h3>{title}</h3>
@@ -504,7 +504,7 @@ function RegionalPathways({ location }) {
           description={`If you plan to settle in ${province}, compare federal options with the ${program.program}. Check the current intake and criteria for the route you are considering.`}
         />
         <div className={styles.pathwayGrid}>
-          <article className={`${styles.pathwayFeature} ${styles.localPathway}`}>
+          <article className={`${styles.pathwayFeature} ${styles.localPathway} reveal`}>
             <span className={styles.pathwayLabel}><MapPin size={17} aria-hidden="true" /> Local planning</span>
             <h3>{`What to check in ${city}`}</h3>
             <p>{detail.planningNote}</p>
@@ -521,7 +521,7 @@ function RegionalPathways({ location }) {
             </dl>
           </article>
 
-          <article className={`${styles.pathwayFeature} ${styles.provincePathway}`}>
+          <article className={`${styles.pathwayFeature} ${styles.provincePathway} reveal`} style={{ "--delay": "90ms" }}>
             <span className={styles.pathwayLabel}><FileCheck2 size={17} aria-hidden="true" /> Provincial programs</span>
             <h3>Options to compare</h3>
             <ul className={styles.pathwayList}>
@@ -570,7 +570,7 @@ function CityDirectory({ groups }) {
         />
         <div className={styles.directory}>
           {groups.map(({ province, acronym, cities }, index) => (
-            <section className={styles.directoryGroup} key={province} aria-label={province}>
+            <section className={`${styles.directoryGroup} reveal`} style={{ "--delay": `${index % 2 * 70}ms` }} key={province} aria-label={province}>
               <div className={styles.directoryProvince}>
                 <span className={styles.directoryIndex}>0{index + 1}</span>
                 <div><h3>{province}</h3><span>{acronym}</span></div>
@@ -604,7 +604,7 @@ function OnlineConsultation({ city }) {
           description="Book a free first consultation by video or phone. We’ll review your situation and what to check before choosing an immigration pathway."
         />
         <div className={styles.pathwayGrid}>
-          <div className={styles.preparationPanel}>
+          <div className={`${styles.preparationPanel} reveal`}>
             <span className={styles.iconBadge}><FileText size={21} aria-hidden="true" /></span>
             <h3>What to have handy</h3>
             <ul className={styles.preparationList}>
@@ -613,7 +613,7 @@ function OnlineConsultation({ city }) {
               <li><Check size={16} aria-hidden="true" /> Any job offer, prior application or decision relevant to your plans</li>
             </ul>
           </div>
-          <div className={styles.appointmentPanel}>
+          <div className={`${styles.appointmentPanel} reveal`} style={{ "--delay": "90ms" }}>
             <span className={styles.iconBadge}><CalendarDays size={21} aria-hidden="true" /></span>
             <h3>Choose your appointment</h3>
             <p>Tell us whether you prefer a video or phone call and which language you’d like to use. Have a question before you book? Call us or send a WhatsApp message.</p>
@@ -660,7 +660,7 @@ export default function LocationPage({ page }) {
         description={faqDescription}
       />
       <section className={styles.closing} aria-labelledby="booking-title">
-        <div className={styles.container}>
+        <div className={`${styles.container} reveal`}>
           <p className={styles.sectionEyebrow}>Your next step</p>
           <h2 id="booking-title">Book your free first consultation</h2>
           <p>{office ? "Meet in Brampton or online." : "Meet with us by video or phone."} Bring your key dates, current immigration status and any questions about your next step.</p>
