@@ -357,11 +357,11 @@ const foreignExperience = options([[0, "None"], [1, "1–2 years"], [3, "3 years
 const lmiWork = options([[0, "None"], [20, "Eligible 1.3× occupation"], [40, "Eligible 1.5× occupation"], [70, "Eligible 2× occupation"]]);
 const lmiJob = options([[0, "None"], [50, "Eligible 1.3× job offer"], [70, "Eligible 1.5× job offer"], [100, "Eligible 2× job offer"]]);
 const nomination = options([["no", "None"], ["yes", "Yes, nomination accepted"]]);
-const crsAgeOptions = options(
+const crsAgeOptions = options([
   [17, "17 or younger"], [18, "18 years"], [19, "19 years"], [25, "20–29 years"],
   ...Array.from({ length: 15 }, (_, index) => [String(index + 30), `${index + 30} years`]),
   [45, "45 years or older"],
-);
+]);
 
 function hasAnswer(value) {
   return Array.isArray(value) ? value.length > 0 : value !== "" && value != null;
@@ -483,11 +483,11 @@ const fswLevels = options([
   ["below7", "Below CLB/NCLC 7"], [7, "CLB/NCLC 7"], [8, "CLB/NCLC 8"], ["9plus", "CLB/NCLC 9 or higher"],
 ]);
 const fswLanguagePoints = { below7: 0, 7: 4, 8: 5, "9plus": 6 };
-const fswAgeOptions = options(
+const fswAgeOptions = options([
   ["under18", "Under 18"], ["18to35", "18–35"],
   ...Array.from({ length: 11 }, (_, index) => [String(index + 36), String(index + 36)]),
   ["47plus", "47 or older"],
-);
+]);
 const fswEducation = [
   ["none", "Less than high school", 0],
   ["secondary", "High school diploma", 5],

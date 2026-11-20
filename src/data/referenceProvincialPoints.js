@@ -1,4 +1,4 @@
-import { MPNP_EOI_GRID } from "./pnp-score-grids";
+import { AAIP_WORKER_GRID, MPNP_EOI_GRID } from "./pnp-score-grids";
 import { checkField, engineField, evidence, numericOptions, options, select, yesNo } from "./referenceProvincialFields";
 import { guideVariant } from "./referenceProvincialCriteria";
 
