@@ -1011,6 +1011,8 @@ html[data-theme="light"] .cmg-template-home {
   --shadow-soft: 0 14px 38px color-mix(in srgb, var(--cmg-light-ink) 6%, transparent);
 }
 .cmg-template-home a { color: inherit; text-decoration: none; }
+.hero-card-shell__watermark { opacity: 0.3; }
+html[data-theme="light"] .hero-card-shell__watermark { opacity: 0.2; }
 .cmg-template-home .cta-section a.btn {
   color: var(--cmg-dark-secondary);
   -webkit-text-fill-color: var(--cmg-dark-secondary);
