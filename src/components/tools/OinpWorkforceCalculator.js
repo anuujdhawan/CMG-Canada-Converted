@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
 import { AlertTriangle, Calculator, CheckCircle2, Info, RotateCcw, ShieldCheck } from "lucide-react";
 import { ToolCard, ToolHeader, ToolInput, ToolResetButton, ToolResultCard, ToolSelect } from "./ui/ToolPrimitives";
 
@@ -82,7 +81,7 @@ const LOCATION_GROUPS = [
   },
 ];
 
-export const ALL_LOCATIONS = LOCATION_GROUPS.flatMap((group) => group.locations);
+const ALL_LOCATIONS = LOCATION_GROUPS.flatMap((group) => group.locations);
 const INITIAL_ANSWERS = {
   pathway: "",
   location: "",
@@ -105,7 +104,7 @@ const INITIAL_ANSWERS = {
   driverNoc: "",
 };
 
-export function getLocation(value) {
+function getLocation(value) {
   return ALL_LOCATIONS.find((location) => location.value === value) || ALL_LOCATIONS.find((location) => location.value === "Peel");
 }
 
@@ -194,7 +193,7 @@ function clbValue(value) {
   return match ? Number(match[1]) : 0;
 }
 
-export function scoreAnswers(answers, location) {
+function scoreAnswers(answers, location) {
   const physician = answers.pathway === "physician";
   const teerPoints = physician ? 9 : choicePoints(answers.teer, { "teer-0-1": 9, "teer-2-3": 6, "teer-4-5": 0 });
   const broadCategoryPoints = physician ? 10 : choicePoints(answers.nocCategory, { "0": 4, "1": 4, "2": 6, "3": 10, "4": 4, "5": 2, "6": 2, "7": 8, "8": 4, "9": 4 });
@@ -222,7 +221,7 @@ export function scoreAnswers(answers, location) {
   };
 }
 
-export function getResult(answers, location) {
+function getResult(answers, location) {
   const failures = [];
   const warnings = [];
   const physician = answers.pathway === "physician";
@@ -518,7 +517,7 @@ export default function OinpWorkforceCalculator() {
               <p className="m-0 font-extrabold text-[var(--template-ink)]">Location / employer tier · {location.label}</p>
               <p className="mb-0 mt-1">{location.points} regional points · {location.tier} revenue rule · {location.tier === "GTA" ? "$2,000" : "$1,500"} application fee.</p>
             </div>
-            <Link href="/contact/book-immigration-consultation-canada" className="inline-flex min-h-11 items-center justify-center rounded-xl bg-[var(--template-primary)] px-4 text-center text-xs font-extrabold text-[var(--template-on-primary)] transition hover:opacity-90">Book an RCIC assessment</Link>
+            <a href="/contact/book-immigration-consultation-canada" className="inline-flex min-h-11 items-center justify-center rounded-xl bg-[var(--template-primary)] px-4 text-center text-xs font-extrabold text-[var(--template-on-primary)] transition hover:opacity-90">Book an RCIC assessment</a>
             <p className="m-0 text-[0.61rem] leading-[1.5] text-[var(--template-muted)]">Last checked: 9 November 2026. This planning tool cannot verify your documents, Job Bank wage, employer records or eligibility decision. Confirm every rule on the <a className="font-extrabold text-[var(--template-primary)] underline underline-offset-2" href="https://www.ontario.ca/page/ontario-workforce-priority-stream" target="_blank" rel="noreferrer">official Ontario page</a>.</p>
           </div>
         </div>

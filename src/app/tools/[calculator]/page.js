@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
-import ReferenceCalculatorDashboard from "@/components/tools/ReferenceCalculatorDashboard";
+import CalculatorDashboard from "@/components/tools/CalculatorDashboard";
 import { CALCULATOR_PAGES, getCalculatorPage } from "@/data/calculatorPages";
 import { buildMetadata } from "@/lib/seo";
-import "@/styles/calculator-reference.css";
 
 export const dynamicParams = false;
 
@@ -25,5 +24,5 @@ export default async function CalculatorRoute({ params }) {
   const { calculator } = await params;
   const page = getCalculatorPage(calculator);
   if (!page) notFound();
-  return <ReferenceCalculatorDashboard page={page} />;
+  return <CalculatorDashboard page={page} />;
 }
