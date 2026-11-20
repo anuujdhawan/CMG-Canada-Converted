@@ -4,6 +4,7 @@ import { RESEARCH_BLOG_POSTS } from "@/data/blog-research";
 // routes that are implemented outside the page-data registry.
 export const EXCLUDED_SITEMAP_PATHS = new Set([
   "/pay/success",
+  "/ontario-pr/thank-you",
 ]);
 
 export const ADDITIONAL_INDEXABLE_PAGES = [

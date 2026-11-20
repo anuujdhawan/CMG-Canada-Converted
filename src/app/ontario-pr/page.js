@@ -35,24 +35,13 @@ export async function generateMetadata({ searchParams }) {
   };
 }
 
-const bookingUrl = (() => {
-  const configured = process.env.NEXT_PUBLIC_CMG_ONTARIO_BOOKING_URL?.trim();
-  if (!configured) return "";
-  try {
-    const parsed = new URL(configured);
-    return parsed.protocol === "https:" ? parsed.toString() : "";
-  } catch {
-    return "";
-  }
-})();
-
 export default async function OntarioPrPage({ searchParams }) {
   const params = await searchParams;
   const variant = params?.v === "ee" ? "ee" : "oinp";
 
   return (
     <>
-      <OntarioPrLanding variant={variant} bookingUrl={bookingUrl} />
+      <OntarioPrLanding variant={variant} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeJsonLd({
