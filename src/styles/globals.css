@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../components/tools";
 :root {
   --brand-primary: #D80621;
   --brand-primary-dark: #B3122A;
@@ -900,7 +901,8 @@ body:has(.cmg-template-home) .site-header__dropdown-panel {
 .cmg-mobile-menu nav svg {
   color: rgba(255, 255, 255, 0.72);
 }
-body:has(.cmg-template-home) {
+body:has(.cmg-template-home),
+body:has(.calculator-dashboard) {
   --template-primary: var(--cmg-dark-primary);
   --template-secondary: var(--cmg-dark-secondary);
   --template-accent: var(--cmg-dark-accent);
@@ -914,7 +916,8 @@ body:has(.cmg-template-home) {
   --template-success: var(--cmg-dark-success);
   background: var(--template-bg);
 }
-html[data-theme="light"] body:has(.cmg-template-home) {
+html[data-theme="light"] body:has(.cmg-template-home),
+html[data-theme="light"] body:has(.calculator-dashboard) {
   --template-primary: var(--cmg-light-primary);
   --template-secondary: var(--cmg-light-secondary);
   --template-accent: var(--cmg-light-accent);
@@ -2361,10 +2364,15 @@ html[data-theme="light"] .consultation-modal .consultation-form-fields input[typ
   html[data-theme="light"] .tool-code { border-color: var(--cmg-light-border) !important; background:var(--cmg-light-secondary) !important; color: var(--cmg-light-primary) !important; }
   html[data-theme="light"] .tool-badge { border-color: color-mix(in srgb, var(--cmg-light-primary) 14%, transparent) !important; background: color-mix(in srgb, var(--cmg-light-primary) 8%, var(--cmg-light-secondary)) !important; color: var(--cmg-light-primary) !important; }
 }
-.cmg-template-home .tool-result {
+.cmg-template-home .tool-result,
+.calculator-dashboard .tool-result {
   border-color: color-mix(in srgb, var(--template-primary) 28%, var(--template-border));
   background: linear-gradient(135deg, var(--template-primary), var(--template-accent));
   color: var(--template-on-primary);
+}
+.calculator-dashboard .tool-result h2 {
+  color: var(--template-on-primary) !important;
+  -webkit-text-fill-color: var(--template-on-primary) !important;
 }
 body:has(.cmg-template-home) .site-header {
   isolation: isolate;
