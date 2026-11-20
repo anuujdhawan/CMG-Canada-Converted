@@ -1,4 +1,4 @@
-import { checkField, criterion, engineField, evidence, number, numericOptions, options, resultStatus, select } from "./referenceProvincialFields";
+import { checkField, criterion, engineField, evidence, numericOptions, options, resultStatus, select } from "./referenceProvincialFields";
 
 const jobOptions = (yes) => options(["yes", yes], ["review", "Offer details to confirm"], ["no", "Offer does not meet conditions"]);
 const employerOptions = (yes) => options(["yes", yes], ["review", "To be confirmed"], ["no", "Requirements not met"]);
@@ -8,7 +8,6 @@ const occupationOptions = options(
 );
 const english = numericOptions([3, 4, 5, 6, 7, 8, 9, 10]);
 const eligible = (value) => value === "yes";
-const ageIn = (value, min, max) => Number(value) >= min && Number(value) <= max;
 const sourceNB = "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program/skilled-worker-stream.html";
 const sourceNL = "https://www.gov.nl.ca/immigration/4-skilled-worker-category-eligibility-criteria/";
 const sourceNLEE = "https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/provincial-nominee-program/applicants/express-entry-skilled-worker/";
@@ -39,7 +38,7 @@ export function newBrunswick(page) {
   );
   const streamField = select("route", "NBPNP stream", "skilled", streamOptions, { highlight: true });
   const skilledFields = [
-    number("age", "Age", "30"),
+    select("age", "Age", "", options(["under19", "Under 19"], ["19plus", "19 or older"])),
     select("education", "Education", "yes", employerOptions("High school diploma")),
     select("residence", "Residence in New Brunswick", "9", options(["9", "9 consecutive months"], ["6", "6 consecutive months"], ["0", "Under 6 months"])),
     select("work", "Full-time work with same employer", "9", options(["9", "9 months"], ["6", "6 months"], ["0", "Under 6 months"])),
@@ -51,7 +50,7 @@ export function newBrunswick(page) {
     select("intake", "Job sector and current intake", "review", options(["review", "Review current invitation notices"], ["yes", "Current intake conditions checked"], ["no", "Current intake conditions not met"])),
   ];
   const skilledCriteria = (a) => [
-    criterion("Age and high school education", "Profile", a, ["age", "education"], (x) => Number(x.age) >= 19 && eligible(x.education)),
+    criterion("Age and high school education", "Profile", a, ["age", "education"], (x) => x.age === "19plus" && eligible(x.education)),
     criterion("New Brunswick residence for 6+ months", "Residence", a, ["residence"], (x) => Number(x.residence) >= 6),
     criterion("Full-time non-seasonal work with same employer", "Job", a, ["work", "job", "occupation"], (x) => Number(x.work) >= 6 && eligible(x.job) && eligible(x.occupation)),
     criterion("Valid CLB/NCLC 4+ in all four abilities", "Language", a, ["language"], (x) => Number(x.language) >= 4),
@@ -61,7 +60,7 @@ export function newBrunswick(page) {
   const expressFields = express.questions.map((q) => engineField(express, q.key));
   return {
     title: "New Brunswick pathway details",
-    description: "This example shows the New Brunswick Experience pathway under Skilled Worker.",
+    description: "Select the New Brunswick pathway and review its eligibility questions.",
     defaultRoute: "skilled",
     routeField: streamField,
     variants: {
@@ -92,8 +91,8 @@ export function newBrunswick(page) {
             criteria: (a) => [
               ...skilledCriteria(a).filter(({ short }) => short === "Language" || short === "Employer"),
               graduate
-                ? criterion("Age and eligible New Brunswick study", "Study", a, ["age", "graduate"], (x) => Number(x.age) >= 19 && eligible(x.graduate))
-                : criterion("Age and high school education", "Profile", a, ["age", "education"], (x) => Number(x.age) >= 19 && eligible(x.education)),
+                ? criterion("Age and eligible New Brunswick study", "Study", a, ["age", "graduate"], (x) => x.age === "19plus" && eligible(x.graduate))
+                : criterion("Age and high school education", "Profile", a, ["age", "education"], (x) => x.age === "19plus" && eligible(x.education)),
               graduate
                 ? skilledCriteria(a)[1]
                 : criterion("Related work and eligible recruitment", "Recruitment", a, ["recruitment"], (x) => eligible(x.recruitment)),
@@ -122,7 +121,7 @@ export function newfoundland(page) {
     select("jva", "Job Vacancy Assessment (if needed)", "yes", employerOptions("Valid permit for this position").concat(options(["jva", "Employer has valid JVA"]))),
   ];
   const fields = [
-    number("age", "Age at application", "32"),
+    select("age", "Age at application", "", options(["under21", "Under 21"], ["21to59", "21–59 years"], ["over59", "60 or older"])),
     select("permit", "Permit type and validity", "yes", options(["yes", "Employer-specific · 6 months remaining"], ["other", "Valid permit · 4+ months remaining"], ["review", "Permit validity to confirm"], ["no", "Under 4 months remaining or no valid permit"])),
     select("occupation", "Occupation", "3", options(["0", "TEER 0 · qualifications indicated"], ["1", "TEER 1 · qualifications indicated"], ["2", "TEER 2 · qualifications indicated"], ["3", "TEER 3 · qualifications indicated"], ["4", "TEER 4 · qualifications indicated"], ["5", "TEER 5 · qualifications indicated"], ["review", "Qualifications to confirm"], ["no", "Requirements not met"])),
     ...offer,
@@ -133,7 +132,7 @@ export function newfoundland(page) {
   ];
   return {
     title: "NLPNP pathway details",
-    description: "This example uses the Skilled Worker category and a Newfoundland and Labrador job offer.",
+    description: "Review the job, candidate and employer conditions for your Newfoundland and Labrador stream.",
     defaultRoute: "skilled",
     routeField: select("route", "NLPNP category", "skilled", options(
       ["skilled", "Skilled Worker"], ["express-entry", "Express Entry Skilled Worker · official grid"], ...(aip ? [["aip", "Atlantic Immigration Program"]] : []),
@@ -145,7 +144,7 @@ export function newfoundland(page) {
         fields,
         resultTitle: "NLPNP criteria check",
         criteria: (a) => [
-          criterion("Age and occupational qualifications", "Profile", a, ["age", "occupation"], (x) => ageIn(x.age, 21, 59) && !["no", "review"].includes(x.occupation)),
+          criterion("Age and occupational qualifications", "Profile", a, ["age", "occupation"], (x) => x.age === "21to59" && !["no", "review"].includes(x.occupation)),
           criterion(a.residence === "outside" ? "Permit check for current residence" : "Valid permit with 4+ months remaining", "Permit", a, a.residence === "outside" ? ["residence"] : ["permit"], (x) => x.residence === "outside" || ["yes", "other"].includes(x.permit)),
           criterion("Offer terms, employer and prevailing wage", "Offer", a, ["offer", "employer", "jva", "wage"], (x) => eligible(x.offer) && eligible(x.employer) && eligible(x.wage) && ["yes", "jva"].includes(x.jva)),
           criterion("Language evidence for the occupation", "Language", a, ["language", "occupation"], (x) => !["no", "review"].includes(x.occupation) && (Number(x.occupation) < 4 || Number(x.language) >= 4)),
@@ -174,7 +173,7 @@ export function novaScotia(page) {
         controls: [select("category", "Applicant category", "standard", options(["standard", "Standard Skilled Worker"], ["special", "Occupation-specific conditions · verify guide"]))],
         section: "Job and candidate details",
         fields: [
-          number("age", "Age at application", "32"),
+          select("age", "Age at application", "", options(["under21", "Under 21"], ["21to55", "21–55 years"], ["over55", "56 or older"])),
           select("education", "Highest education", "yes", employerOptions("High school diploma or higher")),
           select("offer", "Nova Scotia job offer", "yes", jobOptions("Permanent full-time · Halifax")),
           select("occupation", "Occupation skill level", "3", occupationOptions),
@@ -189,7 +188,7 @@ export function novaScotia(page) {
         ],
         resultTitle: "Nova Scotia criteria check",
         criteria: (a) => [
-          criterion("Age, education and job qualifications", "Profile", a, ["age", "education", "training"], (x) => ageIn(x.age, 21, 55) && eligible(x.education) && eligible(x.training)),
+          criterion("Age, education and job qualifications", "Profile", a, ["age", "education", "training"], (x) => x.age === "21to55" && eligible(x.education) && eligible(x.training)),
           criterion("Permanent full-time Nova Scotia job offer", "Offer", a, ["offer", "occupation", "status"], (x) => eligible(x.offer) && x.status !== "no" && x.status !== "review" && !(x.status === "pgwp" && x.occupation === "5")),
           criterion("Related paid work experience", "Work", a, ["experience", "occupation"], (x) => Number(x.experience) >= 1 && (Number(x.occupation) < 4 || eligible(x.employerWork))),
           criterion(`Language evidence${a.occupation !== "" ? ` for TEER ${a.occupation}` : ""}`, "Language", a, ["language", "occupation"], (x) => Number(x.occupation) < 4 ? x.language === "native" || Number(x.language) >= 5 : Number(x.language) >= 4),
@@ -224,7 +223,7 @@ export function yukon(page) {
   const priority = engineCriteriaVariant(page.stream, "Yukon EOI priority factors");
   return {
     title: "Yukon pathway details",
-    description: "The example uses Skilled Worker and the 2026 employer-led intake priorities.",
+    description: "Review candidate and employer requirements for the 2026 employer-led intake priorities.",
     defaultRoute: "skilled",
     routeField: select("route", "YNP stream", "skilled", options(["skilled", "Skilled Worker"], ["critical", "Critical Impact Worker"], ["ee", "Express Entry"]), { highlight: true }),
     variants: Object.fromEntries(["skilled", "critical", "ee"].map((route) => {

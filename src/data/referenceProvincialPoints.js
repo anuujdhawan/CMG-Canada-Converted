@@ -1,5 +1,5 @@
 import { MPNP_EOI_GRID } from "./pnp-score-grids";
-import { ageRange, checkField, engineField, evidence, number, numericOptions, options, select, yesNo } from "./referenceProvincialFields";
+import { checkField, engineField, evidence, numericOptions, options, select, yesNo } from "./referenceProvincialFields";
 import { guideVariant } from "./referenceProvincialCriteria";
 
 const scoringQuestion = (key, label, section, sectionMax, choices) => ({
@@ -9,6 +9,7 @@ const scoringQuestion = (key, label, section, sectionMax, choices) => ({
 const mapField = (stream) => (key, label, initial, labels, config) => engineField(stream, key, label, initial, labels, config);
 const engineFields = (stream) => stream.questions.map((q) => engineField(stream, q.key));
 const fieldLevels = (name) => numericOptions([4, 5, 6, 7, 8, 9, 10], { language: name });
+const gridOptions = (stream, key) => stream.questions.find((question) => question.key === key).options.map(({ value, label }) => ({ value: String(value), label }));
 const labelSection = (label) => label.split(" · ").at(-1);
 const titled = (label) => label[0].toUpperCase() + label.slice(1);
 const confirmed = options(["yes", "Confirmed"], ["no", "No"], ["unknown", "To be confirmed"]);
@@ -47,7 +48,7 @@ export function manitoba() {
         controls: [select("pathway", "MPNP pathway", "overseas", options(["overseas", "Skilled Worker Overseas"]), { highlight: true })],
         section: "Skilled Worker Overseas factors",
         fields: [
-          number("age", "Age", "32"), field("education", "Highest education", "twoPlus", { twoPlus: "Bachelor’s degree" }),
+          select("age", "Age", "", gridOptions(mbSelfAssessment, "age")), field("education", "Highest education", "twoPlus", { twoPlus: "Bachelor’s degree" }),
           field("work", "Documented recent full-time work", "4", { 4: "4 years · within past 5 years" }), field("language", "First official language", "8", { 8: "CLB 8 · lowest of four" }),
           field("secondLanguage", undefined, "no", { no: "No test result" }), field("connection", "Manitoba connection", "closeFamily"),
           select("support", "Supporter residence and status", "yes", options(["yes", "1+ year in Manitoba · citizen / PR"], ["unknown", "Supporter evidence to confirm"], ["no", "No eligible supporter"])),
@@ -59,7 +60,6 @@ export function manitoba() {
         stream: mbSelfAssessment,
         mapAnswers: (a) => ({
           ...a,
-          age: ageRange(a.age, [[17, "under18"], [18, "18"], [19, "19"], [20, "20"], [45, "21to45"], [46, "46"], [47, "47"], [48, "48"], [49, "49"], [120, "50plus"]]),
           connection: a.invitation === "yes" ? "invitation" : ["closeFamily", "friend"].includes(a.connection) && a.support !== "yes" ? "none" : a.connection,
           regional: a.connection === "none" || (["closeFamily", "friend"].includes(a.connection) && a.support !== "yes") ? "no" : a.regional,
         }),
@@ -95,10 +95,10 @@ export function alberta(page) {
     controls,
     section: "Worker EOI factors",
     fields: [
-      number("age", "Age", "31"),
+      select("age", "Age", "", options(["under18", "Under 18 · outside the scoring grid"], ...gridOptions(AAIP_WORKER_GRID, "age").map(({ value, label }) => [value, label]))),
       select("credential", "Education and location", "bachelor:alberta", education.options.flatMap(({ value, label }) => [["alberta", "Alberta"], ["otherCanada", "Other Canada"], ["outside", "Outside Canada"]].map(([location, place]) => ({ value: `${value}:${location}`, label: `${value === "bachelor" ? "Bachelor’s degree" : label} · ${place}` })))),
       select("english", "English · lowest valid band", "7", fieldLevels("CLB")), select("french", "French · lowest valid band", "0", fieldLevels("NCLC")),
-      number("months", "Total work experience", "18", "months", { max: undefined }), field("canadianWork", "Canadian work by location", "alberta", { alberta: "Alberta 12 months · elsewhere none" }),
+      select("months", "Total work experience", "", options(["under6", "Less than 6 months"], ["6to11", "6–11 months"], ["12plus", "12 months or more"])), field("canadianWork", "Canadian work by location", "alberta", { alberta: "Alberta 12 months · elsewhere none" }),
       select("job", "Alberta job offer", "calgaryEdmonton", offerLocations.options.map((item) => ({ ...item, label: item.value === "calgaryEdmonton" ? "Permanent full-time · Calgary" : item.label }))),
       field("family", "Eligible family in Alberta", "no", { no: "None", yes: "Eligible Alberta family member" }),
       field("priorityOffer", "Sector or endorsement bonus", "no", { no: "None" }), field("regulatedOccupation", "Regulated occupation certification", "no", { no: "Not claimed" }),
@@ -115,9 +115,9 @@ export function alberta(page) {
       const language = englishPoints === 0 && frenchPoints === 0 ? "low" : englishPoints >= frenchPoints ? `en${Math.min(6, english)}` : `fr${Math.min(6, french)}`;
       return {
         ...a, education, educationLocation,
-        totalWork: a.months === "" ? "" : ageRange(a.months, [[5, "under6"], [11, "6to11"], [Infinity, "12plus"]]),
+        totalWork: a.months,
         permanentOffer: a.job ? (a.job === "none" ? "no" : "yes") : "",
-        age: Number(a.age) < 18 ? "" : ageRange(a.age, [[20, "18to20"], [34, "21to34"], [49, "35to49"], [120, "50plus"]]),
+        age: a.age === "under18" ? "" : a.age,
         language: a.english === "" || a.french === "" ? "" : language,
         bilingual: english >= 4 && french >= 4 ? "yes" : "no",
         priorityOffer: a.job === "none" ? "no" : a.priorityOffer,
@@ -137,7 +137,7 @@ export function alberta(page) {
     guide: ["Score and stream eligibility", "Offer location, applicable sector or rural endorsement and recognized professional certification affect points. Permit and NOC also determine stream eligibility."],
   };
   return {
-    title: "Alberta pathway details", description: "This example shows the Alberta Opportunity Stream and the Worker EOI factors.",
+    title: "Alberta pathway details", description: "Review your Alberta worker stream and estimate points on the Worker EOI grid.",
     defaultRoute: "opportunity", routeField: select("route", "AAIP worker stream", "opportunity", routes, { highlight: true }),
     variants: Object.fromEntries(routes.map(({ value }) => [value, { ...variant, callout: [value === "opportunity" ? "Opportunity Stream checks" : "Pathway and evidence", routeNotes[value]] }])),
   };
@@ -163,7 +163,7 @@ export function saskatchewan(page) {
   const field = mapField(stream);
   const scoreVariant = {
     resultTitle: "Estimated SINP points", thresholdLabel: "60-point threshold", ticks: [0, 30, 60, 90, 110],
-    note: "90 points exceeds the 60-point grid minimum. Check the job, related work, language and licensing requirements for the route.",
+    note: "The grid has a 60-point minimum. Check the job, related work, language and licensing requirements for your route.",
     liveNote: "A minimum of 60 points applies. Check the selected pathway’s requirements and current intake conditions.",
   };
   return {
@@ -174,7 +174,7 @@ export function saskatchewan(page) {
         ...scoreVariant, stream,
         section: "International Skilled Worker factors",
         fields: [
-          number("age", "Age", "31"), field("education", "Education or training", "bachelor", { bachelor: "Bachelor’s degree · Canadian equivalency" }),
+          select("age", "Age", "", gridOptions(stream, "age")), field("education", "Education or training", "bachelor", { bachelor: "Bachelor’s degree · Canadian equivalency" }),
           field("recentWork", "Related work in past 5 years", "5"), field("olderWork", "Related work 6–10 years ago", "0", { 0: "None claimed" }),
           field("firstLanguage", "First language · lowest valid band", "7", { 7: "CLB 7" }), field("secondLanguage", "Second language · lowest valid band", "none", { none: "No test result" }),
           field("skOffer", "Saskatchewan job offer", "yes", { yes: "Permanent full-time · eligible TEER 2" }),
@@ -184,7 +184,7 @@ export function saskatchewan(page) {
           checkField("intent", "Intend to live in Saskatchewan"),
           select("occupation", "Offer occupation restrictions", "yes", options(["yes", "Eligible for this pathway"], ["unknown", "To be confirmed"], ["no", "Ineligible occupation"])),
         ],
-        mapAnswers: (a) => ({ ...a, age: ageRange(a.age, [[17, "under18"], [21, "18to21"], [34, "22to34"], [45, "35to45"], [50, "46to50"], [120, "over50"]]) }),
+        mapAnswers: (a) => ({ ...a }),
         callout: ["Use the selected pathway", "The Employment Offer route uses a qualifying offer for connection points. Other point-grid routes use eligible Saskatchewan family, work and study connections."],
         guide: ["Stream-dependent scoring", "Employment Offer, Occupations In-Demand and Saskatchewan Express Entry use the assessment grid. Other SINP routes can use criteria checks."],
       },
@@ -238,7 +238,7 @@ export function britishColumbia(page) {
         },
         rows: (breakdown) => breakdown.map((row, i) => ({ ...row, label: ["Directly related work experience", "Education", "Language proficiency", "BC hourly wage", "BC area of employment"][i] })),
         resultTitle: "Estimated BC registration score", footerLabel: "Skills Immigration", footerValue: "Registration points", ticks: [0, 50, 100, 150, 200],
-        note: "Regional experience or eligible alumni points are conditional on the work area. The example claims neither bonus.",
+        note: "Regional experience or eligible alumni points are conditional on the work area. Claim these only when you meet the criteria and can provide evidence.",
         callout: ["Base wage only", "Use the offered base hourly wage. Eligibility also depends on the offer, employer, occupation, experience and family income."],
         guide: ["Health Authority stream", "Review the direct application criteria for the Health Authority stream. The 200-point registration score applies to Skilled Worker."],
       },
@@ -269,10 +269,10 @@ export function princeEdwardIsland(page) {
     controls: [select("offer", "PEI job offer and permit", "yes", options(["yes", "Permanent full-time · TEER 2 · valid permit"], ["outside", "Qualifying offer · applying from outside PEI"], ["unknown", "Offer or permit to confirm"], ["no", "No qualifying offer"]))],
     section: "Workforce EOI scoring factors",
     fields: [
-      number("age", "Age", "31"), field("education", "Highest completed education", "bachelor", { bachelor: "Bachelor’s degree · 3+ years" }),
+      select("age", "Age", "", gridOptions(stream, "age")), field("education", "Highest completed education", "bachelor", { bachelor: "Bachelor’s degree · 3+ years" }),
       field("englishLanguage", "English · lowest valid band", "8", { 8: "CLB 8" }, { options: stream.questions.find((q) => q.key === "englishLanguage").options.filter((item) => item.value !== "employerForm").map((item) => item.value === "8" ? { ...item, label: "CLB 8" } : item) }),
       field("frenchLanguage", "French · lowest valid band", "under4", { under4: "No test result" }),
-      select("languageEvidence", "PEIW-02 language evidence option", "tests", options(["tests", "Test results used"], ["employer", "Signed qualifying PEIW-02"])), field("workExperience", "Total full-time work experience", "4to6", { "4to6": "4–6 years (5 in example)" }),
+      select("languageEvidence", "PEIW-02 language evidence option", "", options(["tests", "Test results used"], ["employer", "Signed qualifying PEIW-02"])), field("workExperience", "Total full-time work experience", "", { "4to6": "4–6 years" }),
       select("recent", "Eligible full-time work in past 5 years", "yes", options(["yes", "2+ years"], ["no", "Under 2 years"], ["unknown", "Evidence to confirm"])), checkField("workingInPei", "Working permanently in PEI on valid permit"),
       checkField("offerRelatedEducation", "Job offer related to education"),
       select("other", "Other employment points", "none", options(["none", "No additional claims"], ["regulated", "Regulated qualification verified"], ["work", "One year of continuous full-time PEI work"], ["both", "Both additional factors"])),
@@ -285,7 +285,6 @@ export function princeEdwardIsland(page) {
       const englishStrongest = langPoints("englishLanguage") >= langPoints("frenchLanguage");
       return {
         ...a,
-        age: ageRange(a.age, [[17, "under18"], [24, "18to24"], [44, "25to44"], [49, "45to49"], [120, "50plus"]]),
         englishLanguage: a.languageEvidence === "employer" ? "employerForm" : englishStrongest ? a.englishLanguage : "under4",
         frenchLanguage: a.languageEvidence !== "employer" && !englishStrongest ? a.frenchLanguage : "under4",
         regulatedQualification: ["regulated", "both"].includes(a.other) ? "yes" : "no",
@@ -297,13 +296,13 @@ export function princeEdwardIsland(page) {
     },
     rows: (breakdown) => ["Age", "Language", "Education", "Work experience", "Employment", "Adaptability"].map((label) => ({ ...breakdown.find((row) => row.section === label), label })),
     resultTitle: "Estimated PEI workforce EOI", footerLabel: "Workforce EOI", footerValue: "Skilled Worker in PEI",
-    note: "The employment example earns 5 for current permanent work and 10 for the job offer related to education. Adaptability is capped at 15.",
+    note: "Employment points depend on current PEI work and whether the job offer relates to your education. Adaptability is capped at 15.",
     callout: ["Category and evidence", "Confirm the required work history, job offer, education, valid status, language evidence and funds for this category."],
     guide: ["Use the selected grid", "PEI Workforce categories have different factor caps and evidence options. PEI Express Entry uses a separate grid with and without a job offer."],
   };
   const alternate = page.program.streams.filter((item) => item.key !== stream.key);
   return {
-    title: "PEI workforce profile", description: "The example uses Skilled Worker in PEI, with the Workforce guide’s labour points grid.",
+    title: "PEI workforce profile", description: "Estimate Workforce EOI points using the grid for your selected PEI category.",
     defaultRoute: stream.key, routeField: select("route", "Workforce category", stream.key, options([stream.key, "Skilled Worker in PEI"], ...alternate.map(({ key, label }) => [key, label])), { highlight: true }),
     variants: {
       [stream.key]: skilled,
@@ -331,7 +330,7 @@ export function northwestTerritories(page) {
     controls: [select("workLocation", "Offer details", "hay", options(["hay", "Hay River · full-time · TEER 2"], ["other", "Outside Yellowknife · full-time offer"], ["yellowknife", "Yellowknife · full-time offer"], ["no", "No qualifying offer"], ["unknown", "Offer details to verify"]))],
     section: "Human capital, NWT connection and adaptability",
     fields: [
-      number("age", "Age at EOI", "32"), field("education", "Education and occupation match", "bachelor", { bachelor: "Bachelor’s · ECA · not related to NOC" }),
+      select("age", "Age at EOI", "", gridOptions(stream, "age")), field("education", "Education and occupation match", "bachelor", { bachelor: "Bachelor’s · ECA · not related to NOC" }),
       select("firstLanguage", "First language · L / R / W / S", "8plus", [...bandChoices.map((item) => ({ ...item, label: item.value === "8plus" ? "English CLB 8 / 8 / 8 / 8" : item.label })), { value: "mixed", label: "Enter individual ability levels" }]),
       field("secondLanguage", "Second official language", "no", { no: "No result · no bilingual points", yes: "CLB/NCLC 5 or higher in all abilities" }),
       ...abilities.map((ability) => field(ability, undefined, "8plus", {}, { visible: (a) => a.firstLanguage === "mixed" })),
@@ -345,7 +344,6 @@ export function northwestTerritories(page) {
       const [noc, trades] = (a.occupation ?? "").split(":");
       return {
         ...a,
-        age: ageRange(a.age, [[17, "under18"], [20, "18to20"], [44, "21to44"], [49, "45to49"], [120, "50plus"]]),
         offer: ["hay", "other", "yellowknife"].includes(a.workLocation) ? "yes" : a.workLocation,
         location: a.workLocation ? (["hay", "other"].includes(a.workLocation) ? "yes" : "no") : "",
         noc: a.workLocation === "no" ? "" : noc, trades: a.workLocation === "no" ? "no" : trades,
@@ -354,12 +352,12 @@ export function northwestTerritories(page) {
     },
     rows: (breakdown) => breakdown.filter((row) => row.max > 0).map((row, i) => ({ ...row, label: ["Human capital factors", "NWT labour market connections", "Adaptability to the NWT"][i] })),
     resultTitle: "Estimated NWT EOI points", footerLabel: "Employer-Driven", footerValue: "Territorial ranking score", ticks: [0, 200, 400, 600, 845],
-    note: "The example earns 310 human capital points and 235 for the NWT labour-market connection. It claims no NWT study or family points.",
+    note: "The total combines human capital, NWT labour-market connection and adaptability points. Claim NWT study and family factors only when you meet the criteria.",
     callout: ["Employer-Driven stream checks", "Review the employer’s offer, candidate work authorization and the criteria for Skilled Worker, Express Entry or Entry Level/Semi-Skilled."],
     guide: ["Separate Francophone criteria", "Use the 845-point grid for Employer-Driven EOIs. The Francophone Stream has separate language and eligibility requirements."],
   };
   return {
-    title: "NWT employer-driven profile", description: "This example uses the Employer-Driven Skilled Worker grid and a Hay River job offer.",
+    title: "NWT employer-driven profile", description: "Estimate your score on the Employer-Driven EOI grid for the selected stream.",
     defaultRoute: "skilled", routeField: select("route", "NTNP route", "skilled", routes, { highlight: true }),
     variants: {
       skilled: variant, ee: { ...variant, guide: ["NWT Express Entry", "Confirm federal Express Entry eligibility and a valid federal profile before using the Employer-Driven Express Entry route."] },
