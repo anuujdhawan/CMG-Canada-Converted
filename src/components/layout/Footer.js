@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./Footer.module.css";
 import { GraduationCap, MapPin, Phone, Mail, ArrowUpRight, ShieldCheck, Sparkles, CreditCard } from "lucide-react";
 import { socialIcons } from "@/components/ui/SocialIcons";
 import { navigation } from "@/config/navigation";
@@ -20,15 +21,18 @@ const PAYMENT_LOGOS = [
 ];
 
 function LinkColumn({ title, links }) {
+  const isContact = title === "Contact";
+  const isTools = title === "Tools & Resources";
+
   return (
-    <nav aria-label={title} className="site-footer__col">
-              <p className="site-footer__col-title flex items-center gap-2 m-[0_0_.9rem] text-(--brand-navy-dark) text-[.68rem] max-[768px]:text-[.875rem] max-[768px]:mb-3 font-extrabold tracking-[.14em] leading-[1.2] uppercase">
+    <nav aria-label={title} className={`site-footer__col${isContact ? ` ${styles.contactColumn} site-footer__col--contact` : ""}${isTools ? ` ${styles.toolsColumn}` : ""}`}>
+      <p className="site-footer__col-title flex items-center gap-2 m-[0_0_.9rem] text-(--brand-navy-dark) text-[.68rem] max-[768px]:text-[.875rem] max-[768px]:mb-3 font-extrabold tracking-[.14em] leading-[1.2] uppercase">
         <span className="site-footer__col-title-line h-0.5 w-[1.4rem] shrink-0 rounded-full bg-primary" aria-hidden />
         {title}
       </p>
-      <ul className="site-footer__col-list grid gap-[.42rem] m-0 list-none p-0">
+      <ul className={`site-footer__col-list grid gap-[.42rem] m-0 list-none p-0${isContact ? ` ${styles.contactList}` : ""}${isTools ? ` ${styles.toolsList}` : ""}`}>
         {links.map((link) => (
-          <li key={link.href + link.label}>
+          <li key={link.href + link.label} className="min-w-0">
             {link.external ? (
               <a href={link.href} target="_blank" rel="noopener noreferrer" className="site-footer__link group inline-flex items-center gap-[.3rem] text-muted text-[.82rem] font-semibold leading-[1.45] no-underline transition-[color,transform] duration-180 ease-in-out hover:translate-x-0.5 hover:text-[red]">
                 <span>{link.label}</span>
@@ -65,7 +69,7 @@ export default function Footer() {
 
       <div className="site-footer__inner relative z-1 max-w-7xl mx-auto px-5 md:px-8">
         {/* Main grid */}
-        <div className="site-footer__main grid grid-cols-[minmax(0,1.42fr)_minmax(0,2.1fr)] items-start gap-x-12 gap-y-11 py-12 pb-8 max-[1100px]:grid-cols-1 max-[1100px]:gap-9 max-[720px]:py-[2.25rem_0_1.5rem]">
+        <div className={`${styles.main} site-footer__main grid items-start gap-x-10 gap-y-6 py-10 pb-7 max-[720px]:py-[2.25rem_0_1.5rem]`}>
           {/* Brand */}
           <div className="site-footer__brand min-w-0">
             <Link href="/" className="site-footer__logo inline-flex items-center rounded-2xl border border-line bg-(--brand-logo-bg) px-3 py-[.55rem] shadow-[0_8px_24px_color-mix(in_srgb,var(--brand-primary)_6%,transparent),0_2px_8px_color-mix(in_srgb,var(--brand-navy)_4%,transparent)] transition-[transform,box-shadow,border-color] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-[color-mix(in_srgb,var(--brand-primary)_22%,var(--brand-border))] hover:shadow-[0_14px_32px_color-mix(in_srgb,var(--brand-primary)_9%,transparent)]" aria-label={`${site.displayName} home`}>
@@ -112,7 +116,7 @@ export default function Footer() {
                   href={site.address.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="site-footer__office site-footer__office--primary grid gap-[.45rem] rounded-[.8rem] border border-l-[3px] border-line border-l-primary bg-[color-mix(in_srgb,#fff_72%,var(--brand-surface))] text-muted px-3 py-[.7rem] text-[.72rem] leading-[1.45] no-underline transition-[border-color,background,transform] duration-180 ease-in-out hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--brand-primary)_32%,var(--brand-border))] hover:bg-[#ffffff]"
+                  className={`${styles.officeCard} site-footer__office site-footer__office--primary grid gap-[.45rem] rounded-[.8rem] border border-l-[3px] border-line border-l-primary bg-[color-mix(in_srgb,#fff_72%,var(--brand-surface))] text-muted px-3 py-[.7rem] text-[.72rem] leading-[1.45] no-underline transition-[border-color,background,transform] duration-180 ease-in-out hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--brand-primary)_32%,var(--brand-border))] hover:bg-[#ffffff]`}
                 >
                   <span className="site-footer__office-heading flex items-center gap-[.55rem]">
                     <span className="site-footer__contact-icon inline-flex size-[1.65rem] shrink-0 items-center justify-center mt-[.02rem] rounded-[.55rem] border border-line bg-white text-primary">
@@ -149,7 +153,7 @@ export default function Footer() {
                   </span>
                   <span className="site-footer__office-address grid gap-[.1rem] pl-[2.2rem]">{site.sisterConcern.address}</span>
                 </a>  */}
-                <div className="site-footer__office site-footer__contact-card grid min-h-32 items-center gap-[.2rem] rounded-[.8rem] border border-l-[3px] border-line border-l-primary bg-[color-mix(in_srgb,#fff_72%,var(--brand-surface))] px-3 py-[.7rem] text-muted transition-[border-color,background,transform] duration-180 ease-in-out hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--brand-primary)_32%,var(--brand-border))] hover:bg-[#ffffff]">
+                <div className={`${styles.contactCard} site-footer__office site-footer__contact-card grid items-start gap-2 rounded-[.8rem] border border-l-[3px] border-line border-l-primary bg-[color-mix(in_srgb,#fff_72%,var(--brand-surface))] px-3 py-[.65rem] text-muted transition-[border-color,background,transform] duration-180 ease-in-out hover:-translate-y-px hover:border-[color-mix(in_srgb,var(--brand-primary)_32%,var(--brand-border))] hover:bg-[#ffffff]`}>
                   <a href={site.phoneHref} className="site-footer__contact-row flex items-center gap-[.6rem] text-muted text-[.78rem] leading-[1.45] no-underline transition-colors duration-180 ease-in-out hover:text-primary-dark">
                     <span className="site-footer__contact-icon inline-flex size-[1.65rem] shrink-0 items-center justify-center rounded-[.55rem] border border-line bg-white text-primary">
                       <Phone size={13} aria-hidden />
@@ -218,7 +222,7 @@ export default function Footer() {
           </div>
 
           {/* Link columns */}
-          <div className="site-footer__links grid grid-cols-[repeat(6,minmax(0,1fr))] items-start gap-x-5 gap-y-7 pt-[.35rem] max-[1100px]:grid-cols-3 max-[720px]:grid-cols-2 max-[720px]:gap-[1.6rem_1rem] max-[520px]:gap-[1.75rem_1rem]">
+          <div className={`${styles.links} site-footer__links grid items-start gap-x-6 gap-y-6 pt-[.35rem]`}>
             {linkColumns.map((col) => (
               <LinkColumn key={col.title} title={col.title} links={col.links} />
             ))}

@@ -1,0 +1,62 @@
+.main {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.5fr);
+  column-gap: 2.5rem;
+  row-gap: 1.5rem;
+}
+
+.links {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 1.25rem;
+  row-gap: 1.5rem;
+}
+
+@media (min-width: 1101px) {
+  .officeCard,
+  .contactCard {
+    max-width: 26rem;
+  }
+}
+
+@media (min-width: 721px) {
+  .toolsColumn {
+    grid-column: span 2;
+  }
+
+  .toolsList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.25rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .main {
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1rem;
+    row-gap: 1.4rem;
+  }
+
+  .contactColumn {
+    grid-column: 1 / -1;
+  }
+
+  .toolsColumn {
+    grid-column: auto;
+  }
+
+  .toolsList {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contactList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+  }
+}
