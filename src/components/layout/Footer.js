@@ -8,6 +8,7 @@ import { site } from "@/config/site";
 
 const SOCIAL_ITEMS = [
   { key: "linkedin", label: `${site.displayName} on LinkedIn` },
+  { key: "tiktok", label: `${site.displayName} on TikTok` },
   { key: "facebook", label: `${site.displayName} on Facebook` },
   { key: "instagram", label: `${site.displayName} on Instagram` },
   { key: "youtube", label: `${site.displayName} on YouTube` },
