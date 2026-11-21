@@ -91,10 +91,9 @@ export const site = {
   // ---- Social ---------------------------------------------------------
   social: {
     facebook: "https://www.facebook.com/people/Commonwealth-Migration-Canada/61593464346589/",
-    instagram: "https://www.instagram.com/commonwealthmigration",
-    // Leave this empty until the practice has a verified LinkedIn company URL.
-    // A different network's URL here would create a false sameAs relationship.
-    linkedin: "",
+    instagram: "https://www.instagram.com/cmg_canada/",
+    linkedin: "https://www.linkedin.com/company/commonwealthmigrationgroup/",
+    tiktok: "https://www.tiktok.com/@cmg_canada",
     youtube: "https://www.youtube.com/@Commonwealthmigration",
   },
 
