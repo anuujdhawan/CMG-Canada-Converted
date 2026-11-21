@@ -92,27 +92,29 @@ function ExpandedField({ label, valueLabel, highlight, children }) {
 }
 
 const languageChoices = options([["english", "English"], ["french", "French"]]);
-const benchmark = (language) => language === "french" ? "NCLC" : "CLB";
-const translatedLanguage = (language) => language === "french" ? "French" : "English";
+const benchmark = (language) => language === "french" ? "NCLC" : language === "english" ? "CLB" : "CLB/NCLC";
+const translatedLanguage = (language) => language === "french" ? "French" : language === "english" ? "English" : "official-language";
 
 function BandField({
-  label, scores, onChange, levels = CRS_LANGUAGE_LEVELS, language = "english", onLanguageChange, enabled = true, onEnabledChange, highlight,
+  label, scores, onChange, levels = CRS_LANGUAGE_LEVELS, language = "", onLanguageChange, enabled = true, onEnabledChange, highlight,
 }) {
   const id = useId();
   const summary = abilities.map(([key]) => scores[key] || "–").join(" / ");
   const levelLabel = (level) => levels.find(({ value }) => value === level)?.label.replaceAll("CLB/NCLC", benchmark(language));
   let valueLabel = "Enter the four ability levels";
-  if (!enabled) valueLabel = `No ${translatedLanguage(language)} test`;
+  if (enabled == null) valueLabel = "Choose whether you have a test result";
+  else if (!enabled) valueLabel = `No ${translatedLanguage(language)} test result`;
+  else if (onLanguageChange && !language) valueLabel = "Choose your first language";
   else if (abilities.some(([key]) => scores[key] !== "")) valueLabel = `${translatedLanguage(language)} ${benchmark(language)} ${summary.replaceAll("9plus", "9+").replaceAll("below7", "<7")}`;
 
   return (
     <ExpandedField label={label} valueLabel={valueLabel} highlight={highlight}>
-      {onEnabledChange && <ChoiceField label={`Use a ${translatedLanguage(language)} test`} value={enabled ? "yes" : "no"} onChange={(next) => onEnabledChange(next === "yes")} />}
+      {onEnabledChange && <ChoiceField label={`Use ${language ? `a ${translatedLanguage(language)} test result` : "a language test result"}`} value={enabled == null ? "" : enabled ? "yes" : "no"} onChange={(next) => onEnabledChange(next === "yes")} />}
       {onLanguageChange && enabled && <SelectField label="Test language" id={`${id}-language`} options={languageChoices} value={language} onChange={onLanguageChange} />}
-      {enabled && (
+      {enabled && (!onLanguageChange || language) && (
         <div className="ref-fields">
           {abilities.map(([key, name]) => (
-            <SelectField key={key} id={`${id}-${key}`} label={name} value={scores[key]} onChange={(value) => onChange({ ...scores, [key]: value })} options={levels.map(({ value }) => ({ value, label: levelLabel(value) }))} />
+            <SelectField key={key} id={`${id}-${key}`} label={name} placeholder="Select score" value={scores[key]} onChange={(value) => onChange({ ...scores, [key]: value })} options={levels.map(({ value }) => ({ value, label: levelLabel(value) }))} />
           ))}
         </div>
       )}
@@ -120,20 +122,17 @@ function BandField({
   );
 }
 
-function useFederalProfile(exampleValues, emptyValues) {
-  const [values, setValues] = useState(exampleValues);
-  const [example, setExample] = useState(true);
+function useFederalProfile(emptyValues) {
+  const [values, setValues] = useState(emptyValues);
   function change(key) {
     return (value) => {
-      setExample(false);
       setValues((previous) => ({ ...previous, [key]: value }));
     };
   }
   function reset() {
-    setExample(false);
     setValues(emptyValues);
   }
-  return { values, example, change, reset };
+  return { values, change, reset };
 }
 
 const testData = {
@@ -162,6 +161,7 @@ const testData = {
     name: "PTE Core",
     scoreName: "PTE",
     language: "CLB",
+    min: 10,
     max: 90,
     thresholds: {
       listening: [28, 39, 50, 60, 71, 82, 89],
@@ -196,7 +196,6 @@ const testData = {
   },
 };
 
-const languageExample = { listening: "8.0", reading: "7.0", writing: "6.5", speaking: "7.0" };
 const scoreMax = (test, key) => typeof test.max === "number" ? test.max : test.max[key];
 
 function convertScore(test, ability, score) {
@@ -212,38 +211,49 @@ function formatRaw(test, value) {
   return value === "" ? "" : Number(value).toFixed(test.step === .5 ? 1 : 0);
 }
 
+function rawScoreOptions(test, ability) {
+  const min = test.min ?? 0;
+  const max = scoreMax(test, ability);
+  const step = test.step ?? 1;
+  const count = Math.floor((max - min) / step + 1e-9);
+  return Array.from({ length: count + 1 }, (_, index) => {
+    const value = Number((min + index * step).toFixed(step === .5 ? 1 : 0));
+    const converted = convertScore(test, ability, value);
+    const levelLabel = converted === 0 ? `Below ${test.language} 4` : `${test.language} ${converted}${converted === 10 ? "+" : ""}`;
+    return { value: String(value), label: `${formatRaw(test, value)} · ${levelLabel}` };
+  });
+}
+
 function ClbCalculator() {
-  const [testKey, setTestKey] = useState("ielts");
-  const { values: scores, example, change, reset } = useFederalProfile(languageExample, allBands());
-  const test = testData[testKey];
+  const [testKey, setTestKey] = useState("");
+  const { values: scores, change, reset } = useFederalProfile(allBands());
+  const test = testData[testKey] ?? null;
   const max = 10;
-  const levels = abilities.map(([key, label, Icon]) => ({ key, label, Icon, level: convertScore(test, key, scores[key]) }));
-  const allEntered = levels.every(({ level }) => level != null);
-  const minimum = allEntered ? Math.min(...levels.map(({ level }) => level)) : null;
-  const lowest = allEntered ? levels.filter(({ level }) => level === minimum) : [];
+  const levels = test ? abilities.map(([key, label, Icon]) => ({ key, label, Icon, level: convertScore(test, key, scores[key]) })) : [];
+  const enteredLevels = levels.filter(({ level }) => level != null);
+  const allEntered = Boolean(test) && enteredLevels.length === abilities.length;
+  const minimum = enteredLevels.length ? Math.min(...enteredLevels.map(({ level }) => level)) : null;
+  const lowest = minimum === null ? [] : levels.filter(({ level }) => level === minimum);
   const levelName = (level) => level == null ? "—" : level === 0 ? `Below ${test.language} 4` : `${test.language} ${level}${level === max ? "+" : ""}`;
-  const callout = {
+  const callout = !test ? {
+    title: "Choose an approved test",
+    body: "Select the test shown on your result report. The score options will match that test’s valid score range.",
+  } : {
     title: testKey === "ielts" ? "Use your General Training results" : `Use your ${test.name} results`,
-    body: (
-      <>
-        {testKey === "tef" ? "Enter the Équivalence ancien score values from your report." : testKey === "ielts" ? "Enter all four bands from the same IELTS General Training test." : "Enter all four scores from the same report."}
-        <br />Express Entry requires test results less than two years old.
-      </>
-    ),
+    body: <>{testKey === "tef" ? "Choose the Équivalence ancien score values from your report." : testKey === "ielts" ? "Choose all four bands from the same IELTS General Training test." : "Choose all four scores from the same report."}<br />Express Entry requires test results less than two years old.</>,
   };
   const footerValue = lowest.length === 1
-    ? `${lowest[0].label} · ${test.scoreName} ${formatRaw(test, scores[lowest[0].key])}`
-    : lowest.length > 1 ? lowest.map(({ label }) => label).join(", ") : "Enter all four scores";
+    ? `${lowest[0].label} · ${test.scoreName} ${formatRaw(test, scores[lowest[0].key])}${allEntered ? "" : ` · ${enteredLevels.length}/4 entered`}`
+    : lowest.length > 1 ? `${lowest.map(({ label }) => label).join(", ")}${allEntered ? "" : ` · ${enteredLevels.length}/4 entered`}` : undefined;
+  const resetCalculator = () => { setTestKey(""); reset(); };
 
   return (
     <>
       <FormPanel
         title="Language test scores"
-        description="Choose your test and enter the four scores from one report."
+        description="Choose a test, select the four scores shown on one report and convert them to CLB or NCLC."
         icon={AudioLines}
-        onReset={reset}
-        actionLabel="Convert scores"
-        example={example}
+        onReset={resetCalculator}
         callout={callout}
       >
         <div className="ref-test-picker">
@@ -258,85 +268,80 @@ function ClbCalculator() {
             ))}
           </div>
         </div>
-        <SectionLabel>{test.heading ?? `${test.name} scores`}</SectionLabel>
-        <div className={`ref-fields ${styles.languageInputs}`}>
-          {levels.map(({ key, label, level }) => (
-            <Field
-              key={key}
-              label={label}
-              id={`language-${key}`}
-              type="number"
-              value={scores[key]}
-              onChange={change(key)}
-              min={0}
-              max={scoreMax(test, key)}
-              step={test.step ?? 1}
-              suffix={`/ ${formatRaw(test, scoreMax(test, key))}`}
-              highlight={minimum !== null && level === minimum && lowest.length < 4}
-            />
-          ))}
-        </div>
+        {test ? <>
+          <SectionLabel>{test.heading ?? `${test.name} scores`}</SectionLabel>
+          <div className={`ref-fields ${styles.languageInputs}`}>
+            {levels.map(({ key, label, level }) => (
+              <Field
+                key={key}
+                label={label}
+                id={`language-${key}`}
+                placeholder="Select score"
+                value={scores[key]}
+                onChange={change(key)}
+                options={rawScoreOptions(test, key)}
+                suffix={`/ ${formatRaw(test, scoreMax(test, key))}`}
+                highlight={minimum !== null && level === minimum && lowest.length < 4}
+              />
+            ))}
+          </div>
+        </> : <p className="ref-empty-prompt">Choose one of the approved tests above to load its score choices.</p>}
       </FormPanel>
       <ResultPanel>
         <ScoreResult
           title="Language benchmark"
-          example={example}
+          calculated={minimum !== null}
           value={minimum}
           max={max}
           min={4}
-          ticks={test.thresholds.listening.map((_, i) => i === max - 4 ? { value: max, label: `${max}+` } : i + 4)}
+          ticks={test?.thresholds.listening.map((_, i) => i === max - 4 ? { value: max, label: `${max}+` } : i + 4)}
           centerLabel={minimum === null ? "—" : minimum === 0 ? "< 4" : minimum === max ? `${max}+` : minimum}
-          unitLabel={test.language}
-          sublabel="Lowest converted level"
-          footerLabel="Lowest ability"
+          unitLabel={test?.language}
+          sublabel={test ? allEntered ? "Lowest converted level" : enteredLevels.length ? `Lowest so far · ${enteredLevels.length}/4 scores` : "Enter four test scores" : "Choose a test and scores"}
+          footerLabel={minimum !== null ? allEntered ? "Lowest ability" : "Lowest ability so far" : undefined}
           footerValue={footerValue}
         />
-        <div className="ref-result-heading"><h3>Ability breakdown</h3><span>{test.scoreName} → {test.language}</span></div>
-        <div className="ref-ability-grid">
-          {levels.map(({ key, label, Icon, level }) => {
-            const isLowest = minimum !== null && level === minimum && lowest.length < 4;
+        <div className="ref-result-heading"><h3>Ability breakdown</h3><span>{test ? `${test.scoreName} → ${test.language}` : "Four test scores"}</span></div>
+        {test ? <div className="ref-ability-grid">
+          {levels.map(({ key, label, Icon, level: rawLevel }) => {
+            const isLowest = minimum !== null && rawLevel === minimum && lowest.length < 4;
             return (
               <div key={key} className="ref-ability-card" data-lowest={isLowest || undefined}>
-                <div className="ref-ability-card-row"><span><Icon aria-hidden />{label}</span><strong>{levelName(level)}</strong></div>
+                <div className="ref-ability-card-row"><span><Icon aria-hidden />{label}</span><strong>{levelName(rawLevel)}</strong></div>
                 <div className="ref-ability-card-row ref-ability-card-meta">
                   <span>{scores[key] === "" ? "Enter a score" : `${test.scoreName} ${formatRaw(test, scores[key])}`}</span>
                   {isLowest && <strong>Lowest ability</strong>}
                 </div>
-                <span className="ref-progress" aria-hidden><i style={{ width: `${(level ?? 0) / max * 100}%` }} /></span>
+                <span className="ref-progress" aria-hidden><i style={{ width: `${rawLevel !== null ? rawLevel / max * 100 : 0}%` }} /></span>
               </div>
             );
           })}
-        </div>
-        <ResultNote>{test.scoreName} table: below {test.language} 4 or {test.language} 4–{max}+. French tests return NCLC.</ResultNote>
+        </div> : <ResultNote>Choose a test and enter all four scores to see the converted language levels.</ResultNote>}
+        {test && <ResultNote>{test.scoreName} table: below {test.language} 4 or {test.language} 4–{max}+. French tests return NCLC. {allEntered ? "" : "This estimate updates as you select each score."}</ResultNote>}
       </ResultPanel>
     </>
   );
 }
 
 const crsEmpty = {
-  marital: "single",
+  marital: "",
   age: "",
   education: "",
-  primaryLanguage: "english",
+  primaryLanguage: "",
   firstLanguage: allBands(),
-  hasSecondLanguage: false,
+  hasSecondLanguage: null,
   secondLanguage: allBands(),
   canadianExperience: "",
   foreignExperience: "",
   spouseEducation: "",
   spouseLanguage: allBands(),
   spouseExperience: "",
-  lmiWorkWage: "0",
-  lmiJobWage: "0",
-  certificateOfQualification: "no",
-  canadianEducation: "none",
-  sibling: "no",
-  provincialNomination: "no",
-};
-
-const crsExample = {
-  ...crsEmpty, age: "29", education: "bachelor", firstLanguage: allBands("9"),
-  canadianExperience: "0", foreignExperience: "3",
+  lmiWorkWage: "",
+  lmiJobWage: "",
+  certificateOfQualification: "",
+  canadianEducation: "",
+  sibling: "",
+  provincialNomination: "",
 };
 
 const crsMarital = options([
@@ -353,12 +358,29 @@ const foreignExperience = options([[0, "None"], [1, "1–2 years"], [3, "3 years
 const lmiWork = options([[0, "None"], [20, "Eligible 1.3× occupation"], [40, "Eligible 1.5× occupation"], [70, "Eligible 2× occupation"]]);
 const lmiJob = options([[0, "None"], [50, "Eligible 1.3× job offer"], [70, "Eligible 1.5× job offer"], [100, "Eligible 2× job offer"]]);
 const nomination = options([["no", "None"], ["yes", "Yes, nomination accepted"]]);
+const crsAgeOptions = options([
+  [17, "17 or younger"], [18, "18 years"], [19, "19 years"], [25, "20–29 years"],
+  ...Array.from({ length: 15 }, (_, index) => [String(index + 30), `${index + 30} years`]),
+  [45, "45 years or older"],
+]);
+
+function hasAnswer(value) {
+  return Array.isArray(value) ? value.length > 0 : value !== "" && value != null;
+}
+
+function hasCrsInput(form) {
+  return Object.values(form).some((value) => Array.isArray(value)
+    ? value.length > 0
+    : value && typeof value === "object"
+      ? Object.values(value).some(hasAnswer)
+      : hasAnswer(value));
+}
 
 function CrsReferenceCalculator() {
-  const { values: form, example, change, reset } = useFederalProfile(crsExample, crsEmpty);
-  const [step, setStep] = useState(3);
+  const { values: form, change, reset } = useFederalProfile(crsEmpty);
+  const [step, setStep] = useState(0);
   const hasSpouse = form.marital === "accompanying";
-  const second = form.primaryLanguage === "english" ? "french" : "english";
+  const second = !form.primaryLanguage ? "" : form.primaryLanguage === "english" ? "french" : "english";
   const scorerInput = {
     ...form,
     hasSpouse,
@@ -372,37 +394,38 @@ function CrsReferenceCalculator() {
   const core = result.score - result.transferability.total - result.additional - result.rows.find(({ label }) => label === "Spouse factors").points;
   const show = (index) => step === index || step === 3;
   const spouseRow = result.rows.find(({ label }) => label === "Spouse factors");
-  const scoreRow = (label, points, max) => ({ label, points: result.complete ? points : null, max });
-  const educationOptions = example
-    ? crsEducation.map((item) => item.value === "bachelor" ? { ...item, label: "Bachelor’s degree · Canadian ECA" } : item)
-    : crsEducation;
+  const hasInput = hasCrsInput(form);
+  const selectionsComplete = form.marital !== "" && form.primaryLanguage !== ""
+    && form.hasSecondLanguage !== null
+    && form.canadianEducation !== "" && form.sibling !== "" && form.provincialNomination !== ""
+    && form.certificateOfQualification !== "" && form.lmiWorkWage !== "" && form.lmiJobWage !== "";
+  const completeResult = result.complete && selectionsComplete;
+  const scoreRow = (label, points, max) => ({ label, points: hasInput ? points : null, max });
 
   return (
     <>
       <FormPanel
         title="Express Entry scoring factors"
-        description={<span className={styles.crsDescription}>Review your completed answers. Language bands appear in listening, reading, writing, speaking order.</span>}
-        onReset={() => { reset(); setStep(3); }}
+        description={<span className={styles.crsDescription}>Enter your profile details and supporting factors. Language bands appear in listening, reading, writing, speaking order.</span>}
+        onReset={() => { reset(); setStep(0); }}
         steps={["Profile", "Language", "Work & offer", "Review"]}
         activeStep={step}
         onStep={setStep}
-        onCalculate={() => setStep(3)}
-        example={example}
         callout={{
           title: "Accompanying spouse or partner",
           body: "If your accompanying spouse or partner is neither a Canadian citizen nor a permanent resident, include their education, language scores and Canadian work.",
         }}
       >
-        <SectionLabel>{step === 3 ? example ? "Example profile and supporting factors" : "Profile and supporting factors" : ["Profile details", "Official language levels", "Work history and job offer"][step]}</SectionLabel>
+        <SectionLabel>{step === 3 ? "Profile and supporting factors" : ["Profile details", "Official language levels", "Work history and job offer"][step]}</SectionLabel>
         <div className="ref-fields">
           {show(0) && <>
             <SelectField id="crs-marital" label="Marital status" value={form.marital} onChange={change("marital")} options={crsMarital} />
-            <Field id="crs-age" label="Age" type="number" min={0} max={120} suffix="years" value={form.age} onChange={change("age")} />
-            <SelectField id="crs-education" label="Highest education" value={form.education} onChange={change("education")} options={educationOptions} />
+            <SelectField id="crs-age" label="Age" value={form.age} onChange={change("age")} options={crsAgeOptions} placeholder="Choose age range" />
+            <SelectField id="crs-education" label="Highest education" value={form.education} onChange={change("education")} options={crsEducation} />
             <SelectField id="crs-canadian-education" label="Canadian study credential" value={form.canadianEducation} onChange={change("canadianEducation")} options={canadianStudy} />
           </>}
           {show(1) && <>
-            <BandField label="First language · L / R / W / S" scores={form.firstLanguage} onChange={change("firstLanguage")} language={form.primaryLanguage} onLanguageChange={change("primaryLanguage")} highlight={example} />
+            <BandField label="First language · L / R / W / S" scores={form.firstLanguage} onChange={change("firstLanguage")} language={form.primaryLanguage} onLanguageChange={change("primaryLanguage")} />
             <BandField label="Second language · L / R / W / S" scores={form.secondLanguage} onChange={change("secondLanguage")} language={second} enabled={form.hasSecondLanguage} onEnabledChange={change("hasSecondLanguage")} />
           </>}
           {show(2) && <>
@@ -431,12 +454,12 @@ function CrsReferenceCalculator() {
       <ResultPanel>
         <ScoreResult
           title="Estimated CRS score"
-          example={example}
-          value={result.complete ? result.score : null}
+          calculated={hasInput}
+          value={hasInput ? result.score : null}
           max={1270}
           ticks={[0, 300, 600, 900, 1270]}
-          footerLabel="Express Entry"
-          footerValue={hasSpouse ? "Accompanying spouse or partner" : form.marital === "single" ? "Single applicant · spouse factors do not apply" : "Scored without spouse factors"}
+          footerLabel={hasInput ? completeResult ? "Express Entry" : "Provisional score" : undefined}
+          footerValue={hasInput ? completeResult ? hasSpouse ? "Accompanying spouse or partner" : form.marital === "single" ? "Single applicant · spouse factors do not apply" : "Scored without spouse factors" : "Updates as you complete each answer" : undefined}
         />
         <PointsBreakdown
           rows={[
@@ -445,9 +468,7 @@ function CrsReferenceCalculator() {
             scoreRow("Skill transferability", result.transferability.total, 100),
             scoreRow("Additional points", result.additional, 600),
           ]}
-          note={example
-            ? "The example earns 25 transferability points for education and 50 for foreign work. The two are calculated using all four language scores."
-            : result.complete ? "Confirm each claimed factor against your supporting documents and the IRCC scoring criteria." : "Complete the profile and language fields to calculate your estimate."}
+          note={completeResult ? "Confirm each claimed factor against your supporting documents and the IRCC scoring criteria." : hasInput ? "Provisional points reflect the answers entered so far. The total updates immediately when an answer changes." : "Choose your profile, language and work factors to see a live estimate."}
         />
         <div className={styles.crsCallout}>
           <Callout title="Labour Market Integration" variant="book">
@@ -463,6 +484,11 @@ const fswLevels = options([
   ["below7", "Below CLB/NCLC 7"], [7, "CLB/NCLC 7"], [8, "CLB/NCLC 8"], ["9plus", "CLB/NCLC 9 or higher"],
 ]);
 const fswLanguagePoints = { below7: 0, 7: 4, 8: 5, "9plus": 6 };
+const fswAgeOptions = options([
+  ["under18", "Under 18"], ["18to35", "18–35"],
+  ...Array.from({ length: 11 }, (_, index) => [String(index + 36), String(index + 36)]),
+  ["47plus", "47 or older"],
+]);
 const fswEducation = [
   ["none", "Less than high school", 0],
   ["secondary", "High school diploma", 5],
@@ -490,15 +516,9 @@ const adaptability = [
 ];
 
 const fswEmpty = {
-  age: "", education: "", experience: "", primaryLanguage: "english", firstLanguage: allBands(),
-  hasSecondLanguage: false, secondLanguage: allBands(), jobOffer: "", adaptability: [],
+  age: "", education: "", experience: "", primaryLanguage: "", firstLanguage: allBands(),
+  hasSecondLanguage: null, secondLanguage: allBands(), jobOffer: "", adaptability: [],
   continuousWork: "", educationEca: "", funds: "", residence: "",
-};
-
-const fswExample = {
-  ...fswEmpty,
-  age: "30", education: "three-year", experience: "4to5", firstLanguage: allBands("9plus"),
-  jobOffer: "no", adaptability: ["relative"], continuousWork: "yes", educationEca: "yes", funds: "yes", residence: "yes",
 };
 
 function AdaptabilityField({ selected, onChange }) {
@@ -518,27 +538,31 @@ function AdaptabilityField({ selected, onChange }) {
   );
 }
 
-function calculateFsw(answers, example) {
+function calculateFsw(answers) {
   const age = Number(answers.age);
-  const agePoints = age >= 18 && age <= 35 ? 12 : Math.max(0, age >= 36 ? 47 - age : 0);
+  const agePoints = answers.age === "18to35" ? 12 : age >= 36 && age <= 46 ? 47 - age : ["under18", "47plus"].includes(answers.age) ? 0 : null;
   const education = fswEducation.find(([value]) => value === answers.education)?.[2];
   const experience = fswExperience.find(([value]) => value === answers.experience)?.[2];
   const firstBands = Object.values(answers.firstLanguage);
   const secondBands = Object.values(answers.secondLanguage);
   const firstComplete = firstBands.every(Boolean);
-  const secondComplete = !answers.hasSecondLanguage || secondBands.every(Boolean);
-  const secondPoints = answers.hasSecondLanguage && secondBands.every((level) => Number(level) >= 5) ? 4 : 0;
+  const secondComplete = answers.hasSecondLanguage === false || (answers.hasSecondLanguage === true && secondBands.every(Boolean));
+  const secondPoints = answers.hasSecondLanguage === true && secondBands.every((level) => Number(level) >= 5) ? 4 : 0;
   const arranged = answers.jobOffer === "yes" ? 10 : 0;
   const adaptabilityPoints = Math.min(10, adaptability.reduce((total, [key, , points]) => total + (answers.adaptability.includes(key) ? points : 0), arranged ? 5 : 0));
+  const languageStarted = firstBands.some(Boolean) || answers.hasSecondLanguage !== null;
+  const firstLanguagePartial = firstBands.reduce((total, band) => total + (fswLanguagePoints[band] || 0), 0);
   const rows = [
     { label: "Age", points: answers.age === "" ? null : agePoints, max: 12 },
     { label: "Education", points: education, max: 25 },
-    { label: "Official languages", points: firstComplete && secondComplete ? firstBands.reduce((total, band) => total + fswLanguagePoints[band], secondPoints) : null, max: 28 },
+    { label: "Official languages", points: firstComplete && secondComplete ? firstLanguagePartial + secondPoints : languageStarted ? firstLanguagePartial + secondPoints : null, max: 28 },
     { label: "Skilled work experience", points: experience, max: 15 },
     { label: "Arranged employment", points: answers.jobOffer ? arranged : null, max: 10 },
     { label: "Adaptability", points: adaptabilityPoints, max: 10 },
   ];
-  const score = rows.every(({ points }) => points != null) ? rows.reduce((total, { points }) => total + points, 0) : null;
+  const score = rows.every(({ points }) => points != null) && firstComplete && secondComplete && answers.primaryLanguage !== "" && answers.hasSecondLanguage !== null
+    ? rows.reduce((total, { points }) => total + points, 0)
+    : null;
   const criteria = [
     ["Continuous skilled work in the past 10 years", answers.continuousWork],
     ["Canadian credential or foreign ECA", answers.educationEca],
@@ -546,29 +570,26 @@ function calculateFsw(answers, example) {
     ["Intend to settle outside Quebec", answers.residence],
     ["CLB/NCLC 7 or higher in each first-language ability", firstComplete ? firstBands.includes("below7") ? "no" : "yes" : ""],
   ].map(([label, value]) => ({ label, status: value === "yes" ? "provided" : value === "no" ? "review" : "pending" }));
-  let note = "Complete the selection factors to calculate your score. Review the minimum requirements separately.";
+  let note = "Complete the required selection factors. Review the minimum requirements separately.";
   if (score !== null) {
     const threshold = score >= 67 ? "meets the selection grid minimum" : "falls below the 67-point selection threshold";
-    note = example
-      ? `${score} points clears the selection grid. Review skilled work, approved language results and Canadian education or an ECA separately.`
-      : `${score} points ${threshold}. Check the minimum requirements before applying.`;
+    note = `${score} points ${threshold}. Check the minimum requirements before applying.`;
   }
   return { rows, score, criteria, note };
 }
 
 function FswReferenceCalculator() {
-  const { values: form, example, change, reset } = useFederalProfile(fswExample, fswEmpty);
-  const [step, setStep] = useState(1);
-  const result = calculateFsw(form, example);
-  const second = form.primaryLanguage === "english" ? "french" : "english";
+  const { values: form, change, reset } = useFederalProfile(fswEmpty);
+  const [step, setStep] = useState(0);
+  const result = calculateFsw(form);
+  const hasInput = hasCrsInput(form);
+  const liveScore = hasInput ? result.rows.reduce((total, { points }) => total + (typeof points === "number" ? points : 0), 0) : null;
+  const second = !form.primaryLanguage ? "" : form.primaryLanguage === "english" ? "french" : "english";
   const delta = result.score === null ? null : result.score - 67;
   const thresholdLabel = delta === null ? "Complete the selection factors" : delta === 0 ? "At the threshold" : `${Math.abs(delta)} ${Math.abs(delta) === 1 ? "point" : "points"} ${delta > 0 ? "above" : "below"}`;
-  const educationOptions = options(fswEducation.map(([value, label]) => [
-    value, example && value === "three-year" ? "Bachelor’s degree · Canadian ECA" : label,
-  ]));
-  const experienceOptions = options(fswExperience.map(([value, label]) => [
-    value, example && value === "4to5" ? "4 years · TEER 0–3" : label,
-  ]));
+  const educationOptions = options(fswEducation.map(([value, label]) => [value, label]));
+  const experienceOptions = options(fswExperience.map(([value, label]) => [value, label]));
+  const displayRows = hasInput ? result.rows : result.rows.map((row) => ({ ...row, points: null }));
   const funds = (
     <SelectField
       id="fsw-funds"
@@ -593,13 +614,10 @@ function FswReferenceCalculator() {
       <FormPanel
         title="Federal selection factors"
         description="Check the minimum requirements first, then estimate your selection factor points."
-        onReset={() => { reset(); setStep(1); }}
+        onReset={() => { reset(); setStep(0); }}
         steps={["Minimum requirements", "Selection factors"]}
         activeStep={step}
         onStep={setStep}
-        onCalculate={() => setStep(1)}
-        actionLabel={step === 0 ? "Review selection factors" : "Calculate score"}
-        example={example}
         callout={{
           title: "Language and adaptability",
           body: "First language requires CLB/NCLC 7 in every ability. Second language awards 4 points only when all four are at least 5. Adaptability is capped at 10.",
@@ -608,10 +626,10 @@ function FswReferenceCalculator() {
         <SectionLabel>{step === 0 ? "Minimum requirements" : "Selection grid inputs"}</SectionLabel>
         <div className={`ref-fields ${styles.fswInputs}`}>
           {step === 1 && <>
-            <Field id="fsw-age" label="Age at application" type="number" min={0} max={120} suffix="years" value={form.age} onChange={change("age")} />
+            <SelectField id="fsw-age" label="Age at application" value={form.age} onChange={change("age")} options={fswAgeOptions} placeholder="Choose age range" />
             <SelectField id="fsw-education" label="Education" value={form.education} onChange={change("education")} options={educationOptions} />
           </>}
-          <BandField label="First language · L / R / W / S" scores={form.firstLanguage} onChange={change("firstLanguage")} levels={fswLevels} language={form.primaryLanguage} onLanguageChange={change("primaryLanguage")} highlight={example} />
+          <BandField label="First language · L / R / W / S" scores={form.firstLanguage} onChange={change("firstLanguage")} levels={fswLevels} language={form.primaryLanguage} onLanguageChange={change("primaryLanguage")} />
           {step === 1 ? (
             <>
               <BandField label="Second language · L / R / W / S" scores={form.secondLanguage} onChange={change("secondLanguage")} language={second} enabled={form.hasSecondLanguage} onEnabledChange={change("hasSecondLanguage")} />
@@ -631,10 +649,10 @@ function FswReferenceCalculator() {
         </div>
       </FormPanel>
       <ResultPanel>
-        <ScoreResult title="Estimated FSW points" example={example} value={result.score} threshold={67} footerLabel={thresholdLabel} footerValue="67-point selection threshold" warning />
+        <ScoreResult title="Estimated FSW points" calculated={hasInput} value={liveScore} threshold={67} footerLabel={hasInput ? result.score !== null ? thresholdLabel : "Provisional score" : undefined} footerValue={hasInput ? result.score !== null ? "67-point selection threshold" : "Updates as you complete each answer" : undefined} warning={result.score !== null && result.score < 67} />
         {step === 0
           ? <CriteriaSummary rows={result.criteria} note="IRCC assesses whether you meet the minimum requirements and verifies the supporting documents." />
-          : <PointsBreakdown rows={result.rows} note={result.note} />}
+          : <PointsBreakdown rows={displayRows} note={result.score !== null ? result.note : hasInput ? "Provisional points reflect the answers entered so far. The total updates immediately when an answer changes." : "Choose your selection factors to see a live estimate."} />}
         <Callout title="Two distinct scores" variant="book">
           The 67-point federal grid checks program selection factors. The CRS ranks candidates in the Express Entry pool.
         </Callout>

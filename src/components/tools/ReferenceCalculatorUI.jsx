@@ -1,21 +1,15 @@
 "use client";
 
-import { useId } from "react";
-import { Activity, ArrowRight, BookOpen, Check, ChevronDown, CircleAlert, Info, RotateCcw, SlidersHorizontal } from "lucide-react";
+import { useEffect, useId, useRef, useState } from "react";
+import { Activity, BookOpen, Check, ChevronDown, CircleAlert, Info, RotateCcw, SlidersHorizontal } from "lucide-react";
 
 export function FormPanel({
   title, description, icon: Icon = SlidersHorizontal, onReset, steps, activeStep,
-  onStep, children, callout, actionLabel = "Calculate score", onCalculate, example = true,
+  onStep, children, callout,
 }) {
   const headingId = useId();
   const current = activeStep ?? (steps ? steps.length - 1 : 0);
-  const submit = (event) => {
-    event.preventDefault();
-    onCalculate?.();
-    if (window.matchMedia("(max-width: 1100px)").matches) {
-      document.querySelector(".ref-results")?.scrollIntoView({ block: "start" });
-    }
-  };
+  const submit = (event) => event.preventDefault();
 
   return (
     <form className="ref-panel ref-form" aria-labelledby={headingId} onSubmit={submit}>
@@ -42,25 +36,137 @@ export function FormPanel({
       <div className="ref-form-content">{children}</div>
       {callout && <Callout title={callout.title}>{callout.body}</Callout>}
       <div className="ref-form-footer">
-        <button type="submit" className="ref-primary-button">{actionLabel}<ArrowRight aria-hidden /></button>
-        <span className="ref-form-state"><Info aria-hidden />{example ? "Example inputs shown" : "Your inputs"}</span>
+        <span className="ref-form-state"><Info aria-hidden />Results recalculate as you answer</span>
       </div>
     </form>
   );
 }
 
-export function Field({ label, id, value, onChange, options, type = "text", suffix, min, max, step, highlight, warning, wide, children }) {
+export function Field({ label, id, value, onChange, options, placeholder = "Choose an answer", type = "text", suffix, min, max, step, highlight, warning, wide, children }) {
+  const choices = options && !options.some((option) => option.value === "")
+    ? [{ value: "", label: placeholder }, ...options]
+    : options;
+  const [open, setOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const listboxId = useId();
+  const controlRef = useRef(null);
+  const triggerRef = useRef(null);
+  const optionRefs = useRef([]);
+  const selectedIndex = choices?.findIndex((option) => option.value === (value ?? "")) ?? -1;
+
+  useEffect(() => {
+    if (!open) return;
+    const closeOnOutsideClick = (event) => {
+      if (!controlRef.current?.contains(event.target)) setOpen(false);
+    };
+    document.addEventListener("pointerdown", closeOnOutsideClick);
+    return () => document.removeEventListener("pointerdown", closeOnOutsideClick);
+  }, [open]);
+
+  useEffect(() => {
+    if (open) optionRefs.current[activeIndex]?.focus();
+  }, [open, activeIndex]);
+
+  const focusOption = (index) => {
+    const boundedIndex = Math.max(0, Math.min(choices.length - 1, index));
+    setActiveIndex(boundedIndex);
+    optionRefs.current[boundedIndex]?.focus();
+  };
+
+  const openMenu = (index = selectedIndex >= 0 ? selectedIndex : 0) => {
+    setActiveIndex(Math.max(0, Math.min(choices.length - 1, index)));
+    setOpen(true);
+  };
+
+  const closeMenu = (restoreFocus = false) => {
+    setOpen(false);
+    if (restoreFocus) triggerRef.current?.focus();
+  };
+
+  const chooseOption = (option) => {
+    onChange(option.value);
+    closeMenu(true);
+  };
+
+  const handleTriggerKeyDown = (event) => {
+    if (!choices) return;
+    if (event.key === "ArrowDown" || event.key === "ArrowUp" || event.key === "Home" || event.key === "End") {
+      event.preventDefault();
+      const offset = event.key === "ArrowDown" ? 1 : event.key === "ArrowUp" ? -1 : 0;
+      const initial = selectedIndex >= 0 ? selectedIndex : 0;
+      const target = event.key === "Home" ? 0 : event.key === "End" ? choices.length - 1 : initial + offset;
+      openMenu(target);
+    }
+  };
+
+  const handleOptionKeyDown = (event, index) => {
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      focusOption(index + 1);
+    } else if (event.key === "ArrowUp") {
+      event.preventDefault();
+      focusOption(index - 1);
+    } else if (event.key === "Home" || event.key === "End") {
+      event.preventDefault();
+      focusOption(event.key === "Home" ? 0 : choices.length - 1);
+    } else if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      chooseOption(choices[index]);
+    } else if (event.key === "Escape") {
+      event.preventDefault();
+      closeMenu(true);
+    }
+  };
+
   return (
     <div className="ref-field" data-wide={wide || undefined}>
       <label htmlFor={id}>{label}</label>
       {children ?? (
-        <div className="ref-control" data-highlight={highlight || undefined} data-warning={warning || undefined} data-numeric={type === "number" || undefined}>
-          {options ? (
+        <div
+          ref={controlRef}
+          className="ref-control"
+          data-highlight={highlight || undefined}
+          data-warning={warning || undefined}
+          data-numeric={type === "number" || undefined}
+          data-select={choices ? "true" : undefined}
+          data-has-suffix={suffix ? "true" : undefined}
+          onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false); }}
+        >
+          {choices ? (
             <>
-              <select id={id} value={value ?? ""} onChange={(event) => onChange(event.target.value)}>
-                {options.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
-              </select>
+              <button
+                ref={triggerRef}
+                id={id}
+                type="button"
+                className="ref-select-trigger"
+                aria-haspopup="listbox"
+                aria-expanded={open}
+                aria-controls={listboxId}
+                aria-label={label}
+                onClick={() => open ? closeMenu() : openMenu()}
+                onKeyDown={handleTriggerKeyDown}
+              >
+                <span>{choices[selectedIndex >= 0 ? selectedIndex : 0]?.label ?? "Choose an answer"}</span>
+              </button>
               <ChevronDown className="ref-select-chevron" aria-hidden />
+              {open && (
+                <div className="ref-select-menu" id={listboxId} role="listbox" aria-label={label}>
+                  {choices.map((option, index) => (
+                    <div
+                      ref={(element) => { optionRefs.current[index] = element; }}
+                      key={option.value}
+                      role="option"
+                      tabIndex={index === activeIndex ? 0 : -1}
+                      aria-selected={option.value === (value ?? "")}
+                      className="ref-select-option"
+                      onClick={() => chooseOption(option)}
+                      onKeyDown={(event) => handleOptionKeyDown(event, index)}
+                    >
+                      {option.label}
+                    </div>
+                  ))}
+                </div>
+              )}
             </>
           ) : (
             <input id={id} type={type} value={value ?? ""} onChange={(event) => onChange(event.target.value)} min={min} max={max} step={step} />
@@ -196,14 +302,14 @@ function Gauge({ value, max, min, criteria, threshold, ticks, sublabel, unitLabe
   );
 }
 
-export function ScoreResult({ title, example = true, value, max = 100, sublabel, unitLabel, threshold, ticks, min = 0, criteria, footerLabel, footerValue, warning, centerLabel }) {
+export function ScoreResult({ title, calculated = false, value, max = 100, sublabel, unitLabel, threshold, ticks, min = 0, criteria, footerLabel, footerValue, warning, centerLabel }) {
   const Icon = criteria ? Check : Activity;
   return (
     <div className="ref-score" aria-live="polite">
       <div className="ref-score-pattern" aria-hidden="true" />
       <div className="ref-score-heading">
         <h2><Icon aria-hidden />{title}</h2>
-        <span className="ref-result-badge">{example ? "Example result" : "Your result"}</span>
+        <span className="ref-result-badge">{calculated ? "Live estimate" : "Waiting for answers"}</span>
       </div>
       <Gauge {...{ value, max, sublabel, unitLabel, threshold, ticks, min, criteria, centerLabel }} />
       {(footerLabel || footerValue) && (

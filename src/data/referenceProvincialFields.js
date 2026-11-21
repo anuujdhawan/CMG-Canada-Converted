@@ -4,27 +4,26 @@ export const options = (...entries) => entries.map((entry) => {
   return { value: String(value), label, points };
 });
 
-export function select(key, label, initial, choices, config = {}) {
-  return { key, label, initial, options: choices, ...config };
+export function select(key, label, _initial, choices, config = {}) {
+  return { key, label, options: choices, ...config };
 }
 
-export function number(key, label, initial, suffix = "years", config = {}) {
-  return { key, label, initial, suffix, type: "number", min: 0, max: 120, ...config };
+export function number(key, label, _initial, suffix = "years", config = {}) {
+  return { key, label, suffix, type: "number", min: 0, max: 120, ...config };
 }
 
 export const yesNo = options(["yes", "Yes"], ["no", "No"]);
 export const evidence = options(["yes", "Evidence available"], ["review", "To be confirmed"], ["no", "Evidence unavailable"]);
 
-export function checkField(key, label, initial = "yes") {
-  return select(key, label, initial, yesNo, { toggle: true });
+export function checkField(key, label) {
+  return select(key, label, "", yesNo, { toggle: true });
 }
 
-export function engineField(stream, key, label, initial, labels = {}, config = {}) {
+export function engineField(stream, key, label, _initial, labels = {}, config = {}) {
   const question = stream.questions.find((item) => item.key === key);
   return {
     key,
     label: label || question.label,
-    initial,
     options: question.options?.map((option) => ({
       ...option,
       label: labels[option.value] || option.label,

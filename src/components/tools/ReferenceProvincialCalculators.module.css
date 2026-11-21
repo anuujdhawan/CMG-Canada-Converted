@@ -8,7 +8,7 @@
   align-items: center;
   cursor: pointer;
   list-style: none;
-  padding: 0 2rem 0 0.75rem;
+  padding: 0 2.25rem 0 0.75rem;
 }
 
 .multiple summary::-webkit-details-marker {
