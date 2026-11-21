@@ -114,7 +114,7 @@ function BandField({
       {enabled && (!onLanguageChange || language) && (
         <div className="ref-fields">
           {abilities.map(([key, name]) => (
-            <SelectField key={key} id={`${id}-${key}`} label={name} value={scores[key]} onChange={(value) => onChange({ ...scores, [key]: value })} options={levels.map(({ value }) => ({ value, label: levelLabel(value) }))} />
+            <SelectField key={key} id={`${id}-${key}`} label={name} placeholder="Select score" value={scores[key]} onChange={(value) => onChange({ ...scores, [key]: value })} options={levels.map(({ value }) => ({ value, label: levelLabel(value) }))} />
           ))}
         </div>
       )}
@@ -276,6 +276,7 @@ function ClbCalculator() {
                 key={key}
                 label={label}
                 id={`language-${key}`}
+                placeholder="Select score"
                 value={scores[key]}
                 onChange={change(key)}
                 options={rawScoreOptions(test, key)}

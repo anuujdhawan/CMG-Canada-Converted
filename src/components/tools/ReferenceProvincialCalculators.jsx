@@ -177,7 +177,7 @@ function ProvincialForm({ config }) {
 
   function changeStep(index) {
     setStep(index);
-    if (index === 0) document.getElementById(pathwayId)?.querySelector("select")?.focus();
+    if (index === 0) document.getElementById(pathwayId)?.querySelector(".ref-select-trigger, input, button")?.focus();
     else if (index !== 2 || !pathwayVariant.priority) document.getElementById(fieldsId)?.querySelector("input, select, button")?.focus();
   }
 

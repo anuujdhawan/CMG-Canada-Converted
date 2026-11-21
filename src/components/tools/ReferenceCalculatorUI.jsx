@@ -1,6 +1,6 @@
 "use client";
 
-import { useId } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { Activity, BookOpen, Check, ChevronDown, CircleAlert, Info, RotateCcw, SlidersHorizontal } from "lucide-react";
 
 export function FormPanel({
@@ -42,21 +42,131 @@ export function FormPanel({
   );
 }
 
-export function Field({ label, id, value, onChange, options, type = "text", suffix, min, max, step, highlight, warning, wide, children }) {
+export function Field({ label, id, value, onChange, options, placeholder = "Choose an answer", type = "text", suffix, min, max, step, highlight, warning, wide, children }) {
   const choices = options && !options.some((option) => option.value === "")
-    ? [{ value: "", label: "Choose an answer" }, ...options]
+    ? [{ value: "", label: placeholder }, ...options]
     : options;
+  const [open, setOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const listboxId = useId();
+  const controlRef = useRef(null);
+  const triggerRef = useRef(null);
+  const optionRefs = useRef([]);
+  const selectedIndex = choices?.findIndex((option) => option.value === (value ?? "")) ?? -1;
+
+  useEffect(() => {
+    if (!open) return;
+    const closeOnOutsideClick = (event) => {
+      if (!controlRef.current?.contains(event.target)) setOpen(false);
+    };
+    document.addEventListener("pointerdown", closeOnOutsideClick);
+    return () => document.removeEventListener("pointerdown", closeOnOutsideClick);
+  }, [open]);
+
+  useEffect(() => {
+    if (open) optionRefs.current[activeIndex]?.focus();
+  }, [open, activeIndex]);
+
+  const focusOption = (index) => {
+    const boundedIndex = Math.max(0, Math.min(choices.length - 1, index));
+    setActiveIndex(boundedIndex);
+    optionRefs.current[boundedIndex]?.focus();
+  };
+
+  const openMenu = (index = selectedIndex >= 0 ? selectedIndex : 0) => {
+    setActiveIndex(Math.max(0, Math.min(choices.length - 1, index)));
+    setOpen(true);
+  };
+
+  const closeMenu = (restoreFocus = false) => {
+    setOpen(false);
+    if (restoreFocus) triggerRef.current?.focus();
+  };
+
+  const chooseOption = (option) => {
+    onChange(option.value);
+    closeMenu(true);
+  };
+
+  const handleTriggerKeyDown = (event) => {
+    if (!choices) return;
+    if (event.key === "ArrowDown" || event.key === "ArrowUp" || event.key === "Home" || event.key === "End") {
+      event.preventDefault();
+      const offset = event.key === "ArrowDown" ? 1 : event.key === "ArrowUp" ? -1 : 0;
+      const initial = selectedIndex >= 0 ? selectedIndex : 0;
+      const target = event.key === "Home" ? 0 : event.key === "End" ? choices.length - 1 : initial + offset;
+      openMenu(target);
+    }
+  };
+
+  const handleOptionKeyDown = (event, index) => {
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      focusOption(index + 1);
+    } else if (event.key === "ArrowUp") {
+      event.preventDefault();
+      focusOption(index - 1);
+    } else if (event.key === "Home" || event.key === "End") {
+      event.preventDefault();
+      focusOption(event.key === "Home" ? 0 : choices.length - 1);
+    } else if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      chooseOption(choices[index]);
+    } else if (event.key === "Escape") {
+      event.preventDefault();
+      closeMenu(true);
+    }
+  };
+
   return (
     <div className="ref-field" data-wide={wide || undefined}>
       <label htmlFor={id}>{label}</label>
       {children ?? (
-        <div className="ref-control" data-highlight={highlight || undefined} data-warning={warning || undefined} data-numeric={type === "number" || undefined}>
+        <div
+          ref={controlRef}
+          className="ref-control"
+          data-highlight={highlight || undefined}
+          data-warning={warning || undefined}
+          data-numeric={type === "number" || undefined}
+          data-select={choices ? "true" : undefined}
+          data-has-suffix={suffix ? "true" : undefined}
+          onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false); }}
+        >
           {choices ? (
             <>
-              <select id={id} value={value ?? ""} onChange={(event) => onChange(event.target.value)}>
-                {choices.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
-              </select>
+              <button
+                ref={triggerRef}
+                id={id}
+                type="button"
+                className="ref-select-trigger"
+                aria-haspopup="listbox"
+                aria-expanded={open}
+                aria-controls={listboxId}
+                aria-label={label}
+                onClick={() => open ? closeMenu() : openMenu()}
+                onKeyDown={handleTriggerKeyDown}
+              >
+                <span>{choices[selectedIndex >= 0 ? selectedIndex : 0]?.label ?? "Choose an answer"}</span>
+              </button>
               <ChevronDown className="ref-select-chevron" aria-hidden />
+              {open && (
+                <div className="ref-select-menu" id={listboxId} role="listbox" aria-label={label}>
+                  {choices.map((option, index) => (
+                    <div
+                      ref={(element) => { optionRefs.current[index] = element; }}
+                      key={option.value}
+                      role="option"
+                      tabIndex={index === activeIndex ? 0 : -1}
+                      aria-selected={option.value === (value ?? "")}
+                      className="ref-select-option"
+                      onClick={() => chooseOption(option)}
+                      onKeyDown={(event) => handleOptionKeyDown(event, index)}
+                    >
+                      {option.label}
+                    </div>
+                  ))}
+                </div>
+              )}
             </>
           ) : (
             <input id={id} type={type} value={value ?? ""} onChange={(event) => onChange(event.target.value)} min={min} max={max} step={step} />

@@ -242,19 +242,71 @@ html[data-theme="light"] .ref-hero-art { background-image: url("/images/calculat
   padding: 5px 11px;
   outline-offset: -2px;
 }
-.ref-control select { appearance: none; padding-right: 24px; text-overflow: ellipsis; color-scheme: dark; }
-html[data-theme="light"] .ref-control select { color-scheme: light; }
-.ref-control select option { background-color: var(--ref-control); color: var(--ref-ink); }
+.ref-select-trigger {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: calc(var(--ref-field-height, 36px) - 2px);
+  padding: 5px 38px 5px 11px;
+  border: 0;
+  border-radius: 7px;
+  color: var(--ref-ink);
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  text-align: left;
+}
+.ref-select-trigger span { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ref-select-trigger:focus-visible { outline-offset: -2px; }
+.ref-control[data-warning] .ref-select-trigger { color: var(--ref-review); }
+.ref-control[data-select][data-has-suffix] .ref-select-trigger { padding-right: 78px; }
+.ref-control[data-select][data-has-suffix] .ref-suffix { right: 34px; }
 .ref-control:has(.ref-suffix) input { padding-right: 75px; }
 .ref-control input[type="number"] { appearance: textfield; font-size: 16px; }
 .ref-control input[type="number"]::-webkit-inner-spin-button { appearance: none; }
 .ref-select-chevron, .ref-suffix { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--ref-subtle); }
 .ref-select-chevron { width: 13px; height: 13px; }
 .ref-suffix { font-size: 11px; }
-.ref-control[data-warning] select { color: var(--ref-review); }
 .ref-control[data-highlight], .ref-control:focus-within { border-color: var(--ref-accent); background: var(--ref-note); box-shadow: 0 0 0 1px color-mix(in srgb, var(--ref-accent) 35%, transparent); }
 .ref-control[data-highlight]::before { content: ""; position: absolute; inset: 15% auto 15% 0; width: 2px; border-radius: 3px; background: var(--ref-accent); }
 .ref-control[data-highlight] .ref-select-chevron { color: var(--ref-accent); }
+.ref-select-menu {
+  position: absolute;
+  z-index: 50;
+  inset: calc(100% + 5px) 0 auto;
+  display: grid;
+  max-height: min(260px, 42vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 4px;
+  border: 1px solid var(--ref-line);
+  border-radius: 9px;
+  background: var(--ref-panel);
+  color: var(--ref-ink);
+  box-shadow: 0 10px 26px rgb(0 0 0 / 28%);
+}
+.ref-select-option {
+  display: block;
+  width: 100%;
+  min-height: 32px;
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 6px;
+  color: var(--ref-ink);
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.ref-select-option:hover, .ref-select-option:focus-visible, .ref-select-option[aria-selected="true"] {
+  color: var(--ref-accent);
+  background: var(--ref-note);
+}
+.ref-select-option[aria-selected="true"] { font-weight: 800; }
 .ref-choice-group { display: flex; gap: 3px; padding: 3px; }
 .ref-choice { min-width: 0; flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 5px; border: 1px solid transparent; border-radius: 6px; padding: 4px 5px; color: var(--ref-muted); font-size: 12px; font-weight: 700; text-align: center; }
 .ref-choice svg { width: 12px; height: 12px; }
@@ -353,7 +405,7 @@ html[data-theme="light"] .ref-progress i { background: linear-gradient(90deg, #b
 
 .ref-calculator[data-kind="clb"] .ref-form { --ref-field-height: 50px; padding: 18px 22px 14px; }
 .ref-calculator[data-kind="pnp"] .ref-form { --ref-field-height: 42px; }
-.ref-calculator[data-kind="pnp"] .ref-control select { font-size: 12px; }
+.ref-calculator[data-kind="pnp"] .ref-select-trigger { font-size: 12px; }
 .ref-calculator[data-kind="clb"] .ref-form-description { margin: 10px 0 18px !important; font-size: 14px; }
 .ref-calculator[data-kind="clb"] .ref-field { gap: 6px; }
 .ref-calculator[data-kind="clb"] .ref-field label { font-size: 13px; }
@@ -415,8 +467,10 @@ html[data-theme="light"] .ref-progress i { background: linear-gradient(90deg, #b
   .ref-form-header { gap: 8px; }
   .ref-fields { gap: 8px; }
   .ref-field label { font-size: 11px; }
-  .ref-control input, .ref-control select { font-size: 12px; padding-inline: 7px 22px; }
-  .ref-suffix { right: 7px; }
+  .ref-control input { font-size: 12px; padding-inline: 7px 22px; }
+  .ref-select-trigger { font-size: 12px; padding-inline: 7px 30px; }
+  .ref-control[data-select][data-has-suffix] .ref-select-trigger { padding-right: 72px; }
+  .ref-control[data-select][data-has-suffix] .ref-suffix { right: 26px; }
   .ref-select-chevron { right: 6px; }
   .ref-steps li > :is(span,button) { font-size: 10px; gap: 3px; }
   .ref-step-icon { width: 13px; height: 13px; flex-basis: 13px; }
@@ -431,7 +485,7 @@ html[data-theme="light"] .ref-progress i { background: linear-gradient(90deg, #b
 
 .ref-test-picker { display: grid; gap: 6px; margin-bottom: 22px; font-size: 13px; font-weight: 800; }
 .ref-test-tabs { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 6px; }
-.ref-test-tabs button { min-height: 42px; padding: 4px 3px; font-size: 11.5px; line-height: 1.15; border: 1px solid var(--ref-line); border-radius: 10px; background: var(--ref-control); color: var(--ref-muted); text-align: center; font-weight: 650; }
+.ref-test-tabs button { min-width: 0; min-height: 42px; padding: 4px 3px; font-size: 11.5px; line-height: 1.15; overflow-wrap: anywhere; border: 1px solid var(--ref-line); border-radius: 10px; background: var(--ref-control); color: var(--ref-muted); text-align: center; font-weight: 650; }
 .ref-test-tabs button[aria-pressed="true"] { color: #fff; background: var(--ref-action); border-color: #ffffff37; font-weight: 850; }
 .ref-test-tabs button:hover { border-color: var(--ref-accent); }
 .ref-calculator[data-kind="clb"] .ref-section-label { margin-bottom: 12px !important; }
