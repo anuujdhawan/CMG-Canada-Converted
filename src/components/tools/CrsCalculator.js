@@ -44,7 +44,7 @@ const INITIAL = {
   provincialNomination: false,
 };
 
-const EDUCATION = [
+export const EDUCATION = [
   { value: "none", label: "Less than secondary school", spouse: 0, single: 0 },
   { value: "hs", label: "Secondary diploma / high school", spouse: 28, single: 30 },
   { value: "one-year", label: "One-year post-secondary credential", spouse: 84, single: 90 },
@@ -54,7 +54,7 @@ const EDUCATION = [
   { value: "master", label: "Master’s or eligible professional degree", spouse: 126, single: 135 },
   { value: "phd", label: "Doctoral degree", spouse: 140, single: 150 },
 ];
-const SPOUSE_EDUCATION = [
+export const SPOUSE_EDUCATION = [
   { value: "none", label: "Less than secondary school", points: 0 },
   { value: "hs", label: "Secondary school", points: 2 },
   { value: "one-year", label: "One-year post-secondary", points: 6 },
@@ -64,11 +64,11 @@ const SPOUSE_EDUCATION = [
   { value: "master", label: "Master’s or eligible professional degree", points: 10 },
   { value: "phd", label: "Doctoral degree", points: 10 },
 ];
-const LANGUAGE_LEVELS = [
+export const LANGUAGE_LEVELS = [
   { value: "0", label: "Below CLB/NCLC 4" },
   ...Array.from({ length: 7 }, (_, index) => ({ value: String(index + 4), label: index === 6 ? "CLB/NCLC 10 or higher" : "CLB/NCLC " + (index + 4) })),
 ];
-const EXPERIENCE = [
+export const EXPERIENCE = [
   { value: "0", label: "None or less than 1 year" },
   { value: "1", label: "1 year" },
   { value: "2", label: "2 years" },
@@ -178,7 +178,7 @@ function getFrenchAdditional(form) {
   return Math.min(...english) >= 5 ? 50 : Math.max(...english) <= 4 ? 25 : 0;
 }
 
-function calculate(form) {
+export function calculateCrs(form) {
   const spouse = form.hasSpouse;
   const first = ABILITIES.map(({ key }) => form.firstLanguage[key]);
   const second = ABILITIES.map(({ key }) => form.secondLanguage[key]);
@@ -244,7 +244,7 @@ function LevelFields({ title, prefix, values, onChange, languageLabel = "CLB/NCL
 
 export default function CrsCalculator() {
   const [form, setForm] = useState(INITIAL);
-  const result = useMemo(() => calculate(form), [form]);
+  const result = useMemo(() => calculateCrs(form), [form]);
   const update = (key) => (event) => setForm((current) => ({ ...current, [key]: event.target.value }));
   const setCheck = (key) => (event) => setForm((current) => ({ ...current, [key]: event.target.checked }));
   const updateSkills = (group) => (key) => (event) => setForm((current) => ({ ...current, [group]: { ...current[group], [key]: event.target.value } }));
