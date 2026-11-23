@@ -10,7 +10,7 @@ const routeByLegacyPath = Object.fromEntries(
 
 // These interactive routes do not have a source Markdown page of their own.
 const extraRoutes = {
-  "/tools": "/tools/canada-immigration-calculators",
+  "/tools": "/tools/clb-calculator",
   "/tools/free-assessment": "/assessment/free-canada-immigration-assessment",
   "/tools/pnp-eligibility": "/tools/pnp-eligibility-canada",
   "/tools/noc-finder": "/tools/noc-finder-canada",

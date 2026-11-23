@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   ArrowRight,
   CalendarCheck,
@@ -10,12 +11,10 @@ import {
   ChevronRight,
   Clock3,
   MapPin,
-  MessageCircle,
   ShieldCheck,
   UserRoundCheck,
 } from "lucide-react";
 import { site } from "@/config/site";
-import { whatsappUrl } from "@/config/whatsapp";
 import CmgHero from "@/components/home/CmgHero";
 
 const QUESTIONS = [
@@ -258,7 +257,8 @@ function ComparisonCards() {
   );
 }
 
-function ConsultationForm({ variant, answers, resultOutcome, bookingUrl }) {
+function ConsultationForm({ variant, answers, resultOutcome }) {
+  const router = useRouter();
   const [fields, setFields] = useState({
     fullName: "",
     phone: "",
@@ -270,41 +270,6 @@ function ConsultationForm({ variant, answers, resultOutcome, bookingUrl }) {
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle");
   const [errorMessage, setErrorMessage] = useState("");
-  const [bookingDone, setBookingDone] = useState(false);
-  const bookingConversionTracked = useRef(false);
-
-  useEffect(() => {
-    if (!bookingUrl) return undefined;
-    const onMessage = (event) => {
-      const trustedOrigin = event.origin === "https://calendly.com"
-        || event.origin.endsWith(".calendly.com")
-        || event.origin === "https://cal.com"
-        || event.origin.endsWith(".cal.com");
-      const eventName = event.data?.event || event.data?.type;
-      if (
-        trustedOrigin
-        && !bookingConversionTracked.current
-        && (eventName === "calendly.event_scheduled" || eventName === "booking:confirmed")
-      ) {
-        bookingConversionTracked.current = true;
-        setBookingDone(true);
-        pushEvent("booking_complete", {
-          conversion_name: "ontario_pr_consultation_booking",
-          conversion_type: "consultation_booking",
-          result_outcome: resultOutcome || "not_completed",
-          variant,
-        });
-      }
-    };
-    window.addEventListener("message", onMessage);
-    return () => window.removeEventListener("message", onMessage);
-  }, [bookingUrl, resultOutcome, variant]);
-
-  const whatsappHref = useMemo(() => {
-    if (!whatsappUrl) return "";
-    const message = "Hi, I'd like to book a free consultation about Canada PR through Ontario.";
-    return `${whatsappUrl}${whatsappUrl.includes("?") ? "&" : "?"}text=${encodeURIComponent(message)}`;
-  }, []);
 
   function updateField(key) {
     return (event) => setFields((current) => ({ ...current, [key]: event.target.value }));
@@ -357,48 +322,17 @@ function ConsultationForm({ variant, answers, resultOutcome, bookingUrl }) {
       });
       const data = await response.json().catch(() => ({}));
       if (!response.ok || !data.ok) throw new Error(data.error || "We couldn't send your enquiry. Please try again.");
-      setStatus("success");
       pushEvent("form_submit", {
         conversion_name: "ontario_pr_lead",
         conversion_type: "lead_form_submission",
         result_outcome: payload.resultOutcome,
         variant,
       });
+      router.push("/ontario-pr/thank-you");
     } catch (error) {
       setStatus("error");
       setErrorMessage(error.message || "We couldn't send your enquiry. Please try again.");
     }
-  }
-
-  if (status === "success") {
-    if (bookingDone) {
-      return (
-        <div className="op-success-card" role="status" aria-live="polite">
-          <span className="op-success-card__icon"><Check size={22} aria-hidden="true" /></span>
-          <p className="op-eyebrow">Consultation booked</p>
-          <h3>You&apos;re booked. Check your email.</h3>
-          <p>You&apos;ll get a confirmation and calendar invite. If anything changes, message us on WhatsApp and we&apos;ll help move it.</p>
-          {whatsappHref ? <a className="op-button op-button--secondary" href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle size={17} aria-hidden="true" /> Message us on WhatsApp</a> : null}
-        </div>
-      );
-    }
-
-    return (
-      <div className="op-booking-step" role="status" aria-live="polite">
-        <span className="op-success-card__icon"><CalendarCheck size={22} aria-hidden="true" /></span>
-        <p className="op-eyebrow">Next step</p>
-        <h3>{bookingUrl ? "Choose a time for your free consultation" : "Your consultation request is in"}</h3>
-        <p>{bookingUrl ? "Choose an available 30-minute time below. The calendar will confirm your booking." : "Our team will contact you within one business day to confirm a free 30-minute time. You can also call or message us to arrange it."}</p>
-        {bookingUrl ? (
-          <iframe className="op-calendar" title="Book a free 30-minute consultation" src={bookingUrl} referrerPolicy="no-referrer" loading="lazy" />
-        ) : (
-          <div className="op-booking-fallback">
-            <a className="op-button op-button--primary" href={site.phoneHref}><span>Call {site.phone}</span><ArrowRight size={16} aria-hidden="true" /></a>
-            {whatsappHref ? <a className="op-button op-button--secondary" href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle size={17} aria-hidden="true" /> Message us on WhatsApp</a> : null}
-          </div>
-        )}
-      </div>
-    );
   }
 
   return (
@@ -471,7 +405,7 @@ function ConsultationForm({ variant, answers, resultOutcome, bookingUrl }) {
   );
 }
 
-export default function OntarioPrLanding({ variant = "oinp", bookingUrl = "" }) {
+export default function OntarioPrLanding({ variant = "oinp" }) {
   const [quizResult, setQuizResult] = useState({ answers: {}, outcome: "" });
   const expressEntryVariant = variant === "ee";
 
@@ -653,7 +587,7 @@ export default function OntarioPrLanding({ variant = "oinp", bookingUrl = "" }) 
               <span><ShieldCheck size={17} aria-hidden="true" /><strong>Licensed RCIC</strong><small>Regulated representation</small></span>
             </div>
           </div>
-          <ConsultationForm variant={variant} answers={quizResult.answers} resultOutcome={quizResult.outcome} bookingUrl={bookingUrl} />
+          <ConsultationForm variant={variant} answers={quizResult.answers} resultOutcome={quizResult.outcome} />
         </div>
       </section>
 

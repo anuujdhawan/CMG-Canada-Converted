@@ -16,7 +16,8 @@ for (const route of routeMap) {
   ]) {
     if (!source || source === "/" || source === route.path || redirectSources.has(source)) continue;
     redirectSources.add(source);
-    pageDataRedirects.push({ source, destination: route.path, permanent: true });
+    const destination = source === "/tools" ? "/tools/clb-calculator" : route.path;
+    pageDataRedirects.push({ source, destination, permanent: true });
   }
 }
 

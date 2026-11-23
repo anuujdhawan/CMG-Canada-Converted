@@ -1,9 +1,17 @@
 import { site } from "@/config/site";
 import { currentPagePath } from "@/config/pageRoutes";
 import { getCmgMenu } from "@/lib/cmgPages";
+import { CALCULATOR_NAV_GROUPS } from "@/data/calculatorCatalog";
 
 const DRAW_PAGE_LINK = { label: "Express Entry Draws", href: "/immigration-draws" };
 const PNP_DRAWS_LINK = { label: "PNP Draw Results", href: "/pnp-draws" };
+const calculatorColumns = CALCULATOR_NAV_GROUPS.map((group, index) => ({
+  category: group.category,
+  items: [
+    ...(index === 0 ? [{ label: "All immigration calculators", href: "/tools" }] : []),
+    ...group.items.map((item) => ({ label: item.label, href: `/tools/${item.slug}/` })),
+  ],
+}));
 
 /**
  * Navigation structure — Commonwealth Migration Canada.
@@ -55,42 +63,23 @@ const sourceMenuItems = getCmgMenu().map((top) => ({
 
 const TOOLS_MENU_ITEM = {
   label: "Tools",
-  href: "/tools/canada-immigration-calculators",
+  href: "/tools",
   columns: [
+    ...calculatorColumns,
     {
-      category: "Free self-service tools",
+      category: "More tools",
       items: [
-        { label: "CRS Calculator", href: "/tools/crs-calculator-canada" },
         { label: "PNP Eligibility Check", href: "/tools/pnp-eligibility-canada" },
         { label: "NOC / Occupation Finder", href: "/tools/noc-finder-canada" },
-      ],
-    },
-    {
-      category: "Plan & prepare",
-      items: [
         { label: "Document Checklist", href: "/tools/document-checklist-canada" },
         { label: "Free Assessment", href: "/assessment/free-canada-immigration-assessment" },
-      ],
-    },
-    {
-      category: "Learn & prepare",
-      items: [
         DRAW_PAGE_LINK,
-        // Blog removed from the Tools dropdown — it still has a crawlable link
-        // under Resources and in the footer. Kept commented so it can come back.
-        // { label: "Blog", href: "/blog" },
         { label: "Express Entry Guide", href: "/immigrate/express-entry" },
         { label: "PNP Pathway Guide", href: "/immigrate/provincial-nominee-program-all-provinces-consolidated" },
       ],
     },
   ],
-  featured: {
-    label: "Free tool",
-    title: "CRS Calculator",
-    desc: "See your Express Entry score in under two minutes.",
-    href: "/tools/crs-calculator-canada",
-    ctaLabel: "Calculate your score",
-  },
+  featured: null,
 };
 
 const ABOUT_MENU_ITEM = {
@@ -257,7 +246,10 @@ const rawNavigation = {
     // always-visible inbound link.
     { title: "Tools & Resources", links: [
       { label: "Immigration Blog", href: "/blog" },
-      { label: "CRS Calculator", href: "/tools/crs-calculator-canada" },
+      { label: "All Immigration Calculators", href: "/tools" },
+      { label: "CLB Calculator", href: "/tools/clb-calculator/" },
+      { label: "Federal Skilled Worker 67-Point Calculator", href: "/tools/fsw-67-point-calculator/" },
+      { label: "Express Entry CRS Calculator", href: "/tools/express-entry-crs-calculator/" },
       { label: "NOC / Occupation Finder", href: "/tools/noc-finder-canada" },
       { label: "PNP Eligibility Check", href: "/tools/pnp-eligibility-canada" },
       { label: "Document Checklist", href: "/tools/document-checklist-canada" },
