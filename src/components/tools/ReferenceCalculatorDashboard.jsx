@@ -67,13 +67,22 @@ export default function ReferenceCalculatorDashboard({ page }) {
     <div className="ref-calculator" data-kind={page.type} data-calculator={page.slug}>
       <header className="ref-hero" data-long={title.length > 38 || undefined} data-very-long={title.length > 42 || undefined}>
         <div className="ref-hero-art" aria-hidden="true" />
-        <div className="ref-hero-breadcrumb">
-          <Link href="/tools">Immigration tools</Link>
-          <ChevronRight aria-hidden />
-          <strong>{group || page.group}</strong>
+        <div className="ref-hero-watermark" aria-hidden="true" />
+        <div className="ref-hero-identity">
+          <div className="ref-hero-brand-copy">
+            <strong>Commonwealth<br />Migration Group</strong>
+            <p className="ref-hero-credentials"><span>Licensed Immigration Consultant</span><span>RCIC R 711256 in Brampton, Canada</span></p>
+          </div>
         </div>
-        <h1>{title}</h1>
-        <p>{description}</p>
+        <div className="ref-hero-copy">
+          <div className="ref-hero-breadcrumb">
+            <Link href="/tools">Immigration tools</Link>
+            <ChevronRight aria-hidden />
+            <strong>{group || page.group}</strong>
+          </div>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </div>
       </header>
       <div className="ref-grid">
         <CalculatorSidebar activeSlug={page.slug} />

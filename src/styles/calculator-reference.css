@@ -16,6 +16,9 @@ body:has(.ref-calculator) {
   --ref-action: linear-gradient(103deg, #ed2149, #bf1034);
   --ref-hero: linear-gradient(100deg, #28191f 45%, #4d1827 70%, #760e30 100%);
   --ref-hero-border: #55303f;
+  --ref-hero-brand-name: #ff4c68;
+  --ref-hero-credential: #c0b4ba;
+  --ref-hero-watermark: rgba(255, 239, 243, .18);
   --ref-score-bg: radial-gradient(ellipse at 75% 20%, #81172f 0%, transparent 66%), linear-gradient(111deg, #38131e, #541426 64%, #691629);
   --ref-score-border: #a83b58;
   --ref-arc-low: #ff4262;
@@ -45,6 +48,9 @@ html[data-theme="light"] body:has(.ref-calculator) {
   --ref-action: linear-gradient(105deg, #e61444, #bd0a31);
   --ref-hero: linear-gradient(100deg, #fdf9fa 44%, #fcecef 64%, #d6a7b0);
   --ref-hero-border: #edc8d2;
+  --ref-hero-brand-name: #c51637;
+  --ref-hero-credential: #665863;
+  --ref-hero-watermark: rgba(190, 18, 53, .22);
   --ref-score-bg: radial-gradient(ellipse at 76% 15%, #cf1c43 0%, transparent 74%), linear-gradient(110deg, #a10c32, #a50d32 55%, #ba1139);
   --ref-score-border: #cb3555;
   --ref-arc-low: #ffa9b7;
@@ -83,8 +89,8 @@ html[data-theme="light"] body:has(.ref-calculator) {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  min-height: 150px;
-  padding: 17px 28px 16px;
+  min-height: 210px;
+  padding: 18px 28px 19px;
   border: 1px solid var(--ref-hero-border);
   border-radius: 19px;
   background: var(--ref-hero);
@@ -104,19 +110,38 @@ html[data-theme="light"] body:has(.ref-calculator) {
   pointer-events: none;
   position: absolute;
   inset: 0 0 0 auto;
-  width: 38%;
-  z-index: -1;
-  background: url("/images/calculators/ribbon-dark.webp") right center / auto 100% no-repeat;
+  width: 62%;
+  z-index: 0;
+  background: url("/images/calculators/canadian-flag-drape.webp") right center / auto 136% no-repeat;
+  mask-image: linear-gradient(to right, transparent, #000 27%);
 }
-html[data-theme="light"] .ref-hero-art { background-image: url("/images/calculators/ribbon-light.webp"); }
+.ref-hero-watermark {
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 48%;
+  width: 136px;
+  height: 121px;
+  transform: translate(-50%, -50%);
+  background-color: var(--ref-hero-watermark);
+  -webkit-mask: url("/images/cmg-brand-mark-red.png") center / contain no-repeat;
+  mask: url("/images/cmg-brand-mark-red.png") center / contain no-repeat;
+}
+.ref-hero-identity { position: relative; z-index: 2; width: fit-content; max-width: min(100%, 480px); margin-bottom: 13px; }
+.ref-hero-brand-copy { min-width: 0; }
+.ref-hero-brand-copy > strong { display: block; color: var(--ref-hero-brand-name); font-size: clamp(20px, 1.5vw, 26px); font-weight: 850; line-height: 1.02; letter-spacing: -.035em; }
+.ref-hero-credentials { display: grid; gap: 2px; margin-top: 5px !important; color: var(--ref-hero-credential); font-size: clamp(10.5px, .82vw, 12px); font-weight: 650; line-height: 1.2; }
+.ref-hero-credentials span { display: block; }
+.ref-hero-copy { position: relative; z-index: 2; max-width: 66%; }
 .ref-hero-breadcrumb { display: flex; align-items: center; gap: 8px; color: var(--ref-muted); font-weight: 600; }
 .ref-hero-breadcrumb a { color: inherit; }
 .ref-hero-breadcrumb strong { color: var(--ref-accent); }
 .ref-hero-breadcrumb svg { width: 12px; height: 12px; }
-.ref-hero h1 { margin-top: 16px; font-size: clamp(30px, 3.55vw, 59px); font-weight: 800; line-height: 1.03; letter-spacing: -.028em; }
+.ref-hero h1 { margin-top: 14px; font-size: clamp(30px, 3.55vw, 59px); font-weight: 800; line-height: 1.03; letter-spacing: -.028em; }
 .ref-hero[data-long] h1 { font-size: clamp(25px, 3.12vw, 52px); }
 .ref-hero[data-very-long] h1 { font-size: clamp(23px, 2.85vw, 46px); }
-.ref-hero p { margin-top: 8px; color: var(--ref-muted); font-size: clamp(12px, 1.02vw, 16px); font-weight: 550; }
+.ref-hero-copy > p { max-width: 100%; margin-top: 8px; color: var(--ref-muted); font-size: clamp(12px, 1.02vw, 16px); font-weight: 550; }
 .ref-grid {
   display: grid;
   grid-template-columns: minmax(0, 220fr) minmax(0, 590fr) minmax(0, 515fr);
@@ -427,6 +452,9 @@ html[data-theme="light"] .ref-progress i { background: linear-gradient(90deg, #b
 .ref-calculator[data-kind="rcip"] .ref-form-description { font-size: 11.1px; white-space: nowrap; }
 
 @media (max-width: 1100px) {
+  .ref-hero-art { width: 70%; background-size: auto 120%; opacity: .22; }
+  .ref-hero-watermark { left: 52%; width: 104px; height: 93px; }
+  .ref-hero-copy { max-width: 100%; }
   .ref-grid { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 13px; }
   .ref-grid > .ref-panel { min-height: auto; }
   .ref-grid > .ref-sidebar { grid-column: 1 / -1; min-height: auto !important; padding: 9px 12px; }
@@ -448,10 +476,14 @@ html[data-theme="light"] .ref-progress i { background: linear-gradient(90deg, #b
   .ref-grid { grid-template-columns: minmax(0, 1fr); }
   .ref-grid > .ref-panel { min-height: 0 !important; }
   .ref-calculator[data-kind="rcip"] .ref-form-description { white-space: normal; }
-  .ref-hero { min-height: 0; padding: 16px 17px 20px; margin-bottom: 13px; border-radius: 15px; }
+  .ref-hero { min-height: 0; padding: 16px 17px 18px; margin-bottom: 13px; border-radius: 15px; }
+  .ref-hero-identity { max-width: min(100%, 420px); margin-bottom: 12px; }
+  .ref-hero-brand-copy > strong { font-size: 18px; }
+  .ref-hero-credentials { font-size: 10px; }
   .ref-hero h1 { margin-top: 10px; }
-  .ref-hero p { margin-top: 7px; }
-  .ref-hero-art { width: 62%; opacity: .27; mask-image: linear-gradient(to right, transparent, #000 100%); }
+  .ref-hero-copy > p { margin-top: 7px; }
+  .ref-hero-art { width: 70%; background-size: auto 115%; opacity: .16; mask-image: linear-gradient(to right, transparent, #000 100%); }
+  .ref-hero-watermark { left: 60%; width: 70px; height: 62px; }
   .ref-sidebar-nav { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .ref-form-header h2 { font-size: 19px; }
   .ref-form > .ref-callout { margin-top: 13px; }
