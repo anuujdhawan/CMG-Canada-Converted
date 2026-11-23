@@ -4,6 +4,42 @@
   row-gap: 1.5rem;
 }
 
+.logoLink {
+  display: inline-flex;
+  width: min(100%, 24rem);
+  overflow: hidden;
+  border-radius: 0.9rem;
+  vertical-align: top;
+  transition: transform 180ms ease;
+}
+
+.logoLink:hover {
+  transform: translateY(-2px);
+}
+
+.logoLink:focus-visible {
+  outline: 3px solid var(--brand-primary);
+  outline-offset: 4px;
+}
+
+.logoImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.darkLogo {
+  display: none;
+}
+
+:global(html[data-theme="dark"]) .lightLogo {
+  display: none;
+}
+
+:global(html[data-theme="dark"]) .darkLogo {
+  display: block;
+}
+
 .links {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   column-gap: 1.25rem;

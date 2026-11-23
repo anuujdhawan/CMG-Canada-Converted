@@ -73,14 +73,22 @@ export default function Footer() {
         <div className={`${styles.main} site-footer__main grid items-start gap-x-10 gap-y-6 py-10 pb-7 max-[720px]:py-[2.25rem_0_1.5rem]`}>
           {/* Brand */}
           <div className="site-footer__brand min-w-0">
-            <Link href="/" className="site-footer__logo inline-flex items-center rounded-2xl border border-line bg-(--brand-logo-bg) px-3 py-[.55rem] shadow-[0_8px_24px_color-mix(in_srgb,var(--brand-primary)_6%,transparent),0_2px_8px_color-mix(in_srgb,var(--brand-navy)_4%,transparent)] transition-[transform,box-shadow,border-color] duration-200 ease-in-out hover:-translate-y-0.5 hover:border-[color-mix(in_srgb,var(--brand-primary)_22%,var(--brand-border))] hover:shadow-[0_14px_32px_color-mix(in_srgb,var(--brand-primary)_9%,transparent)]" aria-label={`${site.displayName} home`}>
+            <Link href="/" className={styles.logoLink} aria-label={`${site.displayName} — home`}>
               <Image
-                src={site.logos.footer}
-                alt={site.displayName}
-                width={1912}
-                height={1140}
-                sizes="66px"
-                className="site-footer__logo-img h-[2.45rem] w-auto object-contain"
+                src={site.logos.brandLight}
+                alt=""
+                width={1600}
+                height={899}
+                sizes="(max-width: 720px) 100vw, 384px"
+                className={`${styles.logoImage} ${styles.lightLogo}`}
+              />
+              <Image
+                src={site.logos.brandDark}
+                alt=""
+                width={1600}
+                height={899}
+                sizes="(max-width: 720px) 100vw, 384px"
+                className={`${styles.logoImage} ${styles.darkLogo}`}
               />
             </Link>
 

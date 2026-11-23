@@ -2,13 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Mail, X } from "lucide-react";
 import { navigation } from "@/config/navigation";
 import { site } from "@/config/site";
 import { cn, slugify } from "@/lib/utils";
 import { isActiveNavItem } from "@/lib/navActive";
+import BrandLockup from "./BrandLockup";
 
 /**
  * Slide-over mobile navigation in the source sheet style:
@@ -89,16 +89,7 @@ export default function MobileMenu({ open, onClose }) {
       >
         {/* Header */}
         <div className="shrink-0 px-5 py-4 border-b border-white/10 flex items-center justify-between">
-          <div className="flex items-center">
-            <Image
-              src={site.logos.white}
-              alt={site.name}
-              width={1912}
-              height={1140}
-              sizes="60px"
-              className="h-9 w-auto object-contain"
-            />
-          </div>
+          <BrandLockup onClick={onClose} />
           <button
             ref={closeButtonRef}
             type="button"

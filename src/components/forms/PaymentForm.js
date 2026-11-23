@@ -6,6 +6,8 @@ import { FormShell } from "./FormShell";
 import { Field, TextInput } from "./fields";
 import FormSubmitButton from "./FormSubmitButton";
 import FormErrorBanner from "./FormErrorBanner";
+import BrandMark from "@/components/layout/BrandMark";
+import { site } from "@/config/site";
 
 export default function PaymentForm() {
   const [amount, setAmount] = useState("");
@@ -47,6 +49,10 @@ export default function PaymentForm() {
 
   return (
     <FormShell as="form" onSubmit={onSubmit} noValidate className="mx-auto max-w-md !rounded-[var(--radius)] !border-[var(--template-border)] !bg-[var(--template-surface)] !text-[var(--template-ink)] !shadow-[var(--shadow-soft)] [&_.tool-field__label]:!text-[var(--template-ink)] [&_.tool-input]:!border-[var(--template-border)] [&_.tool-input]:!rounded-[12px] [&_.tool-input]:!bg-[var(--template-surface-alt)] [&_.tool-input]:!text-[var(--template-ink)] [&_.tool-input:focus]:!border-[var(--template-primary)] [&_.tool-input:focus]:!shadow-[0_0_0_0.2rem_color-mix(in_srgb,var(--template-primary)_16%,transparent)]">
+      <div className="mb-1 flex items-center gap-2 border-b border-[var(--template-border)] pb-3">
+        <BrandMark size={22} className="rounded-[5px] bg-white p-[2px]" />
+        <p className="m-0 text-[13px] font-extrabold tracking-[-.015em] text-[var(--template-ink)]">{site.displayName}</p>
+      </div>
       <Field label="Amount (CAD)" htmlFor="pay-amount" required>
         <div className="relative">
           <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm font-semibold text-[var(--template-muted)]">
