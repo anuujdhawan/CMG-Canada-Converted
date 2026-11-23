@@ -269,46 +269,48 @@ export default function Header() {
             <div className="flex items-center justify-between">
               <BrandLockup />
 
-              <nav className="site-header__desktop-nav hidden min-[1200px]:flex items-center gap-1" aria-label="Main">
-                {navigation.header.map((item, index) => {
-                  const hasPanel = !!item.columns?.length;
-                  const standaloneClass = item.standalone ? "text-accent-dark font-bold" : "";
+              <div className="site-header__desktop-actions hidden min-[1200px]:flex items-center">
+                <nav className="site-header__desktop-nav flex items-center gap-1" aria-label="Main">
+                  {navigation.header.map((item, index) => {
+                    const hasPanel = !!item.columns?.length;
+                    const standaloneClass = item.standalone ? "text-accent-dark font-bold" : "";
 
-                  if (hasPanel) {
+                    if (hasPanel) {
+                      return (
+                        <div key={item.label} data-nav-menu data-nav-label={item.label}>
+                          <button
+                            data-nav-index={index}
+                            data-nav-trigger
+                            className={cn(NAV_ITEM_CLASS, standaloneClass)}
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls={`${slugify(item.label)}-dropdown-panel`}
+                          >
+                            <NavItemInner item={item} hasPanel />
+                          </button>
+                          <MegaDropdown item={item} />
+                        </div>
+                      );
+                    }
+
                     return (
-                      <div key={item.label} data-nav-menu data-nav-label={item.label}>
-                        <button
-                          data-nav-index={index}
-                          data-nav-trigger
-                          className={cn(NAV_ITEM_CLASS, standaloneClass)}
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                          aria-controls={`${slugify(item.label)}-dropdown-panel`}
-                        >
-                          <NavItemInner item={item} hasPanel />
-                        </button>
-                        <MegaDropdown item={item} />
-                      </div>
+                      <Link
+                        key={item.label}
+                        href={item.href}
+                        data-nav-index={index}
+                        className={cn(NAV_ITEM_CLASS, standaloneClass)}
+                      >
+                        <NavItemInner item={item} />
+                      </Link>
                     );
-                  }
+                  })}
+                </nav>
 
-                  return (
-                    <Link
-                      key={item.label}
-                      href={item.href}
-                      data-nav-index={index}
-                      className={cn(NAV_ITEM_CLASS, standaloneClass)}
-                    >
-                      <NavItemInner item={item} />
-                    </Link>
-                  );
-                })}
-              </nav>
-
-              <div className="site-header__desktop-cta hidden min-[1200px]:flex items-center">
-                <Link href={site.ctas.primary.href} className="site-header__cta rounded-md bg-primary text-white font-bold px-3.5 py-2.5 text-[12px] hover:bg-navy transition-colors shadow-md whitespace-nowrap">
-                  {site.ctas.primary.label}
-                </Link>
+                <div className="site-header__desktop-cta flex items-center">
+                  <Link href={site.ctas.primary.href} className="site-header__cta rounded-md bg-primary text-white font-bold px-3.5 py-2.5 text-[12px] hover:bg-navy transition-colors shadow-md whitespace-nowrap">
+                    {site.ctas.primary.label}
+                  </Link>
+                </div>
               </div>
 
               <HeaderMobileMenuLauncher />

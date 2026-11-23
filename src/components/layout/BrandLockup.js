@@ -28,8 +28,8 @@ export default function BrandLockup({ className = "", onClick }) {
         />
       </span>
       <span className="site-brand-lockup__name">
-        <span>Commonwealth</span>
-        <span>Migration Group</span>
+        <span>COMMONWEALTH</span>
+        <span>MIGRATION GROUP</span>
       </span>
     </Link>
   );

@@ -3484,13 +3484,27 @@ html[data-theme="dark"] .site-brand-mark__dark {
 
 .site-brand-lockup__name {
   display: grid;
-  gap: 0.05rem;
-  max-width: 10.5rem;
+  justify-items: center;
+  gap: 0.12rem;
+  max-width: 12rem;
   color: var(--cmg-template-nav-ink, #f7f8fb);
-  font-size: 0.74rem;
-  font-weight: 850;
-  letter-spacing: -0.025em;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: -0.035em;
   line-height: 1.05;
+  text-align: center;
+}
+
+.site-brand-lockup__name > span {
+  white-space: nowrap;
+}
+
+.site-brand-lockup__name > span:last-child {
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
 }
 
 .site-header__nav-frame {
@@ -3610,6 +3624,11 @@ html[data-theme="dark"] .site-brand-mark__dark {
 }
 
 @media (min-width: 1200px) {
+  .site-header__nav-shell > div:first-child {
+    justify-content: space-between !important;
+    gap: 0 !important;
+  }
+
   .site-header__nav-shell {
     width: min(1340px, calc(100% - 3rem)) !important;
     max-width: 1340px !important;
@@ -3620,23 +3639,44 @@ html[data-theme="dark"] .site-brand-mark__dark {
     min-height: 3.625rem !important;
   }
 
-  .site-header__nav-shell .site-header__desktop-nav {
-    flex: 1 1 auto;
+  .site-header__desktop-actions {
+    flex: 0 1 auto;
     min-width: 0;
-    justify-content: center !important;
-    gap: clamp(0.1rem, 0.25vw, 0.35rem) !important;
+    align-items: center;
+    gap: 0;
+  }
+
+  .site-header__nav-shell .site-header__desktop-nav {
+    flex: 0 1 auto;
+    min-width: 0;
+    justify-content: flex-start !important;
+    gap: clamp(0.1rem, 0.15vw, 0.25rem) !important;
+  }
+
+  body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-nav {
+    flex: 0 1 auto !important;
+    gap: clamp(0.1rem, 0.15vw, 0.25rem) !important;
+  }
+
+  body:has(.cmg-template-home) .site-header__nav-shell .site-header__desktop-actions .site-header__desktop-nav + .site-header__desktop-cta {
+    margin-left: 1.5rem !important;
   }
 
   .site-header__desktop-nav > a,
   .site-header__desktop-nav > div > button {
     flex: 0 1 auto;
-    padding-inline: clamp(0.3rem, 0.55vw, 0.65rem) !important;
+    padding-inline: clamp(0.22rem, 0.35vw, 0.45rem) !important;
     font-size: clamp(0.7rem, 0.73vw, 0.78rem) !important;
+  }
+
+  body:has(.cmg-template-home) .site-header__desktop-nav > a,
+  body:has(.cmg-template-home) .site-header__desktop-nav > div > button {
+    padding-inline: clamp(0.22rem, 0.35vw, 0.45rem) !important;
   }
 
   .site-header__desktop-cta {
     flex: 0 0 auto;
-    margin-left: clamp(0.5rem, 1vw, 1rem);
+    margin-left: 1.5rem;
   }
 
   body:has(.cmg-template-home) .site-header__nav-shell .site-header__cta,
