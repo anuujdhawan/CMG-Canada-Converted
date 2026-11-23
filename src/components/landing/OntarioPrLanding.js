@@ -595,8 +595,13 @@ export default function OntarioPrLanding({ variant = "oinp" }) {
         <div className="op-wrap">
           <div className="op-footer__top">
             <div className="op-footer__brand">
-              <Image src={site.logos.white} alt="" width={1912} height={1140} sizes="76px" />
-              <div><strong>Commonwealth Migration Group Inc.</strong><span>Brampton, Ontario</span></div>
+              <Image
+                src={site.logos.brandDark}
+                alt="Commonwealth Migration Group — licensed immigration consultant, RCIC R 711256 in Brampton, Canada"
+                width={1600}
+                height={899}
+                sizes="(max-width: 700px) 100vw, 384px"
+              />
             </div>
             <div className="op-footer__contact">
               <a href={site.phoneHref}>{site.phone}</a>

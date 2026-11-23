@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, BriefcaseBusiness, FileCheck2, Globe2, GraduationCap, HeartHandshake, ShieldCheck } from "lucide-react";
 import { site } from "@/config/site";
 import { cn } from "@/lib/utils";
+import BrandMark from "@/components/layout/BrandMark";
 
 /**
  * Google Calendar product mark (the official 2020 icon, paths unchanged).
@@ -168,7 +169,7 @@ export default function ConsultantProfileSection({ profile = LICENSED_RCIC_PROFI
 
               <div className="mt-4 flex flex-wrap gap-2">
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-template-border px-3 py-1.5 text-[10px] font-bold tracking-[.04em] text-template-muted">
-                  <ShieldCheck className="h-3.5 w-3.5 text-template-primary" aria-hidden="true" />
+                  <BrandMark size={18} className="rounded-[4px] bg-white p-[1px]" />
                   Commonwealth Migration Group
                 </span>
               </div>

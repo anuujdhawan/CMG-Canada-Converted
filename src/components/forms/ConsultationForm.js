@@ -1,13 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { CalendarCheck, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import { Field, TextInput, SelectInput, TextArea, CheckboxField } from "./fields";
 import { FormShell, FieldGrid } from "./FormShell";
 import FormSuccessCard from "./FormSuccessCard";
 import FormSubmitButton from "./FormSubmitButton";
 import FormErrorBanner from "./FormErrorBanner";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
+import BrandMark from "@/components/layout/BrandMark";
+import { site } from "@/config/site";
 
 const initial = {
   fullName: "",
@@ -66,9 +68,12 @@ export default function ConsultationForm({ variant = "standard" }) {
       <FormShell as="form" onSubmit={onSubmit} noValidate className="consultation-form-shell !rounded-[20px] !p-0 before:absolute before:top-0 before:right-0 before:left-0 before:h-1 before:bg-(--brand-gold) before:content-[''] border border-[var(--template-border)] bg-[var(--template-surface)] shadow-[0_14px_38px_color-mix(in_srgb,var(--template-ink)_8%,transparent),0_2px_8px_color-mix(in_srgb,var(--template-ink)_4%,transparent)]" bodyClassName="!gap-4 !p-[1.15rem_clamp(0.75rem,1.5vw,1.2rem)_1.25rem]">
       <div className="consultation-form-intro flex items-start gap-[0.8rem] mb-[1.15rem] border-b !border-b-[var(--modal-border,var(--template-border))] pb-[1.05rem]">
         <span className="consultation-form-intro-mark inline-flex h-[2.9rem] w-[2.9rem] shrink-0 items-center justify-center rounded-[15px] border border-[color-mix(in_srgb,var(--template-primary)_24%,transparent)] bg-[var(--template-secondary)] text-[var(--template-on-primary)] shadow-[0_8px_18px_color-mix(in_srgb,var(--template-ink)_12%,transparent)]" aria-hidden="true">
-          <CalendarCheck className="h-6 w-6" />
+          <BrandMark size={30} className="rounded-[7px] bg-white p-[2px]" />
         </span>
         <div>
+          <div className="mb-1 flex flex-wrap items-center gap-1.5 text-[11px] font-extrabold leading-tight tracking-[-.01em] text-[var(--modal-ink,var(--template-ink))]">
+            <span>{site.displayName}</span>
+          </div>
           <p className="consultation-form-kicker m-0 !text-[var(--modal-primary,var(--template-primary))] text-[0.6875rem] font-extrabold leading-[1.2] tracking-[0.16em] uppercase">Personalised guidance</p>
           <h3 className="consultation-form-title m-0 mt-[0.35rem] !text-[var(--modal-ink,var(--template-ink))] text-[clamp(1.6rem,3vw,2.2rem)] font-semibold leading-[1.03] tracking-[-0.035em]">
             {urgent ? "Tell us what needs attention." : "Tell us what you need help with."}

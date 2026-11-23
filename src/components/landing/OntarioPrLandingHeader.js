@@ -1,11 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import { useRef, useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
-import { site } from "@/config/site";
 import ThemeToggle from "@/components/layout/ThemeToggle";
+import BrandLockup from "@/components/layout/BrandLockup";
 
 const SECTION_LINKS = [
   { href: "#what-changed", label: "Ontario in 2026" },
@@ -50,20 +48,7 @@ export default function OntarioPrLandingHeader() {
       <div className="site-header__nav-frame px-1 pt-3 sm:px-1">
         <div className="site-header__nav-shell relative mx-auto max-w-none rounded-2xl border px-4 shadow-[0_4px_24px_color-mix(in_srgb,var(--brand-navy)_8%,transparent),0_1px_4px_color-mix(in_srgb,var(--brand-navy)_4%,transparent)] backdrop-blur-md transition-shadow duration-300">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex shrink-0 items-center" aria-label={`${site.name} — home`}>
-              <span className="header-logo-shell flex items-center">
-                <Image
-                  src={site.logos.white}
-                  alt={site.name}
-                  width={1912}
-                  height={1140}
-                  loading="eager"
-                  fetchPriority="low"
-                  sizes="124px"
-                  className="h-9 w-auto object-contain sm:h-10"
-                />
-              </span>
-            </Link>
+            <BrandLockup />
 
             <nav className="site-header__desktop-nav absolute left-1/2 top-1/2 hidden !w-max !flex-none -translate-x-1/2 -translate-y-1/2 min-[1200px]:flex !items-center !justify-center gap-1" aria-label="Ontario landing sections">
               {SECTION_LINKS.map(({ href, label }) => (

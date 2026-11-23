@@ -29,9 +29,9 @@ export const CALCULATOR_NAV_GROUPS = [
   {
     category: "Territories & rural",
     items: [
-      { slug: "rural-community-immigration-pilot-calculator", label: "Rural Community Pilot Calculator", shortLabel: "Rural Community Pilot Calculator", title: "Rural Community Immigration Pilot Calculator", type: "rcip", group: "Territories & rural", description: "Check the federal rural community pathway requirements, recommendation status and transition dates." },
-      { slug: "northwest-territories-ntnp-calculator", label: "Northwest Territories Calculator", shortLabel: "Northwest Territories Calculator", title: "Northwest Territories Nominee Calculator", type: "pnp", programKey: "north", streamKey: "nwt", group: "Territories & rural", description: "Estimate the NWT Employer-Driven EOI score from the official 845-point grid and review employer-supported pathway requirements." },
-      { slug: "yukon-nominee-program-calculator", label: "Yukon YNP Calculator", shortLabel: "Yukon YNP Calculator", title: "Yukon Nominee Program Calculator", type: "pnp", programKey: "north", streamKey: "yukon", group: "Territories & rural", description: "Review Yukon employer, worker and 2026 intake-priority factors using current territorial guidance." },
+      { slug: "rural-community-immigration-pilot-calculator", label: "Rural Community Immigration Pilot Calculator", shortLabel: "Rural Community Immigration Pilot Calculator", title: "Rural Community Immigration Pilot Calculator", type: "rcip", group: "Territories & rural", description: "Check the federal rural community pathway requirements, recommendation status and transition dates." },
+      { slug: "northwest-territories-ntnp-calculator", label: "Northwest Territories Nominee Program Calculator", shortLabel: "Northwest Territories Nominee Program Calculator", title: "Northwest Territories Nominee Program Calculator", type: "pnp", programKey: "north", streamKey: "nwt", group: "Territories & rural", description: "Estimate the NWT Employer-Driven EOI score from the official 845-point grid and review employer-supported pathway requirements." },
+      { slug: "yukon-nominee-program-calculator", label: "Yukon Nominee Program Calculator", shortLabel: "Yukon Nominee Program Calculator", title: "Yukon Nominee Program Calculator", type: "pnp", programKey: "north", streamKey: "yukon", group: "Territories & rural", description: "Review Yukon employer, worker and 2026 intake-priority factors using current territorial guidance." },
     ],
   },
 ];

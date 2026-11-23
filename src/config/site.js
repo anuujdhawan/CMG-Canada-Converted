@@ -82,6 +82,11 @@ export const site = {
     large: "/images/logo-large.png",
     white: "/images/CMG-LOGO.webp",
     footer: "/images/CMG-LOGO-FOOTER.webp",
+    brandMark: "/images/cmg-brand-red.jpg",
+    brandLight: "/images/cmg-brand-red-transparent.png",
+    brandDark: "/images/cmg-brand-white-transparent.png",
+    brandMarkOnly: "/images/cmg-brand-mark-red.png",
+    brandMarkOnlyDark: "/images/cmg-brand-mark-dark.png",
     // Next's app-file conventions emit the stable /favicon.ico URL and the
     // 192px /icon.png variant from the same maple-door source artwork.
     favicon: "/favicon.ico",

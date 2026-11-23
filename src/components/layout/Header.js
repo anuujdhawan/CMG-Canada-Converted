@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronDown, AlertTriangle, ArrowRight } from "lucide-react";
 import { navigation } from "@/config/navigation";
 import { site } from "@/config/site";
@@ -7,26 +6,7 @@ import { cn, slugify } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
 import HeaderInteractionController from "./HeaderInteractionController";
 import HeaderMobileMenuLauncher from "./HeaderMobileMenuLauncher";
-
-/* ─── Logo lockup (CMG wordmark) ──────────────────────────────────── */
-function BrandLogo() {
-  return (
-    <Link href="/" className="flex items-center shrink-0" aria-label={`${site.name} — home`}>
-      <div className="header-logo-shell flex items-center">
-        <Image
-          src={site.logos.white}
-          alt=""
-          width={1912}
-          height={1140}
-          loading="eager"
-          fetchPriority="low"
-          sizes="124px"
-          className="h-9 w-auto object-contain sm:h-10"
-        />
-      </div>
-    </Link>
-  );
-}
+import BrandLockup from "./BrandLockup";
 
 /* ─── Dropdown panel wrapper ──────────────────────────────────────── */
 
@@ -287,7 +267,7 @@ export default function Header() {
         <div className="site-header__nav-frame px-1 pt-3 sm:px-1">
           <div className="site-header__nav-shell relative mx-auto max-w-none backdrop-blur-md rounded-2xl border px-4 transition-shadow duration-300 shadow-[0_4px_24px_color-mix(in_srgb,var(--brand-navy)_8%,transparent),0_1px_4px_color-mix(in_srgb,var(--brand-navy)_4%,transparent)]">
             <div className="flex items-center justify-between">
-              <BrandLogo />
+              <BrandLockup />
 
               <nav className="site-header__desktop-nav hidden min-[1200px]:flex items-center gap-1" aria-label="Main">
                 {navigation.header.map((item, index) => {
