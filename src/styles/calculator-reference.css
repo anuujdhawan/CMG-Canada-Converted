@@ -118,15 +118,15 @@ html[data-theme="light"] body:has(.ref-calculator) {
   position: absolute;
   z-index: 1;
   top: 42%;
-  left: 72%;
-  width: 100px;
-  height: 89px;
+  left: 59%;
+  width: 120px;
+  height: 107px;
   transform: translate(-50%, -50%);
   background-color: var(--ref-hero-watermark);
   -webkit-mask: url("/images/cmg-brand-mark-red.png") center / contain no-repeat;
   mask: url("/images/cmg-brand-mark-red.png") center / contain no-repeat;
 }
-.ref-hero-copy { position: relative; z-index: 2; width: 100%; max-width: 66%; }
+.ref-hero-copy { position: relative; z-index: 2; width: 100%; max-width: 54%; }
 .ref-hero h1 { font-size: clamp(30px, 3.55vw, 59px); font-weight: 800; line-height: 1.03; letter-spacing: -.028em; }
 .ref-hero[data-long] h1 { font-size: clamp(25px, 3.12vw, 52px); }
 .ref-hero[data-very-long] h1 { font-size: clamp(23px, 2.85vw, 46px); }
@@ -442,7 +442,8 @@ html[data-theme="light"] .ref-progress i { background: linear-gradient(90deg, #b
 
 @media (max-width: 1100px) {
   .ref-hero-art { width: 70%; background-size: auto 120%; opacity: .22; }
-  .ref-hero-watermark { left: 72%; width: 88px; height: 78px; }
+  .ref-hero-watermark { left: 59%; width: 100px; height: 89px; }
+  .ref-hero-copy { max-width: 53%; }
   .ref-grid { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 13px; }
   .ref-grid > .ref-panel { min-height: auto; }
   .ref-grid > .ref-sidebar { grid-column: 1 / -1; min-height: auto !important; padding: 9px 12px; }
@@ -467,8 +468,8 @@ html[data-theme="light"] .ref-progress i { background: linear-gradient(90deg, #b
   .ref-hero { min-height: 0; padding: 16px 17px 18px; margin-bottom: 13px; border-radius: 15px; }
   .ref-hero-copy > p { margin-top: 7px; }
   .ref-hero-art { width: 70%; background-size: auto 115%; opacity: .16; mask-image: linear-gradient(to right, transparent, #000 100%); }
-  .ref-hero-copy { max-width: 76%; }
-  .ref-hero-watermark { top: 50%; left: 85%; width: 64px; height: 57px; }
+  .ref-hero-copy { max-width: 68%; }
+  .ref-hero-watermark { top: 50%; left: 82%; width: 72px; height: 64px; }
   .ref-sidebar-nav { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .ref-form-header h2 { font-size: 19px; }
   .ref-form > .ref-callout { margin-top: 13px; }
