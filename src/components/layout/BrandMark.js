@@ -1,14 +1,15 @@
 import Image from "next/image";
 import { site } from "@/config/site";
+import styles from "./BrandMark.module.css";
 
 /**
- * The mark from the supplied full logo, cropped without redrawing or reshaping
- * it. Use beside a visible company name or in an already branded context.
+ * The standalone current maple-doorway mark. Use beside a visible company name
+ * or in an already branded context.
  */
 export default function BrandMark({ size = 18, className = "" }) {
   return (
     <span
-      className={`site-brand-mark ${className}`.trim()}
+      className={`${styles.mark} ${className}`.trim()}
       style={{ width: size, height: size }}
       aria-hidden="true"
     >
@@ -18,7 +19,7 @@ export default function BrandMark({ size = 18, className = "" }) {
         width={755}
         height={670}
         sizes={`${size}px`}
-        className="site-brand-mark__light"
+        className={`${styles.image} ${styles.lightImage}`}
       />
       <Image
         src={site.logos.brandMarkOnlyDark}
@@ -26,7 +27,7 @@ export default function BrandMark({ size = 18, className = "" }) {
         width={755}
         height={670}
         sizes={`${size}px`}
-        className="site-brand-mark__dark"
+        className={`${styles.image} ${styles.darkImage}`}
       />
     </span>
   );

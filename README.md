@@ -44,9 +44,10 @@ npm run lint       # eslint
    brand, contact, social, route, metadata and palette values, then rebuild.
 2. **`.env`** — set only server credentials (`STRIPE_SECRET_KEY`,
    `RESEND_API_KEY`, and optionally `CRM_WEB_TO_LEADS_API_KEY`).
-3. **`public/images/`** — replace the configured brand assets (`logo-large.png`,
-   `CMG-LOGO.webp`, the footer logo, `icon.png`, `apple-icon.png` and
-   `og-default.png`) while keeping the paths configured in `src/config/site.js`.
+3. **`public/images/`** — replace the current maple-doorway lockups and mark
+   (`cmg-brand-red-transparent.png`, `cmg-brand-white-transparent.png`,
+   `cmg-brand-mark-red.png` and `maple-door-watermark.png`). Rebuild app icons
+   from `favicon_LG.webp` with `npm run build:icons`.
 4. **`src/config/navigation.js`** — menu labels, order, enabled/disabled items, URLs.
 5. **`src/data/`** — replace program copy, FAQs, team, blog and guide content.
 6. **`src/config/content.js`** — hero copy, values, process steps, testimonials.

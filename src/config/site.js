@@ -79,10 +79,10 @@ export const site = {
 
   // ---- Assets ---------------------------------------------------------
   logos: {
-    large: "/images/logo-large.png",
-    white: "/images/CMG-LOGO.webp",
-    footer: "/images/CMG-LOGO-FOOTER.webp",
-    brandMark: "/images/cmg-brand-red.jpg",
+    large: "/images/cmg-brand-red-transparent.png",
+    white: "/images/cmg-brand-white-transparent.png",
+    footer: "/images/cmg-brand-red-transparent.png",
+    brandMark: "/images/cmg-brand-mark-red.png",
     brandLight: "/images/cmg-brand-red-transparent.png",
     brandDark: "/images/cmg-brand-white-transparent.png",
     brandMarkOnly: "/images/cmg-brand-mark-red.png",
@@ -90,7 +90,7 @@ export const site = {
     // Next's app-file conventions emit the stable /favicon.ico URL and the
     // 192px /icon.png variant from the same maple-door source artwork.
     favicon: "/favicon.ico",
-    og: "/icon.png",
+    og: "/images/maple-door-watermark.png",
   },
 
   // ---- Social ---------------------------------------------------------
@@ -123,17 +123,14 @@ export const site = {
       "LMIA",
       "licensed RCIC",
     ],
-    // This is the fallback used when a route does not define its own share
-    // image. It is intentionally the full homepage hero rather than the
-    // square favicon so WhatsApp and other link-preview crawlers show the
-    // site's main visual on every otherwise-unconfigured route.
-    // Use a fresh, compressed asset so WhatsApp can fetch it reliably and
-    // does not reuse the earlier cached preview response.
-    ogImage: "/images/social/homepage-hero-v4.webp",
+    // The homepage share image is generated at request time. It includes the
+    // current maple-doorway mark, so share crawlers never receive a stale
+    // screenshot with the retired logo baked into it.
+    ogImage: "/api/og?path=%2F&brand=maple-doorway-v2",
     ogImageWidth: 1200,
-    ogImageHeight: 629,
-    ogImageType: "image/webp",
-    ogImageAlt: "Commonwealth Migration Group homepage hero",
+    ogImageHeight: 630,
+    ogImageType: "image/png",
+    ogImageAlt: "Commonwealth Migration Group homepage preview with its maple leaf doorway mark",
     locale: "en_CA",
   },
 

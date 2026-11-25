@@ -32,7 +32,11 @@ export async function generateMetadata({ params }) {
       ...post.keywords.split(";").map((keyword) => keyword.trim()).filter(Boolean),
       ...(article?.faqs || []).slice(0, 2).map((faq) => faq.question),
     ],
-    image: { url: shareImageUrl, alt: cover.socialAlt || cover.alt, type: "image/jpeg" },
+    image: {
+      url: shareImageUrl,
+      alt: cover.socialAlt || cover.alt,
+      type: cover.socialType || "image/jpeg",
+    },
   });
 }
 

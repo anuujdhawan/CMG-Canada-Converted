@@ -377,8 +377,9 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
   "new-pr-pathways-canada-2026": {
     src: "/images/blog/financial-district.webp",
     alt: "Canadian financial district representing immigration and permanent residence planning",
-    socialSrc: "/images/blog/new-pr-pathways-canada-2026-og.jpg",
+    socialSrc: "/api/og?path=%2Fblog%2Fnew-pr-pathways-canada-2026&brand=maple-doorway-v2",
     socialAlt: "New PR pathways in Canada 2026, explained by Commonwealth Migration Group",
+    socialType: "image/png",
   },
   "provincial-nominee-program-canada-2026": {
     src: "/images/blog/quebec-city.webp",

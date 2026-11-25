@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
-import sharp from "sharp";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { site } from "@/config/site";
 import { getPage } from "@/lib/sitePages";
+import { RESEARCH_BLOG_BY_SLUG } from "@/data/blog-research";
 import { normalizePageTitle } from "@/lib/seo";
 
 export const runtime = "nodejs";
@@ -10,11 +12,25 @@ export const dynamic = "force-dynamic";
 
 const WIDTH = 1200;
 const HEIGHT = 630;
-// ImageResponse's renderer does not decode WebP consistently in the Node
-// runtime, so these small social-generator copies use JPEG/PNG. The live
-// page still serves the WebP hero through Next Image.
-const HERO_IMAGE = "/images/social/hero-background-v1.jpg";
-const LOGO_IMAGE = "/images/social/cmg-logo-og.png";
+// ImageResponse's Node renderer receives local assets as data URIs so it does
+// not depend on the server fetching its own public URL while rendering.
+const HERO_IMAGE = "images/social/hero-background-v1.jpg";
+const LOGO_IMAGE = site.logos.brandMarkOnly;
+let imageAssetsPromise;
+
+function getImageAssets() {
+  if (!imageAssetsPromise) {
+    imageAssetsPromise = Promise.all([
+      readFile(path.join(process.cwd(), "public", HERO_IMAGE)),
+      readFile(path.join(process.cwd(), "public", LOGO_IMAGE.replace(/^\//, ""))),
+    ]).then(([hero, logo]) => ({
+      hero: `data:image/jpeg;base64,${hero.toString("base64")}`,
+      logo: `data:image/png;base64,${logo.toString("base64")}`,
+    }));
+  }
+
+  return imageAssetsPromise;
+}
 
 function compactText(value, limit = 230) {
   const text = String(value || "").replace(/\s+/g, " ").trim();
@@ -36,7 +52,21 @@ function heroLead(page) {
 
 function getPageForPath(pathname) {
   const normalized = String(pathname || "/").replace(/[?#].*$/, "") || "/";
-  return getPage(normalized);
+  const page = getPage(normalized);
+  if (page) return page;
+
+  const blogSlug = normalized.match(/^\/blog\/([^/]+)$/)?.[1];
+  const post = blogSlug ? RESEARCH_BLOG_BY_SLUG[blogSlug] : null;
+  if (!post) return null;
+
+  const title = post.metaTitle || post.title;
+  return {
+    h1: title,
+    seo: {
+      title,
+      description: post.metaDescription || post.description,
+    },
+  };
 }
 
 export async function GET(request) {
@@ -45,9 +75,7 @@ export async function GET(request) {
   const page = getPageForPath(pathname);
   const title = normalizePageTitle(page?.h1 || page?.seo?.title || site.meta.defaultTitle);
   const lead = compactText(heroLead(page));
-  const origin = requestUrl.origin;
-  const heroImageUrl = `${origin}${HERO_IMAGE}`;
-  const logoImageUrl = `${origin}${LOGO_IMAGE}`;
+  const { hero: heroImageUrl, logo: logoImageUrl } = await getImageAssets();
   const titleSize = title.length > 72 ? 39 : title.length > 54 ? 45 : 52;
 
   const imageResponse = new ImageResponse(
@@ -105,8 +133,14 @@ export async function GET(request) {
             border: "1px solid rgba(255,255,255,.14)",
           }}
         >
-          <img src={logoImageUrl} alt="CMG" width={188} height={112} style={{ width: 94, height: 56, objectFit: "contain" }} />
-          <div style={{ display: "flex", marginLeft: 28, gap: 25, color: "rgba(255,255,255,.82)", fontSize: 13 }}>
+          <div style={{ width: 54, height: 50, display: "flex", alignItems: "center", justifyContent: "center", borderRadius: 12, background: "#ffffff" }}>
+            <img src={logoImageUrl} alt="Commonwealth Migration Group maple leaf doorway logo" width={755} height={670} style={{ width: 44, height: 40, objectFit: "contain" }} />
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", marginLeft: 12, color: "#ffffff", fontSize: 10, fontWeight: 800, letterSpacing: 0.5, lineHeight: 1.12 }}>
+            <span>COMMONWEALTH</span>
+            <span style={{ fontSize: 8, letterSpacing: 0.65 }}>MIGRATION GROUP</span>
+          </div>
+          <div style={{ display: "flex", marginLeft: 22, gap: 20, color: "rgba(255,255,255,.82)", fontSize: 13 }}>
             <span style={{ color: "#ffffff", fontWeight: 700 }}>Home</span>
             <span>Immigrate</span>
             <span>Work &amp; Study</span>
@@ -204,12 +238,11 @@ export async function GET(request) {
   );
 
   const png = Buffer.from(await imageResponse.arrayBuffer());
-  const webp = await sharp(png).webp({ quality: 82 }).toBuffer();
-  return new Response(webp, {
+  return new Response(png, {
     headers: {
       "Cache-Control": "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800",
-      "Content-Type": "image/webp",
-      "Content-Length": String(webp.byteLength),
+      "Content-Type": "image/png",
+      "Content-Length": String(png.byteLength),
     },
   });
 }

@@ -1,0 +1,62 @@
+.lockup {
+  display: inline-flex;
+  flex: 0 1 auto;
+  min-width: 0;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--cmg-template-nav-ink, #f7f8fb);
+  text-decoration: none;
+}
+
+.lockup:focus-visible {
+  border-radius: 0.8rem;
+  outline: 3px solid var(--cmg-template-nav-ink, #f7f8fb);
+  outline-offset: 4px;
+}
+
+.mark {
+  position: relative;
+  display: block;
+  flex: 0 0 3.5rem;
+  width: 3.5rem;
+  height: 3.15rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 0.8rem;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
+}
+
+.markImage {
+  position: absolute;
+  inset: 0.2rem;
+  width: calc(100% - 0.4rem);
+  max-width: 100%;
+  height: calc(100% - 0.4rem);
+  object-fit: contain;
+}
+
+.name {
+  display: grid;
+  justify-items: center;
+  gap: 0.12rem;
+  max-width: 12rem;
+  color: var(--cmg-template-nav-ink, #f7f8fb);
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.name > span {
+  white-space: nowrap;
+}
+
+.name > span:last-child {
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+}

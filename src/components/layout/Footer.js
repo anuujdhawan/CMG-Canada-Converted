@@ -93,7 +93,7 @@ export default function Footer() {
             </Link>
 
             <p className="site-footer__tagline mt-[.9rem] text-(--brand-navy-dark) text-[.95rem] font-semibold tracking-[-.015em] leading-[1.3]">
-              Canada Immigration <strong className="text-primary font-extrabold">Simplified</strong>
+              {site.tagline}
             </p>
 
             <p className="site-footer__desc mt-[.65rem] max-w-md text-muted text-[.78rem] leading-[1.65]">
