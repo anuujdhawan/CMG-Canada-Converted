@@ -25,6 +25,7 @@ export const LATEST_BLOG_LIMIT = 10;
  * service areas so the strip never shows the same cover art twice in a row.
  */
 const FEATURED_BLOG_SLUGS = [
+  "new-pr-pathways-canada-2026",
   "temporary-resident-permit-canada",
   "express-entry-oinp-changes-2026",
   "canada-immigration-levels-plan-2026",

@@ -13,6 +13,7 @@ const BLOG_PUBLISHED_AT_BY_SLUG = {
   "express-entry-high-wage-crs-points-november-2026": "2026-11-17",
   "canada-asylum-process-changes-november-2026": "2026-11-17",
   "canada-pr-transition-measures-2027-in-canada-workers": "2026-11-17",
+  "new-pr-pathways-canada-2026": "2026-11-24",
   "northwest-territories-pnp-350-nominations-november-2026": "2026-11-18",
   "canada-temporary-foreign-worker-reforms-november-2026": "2026-11-18",
   "ircc-september-2026-application-inventory-guide": "2026-11-18",
@@ -372,6 +373,12 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
   "canada-pr-pathways-2026": {
     src: "/images/blog/toronto-newcomer.webp",
     alt: "Newcomer enjoying Toronto while considering Canadian permanent residence pathways",
+  },
+  "new-pr-pathways-canada-2026": {
+    src: "/images/blog/financial-district.webp",
+    alt: "Canadian financial district representing immigration and permanent residence planning",
+    socialSrc: "/images/blog/new-pr-pathways-canada-2026-og.jpg",
+    socialAlt: "New PR pathways in Canada 2026, explained by Commonwealth Migration Group",
   },
   "provincial-nominee-program-canada-2026": {
     src: "/images/blog/quebec-city.webp",

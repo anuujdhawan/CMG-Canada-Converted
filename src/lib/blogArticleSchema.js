@@ -23,7 +23,8 @@ const WORDS_PER_MINUTE = 220;
 export function articleStructuredData(post, article) {
   const url = absoluteUrl(`/blog/${post.slug}`);
   const cover = getResearchBlogImage(post.slug, post.category);
-  const reviewed = post.updated || post.date || post.meta?.lastModified || null;
+  const published = post.publishedAt || post.date || post.updated || null;
+  const reviewed = post.updated || post.meta?.lastModified || post.publishedAt || post.date || null;
   const articleTitle = post.articleTitle || post.title;
   const wordCount = countArticleWords(article);
   const nodes = [
@@ -36,8 +37,14 @@ export function articleStructuredData(post, article) {
       image: [absoluteUrl(cover.src)],
       keywords: post.keywords,
       inLanguage: "en-CA",
-      ...(reviewed ? { datePublished: reviewed, dateModified: reviewed } : {}),
+      ...(published ? { datePublished: published } : {}),
+      ...(reviewed ? { dateModified: reviewed } : {}),
       author: { "@id": `${site.url}#organization` },
+      ...(post.reviewer ? {
+        reviewedBy: {
+          "@id": `${site.url}#${site.rcic.consultant.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`,
+        },
+      } : {}),
       publisher: { "@id": `${site.url}#organization` },
       mainEntityOfPage: { "@type": "WebPage", "@id": `${url}#webpage` },
       citation: post.source,

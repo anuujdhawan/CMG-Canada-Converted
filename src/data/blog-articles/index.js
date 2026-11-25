@@ -25,6 +25,7 @@ import expressEntryCanada2026Categories from "./express-entry-canada-2026-catego
 import crsScoreCanadaHowToImprove from "./crs-score-canada-how-to-improve";
 import canadaImmigrationNewsMonthlyIrccUpdate from "./canada-immigration-news-monthly-ircc-update";
 import canadaPrPathways2026 from "./canada-pr-pathways-2026";
+import newPrPathwaysCanada2026 from "./new-pr-pathways-canada-2026";
 import provincialNomineeProgramCanada2026 from "./provincial-nominee-program-canada-2026";
 import ruralCommunityImmigrationPilotCanada from "./rural-community-immigration-pilot-canada";
 import atlanticImmigrationProgramGuide from "./atlantic-immigration-program-guide";
@@ -89,6 +90,7 @@ export const BLOG_ARTICLES = {
   "crs-score-canada-how-to-improve": crsScoreCanadaHowToImprove,
   "canada-immigration-news-monthly-ircc-update": canadaImmigrationNewsMonthlyIrccUpdate,
   "canada-pr-pathways-2026": canadaPrPathways2026,
+  "new-pr-pathways-canada-2026": newPrPathwaysCanada2026,
   "provincial-nominee-program-canada-2026": provincialNomineeProgramCanada2026,
   "rural-community-immigration-pilot-canada": ruralCommunityImmigrationPilotCanada,
   "atlantic-immigration-program-guide": atlanticImmigrationProgramGuide,

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
   const cover = getResearchBlogImage(post.slug, post.category);
   // Use the JPEG social copy of the on-page WebP cover. Open Graph previews
   // are fetched by third-party crawlers, some of which still expect JPG/PNG.
-  const shareImageUrl = cover.src.replace(/\.webp$/i, ".jpg");
+  const shareImageUrl = cover.socialSrc || cover.src.replace(/\.webp$/i, ".jpg");
   return buildMetadata({
     title: post.metaTitle || post.title,
     description: post.metaDescription || post.description,
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }) {
       ...post.keywords.split(";").map((keyword) => keyword.trim()).filter(Boolean),
       ...(article?.faqs || []).slice(0, 2).map((faq) => faq.question),
     ],
-    image: { url: shareImageUrl, alt: cover.alt, type: "image/jpeg" },
+    image: { url: shareImageUrl, alt: cover.socialAlt || cover.alt, type: "image/jpeg" },
   });
 }
 
