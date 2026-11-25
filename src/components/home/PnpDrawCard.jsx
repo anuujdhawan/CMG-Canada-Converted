@@ -40,7 +40,7 @@ export default function PnpDrawCard({ initialDraws = [] }) {
   ];
 
   return (
-    <HeroCardShell ariaLabel="Latest Canadian PNP draw highlights" className="hero-draw-card hero-pnp-draw-card -translate-y-[50%] max-[880px]:!translate-y-0">
+    <HeroCardShell ariaLabel="Latest Canadian PNP draw highlights" fillMobileHeight className="hero-draw-card hero-pnp-draw-card -translate-y-[50%] max-[880px]:!translate-y-0">
       <div className="hero-pnp-draw-card__eyebrows">
         <span className="hero-pnp-draw-card__eyebrow">
           <ShieldCheck className="text-[var(--cmg-template-primary-bright)]" width={15} height={15} aria-hidden="true" /> Official PNP data

@@ -30,7 +30,7 @@ export default function HeroProofCard({ ariaLabel = "Track record and files we h
     : HANDLED_FILES;
 
   return (
-    <HeroCardShell ariaLabel={ariaLabel} className="hero-proof-card -translate-y-[50%] max-[880px]:!translate-y-0">
+    <HeroCardShell ariaLabel={ariaLabel} fillMobileHeight className="hero-proof-card -translate-y-[50%] max-[880px]:!translate-y-0">
       <div className="mini-badges flex flex-wrap items-center gap-2">
         <Link href={CICC_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="mini-badge inline-flex items-center gap-[7px] rounded-full border border-[color-mix(in_srgb,var(--template-on-primary)_13%,transparent)] bg-[color-mix(in_srgb,var(--template-on-primary)_9%,transparent)] p-[7px_11px_7px_9px] text-[color-mix(in_srgb,var(--template-on-primary)_92%,transparent)] text-[11px] font-extrabold leading-[1.65] tracking-[.07em] uppercase backdrop-blur-[10px] shadow-[inset_0_1px_0_color-mix(in_srgb,var(--template-on-primary)_7%,transparent)]">
           <ShieldCheck className="flex-none text-[var(--cmg-template-primary-bright)] drop-shadow-[0_1px_8px_color-mix(in_srgb,var(--template-primary)_42%,transparent)]" width={15} height={15} aria-hidden="true" /> CICC-regulated · {site.rcic.number}
@@ -43,7 +43,18 @@ export default function HeroProofCard({ ariaLabel = "Track record and files we h
       <ul className="visual-handles grid gap-[5px] m-0 p-0 list-none max-[480px]:gap-1">
         {handledFiles.map((item) => <li className="flex items-start gap-[7px] text-[color-mix(in_srgb,var(--template-on-primary)_78%,transparent)] text-[11px] leading-[1.25] max-[880px]:text-[12px] max-[480px]:gap-[6px] max-[480px]:text-[11px]" key={item}><Check className="mt-px flex-none text-[var(--cmg-template-primary-bright)] drop-shadow-[0_1px_8px_color-mix(in_srgb,var(--template-primary)_36%,transparent)] max-[480px]:h-[13px] max-[480px]:w-[13px]" width={15} height={15} aria-hidden="true" />{item}</li>)}
       </ul>
-      <div className="visual-card__footer flex flex-wrap items-baseline justify-between gap-x-3 gap-y-2 mt-[18px] border-t border-[color-mix(in_srgb,var(--template-on-primary)_15%,transparent)] pt-[14px] text-[color-mix(in_srgb,var(--template-on-primary)_66%,transparent)] text-[12px] leading-[1.35] max-[480px]:mt-[10px] max-[480px]:pt-2 max-[480px]:text-[10.5px]">
+      <div className="mt-4">
+        <p className="visual-card__section-label !m-[10px_0_7px] !text-[12px] !font-extrabold !leading-[1.5] !tracking-[.1em] text-[color-mix(in_srgb,var(--template-on-primary)_68%,transparent)] uppercase">Helpful for your first review</p>
+        <ul className="m-0 grid list-none gap-1.5 p-0">
+          {[
+            "Your current status and permit expiry dates",
+            "Past applications, refusals, or IRCC letters",
+            "Work, study, and family details tied to your goal",
+            "Any deadline or request you need to answer",
+          ].map((item) => <li className="flex items-start gap-[6px] text-[11px] leading-[1.3] text-[color-mix(in_srgb,var(--template-on-primary)_78%,transparent)]" key={item}><Check className="mt-px h-[13px] w-[13px] flex-none text-[var(--cmg-template-primary-bright)]" width={13} height={13} aria-hidden="true" />{item}</li>)}
+        </ul>
+      </div>
+      <div className="visual-card__footer flex flex-wrap items-baseline justify-between gap-x-3 gap-y-2 mt-auto border-t border-[color-mix(in_srgb,var(--template-on-primary)_15%,transparent)] pt-[14px] text-[color-mix(in_srgb,var(--template-on-primary)_66%,transparent)] text-[12px] leading-[1.35] max-[480px]:pt-2 max-[480px]:text-[10.5px]">
         <span>Commonwealth Migration Group Inc</span>
         {/* Names the licensed consultant behind the practice. The colour sits on
             the inner span because `.cmg-template-home a { color: inherit }` is

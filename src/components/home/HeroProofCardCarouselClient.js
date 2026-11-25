@@ -20,9 +20,8 @@ export default function HeroProofCardCarouselClient({ ariaLabel = "Commonwealth 
   const slideCount = cards.length;
 
   useEffect(() => {
-    // Keep the mobile hero stable after first paint. Desktop keeps the
-    // existing autoplay behavior and visual transitions.
-    if (window.matchMedia?.("(max-width: 880px), (prefers-reduced-motion: reduce)").matches) {
+    // Autoplay every viewport, while honoring the visitor's motion preference.
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
       return undefined;
     }
 

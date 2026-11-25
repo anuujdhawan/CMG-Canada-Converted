@@ -1629,10 +1629,43 @@ html[data-theme="light"] .cmg-template-home .faq-item__answer p {
 }
 @media (min-width: 481px) and (max-width: 880px) {
   .cmg-template-home .hero-proof-card-carousel .hero-card-shell {
-    height: 560px !important;
-    max-height: 560px !important;
-    min-height: 560px !important;
+    height: 600px !important;
+    max-height: 600px !important;
+    min-height: 600px !important;
   }
+}
+@media (min-width: 881px) {
+  .hero-proof-card-carousel { --hero-carousel-card-height: 560px; min-height: var(--hero-carousel-card-height); }
+  .hero-proof-card-carousel:has(.hero-draw-card) { --hero-carousel-card-height: 610px; }
+  .hero-proof-card-carousel .hero-card-shell {
+    height: var(--hero-carousel-card-height);
+    max-height: var(--hero-carousel-card-height);
+    min-height: var(--hero-carousel-card-height);
+  }
+}
+@media (min-width: 881px) and (max-width: 919px) {
+  .hero-proof-card-carousel { --hero-carousel-card-height: 650px; }
+  .hero-proof-card-carousel:has(.hero-draw-card) { --hero-carousel-card-height: 720px; }
+}
+@media (min-width: 920px) and (max-width: 959px) {
+  .hero-proof-card-carousel { --hero-carousel-card-height: 630px; }
+  .hero-proof-card-carousel:has(.hero-draw-card) { --hero-carousel-card-height: 720px; }
+}
+@media (min-width: 960px) and (max-width: 979px) {
+  .hero-proof-card-carousel { --hero-carousel-card-height: 620px; }
+  .hero-proof-card-carousel:has(.hero-draw-card) { --hero-carousel-card-height: 720px; }
+}
+@media (min-width: 980px) and (max-width: 1009px) {
+  .hero-proof-card-carousel { --hero-carousel-card-height: 620px; }
+  .hero-proof-card-carousel:has(.hero-draw-card) { --hero-carousel-card-height: 700px; }
+}
+@media (min-width: 1010px) and (max-width: 1059px) {
+  .hero-proof-card-carousel { --hero-carousel-card-height: 620px; }
+  .hero-proof-card-carousel:has(.hero-draw-card) { --hero-carousel-card-height: 670px; }
+}
+@media (min-width: 1060px) and (max-width: 1139px) {
+  .hero-proof-card-carousel { --hero-carousel-card-height: 560px; }
+  .hero-proof-card-carousel:has(.hero-draw-card) { --hero-carousel-card-height: 630px; }
 }
 @keyframes cmg-live-feed-pulse {
   0% { opacity: 0.65; transform: scale(0.8); }
