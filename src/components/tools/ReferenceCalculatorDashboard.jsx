@@ -60,18 +60,46 @@ function CalculatorSidebar({ activeSlug }) {
   );
 }
 
+function getHeroBadge(page) {
+  if (page.type === "clb") return "IELTS · CELPIP · PTE Core · TEF · TCF";
+  if (page.type === "crs") return "Express Entry · CRS scoring";
+  if (page.type === "fsw") return "Federal Skilled Worker · 67-point grid";
+  if (page.type === "pnp") return `${page.program?.shortName || "Provincial nominee"} · Pathway review`;
+  return "Rural community pathway · Eligibility review";
+}
+
+function HeroTitle({ title }) {
+  const calculatorSuffix = title.match(/^(.*)\s+(Calculator)$/);
+  if (!calculatorSuffix) return title;
+
+  return <>{calculatorSuffix[1]}{" "}<span className="ref-hero-title-accent">{calculatorSuffix[2]}</span></>;
+}
+
 export default function ReferenceCalculatorDashboard({ page }) {
   const [title, description, sourceTitle, sourceUrl] = presentation[page.slug];
   const source = sourceUrl || pointsSources[page.slug] || criteriaSources[page.slug] || page.stream?.sourceUrl || page.sourceUrl || page.program?.source?.url;
+  const breadcrumbGroup = page.group.replace(/\b[a-z]/g, (letter) => letter.toUpperCase());
   return (
     <div className="ref-calculator" data-kind={page.type} data-calculator={page.slug}>
-      <header className="ref-hero" data-long={title.length > 38 || undefined} data-very-long={title.length > 42 || undefined}>
+      <header className="ref-hero" data-long={title.length > 20 || undefined} data-very-long={title.length > 34 || undefined}>
         <div className="ref-hero-art" aria-hidden="true" />
-        <div className="ref-hero-watermark" aria-hidden="true" />
+        <div className="ref-hero-watermark" aria-hidden="true"><span /></div>
         <div className="ref-hero-copy">
-          <h1>{title}</h1>
+          <nav className="ref-hero-breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><Link href="/tools">Tools</Link><span aria-hidden="true">/</span></li>
+              <li><span>{breadcrumbGroup}</span><span aria-hidden="true">/</span></li>
+              <li aria-current="page">{title}</li>
+            </ol>
+          </nav>
+          <h1 aria-label={title}><HeroTitle title={title} /></h1>
           <p>{description}</p>
+          <div className="ref-hero-badges" aria-label="Calculator details">
+            <span>{getHeroBadge(page)}</span>
+            <span>Free · Instant result</span>
+          </div>
         </div>
+        <span className="ref-hero-trust-label" aria-hidden="true">RCIC-REVIEWED TOOLS</span>
       </header>
       <div className="ref-grid">
         <CalculatorSidebar activeSlug={page.slug} />

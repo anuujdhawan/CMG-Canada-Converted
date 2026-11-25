@@ -14,9 +14,10 @@ body:has(.ref-calculator) {
   --ref-note: #28171d;
   --ref-note-line: #502b39;
   --ref-action: linear-gradient(103deg, #ed2149, #bf1034);
-  --ref-hero: linear-gradient(100deg, #28191f 45%, #4d1827 70%, #760e30 100%);
-  --ref-hero-border: #55303f;
-  --ref-hero-watermark: rgba(255, 239, 243, .18);
+  --ref-hero: linear-gradient(105deg, #1a1114 0%, #201115 47%, #351018 100%);
+  --ref-hero-border: #493039;
+  --ref-hero-watermark: #e53430;
+  --ref-hero-glow: rgba(195, 6, 39, .46);
   --ref-score-bg: radial-gradient(ellipse at 75% 20%, #81172f 0%, transparent 66%), linear-gradient(111deg, #38131e, #541426 64%, #691629);
   --ref-score-border: #a83b58;
   --ref-arc-low: #ff4262;
@@ -44,9 +45,10 @@ html[data-theme="light"] body:has(.ref-calculator) {
   --ref-note: #fff0f2;
   --ref-note-line: #f2d3dc;
   --ref-action: linear-gradient(105deg, #e61444, #bd0a31);
-  --ref-hero: linear-gradient(100deg, #fdf9fa 44%, #fcecef 64%, #d6a7b0);
-  --ref-hero-border: #edc8d2;
-  --ref-hero-watermark: rgba(190, 18, 53, .22);
+  --ref-hero: #fff;
+  --ref-hero-border: #ead9dd;
+  --ref-hero-watermark: #fff;
+  --ref-hero-glow: rgba(216, 6, 46, .14);
   --ref-score-bg: radial-gradient(ellipse at 76% 15%, #cf1c43 0%, transparent 74%), linear-gradient(110deg, #a10c32, #a50d32 55%, #ba1139);
   --ref-score-border: #cb3555;
   --ref-arc-low: #ffa9b7;
@@ -88,9 +90,9 @@ html[data-theme="light"] body:has(.ref-calculator) {
   isolation: isolate;
   overflow: hidden;
   min-height: 190px;
-  padding: 18px 28px 19px;
+  padding: 14px clamp(24px, 3.9vw, 62px);
   border: 1px solid var(--ref-hero-border);
-  border-radius: 19px;
+  border-radius: 20px;
   background: var(--ref-hero);
   margin-bottom: 17px;
 }
@@ -98,39 +100,87 @@ html[data-theme="light"] body:has(.ref-calculator) {
   content: "";
   position: absolute;
   left: 0;
-  top: 14%;
-  bottom: 14%;
-  width: 3px;
-  border-radius: 0 3px 3px 0;
-  background: var(--ref-accent);
+  top: 16%;
+  bottom: 16%;
+  width: 5px;
+  border-radius: 0 5px 5px 0;
+  background: #ed3151;
+  box-shadow: 0 0 18px rgba(237, 49, 81, .32);
 }
 .ref-hero-art {
   pointer-events: none;
   position: absolute;
   inset: 0 0 0 auto;
-  width: 62%;
+  width: 67%;
   z-index: 0;
-  background: url("/images/calculators/canadian-flag-drape.webp") right center / auto 136% no-repeat;
-  mask-image: linear-gradient(to right, transparent, #000 27%);
+  background: radial-gradient(ellipse 48% 88% at 50% 50%, var(--ref-hero-glow), transparent 73%);
+}
+.ref-hero-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 0 101px, rgba(255, 226, 232, .06) 102px 103px, transparent 104px 151px, rgba(255, 226, 232, .05) 152px 153px, transparent 154px 201px, rgba(255, 226, 232, .04) 202px 203px, transparent 204px);
 }
 .ref-hero-watermark {
   pointer-events: none;
   position: absolute;
   z-index: 1;
-  top: 42%;
-  left: 59%;
-  width: 120px;
-  height: 107px;
+  top: 50%;
+  left: 67%;
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 100px;
   transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 32px rgba(229, 27, 45, .62));
+}
+.ref-hero-watermark > span {
+  display: block;
+  width: 100%;
+  height: 100%;
   background-color: var(--ref-hero-watermark);
   -webkit-mask: url("/images/cmg-brand-mark-red.png") center / contain no-repeat;
   mask: url("/images/cmg-brand-mark-red.png") center / contain no-repeat;
 }
-.ref-hero-copy { position: relative; z-index: 2; width: 100%; max-width: 54%; }
-.ref-hero h1 { font-size: clamp(30px, 3.55vw, 59px); font-weight: 800; line-height: 1.03; letter-spacing: -.028em; }
-.ref-hero[data-long] h1 { font-size: clamp(25px, 3.12vw, 52px); }
-.ref-hero[data-very-long] h1 { font-size: clamp(23px, 2.85vw, 46px); }
-.ref-hero-copy > p { max-width: 100%; margin-top: 8px; color: var(--ref-muted); font-size: clamp(12px, 1.02vw, 16px); font-weight: 550; }
+.ref-hero-copy { position: relative; z-index: 2; width: 100%; max-width: 62%; }
+.ref-hero-breadcrumb { margin-bottom: 8px; color: var(--ref-muted); font-size: 12px; font-weight: 550; }
+.ref-hero-breadcrumb ol { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding: 0; }
+.ref-hero-breadcrumb li { display: inline-flex; align-items: center; gap: 8px; }
+.ref-hero-breadcrumb li:first-child a, .ref-hero-breadcrumb li:nth-child(2) > span:first-child { color: color-mix(in srgb, var(--ref-accent) 70%, var(--ref-ink)); }
+.ref-hero-breadcrumb li[aria-current="page"] { color: var(--ref-ink); }
+.ref-hero-breadcrumb li > span[aria-hidden="true"] { color: var(--ref-subtle); }
+.ref-hero-breadcrumb a:hover { color: var(--ref-accent); }
+.ref-hero h1 { font-size: clamp(32px, 3.55vw, 57px); font-weight: 790; line-height: 1.04; letter-spacing: -.038em; }
+.ref-hero-title-accent { color: var(--ref-accent); }
+html:not([data-theme="light"]) .ref-hero-title-accent { color: inherit; }
+.ref-hero[data-long] h1 { font-size: clamp(30px, 3.05vw, 49px); }
+.ref-hero[data-very-long] h1 { font-size: clamp(28px, 2.2vw, 36px); }
+.ref-hero-copy > p { max-width: 770px; margin-top: 5px; color: var(--ref-muted); font-size: clamp(14px, 1.02vw, 16px); font-weight: 520; line-height: 1.35; }
+.ref-hero-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 10px; }
+.ref-hero-badges > span { display: inline-flex; align-items: center; min-height: 31px; padding: 5px 12px; border: 1px solid color-mix(in srgb, var(--ref-line) 80%, var(--ref-accent)); border-radius: 999px; background: color-mix(in srgb, var(--ref-panel) 72%, var(--ref-note)); color: var(--ref-ink); font-size: 12px; font-weight: 650; line-height: 1.25; }
+.ref-hero-badges > span:last-child { border-color: color-mix(in srgb, var(--ref-accent) 30%, var(--ref-line)); background: color-mix(in srgb, var(--ref-accent) 13%, var(--ref-panel)); color: color-mix(in srgb, var(--ref-accent) 72%, var(--ref-ink)); font-weight: 750; }
+.ref-hero-trust-label { position: absolute; z-index: 2; right: clamp(25px, 3.5vw, 55px); bottom: 14px; color: rgba(255, 239, 243, .68); font-size: 9px; font-weight: 650; letter-spacing: .17em; }
+html[data-theme="light"] .ref-hero-art {
+  width: 48%;
+  background-image: url("/images/cmg-brand-mark-red.png");
+  background-size: 46px 41px;
+  background-repeat: repeat;
+  opacity: .13;
+  mask-image: linear-gradient(to right, transparent 0%, #000 38%, #000 100%);
+}
+html[data-theme="light"] .ref-hero-art::before { content: none; }
+html[data-theme="light"] .ref-hero-watermark {
+  left: 80%;
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  background: #d9082e;
+  box-shadow: 0 15px 42px rgba(174, 8, 42, .2), 0 0 60px rgba(216, 8, 46, .12);
+  filter: none;
+}
+html[data-theme="light"] .ref-hero-watermark > span { width: 54%; height: 54%; background-color: #fff; }
+html[data-theme="light"] .ref-hero-trust-label { display: none; }
+html[data-theme="light"] .ref-hero::before { content: none; }
 .ref-grid {
   display: grid;
   grid-template-columns: minmax(0, 220fr) minmax(0, 590fr) minmax(0, 515fr);
@@ -441,9 +491,12 @@ html[data-theme="light"] .ref-progress i { background: linear-gradient(90deg, #b
 .ref-calculator[data-kind="rcip"] .ref-form-description { font-size: 11.1px; white-space: nowrap; }
 
 @media (max-width: 1100px) {
-  .ref-hero-art { width: 70%; background-size: auto 120%; opacity: .22; }
-  .ref-hero-watermark { left: 59%; width: 100px; height: 89px; }
-  .ref-hero-copy { max-width: 53%; }
+  .ref-hero { min-height: 190px; }
+  .ref-hero-copy { max-width: 62%; }
+  .ref-hero-breadcrumb { font-size: 12px; margin-bottom: 8px; }
+  .ref-hero-watermark { width: 104px; height: 92px; }
+  html[data-theme="light"] .ref-hero-watermark { width: 124px; height: 124px; }
+  html[data-theme="light"] .ref-hero-art { width: 48%; }
   .ref-grid { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 13px; }
   .ref-grid > .ref-panel { min-height: auto; }
   .ref-grid > .ref-sidebar { grid-column: 1 / -1; min-height: auto !important; padding: 9px 12px; }
@@ -466,10 +519,23 @@ html[data-theme="light"] .ref-progress i { background: linear-gradient(90deg, #b
   .ref-grid > .ref-panel { min-height: 0 !important; }
   .ref-calculator[data-kind="rcip"] .ref-form-description { white-space: normal; }
   .ref-hero { min-height: 0; padding: 16px 17px 18px; margin-bottom: 13px; border-radius: 15px; }
-  .ref-hero-copy > p { margin-top: 7px; }
-  .ref-hero-art { width: 70%; background-size: auto 115%; opacity: .16; mask-image: linear-gradient(to right, transparent, #000 100%); }
-  .ref-hero-copy { max-width: 68%; }
-  .ref-hero-watermark { top: 50%; left: 82%; width: 72px; height: 64px; }
+  .ref-hero-copy { max-width: 100%; transform: none; }
+  .ref-hero-breadcrumb { max-width: 92%; margin-bottom: 10px; font-size: 12px; }
+  .ref-hero-breadcrumb ol, .ref-hero-breadcrumb li { gap: 7px; }
+  .ref-hero h1 { font-size: clamp(26px, 6.5vw, 29px); }
+  .ref-hero[data-long] h1 { font-size: clamp(22px, 5.7vw, 25px); }
+  .ref-hero[data-very-long] h1 { font-size: clamp(20px, 5.2vw, 22px); }
+  .ref-hero h1, .ref-hero-copy > p { max-width: 68%; }
+  .ref-hero-copy > p { margin-top: 3px; font-size: 12px; line-height: 1.3; }
+  .ref-hero-art { width: 65%; }
+  .ref-hero-watermark { top: 24%; right: 6%; left: auto; width: 84px; height: 75px; transform: translateY(-50%); }
+  html[data-theme="light"] .ref-hero-art { width: 58%; opacity: .105; }
+  html[data-theme="light"] .ref-hero-watermark { right: 6%; left: auto; width: 96px; height: 96px; }
+  html[data-theme="light"] .ref-hero-watermark > span { width: 55%; height: 55%; }
+  .ref-hero-badges { gap: 6px; margin-top: 6px; }
+  .ref-hero-badges > span { min-height: 26px; padding: 4px 8px; font-size: 9px; }
+  .ref-hero-trust-label { display: none; }
+  .ref-hero::before { width: 4px; }
   .ref-sidebar-nav { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .ref-form-header h2 { font-size: 19px; }
   .ref-form > .ref-callout { margin-top: 13px; }
@@ -480,6 +546,11 @@ html[data-theme="light"] .ref-progress i { background: linear-gradient(90deg, #b
 }
 @media (max-width: 420px) {
   body:has(.ref-calculator) { --ref-gutter: 12px; }
+  .ref-hero { padding-inline: 17px; }
+  html[data-theme="light"] .ref-hero-watermark { width: 80px; height: 80px; }
+  html[data-theme="light"] .ref-hero-watermark > span { width: 55%; height: 55%; }
+  .ref-hero-breadcrumb { max-width: 100%; font-size: 11px; }
+  .ref-hero-badges > span { font-size: 9px; }
   .ref-form, .ref-calculator[data-kind="clb"] .ref-form { padding: 12px; }
   .ref-icon-box { width: 37px; height: 37px; }
   .ref-form-header { gap: 8px; }
