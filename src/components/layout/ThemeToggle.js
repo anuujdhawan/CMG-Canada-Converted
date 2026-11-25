@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const STORAGE_KEY = "cmg-theme";
 
 export default function ThemeToggle({ className = "" }) {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     const saved = window.localStorage.getItem(STORAGE_KEY);
@@ -16,7 +16,7 @@ export default function ThemeToggle({ className = "" }) {
       ? saved
       : current === "light" || current === "dark"
         ? current
-        : "dark";
+        : "light";
     if (current !== next) document.documentElement.dataset.theme = next;
     const frame = window.requestAnimationFrame(() => setTheme(next));
     return () => window.cancelAnimationFrame(frame);

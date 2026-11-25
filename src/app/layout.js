@@ -171,15 +171,17 @@ const consultantJsonLd = {
   },
 };
 
-// Apply the persisted theme before the browser paints the page. Reading
-// localStorage in ThemeToggle's effect alone causes a one-frame dark theme
-// flash on refreshes when the saved preference is light.
+// Apply the persisted theme before the browser paints the page. A fresh
+// browser uses the light theme; saved preferences survive direct URL hits and
+// navigation across the site.
 const themeInitScript = `
   (function () {
     try {
       var savedTheme = window.localStorage.getItem("cmg-theme");
       if (savedTheme === "light" || savedTheme === "dark") {
         document.documentElement.dataset.theme = savedTheme;
+      } else {
+        document.documentElement.dataset.theme = "light";
       }
     } catch (_) {}
   })();
@@ -189,7 +191,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      data-theme="dark"
+      data-theme="light"
       suppressHydrationWarning
       data-scroll-behavior="smooth"
       style={{ ...themeCssVars, ...templateThemeCssVars }}
