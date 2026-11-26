@@ -3,6 +3,7 @@
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import styles from "./ThemeToggle.module.css";
 
 const STORAGE_KEY = "cmg-theme";
 
@@ -30,16 +31,21 @@ export default function ThemeToggle({ className = "" }) {
   };
 
   const isLight = theme === "light";
+  const isDark = theme === "dark";
   return (
     <button
       type="button"
-      className={cn("cmg-theme-toggle inline-flex items-center gap-[7px] rounded-full px-[10px] py-[5px] text-[11px] font-bold leading-none transition-[color,border-color,background-color] duration-200 ease-[ease]", className)}
+      className={cn(styles.toggle, className)}
       onClick={toggle}
-      aria-label={`Switch to ${isLight ? "dark" : "light"} theme`}
-      aria-pressed={isLight}
+      aria-label="Dark theme"
+      aria-pressed={isDark}
+      title={`Switch to ${isLight ? "dark" : "light"} theme`}
     >
-      {isLight ? <Moon className="h-[14px] w-[14px]" aria-hidden /> : <Sun className="h-[14px] w-[14px]" aria-hidden />}
-      <span>{isLight ? "Dark" : "Light"}</span>
+      <span className={styles.track} aria-hidden="true">
+        <Sun className={`${styles.icon} ${styles.sun}`} size={15} strokeWidth={2.2} />
+        <Moon className={`${styles.icon} ${styles.moon}`} size={15} strokeWidth={2.2} fill="currentColor" />
+        <span className={styles.thumb} />
+      </span>
     </button>
   );
 }
