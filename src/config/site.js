@@ -9,6 +9,7 @@ const brandName = "Commonwealth Migration Group Inc.";
 const supportEmail = "info@commonwealthmigration.ca";
 const phone = "+1 942 991 3999";
 const phoneDigits = phone.replace(/[^\d]/g, "");
+const shareImageVersion = "maple-doorway-v3";
 
 export const site = {
   // ---- Identity -------------------------------------------------------
@@ -106,6 +107,7 @@ export const site = {
 
   // ---- Default metadata (used by lib/seo.js) --------------------------
   meta: {
+    shareImageVersion,
     titleTemplate: `%s | ${brandName}`,
     defaultTitle: "Licensed Immigration Consultant in Brampton, Ontario",
     defaultDescription:
@@ -126,7 +128,7 @@ export const site = {
     // The homepage share image is generated at request time. It includes the
     // current maple-doorway mark, so share crawlers never receive a stale
     // screenshot with the retired logo baked into it.
-    ogImage: "/api/og?path=%2F&brand=maple-doorway-v2",
+    ogImage: `/api/og?path=%2F&brand=${shareImageVersion}`,
     ogImageWidth: 1200,
     ogImageHeight: 630,
     ogImageType: "image/png",

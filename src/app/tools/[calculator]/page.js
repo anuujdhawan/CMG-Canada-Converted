@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
   return buildMetadata({
     title: page.title,
     description: page.description,
-    path: `/tools/${page.slug}/`,
+    path: `/tools/${page.slug}`,
   });
 }
 

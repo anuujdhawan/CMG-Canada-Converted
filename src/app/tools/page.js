@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function ToolsIndexPage() {
-  redirect("/tools/clb-calculator/");
+  redirect("/tools/clb-calculator");
 }

@@ -1,4 +1,5 @@
 import { getAllPages } from "./sitePages";
+import { getDynamicShareImageUrl } from "./seo";
 import { RESEARCH_BLOG_POSTS } from "@/data/blog-research";
 import { sortBlogPostsByDate } from "./blogDates";
 
@@ -377,7 +378,7 @@ const BLOG_IMAGE_BY_RESEARCH_SLUG = {
   "new-pr-pathways-canada-2026": {
     src: "/images/blog/financial-district.webp",
     alt: "Canadian financial district representing immigration and permanent residence planning",
-    socialSrc: "/api/og?path=%2Fblog%2Fnew-pr-pathways-canada-2026&brand=maple-doorway-v2",
+    socialSrc: getDynamicShareImageUrl("/blog/new-pr-pathways-canada-2026"),
     socialAlt: "New PR pathways in Canada 2026, explained by Commonwealth Migration Group",
     socialType: "image/png",
   },

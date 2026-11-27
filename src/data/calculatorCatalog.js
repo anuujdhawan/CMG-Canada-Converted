@@ -38,4 +38,4 @@ export const CALCULATOR_NAV_GROUPS = [
 
 export const CALCULATOR_PAGES = CALCULATOR_NAV_GROUPS.flatMap(({ items }) => items);
 export const CALCULATOR_SLUGS = CALCULATOR_PAGES.map(({ slug }) => slug);
-export const CALCULATOR_PATHS = CALCULATOR_PAGES.map(({ slug }) => `/tools/${slug}/`);
+export const CALCULATOR_PATHS = CALCULATOR_PAGES.map(({ slug }) => `/tools/${slug}`);

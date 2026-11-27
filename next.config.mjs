@@ -92,9 +92,15 @@ const nextConfig = {
       { source: "/programs/recruitment-hgt", destination: "/for-employers", permanent: true },
       { source: "/programs/atlantic-immigration-program", destination: "/immigration/pnp", permanent: true },
 
+      // Repair malformed legacy city URLs with direct permanent redirects.
+      { source: "/locations/halifaxHalifax", destination: "/locations/halifax", permanent: true },
+      { source: "/locations/kelownaKelowna", destination: "/locations/kelowna", permanent: true },
+      { source: "/locations/surreySurrey", destination: "/locations/surrey", permanent: true },
+
       // Template company/legal pages → new structure
       { source: "/services", destination: "/immigration", permanent: true },
-      { source: "/about", destination: "/about-us", permanent: true },
+      { source: "/about", destination: "/about/about-commonwealth-migration", permanent: true },
+      { source: "/about-us", destination: "/about/about-commonwealth-migration", permanent: true },
       { source: "/about/team", destination: "/team", permanent: true },
       { source: "/about/how-it-works", destination: "/how-it-works", permanent: true },
       { source: "/about/office", destination: "/contact-us", permanent: true },

@@ -9,7 +9,7 @@ const calculatorColumns = CALCULATOR_NAV_GROUPS.map((group, index) => ({
   category: group.category,
   items: [
     ...(index === 0 ? [{ label: "All immigration calculators", href: "/tools" }] : []),
-    ...group.items.map((item) => ({ label: item.label, href: `/tools/${item.slug}/` })),
+    ...group.items.map((item) => ({ label: item.label, href: `/tools/${item.slug}` })),
   ],
 }));
 
@@ -23,7 +23,7 @@ const calculatorColumns = CALCULATOR_NAV_GROUPS.map((group, index) => ({
 const sourceMenuItems = getCmgMenu().map((top) => ({
   label: top.label,
   shortLabel: top.label === "Inadmissibility & Appeals" ? "Appeals" : top.label,
-  href: top.groups[0]?.pages[0]?.href || "/",
+  href: top.label === "Citizenship" ? "/citizenship" : top.groups[0]?.pages[0]?.href || "/",
   columns: top.groups.map((group) => ({
     category: group.label,
     items: [
@@ -247,9 +247,9 @@ const rawNavigation = {
     { title: "Tools & Resources", links: [
       { label: "Immigration Blog", href: "/blog" },
       { label: "All Immigration Calculators", href: "/tools" },
-      { label: "CLB Calculator", href: "/tools/clb-calculator/" },
-      { label: "Federal Skilled Worker 67-Point Calculator", href: "/tools/fsw-67-point-calculator/" },
-      { label: "Express Entry CRS Calculator", href: "/tools/express-entry-crs-calculator/" },
+      { label: "CLB Calculator", href: "/tools/clb-calculator" },
+      { label: "Federal Skilled Worker 67-Point Calculator", href: "/tools/fsw-67-point-calculator" },
+      { label: "Express Entry CRS Calculator", href: "/tools/express-entry-crs-calculator" },
       { label: "NOC / Occupation Finder", href: "/tools/noc-finder-canada" },
       { label: "PNP Eligibility Check", href: "/tools/pnp-eligibility-canada" },
       { label: "Document Checklist", href: "/tools/document-checklist-canada" },

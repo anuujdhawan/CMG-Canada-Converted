@@ -4,8 +4,17 @@ export default function robots() {
   const rules = [
     {
       userAgent: "*",
-      allow: "/",
-      disallow: ["/api/"],
+      // Social crawlers need access to the generated Open Graph image.
+      allow: ["/", "/api/og"],
+      // Keep non-page API endpoints out of search while leaving /api/og
+      // crawlable so search and social crawlers can fetch share images.
+      disallow: [
+        "/api/chat-leads",
+        "/api/checkout",
+        "/api/express-entry-draws",
+        "/api/forms",
+        "/api/pnp-draws",
+      ],
     },
   ];
 

@@ -20,7 +20,7 @@ export function absoluteUrl(path = "") {
  */
 export function getDynamicShareImageUrl(pathname = "/") {
   const cleanPath = String(pathname || "/").split(/[?#]/, 1)[0] || "/";
-  const params = new URLSearchParams({ path: cleanPath, brand: "maple-doorway-v2" });
+  const params = new URLSearchParams({ path: cleanPath, brand: site.meta.shareImageVersion });
   return absoluteUrl(`/api/og?${params.toString()}`);
 }
 

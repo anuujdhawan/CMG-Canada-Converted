@@ -243,6 +243,7 @@ export async function GET(request) {
       "Cache-Control": "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800",
       "Content-Type": "image/png",
       "Content-Length": String(png.byteLength),
+      "X-Robots-Tag": "noindex",
     },
   });
 }

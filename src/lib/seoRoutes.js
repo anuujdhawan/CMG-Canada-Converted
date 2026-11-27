@@ -1,4 +1,5 @@
 import { RESEARCH_BLOG_POSTS } from "@/data/blog-research";
+import { CALCULATOR_PAGES } from "@/data/calculatorCatalog";
 
 // Keep sitemap, LLM discovery and crawler audits on the same explicit list of
 // routes that are implemented outside the page-data registry.
@@ -18,6 +19,12 @@ export const ADDITIONAL_INDEXABLE_PAGES = [
   { path: "/tools/pnp-eligibility-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.7 },
   { path: "/tools/noc-finder-canada", lastModified: "2026-11-09", changeFrequency: "weekly", priority: 0.7 },
   { path: "/tools/document-checklist-canada", lastModified: "2026-10-06", changeFrequency: "weekly", priority: 0.7 },
+  ...CALCULATOR_PAGES.map(({ slug }) => ({
+    path: `/tools/${slug}`,
+    lastModified: "2026-11-27",
+    changeFrequency: "monthly",
+    priority: 0.7,
+  })),
   { path: "/contact/book-immigration-consultation-canada", lastModified: "2026-10-06", changeFrequency: "monthly", priority: 0.8 },
   ...RESEARCH_BLOG_POSTS.map((post) => ({
     path: `/blog/${post.slug}`,
