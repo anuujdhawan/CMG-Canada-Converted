@@ -1,5 +1,6 @@
 .page {
   --location-container: min(1220px, calc(100% - 52px));
+  --container: var(--location-container);
   overflow: clip;
   background: var(--bg);
   color: var(--ink);
