@@ -95,6 +95,7 @@ const representativeChecks = [
   {
     title: "Check who will advise you",
     text: "Ask for the adviser’s full name and licence number. If you appoint a representative, confirm their details on the required IRCC form.",
+    officeText: "Ask for the adviser’s full name and licence number, their experience with your pathway, and how your records will be stored and shared. If you appoint a representative, confirm their details on the required IRCC form.",
     icon: BadgeCheck,
   },
   {
@@ -327,7 +328,7 @@ function WhyCmg({ location }) {
   );
 }
 
-function RepresentativeSection() {
+function RepresentativeSection({ office }) {
   return (
     <section className={`${styles.section} ${styles.alternate} ${styles.representativeSection}`} id="choose-a-representative" aria-labelledby="representative-title">
       <div className={styles.container}>
@@ -347,11 +348,11 @@ function RepresentativeSection() {
         </div>
 
         <ul className={styles.checkGrid}>
-          {representativeChecks.map(({ title, text, icon: Icon }, index) => (
+          {representativeChecks.map(({ title, text, officeText, icon: Icon }, index) => (
             <li key={title} className={`${styles.checkCard} reveal`} style={{ "--delay": `${index * 45}ms` }}>
               <span className={styles.checkIndex}>0{index + 1}</span>
               <span className={styles.iconBadge}><Icon size={20} aria-hidden="true" /></span>
-              <div><h3>{title}</h3><p>{text}</p></div>
+              <div><h3>{title}</h3><p>{office && officeText ? officeText : text}</p></div>
             </li>
           ))}
         </ul>
@@ -649,7 +650,7 @@ export default function LocationPage({ page }) {
       <LocationOverview location={location} />
       {directory && <CityDirectory groups={groups} />}
       <WhyCmg location={location} />
-      <RepresentativeSection />
+      <RepresentativeSection office={office} />
       {!directory && <ServicesSection location={location} />}
       {kind === "online" && <RegionalPathways location={location} />}
       <LanguagesAndReviews office={office} />
