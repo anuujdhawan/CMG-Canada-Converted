@@ -105,6 +105,16 @@ export default function BramptonOfficeSection() {
           </div>
         </div>
 
+        <div className={`${styles.officeMap} reveal`}>
+          <iframe
+            title="Google Map showing Commonwealth Migration Group’s Brampton office"
+            src={`https://www.google.com/maps?q=${address.coordinates.latitude},${address.coordinates.longitude}&z=16&output=embed`}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </div>
+
         <div className={`${styles.officeBottomNote} reveal`} style={{ "--delay": "120ms" }}>
           <span><MapPin size={17} aria-hidden="true" /> 2250 Bovaird Drive East, Suite 615</span>
           <span><CircleParking size={17} aria-hidden="true" /> Free parking in front</span>

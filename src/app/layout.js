@@ -25,7 +25,6 @@ const manrope = localFont({
 
 const sitewideMetadataDefaults = buildMetadata({
   description: site.meta.defaultDescription,
-  keywords: site.meta.keywords,
 });
 delete sitewideMetadataDefaults.robots;
 delete sitewideMetadataDefaults.alternates;
@@ -74,7 +73,7 @@ const consultantId = `${site.url}#${consultantSlug}`;
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": "LocalBusiness",
   "@id": `${site.url}#organization`,
   name: site.name,
   alternateName: [site.tradingName, site.shortName].filter(Boolean),
@@ -99,6 +98,18 @@ const organizationJsonLd = {
     ...(site.address.postal ? { postalCode: site.address.postal } : {}),
     addressCountry: structuredAddressCountry,
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: site.address.coordinates.latitude,
+    longitude: site.address.coordinates.longitude,
+  },
+  hasMap: site.address.mapsUrl,
+  openingHoursSpecification: [{
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    opens: "09:30",
+    closes: "18:30",
+  }],
   ...(organizationLogoUrl ? { logo: { "@type": "ImageObject", url: organizationLogoUrl } } : {}),
   ...(organizationImageUrl ? { image: organizationImageUrl } : {}),
   ...(organizationSameAs.length ? { sameAs: organizationSameAs } : {}),

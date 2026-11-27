@@ -138,7 +138,7 @@ build(
         ("h2", "A note on location"),
         ("p", "You do not need to meet in person to work with a licensed consultant. Most files are handled by "
               "video, phone and email. If you do want a local office, check the " +
-              LINK.format(u=f"{SITE}/about/immigration-office-brampton-ontario", t="Brampton office details") +
+              LINK.format(u=f"{SITE}/locations/brampton", t="Brampton office details") +
               " and confirm the address independently before travelling."),
         ("h2", "About this guide"),
         ("p", "Prepared by Commonwealth Migration Group Inc., a Brampton-based practice led by Pankaj Khanna, "

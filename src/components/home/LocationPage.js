@@ -80,9 +80,13 @@ function immigrationServices(program, office) {
     },
     {
       title: "Visitor visas, refusals and temporary resident permits",
-      text: "Prepare evidence for a visit or review a refusal letter and its deadlines. Where necessary, we can refer you to a lawyer for Federal Court advice.",
+      text: office
+        ? "Discuss visitor matters, refusals, responses to procedural fairness letters, inadmissibility concerns, citizenship and PR card applications. The team will confirm the available service scope and can refer you to a lawyer for Federal Court advice."
+        : "Prepare evidence for a visit or review a refusal letter and its deadlines. Where necessary, we can refer you to a lawyer for Federal Court advice.",
       icon: Globe2,
-      links: [["Visitor visas", "/visit/visitor-visa-trv-standalone-page"], ["After a refusal", "/inadmissibility-and-appeals/refusal-and-pfl-response"]],
+      links: office
+        ? [["Visitor visas", "/visit/visitor-visa-trv-standalone-page"], ["After a refusal", "/inadmissibility-and-appeals/refusal-and-pfl-response"], ["Citizenship and PR documents", "/citizenship"]]
+        : [["Visitor visas", "/visit/visitor-visa-trv-standalone-page"], ["After a refusal", "/inadmissibility-and-appeals/refusal-and-pfl-response"]],
     },
   ];
 }
@@ -177,7 +181,7 @@ function LocationHero({ page, location }) {
       pagePath="/locations"
       eyebrow={isDirectory ? "Canadian immigration services" : `${location.city}, ${location.province} · immigration guidance`}
       title={title}
-      lead={page.hero?.lead || location.serviceAreaNote}
+      lead={location.kind === "office" ? location.detail?.heroLead || location.serviceAreaNote : page.hero?.lead || location.serviceAreaNote}
       primaryAction={{ href: site.ctas.primary.href, label: "Book a free consultation" }}
       secondaryAction={{ href: secondaryHref, label: isDirectory ? "Find your city" : location.kind === "office" ? "Visit the Brampton office" : "Explore local pathways" }}
       ariaLabel="Commonwealth Migration Group immigration services and guidance"

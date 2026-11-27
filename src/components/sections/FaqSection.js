@@ -39,7 +39,7 @@ export default function FaqSection({
           {items.map((faq, index) => (
             <details className="faq-item group border-b border-[var(--border)] reveal" key={`${faq.question}-${index}`} open={index === 0}>
               <summary className="faq-item__summary flex items-center justify-between gap-5 py-[22px] cursor-pointer list-none text-[var(--ink)] text-[14px] font-extrabold leading-[1.3]">
-                {faq.question}
+                <h3 className="!m-0" style={{ color: "inherit", font: "inherit" }}>{faq.question}</h3>
                 <span className="faq-item__toggle inline w-auto h-auto flex-none border-0 rounded-none text-[var(--primary)] transition-transform duration-[300ms] ease-[ease]">
                   <Plus width={20} height={20} aria-hidden="true" />
                 </span>

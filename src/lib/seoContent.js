@@ -235,14 +235,6 @@ const SPECIAL_CONFIGS = {
     evidence: ["a written goal, status and deadline", "a timeline of education, work, travel and family changes", "the forms and evidence required for the selected route", "clear ownership for review, submission and later requests"],
     next: "Use a staged review so missing facts are found before filing. The practical outcome should be a route decision, a prioritized document list, an explanation of risks and a next step that everyone understands.",
   },
-  "/about/immigration-office-brampton-ontario": {
-    topic: "immigration office Brampton Ontario",
-    source: OFFICIAL_SOURCES.representatives,
-    answer: "An immigration office in Brampton, Ontario can provide a local place to discuss Canadian immigration while serving clients by phone or video across Canada and internationally. Commonwealth Migration’s Brampton office supports pathway planning, application preparation and complex immigration questions within the scope of authorized services.",
-    fit: "Before an appointment, share the goal, current status, location, family details, work and education history, key documents and any refusal or deadline. Confirm whether an in-person, phone or video consultation is the best format for the matter.",
-    evidence: ["the office’s current contact details and appointment format", "your immigration goal and exact timing", "status, passport, work, education and family information", "any refusal, procedural fairness or document request that makes the appointment urgent"],
-    next: "Use the Brampton office as the starting point for a focused review, then verify the proposed service scope and representative authorization. Clients outside Brampton can still prepare the same timeline and evidence through a scheduled remote consultation.",
-  },
   "/tools/canada-immigration-calculators": {
     topic: "Canada immigration calculators",
     source: OFFICIAL_SOURCES.expressEntry,

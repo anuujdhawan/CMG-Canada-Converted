@@ -91,7 +91,7 @@ const ABOUT_MENU_ITEM = {
       items: [
         { label: "About Us", href: "/about/about-commonwealth-migration" },
         { label: "Our Process", href: "/about/canada-immigration-consulting-process" },
-        { label: "Brampton Immigration Office", href: "/about/immigration-office-brampton-ontario" },
+        { label: "Brampton Immigration Office", href: "/locations/brampton" },
       ],
     },
     {
@@ -264,7 +264,7 @@ const rawNavigation = {
       { label: "Halifax", href: "/locations/halifax" },
     ] },
     { title: "Contact", links: [
-      { label: "Brampton immigration office", href: "/about/immigration-office-brampton-ontario" },
+      { label: "Brampton immigration office", href: "/locations/brampton" },
       { label: "Book a consultation", href: site.ctas.primary.href },
       { label: site.email, href: site.emailHref },
       { label: site.phone, href: site.phoneHref },

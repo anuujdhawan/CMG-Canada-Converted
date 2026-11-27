@@ -1395,6 +1395,22 @@
   transform: scale(1.035);
 }
 
+.officeMap {
+  height: clamp(250px, 34vw, 390px);
+  margin-top: 15px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+}
+
+.officeMap iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .officePhotoMain {
   grid-column: 1;
   grid-row: 1 / span 2;

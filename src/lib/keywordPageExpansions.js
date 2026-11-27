@@ -19,7 +19,7 @@ const route = (test, ...sections) => ({
 const spousalPath = (path) => /sponsor\/(spousal-and-partner-sponsorship-overview|spousal-common-law-sponsorship|inland-sponsorship|outland-sponsorship|conjugal-partner-sponsorship|sponsorship-processing-times|sponsorship-eligibility)/.test(path);
 const visitPath = (path) => path === "/visit/visitor-visa-trv-standalone-page" || path === "/visit/visitor-visa-trv-and-super-visa-combined";
 const superVisaPath = (path) => path === "/visit/super-visa-standalone-page" || path === "/visit/visitor-visa-trv-and-super-visa-combined" || path === "/sponsor/super-visa-for-parents";
-const professionalPath = (path) => /about\/(about-commonwealth-migration|immigration-office-brampton-ontario|canada-immigration-consulting-process)/.test(path)
+const professionalPath = (path) => /about\/(about-commonwealth-migration|canada-immigration-consulting-process)/.test(path)
   || path === "/assessment/free-canada-immigration-assessment"
   || path === "/contact/book-immigration-consultation-canada";
 

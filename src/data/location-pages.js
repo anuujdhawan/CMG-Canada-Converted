@@ -113,7 +113,7 @@ const SHARED_SERVICES = [
 
 const CITY_DETAILS = {
   brampton: {
-    heroLead: `Meet ${site.rcic.consultant.name}, CICC-licensed RCIC (${site.rcic.number}), at our Brampton office or online. Get help comparing family, study, work and permanent residence pathways against your circumstances and current requirements.`,
+    heroLead: `${site.name} is a CICC-regulated immigration practice at ${site.address.full}, led by ${site.rcic.consultant.name}, RCIC (licence ${site.rcic.number}). We advise on Express Entry, provincial nominations, permanent residence, family and Super Visa applications, study and work permits, and refusal responses, with consultations available online or in person by appointment.`,
     serviceIntro: "Commonwealth Migration Group helps Brampton families, students, workers and employers understand Canadian immigration options, prepare supporting documents and plan the next step for their case.",
     sectors: ["Logistics and warehousing", "Manufacturing", "Trucking and transportation", "Healthcare and retail"],
     studyOptions: "Sheridan College, Algoma University (Brampton campus) and nearby Humber and Seneca campuses",
@@ -318,47 +318,6 @@ function cityFaqs(city, province, { acronym, officialUrl: pnpUrl }) {
   ];
 }
 
-function bramptonOfficeSchema(path) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": `${absoluteUrl(path)}#professional-service`,
-    name: site.name,
-    url: absoluteUrl(path),
-    parentOrganization: { "@id": `${site.url}#organization` },
-    telephone: site.phone,
-    email: site.email,
-    serviceType: "Canadian immigration consulting",
-    areaServed: [
-      { "@type": "City", name: "Brampton" },
-      { "@type": "AdministrativeArea", name: "Ontario" },
-    ],
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: site.address.line1,
-      addressLocality: "Brampton",
-      addressRegion: site.address.region,
-      postalCode: site.address.postal,
-      addressCountry: "CA",
-    },
-    hasMap: site.address.mapsUrl,
-    openingHoursSpecification: [{
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "https://schema.org/Monday",
-        "https://schema.org/Tuesday",
-        "https://schema.org/Wednesday",
-        "https://schema.org/Thursday",
-        "https://schema.org/Friday",
-        "https://schema.org/Saturday",
-      ],
-      opens: "09:30",
-      closes: "18:30",
-    }],
-    availableLanguage: ["English", "Hindi", "Punjabi", "Marathi", "Gujarati", "French", "Arabic"],
-  };
-}
-
 function relatedCityLinks(currentSlug) {
   return CITY_LINKS
     .filter(({ slug }) => slug !== currentSlug)
@@ -498,7 +457,7 @@ function locationPage(cityEntry) {
         "Book a free Canada immigration assessment → /assessment/free-canada-immigration-assessment",
       ] },
     ],
-    jsonLd: isBrampton ? [bramptonOfficeSchema(path)] : [],
+    jsonLd: [],
   };
 }
 

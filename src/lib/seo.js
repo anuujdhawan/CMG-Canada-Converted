@@ -122,7 +122,6 @@ export function buildMetadata({
   description,
   path = "/",
   type = "website",
-  keywords,
   noIndex = false,
   image,
   openGraphTitle,
@@ -171,12 +170,6 @@ export function buildMetadata({
     // `title: undefined` would overwrite the layout template on spread).
     ...(title ? { title: { absolute: pageTitle } } : {}),
     description: resolvedDescription,
-    ...(() => {
-      const value = Array.isArray(keywords)
-        ? keywords.filter(Boolean).join(", ")
-        : String(keywords || "").trim();
-      return value ? { keywords: value } : {};
-    })(),
     robots: { index: !noIndex, follow: true },
     alternates: url ? { canonical: url } : undefined,
     openGraph: {

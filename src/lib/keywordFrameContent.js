@@ -84,7 +84,7 @@ const FRAME_CONTENT = [
     ),
   },
   {
-    test: (path) => /about\/(about-commonwealth-migration|immigration-office-brampton-ontario|canada-immigration-consulting-process)/.test(path)
+    test: (path) => /about\/(about-commonwealth-migration|canada-immigration-consulting-process)/.test(path)
       || path === "/assessment/free-canada-immigration-assessment"
       || path === "/contact/book-immigration-consultation-canada",
     blocks: block(

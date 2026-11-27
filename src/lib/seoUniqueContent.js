@@ -751,13 +751,6 @@ const UNIQUE_PAGE_CONTENT = {
     detail: "Before a retainer is signed, the client should understand which application and family members are covered, the work and deliverables included, known risks, expected evidence, professional fees, separate government or third-party costs, communication expectations, responsibilities and the next deadline. If facts are missing, confirm what must be verified before deciding to file.",
     items: ["A fact-specific pathway assessment", "A dated timeline and prioritized evidence plan", "Written scope, fees, communication and responsibilities", "Client review of names, dates and declarations before filing", "A clear owner and deadline for each next action"],
   },
-  "/about/immigration-office-brampton-ontario": {
-    question: "What can you expect from an immigration office in Brampton, Ontario?",
-    answer: "An immigration office in Brampton, Ontario can provide a local place to discuss a Canada immigration goal while the applicable rules remain federal, provincial or tribunal-based. A scheduled meeting should connect the client’s status, family, work, study, travel, documents and deadline with a practical next question—not replace official requirements with a promise.",
-    heading: "Does a Brampton client need to visit the office in person?",
-    detail: "Not necessarily. Many Canada immigration consultations can be handled by scheduled phone or video meeting, while an in-person appointment may be useful when the matter involves a large document history, a complex timeline or a preference for local support. Confirm the format and service scope before sending sensitive records.",
-    items: ["Brampton, Ontario location and appointment details", "Remote consultation availability across Canada", "Secure document-sharing and communication expectations", "The pathway question and deadline to discuss first"],
-  },
 };
 
 function normalizePath(path) {
