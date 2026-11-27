@@ -335,6 +335,27 @@ const BLOG_IMAGE_BY_CATEGORY = {
  * image hosts or runtime downloads.
  */
 const BLOG_IMAGE_BY_RESEARCH_SLUG = {
+  "brampton-stem-express-entry-draw-2026": {
+    src: "/images/blog/brampton-stem-express-entry-2026.webp",
+    alt: "Two science professionals working at computer stations in a laboratory",
+    socialSrc: "/images/blog/brampton-stem-express-entry-2026.jpg",
+    socialAlt: "Science professionals working at computer stations in a laboratory",
+    socialType: "image/jpeg",
+  },
+  "express-entry-french-language-draw-november-2026": {
+    src: "/images/blog/express-entry-french-language-draw-2026.webp",
+    alt: "A learner reviewing French-language books in a bookstore",
+    socialSrc: "/images/blog/express-entry-french-language-draw-2026.jpg",
+    socialAlt: "A learner reviewing French-language books in a bookstore",
+    socialType: "image/jpeg",
+  },
+  "protected-persons-pr-initiative-canada-2026": {
+    src: "/images/blog/protected-persons-pr-initiative-2026.webp",
+    alt: "A family walking together along a waterfront boardwalk",
+    socialSrc: "/images/blog/protected-persons-pr-initiative-2026.jpg",
+    socialAlt: "A family walking together along a waterfront boardwalk",
+    socialType: "image/jpeg",
+  },
   "best-immigration-consultant-brampton": {
     src: "/images/blog/immigration-consultant-agreement-review.webp",
     alt: "Immigration consultant reviewing a written Canadian immigration service agreement",

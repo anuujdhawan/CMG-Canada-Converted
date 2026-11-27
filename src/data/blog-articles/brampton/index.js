@@ -1,4 +1,5 @@
 /** Locally focused Brampton and Peel articles. */
+import bramptonStemExpressEntryDraw2026 from "./brampton-stem-express-entry-draw-2026";
 import expressEntryCrsChangesBramptonNovember2026 from "./express-entry-crs-changes-brampton-november-2026";
 import expressEntry2026CategoriesBramptonWorkers from "./express-entry-2026-categories-brampton-workers";
 import lowCrsScoreBramptonExpressEntryOptions from "./low-crs-score-brampton-express-entry-options";
@@ -27,6 +28,7 @@ import proceduralFairnessLetterResponseBrampton from "./procedural-fairness-lett
 import bramptonInternationalStudentHousingStatusChecklist from "./brampton-international-student-housing-status-checklist";
 
 export default {
+  "brampton-stem-express-entry-draw-2026": bramptonStemExpressEntryDraw2026,
   "express-entry-crs-changes-brampton-november-2026": expressEntryCrsChangesBramptonNovember2026,
   "express-entry-2026-categories-brampton-workers": expressEntry2026CategoriesBramptonWorkers,
   "low-crs-score-brampton-express-entry-options": lowCrsScoreBramptonExpressEntryOptions,

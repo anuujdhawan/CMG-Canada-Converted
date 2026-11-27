@@ -16,6 +16,8 @@
  */
 
 import bramptonArticles from "./brampton";
+import expressEntryFrenchLanguageDrawNovember2026 from "./express-entry-french-language-draw-november-2026";
+import protectedPersonsPrInitiativeCanada2026 from "./protected-persons-pr-initiative-canada-2026";
 import canadaImmigrationLevelsPlan2027To2029 from "./canada-immigration-levels-plan-2027-2029";
 import expressEntryHighWageCrsPointsNovember2026 from "./express-entry-high-wage-crs-points-november-2026";
 import canadaAsylumProcessChangesNovember2026 from "./canada-asylum-process-changes-november-2026";
@@ -77,6 +79,8 @@ import oecdCanadaPermanentMigration2025WhatItMeans from "./oecd-canada-permanent
 /** Article bodies keyed by the slug used in `blog-research.js`. */
 export const BLOG_ARTICLES = {
   ...bramptonArticles,
+  "express-entry-french-language-draw-november-2026": expressEntryFrenchLanguageDrawNovember2026,
+  "protected-persons-pr-initiative-canada-2026": protectedPersonsPrInitiativeCanada2026,
   "northwest-territories-pnp-350-nominations-november-2026": northwestTerritoriesPnp350NominationsNovember2026,
   "canada-temporary-foreign-worker-reforms-november-2026": canadaTemporaryForeignWorkerReformsNovember2026,
   "ircc-september-2026-application-inventory-guide": irccSeptember2026ApplicationInventoryGuide,
