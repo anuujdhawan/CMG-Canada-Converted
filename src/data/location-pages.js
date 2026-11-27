@@ -113,7 +113,7 @@ const SHARED_SERVICES = [
 
 const CITY_DETAILS = {
   brampton: {
-    heroLead: `${site.name} is a CICC-regulated immigration practice at ${site.address.full}, led by ${site.rcic.consultant.name}, RCIC (licence ${site.rcic.number}). We advise on Express Entry, provincial nominations, permanent residence, family and Super Visa applications, study and work permits, and refusal responses, with consultations available online or in person by appointment.`,
+    heroLead: `${site.name} is at ${site.address.full}, led by RCIC ${site.rcic.consultant.name} (${site.rcic.number}). We advise on PR, including Express Entry and PNP, family and Super Visa, study and work permits, and refusals; meet online or in person by appointment.`,
     serviceIntro: "Commonwealth Migration Group helps Brampton families, students, workers and employers understand Canadian immigration options, prepare supporting documents and plan the next step for their case.",
     sectors: ["Logistics and warehousing", "Manufacturing", "Trucking and transportation", "Healthcare and retail"],
     studyOptions: "Sheridan College, Algoma University (Brampton campus) and nearby Humber and Seneca campuses",
