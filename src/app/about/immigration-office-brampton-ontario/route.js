@@ -1,13 +1,13 @@
-const destination = "https://commonwealthmigration.ca/locations/brampton";
+const destination = "/locations/brampton";
 
-function redirectToBramptonLocation() {
-  return Response.redirect(destination, 301);
+function redirectToBramptonLocation(request) {
+  return Response.redirect(new URL(destination, request.url), 301);
 }
 
-export function GET() {
-  return redirectToBramptonLocation();
+export function GET(request) {
+  return redirectToBramptonLocation(request);
 }
 
-export function HEAD() {
-  return redirectToBramptonLocation();
+export function HEAD(request) {
+  return redirectToBramptonLocation(request);
 }
