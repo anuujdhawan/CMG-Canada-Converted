@@ -1,7 +1,10 @@
 import { notFound } from "next/navigation";
-import { buildMetadata, getPageShareImage } from "@/lib/seo";
+import { absoluteUrl, buildMetadata, getPageShareImage, normalizeMetaDescription } from "@/lib/seo";
 import { attachClientFaqs } from "@/lib/clientFaqs";
 import { getCmgPage, getCmgRoutePaths, getLegalPage, getLegalRoutePaths } from "@/lib/cmgPages";
+import { site } from "@/config/site";
+import aboutUsPage from "@/data/about-us-page";
+import AboutUsPage from "@/components/about/AboutUsPage";
 import ContentPage from "@/components/templates/ContentPage";
 
 export const dynamicParams = false;
@@ -17,6 +20,39 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const path = pathFromParams(resolvedParams);
+  if (path === aboutUsPage.path) {
+    const description = normalizeMetaDescription(aboutUsPage.metaDescription);
+    const imageUrl = absoluteUrl(aboutUsPage.ogImage);
+
+    return {
+      title: { absolute: aboutUsPage.title },
+      description,
+      keywords: aboutUsPage.keywords,
+      robots: { index: true, follow: true },
+      alternates: { canonical: aboutUsPage.url },
+      openGraph: {
+        type: "website",
+        locale: site.meta.locale,
+        siteName: site.name,
+        title: aboutUsPage.title,
+        description,
+        url: aboutUsPage.url,
+        images: [{
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          type: "image/jpeg",
+          alt: "About Commonwealth Migration Group Inc., licensed RCIC immigration consultants in Brampton",
+        }],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: aboutUsPage.title,
+        description,
+        images: [imageUrl],
+      },
+    };
+  }
   const page = attachClientFaqs(getCmgPage(path) || getLegalPage(path));
   if (!page) return {};
   return buildMetadata({
@@ -33,6 +69,7 @@ export async function generateMetadata({ params }) {
 export default async function SourcePageRoute({ params }) {
   const resolvedParams = await params;
   const path = pathFromParams(resolvedParams);
+  if (path === aboutUsPage.path) return <AboutUsPage />;
   const page = attachClientFaqs(getCmgPage(path) || getLegalPage(path));
   if (!page) notFound();
   return <ContentPage page={page} />;

@@ -1,15 +1,8 @@
 import { site } from "@/config/site";
+import aboutUsPage from "@/data/about-us-page";
 
 const aboutPath = "/about/about-commonwealth-migration";
 const aboutRoot = `${site.url.replace(/\/$/, "")}${aboutPath}`;
-const officialRepresentativeGuide = "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose/authorized.html";
-const ciccRegister = "https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Default.aspx";
-// Direct link to this practice's own licensee record (verified 2026-09-24:
-// Pankaj Khanna · R711256 · "Eligible to Provide Service"). The register root
-// above is kept for the "verify any representative" advice, where the specific
-// record would be the wrong target.
-const ciccProfile = site.rcic.profileUrl;
-
 const faq = (question, answer) => [
   { type: "paragraph", text: `Q: ${question}` },
   { type: "paragraph", text: `A: ${answer}` },
@@ -43,20 +36,6 @@ const faqPage = (items) => ({
   })),
 });
 
-const aboutFaqs = [
-  ["What Canadian immigration services does Commonwealth Migration provide for Brampton and Canada-wide clients?", "Commonwealth Migration provides case-specific guidance for permanent residence, Express Entry and provincial nomination, work and study permits, family sponsorship, citizenship, and complex refusal, inadmissibility or appeal matters. The service offered depends on the facts, the representative’s authority and the written engagement."],
-  // FAQ answers are rendered visibly AND emitted into FAQPage structured data,
-  // so the licence number is written as plain text here rather than as a
-  // markdown link — a link would surface as raw `[label](url)` in the schema.
-  ["Are Commonwealth Migration's Brampton immigration consultants licensed and regulated by CICC?", `Commonwealth Migration is a CICC-regulated practice. The licensed consultant behind the practice is ${site.rcic.consultant.nameWithCredential}, licence number ${site.rcic.number}. Confirm the current status and contact details on [the CICC Public Register](${ciccProfile}) before paying for immigration advice.`],
-  ["Can Commonwealth Migration guarantee a Canadian visa, Express Entry invitation or permanent residence approval?", "No. IRCC, a province, the IRB or a court makes the decision within its authority. A consultant can assess a profile, prepare evidence and provide authorized representation, but cannot promise an invitation, approval or processing time."],
-  ["Do I need to hire an immigration consultant to apply for Canadian permanent residence or a visa?", `No. You can submit an application yourself using the Government of Canada’s free forms and instructions. If you choose paid representation, confirm that the person is authorized and understand the service scope before appointing them. Read [IRCC’s guidance on representatives](${officialRepresentativeGuide}).`],
-  ["How can I check an immigration consultant's licence and identity before paying in Brampton?", `Search the consultant’s name or licence number in the [CICC Public Register](${ciccRegister}) and compare the listing with the person who will advise you. Confirm their current status and contact details, then get the service, fees and payment terms in a written agreement.`],
-  ["How much does an immigration consultant cost in Canada, and what should a retainer include?", `Consulting fees are set by the service agreement, not by IRCC. Compare the work included, excluded services, payment schedule, extra costs, refund terms and communication plan. The Government of Canada explains how to use a representative and what appointment means for your application in [its representative guidance](${officialRepresentativeGuide}).`],
-  ["Does Commonwealth Migration work with immigration clients who live outside Brampton or outside Canada?", "Yes. The practice serves clients across Canada and internationally through scheduled phone or video appointments. Eligibility and application steps still depend on the program and the applicant’s location; the team confirms the available service and file scope before engagement."],
-  ["What should I prepare before booking a Canada immigration assessment with Commonwealth Migration?", "Prepare your immigration goal, current status and expiry date, passport details, education and language records, work history, family information, funds, prior applications and any refusal or procedural-fairness letter. Share exact notice deadlines at the start so the timing can be understood."],
-];
-
 const processFaqs = [
   ["What happens during a Canada immigration consultation with a licensed RCIC?", "The consultant clarifies your goal, current status, immigration history, work and education, family circumstances and deadlines. You then discuss possible routes, missing evidence, practical risks and next steps; a consultation is an assessment, not an approval promise."],
   ["Which documents should I bring to my first Canadian immigration consultant appointment?", "Bring your passport, current permits or status documents, education and language records, work history, family details, funds evidence and copies of earlier applications or refusals. If IRCC, CBSA or a tribunal sent a notice, include the complete notice and its response deadline."],
@@ -70,60 +49,7 @@ const processFaqs = [
 
 
 export const aboutPages = [
-  {
-    path: "/about/about-commonwealth-migration",
-    h1: "About Commonwealth Migration",
-    title: "About Commonwealth Migration | Licensed RCICs in Brampton",
-    description: "Learn about Commonwealth Migration, a CICC-regulated immigration consultancy in Brampton helping individuals, families and employers navigate Canadian immigration.",
-    keywords: [
-      "licensed immigration consultant Brampton",
-      "CICC-regulated immigration consultant Canada",
-      "how to verify an RCIC licence in Canada",
-      "Canadian immigration help for families and employers",
-    ],
-    priority: 0.85,
-    hero: {
-      lead: "Commonwealth Migration is a CICC-regulated Canadian immigration consultancy in Brampton, Ontario. We help individuals, families and employers understand their options, prepare stronger applications and make the next immigration decision with more clarity.",
-    },
-    contentBlocks: [
-      { type: "paragraph", text: "Commonwealth Migration Group is based in Brampton and works with people in Canada and abroad. We help individuals, families and employers make sense of permanent residence, temporary permits, sponsorship, citizenship and more complex immigration matters." },
-      { type: "table", rows: [["CICC-regulated practice", "Brampton, Ontario", "Canada-wide service", `RCIC ${site.rcic.number}`]] },
-      { type: "heading", level: 2, text: "Who is Commonwealth Migration?" },
-      { type: "paragraph", text: "We are a focused immigration practice for people who want a clear explanation of the route before they invest time, money and personal information in an application. The team reviews your goal, status, work and education history, family circumstances, admissibility, documents and deadlines together, then explains what each fact means for the next decision." },
-      { type: "heading", level: 2, text: "What does a CICC-regulated immigration consultant do?" },
-      { type: "paragraph", text: "A Regulated Canadian Immigration Consultant can provide immigration advice and services within the scope permitted by their licence. That may include pathway assessment, application strategy, document review, form preparation, submission support, communication and representation where authorized. The Government of Canada advises people to check that a paid representative is authorized, and the CICC Public Register lets the public verify a consultant's status and contact details." },
-      { type: "list", ordered: false, items: [
-        `[Verify the representative and licence status on the CICC Public Register](${ciccRegister})`,
-        `[Read the Government of Canada's guidance on authorized representatives](${officialRepresentativeGuide})`,
-        "Ask what the engagement includes, who owns each next step and how changes in the rules will be handled.",
-        "Expect a fact-specific review and a clear explanation of uncertainty; no professional can guarantee an immigration decision.",
-      ] },
-      { type: "paragraph", text: `The licensed consultant behind Commonwealth Migration is ${site.rcic.consultant.nameWithCredential}, licence number ${site.rcic.number}, whose current status on the regulator's register is "${site.rcic.consultant.status}". You can open our record directly at [the CICC public register](${ciccProfile}), or search the status of any other representative at [register.college-ic.ca](${ciccRegister}). Licence status is the first thing worth checking before you share documents or pay a fee — it applies to any consultant, not just ours.` },
-      { type: "heading", level: 2, text: "Which Canadian immigration matters do we handle?" },
-      { type: "table", rows: [
-        ["Client goal", "Common areas of support"],
-        ["Permanent residence", "Express Entry, Provincial Nominee Programs, Atlantic and other economic pathways"],
-        ["Work and study", "Work permits, LMIA and employer programs, study permits and post-study planning"],
-        ["Family and citizenship", "Spousal and family sponsorship, parents and grandparents, citizenship and PR documents"],
-        ["Complex matters", "Refusals, procedural fairness responses, inadmissibility and appeal or review strategy"],
-      ] },
-      { type: "heading", level: 2, text: "How do we approach immigration advice?" },
-      { type: "paragraph", text: "Good immigration advice is not just a list of programs. It is a reasoned connection between the facts in a file, the legal or program requirements, the available evidence and the decision that must be made next. Our approach is designed to make those connections visible so you know what is ready, what is missing and what should be verified against the current official instructions." },
-      { type: "heading", level: 2, text: "Frequently Asked Questions" },
-      ...aboutFaqs.flatMap(([question, answer]) => faq(question, answer)),
-      { type: "heading", level: 2, text: "Explore Commonwealth Migration" },
-      { type: "list", ordered: true, items: [
-        "Our Canada Immigration Consulting Process → /about/canada-immigration-consulting-process",
-        "Our Brampton Immigration Office → /locations/brampton",
-        "Meet the Licensed RCIC Team → /about/about-commonwealth-migration#licensed-rcic-about",
-        "Book an Immigration Consultation → /contact/book-immigration-consultation-canada",
-      ] },
-    ],
-    jsonLd: [
-      webPage("About Commonwealth Migration", "Learn about Commonwealth Migration, a CICC-regulated immigration consultancy in Brampton helping individuals, families and employers navigate Canadian immigration.", "/about/about-commonwealth-migration", { "@type": "AboutPage", breadcrumb: breadcrumbs("About Commonwealth Migration", "/about/about-commonwealth-migration") }),
-      faqPage(aboutFaqs),
-    ],
-  },
+  aboutUsPage,
   {
     path: "/about/canada-immigration-consulting-process",
     h1: "Our Canada Immigration Consulting Process",

@@ -1364,6 +1364,10 @@
   gap: 15px;
 }
 
+.officeLayoutWide {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .officePhotos {
   display: grid;
   height: 580px;

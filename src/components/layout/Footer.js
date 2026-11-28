@@ -132,7 +132,7 @@ export default function Footer() {
                       <MapPin size={13} aria-hidden />
                     </span>
                     <span className="grid gap-[.12rem] text-(--brand-navy-dark)">
-                      <strong className="text-[.72rem] font-extrabold leading-tight">{site.displayName} </strong>
+                      <strong className="text-[.72rem] font-extrabold leading-tight">{site.name}</strong>
                       <small className="text-primary-dark text-[.6rem] font-extrabold tracking-[.08em] leading-[1.2] uppercase">Canada</small>
                     </span>
                   </span>
